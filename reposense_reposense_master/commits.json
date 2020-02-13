@@ -264,7 +264,99 @@
       }
     ],
     "dvrylc": [],
-    "jamessspanggg": [],
+    "jamessspanggg": [
+      {
+        "insertions": 43,
+        "deletions": 0,
+        "date": "2019-12-20",
+        "commitResults": [
+          {
+            "hash": "008f48fc20af630d857cd65bf11e96d05e19559a",
+            "messageTitle": "[#46] Show total time after batch processing (#758)",
+            "messageBody": "After running the CLI command, the total time taken to process and \r\ngenerate the report is not shown in the console output.\r\n\r\nUsers might find it useful to keep track of the time taken to \r\ngenerate the report.\r\n\r\nLet\u0027s use the logger to output the total time taken from running the \r\nCLI command until the report is generated.\r\n",
+            "insertions": 43,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 49,
+        "deletions": 42,
+        "date": "2019-12-31",
+        "commitResults": [
+          {
+            "hash": "2b2a9f3666d7c14d0c0ebe05b26660d0bf7827ba",
+            "messageTitle": "[#785] ChartView: fix authors with unaccounted lines (#789)",
+            "messageBody": "The git blame command used in RepoSense contains the option -w, which\r\nignores whitespace when comparing the parent’s version and the child’s\r\nto find where the lines came from.\r\n\r\nWhen an author did not change the content but only the position of\r\nspecific lines of code, the previous author will be recognised as the \r\nauthor that changed these lines. If the previous author did not\r\ncontribute during the analysis period, his/her ramp chart will be\r\nempty while the contribution bar will be present.\r\n\r\nLet\u0027s add an extra check in aggregateBlameInfo for lines of code with\r\nthe author committed date that is not within the duration of \r\nspecified since date and until date. Those lines of code\u0027s author will\r\nbe set to unknown, which will resolve the issue above.",
+            "insertions": 49,
+            "deletions": 42
+          }
+        ]
+      },
+      {
+        "insertions": 94,
+        "deletions": 9,
+        "date": "2020-01-22",
+        "commitResults": [
+          {
+            "hash": "e2f1ec8fffe7ed8140bc9af968f7d26582a67fdd",
+            "messageTitle": "[#879] Display commit tags in commits panel (#969)",
+            "messageBody": "The tags of each commit are not shown in the commits panel.\r\n\r\nWith the active use of git tags in CS21x3 repositories, it is useful to \r\nprovide tutors on the usage and information of tags in each commit.\r\n\r\nLet\u0027s display the tags of each commit (if there\u0027s any) in the commits \r\npanel.",
+            "insertions": 94,
+            "deletions": 9
+          }
+        ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 3,
+        "date": "2020-01-29",
+        "commitResults": [
+          {
+            "hash": "8ed76d0dfebad2e509d87879661501239c35acb9",
+            "messageTitle": "[#984] Fix miscalculation of expanded commit message count (#998)",
+            "messageBody": "We get the number of expanded commit message count in zoom tab based on\r\nthe number of divs with class name \u0027commit-message active\u0027.\r\n\r\nCommit messages without commit message bodies also have default class\r\nname of \u0027commit-message active\u0027, which leads to the expanded commit\r\nmessage count to not reflect on the true number of commit messages that\r\nare expanded.\r\n\r\nLet\u0027s append the class name \u0027message-body\u0027 to commit messages that have\r\ncommit message bodies, to distinguish between messages that can be\r\nexpanded and vice versa.\r\n",
+            "insertions": 3,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 0,
+        "date": "2020-02-02",
+        "commitResults": [
+          {
+            "hash": "644af05f28207975cb22771cb5f44a25a0ff90e4",
+            "messageTitle": "[#1029] Contribution Bar: restore the float left property (#1030)",
+            "messageBody": "Due to the regression of #1003, the css property \u0027float: left\u0027 was left\r\nout in the contribution bar. When break down by file type is checked,\r\nthe contribution bar for each file type occupies separate lines\r\ninstead of continuous lines.\r\n\r\nLet\u0027s restore the css property \u0027float: left\u0027 back to the contribution\r\nbar.",
+            "insertions": 1,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 29,
+        "deletions": 5,
+        "date": "2020-02-05",
+        "commitResults": [
+          {
+            "hash": "ebdd0140fe77d238eab878b42d58afe18fd03e02",
+            "messageTitle": "[#1019] Handle commit info extraction for empty commits (#1020)",
+            "messageBody": "Analyzing repo with empty commits causes CommitInfoAnalyzer to throw \r\nArrayIndexOutOfBoundsException. This occurs in \r\nCommitInfoExtractor#parseGitLogResults, where info lines and stat \r\nlines are split based on the last index of the newline character \r\n`\\n`.\r\n\r\nAs empty commits have no stat lines, it leads to \r\nArrayIndexOutOfBoundsException due to the use of new line separator.\r\n\r\nLet\u0027s:\r\n- use \u0027|\u0027 character as the splitting point of info lines and stat \r\n  lines, instead of the new line \u0027\\n\u0027 character. This will ensure \r\n  that the ref name details will always be within info lines instead\r\n  of stat lines.\r\n- add a check for the availability of the ref name before accessing \r\n  it to prevent the exception. \r\n\r\nNo stat lines occurs for commits that are empty (done by git commit \r\n--allow-empty), since no files are changed. The last index of the \r\nnewline character will situate before the ref name details, and info\r\nline will contain all characters before that index while stat line \r\ncontains the ref name details. Since the ref name is no longer in \r\nthe info lines, accessing the REF_NAME_INDEX within the info lines \r\nwill incur an ArrayOutOfBoundsException.\r\n",
+            "insertions": 27,
+            "deletions": 3
+          },
+          {
+            "hash": "4611767400fc829913997f335afa5aed22917cd8",
+            "messageTitle": "[#1027] Modify UI for tags (#1028)",
+            "messageBody": "Some tags split to the next line when the list of tags are too long. \r\nTags also appear vertically close together when the list occupies \r\nmore than one line.\r\n\r\nLet\u0027s change the css property `display` to be `inline-block` and add \r\nsome top and bottom margins to each tag.\r\n",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      }
+    ],
     "j-lum": [],
     "iskandarzulkarnaien": [],
     "xantho09": [],
@@ -419,7 +511,7 @@
     "anubh-v": 312,
     "Tejas2805": 473,
     "dvrylc": 0,
-    "jamessspanggg": 0,
+    "jamessspanggg": 205,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
@@ -516,9 +608,9 @@
       "gradle": 0
     },
     "jamessspanggg": {
-      "java": 0,
-      "js": 0,
-      "scss": 0,
+      "java": 179,
+      "js": 9,
+      "scss": 17,
       "json": 0,
       "md": 0,
       "py": 0,
@@ -665,7 +757,7 @@
     "anubh-v": 593.66,
     "Tejas2805": 5069.5425,
     "dvrylc": 0.0,
-    "jamessspanggg": 0.0,
+    "jamessspanggg": 282.26517,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
