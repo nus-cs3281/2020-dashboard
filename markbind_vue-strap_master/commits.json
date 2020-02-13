@@ -1,0 +1,356 @@
+{
+  "authorDailyContributionsMap": {
+    "ccyccyccy": [],
+    "Parcly-Taxel": [],
+    "niqiukun": [],
+    "openorclose": [],
+    "yash-chowdhary": [],
+    "anubh-v": [],
+    "Tejas2805": [],
+    "dvrylc": [],
+    "jamessspanggg": [],
+    "j-lum": [],
+    "iskandarzulkarnaien": [],
+    "xantho09": [],
+    "0blivious": [],
+    "hcwong": [],
+    "ang-zeyu": [
+      {
+        "insertions": 81,
+        "deletions": 310,
+        "date": "2020-02-03",
+        "commitResults": [
+          {
+            "hash": "96adcfb15cc90d7ccba796ab5771267eccfdef9a",
+            "messageTitle": "Move markdown-it parsing to /markbind (#120)",
+            "messageBody": "Markdown passed in attributes are being rendered in\r\nthe client.\r\n\r\nThis results in a dependency on the markdown parsing\r\nlibrary ( markdown-it ) on the client bloating the resulting\r\nbundle size for /vue-strap. It also slows webpage loading,\r\nespecially on older devices. Moreover, /markbind already\r\nparses some amount of markdown in attributes for other\r\npurposes when building the site. This results in a less\r\ncohesive codebase.\r\n\r\nLet\u0027s rewrite the templates to use vue\u0027s slots for\r\ndisplaying the rendered html previously present\r\nin attributes.",
+            "insertions": 81,
+            "deletions": 310
+          }
+        ]
+      }
+    ],
+    "geshuming": [],
+    "alyip98": [],
+    "nbriannl": [],
+    "le0tan": [
+      {
+        "insertions": 2,
+        "deletions": 2,
+        "date": "2020-01-18",
+        "commitResults": [
+          {
+            "hash": "e9c4ec9b8966ba1ea7032b9294bb68651527e804",
+            "messageTitle": "Allow embedded HTML in dropdown (#122)",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 1838,
+        "deletions": 1460,
+        "date": "2020-01-21",
+        "commitResults": [
+          {
+            "hash": "0cdb16d37bbc9a881fda7f9fd3518b6ecfbd9cfe",
+            "messageTitle": "Bump node-sass version to v4.0.0 (#121)",
+            "messageBody": "node-sass@3.10.1 does not build on nodejs 12.14.1 (LTS). The package is \r\ntoo old, so it uses features of nodejs that has been made obsolete,\r\nresulting in a failed build when the package is building its C++\r\nlibraries.\r\n\r\nLet\u0027s upgrade to node-sass@4.0.0. A simple run of `npm build` seems to\r\nindicate that there\u0027s no changes to our `dist` builds, hence we should \r\nnot expect any broken changes.",
+            "insertions": 1838,
+            "deletions": 1460
+          }
+        ]
+      },
+      {
+        "insertions": 36,
+        "deletions": 7,
+        "date": "2020-02-04",
+        "commitResults": [
+          {
+            "hash": "8d23dcc966ec76b016cf32df53db888767b21740",
+            "messageTitle": "Provide options to toggle \"seamless\" style of box (#125)",
+            "messageBody": "",
+            "insertions": 36,
+            "deletions": 7
+          }
+        ]
+      }
+    ],
+    "tiuweehan": [],
+    "madanalogy": [],
+    "daekoon": []
+  },
+  "authorFinalContributionMap": {
+    "ccyccyccy": 0,
+    "Parcly-Taxel": 0,
+    "niqiukun": 0,
+    "openorclose": 1,
+    "yash-chowdhary": 0,
+    "anubh-v": 0,
+    "Tejas2805": 0,
+    "dvrylc": 0,
+    "jamessspanggg": 0,
+    "j-lum": 0,
+    "iskandarzulkarnaien": 0,
+    "xantho09": 0,
+    "0blivious": 0,
+    "hcwong": 4,
+    "ang-zeyu": 72,
+    "geshuming": 0,
+    "alyip98": 0,
+    "nbriannl": 0,
+    "le0tan": 1864,
+    "tiuweehan": 0,
+    "madanalogy": 0,
+    "daekoon": 0
+  },
+  "authorFileTypeContributionMap": {
+    "ccyccyccy": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "Parcly-Taxel": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "niqiukun": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "openorclose": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 1
+    },
+    "yash-chowdhary": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "anubh-v": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "Tejas2805": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "dvrylc": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "jamessspanggg": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "j-lum": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "iskandarzulkarnaien": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "xantho09": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "0blivious": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "hcwong": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 4
+    },
+    "ang-zeyu": {
+      "java": 0,
+      "js": 4,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 68
+    },
+    "geshuming": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "alyip98": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "nbriannl": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "le0tan": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 1833,
+      "md": 0,
+      "py": 0,
+      "vue": 31
+    },
+    "tiuweehan": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "madanalogy": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    },
+    "daekoon": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "vue": 0
+    }
+  },
+  "authorContributionVariance": {
+    "ccyccyccy": 0.0,
+    "Parcly-Taxel": 0.0,
+    "niqiukun": 0.0,
+    "openorclose": 0.0,
+    "yash-chowdhary": 0.0,
+    "anubh-v": 0.0,
+    "Tejas2805": 0.0,
+    "dvrylc": 0.0,
+    "jamessspanggg": 0.0,
+    "j-lum": 0.0,
+    "iskandarzulkarnaien": 0.0,
+    "xantho09": 0.0,
+    "0blivious": 0.0,
+    "hcwong": 0.0,
+    "ang-zeyu": 6358.0,
+    "geshuming": 0.0,
+    "alyip98": 0.0,
+    "nbriannl": 0.0,
+    "le0tan": 451834.2,
+    "tiuweehan": 0.0,
+    "madanalogy": 0.0,
+    "daekoon": 0.0
+  },
+  "authorDisplayNameMap": {
+    "ccyccyccy": "CHON..YUAN",
+    "Parcly-Taxel": "JERE..ERUI",
+    "niqiukun": "NI T..ZHEN",
+    "openorclose": "DARY.. TAN",
+    "yash-chowdhary": "YASH..HARY",
+    "anubh-v": "ANUB..BHAV",
+    "Tejas2805": "TEJA..ANIA",
+    "dvrylc": "CHAN..ARYL",
+    "jamessspanggg": "JAME.. WAI",
+    "j-lum": "LUM ..FFRY",
+    "iskandarzulkarnaien": "ISKA..AINI",
+    "xantho09": "MUHA..INAL",
+    "0blivious": "LIU ..IWEN",
+    "hcwong": "JOSH..HIEN",
+    "ang-zeyu": "ANG ..E YU",
+    "geshuming": "GE S..MING",
+    "alyip98": "YIP ..YEUN",
+    "nbriannl": "LABA..RIDO",
+    "le0tan": "TAN ..HONG",
+    "tiuweehan": "TIU .. HAN",
+    "madanalogy": "MUHA..JJAJ",
+    "daekoon": "LIM ..KOON"
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "authorDailyContributionsMap": {
+    "ccyccyccy": [],
+    "Parcly-Taxel": [],
+    "niqiukun": [
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-01-19",
+        "commitResults": [
+          {
+            "hash": "638fb374561659a1142421d81fe045bb73f08465",
+            "messageTitle": "[#9841] Instructor/Courses: Courses recycle bin table overflow if text is too long (#9916)",
+            "messageBody": "Co-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 2,
+        "date": "2020-01-20",
+        "commitResults": [
+          {
+            "hash": "3efc8fcc29e156d426765a4f38bfb2830fcff2d2",
+            "messageTitle": "[#9920] Don\u0027t load all courses again when deleting/archiving courses in InstructorHomePageComponent (#9922)",
+            "messageBody": "Co-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
+            "insertions": 6,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 87,
+        "deletions": 28,
+        "date": "2020-02-01",
+        "commitResults": [
+          {
+            "hash": "553956e58e38a6d73925ab51d6bee5f99c1752e5",
+            "messageTitle": "[#9921] Don\u0027t load all courses again when deleting/archiving courses in InstructorCoursesPageComponent (#9923)",
+            "messageBody": "* Prevent multiple loading of courses after archiving/deleting courses in courses page\r\n\r\n* Organise various model types into one CourseModel\r\n\r\n* Fix deletion date not assigned after moving the course into recycle bin\r\n\r\n* Make sorting persistent after courses restored from archive\r\n\r\n* Refactor and return deletion timestamp from backend\r\n\r\n* Add test to verify deletion timestamp has been set\r\n",
+            "insertions": 87,
+            "deletions": 28
+          }
+        ]
+      }
+    ],
+    "openorclose": [],
+    "yash-chowdhary": [],
+    "anubh-v": [],
+    "Tejas2805": [],
+    "dvrylc": [
+      {
+        "insertions": 24,
+        "deletions": 5,
+        "date": "2020-01-14",
+        "commitResults": [
+          {
+            "hash": "7619ce905d01c91f1371dd4dd8f6d1cc1b40df1e",
+            "messageTitle": "[#9761] Feedback Session Edit: Button names should be more appropriate (#9910)",
+            "messageBody": "* Improve button labels when editing feedback session questions\r\n\r\n* Add snapshot\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
+            "insertions": 24,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 14,
+        "date": "2020-02-05",
+        "commitResults": [
+          {
+            "hash": "8d627b6a2c4c4fbc0380d19e39a6857e6eaf47e7",
+            "messageTitle": "[#9688] Resolve TinyMCE conflicts with Snapshot tests (#9932)",
+            "messageBody": "* Add helper for mocking TinyMCE UUID\r\n\r\n* Update app tsconfig to exclude test helpers\r\n\r\n* Refactor function import/export\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
+            "insertions": 22,
+            "deletions": 14
+          }
+        ]
+      },
+      {
+        "insertions": 64,
+        "deletions": 2,
+        "date": "2020-02-06",
+        "commitResults": [
+          {
+            "hash": "fcf52e5530b340f54bfb5ffc86ee9f802a49d34b",
+            "messageTitle": "[#9382] Add tests for RestoreFeedbackSessionAction (#9934)",
+            "messageBody": "* Add tests for RestoreFeedbackSessionAction\r\n\r\n* Improve test structure\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
+            "insertions": 64,
+            "deletions": 2
+          }
+        ]
+      }
+    ],
+    "jamessspanggg": [],
+    "j-lum": [],
+    "iskandarzulkarnaien": [],
+    "xantho09": [],
+    "0blivious": [],
+    "hcwong": [
+      {
+        "insertions": 39,
+        "deletions": 3,
+        "date": "2020-01-14",
+        "commitResults": [
+          {
+            "hash": "4955ddc8eb3450c196ea05a88669db891a0f65fc",
+            "messageTitle": "[#9898] All records page does not show profile picture (#9901)",
+            "messageBody": "* Fix bug\r\n\r\n* Fix lint error\r\n\r\n* Add snapshot\r\n\r\n* add assert statement for url\r\n\r\n* Fix bug\r\n\r\n* Add populated snapshot\r\n\r\n* Fix test\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
+            "insertions": 39,
+            "deletions": 3
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 10,
+        "date": "2020-01-23",
+        "commitResults": [
+          {
+            "hash": "3c8d6071f1bb9b54d4d2f8cde8cd7a6baf0643e7",
+            "messageTitle": "[#9679] Instructor: Preview Sessions Submission Page\u0027s navbar covers some content on the page (#9926)",
+            "messageBody": "* Fix the navbar covering content\r\n\r\n* Make navbar div to go into main content container\r\n\r\n* Remove unused variable\r\n",
+            "insertions": 6,
+            "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 53,
+        "deletions": 0,
+        "date": "2020-02-02",
+        "commitResults": [
+          {
+            "hash": "01a717c4b67fef90b8e18c8b36df1415a421cb36",
+            "messageTitle": "[#9382] Add ActionFactoryTest (#9931)",
+            "messageBody": "* WIP ActionFactoryTest\r\n\r\n* Add more tests for ActionFactory\r\n\r\n* Add newline at end\r\n\r\n* Add comment\r\n\r\n* Fix lint errors\r\n\r\n* Fix comments\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
+            "insertions": 53,
+            "deletions": 0
+          }
+        ]
+      }
+    ],
+    "ang-zeyu": [],
+    "geshuming": [],
+    "alyip98": [],
+    "nbriannl": [],
+    "le0tan": [],
+    "tiuweehan": [
+      {
+        "insertions": 20,
+        "deletions": 46,
+        "date": "2020-01-14",
+        "commitResults": [
+          {
+            "hash": "3939686df39c47bf4920ef8919b07753a68456d2",
+            "messageTitle": "[#9906] Refactor Intent to be a type (#9908)",
+            "messageBody": "* Move Intent to types\r\n\r\n* Fix linting issues\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
+            "insertions": 10,
+            "deletions": 10
+          },
+          {
+            "hash": "36944e6154c7595a681cd10b8850a022498a4315",
+            "messageTitle": "[#9902] Replace src/web/types/gender.ts with Gender in api-output.ts (#9909)",
+            "messageBody": "* Refactor Gender\r\n\r\n* Fix linting issues\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
+            "insertions": 10,
+            "deletions": 36
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 24,
+        "date": "2020-01-23",
+        "commitResults": [
+          {
+            "hash": "34b2d22e679451e5952ac394e4ff18fa21cc1a5f",
+            "messageTitle": "[#9903] Replace src/web/app/pages-instructor/student-profile/student-profile.ts with StudentProfile in api-output.ts (#9928)",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 24
+          }
+        ]
+      },
+      {
+        "insertions": 76,
+        "deletions": 36,
+        "date": "2020-02-06",
+        "commitResults": [
+          {
+            "hash": "c0bf6a4e581b738a4b8be8c93989a2cd4fe3e829",
+            "messageTitle": "[#9919] Remove HttpRequestService dependency from UploadEditProfilePictureModalComponent (#9937)",
+            "messageBody": "* Remove HttpRequestDependency from UploadEditProfilePictureModalComponent\r\n\r\n* Flatten nesting of callbacks\r\n\r\n* Code cleanup\r\n\r\n* Update Student Profile Page Snapshot\r\n\r\n* Consolidate pipe\r\n\r\n* Migrate profile picture methods to student profile service\r\n\r\n* Fix failing tests\r\n\r\n* Refactor to throw error when image not uploaded\r\n\r\n* Fix linting issue\r\n\r\n* Use string literals\r\n",
+            "insertions": 76,
+            "deletions": 36
+          }
+        ]
+      }
+    ],
+    "madanalogy": [
+      {
+        "insertions": 44,
+        "deletions": 51,
+        "date": "2020-01-16",
+        "commitResults": [
+          {
+            "hash": "021db57bd3ee4cb25a7ad75bb3ad63c8aa053076",
+            "messageTitle": "[#9911] Auto-sync API output type: ConfirmationResponse (#9914)",
+            "messageBody": "",
+            "insertions": 44,
+            "deletions": 51
+          }
+        ]
+      },
+      {
+        "insertions": 2,
+        "deletions": 2,
+        "date": "2020-01-28",
+        "commitResults": [
+          {
+            "hash": "07fa66b5302f5ebb7d55e24b7c655a01da3e24eb",
+            "messageTitle": "[#9886] Login Dropdown List is Not Positioned Properly (#9924)",
+            "messageBody": "* Fix Login Dropdown List\r\n\r\n* Fix dropdown when logged in\r\n",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 57,
+        "deletions": 21,
+        "date": "2020-02-01",
+        "commitResults": [
+          {
+            "hash": "ec3456d086142482aa9fab4a942d82a698db182a",
+            "messageTitle": "[#9918] Remove HttpRequestService dependency from StudentListComponent (#9927)",
+            "messageBody": "* Remove HttpRequestService dependency from StudentList\r\n\r\n* Move method invocation to StudentService\r\n\r\n* Move student deletion to courseService\r\n\r\n* Move removeStudentFromCourse method invocation to parent component\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
+            "insertions": 57,
+            "deletions": 21
+          }
+        ]
+      },
+      {
+        "insertions": 428,
+        "deletions": 14,
+        "date": "2020-02-11",
+        "commitResults": [
+          {
+            "hash": "87f9c7180f17083161986b3311cf3785e32a8494",
+            "messageTitle": "[#9382] Add Access Control Tests for UpdateFeedbackResponseAction (#9930)",
+            "messageBody": "* Prepare draft test code\r\n\r\n* Implement generic access control tests\r\n\r\n* Implement access control tests with update requests\r\n\r\n* Refactor test helpers and test cases\r\n\r\n* Add additional test cases\r\n\r\n* Refactor static variables to local scope\r\n\r\n* Edit containsQuestionNotForInstructor for clarity\r\n\r\n* Refactor verifyAccess method signatures to more generic request\r\n",
+            "insertions": 428,
+            "deletions": 14
+          }
+        ]
+      }
+    ],
+    "daekoon": []
+  },
+  "authorFinalContributionMap": {
+    "ccyccyccy": 0,
+    "Parcly-Taxel": 0,
+    "niqiukun": 94,
+    "openorclose": 0,
+    "yash-chowdhary": 0,
+    "anubh-v": 0,
+    "Tejas2805": 0,
+    "dvrylc": 96,
+    "jamessspanggg": 0,
+    "j-lum": 0,
+    "iskandarzulkarnaien": 0,
+    "xantho09": 0,
+    "0blivious": 0,
+    "hcwong": 98,
+    "ang-zeyu": 0,
+    "geshuming": 0,
+    "alyip98": 0,
+    "nbriannl": 0,
+    "le0tan": 0,
+    "tiuweehan": 77,
+    "madanalogy": 531,
+    "daekoon": 0
+  },
+  "authorFileTypeContributionMap": {
+    "ccyccyccy": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "Parcly-Taxel": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "niqiukun": {
+      "java": 6,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 1,
+      "ts": 87
+    },
+    "openorclose": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "yash-chowdhary": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "anubh-v": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "Tejas2805": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "dvrylc": {
+      "java": 64,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 5,
+      "ts": 27
+    },
+    "jamessspanggg": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "j-lum": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "iskandarzulkarnaien": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "xantho09": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "0blivious": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "hcwong": {
+      "java": 53,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 6,
+      "ts": 39
+    },
+    "ang-zeyu": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "geshuming": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "alyip98": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "nbriannl": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "le0tan": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    },
+    "tiuweehan": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 77
+    },
+    "madanalogy": {
+      "java": 470,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 8,
+      "ts": 53
+    },
+    "daekoon": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "md": 0,
+      "py": 0,
+      "tag": 0,
+      "html": 0,
+      "ts": 0
+    }
+  },
+  "authorContributionVariance": {
+    "ccyccyccy": 0.0,
+    "Parcly-Taxel": 0.0,
+    "niqiukun": 425.73895,
+    "openorclose": 0.0,
+    "yash-chowdhary": 0.0,
+    "anubh-v": 0.0,
+    "Tejas2805": 0.0,
+    "dvrylc": 197.36554,
+    "jamessspanggg": 0.0,
+    "j-lum": 0.0,
+    "iskandarzulkarnaien": 0.0,
+    "xantho09": 0.0,
+    "0blivious": 0.0,
+    "hcwong": 147.27661,
+    "ang-zeyu": 0.0,
+    "geshuming": 0.0,
+    "alyip98": 0.0,
+    "nbriannl": 0.0,
+    "le0tan": 0.0,
+    "tiuweehan": 545.2623,
+    "madanalogy": 6590.5654,
+    "daekoon": 0.0
+  },
+  "authorDisplayNameMap": {
+    "ccyccyccy": "CHON..YUAN",
+    "Parcly-Taxel": "JERE..ERUI",
+    "niqiukun": "NI T..ZHEN",
+    "openorclose": "DARY.. TAN",
+    "yash-chowdhary": "YASH..HARY",
+    "anubh-v": "ANUB..BHAV",
+    "Tejas2805": "TEJA..ANIA",
+    "dvrylc": "CHAN..ARYL",
+    "jamessspanggg": "JAME.. WAI",
+    "j-lum": "LUM ..FFRY",
+    "iskandarzulkarnaien": "ISKA..AINI",
+    "xantho09": "MUHA..INAL",
+    "0blivious": "LIU ..IWEN",
+    "hcwong": "JOSH..HIEN",
+    "ang-zeyu": "ANG ..E YU",
+    "geshuming": "GE S..MING",
+    "alyip98": "YIP ..YEUN",
+    "nbriannl": "LABA..RIDO",
+    "le0tan": "TAN ..HONG",
+    "tiuweehan": "TIU .. HAN",
+    "madanalogy": "MUHA..JJAJ",
+    "daekoon": "LIM ..KOON"
+  }
+}

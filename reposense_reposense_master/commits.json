@@ -1,0 +1,534 @@
+{
+  "authorDailyContributionsMap": {
+    "ccyccyccy": [
+      {
+        "insertions": 10,
+        "deletions": 2,
+        "date": "2020-01-21",
+        "commitResults": [
+          {
+            "hash": "8054c6a8fd32a797ca443cd9052cd41a5e8e09da",
+            "messageTitle": "[#940] ReportGenerator#generateReposReport: SLAP copying of template file (#977)",
+            "messageBody": "The operation to copy template file before cloning and analyzing the\r\nrepositories in ReportGenerator#generateReposReport is specified at \r\na granular level.\r\n\r\nIt clashes with the higher level of abstraction used for the other\r\noperations in ReportGenerator#generateReposReport.\r\n\r\nLet\u0027s abstract out the copying of template files into a separate \r\nmethod and then call this method from \r\nReportGenerator#generateReposReport.",
+            "insertions": 10,
+            "deletions": 2
+          }
+        ]
+      }
+    ],
+    "Parcly-Taxel": [],
+    "niqiukun": [],
+    "openorclose": [],
+    "yash-chowdhary": [],
+    "anubh-v": [
+      {
+        "insertions": 34,
+        "deletions": 8,
+        "date": "2020-01-29",
+        "commitResults": [
+          {
+            "hash": "2ab7f7bf3549276c695361761d97e1246d3f0f4e",
+            "messageTitle": "[#1001] CSS: Increase z-index for center divider div (#1011)",
+            "messageBody": "When we scroll horizontally in the Code Panel, the code snippets and \r\ncode toggle buttons overlap with the center divider.\r\n\r\nLet\u0027s fix this bug by increasing the z-index of the #tab-resize div, and \r\nthe div that closes the right tab. We can use a value of 100, since the \r\nz-index of #tab-resize-guide div is already set to 100. For better \r\nscalability, let\u0027s also use a SASS map to store these z-index values.\r\n",
+            "insertions": 34,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-02-04",
+        "commitResults": [
+          {
+            "hash": "7669ae7df6806e2d423f09b93fee41d560bf0643",
+            "messageTitle": "[#1032] Author: fix error in copy constructor (#1036)",
+            "messageBody": "The Author class has a constructor that accepts an existing Author\r\nobject and creates a copy. \r\n\r\nHowever, the constructor assigns the list of author aliases of the \r\ncopied instance to the `ignoreGlobList` attribute of the new \r\ninstance.\r\n\r\nLet\u0027s fix this error so methods that use this constructor will not\r\nface erroneous behavior.",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 71,
+        "deletions": 66,
+        "date": "2020-02-10",
+        "commitResults": [
+          {
+            "hash": "bc8baa4141177952c4387859e5e15a55c35d1691",
+            "messageTitle": "[#942] CsvParser: Improve exception handling when csv config has no valid recods (#916)",
+            "messageBody": "RepoSense crashes with an unhelpful error message if the repo-config\r\ncsv has zero valid records.\r\n\r\nIf the repo-config csv has no valid records, we should provide a\r\nclear warning to the user and then terminate execution. In the case \r\nof optional csv files, we should provide a warning and then continue \r\nexecution.\r\n\r\nLet\u0027s \r\n- implement this behaviour by explicity checking the number of valid\r\n  records found by CsvParser. \r\n- throw an InvalidCsvException if there are no valid records in a \r\n  csv file. ",
+            "insertions": 71,
+            "deletions": 66
+          }
+        ]
+      }
+    ],
+    "Tejas2805": [
+      {
+        "insertions": 4,
+        "deletions": 5,
+        "date": "2020-01-16",
+        "commitResults": [
+          {
+            "hash": "74ac22a3848f1009bab31d3ecb865c00f227e71e",
+            "messageTitle": "[#947] Synchronising different tab views (#948)",
+            "messageBody": "It\u0027s difficult to distinguish between the authorship and zoom views as \r\nthere are no obvious symbols to identify which is which. \r\n\r\nLet\u0027s add a header to both the views for easy identification and a link \r\nto the zoom title to make it more consistent with authorship.",
+            "insertions": 4,
+            "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 255,
+        "deletions": 254,
+        "date": "2020-01-22",
+        "commitResults": [
+          {
+            "hash": "b3aaf1c56e3e81eda3c99e7eb66e19fe3c89a7d9",
+            "messageTitle": "[#960]Refactor Authorship Css (#986)",
+            "messageBody": "The JS/HTML code of each component has already rested in its own \r\nfile, but all the CSS are still in one file. \r\n\r\nLet\u0027s refactor the Authorship CSS into a new file for better \r\nscalability and readability.\r\n",
+            "insertions": 255,
+            "deletions": 254
+          }
+        ]
+      },
+      {
+        "insertions": 177,
+        "deletions": 176,
+        "date": "2020-01-30",
+        "commitResults": [
+          {
+            "hash": "5b1fb323dc18c52e930158a4cdd184232dd8a826",
+            "messageTitle": "[#960] Refactor Summary CSS (#1003)",
+            "messageBody": "The JS/HTML code of each component has already rested in its own \r\nfile, but all the CSS are still in one file. \r\n\r\nLet\u0027s refactor the Summary CSS into a new file for better scalability \r\nand readability.\r\n\r\n",
+            "insertions": 177,
+            "deletions": 176
+          }
+        ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 6,
+        "date": "2020-02-03",
+        "commitResults": [
+          {
+            "hash": "b98f31eaa04839fa7d3883b684f933bd51241a93",
+            "messageTitle": "[#964] Add UG link to report page (#983)",
+            "messageBody": "The link to the UG in the documents points to the released version of \r\nthe UG. As a result, there may be some discrepancies between the master \r\nand the release branch.\r\n\r\nLet\u0027s add a link to the UG on the report page corresponding to the \r\nversion that RepoSense was ran on.",
+            "insertions": 3,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 18,
+        "deletions": 10,
+        "date": "2020-02-05",
+        "commitResults": [
+          {
+            "hash": "0b151faf17df809193000461713a2b4b1329a50b",
+            "messageTitle": "[#873, #1016, #1049]Enable octocat icon for merge group (#1017)",
+            "messageBody": "There are not a lot of features that the user can use when merge \r\ngroup is active. \r\n\r\nLet\u0027s \r\n  - add the octocat icon to enhance the usage of merge group. \r\n  - fix the thickness of contribution bars by changing rem to pix.\r\n\r\nWhen it\u0027s `group by Repo`, the octocat icon will link to the group\u0027s\r\nrepository. When it\u0027s `group by Author`, the octocat icon will link \r\nto the author\u0027s github profile. \r\n",
+            "insertions": 18,
+            "deletions": 10
+          }
+        ]
+      }
+    ],
+    "dvrylc": [],
+    "jamessspanggg": [],
+    "j-lum": [],
+    "iskandarzulkarnaien": [],
+    "xantho09": [],
+    "0blivious": [
+      {
+        "insertions": 2,
+        "deletions": 2,
+        "date": "2020-01-17",
+        "commitResults": [
+          {
+            "hash": "3fd1f5fa8c531e5274fcb0dd90e83ddaf76d1d1f",
+            "messageTitle": "[#980] URL: date adapted without validation (#990)",
+            "messageBody": "Date in authorship can be modified using URL. However, a date range will \r\nstill be adapted even if it is invalid.\r\n\r\nThis can be fixed by adding extra validation function for window hash.\r\n\r\nLet\u0027s put a validation for the date parameters in the URL.",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 0,
+        "deletions": 29,
+        "date": "2020-01-21",
+        "commitResults": [
+          {
+            "hash": "b40b3e6788c444b6ca46cd59b8e70e9afa29e86e",
+            "messageTitle": "[#1009] AppVeyor Failing: remove outdated tests (#1015)",
+            "messageBody": "AppVeyor CI is failing in all PRs as it has updated its worker \r\nimage, which uses Git 2.25 instead of Git 2.23.\r\n\r\nFrom Git v2.24, Git for windows would print error for an illegal\r\nfile name and prevent it from adding into the index. As in our test \r\ncases we run the command `git checkout someInvalidName`, an \r\nexception is expected to be thrown, and since we do not catch it, \r\nthe tests fail. \r\n\r\nLet\u0027s remove the 2 outdated test as the git command now handles\r\ndetection of invalid filename and will throw exception at the very\r\nbeginning.",
+            "insertions": 0,
+            "deletions": 29
+          }
+        ]
+      },
+      {
+        "insertions": 26,
+        "deletions": 1,
+        "date": "2020-01-23",
+        "commitResults": [
+          {
+            "hash": "6fe782466dc827ab5c37c095000dfaba6e2ee3db",
+            "messageTitle": "[#885] Allow reset search filter (#895)",
+            "messageBody": "The user has to manually delete the keywords and press another enter \r\nto go back to the full view.\r\n\r\nHowever, this can be improved by providing a reset button to clear \r\nthe search bar, which can help the user save time for deleting. \r\n\r\nLet\u0027s provide a button to reset the search bar.",
+            "insertions": 26,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 5,
+        "deletions": 0,
+        "date": "2020-01-29",
+        "commitResults": [
+          {
+            "hash": "c6f711cf2fe0015d204e953d3dfb6f252a9104d6",
+            "messageTitle": " [#988] Ramp chart: inconsistency in the length of contribution line (#991)",
+            "messageBody": "Toggling the `breakdown by filetype` checkbox changes the length of the\r\ncontribution bar even though the LoC remains constant.\r\n\r\nThis occurs due to the inaccurate data in json file. The\r\nauthorFileTypeContributionMap in commit.json have multiple entries of the \r\nsame key. In the frontend, the last entry would be taken instead of all \r\nof the entries provided. This results in the wrong calculation of the total \r\ncontribution of each file type.\r\n\r\nLet\u0027s override FileType#hashCode to correctly update the LoC number \r\ninstead of creating a new entry.\r\n\r\nIn the backend, we use AuthorshipSummary#addAuthorContributionCount\r\nto increment line number and we consider FileType (the key) and\r\nLoC (the value) as an entry in the HashMap. The HashMap is then output\r\nto the commit.json file as authorFileTypeContributionMap. However, the \r\ndefault HashCode will digest all data stored in FileType, other data \r\nlike path and pathsGlob is also taken into consideration when comparing \r\nthe key to update the entry. So, instead of updating, a new entry will \r\nbe created. Thus in AuthorshipSummary#authorFileTypeContributionMap, \r\neach author can have multiple entry with same FileType#label. And the \r\nresulted authorFileTypeContributionMap in json file will have multiple \r\nentry of the same key.\r\n",
+            "insertions": 5,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 24,
+        "deletions": 8,
+        "date": "2020-02-05",
+        "commitResults": [
+          {
+            "hash": "a9fedc6689c5bea63706bde2c01101b42b058cb2",
+            "messageTitle": "[#920] Ramp chart: show percentile for each item (#922)",
+            "messageBody": "We have index number for each group in the ramp chart but not its\r\npercentile. It is hard to tell the ranking position of the group.\r\n\r\nThis can be improved to show the percentile of each item so that it\r\nis easy to see whether an item is in the 20%th percentile and so on.\r\n\r\nLet\u0027s add a percentile number at the right side of each group.\r\n",
+            "insertions": 24,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 45,
+        "deletions": 31,
+        "date": "2020-02-10",
+        "commitResults": [
+          {
+            "hash": "61f1fc4f4f854a176ab1f6672f6759c42712c9c3",
+            "messageTitle": "[#838] ZoomTab: add sort controls  (#943)",
+            "messageBody": "We have Zoom tab shows the list of commits in the order from\r\nearliest to latest commits (without an option to reverse the sorting\r\norder or change the sorting type).\r\n\r\nThis can be improved by allowing the user to view the commits in\r\nreverse chronological order and add other sorting options such as\r\nLOC.\r\n\r\nLet\u0027s add a sorting field to allow the user to sort the commits\r\naccording to Loc or time, and also allow the commits to be\r\ndisplayed in reverse order.",
+            "insertions": 45,
+            "deletions": 31
+          }
+        ]
+      }
+    ],
+    "hcwong": [],
+    "ang-zeyu": [],
+    "geshuming": [],
+    "alyip98": [],
+    "nbriannl": [],
+    "le0tan": [],
+    "tiuweehan": [],
+    "madanalogy": [],
+    "daekoon": []
+  },
+  "authorFinalContributionMap": {
+    "ccyccyccy": 10,
+    "Parcly-Taxel": 0,
+    "niqiukun": 0,
+    "openorclose": 0,
+    "yash-chowdhary": 0,
+    "anubh-v": 106,
+    "Tejas2805": 415,
+    "dvrylc": 0,
+    "jamessspanggg": 0,
+    "j-lum": 0,
+    "iskandarzulkarnaien": 0,
+    "xantho09": 0,
+    "0blivious": 78,
+    "hcwong": 0,
+    "ang-zeyu": 0,
+    "geshuming": 0,
+    "alyip98": 0,
+    "nbriannl": 0,
+    "le0tan": 0,
+    "tiuweehan": 0,
+    "madanalogy": 0,
+    "daekoon": 0
+  },
+  "authorFileTypeContributionMap": {
+    "ccyccyccy": {
+      "java": 10,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "Parcly-Taxel": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "niqiukun": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "openorclose": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "yash-chowdhary": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "anubh-v": {
+      "java": 72,
+      "js": 0,
+      "scss": 34,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "Tejas2805": {
+      "java": 0,
+      "js": 10,
+      "scss": 404,
+      "json": 0,
+      "md": 1,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "dvrylc": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "jamessspanggg": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "j-lum": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "iskandarzulkarnaien": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "xantho09": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "0blivious": {
+      "java": 5,
+      "js": 25,
+      "scss": 40,
+      "json": 0,
+      "md": 8,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "hcwong": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "ang-zeyu": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "geshuming": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "alyip98": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "nbriannl": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "le0tan": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "tiuweehan": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "madanalogy": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    },
+    "daekoon": {
+      "java": 0,
+      "js": 0,
+      "scss": 0,
+      "json": 0,
+      "md": 0,
+      "py": 0,
+      "jade": 0,
+      "gradle": 0
+    }
+  },
+  "authorContributionVariance": {
+    "ccyccyccy": 4.7942877,
+    "Parcly-Taxel": 0.0,
+    "niqiukun": 0.0,
+    "openorclose": 0.0,
+    "yash-chowdhary": 0.0,
+    "anubh-v": 669.2176,
+    "Tejas2805": 12282.978,
+    "dvrylc": 0.0,
+    "jamessspanggg": 0.0,
+    "j-lum": 0.0,
+    "iskandarzulkarnaien": 0.0,
+    "xantho09": 0.0,
+    "0blivious": 254.4471,
+    "hcwong": 0.0,
+    "ang-zeyu": 0.0,
+    "geshuming": 0.0,
+    "alyip98": 0.0,
+    "nbriannl": 0.0,
+    "le0tan": 0.0,
+    "tiuweehan": 0.0,
+    "madanalogy": 0.0,
+    "daekoon": 0.0
+  },
+  "authorDisplayNameMap": {
+    "ccyccyccy": "CHON..YUAN",
+    "Parcly-Taxel": "JERE..ERUI",
+    "niqiukun": "NI T..ZHEN",
+    "openorclose": "DARY.. TAN",
+    "yash-chowdhary": "YASH..HARY",
+    "anubh-v": "ANUB..BHAV",
+    "Tejas2805": "TEJA..ANIA",
+    "dvrylc": "CHAN..ARYL",
+    "jamessspanggg": "JAME.. WAI",
+    "j-lum": "LUM ..FFRY",
+    "iskandarzulkarnaien": "ISKA..AINI",
+    "xantho09": "MUHA..INAL",
+    "0blivious": "LIU ..IWEN",
+    "hcwong": "JOSH..HIEN",
+    "ang-zeyu": "ANG ..E YU",
+    "geshuming": "GE S..MING",
+    "alyip98": "YIP ..YEUN",
+    "nbriannl": "LABA..RIDO",
+    "le0tan": "TAN ..HONG",
+    "tiuweehan": "TIU .. HAN",
+    "madanalogy": "MUHA..JJAJ",
+    "daekoon": "LIM ..KOON"
+  }
+}

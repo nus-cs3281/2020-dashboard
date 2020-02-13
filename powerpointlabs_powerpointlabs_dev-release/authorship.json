@@ -1,0 +1,207 @@
+[
+  {
+    "path": "PowerPointLabs/PowerPointLabs/ELearningLab/Converters/ShapeNameWidthConverter.cs",
+    "fileType": "cs",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "﻿using System;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "using System.Windows;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "using System.Windows.Data;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "namespace PowerPointLabs.ELearningLab.Converters"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "{"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "    public class ShapeNameWidthConverter : IValueConverter"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        private const int leftIconWidth \u003d 45;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            if (value is double)"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "                return (double)value - leftIconWidth;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            if (value is double)"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "                return (double)value + leftIconWidth;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "daekoon"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daekoon": 28
+    }
+  }
+]

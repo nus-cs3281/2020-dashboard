@@ -1,0 +1,558 @@
+{
+  "authorDailyContributionsMap": {
+    "ccyccyccy": [],
+    "Parcly-Taxel": [],
+    "niqiukun": [],
+    "openorclose": [],
+    "yash-chowdhary": [],
+    "anubh-v": [],
+    "Tejas2805": [],
+    "dvrylc": [
+      {
+        "insertions": 2,
+        "deletions": 2,
+        "date": "2020-02-04",
+        "commitResults": [
+          {
+            "hash": "f1bf5718ccc92126c430b51b14b33c05c21bd336",
+            "messageTitle": "Allow stylelint to ignore test sites (#1011)",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      }
+    ],
+    "jamessspanggg": [],
+    "j-lum": [],
+    "iskandarzulkarnaien": [],
+    "xantho09": [],
+    "0blivious": [],
+    "hcwong": [
+      {
+        "insertions": 56,
+        "deletions": 1,
+        "date": "2020-01-15",
+        "commitResults": [
+          {
+            "hash": "2a4963b5299aa676abeb574b393fefac0496e27e",
+            "messageTitle": "Update docs for light color scheme box (#977)",
+            "messageBody": "",
+            "insertions": 56,
+            "deletions": 1
+          }
+        ]
+      }
+    ],
+    "ang-zeyu": [
+      {
+        "insertions": 161,
+        "deletions": 23,
+        "date": "2020-01-16",
+        "commitResults": [
+          {
+            "hash": "0acd97c3fd836ad49442f10e678b660d75924124",
+            "messageTitle": "Fix plugin live reloading for relative file paths (#974)",
+            "messageBody": "Relative file paths provided by plugins are not resolved against the\r\nprocessed page or included file.\r\n\r\nThis results in live reloading failing for pages not in the root\r\ndirectory.\r\n\r\nLet\u0027s fix this, and also rewrite plugin source collection, allowing\r\nplugins to simply define tags and corresponding source attributes\r\nto watch.\r\n\r\nThis moves the logic for checking whether the source is part of an\r\nincluded file to the main markbind repo, reducing potential code\r\nduplication and simplifying the api.",
+            "insertions": 161,
+            "deletions": 23
+          }
+        ]
+      },
+      {
+        "insertions": 951,
+        "deletions": 190,
+        "date": "2020-02-01",
+        "commitResults": [
+          {
+            "hash": "1b286173d924e9e34a94de4133eb32f88fc98ed5",
+            "messageTitle": "Fix heading indexing for pure html headings",
+            "messageBody": "",
+            "insertions": 53,
+            "deletions": 0
+          },
+          {
+            "hash": "c0d6f3fff2af5c64186fcbe78fcb89c653bf1280",
+            "messageTitle": "Update docs for fixing html heading indexing",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 18
+          },
+          {
+            "hash": "18a89d9eababaa32d2459a274a4128aaa68c9cf2",
+            "messageTitle": "Import markdown-it parser variant from /vue-strap",
+            "messageBody": "Markdown-it in /vue-strap uses different plugins for parsing\nits markdown content inside component attributes.\n\nIn preparation for moving markdown-it parsing to /markbind, let\u0027s move\nthe markdown-it variant from /vue-strap over to maintain parity with the\npast markdown rendering behaviour for attributes in vue components.\nLet\u0027s also restructure the directory hierarchy for markdown-it in here,\nto reduce code duplication between the two variants.\n",
+            "insertions": 93,
+            "deletions": 19
+          },
+          {
+            "hash": "0114e66f17aaba6fa1f242130f424120441756dd",
+            "messageTitle": "Implement per component markdown attribute parsing",
+            "messageBody": "Markdown passed in attributes are being rendered in the client.\n\nThis results in a dependency on the markdown parsing library\n(markdown-it) on the client, bloating the resulting client bundle size.\nIt also slows webpage loading, especially on older devices.\nMoreover, /markbind already parses some amount of markdown in attributes\nfor other purposes when building the site. This results in a less\ncohesive codebase.\n\nLet\u0027s move all markdown-it parsing from /vue-strap to /markbind,\npassing the rendered html into vue slots.\nAdditionally, let\u0027s conveniently standardise the attribute naming for\nthese components at the same time.\n",
+            "insertions": 255,
+            "deletions": 10
+          },
+          {
+            "hash": "91804319a6b06172682b82b654bb102fb36f069d",
+            "messageTitle": "Adapt panel header indexing",
+            "messageBody": "Markdown in attributes are now being parsed at build time.\n\nLet’s adapt the panel header indexing, so that it appropriately\nindexes the header in the correct slot.\n",
+            "insertions": 62,
+            "deletions": 45
+          },
+          {
+            "hash": "59e0a3eb80051035e479f2d03137b5dfdd7c63f0",
+            "messageTitle": "Add unit tests for ComponentParser",
+            "messageBody": "",
+            "insertions": 349,
+            "deletions": 0
+          },
+          {
+            "hash": "c99bf2f5a5cd1d1a1b610afa42620f32ac7b3d1f",
+            "messageTitle": "Update input test files for attribute names update",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 12
+          },
+          {
+            "hash": "ba9ad886719e7f266a5d38ef97909cfe8db15f0d",
+            "messageTitle": "Update expected test files",
+            "messageBody": "Moving markdown parsing to build time results in markdown\nin attributes being parsed into html in the dom.\n\nLet’s update the expected test files to reflect these changes.\n",
+            "insertions": 13,
+            "deletions": 6
+          },
+          {
+            "hash": "26c36a4835866950bbd2627620a38d624c8aaca1",
+            "messageTitle": "Update docs for attribute name standardisation",
+            "messageBody": "",
+            "insertions": 89,
+            "deletions": 80
+          }
+        ]
+      }
+    ],
+    "geshuming": [],
+    "alyip98": [],
+    "nbriannl": [],
+    "le0tan": [
+      {
+        "insertions": 17,
+        "deletions": 0,
+        "date": "2020-01-15",
+        "commitResults": [
+          {
+            "hash": "146bbb46b7840dda97a44c928605b7eb6e4eb3b6",
+            "messageTitle": "Mention development environment prerequisites in DG (#965)",
+            "messageBody": "",
+            "insertions": 17,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 2880,
+        "deletions": 2734,
+        "date": "2020-01-30",
+        "commitResults": [
+          {
+            "hash": "2b378dbff80b12ab509bbd4c8b482e5ef887bfef",
+            "messageTitle": "Remove dependency on EJS (#990)",
+            "messageBody": "MarkBind is using two templating engines (i.e. EJS and Nunjucks) while\r\nNunjucks is essential to the functionality since it\u0027s user accessible,\r\nEJS seems a bit redundant and can be fully replaced by Nunjucks.\r\n\r\n* Re-write page.ejs with Nunjucks grammar\r\n* Make necessary changes to remove dependency on EJS\r\n* Change test on nested variable reference as initial Nunjucks renderer\r\n  is set to not auto-escape",
+            "insertions": 143,
+            "deletions": 72
+          },
+          {
+            "hash": "af47ed018176216e10b8a7a510c85e9465714b41",
+            "messageTitle": "Adopt ES6 class syntax (#979)",
+            "messageBody": "",
+            "insertions": 2737,
+            "deletions": 2662
+          }
+        ]
+      },
+      {
+        "insertions": 60,
+        "deletions": 0,
+        "date": "2020-02-08",
+        "commitResults": [
+          {
+            "hash": "d6654485a5743cab146af00157d0b8bf68f1aa98",
+            "messageTitle": "doc: Update seamless style boxes (#1019)",
+            "messageBody": "",
+            "insertions": 60,
+            "deletions": 0
+          }
+        ]
+      }
+    ],
+    "tiuweehan": [],
+    "madanalogy": [
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-02-04",
+        "commitResults": [
+          {
+            "hash": "c3aac494affbb5a366c9d182a5501c663cc85c12",
+            "messageTitle": "docs: Fix inconsistent navigation links whitespace (#1018)",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
+      },
+      {
+        "insertions": 103,
+        "deletions": 81,
+        "date": "2020-02-06",
+        "commitResults": [
+          {
+            "hash": "6b44e3c9d9300e2f50566de94fa2da15a9088f2d",
+            "messageTitle": "Add help usage to user guide (#996)",
+            "messageBody": "",
+            "insertions": 103,
+            "deletions": 81
+          }
+        ]
+      }
+    ],
+    "daekoon": []
+  },
+  "authorFinalContributionMap": {
+    "ccyccyccy": 0,
+    "Parcly-Taxel": 0,
+    "niqiukun": 0,
+    "openorclose": 107,
+    "yash-chowdhary": 0,
+    "anubh-v": 0,
+    "Tejas2805": 0,
+    "dvrylc": 2,
+    "jamessspanggg": 0,
+    "j-lum": 0,
+    "iskandarzulkarnaien": 0,
+    "xantho09": 0,
+    "0blivious": 0,
+    "hcwong": 51,
+    "ang-zeyu": 1098,
+    "geshuming": 0,
+    "alyip98": 17,
+    "nbriannl": 0,
+    "le0tan": 911,
+    "tiuweehan": 0,
+    "madanalogy": 103,
+    "daekoon": 0
+  },
+  "authorFileTypeContributionMap": {
+    "ccyccyccy": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "Parcly-Taxel": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "niqiukun": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "openorclose": {
+      "java": 0,
+      "js": 107,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "yash-chowdhary": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "anubh-v": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "Tejas2805": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "dvrylc": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 2,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "jamessspanggg": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "j-lum": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "iskandarzulkarnaien": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "xantho09": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "0blivious": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "hcwong": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 51,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "ang-zeyu": {
+      "java": 0,
+      "js": 903,
+      "css": 35,
+      "json": 22,
+      "md": 45,
+      "mbd": 0,
+      "mbdf": 93,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "geshuming": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "alyip98": {
+      "java": 0,
+      "js": 17,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "nbriannl": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "le0tan": {
+      "java": 0,
+      "js": 769,
+      "css": 0,
+      "json": 0,
+      "md": 17,
+      "mbd": 0,
+      "mbdf": 57,
+      "njk": 68,
+      "py": 0,
+      "yml": 0
+    },
+    "tiuweehan": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    },
+    "madanalogy": {
+      "java": 0,
+      "js": 17,
+      "css": 0,
+      "json": 0,
+      "md": 85,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 1,
+      "py": 0,
+      "yml": 0
+    },
+    "daekoon": {
+      "java": 0,
+      "js": 0,
+      "css": 0,
+      "json": 0,
+      "md": 0,
+      "mbd": 0,
+      "mbdf": 0,
+      "njk": 0,
+      "py": 0,
+      "yml": 0
+    }
+  },
+  "authorContributionVariance": {
+    "ccyccyccy": 0.0,
+    "Parcly-Taxel": 0.0,
+    "niqiukun": 0.0,
+    "openorclose": 0.0,
+    "yash-chowdhary": 0.0,
+    "anubh-v": 0.0,
+    "Tejas2805": 0.0,
+    "dvrylc": 0.57064474,
+    "jamessspanggg": 0.0,
+    "j-lum": 0.0,
+    "iskandarzulkarnaien": 0.0,
+    "xantho09": 0.0,
+    "0blivious": 0.0,
+    "hcwong": 115.87655,
+    "ang-zeyu": 47063.473,
+    "geshuming": 0.0,
+    "alyip98": 0.0,
+    "nbriannl": 0.0,
+    "le0tan": 1123013.1,
+    "tiuweehan": 0.0,
+    "madanalogy": 1206.6173,
+    "daekoon": 0.0
+  },
+  "authorDisplayNameMap": {
+    "ccyccyccy": "CHON..YUAN",
+    "Parcly-Taxel": "JERE..ERUI",
+    "niqiukun": "NI T..ZHEN",
+    "openorclose": "DARY.. TAN",
+    "yash-chowdhary": "YASH..HARY",
+    "anubh-v": "ANUB..BHAV",
+    "Tejas2805": "TEJA..ANIA",
+    "dvrylc": "CHAN..ARYL",
+    "jamessspanggg": "JAME.. WAI",
+    "j-lum": "LUM ..FFRY",
+    "iskandarzulkarnaien": "ISKA..AINI",
+    "xantho09": "MUHA..INAL",
+    "0blivious": "LIU ..IWEN",
+    "hcwong": "JOSH..HIEN",
+    "ang-zeyu": "ANG ..E YU",
+    "geshuming": "GE S..MING",
+    "alyip98": "YIP ..YEUN",
+    "nbriannl": "LABA..RIDO",
+    "le0tan": "TAN ..HONG",
+    "tiuweehan": "TIU .. HAN",
+    "madanalogy": "MUHA..JJAJ",
+    "daekoon": "LIM ..KOON"
+  }
+}
