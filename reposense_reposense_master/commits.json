@@ -2,6 +2,20 @@
   "authorDailyContributionsMap": {
     "ccyccyccy": [
       {
+        "insertions": 6,
+        "deletions": 0,
+        "date": "2020-01-07",
+        "commitResults": [
+          {
+            "hash": "6476b251fea6d28942cb769bf5100f5894ef7d4c",
+            "messageTitle": "[#747] SystemTest: Delete ft_temp folder after test (#973)",
+            "messageBody": "ft_temp folder is generated after running system test.\r\n\r\nThis folder is unnecessary to stay in our repo directory and may \r\nconfuse code navigation.\r\n\r\nLet\u0027s add a cleanup method to delete the folder after the system \r\ntest.",
+            "insertions": 6,
+            "deletions": 0
+          }
+        ]
+      },
+      {
         "insertions": 10,
         "deletions": 2,
         "date": "2020-01-21",
@@ -19,8 +33,93 @@
     "Parcly-Taxel": [],
     "niqiukun": [],
     "openorclose": [],
-    "yash-chowdhary": [],
+    "yash-chowdhary": [
+      {
+        "insertions": 7,
+        "deletions": 6,
+        "date": "2020-02-12",
+        "commitResults": [
+          {
+            "hash": "cc28942504f513fc7c277c6eda0ac01b353ae962",
+            "messageTitle": "[#1021]: Use BASE_URL constant instead of string  (#1033)",
+            "messageBody": "There are multiple occurrences of the same string \r\n\u0027https://github.com\u0027 in the frontend.\r\n\r\nLet\u0027s replace the string with a constant \u0027BASE_URL\u0027 in the files.",
+            "insertions": 7,
+            "deletions": 6
+          }
+        ]
+      }
+    ],
     "anubh-v": [
+      {
+        "insertions": 52,
+        "deletions": 23,
+        "date": "2019-12-01",
+        "commitResults": [
+          {
+            "hash": "175bed2ea6ad27c54c91c14b9ef7edb229df67c1",
+            "messageTitle": "[#806, #951] ReportGenerator: return paths of generated files (#939)",
+            "messageBody": "The method `ReportGenerator#generateReposReport` returns a list of\r\npaths to the JSON files that need to be zipped. \r\n\r\nHowever, the list is made up by the file paths of expected output and\r\nnot the file paths of actual generated files. As a good practice, and\r\nalso to ensure that only the correct files are zipped, the latter is\r\npreferred. \r\n\r\nLet\u0027s return a Optional\u003cPath\u003e from `FileUtil#writeJsonFile` so that\r\ncallers of this method can determine whether a JSON file was\r\nsuccessfully generated.\r\n\r\nThis allows `generateReposReport` to only return paths to JSON files\r\nthat were successfully generated.\r\n",
+            "insertions": 52,
+            "deletions": 23
+          }
+        ]
+      },
+      {
+        "insertions": 76,
+        "deletions": 4,
+        "date": "2019-12-03",
+        "commitResults": [
+          {
+            "hash": "c6ffecd214e73fc8ecf97a742108af5ac6d2ceab",
+            "messageTitle": "[#871, #952] CSV files: ignore blank lines before the header (#903)",
+            "messageBody": "CsvParser treats the first non-empty line as the header row.\r\n\r\nWhen a CSV file contains blank line(s) above the header, the blank line\r\nwould be taken as the header, causing the subsequent rows in the CSV\r\nfile to be flagged as malformed. Hence, any CSV file with blank lines\r\nbefore the header will be parsed incorrectly. \r\n\r\nLet\u0027s modify CsvParser such that it skips all the blank lines preceding\r\nthe header, and picks the first non blank line as the header.\r\n\r\nThe Apache Commons CSV library currently does not provide any methods\r\nto skip blank lines preceding the header. This limitation is documented\r\nin:\r\nhttps://issues.apache.org/jira/browse/CSV-127 \r\n\r\nHence, let\u0027s implement a custom line-skipping behavior using a\r\nBufferedReader.",
+            "insertions": 76,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 10,
+        "deletions": 4,
+        "date": "2019-12-08",
+        "commitResults": [
+          {
+            "hash": "a2adb592431b2ee59fb3d22a3f6c8ab703870de9",
+            "messageTitle": "[#934] CsvParser: Remove extra comma in warning logs (#935)",
+            "messageBody": "When a line in a CSV config is found to be malformed, the logger prints \r\nthe contents of the line in a warning message. The current method causes\r\nan extra comma to be printed.\r\n\r\nThis extra comma may make debugging more confusing.\r\n\r\nLet\u0027s modify the method used to extract the contents of a line, such \r\nthat there are no extra commas.",
+            "insertions": 10,
+            "deletions": 4
+          }
+        ]
+      },
+      {
+        "insertions": 81,
+        "deletions": 15,
+        "date": "2019-12-20",
+        "commitResults": [
+          {
+            "hash": "b9c5665aeca76200e3ea11ba9b6936768e5d6f2c",
+            "messageTitle": "[#736] CLI: allow \"--ignore-standalone-config\" flag to override CSV values (#928)",
+            "messageBody": "RepoSense ignores the --ignore-standalone-config command line flag when\r\nparsing a repo-config csv file.\r\n\r\nWe can allow the --ignore-standalone-config command line flag to\r\noverride all entries in the \"Ignore Standalone Config\" column of\r\nrepo-config.csv. This provides users with an easy method of setting\r\nthis flag for all repos, without having to edit each line of the csv.\r\n\r\nTo achieve this, let\u0027s move the isStandaloneConfigIgnored attribute\r\nfrom the LocationsCliArguments class, to its superclass: CliArguments.\r\nThis will allow us to access the --ignore-standalone-config flag\u0027s\r\nvalue when parsing RepoConfigurations from both LocationsCliArguments\r\nand ConfigCliArguments.",
+            "insertions": 81,
+            "deletions": 15
+          }
+        ]
+      },
+      {
+        "insertions": 65,
+        "deletions": 10,
+        "date": "2020-01-02",
+        "commitResults": [
+          {
+            "hash": "1fa50ce7250a470a8bd13efb807b8a8e8de16bc5",
+            "messageTitle": "[#872] CsvParser: improve exception handling when a csv file has incorrect number of columns in header (#955)",
+            "messageBody": "RepoSense crashes abruptly when any of the CSV config files do not \r\nhave the expected number of columns in their headers.\r\n\r\nWe should catch this error early and provide the user with a clearer\r\nerror message.\r\n\r\nLet\u0027s add a header validation step to the CSV parsing process. This \r\nstep will verify if the CSV file\u0027s header has the right number of \r\ncolumns.\r\n",
+            "insertions": 65,
+            "deletions": 10
+          }
+        ]
+      },
       {
         "insertions": 34,
         "deletions": 8,
@@ -65,6 +164,34 @@
       }
     ],
     "Tejas2805": [
+      {
+        "insertions": 3,
+        "deletions": 6,
+        "date": "2019-12-20",
+        "commitResults": [
+          {
+            "hash": "efa7969f68907fc07ae3b17a5027f6aa5e876f07",
+            "messageTitle": "[#931] Code view: Default sorting in descending order (#932)",
+            "messageBody": "In Code view, the default order for LoC is ascending.\r\n\r\nLet\u0027s make the default order descending as it is more meaningful to\r\nhave bigger changes on top as they should be more interesting.\r\n",
+            "insertions": 3,
+            "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 56,
+        "deletions": 1,
+        "date": "2019-12-21",
+        "commitResults": [
+          {
+            "hash": "4e4ffa26b9d07cc0ef963c688737a45345e78f0d",
+            "messageTitle": "[#352] User Guide: add quick start guide to use RepoSense with Netlify (#924)",
+            "messageBody": "Users would need to download .jar file to run RepoSense.\r\n\r\nLet\u0027s add a quick start section to User Guide to instruct users to \r\nuse RepoSense through Netlify so they can get started without \r\ndownloading any files. This should ease users into using RepoSense.\r\n",
+            "insertions": 56,
+            "deletions": 1
+          }
+        ]
+      },
       {
         "insertions": 4,
         "deletions": 5,
@@ -142,6 +269,37 @@
     "iskandarzulkarnaien": [],
     "xantho09": [],
     "0blivious": [
+      {
+        "insertions": 69,
+        "deletions": 42,
+        "date": "2019-12-17",
+        "commitResults": [
+          {
+            "hash": "d6710418070622ecb723793f75ca810ad667e326",
+            "messageTitle": "[#865] AuthorConfig: further improve the branch field (#878)",
+            "messageBody": "In the author-config.csv, branch is an optional field that will\r\nautomatically uses the default branch in the repo field.\r\n\r\nHowever, this can be improved such that if the branch field is not\r\nfilled, we can bind that AuthorConfig to all the RepoConfig that has the\r\nsame repo\u0027s location irregardless of branch. This can help users to\r\neasily setup config files to analyse multiple branches of a repo.\r\n\r\nLet\u0027s bind the AuthorConfig to all the RepoConfig that has the same\r\nrepo\u0027s location irregardless of branch if the branch field is not\r\nfilled.",
+            "tags": [
+              "v1.10.1"
+            ],
+            "insertions": 69,
+            "deletions": 42
+          }
+        ]
+      },
+      {
+        "insertions": 35,
+        "deletions": 13,
+        "date": "2019-12-25",
+        "commitResults": [
+          {
+            "hash": "57e70cf06674352e18c8a396e4fb7bf7dc8f517e",
+            "messageTitle": "[#900] group-config.csv: make location optional (#914)",
+            "messageBody": "In the group-config.csv, location is a compulsory field that only has one\r\nvalue.  Specifying groups for all repos requires the user to manually key\r\nin groups for each repo.\r\n\r\nHowever, this can be improved such that if the location field is not\r\nfilled, we can bind that GroupConfig to all the RepoConfig. This can\r\nhelp the user save the time listing all the possible combinations of\r\nrepos and groups when they want to specify groups for all repos.\r\n\r\nLet\u0027s bind the GroupConfig to all the RepoConfig if the location\r\nfield is not filled.",
+            "insertions": 35,
+            "deletions": 13
+          }
+        ]
+      },
       {
         "insertions": 2,
         "deletions": 2,
@@ -228,7 +386,22 @@
       }
     ],
     "hcwong": [],
-    "ang-zeyu": [],
+    "ang-zeyu": [
+      {
+        "insertions": 4,
+        "deletions": 1,
+        "date": "2019-12-24",
+        "commitResults": [
+          {
+            "hash": "e207c43b84143dcd81a2581c1501f51cb54ef937",
+            "messageTitle": "Fix additional upward movement on expanding code (#966)",
+            "messageBody": "Clicking the expand button may cause the code to move up a bit \r\nbefore expanding. This occurs more frequently when the number of \r\ncode lines to load is large, or the client is slow. \r\n\r\nThis is due to asynchronous data loading by Vue, causing observable \r\nCSS updates to the code block before the code has been loaded into \r\nthe DOM.\r\n\r\nLet\u0027s execute the CSS change for the code block only after the \r\nsegment\u0027s code lines have been loaded.",
+            "insertions": 4,
+            "deletions": 1
+          }
+        ]
+      }
+    ],
     "geshuming": [],
     "alyip98": [],
     "nbriannl": [],
@@ -238,21 +411,21 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 10,
+    "ccyccyccy": 16,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 0,
-    "yash-chowdhary": 0,
-    "anubh-v": 106,
-    "Tejas2805": 415,
+    "yash-chowdhary": 7,
+    "anubh-v": 312,
+    "Tejas2805": 473,
     "dvrylc": 0,
     "jamessspanggg": 0,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 78,
+    "0blivious": 143,
     "hcwong": 0,
-    "ang-zeyu": 0,
+    "ang-zeyu": 3,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -263,7 +436,7 @@
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 10,
+      "java": 16,
       "js": 0,
       "scss": 0,
       "json": 0,
@@ -304,7 +477,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 0,
+      "js": 7,
       "scss": 0,
       "json": 0,
       "md": 0,
@@ -313,21 +486,21 @@
       "gradle": 0
     },
     "anubh-v": {
-      "java": 72,
+      "java": 277,
       "js": 0,
       "scss": 34,
       "json": 0,
-      "md": 0,
+      "md": 1,
       "py": 0,
       "jade": 0,
       "gradle": 0
     },
     "Tejas2805": {
       "java": 0,
-      "js": 10,
+      "js": 12,
       "scss": 404,
       "json": 0,
-      "md": 1,
+      "md": 57,
       "py": 0,
       "jade": 0,
       "gradle": 0
@@ -383,11 +556,11 @@
       "gradle": 0
     },
     "0blivious": {
-      "java": 5,
+      "java": 68,
       "js": 25,
       "scss": 40,
       "json": 0,
-      "md": 8,
+      "md": 10,
       "py": 0,
       "jade": 0,
       "gradle": 0
@@ -404,7 +577,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 0,
+      "js": 3,
       "scss": 0,
       "json": 0,
       "md": 0,
@@ -484,21 +657,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 4.7942877,
+    "ccyccyccy": 2.373267,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 0.0,
-    "anubh-v": 669.2176,
-    "Tejas2805": 12282.978,
+    "yash-chowdhary": 2.2529218,
+    "anubh-v": 593.66,
+    "Tejas2805": 5069.5425,
     "dvrylc": 0.0,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 254.4471,
+    "0blivious": 291.16895,
     "hcwong": 0.0,
-    "ang-zeyu": 0.0,
+    "ang-zeyu": 0.33327302,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

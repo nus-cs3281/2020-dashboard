@@ -40,10 +40,10 @@ window.vAuthorship = {
       totalLineCount: '',
       totalBlankLineCount: '',
       filesSortType: 'lineOfCode',
-      toReverseSortFiles: false,
+      toReverseSortFiles: true,
       activeFilesCount: 0,
       filterSearch: '*',
-      sortingFunction: window.comparator(filesSortDict.lineOfCode),
+      sortingFunction: (a, b) => -1 * window.comparator(filesSortDict.lineOfCode)(a, b),
       isSearchBar: false,
       isCheckBoxes: true,
     };
@@ -283,7 +283,7 @@ window.vAuthorship = {
     getFileLink(file, path) {
       const repo = window.REPOS[this.info.repo];
 
-      return `http://github.com/${
+      return `${window.BASE_URL}/${
         repo.location.organization}/${repo.location.repoName}/${path}/${repo.branch}/${file.path}`;
     },
 

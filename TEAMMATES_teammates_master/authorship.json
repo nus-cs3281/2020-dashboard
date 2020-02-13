@@ -41808,6 +41808,1122 @@
     }
   },
   {
+    "path": "src/web/app/pages-instructor/instructor-home-page/instructor-home-page.component.html",
+    "fileType": "html",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003ch1\u003eHome\u003c/h1\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv class\u003d\"card bg-light mb-4\"\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv class\u003d\"card-body\"\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cdiv class\u003d\"form-group\"\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"input-group\"\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cinput type\u003d\"text\" class\u003d\"form-control\" [(ngModel)]\u003d\"studentSearchkey\" (keyup.enter)\u003d\"search()\""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "               placeholder\u003d\"e.g. Charles Shultz, charles@gmail.com\"\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cdiv class\u003d\"input-group-append\"\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cbutton class\u003d\"btn btn-primary\" (click)\u003d\"search()\"\u003eSearch\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cng-template #noCourseMessage class\u003d\"bg-light-blue\"\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cng-container *ngIf\u003d\"hasCoursesLoaded\"\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    New to TEAMMATES? You may wish to have a look at our \u003ca routerLink\u003d\"/web/front/help/instructor\"\u003eGetting Started Guide\u003c/a\u003e."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    A video tour is also available in our \u003ca routerLink\u003d\"/web\"\u003ehome page\u003c/a\u003e."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/ng-container\u003e"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/ng-template\u003e"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "\u003cdiv class\u003d\"row\"\u003e"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv class\u003d\"col-4\"\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003ca routerLink\u003d\"/web/instructor/courses\" class\u003d\"btn btn-primary text-white\" [queryParams]\u003d\"{isAddNewCourse: true}\"\u003eAdd New Course\u003c/a\u003e"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv class\u003d\"col-8\" *ngIf\u003d\"courseTabModels.length \u003e 0\"\u003e"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cdiv class\u003d\"float-right\"\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003ch5 class\u003d\"d-inline\"\u003e\u003cstrong\u003e Sort By: \u003c/strong\u003e\u003c/h5\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"btn-group\" data-toggle\u003d\"buttons\"\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton class\u003d\"btn btn-light\" [disabled]\u003d\"isSelectedForSorting(SortBy.COURSE_ID)\" (click)\u003d\"sortCoursesBy(SortBy.COURSE_ID)\"\u003eCourse ID\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton class\u003d\"btn btn-light\" [disabled]\u003d\"isSelectedForSorting(SortBy.COURSE_NAME)\" (click)\u003d\"sortCoursesBy(SortBy.COURSE_NAME)\"\u003eCourse Name\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton class\u003d\"btn btn-light\" [disabled]\u003d\"isSelectedForSorting(SortBy.COURSE_CREATION_DATE)\" (click)\u003d\"sortCoursesBy(SortBy.COURSE_CREATION_DATE)\"\u003eCreation Date\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv *ngIf\u003d\"courseTabModels.length \u003e 0; else noCourseMessage\"\u003e"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv class\u003d\"card margin-bottom-15px\" *ngFor\u003d\"let courseTabModel of courseTabModels; let idx \u003d index\"\u003e"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cdiv class\u003d\"card-header bg-primary text-white course-tab-header\" (click)\u003d\"courseTabModel.isTabExpanded \u003d handleClick($event, courseTabModel); this.loadFeedbackSessions(courseTabModel);\"\u003e"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"row\"\u003e"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cdiv class\u003d\"col-6\"\u003e"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cb\u003e[{{ courseTabModel.course.courseId }}]: {{ courseTabModel.course.courseName }}\u003c/b\u003e"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cdiv class\u003d\"col-sm-6\"\u003e"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cdiv class\u003d\"float-right\" *ngIf\u003d\"courseTabModel.isAjaxSuccess; else errorLoadingFeedbackSessions\"\u003e"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003cspan ngbDropdown class\u003d\"padding-right-10px\"\u003e"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cbutton class\u003d\"btn btn-light btn-sm\" ngbDropdownToggle\u003e Students \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cdiv ngbDropdownMenu\u003e"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003cng-container *ngIf\u003d\"courseTabModel.instructorPrivilege.canModifyStudent\"\u003e"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  \u003ca class\u003d\"btn btn-info btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                     ngbTooltip\u003d\"Enroll student into the course\""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                     routerLink\u003d\"/web/instructor/courses/enroll\" [queryParams]\u003d\"{courseid: courseTabModel.course.courseId}\"\u003e Enroll"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/ng-container\u003e"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003ca class\u003d\"btn btn-info btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   ngbTooltip\u003d\"View, edit and send invitation emails to the students in the course\""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   routerLink\u003d\"/web/instructor/courses/details\" [queryParams]\u003d\"{courseid: courseTabModel.course.courseId}\"\u003e View / Edit"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003c/span\u003e"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003cspan ngbDropdown class\u003d\"padding-right-10px\"\u003e"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cbutton class\u003d\"btn btn-light btn-sm\" ngbDropdownToggle\u003e Instructors \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cdiv ngbDropdownMenu \u003e"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003ca class\u003d\"btn btn-light btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   ngbTooltip\u003d\"Edit course information and instructor list\""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   routerLink\u003d\u0027/web/instructor/courses/edit\u0027 [queryParams]\u003d\"{courseid: courseTabModel.course.courseId}\"\u003e View / Edit"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003c/span\u003e"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003cspan ngbDropdown class\u003d\"padding-right-10px\"\u003e"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cbutton class\u003d\"btn btn-light btn-sm\" ngbDropdownToggle\u003e Sessions \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cdiv ngbDropdownMenu\u003e"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003ca class\u003d\"btn btn-light btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   ngbTooltip\u003d\"Add a feedback session for the course\""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   routerLink\u003d\u0027/web/instructor/sessions\u0027 [queryParams]\u003d\"{courseid: courseTabModel.course.courseId}\"\u003e Add"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003c/span\u003e"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003cspan ngbDropdown class\u003d\"padding-right-10px\"\u003e"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cbutton class\u003d\"btn btn-light btn-sm\" ngbDropdownToggle\u003e Course \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cdiv ngbDropdownMenu\u003e"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003ca class\u003d\"btn btn-light btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   ngbTooltip\u003d\"Archive the course so that it will not be shown in the home page any more (you can still access it from the \u0027Courses\u0027 tab)\""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   (click)\u003d\"openModal(courseArchiveModal); $event.stopPropagation()\"\u003e Archive"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003ca class\u003d\"btn btn-light btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   ngbTooltip\u003d\"Edit course information and instructor list\""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   routerLink\u003d\u0027/web/instructor/courses/edit\u0027 [queryParams]\u003d\"{courseid: courseTabModel.course.courseId}\"\u003e View / Edit"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003cng-container *ngIf\u003d\"courseTabModel.instructorPrivilege.canModifyCourse\"\u003e"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  \u003ca class\u003d\"btn btn-light btn-sm dropdown-item\""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                     ngbTooltip\u003d\"Delete the course and its corresponding students and sessions\""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                     (click)\u003d\"openModal(courseDeleteModal); $event.stopPropagation()\"\u003e Delete"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u003c/ng-container\u003e"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003c/span\u003e"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003ci class\u003d\"fas fa-chevron-down\" *ngIf\u003d\"!courseTabModel.isTabExpanded\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003ci class\u003d\"fas fa-chevron-up\" *ngIf\u003d\"courseTabModel.isTabExpanded\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cng-template #errorLoadingFeedbackSessions\u003e"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      Error loading feedback sessions. Click here to retry."
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/ng-template\u003e"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cng-template #courseDeleteModal let-modal\u003e"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"modal-header bg-warning\"\u003e"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003ch5 class\u003d\"modal-title\"\u003e\u003ci class\u003d\"fas fa-exclamation-circle\"\u003e\u003c/i\u003e Warning: Confirm moving course to Recycle Bin \u003c/h5\u003e"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton type\u003d\"button\" class\u003d\"close\" (click)\u003d\"modal.dismiss()\"\u003e"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003ci class\u003d\"fas fa-times\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"modal-body\"\u003e"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Are you sure you want to delete the course: {{courseTabModel.course.courseId}}?"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        This action can be reverted by going to the \"Courses\" tab and restoring the desired course(s)."
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"modal-footer\"\u003e"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton type\u003d\"button\" class\u003d\"btn btn-light\" (click)\u003d\"modal.dismiss()\"\u003eNo, cancel the operation\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton type\u003d\"button\" class\u003d\"btn btn-warning\" (click)\u003d\"deleteCourse(courseTabModel.course.courseId); modal.close()\"\u003eYes\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/ng-template\u003e"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cng-template #courseArchiveModal let-modal\u003e"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"modal-header bg-info\"\u003e"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003ch5 class\u003d\"modal-title\"\u003e\u003ci class\u003d\"fas fa-exclamation-circle\"\u003e\u003c/i\u003e Confirm archiving course \u003c/h5\u003e"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton type\u003d\"button\" class\u003d\"close\" (click)\u003d\"modal.dismiss()\"\u003e"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003ci class\u003d\"fas fa-times\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"modal-body\"\u003e"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Are you sure you want to archive {{courseTabModel.course.courseId}}?"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        This action can be reverted by going to the \"Courses\" tab and unarchiving the desired course(s)."
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"modal-footer\"\u003e"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton type\u003d\"button\" class\u003d\"btn btn-light\" (click)\u003d\"modal.dismiss()\"\u003eNo, cancel the operation\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cbutton type\u003d\"button\" class\u003d\"btn btn-warning\" (click)\u003d\"archiveCourse(courseTabModel.course.courseId); modal.close()\"\u003eYes\u003c/button\u003e"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/ng-template\u003e"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cdiv class\u003d\"card-body padding-0\" *ngIf\u003d\"courseTabModel.isTabExpanded\"\u003e"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003ctm-sessions-table"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          [sessionsTableRowModels]\u003d\"courseTabModel.sessionsTableRowModels\" [sessionsTableRowModelsSortBy]\u003d\"courseTabModel.sessionsTableRowModelsSortBy\""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          [sessionsTableRowModelsSortOrder]\u003d\"courseTabModel.sessionsTableRowModelsSortOrder\" [courseCandidates]\u003d\"courseCandidates\""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          [headerColorScheme]\u003d\"SessionsTableHeaderColorScheme.WHITE\" [columnsToShow]\u003d\"[ SessionsTableColumn.START_DATE, SessionsTableColumn.END_DATE ]\""
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (sortSessionsTableRowModelsEvent)\u003d\"sortSessionsTableRowModelsEvent(idx, $event)\""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (loadResponseRateEvent)\u003d\"loadResponseRateEventHandler(idx, $event)\" (editSessionEvent)\u003d\"editSessionEventHandler(idx, $event)\""
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (moveSessionToRecycleBinEvent)\u003d\"moveSessionToRecycleBinEventHandler(idx, $event)\" (copySessionEvent)\u003d\"copySessionEventHandler(idx, $event)\""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (submitSessionAsInstructorEvent)\u003d\"submitSessionAsInstructorEventHandler(idx, $event)\" (viewSessionResultEvent)\u003d\"viewSessionResultEventHandler(idx, $event)\""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (publishSessionEvent)\u003d\"publishSessionEventHandler(idx, $event)\" (unpublishSessionEvent)\u003d\"unpublishSessionEventHandler(idx, $event)\""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (resendResultsLinkToStudentsEvent)\u003d\"resendResultsLinkToStudentsEventHandler(courseTabModel.sessionsTableRowModels[$event])\""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (sendRemindersToStudentsEvent)\u003d\"sendRemindersToStudentsEventHandler(courseTabModel.sessionsTableRowModels[$event])\"\u003e\u003c/tm-sessions-table\u003e"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "madanalogy": 1,
+      "-": 157
+    }
+  },
+  {
     "path": "src/web/app/pages-instructor/instructor-home-page/instructor-home-page.component.ts",
     "fileType": "ts",
     "lines": [
