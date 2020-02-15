@@ -42,6 +42,20 @@
             "deletions": 2
           }
         ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 6,
+        "date": "2020-02-15",
+        "commitResults": [
+          {
+            "hash": "4e05ce5d01ed76c0e4505334209d5eedd7e28777",
+            "messageTitle": "Fix underline to include fas icons (#127)",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 6
+          }
+        ]
       }
     ],
     "ang-zeyu": [
@@ -84,6 +98,20 @@
             "messageBody": "Markdown passed in attributes are being rendered in\r\nthe client.\r\n\r\nThis results in a dependency on the markdown parsing\r\nlibrary ( markdown-it ) on the client bloating the resulting\r\nbundle size for /vue-strap. It also slows webpage loading,\r\nespecially on older devices. Moreover, /markbind already\r\nparses some amount of markdown in attributes for other\r\npurposes when building the site. This results in a less\r\ncohesive codebase.\r\n\r\nLet\u0027s rewrite the templates to use vue\u0027s slots for\r\ndisplaying the rendered html previously present\r\nin attributes.",
             "insertions": 81,
             "deletions": 310
+          }
+        ]
+      },
+      {
+        "insertions": 189,
+        "deletions": 82,
+        "date": "2020-02-15",
+        "commitResults": [
+          {
+            "hash": "400a3d6407ad0c68f22e0cff6ef105375ab218ad",
+            "messageTitle": "Organize searchbar interface results by page (#126)",
+            "messageBody": "Search results belonging to the same page display as individual entries,\r\nshowing the page title multiple times.\r\nResults are also not organized by page, but by the total number of\r\nmatches in the page title, heading and keywords with the search term.\r\nWhen a page title is not specified in the site config, the search result\r\ndisplays an empty block of vertical space.\r\n\r\nThis can lead to a less pleasant user experience with the searchbar.\r\n\r\nLet’s redesign the searchbar user interface, organizing results by page.\r\nResults belonging to the same page are sorted by the number of\r\nmatches, and pages are sorted according to the total number of its\r\nmatches in the page’s headings and keywords.\r\nLet’s use the page’s src as a fallback title if the title is absent.",
+            "insertions": 189,
+            "deletions": 82
           }
         ]
       }
@@ -153,8 +181,8 @@
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 41,
-    "ang-zeyu": 699,
+    "hcwong": 44,
+    "ang-zeyu": 883,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -288,7 +316,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "vue": 41
+      "vue": 44
     },
     "ang-zeyu": {
       "java": 0,
@@ -297,7 +325,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "vue": 548
+      "vue": 732
     },
     "geshuming": {
       "java": 0,
@@ -368,7 +396,7 @@
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 5.386823,
+    "yash-chowdhary": 4.627424,
     "anubh-v": 0.0,
     "Tejas2805": 0.0,
     "dvrylc": 0.0,
@@ -377,12 +405,12 @@
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 30.216928,
-    "ang-zeyu": 19810.533,
+    "hcwong": 26.858833,
+    "ang-zeyu": 17847.842,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "le0tan": 27.766989,
+    "le0tan": 23.86776,
     "tiuweehan": 0.0,
     "madanalogy": 0.0,
     "daekoon": 0.0

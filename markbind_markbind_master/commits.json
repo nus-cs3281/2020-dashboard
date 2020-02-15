@@ -17,6 +17,20 @@
             "deletions": 4
           }
         ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-02-15",
+        "commitResults": [
+          {
+            "hash": "b1f025f53c9c466185fccfb3f705c28b4f49a097",
+            "messageTitle": "Fix main page syntax link (#1024)",
+            "messageBody": "",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
       }
     ],
     "yash-chowdhary": [
@@ -105,6 +119,20 @@
             "messageBody": "",
             "insertions": 2,
             "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 71,
+        "deletions": 6,
+        "date": "2020-02-15",
+        "commitResults": [
+          {
+            "hash": "c17a61539ca08794af30473c47db3d1cd0f5dac4",
+            "messageTitle": "Add support for Octicons (#1000)",
+            "messageBody": "",
+            "insertions": 71,
+            "deletions": 6
           }
         ]
       }
@@ -277,10 +305,46 @@
             "deletions": 80
           }
         ]
+      },
+      {
+        "insertions": 202,
+        "deletions": 156,
+        "date": "2020-02-15",
+        "commitResults": [
+          {
+            "hash": "a1458b2350bfb5a2c7597e91ecd73506cc7abc44",
+            "messageTitle": "Remove extra blank lines from page.njk output (#1005)",
+            "messageBody": "",
+            "insertions": 12,
+            "deletions": 21
+          },
+          {
+            "hash": "0dde42daf237c1934952a7ba6f82666bce8830e3",
+            "messageTitle": "Restructure generated site data for searchbar ui (#1006)",
+            "messageBody": "Keywords tied to a heading are appended to the heading with a prepending\r\n\u0027|\u0027 character.\r\nThis is so that the \u0027|\u0027 character would serve as a visual separator\r\nbetween the heading and the keyword.\r\n\r\nHowever, it is thus not possible to extract a keyword from its heading\r\ndeterministically, as a heading can also include the \u0027|\u0027 character.\r\n\r\nLet\u0027s move the keywords to its own field, allowing the searchbar to\r\nextract a heading\u0027s keyword from it.",
+            "insertions": 190,
+            "deletions": 135
+          }
+        ]
       }
     ],
     "geshuming": [],
-    "alyip98": [],
+    "alyip98": [
+      {
+        "insertions": 13,
+        "deletions": 11,
+        "date": "2020-02-15",
+        "commitResults": [
+          {
+            "hash": "e22fb283cdacb78a7a98ca7eca84bc2e51dc1c86",
+            "messageTitle": "Change number emoji to use unicode characters (#1016)",
+            "messageBody": "",
+            "insertions": 13,
+            "deletions": 11
+          }
+        ]
+      }
+    ],
     "nbriannl": [
       {
         "insertions": 180,
@@ -399,22 +463,22 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 2,
-    "yash-chowdhary": 433,
+    "openorclose": 3,
+    "yash-chowdhary": 424,
     "anubh-v": 0,
     "Tejas2805": 0,
-    "dvrylc": 2,
+    "dvrylc": 71,
     "jamessspanggg": 0,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 1169,
+    "ang-zeyu": 1355,
     "geshuming": 0,
-    "alyip98": 0,
+    "alyip98": 12,
     "nbriannl": 0,
-    "le0tan": 920,
+    "le0tan": 894,
     "tiuweehan": 0,
     "madanalogy": 113,
     "daekoon": 0
@@ -461,7 +525,7 @@
       "js": 0,
       "css": 0,
       "json": 0,
-      "md": 2,
+      "md": 3,
       "mbd": 0,
       "mbdf": 0,
       "njk": 0,
@@ -472,7 +536,7 @@
       "java": 0,
       "js": 159,
       "css": 0,
-      "json": 11,
+      "json": 2,
       "md": 231,
       "mbd": 0,
       "mbdf": 32,
@@ -506,13 +570,13 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 0,
-      "css": 0,
-      "json": 2,
+      "js": 29,
+      "css": 30,
+      "json": 3,
       "md": 0,
       "mbd": 0,
-      "mbdf": 0,
-      "njk": 0,
+      "mbdf": 8,
+      "njk": 1,
       "py": 0,
       "yml": 0
     },
@@ -590,13 +654,13 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 910,
+      "js": 905,
       "css": 35,
-      "json": 22,
+      "json": 201,
       "md": 90,
       "mbd": 0,
       "mbdf": 112,
-      "njk": 0,
+      "njk": 12,
       "py": 0,
       "yml": 0
     },
@@ -614,7 +678,7 @@
     },
     "alyip98": {
       "java": 0,
-      "js": 0,
+      "js": 12,
       "css": 0,
       "json": 0,
       "md": 0,
@@ -638,13 +702,13 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 778,
+      "js": 773,
       "css": 0,
       "json": 0,
       "md": 17,
       "mbd": 0,
       "mbdf": 57,
-      "njk": 68,
+      "njk": 47,
       "py": 0,
       "yml": 0
     },
@@ -689,24 +753,24 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 0.5069388,
-    "yash-chowdhary": 3864.049,
+    "openorclose": 0.50868666,
+    "yash-chowdhary": 3524.3364,
     "anubh-v": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 0.22530611,
+    "dvrylc": 76.1012,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 45.808136,
-    "ang-zeyu": 18852.78,
+    "hcwong": 41.704502,
+    "ang-zeyu": 18640.467,
     "geshuming": 0.0,
-    "alyip98": 0.0,
-    "nbriannl": 481.9437,
-    "le0tan": 443688.75,
+    "alyip98": 7.3833704,
+    "nbriannl": 438.70877,
+    "le0tan": 403899.47,
     "tiuweehan": 0.0,
-    "madanalogy": 477.5227,
+    "madanalogy": 434.76624,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
