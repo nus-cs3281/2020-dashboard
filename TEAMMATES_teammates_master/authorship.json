@@ -36290,6 +36290,5416 @@
     }
   },
   {
+    "path": "src/web/app/pages-instructor/instructor-course-edit-page/instructor-course-edit-page.component.html",
+    "fileType": "html",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv class\u003d\"card bg-light top-padded\"\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv class\u003d\"card-header bg-primary text-white\"\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cstrong\u003eCourse:\u003c/strong\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cspan class\u003d\"float-sm-right\"\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "      \u003cbutton class\u003d\"btn btn-light btn-sm btn-course\" ngbTooltip\u003d\"Edit course name\" placement\u003d\"top-right\""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              [disabled]\u003d\"!currInstructorCoursePrivilege.canModifyCourse\""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              *ngIf\u003d\"!isEditingCourse\" (click)\u003d\"this.isEditingCourse \u003d true\"\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003ci class\u003d\"fa fa-pen\" aria-hidden\u003d\"true\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Edit"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "      \u003cbutton *ngIf\u003d\"isEditingCourse\" class\u003d\"btn btn-light btn-sm\""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "              ngbTooltip\u003d\"Cancel editing course details\" placement\u003d\"top-right\""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "              (click)\u003d\"cancelEditingCourse()\"\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "              \u003ci class\u003d\"fa fa-times\" aria-hidden\u003d\"true\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "        Cancel"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/button\u003e\u0026nbsp;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cbutton class\u003d\"btn btn-light btn-sm btn-course\" ngbTooltip\u003d\"Delete the course and its corresponding students and sessions\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              [disabled]\u003d\"!currInstructorCoursePrivilege.canModifyCourse\" (click)\u003d\"deleteCourse()\"\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003ci class\u003d\"fa fa-trash\" aria-hidden\u003d\"true\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Delete"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/span\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv class\u003d\"card-body fill-plain\"\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cdiv\u003e"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"form-row form-group\"\u003e"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003clabel class\u003d\"col-sm-3\"\u003eCourse ID:\u003c/label\u003e"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cdiv class\u003d\"col-sm-3\"\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cinput class\u003d\"col-xs-12 form-control\" maxlength\u003d\"40\" tabindex\u003d\"1\" [(ngModel)]\u003d\"course.courseId\" disabled\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"form-row form-group\"\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003clabel class\u003d\"col-sm-3\"\u003eCourse Name:\u003c/label\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cdiv class\u003d\"col-sm-9\"\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cinput class\u003d\"form-control\" ngbTooltip\u003d\"The name of the course, e.g. Software Engineering.\""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                 maxlength\u003d\"64\" tabindex\u003d\"2\" [(ngModel)]\u003d\"course.courseName\" [disabled]\u003d\"!isEditingCourse\"\u003e"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"form-row form-group\"\u003e"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003clabel class\u003d\"col-xs-12 col-sm-3\"\u003eTime Zone:\u003c/label\u003e"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cdiv class\u003d\"col-xs-12 col-sm-9\"\u003e"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cdiv class\u003d\"input-group\"\u003e"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003cselect class\u003d\"form-control\" ngbTooltip\u003d\"The time zone for the course. You should not need to change this as it is auto-detected based on your"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              device settings. TEAMMATES automatically adjusts to match the current time offset in your area, including clock changes due to daylight saving time.\""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              [(ngModel)]\u003d\"course.timeZone\" [disabled]\u003d\"!isEditingCourse\"\u003e"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003coption *ngFor\u003d\"let timezone of timezones\" [value]\u003d\"timezone\"\u003e{{ timezone }}\u003c/option\u003e"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003c/select\u003e"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003cspan class\u003d\"input-group-btn\"\u003e"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003cbutton class\u003d\"btn btn-primary\" type\u003dbutton [disabled]\u003d\"!isEditingCourse\" (click)\u003d\"detectTimezone()\"\u003e"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                Auto-Detect"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            \u003c/span\u003e"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv class\u003d\"form-group\"\u003e"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "        \u003cdiv class\u003d\" col-sm-12 text-center\"\u003e"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003cbutton class\u003d\"btn btn-primary\" type\u003d\"button\" (click)\u003d\"onSaveCourse()\" *ngIf\u003d\"isEditingCourse\"\u003e"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            Save Changes"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv class\u003d\"right top-padded\"\u003e"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003ca class\u003d\"small\" href\u003d\"/web/instructor/help#course-instructor-access\" rel\u003d\"noopener noreferrer\" target\u003d\"_blank\"\u003e"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003ci class\u003d\"fa fa-info-circle\" aria-hidden\u003d\"true\"\u003e\u003c/i\u003e"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    More about configuring access permissions"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/a\u003e"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cng-container *ngFor\u003d\"let panelDetail of instructorDetailPanels; let i \u003d index\"\u003e"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003ctm-instructor-edit-panel [editMode]\u003d\"EditMode.EDIT\" [(instructor)]\u003d\"panelDetail.editPanel\" [instructorIndex]\u003d\"i\""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            [currInstructorCoursePrivilege]\u003d\"currInstructorCoursePrivilege\""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            (viewRolePrivilegeModel)\u003d\"viewRolePrivilegeModel($event)\""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            (deleteInstructor)\u003d\"deleteInstructor(i)\""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            (saveInstructor)\u003d\"saveInstructor(i)\" (cancelEditing)\u003d\"cancelEditingInstructor(i)\""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            (sendRemindJoinEmail)\u003d\"resendReminderEmail(i)\""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            [allSections]\u003d\"this.allSections\" [allSessions]\u003d\"this.allSessions\"\u003e\u003c/tm-instructor-edit-panel\u003e"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/ng-container\u003e"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv class\u003d\"text-center\" *ngIf\u003d\"!isAddingNewInstructor\"\u003e"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cbutton class\u003d\"btn btn-primary\" tabindex\u003d\"6\" type\u003d\"button\" (click)\u003d\"isAddingNewInstructor \u003d true\"\u003e"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Add New Instructor"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/button\u003e"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv *ngIf\u003d\"isAddingNewInstructor\"\u003e"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003ctm-instructor-edit-panel [editMode]\u003d\"EditMode.ADD\" [(instructor)]\u003d\"newInstructorPanel\" [instructorIndex]\u003d\"instructorDetailPanels.length\""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            [currInstructorCoursePrivilege]\u003d\"currInstructorCoursePrivilege\""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            (viewRolePrivilegeModel)\u003d\"viewRolePrivilegeModel($event)\""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            (saveInstructor)\u003d\"addNewInstructor()\" (cancelEditing)\u003d\"isAddingNewInstructor \u003d false;\""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            [allSections]\u003d\"this.allSections\" [allSessions]\u003d\"this.allSessions\"\u003e\u003c/tm-instructor-edit-panel\u003e"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "niqiukun": 7,
+      "-": 86
+    }
+  },
+  {
+    "path": "src/web/app/pages-instructor/instructor-course-edit-page/instructor-course-edit-page.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Component, OnInit } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ActivatedRoute, Router } from \u0027@angular/router\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { NgbModal, NgbModalRef } from \u0027@ng-bootstrap/ng-bootstrap\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import moment from \u0027moment-timezone\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { forkJoin, Observable, of } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { concatAll, tap } from \u0027rxjs/operators\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { AuthService } from \u0027../../../services/auth.service\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { CourseService } from \u0027../../../services/course.service\u0027;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { FeedbackSessionsService } from \u0027../../../services/feedback-sessions.service\u0027;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { HttpRequestService } from \u0027../../../services/http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { NavigationService } from \u0027../../../services/navigation.service\u0027;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { StatusMessageService } from \u0027../../../services/status-message.service\u0027;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { StudentService } from \u0027../../../services/student.service\u0027;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { TimezoneService } from \u0027../../../services/timezone.service\u0027;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  AuthInfo,"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Course,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FeedbackSession,"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FeedbackSessions,"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Instructor,"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  InstructorPermissionRole,"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  InstructorPrivilege,"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Instructors,"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  JoinState,"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  MessageOutput,"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Student,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Students,"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027../../../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { InstructorCreateRequest, InstructorPrivilegeUpdateRequest, Intent } from \u0027../../../types/api-request\u0027;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ErrorMessageOutput } from \u0027../../error-message-output\u0027;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  InstructorOverallPermission,"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  InstructorSectionLevelPermission, InstructorSessionLevelPermission,"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027./custom-privilege-setting-panel/custom-privilege-setting-panel.component\u0027;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  DeleteInstructorConfirmModalComponent,"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027./delete-instructor-confirm-model/delete-instructor-confirm-modal.component\u0027;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  EditMode, InstructorEditPanel,"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027./instructor-edit-panel/instructor-edit-panel.component\u0027;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ResendInvitationEmailModalComponent,"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027./resend-invitation-email-modal/resend-invitation-email-modal.component\u0027;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ViewRolePrivilegesModalComponent,"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027./view-role-privileges-modal/view-role-privileges-modal.component\u0027;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "interface InstructorEditPanelDetail {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  originalInstructor: Instructor;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  editPanel: InstructorEditPanel;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Instructor course edit page."
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027tm-instructor-course-edit-page\u0027,"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./instructor-course-edit-page.component.html\u0027,"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  styleUrls: [\u0027./instructor-course-edit-page.component.scss\u0027],"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class InstructorCourseEditPageComponent implements OnInit {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  // enum"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  EditMode: typeof EditMode \u003d EditMode;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  courseId: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  timezones: string[] \u003d [];"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isEditingCourse: boolean \u003d false;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  course: Course \u003d {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    courseName: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    courseId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    timeZone: \u0027UTC\u0027,"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    creationTimestamp: 0,"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    deletionTimestamp: 0,"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  };"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "  originalCourse: Course \u003d {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    courseName: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    courseId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    timeZone: \u0027UTC\u0027,"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    creationTimestamp: 0,"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    deletionTimestamp: 0,"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "  };"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  currInstructorGoogleId: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  currInstructorCoursePrivilege: InstructorPrivilege \u003d {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canModifyCourse: true,"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canModifySession: true,"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canModifyStudent: true,"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canModifyInstructor: true,"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canViewStudentInSections: true,"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canModifySessionCommentsInSections: true,"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canViewSessionInSections: true,"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    canSubmitSessionInSections: true,"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  };"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  instructorDetailPanels: InstructorEditPanelDetail[] \u003d [];"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isAddingNewInstructor: boolean \u003d false;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  newInstructorPanel: InstructorEditPanel \u003d {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    googleId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    courseId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    email: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    isDisplayedToStudents: true,"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    displayedToStudentsAs: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    name: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    role: InstructorPermissionRole.INSTRUCTOR_PERMISSION_ROLE_COOWNER,"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    joinState: JoinState.NOT_JOINED,"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    permission: {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      privilege: {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canModifyCourse: false,"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canModifySession: false,"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canModifyStudent: false,"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canModifyInstructor: false,"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canViewStudentInSections: false,"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canModifySessionCommentsInSections: false,"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canViewSessionInSections: false,"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        canSubmitSessionInSections: false,"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      sectionLevel: [],"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    isEditing: true,"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  };"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  // for fine-grain permission setting"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  allSections: string[] \u003d [];"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  allSessions: string[] \u003d [];"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor(private route: ActivatedRoute,"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private router: Router,"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private navigationService: NavigationService,"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private timezoneService: TimezoneService,"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private httpRequestService: HttpRequestService,"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private studentService: StudentService,"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private feedbackSessionsService: FeedbackSessionsService,"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private statusMessageService: StatusMessageService,"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private courseService: CourseService,"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private authService: AuthService,"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private modalService: NgbModal) { }"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ngOnInit(): void {"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.route.queryParams.subscribe((queryParams: any) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.courseId \u003d queryParams.courseid;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.loadCourseInfo();"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.loadCurrInstructorInfo();"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      // load all section and session name"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      forkJoin("
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.studentService.getStudentsFromCourse(this.courseId),"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.feedbackSessionsService.getFeedbackSessionsForInstructor(this.courseId),"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ).subscribe((vals: any[]) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const students: Students \u003d vals[0] as Students;"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const sessions: FeedbackSessions \u003d vals[1] as FeedbackSessions;"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.allSections \u003d"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            Array.from(new Set(students.students.map((value: Student) \u003d\u003e value.sectionName)));"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.allSessions \u003d"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sessions.feedbackSessions.map((session: FeedbackSession) \u003d\u003e session.feedbackSessionName);"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.loadCourseInstructors();"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.timezones \u003d Object.keys(this.timezoneService.getTzOffsets());"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Replaces the timezone value with the detected timezone."
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  detectTimezone(): void {"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.course.timeZone \u003d moment.tz.guess();"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Loads the course being edited."
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  loadCourseInfo(): void {"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.courseService.getCourseAsInstructor(this.courseId).subscribe((resp: Course) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.course \u003d resp;"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "      this.originalCourse \u003d Object.assign({}, resp);"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Loads the information of the current logged-in instructor."
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  loadCurrInstructorInfo(): void {"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // privilege"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.httpRequestService.get(\u0027/instructor/privilege\u0027, {"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: this.courseId,"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }).subscribe((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.currInstructorCoursePrivilege \u003d resp;"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // login credential"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.authService.getAuthUser().subscribe((res: AuthInfo) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.currInstructorGoogleId \u003d res.user \u003d\u003d\u003d undefined ? \u0027\u0027 : res.user.id;"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Deletes the current course and redirects to \u0027Courses\u0027 page if action is successful."
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  deleteCourse(): void {"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.courseService.binCourse(this.courseId).subscribe((course: Course) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.navigationService.navigateWithSuccessMessage(this.router, \u0027/web/instructor/courses\u0027,"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          `The course ${course.courseId} has been deleted. You can restore it from the Recycle Bin manually.`);"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Saves the updated course details."
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  onSaveCourse(): void {"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.courseService.updateCourse(this.courseId, {"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseName: this.course.courseName,"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      timeZone: this.course.timeZone,"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }).subscribe((resp: Course) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showSuccessMessage(\u0027The course has been edited.\u0027);"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.isEditingCourse \u003d false;"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.course \u003d resp;"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "      this.originalCourse \u003d Object.assign({}, resp);"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "   * Cancels editing the course details."
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "  cancelEditingCourse(): void {"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    this.course \u003d Object.assign({}, this.originalCourse);"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "niqiukun"
+        },
+        "content": "    this.isEditingCourse \u003d false;"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Loads all instructors in the course."
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  loadCourseInstructors(): void {"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: this.courseId,"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      intent: Intent.FULL_DETAIL,"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.httpRequestService.get(\u0027/instructors\u0027, paramMap)"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .subscribe((resp: Instructors) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.instructorDetailPanels \u003d resp.instructors.map((i: Instructor) \u003d\u003e ({"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            originalInstructor: Object.assign({}, i),"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            editPanel: this.getInstructorEditPanelModel(i),"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }));"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.instructorDetailPanels.forEach((panel: InstructorEditPanelDetail) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.loadPermissionForInstructor(panel.originalInstructor, panel.editPanel.permission);"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          });"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Gets the default edit panel model of an instructor."
+      },
+      {
+        "lineNumber": 272,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getInstructorEditPanelModel(i: Instructor): InstructorEditPanel {"
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return {"
+      },
+      {
+        "lineNumber": 275,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      googleId: i.googleId,"
+      },
+      {
+        "lineNumber": 276,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseId: i.courseId,"
+      },
+      {
+        "lineNumber": 277,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      email: i.email,"
+      },
+      {
+        "lineNumber": 278,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      isDisplayedToStudents: i.isDisplayedToStudents,"
+      },
+      {
+        "lineNumber": 279,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      displayedToStudentsAs: i.displayedToStudentsAs,"
+      },
+      {
+        "lineNumber": 280,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      name: i.name,"
+      },
+      {
+        "lineNumber": 281,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      role: i.role,"
+      },
+      {
+        "lineNumber": 282,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      joinState: i.joinState,"
+      },
+      {
+        "lineNumber": 283,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 284,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission: {"
+      },
+      {
+        "lineNumber": 285,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        privilege: {"
+      },
+      {
+        "lineNumber": 286,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifyCourse: true,"
+      },
+      {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifySession: true,"
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifyStudent: true,"
+      },
+      {
+        "lineNumber": 289,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifyInstructor: true,"
+      },
+      {
+        "lineNumber": 290,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canViewStudentInSections: true,"
+      },
+      {
+        "lineNumber": 291,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifySessionCommentsInSections: true,"
+      },
+      {
+        "lineNumber": 292,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canViewSessionInSections: true,"
+      },
+      {
+        "lineNumber": 293,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canSubmitSessionInSections: true,"
+      },
+      {
+        "lineNumber": 294,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        },"
+      },
+      {
+        "lineNumber": 295,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionLevel: [],"
+      },
+      {
+        "lineNumber": 296,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 297,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 298,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      isEditing: false,"
+      },
+      {
+        "lineNumber": 299,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 300,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 301,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 302,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 303,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Shows the model of details permission for a role."
+      },
+      {
+        "lineNumber": 304,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 305,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  viewRolePrivilegeModel(role: InstructorPermissionRole): void {"
+      },
+      {
+        "lineNumber": 306,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const modalRef: NgbModalRef \u003d this.modalService.open(ViewRolePrivilegesModalComponent);"
+      },
+      {
+        "lineNumber": 307,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    modalRef.result.then(() \u003d\u003e {}, () \u003d\u003e {});"
+      },
+      {
+        "lineNumber": 308,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.httpRequestService.get(\u0027/instructor/privilege\u0027, {"
+      },
+      {
+        "lineNumber": 309,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      instructorrole: role,"
+      },
+      {
+        "lineNumber": 310,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: this.courseId,"
+      },
+      {
+        "lineNumber": 311,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }).subscribe((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 312,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      modalRef.componentInstance.instructorPrivilege \u003d resp;"
+      },
+      {
+        "lineNumber": 313,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 314,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 315,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 316,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 317,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 318,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 319,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Cancels editing an instructor."
+      },
+      {
+        "lineNumber": 320,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 321,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  cancelEditingInstructor(index: number): void {"
+      },
+      {
+        "lineNumber": 322,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const panelDetail: InstructorEditPanelDetail \u003d this.instructorDetailPanels[index];"
+      },
+      {
+        "lineNumber": 323,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    panelDetail.editPanel \u003d this.getInstructorEditPanelModel(panelDetail.originalInstructor);"
+      },
+      {
+        "lineNumber": 324,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 325,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 326,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 327,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Saves instructor at index."
+      },
+      {
+        "lineNumber": 328,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 329,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  saveInstructor(index: number): void {"
+      },
+      {
+        "lineNumber": 330,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const panelDetail: InstructorEditPanelDetail \u003d this.instructorDetailPanels[index];"
+      },
+      {
+        "lineNumber": 331,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 332,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: panelDetail.originalInstructor.courseId,"
+      },
+      {
+        "lineNumber": 333,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 334,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 335,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const reqBody: InstructorCreateRequest \u003d {"
+      },
+      {
+        "lineNumber": 336,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      id: panelDetail.originalInstructor.joinState \u003d\u003d\u003d JoinState.JOINED"
+      },
+      {
+        "lineNumber": 337,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          ? panelDetail.originalInstructor.googleId : undefined,"
+      },
+      {
+        "lineNumber": 338,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      name: panelDetail.editPanel.name,"
+      },
+      {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      email: panelDetail.originalInstructor.joinState \u003d\u003d\u003d JoinState.JOINED"
+      },
+      {
+        "lineNumber": 340,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          ? panelDetail.editPanel.email : panelDetail.originalInstructor.email,"
+      },
+      {
+        "lineNumber": 341,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      role: panelDetail.editPanel.role,"
+      },
+      {
+        "lineNumber": 342,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      displayName: panelDetail.editPanel.displayedToStudentsAs,"
+      },
+      {
+        "lineNumber": 343,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      isDisplayedToStudent: panelDetail.editPanel.isDisplayedToStudents,"
+      },
+      {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.httpRequestService.put(\u0027/instructor\u0027, paramsMap, reqBody)"
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .subscribe((resp: Instructor) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          panelDetail.originalInstructor \u003d Object.assign({}, resp);"
+      },
+      {
+        "lineNumber": 349,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          const permission: InstructorOverallPermission \u003d panelDetail.editPanel.permission;"
+      },
+      {
+        "lineNumber": 350,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 351,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          panelDetail.editPanel \u003d this.getInstructorEditPanelModel(resp);"
+      },
+      {
+        "lineNumber": 352,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          panelDetail.editPanel.permission \u003d permission;"
+      },
+      {
+        "lineNumber": 353,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 354,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.updatePrivilegeForInstructor(panelDetail.originalInstructor, panelDetail.editPanel.permission);"
+      },
+      {
+        "lineNumber": 355,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 356,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.statusMessageService.showSuccessMessage(`The instructor ${resp.name} has been updated.`);"
+      },
+      {
+        "lineNumber": 357,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 358,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 359,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 360,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 361,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 362,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    panelDetail.editPanel.isEditing \u003d false;"
+      },
+      {
+        "lineNumber": 363,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 364,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 365,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 366,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Deletes instructor at index."
+      },
+      {
+        "lineNumber": 367,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 368,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  deleteInstructor(index: number): void {"
+      },
+      {
+        "lineNumber": 369,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const panelDetail: InstructorEditPanelDetail \u003d this.instructorDetailPanels[index];"
+      },
+      {
+        "lineNumber": 370,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const modalRef: NgbModalRef \u003d this.modalService.open(DeleteInstructorConfirmModalComponent);"
+      },
+      {
+        "lineNumber": 371,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    modalRef.componentInstance.instructorToDelete \u003d panelDetail.originalInstructor;"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    modalRef.componentInstance.isDeletingSelf \u003d panelDetail.originalInstructor.googleId \u003d\u003d\u003d this.currInstructorGoogleId;"
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    modalRef.result.then(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        courseid: panelDetail.originalInstructor.courseId,"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        instructoremail: panelDetail.originalInstructor.email,"
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      };"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.httpRequestService.delete(\u0027/instructor\u0027, paramsMap)"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          .subscribe(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (panelDetail.originalInstructor.googleId \u003d\u003d\u003d this.currInstructorGoogleId) {"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              this.navigationService.navigateWithSuccessMessage("
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  this.router, \u0027/web/instructor/courses\u0027, \u0027Instructor is successfully deleted.\u0027);"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              this.instructorDetailPanels.splice(index, 1);"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              this.statusMessageService.showSuccessMessage(\u0027Instructor is successfully deleted.\u0027);"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          });"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, () \u003d\u003e {});"
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Re-sends an invitation email to an instructor in the course."
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  resendReminderEmail(index: number): void {"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const panelDetail: InstructorEditPanelDetail \u003d this.instructorDetailPanels[index];"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const modalRef: NgbModalRef \u003d this.modalService.open(ResendInvitationEmailModalComponent);"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    modalRef.componentInstance.instructorToResend \u003d panelDetail.originalInstructor;"
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    modalRef.result.then(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.courseService"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          .remindInstructorForJoin(panelDetail.originalInstructor.courseId, panelDetail.originalInstructor.email)"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          .subscribe((resp: MessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.statusMessageService.showSuccessMessage(resp.message);"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          });"
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, () \u003d\u003e {});"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 414,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 415,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Adds new instructor."
+      },
+      {
+        "lineNumber": 416,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 417,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  addNewInstructor(): void {"
+      },
+      {
+        "lineNumber": 418,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 419,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: this.courseId,"
+      },
+      {
+        "lineNumber": 420,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 421,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 422,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const reqBody: InstructorCreateRequest \u003d {"
+      },
+      {
+        "lineNumber": 423,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      name: this.newInstructorPanel.name,"
+      },
+      {
+        "lineNumber": 424,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      email: this.newInstructorPanel.email,"
+      },
+      {
+        "lineNumber": 425,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      role: this.newInstructorPanel.role,"
+      },
+      {
+        "lineNumber": 426,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      displayName: this.newInstructorPanel.displayedToStudentsAs,"
+      },
+      {
+        "lineNumber": 427,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      isDisplayedToStudent: this.newInstructorPanel.isDisplayedToStudents,"
+      },
+      {
+        "lineNumber": 428,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 429,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 430,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.httpRequestService.post(\u0027/instructor\u0027, paramsMap, reqBody)"
+      },
+      {
+        "lineNumber": 431,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .subscribe((resp: Instructor) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 432,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          const newDetailPanels: InstructorEditPanelDetail \u003d {"
+      },
+      {
+        "lineNumber": 433,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            originalInstructor: Object.assign({}, resp),"
+      },
+      {
+        "lineNumber": 434,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            editPanel: this.getInstructorEditPanelModel(resp),"
+      },
+      {
+        "lineNumber": 435,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          };"
+      },
+      {
+        "lineNumber": 436,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          newDetailPanels.editPanel.permission \u003d this.newInstructorPanel.permission;"
+      },
+      {
+        "lineNumber": 437,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 438,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.instructorDetailPanels.push(newDetailPanels);"
+      },
+      {
+        "lineNumber": 439,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.statusMessageService.showSuccessMessage(`\"The instructor ${resp.name} has been added successfully."
+      },
+      {
+        "lineNumber": 440,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          An email containing how to \u0027join\u0027 this course will be sent to ${resp.email} in a few minutes.\"`);"
+      },
+      {
+        "lineNumber": 441,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 442,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.updatePrivilegeForInstructor(newDetailPanels.originalInstructor, newDetailPanels.editPanel.permission);"
+      },
+      {
+        "lineNumber": 443,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 444,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.isAddingNewInstructor \u003d false;"
+      },
+      {
+        "lineNumber": 445,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.newInstructorPanel \u003d {"
+      },
+      {
+        "lineNumber": 446,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            googleId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 447,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            courseId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 448,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            email: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 449,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            isDisplayedToStudents: true,"
+      },
+      {
+        "lineNumber": 450,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            displayedToStudentsAs: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 451,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            name: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 452,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            role: InstructorPermissionRole.INSTRUCTOR_PERMISSION_ROLE_COOWNER,"
+      },
+      {
+        "lineNumber": 453,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            joinState: JoinState.NOT_JOINED,"
+      },
+      {
+        "lineNumber": 454,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 455,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            permission: {"
+      },
+      {
+        "lineNumber": 456,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              privilege: {"
+      },
+      {
+        "lineNumber": 457,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canModifyCourse: true,"
+      },
+      {
+        "lineNumber": 458,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canModifySession: true,"
+      },
+      {
+        "lineNumber": 459,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canModifyStudent: true,"
+      },
+      {
+        "lineNumber": 460,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canModifyInstructor: true,"
+      },
+      {
+        "lineNumber": 461,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canViewStudentInSections: true,"
+      },
+      {
+        "lineNumber": 462,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canModifySessionCommentsInSections: true,"
+      },
+      {
+        "lineNumber": 463,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canViewSessionInSections: true,"
+      },
+      {
+        "lineNumber": 464,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                canSubmitSessionInSections: true,"
+      },
+      {
+        "lineNumber": 465,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              },"
+      },
+      {
+        "lineNumber": 466,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              sectionLevel: [],"
+      },
+      {
+        "lineNumber": 467,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            },"
+      },
+      {
+        "lineNumber": 468,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 469,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            isEditing: true,"
+      },
+      {
+        "lineNumber": 470,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          };"
+      },
+      {
+        "lineNumber": 471,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 472,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 473,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 474,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 475,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 476,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 477,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Loads permission for instructor."
+      },
+      {
+        "lineNumber": 478,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 479,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  loadPermissionForInstructor(instructor: Instructor, permission: InstructorOverallPermission): void {"
+      },
+      {
+        "lineNumber": 480,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (instructor.role !\u003d\u003d InstructorPermissionRole.INSTRUCTOR_PERMISSION_ROLE_CUSTOM) {"
+      },
+      {
+        "lineNumber": 481,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return;"
+      },
+      {
+        "lineNumber": 482,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 483,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 484,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // only need to load for custom role."
+      },
+      {
+        "lineNumber": 485,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const param: any \u003d {"
+      },
+      {
+        "lineNumber": 486,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: instructor.courseId,"
+      },
+      {
+        "lineNumber": 487,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      instructoremail: instructor.email,"
+      },
+      {
+        "lineNumber": 488,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 489,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const requests: Observable\u003cany\u003e[] \u003d [];"
+      },
+      {
+        "lineNumber": 490,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    requests.push(this.httpRequestService.get(\u0027/instructor/privilege\u0027, param)"
+      },
+      {
+        "lineNumber": 491,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .pipe(tap((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 492,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canModifyCourse \u003d resp.canModifyCourse;"
+      },
+      {
+        "lineNumber": 493,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canModifySession \u003d resp.canModifySession;"
+      },
+      {
+        "lineNumber": 494,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canModifyStudent \u003d resp.canModifyStudent;"
+      },
+      {
+        "lineNumber": 495,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canModifyInstructor \u003d resp.canModifyInstructor;"
+      },
+      {
+        "lineNumber": 496,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canViewStudentInSections \u003d resp.canViewStudentInSections;"
+      },
+      {
+        "lineNumber": 497,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canModifySessionCommentsInSections \u003d resp.canModifySessionCommentsInSections;"
+      },
+      {
+        "lineNumber": 498,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canViewSessionInSections \u003d resp.canViewSessionInSections;"
+      },
+      {
+        "lineNumber": 499,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          permission.privilege.canSubmitSessionInSections \u003d resp.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 500,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })));"
+      },
+      {
+        "lineNumber": 501,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 502,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.allSections.forEach((sectionName: string) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 503,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const sectionLevelPermission: InstructorSectionLevelPermission \u003d {"
+      },
+      {
+        "lineNumber": 504,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionNames: [sectionName],"
+      },
+      {
+        "lineNumber": 505,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        privilege: {"
+      },
+      {
+        "lineNumber": 506,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifyCourse: false,"
+      },
+      {
+        "lineNumber": 507,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifySession: false,"
+      },
+      {
+        "lineNumber": 508,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifyStudent: false,"
+      },
+      {
+        "lineNumber": 509,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifyInstructor: false,"
+      },
+      {
+        "lineNumber": 510,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canViewStudentInSections: false,"
+      },
+      {
+        "lineNumber": 511,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifySessionCommentsInSections: false,"
+      },
+      {
+        "lineNumber": 512,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canViewSessionInSections: false,"
+      },
+      {
+        "lineNumber": 513,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canSubmitSessionInSections: false,"
+      },
+      {
+        "lineNumber": 514,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        },"
+      },
+      {
+        "lineNumber": 515,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sessionLevel: [],"
+      },
+      {
+        "lineNumber": 516,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      };"
+      },
+      {
+        "lineNumber": 517,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.sectionLevel.push(sectionLevelPermission);"
+      },
+      {
+        "lineNumber": 518,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      requests.push(this.httpRequestService.get(\u0027/instructor/privilege\u0027, {"
+      },
+      {
+        "lineNumber": 519,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ...param,"
+      },
+      {
+        "lineNumber": 520,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionname: sectionName,"
+      },
+      {
+        "lineNumber": 521,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }).pipe(tap((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 522,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionLevelPermission.privilege.canViewStudentInSections \u003d resp.canViewStudentInSections;"
+      },
+      {
+        "lineNumber": 523,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionLevelPermission.privilege.canModifySessionCommentsInSections \u003d resp.canModifySessionCommentsInSections;"
+      },
+      {
+        "lineNumber": 524,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionLevelPermission.privilege.canViewSessionInSections \u003d resp.canViewSessionInSections;"
+      },
+      {
+        "lineNumber": 525,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionLevelPermission.privilege.canSubmitSessionInSections \u003d resp.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 526,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      })));"
+      },
+      {
+        "lineNumber": 527,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.allSessions.forEach((sessionName: string) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 528,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requests.push(this.httpRequestService.get(\u0027/instructor/privilege\u0027, {"
+      },
+      {
+        "lineNumber": 529,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          ...param,"
+      },
+      {
+        "lineNumber": 530,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionname: sectionName,"
+      },
+      {
+        "lineNumber": 531,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          fsname: sessionName,"
+      },
+      {
+        "lineNumber": 532,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }).pipe(tap((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 533,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionLevelPermission.sessionLevel.push({"
+      },
+      {
+        "lineNumber": 534,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sessionName,"
+      },
+      {
+        "lineNumber": 535,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            privilege: {"
+      },
+      {
+        "lineNumber": 536,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canModifyCourse: false,"
+      },
+      {
+        "lineNumber": 537,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canModifySession: false,"
+      },
+      {
+        "lineNumber": 538,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canModifyStudent: false,"
+      },
+      {
+        "lineNumber": 539,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canModifyInstructor: false,"
+      },
+      {
+        "lineNumber": 540,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canViewStudentInSections: false,"
+      },
+      {
+        "lineNumber": 541,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canModifySessionCommentsInSections: resp.canModifySessionCommentsInSections,"
+      },
+      {
+        "lineNumber": 542,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canViewSessionInSections: resp.canViewSessionInSections,"
+      },
+      {
+        "lineNumber": 543,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              canSubmitSessionInSections: resp.canSubmitSessionInSections,"
+      },
+      {
+        "lineNumber": 544,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            },"
+      },
+      {
+        "lineNumber": 545,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          });"
+      },
+      {
+        "lineNumber": 546,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })));"
+      },
+      {
+        "lineNumber": 547,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 548,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 549,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 550,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // get all permission"
+      },
+      {
+        "lineNumber": 551,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    forkJoin(requests).subscribe(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 552,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.sectionLevel \u003d permission.sectionLevel"
+      },
+      {
+        "lineNumber": 553,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          .filter((sectionLevelPermission: InstructorSectionLevelPermission) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 554,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            // discard section level permission that is consistent with the overall permission"
+      },
+      {
+        "lineNumber": 555,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (sectionLevelPermission.privilege.canViewStudentInSections"
+      },
+      {
+        "lineNumber": 556,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                !\u003d\u003d permission.privilege.canViewStudentInSections) {"
+      },
+      {
+        "lineNumber": 557,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              return true;"
+      },
+      {
+        "lineNumber": 558,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 559,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (sectionLevelPermission.privilege.canModifySessionCommentsInSections"
+      },
+      {
+        "lineNumber": 560,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                !\u003d\u003d permission.privilege.canModifySessionCommentsInSections) {"
+      },
+      {
+        "lineNumber": 561,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              return true;"
+      },
+      {
+        "lineNumber": 562,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 563,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (sectionLevelPermission.privilege.canViewSessionInSections"
+      },
+      {
+        "lineNumber": 564,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                !\u003d\u003d permission.privilege.canViewSessionInSections) {"
+      },
+      {
+        "lineNumber": 565,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              return true;"
+      },
+      {
+        "lineNumber": 566,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 567,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (sectionLevelPermission.privilege.canSubmitSessionInSections"
+      },
+      {
+        "lineNumber": 568,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                !\u003d\u003d permission.privilege.canSubmitSessionInSections) {"
+      },
+      {
+        "lineNumber": 569,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              return true;"
+      },
+      {
+        "lineNumber": 570,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 571,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 572,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return sectionLevelPermission.sessionLevel"
+      },
+      {
+        "lineNumber": 573,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .some((sessionLevelPermission: InstructorSessionLevelPermission) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 574,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  return sectionLevelPermission.privilege.canModifySessionCommentsInSections"
+      },
+      {
+        "lineNumber": 575,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      !\u003d\u003d sessionLevelPermission.privilege.canModifySessionCommentsInSections ||"
+      },
+      {
+        "lineNumber": 576,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      sectionLevelPermission.privilege.canViewSessionInSections"
+      },
+      {
+        "lineNumber": 577,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      !\u003d\u003d sessionLevelPermission.privilege.canViewSessionInSections ||"
+      },
+      {
+        "lineNumber": 578,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      sectionLevelPermission.privilege.canSubmitSessionInSections"
+      },
+      {
+        "lineNumber": 579,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      !\u003d\u003d sessionLevelPermission.privilege.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 580,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                });"
+      },
+      {
+        "lineNumber": 581,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          });"
+      },
+      {
+        "lineNumber": 582,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 583,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.sectionLevel.forEach((sectionLevel: InstructorSectionLevelPermission) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 584,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (sectionLevel.sessionLevel.every((sessionLevel: InstructorSessionLevelPermission) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 585,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          return sectionLevel.privilege.canModifySessionCommentsInSections"
+      },
+      {
+        "lineNumber": 586,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003d\u003d\u003d sessionLevel.privilege.canModifySessionCommentsInSections \u0026\u0026"
+      },
+      {
+        "lineNumber": 587,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              sectionLevel.privilege.canViewSessionInSections"
+      },
+      {
+        "lineNumber": 588,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003d\u003d\u003d sessionLevel.privilege.canViewSessionInSections \u0026\u0026"
+      },
+      {
+        "lineNumber": 589,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              sectionLevel.privilege.canSubmitSessionInSections"
+      },
+      {
+        "lineNumber": 590,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              \u003d\u003d\u003d sessionLevel.privilege.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 591,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })) {"
+      },
+      {
+        "lineNumber": 592,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          // session level is consistent with the section level, we can remove it."
+      },
+      {
+        "lineNumber": 593,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionLevel.sessionLevel \u003d [];"
+      },
+      {
+        "lineNumber": 594,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 595,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 596,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 597,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 598,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 599,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 600,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 601,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 602,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Updates privilege for instructor"
+      },
+      {
+        "lineNumber": 603,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 604,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  updatePrivilegeForInstructor(instructor: Instructor, permission: InstructorOverallPermission): void {"
+      },
+      {
+        "lineNumber": 605,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (instructor.role !\u003d\u003d InstructorPermissionRole.INSTRUCTOR_PERMISSION_ROLE_CUSTOM) {"
+      },
+      {
+        "lineNumber": 606,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return;"
+      },
+      {
+        "lineNumber": 607,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 608,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 609,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // only need to update for custom role."
+      },
+      {
+        "lineNumber": 610,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const param: any \u003d {"
+      },
+      {
+        "lineNumber": 611,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: instructor.courseId,"
+      },
+      {
+        "lineNumber": 612,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      instructoremail: instructor.email,"
+      },
+      {
+        "lineNumber": 613,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 614,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const requests: Observable\u003cany\u003e[] \u003d [];"
+      },
+      {
+        "lineNumber": 615,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    requests.push(this.httpRequestService.put(\u0027/instructor/privilege\u0027, param, {"
+      },
+      {
+        "lineNumber": 616,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canModifyCourse: permission.privilege.canModifyCourse,"
+      },
+      {
+        "lineNumber": 617,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canModifySession: permission.privilege.canModifySession,"
+      },
+      {
+        "lineNumber": 618,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canModifyStudent: permission.privilege.canModifyStudent,"
+      },
+      {
+        "lineNumber": 619,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canModifyInstructor: permission.privilege.canModifyInstructor,"
+      },
+      {
+        "lineNumber": 620,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canViewStudentInSections: permission.privilege.canViewStudentInSections,"
+      },
+      {
+        "lineNumber": 621,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canModifySessionCommentsInSections: permission.privilege.canModifySessionCommentsInSections,"
+      },
+      {
+        "lineNumber": 622,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canViewSessionInSections: permission.privilege.canViewSessionInSections,"
+      },
+      {
+        "lineNumber": 623,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      canSubmitSessionInSections: permission.privilege.canSubmitSessionInSections,"
+      },
+      {
+        "lineNumber": 624,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    } as InstructorPrivilegeUpdateRequest).pipe(tap((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 625,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canModifyCourse \u003d resp.canModifyCourse;"
+      },
+      {
+        "lineNumber": 626,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canModifySession \u003d resp.canModifySession;"
+      },
+      {
+        "lineNumber": 627,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canModifyStudent \u003d resp.canModifyStudent;"
+      },
+      {
+        "lineNumber": 628,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canModifyInstructor \u003d resp.canModifyInstructor;"
+      },
+      {
+        "lineNumber": 629,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canViewStudentInSections \u003d resp.canViewStudentInSections;"
+      },
+      {
+        "lineNumber": 630,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canModifySessionCommentsInSections \u003d resp.canModifySessionCommentsInSections;"
+      },
+      {
+        "lineNumber": 631,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canViewSessionInSections \u003d resp.canViewSessionInSections;"
+      },
+      {
+        "lineNumber": 632,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.privilege.canSubmitSessionInSections \u003d resp.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 633,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    })));"
+      },
+      {
+        "lineNumber": 634,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 635,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    permission.sectionLevel.forEach((sectionLevel: InstructorSectionLevelPermission) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 636,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      sectionLevel.sectionNames.forEach((sectionName: string) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 637,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requests.push(this.httpRequestService.put(\u0027/instructor/privilege\u0027, param, {"
+      },
+      {
+        "lineNumber": 638,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionName,"
+      },
+      {
+        "lineNumber": 639,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 640,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canViewStudentInSections: sectionLevel.privilege.canViewStudentInSections,"
+      },
+      {
+        "lineNumber": 641,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canModifySessionCommentsInSections: sectionLevel.privilege.canModifySessionCommentsInSections,"
+      },
+      {
+        "lineNumber": 642,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canViewSessionInSections: sectionLevel.privilege.canViewSessionInSections,"
+      },
+      {
+        "lineNumber": 643,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          canSubmitSessionInSections: sectionLevel.privilege.canSubmitSessionInSections,"
+      },
+      {
+        "lineNumber": 644,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } as InstructorPrivilegeUpdateRequest).pipe(tap((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 645,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionLevel.privilege.canViewStudentInSections \u003d resp.canViewStudentInSections;"
+      },
+      {
+        "lineNumber": 646,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionLevel.privilege.canModifySessionCommentsInSections \u003d resp.canModifySessionCommentsInSections;"
+      },
+      {
+        "lineNumber": 647,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionLevel.privilege.canViewSessionInSections \u003d resp.canViewSessionInSections;"
+      },
+      {
+        "lineNumber": 648,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          sectionLevel.privilege.canSubmitSessionInSections \u003d resp.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 649,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })));"
+      },
+      {
+        "lineNumber": 650,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 651,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectionLevel.sessionLevel.forEach((sessionLevel: InstructorSessionLevelPermission) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 652,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          requests.push(this.httpRequestService.put(\u0027/instructor/privilege\u0027, param, {"
+      },
+      {
+        "lineNumber": 653,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sectionName,"
+      },
+      {
+        "lineNumber": 654,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            feedbackSessionName: sessionLevel.sessionName,"
+      },
+      {
+        "lineNumber": 655,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 656,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            canModifySessionCommentsInSections: sessionLevel.privilege.canModifySessionCommentsInSections,"
+      },
+      {
+        "lineNumber": 657,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            canViewSessionInSections: sessionLevel.privilege.canViewSessionInSections,"
+      },
+      {
+        "lineNumber": 658,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            canSubmitSessionInSections: sessionLevel.privilege.canSubmitSessionInSections,"
+      },
+      {
+        "lineNumber": 659,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          } as InstructorPrivilegeUpdateRequest).pipe(tap((resp: InstructorPrivilege) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 660,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sessionLevel.privilege.canModifySessionCommentsInSections \u003d resp.canModifySessionCommentsInSections;"
+      },
+      {
+        "lineNumber": 661,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sessionLevel.privilege.canViewSessionInSections \u003d resp.canViewSessionInSections;"
+      },
+      {
+        "lineNumber": 662,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sessionLevel.privilege.canSubmitSessionInSections \u003d resp.canSubmitSessionInSections;"
+      },
+      {
+        "lineNumber": 663,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          })));"
+      },
+      {
+        "lineNumber": 664,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 665,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 666,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 667,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 668,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    of(...requests).pipe(concatAll()).subscribe(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 669,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      // privileges updated"
+      },
+      {
+        "lineNumber": 670,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      // filter out empty permission setting"
+      },
+      {
+        "lineNumber": 671,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      permission.sectionLevel \u003d permission.sectionLevel.filter("
+      },
+      {
+        "lineNumber": 672,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          (sectionLevel: InstructorSectionLevelPermission) \u003d\u003e sectionLevel.sectionNames.length !\u003d\u003d 0);"
+      },
+      {
+        "lineNumber": 673,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 674,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(resp.error.message);"
+      },
+      {
+        "lineNumber": 675,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 676,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 677,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "niqiukun": 13,
+      "-": 664
+    }
+  },
+  {
     "path": "src/web/app/pages-instructor/instructor-course-student-details-page/instructor-course-student-details-page.component.spec.ts",
     "fileType": "ts",
     "lines": [
