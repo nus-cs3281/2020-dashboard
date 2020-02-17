@@ -15241,6 +15241,556 @@
     }
   },
   {
+    "path": "src/main/java/teammates/ui/webapi/endpoints/ResourceEndpoints.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "package teammates.ui.webapi.endpoints;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import com.fasterxml.jackson.annotation.JsonValue;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import teammates.common.util.Const.ResourceURIs;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " * API endpoints for resources."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "public enum ResourceEndpoints {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    //CHECKSTYLE.OFF:JavadocVariable"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    URI_PREFIX(ResourceURIs.URI_PREFIX),"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    LOGOUT(ResourceURIs.LOGOUT),"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    DATABUNDLE(ResourceURIs.DATABUNDLE),"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    EXCEPTION(ResourceURIs.EXCEPTION),"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    ERROR_REPORT(ResourceURIs.ERROR_REPORT),"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    AUTH(ResourceURIs.AUTH),"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    ACCOUNT(ResourceURIs.ACCOUNT),"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    ACCOUNTS_SEARCH(ResourceURIs.ACCOUNTS_SEARCH),"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    ACCOUNT_RESET(ResourceURIs.ACCOUNT_RESET),"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    ACCOUNT_DOWNGRADE(ResourceURIs.ACCOUNT_DOWNGRADE),"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    RESPONSE_COMMENT(ResourceURIs.RESPONSE_COMMENT),"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    COURSE(ResourceURIs.COURSE),"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    COURSE_ARCHIVE(ResourceURIs.COURSE_ARCHIVE),"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    BIN_COURSE(ResourceURIs.BIN_COURSE),"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    COURSE_SECTIONS(ResourceURIs.COURSE_SECTIONS),"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    COURSES(ResourceURIs.COURSES),"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    INSTRUCTORS(ResourceURIs.INSTRUCTORS),"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    INSTRUCTOR(ResourceURIs.INSTRUCTOR),"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    INSTRUCTOR_PRIVILEGE(ResourceURIs.INSTRUCTOR_PRIVILEGE),"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    RESULT(ResourceURIs.RESULT),"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    STUDENTS(ResourceURIs.STUDENTS),"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    STUDENT(ResourceURIs.STUDENT),"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSIONS_ONGOING(ResourceURIs.SESSIONS_ONGOING),"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION(ResourceURIs.SESSION),"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION_PUBLISH(ResourceURIs.SESSION_PUBLISH),"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION_REMIND_SUBMISSION(ResourceURIs.SESSION_REMIND_SUBMISSION),"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION_REMIND_RESULT(ResourceURIs.SESSION_REMIND_RESULT),"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION_STATS(ResourceURIs.SESSION_STATS),"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION_SUBMITTED_GIVER_SET(ResourceURIs.SESSION_SUBMITTED_GIVER_SET),"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSIONS(ResourceURIs.SESSIONS),"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    BIN_SESSION(ResourceURIs.BIN_SESSION),"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    QUESTIONS(ResourceURIs.QUESTIONS),"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    QUESTION_RECIPIENTS(ResourceURIs.QUESTION_RECIPIENTS),"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    RESPONSE(ResourceURIs.RESPONSE),"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    RESPONSES(ResourceURIs.RESPONSES),"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    HAS_RESPONSES(ResourceURIs.HAS_RESPONSES),"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SUBMISSION_CONFIRMATION(ResourceURIs.SUBMISSION_CONFIRMATION),"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    JOIN(ResourceURIs.JOIN),"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    JOIN_REMIND(ResourceURIs.JOIN_REMIND),"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    TIMEZONE(ResourceURIs.TIMEZONE),"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    LOCAL_DATE_TIME(ResourceURIs.LOCAL_DATE_TIME),"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    SESSION_LINKS_RECOVERY(ResourceURIs.SESSION_LINKS_RECOVERY),"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    NATIONALITIES(ResourceURIs.NATIONALITIES),"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    STUDENT_PROFILE_PICTURE(ResourceURIs.STUDENT_PROFILE_PICTURE),"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    STUDENT_PROFILE(ResourceURIs.STUDENT_PROFILE),"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    STUDENTS_CSV(ResourceURIs.STUDENTS_CSV),"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    STUDENTS_AND_FEEDBACK_SESSION_DATA_SEARCH(ResourceURIs.STUDENTS_AND_FEEDBACK_SESSION_DATA_SEARCH),"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    COURSE_ENROLL_STUDENTS(ResourceURIs.COURSE_ENROLL_STUDENTS);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    //CHECKSTYLE.ON:JavadocVariable"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    private final String url;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    ResourceEndpoints(String s) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        this.url \u003d s;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    @JsonValue"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    public String getUrl() {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        return url;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 72
+    }
+  },
+  {
+    "path": "src/main/java/teammates/ui/webapi/endpoints/package-info.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " * Contains all API endpoints."
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "package teammates.ui.webapi.endpoints;"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 4
+    }
+  },
+  {
     "path": "src/main/java/teammates/ui/webapi/output/ConfirmationResponse.java",
     "fileType": "java",
     "lines": [
@@ -61320,9 +61870,9 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "import { HttpRequestService } from \u0027../../../services/http-request.service\u0027;"
+        "content": "import { InstructorService } from \u0027../../../services/instructor.service\u0027;"
       },
       {
         "lineNumber": 6,
@@ -61670,9 +62220,9 @@
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "              private httpRequestService: HttpRequestService,"
+        "content": "              private instructorService: InstructorService,"
       },
       {
         "lineNumber": 56,
@@ -61894,254 +62444,254 @@
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "    this.studentService.getStudent(courseId)"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "      courseid: courseId,"
+        "content": "        .subscribe((student: Student) \u003d\u003e {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "          this.student \u003d student;"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "          this.loadTeammates(courseId, student.teamName);"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.httpRequestService.get(\u0027/student\u0027, paramMap)"
+        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "        .subscribe((student: Student) \u003d\u003e {"
+        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.student \u003d student;"
+        "content": "        });"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.loadTeammates(courseId, student.teamName);"
+        "content": "  }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
+        "content": "  /**"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        });"
+        "content": "   * Loads the teammates of the current student."
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "   * @param courseid: id of the course queried"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "   * @param teamName: team of current student"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   */"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Loads the teammates of the current student."
+        "content": "  loadTeammates(courseId: string, teamName: string): void {"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param courseid: id of the course queried"
+        "content": "    this.studentService.getStudentsFromCourseAndTeam(courseId, teamName)"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param teamName: team of current student"
+        "content": "        .subscribe((students: Students) \u003d\u003e {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "          students.students.forEach((student: Student) \u003d\u003e {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "  loadTeammates(courseId: string, teamName: string): void {"
+        "content": "            // filter away current user"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.studentService.getStudentsFromCourseAndTeam(courseId, teamName)"
+        "content": "            if (student.email \u003d\u003d\u003d this.student.email) {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "        .subscribe((students: Students) \u003d\u003e {"
+        "content": "              return;"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "          students.students.forEach((student: Student) \u003d\u003e {"
+        "content": "            }"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "            // filter away current user"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (student.email \u003d\u003d\u003d this.student.email) {"
+        "content": "            this.studentProfileService.getStudentProfile(student.email, courseId)"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "              return;"
+        "content": "                  .subscribe((studentProfile: StudentProfile) \u003d\u003e {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                    const newPhotoUrl: string \u003d"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "              `${environment.backendUrl}/webapi/student/profilePic?courseid\u003d${courseId}\u0026studentemail\u003d${student.email}`;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "            this.studentProfileService.getStudentProfile(student.email, courseId)"
+        "content": ""
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "                  .subscribe((studentProfile: StudentProfile) \u003d\u003e {"
+        "content": "                    const newTeammateProfile: StudentProfileWithPicture \u003d {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "                    const newPhotoUrl: string \u003d"
+        "content": "                      studentProfile,"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "              `${environment.backendUrl}/webapi/student/profilePic?courseid\u003d${courseId}\u0026studentemail\u003d${student.email}`;"
+        "content": "                      photoUrl : newPhotoUrl,"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                    };"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "                    const newTeammateProfile: StudentProfileWithPicture \u003d {"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "                      studentProfile,"
+        "content": "                    this.teammateProfiles.push(newTeammateProfile);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "                      photoUrl : newPhotoUrl,"
+        "content": "                  });"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "                    };"
+        "content": "          });"
       },
       {
         "lineNumber": 123,
@@ -62155,119 +62705,119 @@
         "author": {
           "gitId": "-"
         },
-        "content": "                    this.teammateProfiles.push(newTeammateProfile);"
+        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "                  });"
+        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "          });"
+        "content": "        });"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
+        "content": "  /**"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        });"
+        "content": "   * Loads the instructors of the course."
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "   * @param courseid: id of the course queried"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "   */"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "  loadInstructors(courseId: string): void {"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "   * Loads the instructors of the course."
+        "content": "    this.instructorService.getInstructorsFromCourse(courseId)"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param courseid: id of the course queried"
+        "content": "        .subscribe((instructors: Instructors) \u003d\u003e {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "          this.instructorDetails \u003d instructors.instructors;"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "  loadInstructors(courseId: string): void {"
+        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "      courseid: courseId,"
+        "content": "        });"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "  }"
       },
       {
         "lineNumber": 141,
@@ -62281,101 +62831,45 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    this.httpRequestService.get(\u0027/instructors\u0027, paramMap)"
+        "content": "  /**"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        .subscribe((instructors: Instructors) \u003d\u003e {"
+        "content": "   * Sets the profile picture of a student as the default image"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.instructorDetails \u003d instructors.instructors;"
+        "content": "   */"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        }, (resp: ErrorMessageOutput) \u003d\u003e {"
+        "content": "  setDefaultPic(teammateProfile: StudentProfileWithPicture): void {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.statusMessageService.showErrorMessage(resp.error.message);"
+        "content": "    teammateProfile.photoUrl \u003d \u0027/assets/images/profile_picture_default.png\u0027;"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "        });"
+        "content": "  }"
       },
       {
         "lineNumber": 148,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  }"
-      },
-      {
-        "lineNumber": 149,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  /**"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "   * Sets the profile picture of a student as the default image"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "   */"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  setDefaultPic(teammateProfile: StudentProfileWithPicture): void {"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    teammateProfile.photoUrl \u003d \u0027/assets/images/profile_picture_default.png\u0027;"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  }"
-      },
-      {
-        "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
@@ -62383,8 +62877,1047 @@
       }
     ],
     "authorContributionMap": {
-      "tiuweehan": 1,
-      "-": 155
+      "tiuweehan": 5,
+      "-": 143
+    }
+  },
+  {
+    "path": "src/web/app/pages-student/student-home-page/student-home-page.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Component, OnInit } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ActivatedRoute } from \u0027@angular/router\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { finalize } from \u0027rxjs/operators\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { CourseService } from \u0027../../../services/course.service\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { FeedbackSessionsService } from \u0027../../../services/feedback-sessions.service\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { LoadingBarService } from \u0027../../../services/loading-bar.service\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { StatusMessageService } from \u0027../../../services/status-message.service\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { TimezoneService } from \u0027../../../services/timezone.service\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Course,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  Courses,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FeedbackSession,"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FeedbackSessionPublishStatus,"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FeedbackSessions,"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FeedbackSessionSubmissionStatus,"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  HasResponses,"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "} from \u0027../../../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ErrorMessageOutput } from \u0027../../error-message-output\u0027;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "interface StudentCourse {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  course: Course;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  feedbackSessions: StudentSession[];"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "interface StudentSession {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  session: FeedbackSession;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isOpened: boolean;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isWaitingToOpen: boolean;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isPublished: boolean;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isSubmitted: boolean;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Student home page."
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027tm-student-home-page\u0027,"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./student-home-page.component.html\u0027,"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  styleUrls: [\u0027./student-home-page.component.scss\u0027],"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class StudentHomePageComponent implements OnInit {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  // Tooltip messages"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  studentFeedbackSessionStatusPublished: string \u003d"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u0027The responses for the session have been published and can now be viewed.\u0027;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  studentFeedbackSessionStatusNotPublished: string \u003d"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u0027The responses for the session have not yet been published and cannot be viewed.\u0027;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  studentFeedbackSessionStatusAwaiting: string \u003d"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u0027The session is not open for submission at this time. It is expected to open later.\u0027;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  studentFeedbackSessionStatusPending: string \u003d \u0027The feedback session is yet to be completed by you.\u0027;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  studentFeedbackSessionStatusSubmitted: string \u003d \u0027You have submitted your feedback for this session.\u0027;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  studentFeedbackSessionStatusClosed: string \u003d \u0027 The session is now closed for submissions.\u0027;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  courses: StudentCourse[] \u003d [];"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  constructor(private route: ActivatedRoute,"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "              private courseService: CourseService,"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private statusMessageService: StatusMessageService,"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private feedbackSessionsService: FeedbackSessionsService,"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private timezoneService: TimezoneService,"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private loadingBarService: LoadingBarService) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.timezoneService.getTzVersion();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ngOnInit(): void {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.route.queryParams.subscribe(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.getStudentCourses();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Gets the courses and feedback sessions involving the student."
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getStudentCourses(): void {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.loadingBarService.showLoadingBar();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    this.courseService.getAllCoursesAsStudent().subscribe((resp: Courses) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      for (const course of resp.courses) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.feedbackSessionsService.getFeedbackSessionsForStudent(course.courseId)"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            .pipe(finalize(() \u003d\u003e this.loadingBarService.hideLoadingBar()))"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            .subscribe((fss: FeedbackSessions) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              const sortedFss: FeedbackSession[] \u003d this.sortFeedbackSessions(fss);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              const studentSessions: StudentSession[] \u003d [];"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              for (const fs of sortedFss) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                const isOpened: boolean \u003d fs.submissionStatus \u003d\u003d\u003d FeedbackSessionSubmissionStatus.OPEN;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                const isWaitingToOpen: boolean \u003d"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    fs.submissionStatus \u003d\u003d\u003d FeedbackSessionSubmissionStatus.VISIBLE_NOT_OPEN;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                const isPublished: boolean \u003d fs.publishStatus \u003d\u003d\u003d FeedbackSessionPublishStatus.PUBLISHED;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                this.feedbackSessionsService.hasStudentResponseForFeedbackSession(course.courseId,"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    fs.feedbackSessionName)"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    .subscribe((hasRes: HasResponses) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      const isSubmitted: boolean \u003d hasRes.hasResponses;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                      studentSessions.push(Object.assign({},"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                          { isOpened, isWaitingToOpen, isPublished, isSubmitted, session: fs }));"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    });"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              this.courses.push(Object.assign({}, { course, feedbackSessions: studentSessions }));"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              this.courses.sort((a: StudentCourse, b: StudentCourse) \u003d\u003e"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                  (a.course.courseId \u003e b.course.courseId) ? 1 : -1);"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            });"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (e: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.statusMessageService.showErrorMessage(e.error.message);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Gets the tooltip message for the submission status."
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getSubmissionStatusTooltip(session: StudentSession): string {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    let msg: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (session.isWaitingToOpen) {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      msg +\u003d this.studentFeedbackSessionStatusAwaiting;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    } else if (session.isSubmitted) {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      msg +\u003d this.studentFeedbackSessionStatusSubmitted;"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    } else {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      msg +\u003d this.studentFeedbackSessionStatusPending;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (!session.isOpened \u0026\u0026 !session.isWaitingToOpen) {"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      msg +\u003d this.studentFeedbackSessionStatusClosed;"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return msg;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Gets the tooltip message for the response status."
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getResponseStatusTooltip(isPublished: boolean): string {"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (isPublished) {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return this.studentFeedbackSessionStatusPublished;"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return this.studentFeedbackSessionStatusNotPublished;"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Sorts the feedback sessions based on creation and end timestamp."
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  sortFeedbackSessions(fss: FeedbackSessions): FeedbackSession[] {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return fss.feedbackSessions"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .map((fs: FeedbackSession) \u003d\u003e Object.assign({}, fs))"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .sort((a: FeedbackSession, b: FeedbackSession) \u003d\u003e (a.createdAtTimestamp \u003e"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            b.createdAtTimestamp) ? 1 : (a.createdAtTimestamp \u003d\u003d\u003d b.createdAtTimestamp) ?"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ((a.submissionEndTimestamp \u003e b.submissionEndTimestamp) ? 1 : -1) : -1);"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 4,
+      "-": 143
     }
   },
   {
@@ -63382,119 +64915,119 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import { HttpRequestService } from \u0027../../../services/http-request.service\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import { NgbModal, NgbModalRef } from \u0027@ng-bootstrap/ng-bootstrap\u0027;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "-"
         },
-        "content": "import { NgbModal, NgbModalRef } from \u0027@ng-bootstrap/ng-bootstrap\u0027;"
+        "content": "import { environment } from \u0027../../../environments/environment\u0027;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import { environment } from \u0027../../../environments/environment\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "-"
-        },
         "content": "import { AuthService } from \u0027../../../services/auth.service\u0027;"
       },
       {
-        "lineNumber": 8,
+        "lineNumber": 7,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "import { AuthInfo, Gender, MessageOutput, Nationalities, StudentProfile } from \u0027../../../types/api-output\u0027;"
       },
       {
-        "lineNumber": 9,
+        "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 10,
+        "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
         "content": "import { FormControl, FormGroup } from \u0027@angular/forms\u0027;"
       },
       {
-        "lineNumber": 11,
+        "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
         "content": "import { StatusMessageService } from \u0027../../../services/status-message.service\u0027;"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
         "content": "import { StudentProfileService } from \u0027../../../services/student-profile.service\u0027;"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
         "content": "import { ErrorMessageOutput } from \u0027../../error-message-output\u0027;"
       },
       {
-        "lineNumber": 15,
+        "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 16,
+        "lineNumber": 15,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "import { HttpErrorResponse } from \u0027@angular/common/http\u0027;"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 16,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "import { from, of, throwError } from \u0027rxjs\u0027;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 17,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "import { catchError, switchMap } from \u0027rxjs/operators\u0027;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { NationalitiesService } from \u0027../../../services/nationalities.service\u0027;"
       },
       {
         "lineNumber": 19,
@@ -63681,9 +65214,9 @@
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "              private httpRequestService: HttpRequestService,"
+        "content": "              private nationalitiesService: NationalitiesService,"
       },
       {
         "lineNumber": 46,
@@ -63793,9 +65326,9 @@
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    this.httpRequestService.get(\u0027/nationalities\u0027).subscribe((response: Nationalities) \u003d\u003e {"
+        "content": "    this.nationalitiesService.getNationalities().subscribe((response: Nationalities) \u003d\u003e {"
       },
       {
         "lineNumber": 62,
@@ -64905,8 +66438,8 @@
       }
     ],
     "authorContributionMap": {
-      "tiuweehan": 41,
-      "-": 178
+      "tiuweehan": 44,
+      "-": 175
     }
   },
   {
@@ -65669,6 +67202,852 @@
     }
   },
   {
+    "path": "src/web/app/user-join-page.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Component, OnInit } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ActivatedRoute, Router } from \u0027@angular/router\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { NgbModal } from \u0027@ng-bootstrap/ng-bootstrap\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { CourseService } from \u0027../services/course.service\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { JoinStatus } from \u0027../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ErrorReportComponent } from \u0027./components/error-report/error-report.component\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ErrorMessageOutput } from \u0027./error-message-output\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * User join page component."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027tm-user-join-page\u0027,"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./user-join-page.component.html\u0027,"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  styleUrls: [\u0027./user-join-page.component.scss\u0027],"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class UserJoinPageComponent implements OnInit {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isLoading: boolean \u003d true;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  hasJoined: boolean \u003d false;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  entityType: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  key: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  institute: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  userId: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor(private route: ActivatedRoute,"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private router: Router,"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private courseService: CourseService,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private ngbModal: NgbModal) {}"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ngOnInit(): void {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.route.queryParams.subscribe((queryParams: any) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.entityType \u003d queryParams.entitytype;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.key \u003d queryParams.key;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.institute \u003d queryParams.instructorinstitution;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      this.courseService.getJoinCourseStatus(this.key, this.entityType).subscribe((resp: JoinStatus) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.hasJoined \u003d resp.hasJoined;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.userId \u003d resp.userId || \u0027\u0027;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.isLoading \u003d false;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (resp.status \u003d\u003d\u003d 403) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.isLoading \u003d false;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          const modalRef: any \u003d this.ngbModal.open(ErrorReportComponent);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          modalRef.componentInstance.requestId \u003d resp.error.requestId;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          modalRef.componentInstance.errorMessage \u003d resp.error.message;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Joins the course."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  joinCourse(): void {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    this.courseService.joinCourse(this.key, this.entityType, this.institute).subscribe(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.router.navigate([`/web/${this.entityType}`]);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (resp: ErrorMessageOutput) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const modalRef: any \u003d this.ngbModal.open(ErrorReportComponent);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      modalRef.componentInstance.requestId \u003d resp.error.requestId;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      modalRef.componentInstance.errorMessage \u003d resp.error.message;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 3,
+      "-": 64
+    }
+  },
+  {
+    "path": "src/web/services/course.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { TestBed } from \u0027@angular/core/testing\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { HttpClientTestingModule } from \u0027@angular/common/http/testing\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { CourseService } from \u0027./course.service\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "describe(\u0027CourseService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  let spyHttpRequestService: any;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  let service: CourseService;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  beforeEach(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    spyHttpRequestService \u003d {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      get: jest.fn(),"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      post: jest.fn(),"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      put: jest.fn(),"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      delete: jest.fn(),"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    TestBed.configureTestingModule({"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      imports: ["
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        HttpClientTestingModule,"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      providers: ["
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        { provide: HttpRequestService, useValue: spyHttpRequestService },"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service \u003d TestBed.get(CourseService);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  it(\u0027should be created\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    expect(service).toBeTruthy();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should execute GET when getting all courses as student\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service.getAllCoursesAsStudent();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      entitytype: \u0027student\u0027,"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.COURSES, paramMap);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should execute PUT when joining course\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      key: \u0027123\u0027,"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      entitytype: \u0027student\u0027,"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      instructorinstitution: \u0027National University of Singapore\u0027,"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service.joinCourse(paramMap.key, paramMap.entitytype, paramMap.instructorinstitution);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    expect(spyHttpRequestService.put).toHaveBeenCalledWith(ResourceEndpoints.JOIN, paramMap);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 37,
+      "-": 14
+    }
+  },
+  {
     "path": "src/web/services/course.service.ts",
     "fileType": "ts",
     "lines": [
@@ -65696,324 +68075,324 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "import { Course, CourseArchive, Courses,  HasResponses, JoinStatus, MessageOutput } from \u0027../types/api-output\u0027;"
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import { CourseArchiveRequest, CourseCreateRequest, CourseUpdateRequest } from \u0027../types/api-request\u0027;"
+        "content": "import { Course, CourseArchive, Courses,  HasResponses, JoinStatus, MessageOutput } from \u0027../types/api-output\u0027;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+        "content": "import { CourseArchiveRequest, CourseCreateRequest, CourseUpdateRequest } from \u0027../types/api-request\u0027;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": " * Handles course related logic provision."
+        "content": "/**"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Handles course related logic provision."
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "@Injectable({"
+        "content": " */"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "  providedIn: \u0027root\u0027,"
+        "content": "@Injectable({"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "})"
+        "content": "  providedIn: \u0027root\u0027,"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "export class CourseService {"
+        "content": "})"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "export class CourseService {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "  constructor(private httpRequestService: HttpRequestService) {"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  constructor(private httpRequestService: HttpRequestService) {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Gets all course data for an instructor by calling API."
+        "content": "  /**"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * Gets all course data for an instructor by calling API."
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "  getAllCoursesAsInstructor(courseStatus: string): Observable\u003cCourses\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "  getAllCoursesAsInstructor(courseStatus: string): Observable\u003cCourses\u003e {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: \u0027instructor\u0027,"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "      coursestatus: courseStatus,"
+        "content": "      entitytype: \u0027instructor\u0027,"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      coursestatus: courseStatus,"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.get(\u0027/courses\u0027, paramMap);"
+        "content": "    };"
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.COURSES, paramMap);"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Get course data by calling API as an instructor."
+        "content": "  /**"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * Get course data by calling API as an instructor."
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "  getCourseAsInstructor(courseId: string): Observable\u003cCourse\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "  getCourseAsInstructor(courseId: string): Observable\u003cCourse\u003e {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "      courseid: courseId,"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: \u0027instructor\u0027,"
+        "content": "      courseid: courseId,"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      entitytype: \u0027instructor\u0027,"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.get(\u0027/course\u0027, paramMap);"
+        "content": "    };"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.COURSE, paramMap);"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "   * Get course data by calling API as a student."
+        "content": "  /**"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "   */"
+        "content": "   * Gets all course data for a student by calling API."
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  getCourseAsStudent(courseId: string): Observable\u003cCourse\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "  getAllCoursesAsStudent(): Observable\u003cCourses\u003e {"
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      courseid: courseId,"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": "      entitytype: \u0027student\u0027,"
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": "    };"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.get(\u0027/course\u0027, paramMap);"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.COURSES, paramMap);"
       },
       {
         "lineNumber": 50,
@@ -66041,7 +68420,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "   * Get student courses data of a given google id in masquerade mode by calling API."
+        "content": "   * Get course data by calling API as a student."
       },
       {
         "lineNumber": 54,
@@ -66055,7 +68434,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  getStudentCoursesInMasqueradeMode(googleId: string): Observable\u003cCourses\u003e {"
+        "content": "  getCourseAsStudent(courseId: string): Observable\u003cCourse\u003e {"
       },
       {
         "lineNumber": 56,
@@ -66069,14 +68448,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: \u0027student\u0027,"
+        "content": "      courseid: courseId,"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "      user: googleId,"
+        "content": "      entitytype: \u0027student\u0027,"
       },
       {
         "lineNumber": 59,
@@ -66088,9 +68467,9 @@
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.get(\u0027/courses\u0027, paramMap);"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.COURSE, paramMap);"
       },
       {
         "lineNumber": 61,
@@ -66118,7 +68497,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "   * Get instructor courses data of a given google id in masquerade mode by calling API."
+        "content": "   * Get student courses data of a given google id in masquerade mode by calling API."
       },
       {
         "lineNumber": 65,
@@ -66132,847 +68511,847 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  getInstructorCoursesInMasqueradeMode(googleId: string): Observable\u003cCourses\u003e {"
+        "content": "  getStudentCoursesInMasqueradeMode(googleId: string): Observable\u003cCourses\u003e {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    const activeCoursesParamMap: { [key: string]: string } \u003d {"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "      coursestatus: \u0027active\u0027,"
+        "content": "      entitytype: \u0027student\u0027,"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: \u0027instructor\u0027,"
+        "content": "      user: googleId,"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "      user: googleId,"
+        "content": "    };"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    };"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.COURSES, paramMap);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    const archivedCoursesParamMap: { [key: string]: string } \u003d {"
+        "content": "  }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "      coursestatus: \u0027archived\u0027,"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: \u0027instructor\u0027,"
+        "content": "  /**"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "      user: googleId,"
+        "content": "   * Get instructor courses data of a given google id in masquerade mode by calling API."
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "   */"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  getInstructorCoursesInMasqueradeMode(googleId: string): Observable\u003cCourses\u003e {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    return forkJoin("
+        "content": "    const activeCoursesParamMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.httpRequestService.get(\u0027/courses\u0027, activeCoursesParamMap),"
+        "content": "      coursestatus: \u0027active\u0027,"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.httpRequestService.get(\u0027/courses\u0027, archivedCoursesParamMap),"
+        "content": "      entitytype: \u0027instructor\u0027,"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "    ).pipe("
+        "content": "      user: googleId,"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "        map((vals: Courses[]) \u003d\u003e {"
+        "content": "    };"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "          return {"
+        "content": "    const archivedCoursesParamMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "            courses: vals[0].courses.concat(vals[1].courses),"
+        "content": "      coursestatus: \u0027archived\u0027,"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "          };"
+        "content": "      entitytype: \u0027instructor\u0027,"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "        }),"
+        "content": "      user: googleId,"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    );"
+        "content": "    };"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return forkJoin("
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": "        this.httpRequestService.get(ResourceEndpoints.COURSES, activeCoursesParamMap),"
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "   * Creates a course by calling API."
+        "content": "        this.httpRequestService.get(ResourceEndpoints.COURSES, archivedCoursesParamMap),"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "    ).pipe("
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "  createCourse(request: CourseCreateRequest): Observable\u003cCourse\u003e {"
+        "content": "        map((vals: Courses[]) \u003d\u003e {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {};"
+        "content": "          return {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.post(\u0027/course\u0027, paramMap, request);"
+        "content": "            courses: vals[0].courses.concat(vals[1].courses),"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "          };"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }),"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "    );"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Updates a course by calling API."
+        "content": "  }"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "  updateCourse(courseid: string, request: CourseUpdateRequest): Observable\u003cCourse\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
+        "content": "   * Creates a course by calling API."
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.put(\u0027/course\u0027, paramMap, request);"
+        "content": "   */"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  createCourse(request: CourseCreateRequest): Observable\u003cCourse\u003e {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const paramMap: { [key: string]: string } \u003d {};"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": "    return this.httpRequestService.post(ResourceEndpoints.COURSE, paramMap, request);"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Deletes a course by calling API."
+        "content": "  }"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "  deleteCourse(courseid: string): Observable\u003cMessageOutput\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
+        "content": "   * Updates a course by calling API."
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.delete(\u0027/course\u0027, paramMap);"
+        "content": "   */"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  updateCourse(courseid: string, request: CourseUpdateRequest): Observable\u003cCourse\u003e {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": "    return this.httpRequestService.put(ResourceEndpoints.COURSE, paramMap, request);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Changes the archive status of a course by calling API."
+        "content": "  }"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "  changeArchiveStatus(courseid: string, request: CourseArchiveRequest): Observable\u003cCourseArchive\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
+        "content": "   * Deletes a course by calling API."
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.put(\u0027/course/archive\u0027, paramMap, request);"
+        "content": "   */"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  deleteCourse(courseid: string): Observable\u003cMessageOutput\u003e {"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": "    return this.httpRequestService.delete(ResourceEndpoints.COURSE, paramMap);"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Bin (soft-delete) a course by calling API."
+        "content": "  }"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "  binCourse(courseid: string): Observable\u003cCourse\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
+        "content": "   * Changes the archive status of a course by calling API."
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.put(\u0027/bin/course\u0027, paramMap);"
+        "content": "   */"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  changeArchiveStatus(courseid: string, request: CourseArchiveRequest): Observable\u003cCourseArchive\u003e {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": "    return this.httpRequestService.put(ResourceEndpoints.COURSE_ARCHIVE, paramMap, request);"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Restore a soft-deleted course by calling API."
+        "content": "  }"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "  restoreCourse(courseid: string): Observable\u003cMessageOutput\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
+        "content": "   * Bin (soft-delete) a course by calling API."
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.delete(\u0027/bin/course\u0027, paramMap);"
+        "content": "   */"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  binCourse(courseid: string): Observable\u003cCourse\u003e {"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": "    return this.httpRequestService.put(ResourceEndpoints.BIN_COURSE, paramMap);"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Join a course by calling API."
+        "content": "  }"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "  joinCourse(regKey: string, entityType: string): Observable\u003cJoinStatus\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "   * Restore a soft-deleted course by calling API."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "      key: regKey,"
+        "content": "   */"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: entityType,"
+        "content": "  restoreCourse(courseid: string): Observable\u003cMessageOutput\u003e {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "    const paramMap: { [key: string]: string } \u003d { courseid };"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.get(\u0027/join\u0027, paramMap);"
+        "content": "    return this.httpRequestService.delete(ResourceEndpoints.BIN_COURSE, paramMap);"
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": "  }"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": "  /**"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "   * Send join reminder emails to unregistered students."
+        "content": "   * Get the status of whether the entity has joined the course by calling API."
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": "   */"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  remindUnregisteredStudentsForJoin(courseId: string): Observable\u003cMessageOutput\u003e {"
+        "content": "  getJoinCourseStatus(regKey: string, entityType: string): Observable\u003cJoinStatus\u003e {"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
         "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      courseid: courseId,"
+        "content": "      key: regKey,"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    };"
+        "content": "      entitytype: entityType,"
       },
       {
         "lineNumber": 156,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.post(\u0027/join/remind\u0027, paramMap);"
+        "content": "    };"
       },
       {
         "lineNumber": 157,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.JOIN, paramMap);"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Send join reminder email to a student."
+        "content": "  /**"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * Join a course by calling API."
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "  remindStudentForJoin(courseId: string, studentEmail: string): Observable\u003cMessageOutput\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 163,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "  joinCourse(regKey: string, entityType: string, institute: string): Observable\u003cany\u003e {"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "      courseid: courseId,"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "      studentemail: studentEmail,"
+        "content": "      key: regKey,"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      entitytype: entityType,"
       },
       {
         "lineNumber": 167,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.post(\u0027/join/remind\u0027, paramMap);"
+        "content": "      instructorinstitution: institute,"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    };"
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": ""
+        "content": "    return this.httpRequestService.put(ResourceEndpoints.JOIN, paramMap);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "  }"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Send join reminder email to an instructor."
+        "content": ""
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "  /**"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "  remindInstructorForJoin(courseId: string, instructorEmail: string): Observable\u003cMessageOutput\u003e {"
+        "content": "   * Send join reminder emails to unregistered students."
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "   */"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "      courseid: courseId,"
+        "content": "  remindUnregisteredStudentsForJoin(courseId: string): Observable\u003cMessageOutput\u003e {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "      instructoremail: instructorEmail,"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      courseid: courseId,"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.post(\u0027/join/remind\u0027, paramMap);"
+        "content": "    };"
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.post(ResourceEndpoints.JOIN_REMIND, paramMap);"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Checks if there are responses for a course (request sent by instructor)."
+        "content": "  /**"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * Send join reminder email to a student."
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "  hasResponsesForCourse(courseId: string): Observable\u003cHasResponses\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramMap: { [key: string]: string } \u003d {"
+        "content": "  remindStudentForJoin(courseId: string, studentEmail: string): Observable\u003cMessageOutput\u003e {"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "      entitytype: \u0027instructor\u0027,"
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 187,
@@ -66986,101 +69365,262 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      studentemail: studentEmail,"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.get(\u0027/hasResponses\u0027, paramMap);"
+        "content": "    };"
       },
       {
         "lineNumber": 190,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.post(ResourceEndpoints.JOIN_REMIND, paramMap);"
+      },
+      {
+        "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
       },
       {
-        "lineNumber": 191,
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Send join reminder email to an instructor."
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  remindInstructorForJoin(courseId: string, instructorEmail: string): Observable\u003cMessageOutput\u003e {"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      instructoremail: instructorEmail,"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.post(ResourceEndpoints.JOIN_REMIND, paramMap);"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Checks if there are responses for a course (request sent by instructor)."
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  hasResponsesForCourse(courseId: string): Observable\u003cHasResponses\u003e {"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      entitytype: \u0027instructor\u0027,"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.HAS_RESPONSES, paramMap);"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 214,
         "author": {
           "gitId": "madanalogy"
         },
         "content": ""
       },
       {
-        "lineNumber": 192,
+        "lineNumber": 215,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "  /**"
       },
       {
-        "lineNumber": 193,
+        "lineNumber": 216,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "   * Removes student from course."
       },
       {
-        "lineNumber": 194,
+        "lineNumber": 217,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "   */"
       },
       {
-        "lineNumber": 195,
+        "lineNumber": 218,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "  removeStudentFromCourse(courseId: string, studentEmail: string): Observable\u003cany\u003e {"
       },
       {
-        "lineNumber": 196,
+        "lineNumber": 219,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "    const paramsMap: { [key: string]: string } \u003d {"
       },
       {
-        "lineNumber": 197,
+        "lineNumber": 220,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "      courseid: courseId,"
       },
       {
-        "lineNumber": 198,
+        "lineNumber": 221,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "      studentemail: studentEmail,"
       },
       {
-        "lineNumber": 199,
+        "lineNumber": 222,
         "author": {
           "gitId": "madanalogy"
         },
         "content": "    };"
       },
       {
-        "lineNumber": 200,
+        "lineNumber": 223,
         "author": {
-          "gitId": "madanalogy"
+          "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.delete(\u0027/student\u0027, paramsMap);"
+        "content": "    return this.httpRequestService.delete(ResourceEndpoints.STUDENT, paramsMap);"
       },
       {
-        "lineNumber": 201,
+        "lineNumber": 224,
         "author": {
-          "gitId": "madanalogy"
+          "gitId": "-"
         },
         "content": "  }"
       },
       {
-        "lineNumber": 202,
+        "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
@@ -67088,8 +69628,1333 @@
       }
     ],
     "authorContributionMap": {
-      "madanalogy": 11,
-      "-": 191
+      "tiuweehan": 42,
+      "madanalogy": 9,
+      "-": 174
+    }
+  },
+  {
+    "path": "src/web/services/instructor.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { TestBed } from \u0027@angular/core/testing\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpClientTestingModule } from \u0027@angular/common/http/testing\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { of } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import DoneCallback \u003d jest.DoneCallback;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Instructor, InstructorPermissionRole, Instructors, JoinState } from \u0027../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { InstructorService } from \u0027./instructor.service\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "describe(\u0027InstructorService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  let spyHttpRequestService: any;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  let service: InstructorService;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  beforeEach(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    spyHttpRequestService \u003d {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      get: jest.fn(),"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      post: jest.fn(),"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      put: jest.fn(),"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      delete: jest.fn(),"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    TestBed.configureTestingModule({"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      imports: ["
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        HttpClientTestingModule,"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      providers: ["
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        { provide: HttpRequestService, useValue: spyHttpRequestService },"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service \u003d TestBed.get(InstructorService);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should be created\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    expect(service).toBeTruthy();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should execute GET\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service.getInstructorsFromCourse(\u0027CS3281\u0027);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      courseid: \u0027CS3281\u0027,"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.INSTRUCTORS, paramMap);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should send the correct course id\u0027, (done: DoneCallback) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    const mockInstructors: Instructors \u003d {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      instructors: [{"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        googleId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        courseId: \u0027CS3281\u0027,"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        email: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        isDisplayedToStudents: true,"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        displayedToStudentsAs: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        name: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        role: InstructorPermissionRole.INSTRUCTOR_PERMISSION_ROLE_COOWNER,"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        joinState: JoinState.JOINED,"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      }, {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        googleId: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        courseId: \u0027CS3282\u0027,"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        email: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        isDisplayedToStudents: true,"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        displayedToStudentsAs: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        name: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        role: InstructorPermissionRole.INSTRUCTOR_PERMISSION_ROLE_COOWNER,"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        joinState: JoinState.JOINED,"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      }],"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    spyHttpRequestService.get.mockImplementation((endpoint: string, paramMap: { [key: string]: string }) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      expect(endpoint).toEqual(ResourceEndpoints.INSTRUCTORS);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      const courseid: string \u003d paramMap.courseid;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      return of\u003cInstructors\u003e({"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        instructors: mockInstructors.instructors.filter((instructor: Instructor) \u003d\u003e instructor.courseId \u003d\u003d\u003d courseid),"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service.getInstructorsFromCourse(\u0027CS3281\u0027).subscribe((instructors: Instructors) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      expect(instructors.instructors).toEqual(mockInstructors.instructors"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        .filter((instructor: Instructor) \u003d\u003e instructor.courseId \u003d\u003d\u003d \u0027CS3281\u0027));"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      done();"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 82
+    }
+  },
+  {
+    "path": "src/web/services/instructor.service.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Injectable } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Observable } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Instructors } from \u0027../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " * Handles instructor related logic provision."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "@Injectable({"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  providedIn: \u0027root\u0027,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "export class InstructorService {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  constructor(private httpRequestService: HttpRequestService) { }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "   * Get a list of instructors of a course by calling API."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  getInstructorsFromCourse(courseId: string): Observable\u003cInstructors\u003e {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    const paramMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.INSTRUCTORS, paramMap);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 27
+    }
+  },
+  {
+    "path": "src/web/services/nationalities.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { TestBed } from \u0027@angular/core/testing\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpClientTestingModule } from \u0027@angular/common/http/testing\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { of } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import DoneCallback \u003d jest.DoneCallback;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Nationalities } from \u0027../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { NationalitiesService } from \u0027./nationalities.service\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "describe(\u0027NationalitiesService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  let spyHttpRequestService: any;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  let service: NationalitiesService;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  beforeEach(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    spyHttpRequestService \u003d {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      get: jest.fn(),"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      post: jest.fn(),"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      put: jest.fn(),"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      delete: jest.fn(),"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    TestBed.configureTestingModule({"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      imports: ["
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        HttpClientTestingModule,"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      providers: ["
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "        { provide: HttpRequestService, useValue: spyHttpRequestService },"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service \u003d TestBed.get(NationalitiesService);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should be created\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    expect(service).toBeTruthy();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should execute GET\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service.getNationalities();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.NATIONALITIES);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  it(\u0027should return nationalities\u0027, (done: DoneCallback) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    const mockNationalities: Nationalities \u003d {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      nationalities: [\u0027Singapore\u0027],"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    spyHttpRequestService.get.mockReturnValue(of\u003cNationalities\u003e(mockNationalities));"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    service.getNationalities().subscribe((nationalities: Nationalities) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      expect(nationalities).toEqual(mockNationalities);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      done();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 52
+    }
+  },
+  {
+    "path": "src/web/services/nationalities.service.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Injectable } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Observable } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { Nationalities } from \u0027../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " * Handles nationalities related logic provision."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "@Injectable({"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  providedIn: \u0027root\u0027,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "export class NationalitiesService {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  constructor(private httpRequestService: HttpRequestService) { }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "   * Get a list of nationalities by calling API."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  getNationalities(): Observable\u003cNationalities\u003e {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.NATIONALITIES);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 23
     }
   },
   {
@@ -67113,432 +70978,439 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "import { MessageOutput, StudentProfile } from \u0027../types/api-output\u0027;"
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "-"
         },
-        "content": "import { StudentProfileUpdateRequest } from \u0027../types/api-request\u0027;"
+        "content": "import { MessageOutput, StudentProfile } from \u0027../types/api-output\u0027;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+        "content": "import { StudentProfileUpdateRequest } from \u0027../types/api-request\u0027;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": " * Handles student profile related logic provision."
+        "content": "/**"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Handles student profile related logic provision."
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "@Injectable({"
+        "content": " */"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "  providedIn: \u0027root\u0027,"
+        "content": "@Injectable({"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "})"
+        "content": "  providedIn: \u0027root\u0027,"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "export class StudentProfileService {"
+        "content": "})"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "  constructor(private httpRequestService: HttpRequestService) {"
+        "content": "export class StudentProfileService {"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  constructor(private httpRequestService: HttpRequestService) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Gets a student profile by calling API."
+        "content": "  /**"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "   * If both studentEmail and courseId are provided, it returns profile of that student."
+        "content": "   * Gets a student profile by calling API."
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "   * If either one is missing, it returns the profile of the current login student."
+        "content": "   * If both studentEmail and courseId are provided, it returns profile of that student."
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * If either one is missing, it returns the profile of the current login student."
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "  getStudentProfile(studentEmail?: string, courseId?: string): Observable\u003cStudentProfile\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (studentEmail \u0026\u0026 courseId) {"
+        "content": "  getStudentProfile(studentEmail?: string, courseId?: string): Observable\u003cStudentProfile\u003e {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "      const paramsMap: { [key: string]: string } \u003d {"
+        "content": "    if (studentEmail \u0026\u0026 courseId) {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "        studentemail: studentEmail,"
+        "content": "      const paramsMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "        courseid: courseId,"
+        "content": "        studentemail: studentEmail,"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "      };"
+        "content": "        courseid: courseId,"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "      return this.httpRequestService.get(\u0027/student/profile\u0027, paramsMap);"
+        "content": "      };"
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    }"
+        "content": "      return this.httpRequestService.get(ResourceEndpoints.STUDENT_PROFILE, paramsMap);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.get(\u0027/student/profile\u0027);"
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.STUDENT_PROFILE);"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Updates a student profile by calling API."
+        "content": "  /**"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * Updates a student profile by calling API."
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "  updateStudentProfile(googleId: string, requestBody: StudentProfileUpdateRequest)"
+        "content": "   */"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "      : Observable\u003cMessageOutput\u003e {"
+        "content": "  updateStudentProfile(googleId: string, requestBody: StudentProfileUpdateRequest)"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+        "content": "      : Observable\u003cMessageOutput\u003e {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "      googleid: googleId,"
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      googleid: googleId,"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.httpRequestService.put(\u0027/student/profile\u0027, paramsMap, requestBody);"
+        "content": "    };"
       },
       {
         "lineNumber": 42,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.put(ResourceEndpoints.STUDENT_PROFILE, paramsMap, requestBody);"
+      },
+      {
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
       },
       {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "tiuweehan"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 44,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "   * Gets the profile picture as blob image."
+        "content": "  /**"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "   */"
+        "content": "   * Gets the profile picture as blob image."
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  getProfilePicture(): Observable\u003cBlob\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.get(\u0027/student/profilePic\u0027, {}, \u0027blob\u0027);"
+        "content": "  getProfilePicture(): Observable\u003cBlob\u003e {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.STUDENT_PROFILE_PICTURE, {}, \u0027blob\u0027);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "   * Posts the profile picture."
+        "content": "  /**"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "   */"
+        "content": "   * Posts the profile picture."
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  postProfilePicture(formData: FormData): Observable\u003cany\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.post(\u0027/student/profilePic\u0027, {}, formData);"
+        "content": "  postProfilePicture(formData: FormData): Observable\u003cany\u003e {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.post(ResourceEndpoints.STUDENT_PROFILE_PICTURE, {}, formData);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "   * Deletes the profile picture and the profile picture key"
+        "content": "  /**"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "   */"
+        "content": "   * Deletes the profile picture and the profile picture key"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  deleteProfilePicture(paramMap: { [key: string]: string }): Observable\u003cany\u003e {"
+        "content": "   */"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "    return this.httpRequestService.delete(\u0027/student/profilePic\u0027, paramMap);"
+        "content": "  deleteProfilePicture(paramMap: { [key: string]: string }): Observable\u003cany\u003e {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "  }"
+        "content": "    return this.httpRequestService.delete(ResourceEndpoints.STUDENT_PROFILE_PICTURE, paramMap);"
       },
       {
         "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
@@ -67546,8 +71418,592 @@
       }
     ],
     "authorContributionMap": {
-      "tiuweehan": 21,
-      "-": 43
+      "tiuweehan": 24,
+      "-": 41
+    }
+  },
+  {
+    "path": "src/web/services/student.service.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Injectable } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Observable } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Student, Students } from \u0027../types/api-output\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { StudentsEnrollRequest } from \u0027../types/api-request\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Handles student related logic provision."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Injectable({"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  providedIn: \u0027root\u0027,"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class StudentService {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor(private httpRequestService: HttpRequestService) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Get a list of students of a course by calling API."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * If teamName is provided, only students in that team will be returned."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Otherwise, all students in the course will be returned."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getStudentsFromCourse(courseId: string, teamName?: string): Observable\u003cStudents\u003e {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (teamName) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const paramsMapWithTeamName: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        courseid: courseId,"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        teamname: teamName,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      };"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      return this.httpRequestService.get(ResourceEndpoints.STUDENTS, paramsMapWithTeamName);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramsMapWithoutTeamName: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.STUDENTS, paramsMapWithoutTeamName);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Gets student of a course by calling API."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   *"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * \u003cp\u003e If both studentEmail and regKey are not provided, get the student of current logged-in user."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   *"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * @param courseId courseId of the course"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * @param studentEmail if provided, get the student of the course of the given email"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * @param regKey if provided, get the student of the course with regKey"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getStudent(courseId: string, studentEmail?: string, regKey?: string): Observable\u003cStudent\u003e {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (studentEmail) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      paramsMap.studentemail \u003d studentEmail;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (regKey) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      paramsMap.key \u003d regKey;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.STUDENT, paramsMap);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Enroll a list of students to a course by calling API."
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Students who are enrolled successfully will be returned."
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  enrollStudents(courseId: string, requestBody: StudentsEnrollRequest): Observable\u003cStudents\u003e {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.put(ResourceEndpoints.STUDENTS, paramsMap, requestBody);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Gets all students in a course and team as a student by calling API."
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  getStudentsFromCourseAndTeam(courseId: string, teamName: string): Observable\u003cStudents\u003e {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      teamname: teamName,"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "    return this.httpRequestService.get(ResourceEndpoints.STUDENTS, paramsMap);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tiuweehan": 6,
+      "-": 76
     }
   },
   {
