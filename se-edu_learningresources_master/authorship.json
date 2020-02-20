@@ -134,7 +134,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    * [Writing Testable JavaScript Code]({{baseUrl}}/contents/javascript/javascript.html)"
+        "content": "    * [Writing Testable JavaScript Code]({{baseUrl}}/contents/javascript/WritingTestableJavascript.html)"
       },
       {
         "lineNumber": 20,
@@ -4061,9 +4061,9 @@
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "Note that `{\\{` and `}\\}` should not have the slash in your actual code."
+        "content": "Note that `{\\{` and `}\\}` should be \u003ccode\u003e{\u003cspan\u003e{\u003c/span\u003e\u003c/code\u003e and \u003ccode\u003e}\u003cspan\u003e}\u003c/span\u003e\u003c/code\u003e respectively, due to the limitations of [MarkBind](https://markbind.org)."
       },
       {
         "lineNumber": 51,
@@ -4292,9 +4292,9 @@
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    \u003ch2\u003e{\\{message}\\{\u003c/h2\u003e"
+        "content": "    \u003ch2\u003e{\\{message}\\}\u003c/h2\u003e"
       },
       {
         "lineNumber": 84,
@@ -4320,9 +4320,9 @@
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "\u003cb\u003eStep 5:\u003c/b\u003e Open the brower and we will see \"Hello World\" being displayed:"
+        "content": "\u003cb\u003eStep 5:\u003c/b\u003e Open the browser and we will see \"Hello World\" being displayed:"
       },
       {
         "lineNumber": 88,
@@ -4411,9 +4411,9 @@
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    When `message` is changed, the view will be re-rendered to show the new message. So you can say, DOM is \"reacting\" to `message`."
+        "content": "    When `message` is changed, the view will be re-rendered to show the new message. So you can say, the DOM is \"reacting\" to the changes in `message`."
       },
       {
         "lineNumber": 101,
@@ -4488,240 +4488,240 @@
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    \u003cinput type\u003d\"checkbox\", v-model\u003disChecked\"\u003e"
+        "content": "    \u003cinput type\u003d\"checkbox\", v-model\u003d\"isChecked\"\u003e"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003clabel for\u003d\"checked\"\u003eSelect\u003c/label\u003e"
+        "content": "      \u003clabel for\u003d\"checked\"\u003eSelect\u003c/label\u003e"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    ```"
+        "content": "    \u003c/input\u003e"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    ```"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    When the checkbox is selected, `isChecked` is set to `true`. If the program sets `isChecked` to `false`, then checkbox will be unselected."
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    This reduces any extra step required to manually update the data."
+        "content": "    When the checkbox is selected, `isChecked` is set to `true`. If the program sets `isChecked` to `false`, then checkbox will be unselected."
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    This reduces any extra step required to manually update the data."
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    2-way binding is useful for updating input form bindings such as checkboxes or drop-downs, where new data is entered by users and then updated in the view."
+        "content": ""
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    2-way binding is useful for updating input form bindings such as checkboxes or drop-downs, where new data is entered by users and then updated in the view."
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cbr\u003e"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003cbr\u003e"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "3. **Passing Data From Outer to Inner Components**\u003cbr\u003e"
+        "content": ""
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    When you have components that are nested within each other, data is passed from the outer component to the inner component via `props`, where `props` are just custom data shared between the components."
+        "content": "3. **Conditionals and Loops**\u003cbr\u003e"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "    `v-if` allows you to conditionally insert/remove elements based on the truthfulness of the binding value."
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    This follows the [1-way data flow](https://vuejs.org/v2/guide/components-props.html#One-Way-Data-Flow) encouraged by Vue, which"
+        "content": "    "
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    ensures that data can only be changed by the component itself and also allows bugs to be easily traced in the code."
+        "content": "    `v-for` allows you to loop through and render a list of items."
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "    "
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    ```js"
+        "content": "    Following the previous checkbox example, if you want to display a list of messages when the checkbox is checked, you can do the following:"
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    Vue.component(\u0027todo-list\u0027, {"
+        "content": "    ```html"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        props: [\u0027item\u0027],"
+        "content": "    \u003cdiv v-if\u003d\"isChecked\"\u003e"
       },
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        data: [\u0027totalCount\u0027],"
+        "content": "      \u003cdiv v-for\u003d\"message in messages\"\u003e"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        template:"
+        "content": "        \u003cli\u003e{\\{message}\\}\u003c/li\u003e"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          \u003cdiv class\u003d\u0027todo-list\u0027\u003e"
+        "content": "      \u003c/div\u003e"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "            \u003cp\u003eTotal:{\\{this.totalCount}\\{\u003c/p\u003e"
+        "content": "    \u003c/div\u003e"
       },
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "            \u003cp\u003e{\\{item.name}\\{: {\\{item.count}\\{\u003c/p\u003e"
+        "content": "    ```"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    })"
+        "content": "\u003cbr\u003e"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
         "content": ""
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    \u003ctodo-list"
+        "content": "4. **Passing Data From Outer to Inner Components**\u003cbr\u003e"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "      v-for\u003d\u0027item in items\u0027"
+        "content": "    When you have components that are nested within each other, data is passed from the outer component to the inner component via `props`, where `props` are just custom data shared between the components."
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "      v-bind:key\u003d\u0027item.id\u0027"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "      v-bind:item\u003d\u0027item\u0027"
+        "content": "    This follows the [1-way data flow](https://vuejs.org/v2/guide/components-props.html#One-Way-Data-Flow) encouraged by Vue, which"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003e\u003c/todo-list\u003e"
+        "content": "    ensures that data can only be changed by the component itself and also allows bugs to be easily traced in the code."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```"
+        "content": "    "
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    `to-do list` contains `item`, i.e. `to-do list` is the outer component and `item` is the inner component."
+        "content": "    To pass props to a Vue component, `v-bind:\u003cprop-name\u003e` is used. A demonstration of passing props is shown in the code segment below:"
       },
       {
         "lineNumber": 145,
@@ -4735,77 +4735,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003cbox type\u003d\"tip\"\u003e"
+        "content": "    ```js"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    Vue.component(\u0027todo-list\u0027, {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "    Note that `props` is passed from the outer component to the inner component while `data` is kept private within a component."
+        "content": "      props: [\u0027item\u0027],"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003c/box\u003e"
+        "content": "      data: [\u0027totalCount\u0027],"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "      template:`"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cbr\u003e"
+        "content": "        \u003cdiv class\u003d\u0027todo-list\u0027\u003e"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "          \u003cp\u003eTotal:{\\{this.totalCount}\\}\u003c/p\u003e"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "jamessspanggg"
         },
-        "content": "4. **Emitting Events**\u003cbr\u003e"
+        "content": "          \u003cp\u003e{\\{item.name}\\}: {\\{item.count}\\}\u003c/p\u003e"
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    However, what if the user decides to update the `item.count`? The data for `item.count` has to be passed from `item` to `todo-list` so that `totalCount` can be updated inside `todo-list` ."
+        "content": "        \u003c/div\u003e"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "      `"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    How do we do that if we have to follow the 1-way data flow rule?"
+        "content": "    })"
       },
       {
         "lineNumber": 157,
@@ -4819,84 +4819,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    In situations where the inner component has to pass data back to the outer component, the inner component has to [emit custom events](https://vuejs.org/v2/guide/components.html#Emitting-a-Value-With-an-Event)"
+        "content": "    \u003ctodo-list"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    and the outer component will update after listening to these events."
+        "content": "      v-for\u003d\u0027item in items\u0027"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      v-bind:key\u003d\u0027item.id\u0027"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    You can think of emitting events like putting out a flyer about an event. If someone is interested in this event, he or she can gather more information through reading the flyer."
+        "content": "      v-bind:item\u003d\u0027item\u0027"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    \u003e\u003c/todo-list\u003e"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```js"
+        "content": "    ```"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    Vue.component(\u0027item\u0027, {"
+        "content": "    `to-do list` contains `item`, i.e. `to-do list` is the outer component and `item` is the inner component."
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "      data: [\u0027count\u0027, \u0027name\u0027],"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "      template: {"
+        "content": "    \u003cbox type\u003d\"tip\"\u003e"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cbutton v-on:click\u003d\"$emit(\u0027increased-count\u0027, count+1)\"\u003eIncrement item count\u003c/button\u003e"
+        "content": ""
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    Note that `props` is passed from the outer component to the inner component while `data` is kept private within a component."
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    \u003c/box\u003e"
       },
       {
         "lineNumber": 170,
@@ -4910,77 +4910,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    /* Inside todo-list component */"
+        "content": "\u003cbr\u003e"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "    template: {"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        v-on:increased-count\u003d\"updateCount\""
+        "content": "5. **Emitting Events**\u003cbr\u003e"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    However, what if the user decides to update the `item.count`? The data for `item.count` has to be passed from `item` to `todo-list` so that `totalCount` can be updated inside `todo-list` ."
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    How do we do that if we have to follow the 1-way data flow rule?"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cbr\u003e"
+        "content": ""
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    In situations where the inner component has to pass data back to the outer component, the inner component has to [emit custom events](https://vuejs.org/v2/guide/components.html#Emitting-a-Value-With-an-Event)"
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "5. **Computed Properties**\u003cbr\u003e"
+        "content": "    and the outer component will update after listening to these events."
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "    This is useful when you want to compose new data based on the data that has changed."
+        "content": ""
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "    Instead of calling methods to do that whenever data has changed, computed properties will do it for you automatically."
+        "content": "    You can think of emitting events like putting out a flyer about an event. If someone is interested in this event, he or she can gather more information through reading the flyer."
       },
       {
         "lineNumber": 182,
@@ -5001,245 +5001,245 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    computed: totalCount() {"
+        "content": "    Vue.component(\u0027item\u0027, {"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "        let result \u003d 0;"
+        "content": "      data: [\u0027count\u0027, \u0027name\u0027],"
       },
       {
         "lineNumber": 186,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        this.items.forEach((item) \u003d\u003e result +\u003d item.count);"
+        "content": "      template: `\u003cbutton v-on:click\u003d\"$emit(\u0027increased-count\u0027, count+1)\"\u003eIncrement item count\u003c/button\u003e`"
       },
       {
         "lineNumber": 187,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        return result;"
+        "content": "    })"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```"
+        "content": "    /* Inside todo-list component */"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "    template: `\u003citem v-on:increased-count\u003d\"updateCount\" v-for\u003d\"item in items\"/\u003e`"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    Unlike the use of methods, this updating of `totalCount` will only be triggered when the number of `items` in the list or any `item`\u0027s `count` changed."
+        "content": "    ```"
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "   \u003cbox type\u003d\"tip\"\u003e"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    Since computed properties are cached and will not be processed every time the page refreshes, this can greatly improve the efficiency of your application."
+        "content": "   "
       },
       {
         "lineNumber": 194,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "   When the button is clicked, the `item` component will emit a custom event named `increased-count` while the `todo-list` component listens for this event and executes its own `updateCount` method."
       },
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    \u003cbox type\u003d\"warning\"\u003e"
+        "content": "   \u003c/box\u003e"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "        Note: computed properties must return the new data i.e. reactive properties."
+        "content": ""
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "        It cannot perform other operations in response to the change in data."
+        "content": "\u003cbr\u003e"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003c/box\u003e"
+        "content": ""
       },
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "6. **Computed Properties**\u003cbr\u003e"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cbr\u003e"
+        "content": "    This is useful when you want to compose new data based on the data that has changed."
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    Instead of calling methods to do that whenever data has changed, computed properties will do it for you automatically."
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "6. **Watched Properties**\u003cbr\u003e"
+        "content": ""
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "    Watched properties are used to call other functions when a particular data has been updated, such as \u003ctooltip content\u003d\"independent operations\"\u003easynchronous operations\u003c/tooltip\u003e."
+        "content": "    ```js"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    computed: totalCount() {"
       },
       {
         "lineNumber": 205,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    For example, when a new `item` is added, we want to send a notification to our friend to alert him or her about the change."
+        "content": "      return this.items.reduce((sum, item) \u003d\u003e sum + item.count);"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "    A watched property on `items` can be added so that a notification can be sent whenever `items` has changed."
+        "content": "    }"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    ```"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```js"
+        "content": ""
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "    watch: {"
+        "content": "    Unlike the use of methods, this updating of `totalCount` will only be triggered when the number of `items` in the list or any `item`\u0027s `count` changed."
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "        totalCount: function() {"
+        "content": ""
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "            let result \u003d 0"
+        "content": "    Since computed properties are cached and will not be processed every time the page refreshes, this can greatly improve the efficiency of your application."
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "            this.items.forEach((item) \u003d\u003e result +\u003d item.count);"
+        "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "            this.totalCount \u003d result;"
+        "content": "    \u003cbox type\u003d\"warning\"\u003e"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Note: computed properties must return the new data i.e. reactive properties."
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "            // notify friend about the change"
+        "content": "        It cannot perform other operations in response to the change in data."
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    \u003c/box\u003e"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```"
+        "content": "\u003cbr\u003e"
       },
       {
         "lineNumber": 219,
@@ -5251,72 +5251,72 @@
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    This may look quite similar to `Computed properties`."
+        "content": "7. **Watched Properties**\u003cbr\u003e"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    Watched properties are used to call other functions when a particular data has been updated, such as \u003ctooltip content\u003d\"independent operations\"\u003easynchronous operations\u003c/tooltip\u003e."
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "    To decide which is more suitable for your feature, here is a brief comparison:"
+        "content": ""
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "    Watched property | Computed property"
+        "content": "    For example, when a new `item` is added, we want to send a notification to our friend to alert him or her about the change."
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "    :-------------- | :----------------"
+        "content": "    A watched property on `items` can be added so that a notification can be sent whenever `items` has changed."
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "    used for running expensive operations | used for updating data for dependencies"
+        "content": ""
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "    executed every time page refreshes | uses cached data and executes only when changed"
+        "content": "    ```js"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "    **watches** for change in 1 property | **creates** a new property that is updated when 1 or more dependencies change"
+        "content": "    watch: {"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      totalCount: function() {"
       },
       {
         "lineNumber": 229,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "\u003cbr\u003e"
+        "content": "        this.totalCount \u003d this.items.reduce((sum, item) \u003d\u003e sum + item.count);"
       },
       {
         "lineNumber": 230,
@@ -5328,579 +5328,831 @@
       {
         "lineNumber": 231,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "## Why use Vue?"
+        "content": "        // notify friend about the change"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Now that we know what Vue is, let us look at some benefits it has to offer."
+        "content": "    }"
       },
       {
         "lineNumber": 234,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    ```"
       },
       {
         "lineNumber": 235,
         "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "### Benefit 1: Approachable"
-      },
-      {
-        "lineNumber": 236,
-        "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    This may look quite similar to `Computed properties`."
+      },
+      {
         "lineNumber": 237,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Vue is very easy to learn. Compared to other framework such as Angular and React, Vue is simple in terms of API and design. Learning enough to build non-trivial applications typically takes less than a day. An example is provided below:\u003cbr/\u003e\u003cbr/\u003e"
+        "content": ""
       },
       {
         "lineNumber": 238,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Iteration in React:\u003cbr/\u003e\u003cbr/\u003e"
+        "content": "    To decide which is more suitable for your feature, here is a brief comparison:"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "The JavaScript file in ReactJs"
+        "content": "    Watched property | Computed property"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```js"
+        "content": "    :-------------- | :----------------"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "    var Iteration \u003d React.createClass({"
+        "content": "    used for running expensive operations | used for updating data for dependencies"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "       getInitialState() {"
+        "content": "    executed every time page refreshes | uses cached data and executes only when changed"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "         return {"
+        "content": "    **watches** for change in 1 property | **creates** a new property that is updated when 1 or more dependencies change"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "           array: [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"]"
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "         }"
+        "content": "\u003cbr\u003e"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "       },"
+        "content": ""
       },
       {
         "lineNumber": 247,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "       render() {"
+        "content": "8. **Lifecycle Hooks**\u003cbr\u003e"
       },
       {
         "lineNumber": 248,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "         this.state.array.map(function(date) {"
+        "content": "    Every Vue instance goes through a series of initialization steps when it is created, i.e. setting up data observation, compiling the template, mounting the instance to the DOM, and updating the DOM when data modifies. Along these steps, Vue runs functions in the background called lifecycle hooks, allowing users to add code at each stage that could improve its rendering speed.\u003cbr/\u003e\u003cbr/\u003e"
       },
       {
         "lineNumber": 249,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "           return ("
+        "content": "    The following diagram shows all lifecycle hooks and their specific execution stages:\u003cbr/\u003e"
       },
       {
         "lineNumber": 250,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "             \u003cspan\u003e{date}\u003c/span\u003e"
+        "content": "    ![Vue\u0027s Lifecycle Diagram](javascript-framework-vue-images/vue-lifecycle-diagram.png \"Vue\u0027s Lifecycle Diagram\")"
       },
       {
         "lineNumber": 251,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "           )"
+        "content": "    _Figure 1. Vue\u0027s Lifecycle Diagram_"
       },
       {
         "lineNumber": 252,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "         });"
+        "content": "   "
       },
       {
         "lineNumber": 253,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "       }"
+        "content": "    To run code at a specific stage, you can just define the corresponding hook function and add your code within the function."
       },
       {
         "lineNumber": 254,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    });"
+        "content": "    For example, the `created` hook can be used to run code right after the Vue instance is created:"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "    ReactDOM.render(\u003cIteration /\u003e, document.getElementById(\u0027array\u0027));"
+        "content": "    ```js"
       },
       {
         "lineNumber": 256,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    ```"
+        "content": "    Vue.component(\u0027todo-list\u0027, {"
       },
       {
         "lineNumber": 257,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    The HTML file in ReactJs"
+        "content": "      ..."
       },
       {
         "lineNumber": 258,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    ```html"
+        "content": "      created: function() {"
       },
       {
         "lineNumber": 259,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    \u003cdiv id\u003d\"array\"\u003e\u003c/div\u003e"
+        "content": "        console.log(\"to-do list is created.\");"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```"
+        "content": "      }"
       },
       {
         "lineNumber": 261,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "jamessspanggg"
         },
-        "content": "    Iteration in Vue:\u003cbr/\u003e\u003cbr/\u003e"
+        "content": "    })"
       },
       {
         "lineNumber": 262,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "    The JavaScript file in Vue"
+        "content": "    ```"
       },
       {
         "lineNumber": 263,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    ```js"
+        "content": "   For more detailed information about Vue lifecycle hooks, visit [here](https://vuejs.org/v2/api/#Options-Lifecycle-Hooks).\u003cbr/\u003e"
       },
       {
         "lineNumber": 264,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    var Iteration \u003d new Vue({"
+        "content": "     "
       },
       {
         "lineNumber": 265,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "      el: \u0027#array\u0027,"
+        "content": "## Why use Vue?"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "      data: {"
+        "content": ""
       },
       {
         "lineNumber": 267,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        array: [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"]"
+        "content": "Now that we know what Vue is, let us look at some benefits it has to offer."
       },
       {
         "lineNumber": 268,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "      }"
+        "content": ""
       },
       {
         "lineNumber": 269,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    });"
+        "content": "### Benefit 1: Approachable"
       },
       {
         "lineNumber": 270,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    ```"
+        "content": ""
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    The HTML file in Vue"
+        "content": "Vue is very easy to learn. Compared to other framework such as Angular and React, Vue is simple in terms of API and design. Learning enough to build non-trivial applications typically takes less than a day. An example is provided below:\u003cbr/\u003e\u003cbr/\u003e"
       },
       {
         "lineNumber": 272,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    ```html"
+        "content": "Iteration in React:\u003cbr/\u003e\u003cbr/\u003e"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003cdiv id\u003d\"array\"\u003e"
+        "content": "The JavaScript file in ReactJs"
       },
       {
         "lineNumber": 274,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "      \u003cspan v-for\u003d\"date in array\"\u003e{date}\u003c/span\u003e"
+        "content": ""
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003c/div\u003e"
+        "content": "```js"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "    ```"
+        "content": "var Iteration \u003d React.createClass({"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  getInitialState() {"
       },
       {
         "lineNumber": 278,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "### Benefit 2: Progressive"
+        "content": "    return {"
       },
       {
         "lineNumber": 279,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "      array: [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"]"
       },
       {
         "lineNumber": 280,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. This means that if you have a large application, you can plug Vue into just a part of your application without disturbing the other components. A quote from Evan You - the founder of VueJs is as follows:"
+        "content": "    }"
       },
       {
         "lineNumber": 281,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "    \u003e Vue is a more flexible, less opinionated solution (than Angular). That allows you to structure your app the way you want it to be, instead of being forced to do everything the Angular way (Angular requires a certain way to structure an application, making it hard to introduce Angular into an already built project). It’s only an interface layer so you can use it as a light feature in pages instead of a full blown SPA (single-page application)."
+        "content": "  },"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003e"
+        "content": "  render() {"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
-        "content": "    \u003e -- [[source]](https://www.valuecoders.com/blog/technology-and-apps/vue-js-comparison-angular-react/)"
+        "content": "    this.state.array.map(function(date) {"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      return ("
       },
       {
         "lineNumber": 285,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "### Benefit 3: Versatile"
+        "content": "        \u003cspan\u003e{date}\u003c/span\u003e"
       },
       {
         "lineNumber": 286,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Vue is perfectly capable of powering sophisticated single-page applications when used in combination with modern tooling and supporting libraries."
+        "content": "      )"
       },
       {
         "lineNumber": 287,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    });"
       },
       {
         "lineNumber": 288,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "### Benefit 4: Clean"
+        "content": "  }"
       },
       {
         "lineNumber": 289,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Vue syntax is simple and this can make the HTML pages very clean. This would allow user interfaces built by Vue to be more maintainable and testable."
+        "content": "});"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "ReactDOM.render(\u003cIteration /\u003e, document.getElementById(\u0027array\u0027));"
       },
       {
         "lineNumber": 291,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "## Disadvantages of Vue"
+        "content": "```"
       },
       {
         "lineNumber": 292,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "    "
       },
       {
         "lineNumber": 293,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Like any other framework/library, Vue has its share of disadvantages."
+        "content": "The HTML file in ReactJs"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```html"
       },
       {
         "lineNumber": 295,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "1. **Relatively Small Size Community:**\u003cbr/\u003e"
+        "content": "\u003cdiv id\u003d\"array\"\u003e\u003c/div\u003e"
       },
       {
         "lineNumber": 296,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Vue is a relatively new JavaScript framework as compared to Angular and React. The size of the community for Vue is therefore relatively small. Although small size community means you can differentiate yourself from other JavaScript developers, it also means there are fewer resources such as tutorials and problem-shooting guides."
+        "content": "```"
       },
       {
         "lineNumber": 297,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "Iteration in Vue:\u003cbr/\u003e\u003cbr/\u003e"
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "2. **Language Barriers:**\u003cbr/\u003e"
+        "content": "The JavaScript file in Vue"
       },
       {
         "lineNumber": 299,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "A majority of users of Vue are the Chinese as Vue is developed by a Chinese American. He is supportive of the Chinese community and hence a lot of the existing plugins are written in Chinese. There might be some language barriers for an English speaking developer seeking for Vue resources."
+        "content": "```js"
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "var Iteration \u003d new Vue({"
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "-"
         },
-        "content": "## Resources"
+        "content": "  el: \u0027#array\u0027,"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  data: {"
       },
       {
         "lineNumber": 303,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "Detailed comparison of Vue with other JavaScript frameworks can be found from:"
+        "content": "    array: [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"]"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "- [Vue Guild: Comparison with Other Frameworks](https://vuejs.org/v2/guide/comparison.html)"
+        "content": "  }"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "- [Angular vs React vs Vue](https://medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176)"
+        "content": "});"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 307,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "Links to VueJs tutorials and practices:"
+        "content": "The HTML file in Vue"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "- [VueJS Official Website](https://vuejs.org)"
+        "content": "```html"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": "- [VueSchool](https://vuejs.org/)"
+        "content": "\u003cdiv id\u003d\"array\"\u003e"
       },
       {
         "lineNumber": 310,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "- [Laracast](https://laracasts.com/series/learn-vue-2-step-by-step)"
+        "content": "  \u003cspan v-for\u003d\"date in array\"\u003e{\\{date}\\}\u003c/span\u003e"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": "- [Vuetify](https://vuetifyjs.com/zh-Hans/)"
+        "content": "\u003c/div\u003e"
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 313,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 314,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "### Benefit 2: Progressive"
+      },
+      {
+        "lineNumber": 315,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 316,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. This means that if you have a large application, you can plug Vue into just a part of your application without disturbing the other components. A quote from Evan You - the founder of VueJs is as follows:"
+      },
+      {
+        "lineNumber": 317,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    \u003e Vue is a more flexible, less opinionated solution (than Angular). That allows you to structure your app the way you want it to be, instead of being forced to do everything the Angular way (Angular requires a certain way to structure an application, making it hard to introduce Angular into an already built project). It’s only an interface layer so you can use it as a light feature in pages instead of a full blown SPA (single-page application)."
+      },
+      {
+        "lineNumber": 318,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003e"
+      },
+      {
+        "lineNumber": 319,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003e -- [[source]](https://www.valuecoders.com/blog/technology-and-apps/vue-js-comparison-angular-react/)"
+      },
+      {
+        "lineNumber": 320,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 321,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "### Benefit 3: Versatile"
+      },
+      {
+        "lineNumber": 322,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "Vue is perfectly capable of powering sophisticated single-page applications when used in combination with modern tooling and supporting libraries."
+      },
+      {
+        "lineNumber": 323,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 324,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "### Benefit 4: Clean"
+      },
+      {
+        "lineNumber": 325,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "Vue syntax is simple and this can make the HTML pages very clean. This would allow user interfaces built by Vue to be more maintainable and testable."
+      },
+      {
+        "lineNumber": 326,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 327,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "## Disadvantages of Vue"
+      },
+      {
+        "lineNumber": 328,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 329,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "Like any other framework/library, Vue has its share of disadvantages."
+      },
+      {
+        "lineNumber": 330,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 331,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "1. **Relatively Small Size Community:**\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 332,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "Vue is a relatively new JavaScript framework as compared to Angular and React. The size of the community for Vue is therefore relatively small. Although small size community means you can differentiate yourself from other JavaScript developers, it also means there are fewer resources such as tutorials and problem-shooting guides."
+      },
+      {
+        "lineNumber": 333,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 334,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "2. **Language Barriers:**\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 335,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "A majority of users of Vue are the Chinese as Vue is developed by a Chinese American. He is supportive of the Chinese community and hence a lot of the existing plugins are written in Chinese. There might be some language barriers for an English speaking developer seeking for Vue resources."
+      },
+      {
+        "lineNumber": 336,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 337,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## Resources"
+      },
+      {
+        "lineNumber": 338,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "Detailed comparison of Vue with other JavaScript frameworks can be found from:"
+      },
+      {
+        "lineNumber": 340,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "- [Vue Guild: Comparison with Other Frameworks](https://vuejs.org/v2/guide/comparison.html)"
+      },
+      {
+        "lineNumber": 341,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "- [Angular vs React vs Vue](https://medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176)"
+      },
+      {
+        "lineNumber": 342,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 343,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Links to VueJs tutorials and practices:"
+      },
+      {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "- [VueJS Official Website](https://vuejs.org)"
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "- [VueSchool](https://vuejs.org/)"
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "- [Laracast](https://laracasts.com/series/learn-vue-2-step-by-step)"
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "- [Vuetify](https://vuetifyjs.com/zh-Hans/)"
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 349,
         "author": {
           "gitId": "-"
         },
@@ -5908,8 +6160,9 @@
       }
     ],
     "authorContributionMap": {
-      "Tejas2805": 40,
-      "-": 273
+      "Tejas2805": 36,
+      "jamessspanggg": 58,
+      "-": 255
     }
   },
   {

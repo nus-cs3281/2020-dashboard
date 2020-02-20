@@ -2179,306 +2179,383 @@
       {
         "lineNumber": 207,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "  private getTesterResponsesString(testerResponses: TesterResponse[]): string {"
+        "content": "  /**"
       },
       {
         "lineNumber": 208,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    let testerResponsesString \u003d \u0027\u0027;"
+        "content": "   * Gets the number of unresolved disputes in an Issue."
       },
       {
         "lineNumber": 209,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    for (const testerResponse of testerResponses) {"
+        "content": "   */"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "      testerResponsesString +\u003d testerResponse.toString();"
+        "content": "  numOfUnresolvedDisputes(): number {"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    }"
+        "content": "    if (!this.issueDisputes) {"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    return testerResponsesString;"
+        "content": "      return 0;"
       },
       {
         "lineNumber": 213,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 215,
-        "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
         "content": ""
       },
       {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "    return this.issueDisputes.reduce((prev, current) \u003d\u003e prev + Number(current.isDone()), 0);"
+      },
+      {
         "lineNumber": 216,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "export interface Issues {"
+        "content": "  }"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "  [id: number]: Issue;"
+        "content": ""
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  private getTesterResponsesString(testerResponses: TesterResponse[]): string {"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    let testerResponsesString \u003d \u0027\u0027;"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "export const SEVERITY_ORDER \u003d { \u0027-\u0027: 0 , Low: 1, Medium: 2, High: 3 };"
+        "content": "    for (const testerResponse of testerResponses) {"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      testerResponsesString +\u003d testerResponse.toString();"
       },
       {
         "lineNumber": 222,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "export const ISSUE_TYPE_ORDER \u003d { \u0027-\u0027: 0 , DocumentationBug: 1, FeatureFlaw: 2, FunctionalityBug: 3  };"
+        "content": "    }"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return testerResponsesString;"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "export enum STATUS {"
+        "content": "  }"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "  Incomplete \u003d \u0027Incomplete\u0027,"
+        "content": "}"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "  Done \u003d \u0027Done\u0027,"
+        "content": ""
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "export interface Issues {"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  [id: number]: Issue;"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "export const IssuesFilter \u003d {"
+        "content": "}"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseBugReporting: {"
+        "content": ""
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027FILTER_BY_CREATOR\u0027,"
+        "content": "export const SEVERITY_ORDER \u003d { \u0027-\u0027: 0 , Low: 1, Medium: 2, High: 3 };"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027NO_FILTER\u0027,"
+        "content": ""
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "export const ISSUE_TYPE_ORDER \u003d { \u0027-\u0027: 0 , DocumentationBug: 1, FeatureFlaw: 2, FunctionalityBug: 3  };"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": ""
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseTeamResponse: {"
+        "content": "export enum STATUS {"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027FILTER_BY_TEAM\u0027,"
+        "content": "  Incomplete \u003d \u0027Incomplete\u0027,"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
+        "content": "  Done \u003d \u0027Done\u0027,"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "}"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": ""
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseTesterResponse: {"
+        "content": "export const IssuesFilter \u003d {"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027NO_FILTER\u0027,"
+        "content": "  phaseBugReporting: {"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027NO_ACCESS\u0027,"
+        "content": "    Student: \u0027FILTER_BY_CREATOR\u0027,"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "    Tutor: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseModeration: {"
+        "content": "  },"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027NO_ACCESS\u0027,"
+        "content": "  phaseTeamResponse: {"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
+        "content": "    Student: \u0027FILTER_BY_TEAM\u0027,"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  phaseTesterResponse: {"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Student: \u0027NO_FILTER\u0027,"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Tutor: \u0027NO_ACCESS\u0027,"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  phaseModeration: {"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Student: \u0027NO_ACCESS\u0027,"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
@@ -2486,6 +2563,7 @@
       }
     ],
     "authorContributionMap": {
+      "geshuming": 11,
       "anubh-v": 1,
       "-": 249
     }
@@ -5810,383 +5888,397 @@
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "        default: // id, title, responseTag"
+        "content": "        case \u0027Todo Remaining\u0027:"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "          return this.compareValue(a[this.sort.active], b[this.sort.active]);"
+        "content": "          return -this.compareValue(a.numOfUnresolvedDisputes(), b.numOfUnresolvedDisputes());"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "        default: // id, title, responseTag"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "          return this.compareValue(a[this.sort.active], b[this.sort.active]);"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    });"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "  private getPaginatedData(data: Issue[]): Issue[] {"
+        "content": "  }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    let startIndex \u003d this.paginator.pageIndex * this.paginator.pageSize;"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    const result \u003d data.splice(startIndex, this.paginator.pageSize);"
+        "content": "  private getPaginatedData(data: Issue[]): Issue[] {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (result.length \u003d\u003d\u003d 0) {"
+        "content": "    let startIndex \u003d this.paginator.pageIndex * this.paginator.pageSize;"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.paginator.pageIndex -\u003d 1;"
+        "content": "    const result \u003d data.splice(startIndex, this.paginator.pageSize);"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "      startIndex \u003d this.paginator.pageIndex * this.paginator.pageSize;"
+        "content": "    if (result.length \u003d\u003d\u003d 0) {"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "      return data.splice(startIndex, this.paginator.pageSize);"
+        "content": "      this.paginator.pageIndex -\u003d 1;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      startIndex \u003d this.paginator.pageIndex * this.paginator.pageSize;"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    return result;"
+        "content": "      return data.splice(startIndex, this.paginator.pageSize);"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return result;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "  private getFilteredData(data: Issue[]): Issue[] {"
+        "content": "  }"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    const searchKey \u003d this.filter.toLowerCase();"
+        "content": ""
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "    const result \u003d data.slice().filter((issue: Issue) \u003d\u003e {"
+        "content": "  private getFilteredData(data: Issue[]): Issue[] {"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "      for (const column of this.displayedColumn) {"
+        "content": "    const searchKey \u003d this.filter.toLowerCase();"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        switch (column) {"
+        "content": "    const result \u003d data.slice().filter((issue: Issue) \u003d\u003e {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "          case \u0027assignees\u0027:"
+        "content": "      for (const column of this.displayedColumn) {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "            for (const assignee of issue.assignees) {"
+        "content": "        switch (column) {"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "              if (assignee.toLowerCase().indexOf(searchKey) !\u003d\u003d -1) {"
+        "content": "          case \u0027assignees\u0027:"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "                return true;"
+        "content": "            for (const assignee of issue.assignees) {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "              }"
+        "content": "              if (assignee.toLowerCase().indexOf(searchKey) !\u003d\u003d -1) {"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                return true;"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "            break;"
+        "content": "              }"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "          case \u0027duplicatedIssues\u0027:"
+        "content": "            }"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "            const duplicatedIssues \u003d this.issueService.issues$.getValue().filter(el \u003d\u003e el.duplicateOf \u003d\u003d\u003d issue.id);"
+        "content": "            break;"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (duplicatedIssues.filter(el \u003d\u003e `#${String(el.id)}`.includes(searchKey)).length !\u003d\u003d 0) {"
+        "content": "          case \u0027duplicatedIssues\u0027:"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "              return true;"
+        "content": "            const duplicatedIssues \u003d this.issueService.issues$.getValue().filter(el \u003d\u003e el.duplicateOf \u003d\u003d\u003d issue.id);"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "            if (duplicatedIssues.filter(el \u003d\u003e `#${String(el.id)}`.includes(searchKey)).length !\u003d\u003d 0) {"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "            break;"
+        "content": "              return true;"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "          default:"
+        "content": "            }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "            const searchStr \u003d String(issue[column]).toLowerCase();"
+        "content": "            break;"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (searchStr.indexOf(searchKey) !\u003d\u003d -1) {"
+        "content": "          default:"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "              return true;"
+        "content": "            const searchStr \u003d String(issue[column]).toLowerCase();"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "            if (searchStr.indexOf(searchKey) !\u003d\u003d -1) {"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "            break;"
+        "content": "              return true;"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "            break;"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "      return false;"
+        "content": "        }"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "      }"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.paginator.length \u003d result.length;"
+        "content": "      return false;"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    return result;"
+        "content": "    });"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    this.paginator.length \u003d result.length;"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return result;"
       },
       {
         "lineNumber": 162,
-        "author": {
-          "gitId": "le0tan"
-        },
-        "content": "  private compareValue(valueA: string | number, valueB: string | number): number {"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "le0tan"
-        },
-        "content": "    const a \u003d String(valueA || \u0027\u0027).toUpperCase();"
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "le0tan"
-        },
-        "content": "    const b \u003d String(valueB || \u0027\u0027).toUpperCase();"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    return (a \u003c b ? -1 : 1) * (this.sort.direction \u003d\u003d\u003d \u0027asc\u0027 ? 1 : -1);"
-      },
-      {
-        "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
       },
       {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "  private compareValue(valueA: string | number, valueB: string | number): number {"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "    const a \u003d String(valueA || \u0027\u0027).toUpperCase();"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "    const b \u003d String(valueB || \u0027\u0027).toUpperCase();"
+      },
+      {
         "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return (a \u003c b ? -1 : 1) * (this.sort.direction \u003d\u003d\u003d \u0027asc\u0027 ? 1 : -1);"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
@@ -6194,8 +6286,1013 @@
       }
     ],
     "authorContributionMap": {
+      "geshuming": 2,
       "le0tan": 3,
       "-": 164
+    }
+  },
+  {
+    "path": "src/app/shared/issue-tables/issue-tables.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Component, Input, OnInit, ViewChild } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Issue, STATUS } from \u0027../../core/models/issue.model\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { PermissionService } from \u0027../../core/services/permission.service\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { LabelService } from \u0027../../core/services/label.service\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { UserService } from \u0027../../core/services/user.service\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { GithubService } from \u0027../../core/services/github.service\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { IssueService } from \u0027../../core/services/issue.service\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { ErrorHandlingService } from \u0027../../core/services/error-handling.service\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { finalize } from \u0027rxjs/operators\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { IssuesDataTable } from \u0027./IssuesDataTable\u0027;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { MatPaginator, MatSort } from \u0027@angular/material\u0027;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export enum ACTION_BUTTONS {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  VIEW_IN_WEB,"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  MARK_AS_RESPONDED,"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  MARK_AS_PENDING,"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  RESPOND_TO_ISSUE,"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  FIX_ISSUE,"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  DELETE_ISSUE"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export enum TABLE_COLUMNS {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ID \u003d \u0027id\u0027,"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  TITLE \u003d \u0027title\u0027,"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  TEAM_ASSIGNED \u003d \u0027teamAssigned\u0027,"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  TYPE \u003d \u0027type\u0027,"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  SEVERITY \u003d \u0027severity\u0027,"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  RESPONSE \u003d \u0027responseTag\u0027,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ASSIGNEE \u003d \u0027assignees\u0027,"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  DUPLICATED_ISSUES \u003d \u0027duplicatedIssues\u0027,"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  TODO \u003d \u0027Todo Remaining\u0027,"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ACTIONS \u003d \u0027actions\u0027"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027app-issue-tables\u0027,"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./issue-tables.component.html\u0027,"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  styleUrls: [\u0027./issue-tables.component.css\u0027]"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class IssueTablesComponent implements OnInit {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @Input() headers: string[];"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @Input() actions: ACTION_BUTTONS[];"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @Input() filters?: any \u003d undefined;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @ViewChild(MatSort) sort: MatSort;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @ViewChild(MatPaginator) paginator: MatPaginator;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  issues: IssuesDataTable;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  issuesPendingDeletion: {[id: number]: boolean};"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  private readonly action_buttons \u003d ACTION_BUTTONS;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor(public userService: UserService,"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private permissions: PermissionService,"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private labelService: LabelService,"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private githubService: GithubService,"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private issueService: IssueService,"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              private errorHandlingService: ErrorHandlingService) { }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ngOnInit() {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issues \u003d new IssuesDataTable(this.issueService, this.errorHandlingService, this.sort,"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.paginator, this.headers, this.filters);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issues.loadIssues();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issuesPendingDeletion \u003d {};"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Formats the title text to account for those that contain long words."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * @param title - Title of Issue that is to be displayed in the Table Row."
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  fitTitleText(title: string): string {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Arbitrary Length of Characters beyond which an overflow occurs."
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const MAX_WORD_LENGTH \u003d 43;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const SPLITTER_TEXT \u003d \u0027 \u0027;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const ELLIPSES \u003d \u0027...\u0027;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return title.split(SPLITTER_TEXT).map(word \u003d\u003e {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      if (word.length \u003e MAX_WORD_LENGTH) {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return word.substring(0, MAX_WORD_LENGTH - 5).concat(ELLIPSES);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return word;"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }).join(SPLITTER_TEXT);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isActionVisible(action: ACTION_BUTTONS): boolean {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return this.actions.includes(action);"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  markAsResponded(issue: Issue) {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issueService.updateIssue(\u003cIssue\u003e{"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ...issue,"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      status: STATUS.Done"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }).subscribe((updatedIssue) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.issueService.updateLocalStore(updatedIssue);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, error \u003d\u003e {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.errorHandlingService.handleError(error);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    event.stopPropagation();"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  markAsPending(issue: Issue) {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issueService.updateIssue(\u003cIssue\u003e{"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ...issue,"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      status: STATUS.Incomplete"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }).subscribe((updatedIssue) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.issueService.updateLocalStore(updatedIssue);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, error \u003d\u003e {"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.errorHandlingService.handleError(error);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    event.stopPropagation();"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "   * Gets the number of resolved disputes."
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  todoFinished(issue: Issue): number {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "    return issue.issueDisputes.length - issue.numOfUnresolvedDisputes();"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "   * Checks if all the disputes are resolved."
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isTodoListChecked(issue: Issue): boolean {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "    return issue.issueDisputes \u0026\u0026 issue.numOfUnresolvedDisputes() \u003d\u003d\u003d 0;"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  deleteIssue(id: number) {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issuesPendingDeletion \u003d {"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ...this.issuesPendingDeletion,"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      [id]: true,"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.issueService.deleteIssue(id).pipe(finalize(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const { [id]: issueRemoved, ...theRest } \u003d this.issuesPendingDeletion;"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.issuesPendingDeletion \u003d theRest;"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    })).subscribe((removedIssue) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }, (error) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.errorHandlingService.handleError(error);"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    event.stopPropagation();"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "geshuming": 8,
+      "-": 134
     }
   }
 ]
