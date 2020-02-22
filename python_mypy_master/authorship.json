@@ -5273,11 +5273,256 @@
           "gitId": "-"
         },
         "content": "    def fun2(x: tp) -\u003e None: ...  # error: Variable \"__main__.tp\" is not valid as a type"
+      },
+      {
+        "lineNumber": 754,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   "
+      },
+      {
+        "lineNumber": 755,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Incompatible overrides"
+      },
+      {
+        "lineNumber": 756,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "------------------------------"
+      },
+      {
+        "lineNumber": 757,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 758,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "It\u0027s unsafe to override a method with a more specific argument type, as it violates"
+      },
+      {
+        "lineNumber": 759,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "the `Liskov substitution principle \u003chttps://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle\u003e`_. For return types, it\u0027s unsafe to override a method with a more general return type."
+      },
+      {
+        "lineNumber": 760,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 761,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Here is an example to demonstrate this"
+      },
+      {
+        "lineNumber": 762,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 763,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".. code-block:: python"
+      },
+      {
+        "lineNumber": 764,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 765,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    from typing import Sequence, List, Iterable"
+      },
+      {
+        "lineNumber": 766,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 767,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class A:"
+      },
+      {
+        "lineNumber": 768,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: Sequence[int]) -\u003e Sequence[str]:"
+      },
+      {
+        "lineNumber": 769,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            pass"
+      },
+      {
+        "lineNumber": 770,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      "
+      },
+      {
+        "lineNumber": 771,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    # Specific argument type doesn\u0027t work"
+      },
+      {
+        "lineNumber": 772,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class OverwriteArgumentSpecific(A):"
+      },
+      {
+        "lineNumber": 773,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: List[int]) -\u003e Sequence[str]:"
+      },
+      {
+        "lineNumber": 774,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            pass"
+      },
+      {
+        "lineNumber": 775,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 776,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    # Specific return type works"
+      },
+      {
+        "lineNumber": 777,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class OverwriteReturnSpecific(A):"
+      },
+      {
+        "lineNumber": 778,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: Sequence[int]) -\u003e List[str]:"
+      },
+      {
+        "lineNumber": 779,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            pass"
+      },
+      {
+        "lineNumber": 780,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    "
+      },
+      {
+        "lineNumber": 781,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    # Generic return type doesn\u0027t work"
+      },
+      {
+        "lineNumber": 782,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class OverwriteReturnGeneric(A):"
+      },
+      {
+        "lineNumber": 783,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: Sequence[int]) -\u003e Iterable[str]:"
+      },
+      {
+        "lineNumber": 784,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            pass"
+      },
+      {
+        "lineNumber": 785,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            "
+      },
+      {
+        "lineNumber": 786,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "mypy won\u0027t report an error for ``OverwriteReturnSpecific`` but it does for ``OverwriteReturnGeneric`` and ``OverwriteArgumentSpecific``."
+      },
+      {
+        "lineNumber": 787,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 788,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We can use ``# type: ignore[override]`` to silence the error (add it to the line that genreates the error) if type safety is not needed."
       }
     ],
     "authorContributionMap": {
       "le0tan": 26,
-      "-": 727
+      "-": 762
     }
   }
 ]
