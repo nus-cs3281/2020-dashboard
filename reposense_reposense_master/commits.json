@@ -291,8 +291,8 @@
         ]
       },
       {
-        "insertions": 26,
-        "deletions": 1,
+        "insertions": 37,
+        "deletions": 15,
         "date": "2020-02-22",
         "commitResults": [
           {
@@ -301,6 +301,13 @@
             "messageBody": "RepoSense has CheckStyle, ESLint and Stylelint to check our java, \r\njavascript and css code styles automatically. However, `.pug` files \r\nare not covered by any of these tools.\r\n\r\nLet\u0027s implement pug-lint to check the code styles of .pug files.\r\n\r\nTODO: Add a line wrap rule in the future\r\n",
             "insertions": 26,
             "deletions": 1
+          },
+          {
+            "hash": "7d16236189d17e4a12926337863b81d3708fe53f",
+            "messageTitle": "[#906, #994, #1006] UserGuide: update doc and remove errors (#907)",
+            "messageBody": "With the recently added group-config.csv file, the new changes \r\npossible in the local configuration are not reflected in the\r\ndocumentation.\r\n\r\nUsers can configure their csv files to analyse multiple repos in \r\ntheir own custom way, but they may be confused about how to do so as \r\nthe user guide is outdated. \r\n\r\nLet\u0027s update the user guide to reflect the changes possible through\r\ngroup-config.csv in the local configuration to analyse multiple \r\nrepos. Let\u0027s also fix the errors in the Tool Bar section and fix the \r\nformatting of repo-config.csv example.\r\n",
+            "insertions": 11,
+            "deletions": 14
           }
         ]
       }
@@ -394,6 +401,20 @@
             "messageTitle": "[#1027] Modify UI for tags (#1028)",
             "messageBody": "Some tags split to the next line when the list of tags are too long. \r\nTags also appear vertically close together when the list occupies \r\nmore than one line.\r\n\r\nLet\u0027s change the css property `display` to be `inline-block` and add \r\nsome top and bottom margins to each tag.\r\n",
             "insertions": 2,
+            "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 4,
+        "deletions": 2,
+        "date": "2020-02-22",
+        "commitResults": [
+          {
+            "hash": "636f4d98583c49c18dc25fe66b0c4d196ad05271",
+            "messageTitle": "[#999] Remove empty zoom__day divs (#1000)",
+            "messageBody": "When granularity is set to week, the \u0027pushCommitsWeek\u0027 method gets \r\nall possible weeks (week 1, 2, 3, etc...) from start date until the \r\nend date and pushes it to \u0027user.commits\u0027, no matter the week has any \r\ncommits at all. Additionally, commits with zero insertions but with \r\ndeletions are also not taken into consideration in the commits \r\npanel.\r\n\r\nWeeks that have no commits is not useful and redundant. Commits with\r\nonly deletions are maybe useful as it may represent \r\nrefactoring/removing redundant code.\r\n\r\nLet\u0027s add a check to add a week only if it has commits. And remove \r\nthe check for commits with zero insertions, so that commits with \r\nonly deletions are also included.",
+            "insertions": 4,
             "deletions": 2
           }
         ]
@@ -531,6 +552,20 @@
             "deletions": 0
           }
         ]
+      },
+      {
+        "insertions": 44,
+        "deletions": 64,
+        "date": "2020-02-22",
+        "commitResults": [
+          {
+            "hash": "cd9e636fec6c7919fc50ed040da195e699760fa3",
+            "messageTitle": "[#1023] Authorship Panel: expand all button always appear when first open the page (#1040)",
+            "messageBody": "The `expand all` button will always appear on the authorship panel \r\nwhen we first open the page or when refresh the page, until the\r\nloading is complete. The button to display is supposed to be\r\n`collapse all` as we are to display all the file details initially.\r\n\r\nLet\u0027s display the `collapse all` button at the very beginning, and \r\nupdate all relevant checkboxes, radio buttons using proper Vue \r\nmodel.\r\n",
+            "insertions": 44,
+            "deletions": 64
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -564,13 +599,13 @@
     "openorclose": 0,
     "yash-chowdhary": 7,
     "anubh-v": 319,
-    "Tejas2805": 538,
+    "Tejas2805": 547,
     "dvrylc": 0,
-    "jamessspanggg": 205,
+    "jamessspanggg": 206,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 144,
+    "0blivious": 183,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -646,7 +681,7 @@
       "js": 12,
       "scss": 443,
       "json": 26,
-      "md": 57,
+      "md": 66,
       "py": 0,
       "jade": 0,
       "gradle": 0
@@ -663,7 +698,7 @@
     },
     "jamessspanggg": {
       "java": 179,
-      "js": 9,
+      "js": 10,
       "scss": 17,
       "json": 0,
       "md": 0,
@@ -703,10 +738,10 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 25,
+      "js": 66,
       "scss": 41,
       "json": 0,
-      "md": 10,
+      "md": 8,
       "py": 0,
       "jade": 0,
       "gradle": 0
@@ -799,13 +834,13 @@
     "openorclose": 0.0,
     "yash-chowdhary": 1.9879541,
     "anubh-v": 537.42676,
-    "Tejas2805": 4533.208,
+    "Tejas2805": 4548.9985,
     "dvrylc": 0.0,
-    "jamessspanggg": 250.1424,
+    "jamessspanggg": 250.09317,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 258.5345,
+    "0blivious": 385.54465,
     "hcwong": 0.0,
     "ang-zeyu": 0.29407653,
     "geshuming": 0.0,
