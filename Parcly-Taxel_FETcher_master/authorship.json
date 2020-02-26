@@ -94,112 +94,112 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "# Change these to your own in actual use."
+        "content": "def clone_destination(owner_name, key):"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "# If using 2FA, PASSWORD must be a personal access token"
+        "content": "    \"\"\"If the destination repository given by owner/name does not exist,"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "AUTHOR \u003d \"Derpy Hooves\""
+        "content": "    clone it. key is a RemoteCallbacks object for authentication to GitHub."
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "EMAIL \u003d \"derpy@equestria.net\""
+        "content": "    Return a Repository object in any case.\"\"\""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "USERNAME \u003d \"muffinsmuffins\""
+        "content": "    name \u003d owner_name.partition(\"/\")[2]"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "PASSWORD \u003d \"ijustd0ntknowwatwentwr0ng\""
+        "content": "    if os.path.exists(name):"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "        return pygit2.Repository(name)"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def clone_destination(owner_name, key):"
+        "content": "    git_path \u003d f\"https://github.com/{owner_name}.git\""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"If the destination repository given by owner/name does not exist,"
+        "content": "    return pygit2.clone_repository(git_path, name, callbacks\u003dkey)"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    clone it. key is a RemoteCallbacks object for authentication to GitHub."
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    Return a Repository object in any case.\"\"\""
+        "content": "def make_files_folder(repository):"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    name \u003d owner_name.partition(\"/\")[2]"
+        "content": "    \"\"\"Return a path to a folder called files in the given"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    if os.path.exists(name):"
+        "content": "    Repository object, making it if needed.\"\"\""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        return pygit2.Repository(name)"
+        "content": "    files_path \u003d os.path.join(repository.workdir, \"files\")"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    git_path \u003d f\"https://github.com/{owner_name}.git\""
+        "content": "    os.makedirs(files_path, exist_ok\u003dTrue)"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    return pygit2.clone_repository(git_path, name, callbacks\u003dkey)"
+        "content": "    return files_path"
       },
       {
         "lineNumber": 26,
@@ -213,581 +213,581 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def make_files_folder(repository):"
+        "content": "def clone_files(name, parent):"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Return a path to a folder called files in the given"
+        "content": "    \"\"\"Clone the named student\u0027s PE repository into parent and return"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    Repository object, making it if needed.\"\"\""
+        "content": "    the path name/files, or None if it does not exist. parent/name"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    files_path \u003d os.path.join(repository.workdir, \"files\")"
+        "content": "    should not already exist.\"\"\""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    os.makedirs(files_path, exist_ok\u003dTrue)"
+        "content": "    try:"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    return files_path"
+        "content": "        git_path \u003d f\"git://github.com/{name}/pe.git\""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "        repo_path \u003d os.path.join(parent, name)"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def clone_files(name, parent):"
+        "content": "        pygit2.clone_repository(git_path, repo_path)"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Clone the named student\u0027s PE repository into parent and return"
+        "content": "    except pygit2.GitError:"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    the path name/files, or None if it does not exist. parent/name"
+        "content": "        return None"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    should not already exist.\"\"\""
+        "content": "    files_path \u003d os.path.join(repo_path, \"files\")"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    try:"
+        "content": "    return files_path if os.path.isdir(files_path) else None"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        git_path \u003d f\"git://github.com/{name}/pe.git\""
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        repo_path \u003d os.path.join(parent, name)"
+        "content": "def transfer_files(src, dst):"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        pygit2.clone_repository(git_path, repo_path)"
+        "content": "    \"\"\"Transfer all files from src into dst, returning any clashing"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    except pygit2.GitError:"
+        "content": "    filenames (not transferred after the first) as a list.\"\"\""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        return None"
+        "content": "    clashes \u003d []"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    files_path \u003d os.path.join(repo_path, \"files\")"
+        "content": "    files_in_dst \u003d os.listdir(dst)"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    return files_path if os.path.isdir(files_path) else None"
+        "content": "    for filename in os.listdir(src):"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "        full_filename \u003d os.path.join(src, filename)"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def transfer_files(src, dst):"
+        "content": "        if filename in files_in_dst:"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Transfer all files from src into dst, returning any clashing"
+        "content": "            clashes.append(full_filename)"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    filenames (not transferred after the first) as a list.\"\"\""
+        "content": "        else:"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    clashes \u003d []"
+        "content": "            shutil.copy(full_filename, dst)"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    files_in_dst \u003d os.listdir(dst)"
+        "content": "    return clashes"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    for filename in os.listdir(src):"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        full_filename \u003d os.path.join(src, filename)"
+        "content": "def get_user_and_filename(path):"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        if filename in files_in_dst:"
+        "content": "    \"\"\"Extract the user and filename from the full paths returned"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            clashes.append(full_filename)"
+        "content": "    from transfer_files(), which indicate clashing filenames.\"\"\""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        else:"
+        "content": "    segments \u003d os.path.normpath(path).split(os.sep)"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            shutil.copy(full_filename, dst)"
+        "content": "    return segments[-3] + \"/\" + segments[-1]"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    return clashes"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "def dump_remaining_usernames(names):"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def get_user_and_filename(path):"
+        "content": "    \"\"\"Dump names yet to be processed into a backup file.\"\"\""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Extract the user and filename from the full paths returned"
+        "content": "    with open(\"remaining\", \u0027w\u0027) as f:"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    from transfer_files(), which indicate clashing filenames.\"\"\""
+        "content": "        for name in names:"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    segments \u003d os.path.normpath(path).split(os.sep)"
+        "content": "            print(name, file\u003df)"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    return segments[-3] + \"/\" + segments[-1]"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "def collate_files(names, endpoint):"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def dump_remaining_usernames(names):"
+        "content": "    \"\"\"Given a sequence of GitHub usernames of students, clone their"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Dump names yet to be processed into a backup file.\"\"\""
+        "content": "    PE repositories and copy files into endpoint. Return a list of"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    with open(\"remaining\", \u0027w\u0027) as f:"
+        "content": "    duplicate filenames found in the form username/filename.\"\"\""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        for name in names:"
+        "content": "    clashes \u003d []"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            print(name, file\u003df)"
+        "content": "    N \u003d len(names)"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "    with tempfile.TemporaryDirectory() as tempdir:"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def collate_files(names, endpoint):"
+        "content": "        for (n, name) in enumerate(names, 1):"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Given a sequence of GitHub usernames of students, clone their"
+        "content": "            print(f\"{n}/{N} {name}\")"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    PE repositories and copy files into endpoint. Return a list of"
+        "content": "            name_path \u003d clone_files(name, tempdir)"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    duplicate filenames found in the form username/filename.\"\"\""
+        "content": "            dump_remaining_usernames(names[n:])"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    clashes \u003d []"
+        "content": "            if name_path is None:"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    N \u003d len(names)"
+        "content": "                continue"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    with tempfile.TemporaryDirectory() as tempdir:"
+        "content": "            clashes +\u003d transfer_files(name_path, endpoint)"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        for (n, name) in enumerate(names, 1):"
+        "content": "    return [get_user_and_filename(p) for p in clashes]"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            print(f\"{n}/{N} {name}\")"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            name_path \u003d clone_files(name, tempdir)"
+        "content": "def commit_and_push(repository, author, email, message, key):"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            dump_remaining_usernames(names[n:])"
+        "content": "    \"\"\"Commit the current working state of repository using the given"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            if name_path is None:"
+        "content": "    author information and message. Then push changes to the remote"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "                continue"
+        "content": "    using key (a RemoteCallbacks object) for authentication.\"\"\""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            clashes +\u003d transfer_files(name_path, endpoint)"
+        "content": "    repository.index.add_all()"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    return [get_user_and_filename(p) for p in clashes]"
+        "content": "    repository.index.write()"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "    signature \u003d pygit2.Signature(author, email)"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def commit_and_push(repository, author, email, message, key):"
+        "content": "    tree \u003d repository.index.write_tree()"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"Commit the current working state of repository using the given"
+        "content": "    repository.create_commit(\"HEAD\", signature, signature, message,"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    author information and message. Then push changes to the remote"
+        "content": "            tree, [repository.head.target])"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    using key (a RemoteCallbacks object) for authentication.\"\"\""
+        "content": "    remote \u003d repository.remotes[\"origin\"]"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    repository.index.add_all()"
+        "content": "    remote.push([\"refs/heads/master\"], callbacks\u003dkey)"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    repository.index.write()"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    signature \u003d pygit2.Signature(author, email)"
+        "content": "def read_student_names(file):"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    tree \u003d repository.index.write_tree()"
+        "content": "    \"\"\"If file ends in .csv, read the CSV file where each username should"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    repository.create_commit(\"HEAD\", signature, signature, message,"
+        "content": "    reside in the second column and the first column contains \"student\"."
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            tree, [repository.head.target])"
+        "content": "    If not, the file should contain several lines, one username per line."
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    remote \u003d repository.remotes[\"origin\"]"
+        "content": "    Return a list of students thus extracted.\"\"\""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    remote.push([\"refs/heads/master\"], callbacks\u003dkey)"
+        "content": "    with open(file, \u0027r\u0027) as f:"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "        if not file.endswith(\".csv\"):"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "def read_student_names(file):"
+        "content": "            return f.read().splitlines()"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    \"\"\"If file ends in .csv, read the CSV file where each username should"
+        "content": "        return [row[1] for row in csv.reader(f) if row[0] \u003d\u003d \"student\"]"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    reside in the second column and the first column contains \"student\"."
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    If not, the file should contain several lines, one username per line."
+        "content": "def read_credentials(file):"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    Return a list of students thus extracted.\"\"\""
+        "content": "    \"\"\"file contains four lines: author name, email address,"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    with open(file, \u0027r\u0027) as f:"
+        "content": "    GitHub username, password or access token. Extract these fields"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        if not file.endswith(\".csv\"):"
+        "content": "    from said file and return a tuple of them.\"\"\""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            return f.read().splitlines()"
+        "content": "    with open(file, \u0027r\u0027) as f:"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "        return [row[1] for row in csv.reader(f) if row[0] \u003d\u003d \"student\"]"
+        "content": "        return tuple(f.read().splitlines())"
       },
       {
         "lineNumber": 110,
@@ -871,129 +871,157 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    Afterwards, commit and push using author data at the top"
+        "content": "    Afterwards, commit and push using provided credentials.\"\"\""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    of this module file.\"\"\""
+        "content": "    parser \u003d argparse.ArgumentParser(description\u003d\"Read a file of \""
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    parser \u003d argparse.ArgumentParser(description\u003d\"Read a file of \""
+        "content": "            \"student GitHub usernames, then transfer files in their \""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            \"student GitHub usernames, then transfer files in their \""
+        "content": "            \"PE repositories to a given destination repository.\")"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            \"PE repositories to a given destination repository.\")"
+        "content": "    parser.add_argument(\"students\", help\u003d\"CSV or plaintext list of students\")"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    parser.add_argument(\"students\", help\u003d\"CSV or plaintext list of students\")"
+        "content": "    parser.add_argument(\"destination\", help\u003d\"destination repository, \""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    parser.add_argument(\"destination\", help\u003d\"destination repository, \""
+        "content": "            \"in the form owner/name (e.g. nus-cs2103-AY1920S1/pe)\")"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            \"in the form owner/name (e.g. nus-cs2103-AY1920S1/pe)\")"
+        "content": "    parser.add_argument(\"credentials\", help\u003d\"credentials file - \""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    args \u003d parser.parse_args()"
+        "content": "            \"four lines of author, email, username, password/access token\")"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    students \u003d read_student_names(args.students)"
+        "content": "    args \u003d parser.parse_args()"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    user_pass \u003d pygit2.UserPass(USERNAME, PASSWORD)"
+        "content": "    students \u003d read_student_names(args.students)"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    key \u003d pygit2.RemoteCallbacks(credentials\u003duser_pass)"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    endpoint \u003d clone_destination(args.destination, key)"
+        "content": "    AUTHOR, EMAIL, USERNAME, PASSWORD \u003d read_credentials(args.credentials)"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    files_path \u003d make_files_folder(endpoint)"
+        "content": "    user_pass \u003d pygit2.UserPass(USERNAME, PASSWORD)"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    print_clashes(collate_files(students, files_path))"
+        "content": "    key \u003d pygit2.RemoteCallbacks(credentials\u003duser_pass)"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    commit_and_push(endpoint, AUTHOR, EMAIL, \"Collect PE files\", key)"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "    endpoint \u003d clone_destination(args.destination, key)"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "if __name__ \u003d\u003d \"__main__\":"
+        "content": "    files_path \u003d make_files_folder(endpoint)"
       },
       {
         "lineNumber": 139,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    print_clashes(collate_files(students, files_path))"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    commit_and_push(endpoint, AUTHOR, EMAIL, \"Collect PE files\", key)"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "if __name__ \u003d\u003d \"__main__\":"
+      },
+      {
+        "lineNumber": 143,
         "author": {
           "gitId": "Parcly-Taxel"
         },
@@ -1001,7 +1029,7 @@
       }
     ],
     "authorContributionMap": {
-      "Parcly-Taxel": 139
+      "Parcly-Taxel": 143
     }
   },
   {
@@ -1134,42 +1162,42 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "* a credentials file, containing four lines of author name, email address, GitHub username and password or access token, e.g."
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "At the script\u0027s beginning, strings must also be set for the name and email address associated with the commit and the username and password that will be used for pushing. The script then clones the students\u0027 repositories, transfers their files to a central folder in the destination repository called `files`, commits and pushes."
+        "content": "```"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "Derpy Hooves"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "An interrupted transfer process can be resumed by passing `remaining` instead of the CSV file as the first argument to `fetch.py`. The file `remaining` is automatically updated with a list of usernames still to process."
+        "content": "derpy@equestria.net"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "muffinsmuffins"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "Example times for transferring the CS2103/T AY1920S1 cohort (332 students):"
+        "content": "ijustd0ntknowwatwentwr0ng"
       },
       {
         "lineNumber": 15,
@@ -1183,31 +1211,80 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "real    15m2.305s"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "user    2m7.910s"
+        "content": "The script then clones the students\u0027 repositories, transfers their files to a central folder in the destination repository called `files`, commits and pushes."
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "sys     0m10.769s"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "```"
+        "content": "An interrupted transfer process can be resumed by passing `remaining` instead of the CSV file as the first argument to `fetch.py`. The file `remaining` is automatically updated with a list of usernames still to process."
       },
       {
         "lineNumber": 20,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "Example times for transferring the CS2103/T AY1920S1 cohort (332 students):"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "real    15m2.305s"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "user    2m7.910s"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "sys     0m10.769s"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 27,
         "author": {
           "gitId": "Parcly-Taxel"
         },
@@ -1215,7 +1292,7 @@
       }
     ],
     "authorContributionMap": {
-      "Parcly-Taxel": 20
+      "Parcly-Taxel": 27
     }
   },
   {
@@ -1228,10 +1305,17 @@
           "gitId": "Parcly-Taxel"
         },
         "content": "pygit2"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "requests"
       }
     ],
     "authorContributionMap": {
-      "Parcly-Taxel": 1
+      "Parcly-Taxel": 2
     }
   },
   {
