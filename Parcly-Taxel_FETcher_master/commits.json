@@ -121,8 +121,8 @@
         ]
       },
       {
-        "insertions": 22,
-        "deletions": 10,
+        "insertions": 118,
+        "deletions": 23,
         "date": "2020-02-26",
         "commitResults": [
           {
@@ -131,23 +131,58 @@
             "messageBody": "Previously, credentials had to be provided by editing the source. Now\nthey can be provided in a separate file; this not only hides private\ninformation better but allows them to be reused elsewhere more easily.\n",
             "insertions": 22,
             "deletions": 10
+          },
+          {
+            "hash": "a64965758efd789b740ea6de7438d662525a77b5",
+            "messageTitle": "Use GraphQL to fetch issues",
+            "messageBody": "Only the title, body and labels are relevant here.\n",
+            "insertions": 96,
+            "deletions": 13
+          }
+        ]
+      },
+      {
+        "insertions": 151,
+        "deletions": 25,
+        "date": "2020-02-27",
+        "commitResults": [
+          {
+            "hash": "921f6c35f631ad1b70f53b13747084c88364f4a1",
+            "messageTitle": "Finish up GraphQL-based issue transporter",
+            "messageBody": "",
+            "insertions": 138,
+            "deletions": 20
+          },
+          {
+            "hash": "844638d59a93df5eab67e4839df18e7cde95c072",
+            "messageTitle": "Enable handling of UTF-16 surrogate pairs",
+            "messageBody": "...which triggered the stop-and-restart system, and that went well\n",
+            "insertions": 11,
+            "deletions": 5
+          },
+          {
+            "hash": "42057ee43d433c45ba5f07a2eb1025680ed41839",
+            "messageTitle": "Note on running time",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 0
           }
         ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "Parcly-Taxel": 201
+    "Parcly-Taxel": 410
   },
   "authorFileTypeContributionMap": {
     "Parcly-Taxel": {
-      "py": 172,
-      "md": 27,
+      "py": 366,
+      "md": 42,
       "txt": 2
     }
   },
   "authorContributionVariance": {
-    "Parcly-Taxel": 1007.31775
+    "Parcly-Taxel": 1505.0458
   },
   "authorDisplayNameMap": {
     "Parcly-Taxel": "JERE..ERUI"

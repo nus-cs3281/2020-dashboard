@@ -310,6 +310,20 @@
             "deletions": 14
           }
         ]
+      },
+      {
+        "insertions": 8,
+        "deletions": 12,
+        "date": "2020-02-26",
+        "commitResults": [
+          {
+            "hash": "8675a0b190ffdac5898a698fea69f41448084658",
+            "messageTitle": "[#947] Authorship view: update sort controls (#1074)",
+            "messageBody": "The sort controls in the Authorship view are a value updated by\r\nwatched property. \r\n\r\nThis is not as efficient as a computed property. \r\n\r\nLet\u0027s make the sort controls in Authorship view a computed property. \r\nThis will also help in making the code across different views \r\nconsistent.\r\n",
+            "insertions": 8,
+            "deletions": 12
+          }
+        ]
       }
     ],
     "dvrylc": [],
@@ -416,6 +430,20 @@
             "messageBody": "When granularity is set to week, the \u0027pushCommitsWeek\u0027 method gets \r\nall possible weeks (week 1, 2, 3, etc...) from start date until the \r\nend date and pushes it to \u0027user.commits\u0027, no matter the week has any \r\ncommits at all. Additionally, commits with zero insertions but with \r\ndeletions are also not taken into consideration in the commits \r\npanel.\r\n\r\nWeeks that have no commits is not useful and redundant. Commits with\r\nonly deletions are maybe useful as it may represent \r\nrefactoring/removing redundant code.\r\n\r\nLet\u0027s add a check to add a week only if it has commits. And remove \r\nthe check for commits with zero insertions, so that commits with \r\nonly deletions are also included.",
             "insertions": 4,
             "deletions": 2
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-02-26",
+        "commitResults": [
+          {
+            "hash": "a9f88fd727d8127f36ef6e33eaef81fb10338220",
+            "messageTitle": "[#1043] Fix bug of incorrect commit dates when merge group (#1045)",
+            "messageBody": "When merge group is checked, some commits are seen with committed\r\ndates that are incompatible to the real committed dates.\r\n\r\nCommits with the same date are appended together in \u0027mergedCommits\u0027.\r\nSince \u0027mergedCommits\u0027 is being sorted before all the merged commits \r\nfor a particular group is gathered, the order of the \u0027mergedCommits\u0027 \r\nis changed, and some commits with the same date are appended \r\nwrongly.\r\n\r\nLet\u0027s move the sorting of \u0027mergedCommits\u0027 after the all merged \r\ncommits are gathered, this will ensure commits with the same date \r\nare appended correctly.\r\n\r\nThe order of the \u0027mergedCommits\u0027 matters, as we use an additional js \r\nobject \u0027dateToIndexMap\u0027 maps dates to the corresponding index in \r\n\u0027mergedCommits\u0027. Once the order has changed, the \u0027dateToIndexMap\u0027 no \r\nlonger contains the accurate mappings and hence, commits are \r\nappended wrongly.\r\n",
+            "insertions": 1,
+            "deletions": 1
           }
         ]
       }
@@ -613,13 +641,13 @@
     "openorclose": 0,
     "yash-chowdhary": 7,
     "anubh-v": 319,
-    "Tejas2805": 547,
+    "Tejas2805": 554,
     "dvrylc": 0,
-    "jamessspanggg": 203,
+    "jamessspanggg": 204,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 204,
+    "0blivious": 202,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -692,7 +720,7 @@
     },
     "Tejas2805": {
       "java": 0,
-      "js": 12,
+      "js": 19,
       "scss": 443,
       "json": 26,
       "md": 66,
@@ -712,7 +740,7 @@
     },
     "jamessspanggg": {
       "java": 179,
-      "js": 7,
+      "js": 8,
       "scss": 17,
       "json": 0,
       "md": 0,
@@ -752,7 +780,7 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 69,
+      "js": 67,
       "scss": 57,
       "json": 0,
       "md": 10,
@@ -842,21 +870,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 2.026157,
+    "ccyccyccy": 2.003616,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.9202,
-    "anubh-v": 520.3529,
-    "Tejas2805": 4397.877,
+    "yash-chowdhary": 1.8986306,
+    "anubh-v": 514.8987,
+    "Tejas2805": 4348.4985,
     "dvrylc": 0.0,
-    "jamessspanggg": 241.84976,
+    "jamessspanggg": 239.11932,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 377.35577,
+    "0blivious": 373.38986,
     "hcwong": 0.0,
-    "ang-zeyu": 0.2840538,
+    "ang-zeyu": 0.28086323,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

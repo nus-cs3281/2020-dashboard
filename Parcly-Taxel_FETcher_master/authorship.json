@@ -766,7 +766,7 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    GitHub username, password or access token. Extract these fields"
+        "content": "    GitHub username, access token. Extract these fields"
       },
       {
         "lineNumber": 107,
@@ -927,7 +927,7 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "            \"four lines of author, email, username, password/access token\")"
+        "content": "            \"four lines of author, email, username, access token\")"
       },
       {
         "lineNumber": 130,
@@ -955,14 +955,14 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    AUTHOR, EMAIL, USERNAME, PASSWORD \u003d read_credentials(args.credentials)"
+        "content": "    AUTHOR, EMAIL, USERNAME, TOKEN \u003d read_credentials(args.credentials)"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    user_pass \u003d pygit2.UserPass(USERNAME, PASSWORD)"
+        "content": "    user_pass \u003d pygit2.UserPass(USERNAME, TOKEN)"
       },
       {
         "lineNumber": 135,
@@ -1048,53 +1048,1411 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "from github import Github"
+        "content": "import json"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": ""
+        "content": "import argparse"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "g \u003d Github()"
+        "content": "import requests"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "repo \u003d g.get_repo(\"nus-cs2103-AY1920S1/ped-dev-response\")"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "issues \u003d repo.get_issues()"
+        "content": "# Issues are created in groups of this size"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "for issue in issues:"
+        "content": "BATCH_SIZE \u003d 10"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "    print(issue.title)"
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "issues_query \u003d \"\"\""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "query($after: String, $owner: String!, $name: String!) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "  repository(owner: $owner, name: $name) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    issues(first: 100, after: $after) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      totalCount"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      nodes {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        title"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        body"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        labels(first: 50) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "          nodes {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            name"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "          }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      pageInfo {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        endCursor"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        hasNextPage"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "\"\"\""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "labels_query \u003d \"\"\""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "query($owner:String!, $name:String!) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "  repository(owner: $owner, name: $name) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    id"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    labels(first: 100) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      nodes {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        id"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        name"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        color"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "\"\"\""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def repository_variables(owner_name):"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Split the given repository identifier into owner and name parts."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    Return a dictionary suitable for use with GraphQL.\"\"\""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    owner, name \u003d owner_name.split(\"/\")"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return {\"owner\": owner, \"name\": name}"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "# Adapted from https://gist.github.com/gbaman/b3137e18c739e0cf98539bf4ec4366ad"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def query_github_graphql(query, variables, access_token, extra_headers\u003d{}):"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Query the GitHub GraphQL API with the given access token,"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    query and variables. The response JSON is returned as a dictionary.\"\"\""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    header \u003d {\"Authorization\": f\"token {access_token}\"}"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    header.update(extra_headers)"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    r \u003d requests.post(\"https://api.github.com/graphql\","
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            json\u003d{\"query\": query, \"variables\": variables}, headers\u003dheader)"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    r.raise_for_status()"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return r.json()"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def get_labels(variables, access_token):"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Query the labels of the repository corresponding to the given"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    GraphQL variables (owner and name). Return a dictionary mapping"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    names to colours, one mapping names to IDs and the repository\u0027s ID."
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    Assume there are not more than 100 labels.\"\"\""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    res \u003d query_github_graphql(labels_query, variables, access_token)"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    repository_id \u003d res[\"data\"][\"repository\"][\"id\"]"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    res \u003d res[\"data\"][\"repository\"][\"labels\"][\"nodes\"]"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return ({x[\"name\"]: x[\"color\"] for x in res},"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            {x[\"name\"]: x[\"id\"] for x in res}, repository_id)"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def get_issue_data(path, access_token):"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"If path is a JSON file (ending in .json), read that file. Otherwise,"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    path must be a repository name in owner/name format. Return (A, B) where"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    A is a list of 3-tuples, each tuple bearing (title, body, label names)"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    for each issue in the repository, and B is the output of get_labels()[0]."
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    If path is a repository, this data is also saved to issues.json as backup.\"\"\""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    if path.endswith(\".json\"):"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        with open(path, \u0027r\u0027) as f:"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            return json.load(f)"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    variables \u003d repository_variables(path)"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    issues \u003d []"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    while True:"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        res \u003d query_github_graphql(issues_query, variables, access_token)"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        res \u003d res[\"data\"][\"repository\"]"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        print(f\"{len(issues)}/{res[\u0027issues\u0027][\u0027totalCount\u0027]}\")"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        for issue in res[\"issues\"][\"nodes\"]:"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            title \u003d issue[\"title\"]"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            body \u003d issue[\"body\"]"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            labels \u003d [x[\"name\"] for x in issue[\"labels\"][\"nodes\"]]"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            issues.append((title, body, labels))"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        page_info \u003d res[\"issues\"][\"pageInfo\"]"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        if not page_info[\"hasNextPage\"]:"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            break"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        variables[\"after\"] \u003d page_info[\"endCursor\"]"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    labels \u003d get_labels(variables, access_token)[0]"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    result \u003d [issues, labels]"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    with open(\"issues.json\", \u0027w\u0027) as f:"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        json.dump(result, f, indent\u003d\"  \")"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return result"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def labels_block(repository_id, labels):"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Generate the mutation block that will add all given labels"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    (a dictionary mapping names to colours) to the repository"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    with the given ID.\"\"\""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    mutations \u003d []"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    for (n, (name, colour)) in enumerate(labels.items()):"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        mut \u003d (f\u0027l{n}: createLabel(input: {{repositoryId: \"{repository_id}\", \u0027"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "                f\u0027name: \"{name}\", color: \"{colour}\"}})\u0027"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "                f\u0027{{label{{id name}}}}\u0027)"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        mutations.append(mut)"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return \"mutation {\\n\" + \"\\n\".join(mutations) + \"\\n}\""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def create_labels(owner_name, new_labels, access_token):"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Create all given labels not existing in the given repository."
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    Return a dictionary mapping labels to IDs in the given repository"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    and said repository\u0027s ID.\"\"\""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    variables \u003d repository_variables(owner_name)"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    _, labels, destination_id \u003d get_labels(variables, access_token)"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    new_labels \u003d {k: v for (k, v) in new_labels.items() if k not in labels}"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    if not new_labels:"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        return (labels, destination_id)"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    mutations \u003d labels_block(destination_id, new_labels)"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    res \u003d query_github_graphql(mutations, {}, access_token,"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            {\"Accept\": \"application/vnd.github.bane-preview+json\"})"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    new_pairs \u003d {label[\"label\"][\"name\"]: label[\"label\"][\"id\"]"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            for label in res[\"data\"].values()}"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    labels.update(new_pairs)"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return (labels, destination_id)"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def dumps_surrogates(s):"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Produce the JSON encoding of s, but with UTF-16 surrogate pairs"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    replaced by one UTF-8 character. This is needed to handle emoji"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    (doing just json.dumps(s) would cause GraphQL to throw an error).\"\"\""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return json.dumps(s, ensure_ascii\u003dFalse) \\"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            .encode(\"utf-16\", \"surrogatepass\").decode(\"utf-16\")"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def issues_block(repository_id, issues, labels):"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Generate the mutation block that will add all given issues"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    to the given repository. num is an index, which should be unique."
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    labels is a mapping from label names to IDs.\"\"\""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    mutations \u003d []"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    for (n, issue) in enumerate(issues):"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        title, body, label_list \u003d issue"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        title \u003d dumps_surrogates(title)"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        body \u003d dumps_surrogates(body)"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        label_list \u003d json.dumps([labels[l] for l in label_list])"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        mut \u003d (f\u0027i{n}: createIssue(input: {{repositoryId: \"{repository_id}\", \u0027"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "                f\u0027title: {title}, body: {body}, \u0027"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "                f\u0027labelIds: {label_list}}}){{issue{{number}}}}\u0027)"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        mutations.append(mut)"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return \"mutation {\\n\" + \"\\n\".join(mutations) + \"\\n}\""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def create_issues(repository_id, issues, labels, access_token):"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Create the given issues (output of get_issue_data()) in the"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    repository with the given ID. labels is a mapping from labels to IDs."
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    Return the numbers of the issues thus created.\"\"\""
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    N \u003d len(issues)"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    out \u003d []"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    for i in range(0, N, BATCH_SIZE):"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        lim \u003d min(i+BATCH_SIZE, N)"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        batch \u003d issues[i:lim]"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        mutations \u003d issues_block(repository_id, batch, labels)"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        res \u003d query_github_graphql(mutations, {}, access_token)"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        out.extend(issue[\"issue\"][\"number\"] for issue in res[\"data\"].values())"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        with open(\"remaining.json\", \u0027w\u0027) as f:"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            json.dump([issues[lim:], labels], f, indent\u003d\"  \")"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        print(f\"{lim}/{N}\")"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    return out"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def read_access_token(file):"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"file contains a GitHub access token with repo permissions on"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    its last line. Return this token.\"\"\""
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    with open(file, \u0027r\u0027) as f:"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "        return f.read().splitlines()[-1]"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "def main():"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    \"\"\"Fetch all issues from the given repository, saving their"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    title, body and labels as a JSON file.\"\"\""
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    parser \u003d argparse.ArgumentParser(description\u003d\"Fetch all issues \""
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            \"from the given repository, writing title, body and labels \""
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            \"to issues.json.\")"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    parser.add_argument(\"source\", help\u003d\"source repository in the form \""
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            \"owner/name (e.g. nus-cs2103-AY1920S1/ped-dev-response), \""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            \"or path to JSON file (e.g. issues.json)\")"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    parser.add_argument(\"destination\", help\u003d\"destination repository, \""
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            \"in the form owner/name\")"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    parser.add_argument(\"credentials\", help\u003d\"credentials file, \""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "            \"same format as for fetch.py\")"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    args \u003d parser.parse_args()"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    TOKEN \u003d read_access_token(args.credentials)"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    issues, labels \u003d get_issue_data(args.source, TOKEN)"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    labels, destination_id \u003d create_labels(args.destination, labels, TOKEN)"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    res \u003d create_issues(destination_id, issues, labels, TOKEN)"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    print(res)"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "if __name__ \u003d\u003d \"__main__\":"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "    main()"
       }
     ],
     "authorContributionMap": {
-      "Parcly-Taxel": 8
+      "Parcly-Taxel": 202
     }
   },
   {
@@ -1134,7 +2492,7 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "This repository contains a script, `fetch.py`, performing **F**il**E T**ransfer for the purposes of [CATcher](https://github.com/CATcher-org/CATcher). It takes from the command line"
+        "content": "This repository contains two Python scripts. The first, `fetch.py`, performs **F**il**E T**ransfer for the purposes of [CATcher](https://github.com/CATcher-org/CATcher). It takes from the command line"
       },
       {
         "lineNumber": 6,
@@ -1162,7 +2520,7 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "* a credentials file, containing four lines of author name, email address, GitHub username and password or access token, e.g."
+        "content": "* a credentials file, containing four lines of author name, email address, GitHub username and access token, e.g."
       },
       {
         "lineNumber": 10,
@@ -1197,7 +2555,7 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
-        "content": "ijustd0ntknowwatwentwr0ng"
+        "content": "4f17daf987b3028dd4367f8bef6ec39e929203a8"
       },
       {
         "lineNumber": 15,
@@ -1288,11 +2646,116 @@
         "author": {
           "gitId": "Parcly-Taxel"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "The second script, `pull-issues.py`, takes from the command line"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "* a source and destination repository, both in the form `owner/name`"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "* a credentials file as in `fetch.py`"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "It then"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "* downloads the _title_, _body_ and _labels_ of all issues in the source repository using [GitHub\u0027s GraphQL API](https://developer.github.com/v4) and saves them to `issues.json` as a backup"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "* creates issues with the same data in the destination repository"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "It takes around 35 minutes of running time to transfer the practical exam dry run issues of the CS2103/T AY1920S1 cohort."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": "----"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Parcly-Taxel"
+        },
         "content": "[Fet](https://en.wikipedia.org/wiki/Fet) is also the name of a Norwegian municipality, quite close to Akershus Fortress."
       }
     ],
     "authorContributionMap": {
-      "Parcly-Taxel": 27
+      "Parcly-Taxel": 42
     }
   },
   {
