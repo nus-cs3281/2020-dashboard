@@ -25093,1454 +25093,1461 @@
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "\u003c/frontmatter\u003e"
+        "content": "  pageNav: \"default\""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003c/frontmatter\u003e"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "# Using Plugins"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "# Using Plugins"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "A plugin is a user-defined extension that can add custom features to MarkBind. MarkBind plugins are `js` scripts that are loaded and run during the page generation. MarkBind allows plugins to modify a page\u0027s content during the page generation process."
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "A plugin is a user-defined extension that can add custom features to MarkBind. MarkBind plugins are `js` scripts that are loaded and run during the page generation. MarkBind allows plugins to modify a page\u0027s content during the page generation process."
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003ctip-box type\u003d\"warning\"\u003e"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003ctip-box type\u003d\"warning\"\u003e"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "**WARNING:** Plugins are executable programs that can be written by anyone. This means that they might contain malicious code that may damage your computer."
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "**WARNING:** Plugins are executable programs that can be written by anyone. This means that they might contain malicious code that may damage your computer."
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "Only run plugins from sources that you trust. Do not run the plugin if the source/origin of the plugin cannot be ascertained."
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/tip-box\u003e"
+        "content": "Only run plugins from sources that you trust. Do not run the plugin if the source/origin of the plugin cannot be ascertained."
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003c/tip-box\u003e"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "### Adding Plugins"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "### Adding Plugins"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "Plugins are stored in the `_markbind/plugins` folder which is generated on `init`. To use a plugin, place the `js` source of the plugin in the `_markbind/plugins` folder and add the following options to `site.json`:"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Plugins are stored in the `_markbind/plugins` folder which is generated on `init`. To use a plugin, place the `js` source of the plugin in the `_markbind/plugins` folder and add the following options to `site.json`:"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "- `plugins`: An array of plugin names to use."
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "- `pluginsContext`: A mapping of plugin names to parameters passed to each individual plugin. It is recommended to use key-value pairs for consistency."
+        "content": "- `plugins`: An array of plugin names to use."
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "- `pluginsContext`: A mapping of plugin names to parameters passed to each individual plugin. It is recommended to use key-value pairs for consistency."
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "For example:"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "For example:"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "```js"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "{"
+        "content": "```js"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "  ..."
+        "content": "{"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "  \"plugins\": ["
+        "content": "  ..."
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"plugin1\","
+        "content": "  \"plugins\": ["
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"plugin2\","
+        "content": "    \"plugin1\","
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "  ],"
+        "content": "    \"plugin2\","
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "  \"pluginsContext\": {"
+        "content": "  ],"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"plugin1\": {"
+        "content": "  \"pluginsContext\": {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    \t\"input\": \"Input for Plugin 1\""
+        "content": "    \"plugin1\": {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    \t\"input\": \"Input for Plugin 1\""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"plugin2\": {"
+        "content": "    },"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    \t\"data\": \"Data for Plugin 2\""
+        "content": "    \"plugin2\": {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    \t\"data\": \"Data for Plugin 2\""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    },"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": "}"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "### Writing Plugins"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "### Writing Plugins"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "#### Rendering"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "#### Rendering"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "![MarkBind Rendering]({{baseUrl}}/images/rendering.png)"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "![MarkBind Rendering]({{baseUrl}}/images/rendering.png)"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "MarkBind provides two entry points for modifying the page, pre-render and post-render. These are controlled by implementing the `preRender()` and `postRender()` functions in the plugin:"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "MarkBind provides two entry points for modifying the page, pre-render and post-render. These are controlled by implementing the `preRender()` and `postRender()` functions in the plugin:"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "- `preRender(content, pluginContext, frontMatter)`: Called before MarkBind renders the source from Markdown to HTML."
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `content`: The raw Markdown of any Markdown file (`.md`, `.mbd`, etc.)."
+        "content": "- `preRender(content, pluginContext, frontMatter)`: Called before MarkBind renders the source from Markdown to HTML."
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
+        "content": "  - `content`: The raw Markdown of any Markdown file (`.md`, `.mbd`, etc.)."
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
+        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "- `postRender(content, pluginContext, frontMatter)`: Called after the HTML is rendered, before writing it to a file."
+        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `content`: The rendered HTML."
+        "content": "- `postRender(content, pluginContext, frontMatter)`: Called after the HTML is rendered, before writing it to a file."
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
+        "content": "  - `content`: The rendered HTML."
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
+        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "MarkBind will call these functions with the respective content, and retrieve a string data that is used for the next step of the page generation process."
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "MarkBind will call these functions with the respective content, and retrieve a string data that is used for the next step of the page generation process."
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "An example of a plugin is shown below. The plugin shows two ways of appending a paragraph of text to a specific `div` in the Markdown files:"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "An example of a plugin is shown below. The plugin shows two ways of appending a paragraph of text to a specific `div` in the Markdown files:"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "```js"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "// myPlugin.js"
+        "content": "```js"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// myPlugin.js"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "const cheerio \u003d module.parent.require(\u0027cheerio\u0027);"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "const cheerio \u003d module.parent.require(\u0027cheerio\u0027);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "module.exports \u003d {"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "  preRender: (content, pluginContext, frontMatter) \u003d\u003e content.replace(\u0027[Pre-render Placeholder]\u0027, `${pluginContext.pre}`),"
+        "content": "module.exports \u003d {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "  postRender: (content, pluginContext, frontMatter) \u003d\u003e {"
+        "content": "  preRender: (content, pluginContext, frontMatter) \u003d\u003e content.replace(\u0027[Pre-render Placeholder]\u0027, `${pluginContext.pre}`),"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    const $ \u003d cheerio.load(content, { xmlMode: false });"
+        "content": "  postRender: (content, pluginContext, frontMatter) \u003d\u003e {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Modify the page..."
+        "content": "    const $ \u003d cheerio.load(content, { xmlMode: false });"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    $(\u0027#my-div\u0027).append(pluginContext.post);"
+        "content": "    // Modify the page..."
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    return $.html();"
+        "content": "    $(\u0027#my-div\u0027).append(pluginContext.post);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    return $.html();"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "  },"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": "};"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "```js"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "// site.json"
+        "content": "```js"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// site.json"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "{"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "  ..."
+        "content": "{"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "  \"plugins\": ["
+        "content": "  ..."
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"myPlugin\""
+        "content": "  \"plugins\": ["
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "  ],"
+        "content": "    \"myPlugin\""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "  \"pluginsContext\": {"
+        "content": "  ],"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"myPlugin\": {"
+        "content": "  \"pluginsContext\": {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"pre\": \"\u003cp\u003eHello\u003c/p\u003e\","
+        "content": "    \"myPlugin\": {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"post\": \"\u003cp\u003eGoodbye\u003c/p\u003e\""
+        "content": "      \"pre\": \"\u003cp\u003eHello\u003c/p\u003e\","
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      \"post\": \"\u003cp\u003eGoodbye\u003c/p\u003e\""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  }"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": "}"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "```md"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "// index.md"
+        "content": "```md"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// index.md"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "..."
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cdiv id\u003d\"my-div\"\u003e"
+        "content": "..."
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "[Pre-render Placeholder]"
+        "content": "\u003cdiv id\u003d\"my-div\"\u003e"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": "[Pre-render Placeholder]"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": "\u003c/div\u003e"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "#### Assets"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "#### Assets"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "Plugins can implement the methods `getLinks` and `getScripts` to add additional assets to the page. "
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Plugins can implement the methods `getLinks` and `getScripts` to add additional assets to the page. "
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "- `getLinks(content, pluginContext, frontMatter, utils)`: Called to get link elements to be added to the head of the page."
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `content`: The rendered HTML."
+        "content": "- `getLinks(content, pluginContext, frontMatter, utils)`: Called to get link elements to be added to the head of the page."
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
+        "content": "  - `content`: The rendered HTML."
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
+        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `utils`: Object containing the following utility functions"
+        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    - `buildStylesheet(href)`: Builds a stylesheet link element with the specified `href`."
+        "content": "  - `utils`: Object containing the following utility functions"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "  - Should return an array of string data containing link elements to be added."
+        "content": "    - `buildStylesheet(href)`: Builds a stylesheet link element with the specified `href`."
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "- `getScripts(content, pluginContext, frontMatter, utils)`: Called to get script elements to be added after the body of the page."
+        "content": "  - Should return an array of string data containing link elements to be added."
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `content`: The rendered HTML."
+        "content": "- `getScripts(content, pluginContext, frontMatter, utils)`: Called to get script elements to be added after the body of the page."
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
+        "content": "  - `content`: The rendered HTML."
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
+        "content": "  - `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "  - `utils`: Object containing the following utility functions"
+        "content": "  - `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    - `buildScript(src)`: Builds a script element with the specified `src`."
+        "content": "  - `utils`: Object containing the following utility functions"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "  - Should return an array of string data containing script elements to be added."
+        "content": "    - `buildScript(src)`: Builds a script element with the specified `src`."
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  - Should return an array of string data containing script elements to be added."
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "An example of a plugin which adds links and scripts to the page:"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "An example of a plugin which adds links and scripts to the page:"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "```js"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "// myPlugin.js"
+        "content": "```js"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// myPlugin.js"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "module.exports \u003d {"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "  getLinks: (content, pluginContext, frontMatter, utils) \u003d\u003e [utils.buildStylesheet(\u0027STYLESHEET_LINK\u0027)],"
+        "content": "module.exports \u003d {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "  getScripts: (content, pluginContext, frontMatter, utils) \u003d\u003e "
+        "content": "  getLinks: (content, pluginContext, frontMatter, utils) \u003d\u003e [utils.buildStylesheet(\u0027STYLESHEET_LINK\u0027)],"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "    [utils.buildScript(\u0027SCRIPT_LINK\u0027), \u0027\u003cscript\u003ealert(\"hello\")\u003c/script\u003e\u0027],"
+        "content": "  getScripts: (content, pluginContext, frontMatter, utils) \u003d\u003e "
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    [utils.buildScript(\u0027SCRIPT_LINK\u0027), \u0027\u003cscript\u003ealert(\"hello\")\u003c/script\u003e\u0027],"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "This will add the following link and script elements to the page:"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "- `\u003clink rel\u003d\"stylesheet\" href\u003d\"STYLESHEET_LINK\"\u003e`"
+        "content": "This will add the following link and script elements to the page:"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "- `\u003cscript src\u003d\"SCRIPT_LINK\"\u003e\u003c/script\u003e`"
+        "content": "- `\u003clink rel\u003d\"stylesheet\" href\u003d\"STYLESHEET_LINK\"\u003e`"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "- `\u003cscript\u003ealert(\"hello\")\u003c/script\u003e`"
+        "content": "- `\u003cscript src\u003d\"SCRIPT_LINK\"\u003e\u003c/script\u003e`"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "- `\u003cscript\u003ealert(\"hello\")\u003c/script\u003e`"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "ang-zeyu"
+          "gitId": "-"
         },
-        "content": "#### Live reload"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "#### Live reload"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "By default, MarkBind treats `.html`, `.md`, `.mbd`, and `.mbdf` as source files, and will rebuild any"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "pages changed when serving the page."
+        "content": "By default, MarkBind treats `.html`, `.md`, `.mbd`, and `.mbdf` as source files, and will rebuild any"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "pages changed when serving the page."
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "During the `preRender` and `postRender` stages however, plugins may do custom processing using some other"
+        "content": ""
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "source file types, as parsed from the raw Markdown, typically requiring rebuilding the site."
+        "content": "During the `preRender` and `postRender` stages however, plugins may do custom processing using some other"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "source file types, as parsed from the raw Markdown, typically requiring rebuilding the site."
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "Hence, to add custom source files to watch, you can implement the `getSources()` method."
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "Hence, to add custom source files to watch, you can implement the `getSources()` method."
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "`getSources(content, pluginContext, frontMatter)`: Called _before_ a Markdown file\u0027s `preRender` function is called."
+        "content": ""
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "- `content`: The raw Markdown of the current Markdown file (`.md`, `.mbd`, etc.)."
+        "content": "`getSources(content, pluginContext, frontMatter)`: Called _before_ a Markdown file\u0027s `preRender` function is called."
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "- `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
+        "content": "- `content`: The raw Markdown of the current Markdown file (`.md`, `.mbd`, etc.)."
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "- `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
+        "content": "- `pluginContext`: User provided parameters for the plugin. This can be specified in the `site.json`."
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "- `frontMatter`: The frontMatter of the page being processed, in case any frontMatter data is required."
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "It should return an object, consisting of _at least one of the following fields_:"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "- `tagMap`: An array consisting of `[\u0027tag name\u0027, \u0027source attribute name\u0027]` key value pairs."
+        "content": "It should return an object, consisting of _at least one of the following fields_:"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  - MarkBind will automatically search for matching tags with the source attributes, and watch them."
+        "content": "- `tagMap`: An array consisting of `[\u0027tag name\u0027, \u0027source attribute name\u0027]` key value pairs."
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  - For relative file paths, _if the tag is part of some included content_ ( eg. `\u003cinclude /\u003e` tags ), it will be resolved against the included page. Otherwise, it is resolved against the page being processed."
+        "content": "  - MarkBind will automatically search for matching tags with the source attributes, and watch them."
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "- `sources`: An array of source file paths to watch, where relative file paths are resolved only against the page being processed."
+        "content": "  - For relative file paths, _if the tag is part of some included content_ ( eg. `\u003cinclude /\u003e` tags ), it will be resolved against the included page. Otherwise, it is resolved against the page being processed."
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "- You can also directly return an array of source file paths to watch. ( ie. the `sources` field ) ___(deprecated)___"
+        "content": "- `sources`: An array of source file paths to watch, where relative file paths are resolved only against the page being processed."
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "- You can also directly return an array of source file paths to watch. ( ie. the `sources` field ) ___(deprecated)___"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "Example usage of `getSources` from the PlantUML plugin, which allows insertion of PlantUML diagrams using `\u003cpuml src\u003d\"...\" \u003e` tags."
+        "content": ""
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "This allows files specified by the `src` attributes of `\u003cpuml\u003e` tags to be watched:"
+        "content": "Example usage of `getSources` from the PlantUML plugin, which allows insertion of PlantUML diagrams using `\u003cpuml src\u003d\"...\" \u003e` tags."
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "This allows files specified by the `src` attributes of `\u003cpuml\u003e` tags to be watched:"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "```js"
+        "content": ""
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "{"
+        "content": "```js"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  ..."
+        "content": "{"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  getSources: () \u003d\u003e ({"
+        "content": "  ..."
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    tagMap: [[\u0027puml\u0027, \u0027src\u0027]],"
+        "content": "  getSources: () \u003d\u003e ({"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  })"
+        "content": "    tagMap: [[\u0027puml\u0027, \u0027src\u0027]],"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "}"
+        "content": "  })"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "```"
+        "content": "}"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "-"
+          "gitId": "ang-zeyu"
         },
-        "content": "### Advanced: Default plugins"
+        "content": ""
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "### Advanced: Default plugins"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "MarkBind has a set of default plugins that it uses to carry out some of its features. These are enabled by default for every project and should be left alone."
+        "content": ""
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "MarkBind has a set of default plugins that it uses to carry out some of its features. These are enabled by default for every project and should be left alone."
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "Default Plugin | Functionality"
+        "content": ""
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "--- | ---"
+        "content": "Default Plugin | Functionality"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "`anchors` | Attaches anchor links to the side of headings."
+        "content": "--- | ---"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "`shorthandSyntax` | Allows for certain syntax shorthands."
+        "content": "`anchors` | Attaches anchor links to the side of headings."
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`shorthandSyntax` | Allows for certain syntax shorthands."
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "Although not advised, you can disable these by passing `\"off\": true` in the `pluginsContext`."
+        "content": ""
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Although not advised, you can disable these by passing `\"off\": true` in the `pluginsContext`."
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "Disabling the `anchors` plugin:"
+        "content": ""
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Disabling the `anchors` plugin:"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "```js"
+        "content": ""
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "{"
+        "content": "```js"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "  ..."
+        "content": "{"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "  \"pluginsContext\": {"
+        "content": "  ..."
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "    \"anchors\": {"
+        "content": "  \"pluginsContext\": {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"off\": true"
+        "content": "    \"anchors\": {"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      \"off\": true"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  }"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": "}"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "```"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "### Built-in plugins"
+        "content": ""
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "### Built-in plugins"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "MarkBind has a set of built-in plugins that can be used immediately without installation."
+        "content": ""
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "MarkBind has a set of built-in plugins that can be used immediately without installation."
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cinclude src\u003d\"plugins/algolia.mbdf\" /\u003e"
+        "content": ""
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cinclude src\u003d\"plugins/filterTags.mbdf\" /\u003e"
+        "content": "\u003cinclude src\u003d\"plugins/algolia.mbdf\" /\u003e"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cinclude src\u003d\"plugins/googleAnalytics.mbdf\" /\u003e"
+        "content": "\u003cinclude src\u003d\"plugins/filterTags.mbdf\" /\u003e"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003cinclude src\u003d\"plugins/googleAnalytics.mbdf\" /\u003e"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "{% from \"njk/common.njk\" import previous_next %}"
+        "content": ""
       },
       {
         "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{% from \"njk/common.njk\" import previous_next %}"
+      },
+      {
+        "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
@@ -26548,6 +26555,7 @@
       }
     ],
     "authorContributionMap": {
+      "Tejas2805": 1,
       "-": 179,
       "ang-zeyu": 34
     }
