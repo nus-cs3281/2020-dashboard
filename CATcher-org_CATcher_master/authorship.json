@@ -1066,303 +1066,303 @@
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "    return Issue.orDefaultString(description, \u0027No details provided by bug reporter.\u0027);"
+        "content": "    const defaultString \u003d \u0027No details provided by bug reporter.\u0027;"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "  }"
+        "content": "    return Issue.orDefaultString(description, defaultString);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "   * Processes and cleans a raw team response obtained from user input."
+        "content": "  /**"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "   */"
+        "content": "   * Processes and cleans a raw team response obtained from user input."
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  static updateTeamResponse(teamResponse: string): string {"
+        "content": "   */"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    return Issue.orDefaultString(teamResponse, \u0027No details provided by team.\u0027);"
+        "content": "  static updateTeamResponse(teamResponse: string): string {"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "  }"
+        "content": "    const defaultString \u003d \u0027No details provided by team.\u0027;"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    return Issue.orDefaultString(teamResponse, defaultString);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  /**"
+        "content": "  }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "   * Given two strings, returns the first if it is not an empty string."
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "   * Returns the second string if the first is an empty string."
+        "content": "  /**"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "   */"
+        "content": "   * Given two strings, returns the first if it is not an empty string or a false value such as null/undefined."
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  private static orDefaultString(stringA: string, def: string): string {"
+        "content": "   * Returns the second string if the first is an empty string."
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    return stringA.length !\u003d\u003d 0 ? stringA : def;"
+        "content": "   */"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  }"
+        "content": "  private static orDefaultString(stringA: string, def: string): string {"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    if (!stringA) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "  protected constructor(githubIssue: GithubIssue) {"
+        "content": "      return def;"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    /** Basic Fields */"
+        "content": "    }"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "    this.id \u003d +githubIssue.number;"
+        "content": "    return stringA.length !\u003d\u003d 0 ? stringA : def;"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "    this.created_at \u003d moment(githubIssue.created_at).format(\u0027lll\u0027);"
+        "content": "  }"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "    this.title \u003d githubIssue.title;"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.description \u003d githubIssue.body;"
+        "content": "  protected constructor(githubIssue: GithubIssue) {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.githubIssue \u003d githubIssue;"
+        "content": "    /** Basic Fields */"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    this.id \u003d +githubIssue.number;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "    /** Fields derived from Labels */"
+        "content": "    this.created_at \u003d moment(githubIssue.created_at).format(\u0027lll\u0027);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.severity \u003d githubIssue.findLabel(GithubLabel.LABELS.severity);"
+        "content": "    this.title \u003d githubIssue.title;"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.type \u003d githubIssue.findLabel(GithubLabel.LABELS.type);"
+        "content": "    this.description \u003d Issue.updateDescription(githubIssue.body);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.responseTag \u003d githubIssue.findLabel(GithubLabel.LABELS.response);"
+        "content": "    this.githubIssue \u003d githubIssue;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.duplicated \u003d !!githubIssue.findLabel(GithubLabel.LABELS.duplicated, false);"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.status \u003d githubIssue.findLabel(GithubLabel.LABELS.status);"
+        "content": "    /** Fields derived from Labels */"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.pending \u003d githubIssue.findLabel(GithubLabel.LABELS.pending);"
+        "content": "    this.severity \u003d githubIssue.findLabel(GithubLabel.LABELS.severity);"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    this.type \u003d githubIssue.findLabel(GithubLabel.LABELS.type);"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    this.responseTag \u003d githubIssue.findLabel(GithubLabel.LABELS.response);"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "  public static createPhaseBugReportingIssue(githubIssue: GithubIssue): Issue {"
+        "content": "    this.duplicated \u003d !!githubIssue.findLabel(GithubLabel.LABELS.duplicated, false);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "    return new Issue(githubIssue);"
+        "content": "    this.status \u003d githubIssue.findLabel(GithubLabel.LABELS.status);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    this.pending \u003d githubIssue.findLabel(GithubLabel.LABELS.pending);"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "  public static createPhaseTeamResponseIssue(githubIssue: GithubIssue, githubComments: GithubComment[],"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "                                             teamData: Team): Issue {"
+        "content": "  public static createPhaseBugReportingIssue(githubIssue: GithubIssue): Issue {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    const issue \u003d new Issue(githubIssue);"
+        "content": "    return new Issue(githubIssue);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    const template \u003d new TeamResponseTemplate(githubComments);"
+        "content": "  }"
       },
       {
         "lineNumber": 91,
@@ -1376,581 +1376,581 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.githubComments \u003d githubComments;"
+        "content": "  public static createPhaseTeamResponseIssue(githubIssue: GithubIssue, githubComments: GithubComment[],"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.teamAssigned \u003d teamData;"
+        "content": "                                             teamData: Team): Issue {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.issueComment \u003d template.comment;"
+        "content": "    const issue \u003d new Issue(githubIssue);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.teamResponse \u003d template.teamResponse !\u003d\u003d undefined ? template.teamResponse.content : undefined;"
+        "content": "    const template \u003d new TeamResponseTemplate(githubComments);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.duplicateOf \u003d template.duplicateOf !\u003d\u003d undefined ? template.duplicateOf.issueNumber : undefined;"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.duplicated \u003d issue.duplicateOf !\u003d\u003d undefined \u0026\u0026 issue.duplicateOf !\u003d\u003d null;"
+        "content": "    issue.githubComments \u003d githubComments;"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.assignees \u003d githubIssue.assignees.map(assignee \u003d\u003e assignee.login);"
+        "content": "    issue.teamAssigned \u003d teamData;"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    return issue;"
+        "content": "    issue.issueComment \u003d template.comment;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    issue.teamResponse \u003d template.teamResponse !\u003d\u003d undefined ? Issue.updateTeamResponse(template.teamResponse.content) : undefined;"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    issue.duplicateOf \u003d template.duplicateOf !\u003d\u003d undefined ? template.duplicateOf.issueNumber : undefined;"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "  public static createPhaseTesterResponseIssue(githubIssue: GithubIssue, githubComments: GithubComment[]): Issue {"
+        "content": "    issue.duplicated \u003d issue.duplicateOf !\u003d\u003d undefined \u0026\u0026 issue.duplicateOf !\u003d\u003d null;"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    const issue \u003d new Issue(githubIssue);"
+        "content": "    issue.assignees \u003d githubIssue.assignees.map(assignee \u003d\u003e assignee.login);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "    const template \u003d new TesterResponseTemplate(githubComments);"
+        "content": "    return issue;"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.githubComments \u003d githubComments;"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.issueComment \u003d template.comment;"
+        "content": "  public static createPhaseTesterResponseIssue(githubIssue: GithubIssue, githubComments: GithubComment[]): Issue {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.teamResponse \u003d template.teamResponse !\u003d\u003d undefined ? template.teamResponse.content : undefined;"
+        "content": "    const issue \u003d new Issue(githubIssue);"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.testerResponses \u003d template.testerResponse !\u003d\u003d undefined ? template.testerResponse.testerResponses : undefined;"
+        "content": "    const template \u003d new TesterResponseTemplate(githubComments);"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    return issue;"
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    issue.githubComments \u003d githubComments;"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    issue.issueComment \u003d template.comment;"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "  public static createPhaseModerationIssue(githubIssue: GithubIssue, githubComments: GithubComment[],"
+        "content": "    issue.teamResponse \u003d template.teamResponse !\u003d\u003d undefined ? Issue.updateTeamResponse(template.teamResponse.content) : undefined;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "                                           teamData: Team): Issue {"
+        "content": "    issue.testerResponses \u003d template.testerResponse !\u003d\u003d undefined ? template.testerResponse.testerResponses : undefined;"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    const issue \u003d new Issue(githubIssue);"
+        "content": "    return issue;"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    const issueTemplate \u003d new TutorModerationIssueTemplate(githubIssue);"
+        "content": "  }"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    const todoTemplate \u003d new TutorModerationTodoTemplate(githubComments);"
+        "content": ""
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  public static createPhaseModerationIssue(githubIssue: GithubIssue, githubComments: GithubComment[],"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.githubComments \u003d githubComments;"
+        "content": "                                           teamData: Team): Issue {"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.teamAssigned \u003d teamData;"
+        "content": "    const issue \u003d new Issue(githubIssue);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.description \u003d issueTemplate.description.content;"
+        "content": "    const issueTemplate \u003d new TutorModerationIssueTemplate(githubIssue);"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.teamResponse \u003d issueTemplate.teamResponse.content;"
+        "content": "    const todoTemplate \u003d new TutorModerationTodoTemplate(githubComments);"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    issue.issueDisputes \u003d issueTemplate.dispute.disputes;"
+        "content": ""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    issue.githubComments \u003d githubComments;"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (todoTemplate.moderation \u0026\u0026 todoTemplate.comment) {"
+        "content": "    issue.teamAssigned \u003d teamData;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "      issue.issueDisputes \u003d todoTemplate.moderation.disputesToResolve.map((dispute, i) \u003d\u003e {"
+        "content": "    issue.description \u003d issueTemplate.description.content;"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "        dispute.description \u003d issueTemplate.dispute.disputes[i].description;"
+        "content": "    issue.teamResponse \u003d issueTemplate.teamResponse !\u003d\u003d undefined"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        return dispute;"
+        "content": "      ? Issue.updateTeamResponse(issueTemplate.teamResponse.content)"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": "      : undefined;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "      issue.issueComment \u003d todoTemplate.comment;"
+        "content": "    issue.issueDisputes \u003d issueTemplate.dispute.disputes;"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "    return issue;"
+        "content": "    if (todoTemplate.moderation \u0026\u0026 todoTemplate.comment) {"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      issue.issueDisputes \u003d todoTemplate.moderation.disputesToResolve.map((dispute, i) \u003d\u003e {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        dispute.description \u003d issueTemplate.dispute.disputes[i].description;"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "        return dispute;"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Creates a new copy of an exact same issue."
+        "content": "      });"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "   * This would come useful in the event when you want to update the issue but not the actual"
+        "content": "      issue.issueComment \u003d todoTemplate.comment;"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "   * state of the application."
+        "content": "    }"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "    return issue;"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "  clone(phase: Phase): Issue {"
+        "content": "  }"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    switch (phase) {"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseBugReporting:"
+        "content": "  /**"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Issue.createPhaseBugReportingIssue(this.githubIssue);"
+        "content": "   * Creates a new copy of an exact same issue."
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseTeamResponse:"
+        "content": "   * This would come useful in the event when you want to update the issue but not the actual"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Issue.createPhaseTeamResponseIssue(this.githubIssue, this.githubComments, this.teamAssigned);"
+        "content": "   * state of the application."
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseTesterResponse:"
+        "content": "   */"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Issue.createPhaseTesterResponseIssue(this.githubIssue, this.githubComments);"
+        "content": "  clone(phase: Phase): Issue {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseModeration:"
+        "content": "    switch (phase) {"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Issue.createPhaseModerationIssue(this.githubIssue, this.githubComments, this.teamAssigned);"
+        "content": "      case Phase.phaseBugReporting:"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "      default:"
+        "content": "        return Issue.createPhaseBugReportingIssue(this.githubIssue);"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Issue.createPhaseBugReportingIssue(this.githubIssue);"
+        "content": "      case Phase.phaseTeamResponse:"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return Issue.createPhaseTeamResponseIssue(this.githubIssue, this.githubComments, this.teamAssigned);"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      case Phase.phaseTesterResponse:"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return Issue.createPhaseTesterResponseIssue(this.githubIssue, this.githubComments);"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "      case Phase.phaseModeration:"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Depending on the phase of the peer testing, each phase will have a response associated to them."
+        "content": "        return Issue.createPhaseModerationIssue(this.githubIssue, this.githubComments, this.teamAssigned);"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "   * This function will allow the current instance of issue to retain the state of response of the given `issue`."
+        "content": "      default:"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "   *"
+        "content": "        return Issue.createPhaseBugReportingIssue(this.githubIssue);"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param phase - The phase in which you want to retain your responses."
+        "content": "    }"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param issue - The issue which you want your current instance to retain from."
+        "content": "  }"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "  retainResponses(phase: Phase, issue: Issue) {"
+        "content": "  /**"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.issueComment \u003d issue.issueComment;"
+        "content": "   * Depending on the phase of the peer testing, each phase will have a response associated to them."
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.githubComments \u003d issue.githubComments;"
+        "content": "   * This function will allow the current instance of issue to retain the state of response of the given `issue`."
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "    switch (phase) {"
+        "content": "   *"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseBugReporting:"
+        "content": "   * @param phase - The phase in which you want to retain your responses."
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.description \u003d issue.description;"
+        "content": "   * @param issue - The issue which you want your current instance to retain from."
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "        break;"
+        "content": "   */"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseTeamResponse:"
+        "content": "  retainResponses(phase: Phase, issue: Issue) {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.teamResponse \u003d issue.teamResponse;"
+        "content": "    this.issueComment \u003d issue.issueComment;"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        break;"
+        "content": "    this.githubComments \u003d issue.githubComments;"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseTesterResponse:"
+        "content": "    switch (phase) {"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.testerResponses \u003d issue.testerResponses;"
+        "content": "      case Phase.phaseBugReporting:"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.teamResponse \u003d issue.teamResponse;"
+        "content": "        this.description \u003d issue.description;"
       },
       {
         "lineNumber": 175,
@@ -1964,14 +1964,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      case Phase.phaseModeration:"
+        "content": "      case Phase.phaseTeamResponse:"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.issueDisputes \u003d issue.issueDisputes;"
+        "content": "        this.teamResponse \u003d issue.teamResponse;"
       },
       {
         "lineNumber": 178,
@@ -1985,574 +1985,574 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      default:"
+        "content": "      case Phase.phaseTesterResponse:"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "        break;"
+        "content": "        this.testerResponses \u003d issue.testerResponses;"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.teamResponse \u003d issue.teamResponse;"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "        break;"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      case Phase.phaseModeration:"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "        this.issueDisputes \u003d issue.issueDisputes;"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Updates the tester\u0027s responses and team response based on the given githubComment."
+        "content": "        break;"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param githubComment - A version of githubComment to update the issue with."
+        "content": "      default:"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "        break;"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "  updateTesterResponse(githubComment: GithubComment): void {"
+        "content": "    }"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "    const template \u003d new TesterResponseTemplate([githubComment]);"
+        "content": "  }"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.issueComment \u003d template.comment;"
+        "content": ""
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.teamResponse \u003d template.teamResponse !\u003d\u003d undefined ? template.teamResponse.content : undefined;"
+        "content": "  /**"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.testerResponses \u003d template.testerResponse !\u003d\u003d undefined ? template.testerResponse.testerResponses : undefined;"
+        "content": "   * Updates the tester\u0027s responses and team response based on the given githubComment."
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "   * @param githubComment - A version of githubComment to update the issue with."
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "   */"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "  updateTesterResponse(githubComment: GithubComment): void {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Updates the tutor\u0027s resolution of the disputes with a new version of githubComment."
+        "content": "    const template \u003d new TesterResponseTemplate([githubComment]);"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param githubComment - A version of githubComment to update the dispute with."
+        "content": "    this.issueComment \u003d template.comment;"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "    this.teamResponse \u003d template.teamResponse !\u003d\u003d undefined ? template.teamResponse.content : undefined;"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "  updateDispute(githubComment: GithubComment): void {"
+        "content": "    this.testerResponses \u003d template.testerResponse !\u003d\u003d undefined ? template.testerResponse.testerResponses : undefined;"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "    const todoTemplate \u003d new TutorModerationTodoTemplate([githubComment]);"
+        "content": "  }"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.issueComment \u003d todoTemplate.comment;"
+        "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.issueDisputes \u003d todoTemplate.moderation.disputesToResolve.map((dispute, i) \u003d\u003e {"
+        "content": "  /**"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "      dispute.description \u003d this.issueDisputes[i].description;"
+        "content": "   * Updates the tutor\u0027s resolution of the disputes with a new version of githubComment."
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "      return dispute;"
+        "content": "   * @param githubComment - A version of githubComment to update the dispute with."
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "   */"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  updateDispute(githubComment: GithubComment): void {"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const todoTemplate \u003d new TutorModerationTodoTemplate([githubComment]);"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "  // Template url: https://github.com/CATcher-org/templates#dev-response-phase"
+        "content": "    this.issueComment \u003d todoTemplate.comment;"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "  createGithubTeamResponse(): string {"
+        "content": "    this.issueDisputes \u003d todoTemplate.moderation.disputesToResolve.map((dispute, i) \u003d\u003e {"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "    return `# Team\\\u0027s Response\\n${this.teamResponse}\\n ` +"
+        "content": "      dispute.description \u003d this.issueDisputes[i].description;"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "      `## Duplicate status (if any):\\n${this.duplicateOf ? `Duplicate of #${this.duplicateOf}` : `--`}`;"
+        "content": "      return dispute;"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    });"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "  // Template url: https://github.com/CATcher-org/templates#tutor-moderation"
+        "content": ""
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "  createGithubTutorResponse(): string {"
+        "content": "  // Template url: https://github.com/CATcher-org/templates#dev-response-phase"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "    let tutorResponseString \u003d \u0027# Tutor Moderation\\n\\n\u0027;"
+        "content": "  createGithubTeamResponse(): string {"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "    for (const issueDispute of this.issueDisputes) {"
+        "content": "    return `# Team\\\u0027s Response\\n${this.teamResponse}\\n ` +"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "      tutorResponseString +\u003d issueDispute.toTutorResponseString();"
+        "content": "      `## Duplicate status (if any):\\n${this.duplicateOf ? `Duplicate of #${this.duplicateOf}` : `--`}`;"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  }"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    return tutorResponseString;"
+        "content": ""
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  // Template url: https://github.com/CATcher-org/templates#tutor-moderation"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  createGithubTutorResponse(): string {"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "  // Template url: https://github.com/CATcher-org/templates#teams-response-1"
+        "content": "    let tutorResponseString \u003d \u0027# Tutor Moderation\\n\\n\u0027;"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "  createGithubTesterResponse(): string {"
+        "content": "    for (const issueDispute of this.issueDisputes) {"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "    return `# Team\\\u0027s Response\\n${this.teamResponse}\\n ` +"
+        "content": "      tutorResponseString +\u003d issueDispute.toTutorResponseString();"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "      `# Items for the Tester to Verify\\n${this.getTesterResponsesString(this.testerResponses)}`;"
+        "content": "    }"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    return tutorResponseString;"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 229,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "  /**"
+        "content": ""
       },
       {
         "lineNumber": 230,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "   * Gets the number of unresolved disputes in an Issue."
+        "content": "  // Template url: https://github.com/CATcher-org/templates#teams-response-1"
       },
       {
         "lineNumber": 231,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "   */"
+        "content": "  createGithubTesterResponse(): string {"
       },
       {
         "lineNumber": 232,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "  numOfUnresolvedDisputes(): number {"
+        "content": "    return `# Team\\\u0027s Response\\n${this.teamResponse}\\n ` +"
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "    if (!this.issueDisputes) {"
+        "content": "      `# Items for the Tester to Verify\\n${this.getTesterResponsesString(this.testerResponses)}`;"
       },
       {
         "lineNumber": 234,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "      return 0;"
+        "content": "  }"
       },
       {
         "lineNumber": 235,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "geshuming"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "    return this.issueDisputes.reduce((prev, current) \u003d\u003e prev + Number(current.isDone()), 0);"
+        "content": "   * Gets the number of unresolved disputes in an Issue."
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "  }"
+        "content": "   */"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "geshuming"
         },
-        "content": ""
+        "content": "  numOfUnresolvedDisputes(): number {"
       },
       {
         "lineNumber": 240,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "  private getTesterResponsesString(testerResponses: TesterResponse[]): string {"
+        "content": "    if (!this.issueDisputes) {"
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    let testerResponsesString \u003d \u0027\u0027;"
+        "content": "      return 0;"
       },
       {
         "lineNumber": 242,
         "author": {
-          "gitId": "-"
-        },
-        "content": "    for (const testerResponse of testerResponses) {"
-      },
-      {
-        "lineNumber": 243,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      testerResponsesString +\u003d testerResponse.toString();"
-      },
-      {
-        "lineNumber": 244,
-        "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
         "content": "    }"
       },
       {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "    return this.issueDisputes.reduce((prev, current) \u003d\u003e prev + Number(current.isDone()), 0);"
+      },
+      {
         "lineNumber": 245,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    return testerResponsesString;"
+        "content": "  }"
       },
       {
         "lineNumber": 246,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  private getTesterResponsesString(testerResponses: TesterResponse[]): string {"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    let testerResponsesString \u003d \u0027\u0027;"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "export interface Issues {"
+        "content": "    for (const testerResponse of testerResponses) {"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "  [id: number]: Issue;"
+        "content": "      testerResponsesString +\u003d testerResponse.toString();"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    }"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return testerResponsesString;"
       },
       {
         "lineNumber": 253,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "export const SEVERITY_ORDER \u003d { \u0027-\u0027: 0 , VeryLow: 1, Low: 2, Medium: 3, High: 4 };"
+        "content": "  }"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 255,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "export const ISSUE_TYPE_ORDER \u003d { \u0027-\u0027: 0 , DocumentationBug: 1, FeatureFlaw: 2, FunctionalityBug: 3  };"
+        "content": ""
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "export interface Issues {"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "export enum STATUS {"
+        "content": "  [id: number]: Issue;"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "  Incomplete \u003d \u0027Incomplete\u0027,"
+        "content": "}"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "  Done \u003d \u0027Done\u0027,"
+        "content": ""
       },
       {
         "lineNumber": 260,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "}"
+        "content": "export const SEVERITY_ORDER \u003d { \u0027-\u0027: 0 , VeryLow: 1, Low: 2, Medium: 3, High: 4 };"
       },
       {
         "lineNumber": 261,
@@ -2564,152 +2564,201 @@
       {
         "lineNumber": 262,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "export const IssuesFilter \u003d {"
+        "content": "export const ISSUE_TYPE_ORDER \u003d { \u0027-\u0027: 0 , DocumentationBug: 1, FeatureFlaw: 2, FunctionalityBug: 3  };"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseBugReporting: {"
+        "content": ""
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027FILTER_BY_CREATOR\u0027,"
+        "content": "export enum STATUS {"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027NO_FILTER\u0027,"
+        "content": "  Incomplete \u003d \u0027Incomplete\u0027,"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "  Done \u003d \u0027Done\u0027,"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "}"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseTeamResponse: {"
+        "content": ""
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027FILTER_BY_TEAM\u0027,"
+        "content": "export const IssuesFilter \u003d {"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
+        "content": "  phaseBugReporting: {"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "    Student: \u0027FILTER_BY_CREATOR\u0027,"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    Tutor: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseTesterResponse: {"
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027NO_FILTER\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027NO_ACCESS\u0027,"
+        "content": "  phaseTeamResponse: {"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "    Student: \u0027FILTER_BY_TEAM\u0027,"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "-"
         },
-        "content": "  phaseModeration: {"
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
-        "content": "    Student: \u0027NO_ACCESS\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
-        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
+        "content": "  phaseTesterResponse: {"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
-        "content": "    Admin: \u0027NO_FILTER\u0027,"
+        "content": "    Student: \u0027NO_FILTER\u0027,"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    Tutor: \u0027NO_ACCESS\u0027,"
       },
       {
         "lineNumber": 283,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
+      },
+      {
+        "lineNumber": 284,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 285,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  phaseModeration: {"
+      },
+      {
+        "lineNumber": 286,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Student: \u0027NO_ACCESS\u0027,"
+      },
+      {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Tutor: \u0027FILTER_BY_TEAM_ASSIGNED\u0027,"
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Admin: \u0027NO_FILTER\u0027,"
+      },
+      {
+        "lineNumber": 289,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
@@ -2718,8 +2767,8 @@
     ],
     "authorContributionMap": {
       "geshuming": 11,
-      "anubh-v": 24,
-      "-": 248
+      "anubh-v": 21,
+      "-": 258
     }
   },
   {
@@ -17785,9 +17834,9 @@
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "      form.resetForm(this.newTeamResponseForm.value);"
+        "content": "      form.resetForm();"
       },
       {
         "lineNumber": 106,
@@ -18561,8 +18610,8 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 3,
-      "-": 212
+      "anubh-v": 2,
+      "-": 213
     }
   },
   {
