@@ -45,6 +45,27 @@
             "deletions": 18
           }
         ]
+      },
+      {
+        "insertions": 627,
+        "deletions": 56,
+        "date": "2020-03-03",
+        "commitResults": [
+          {
+            "hash": "f215eeedac66e08cbee9f79c0573a566f4480f40",
+            "messageTitle": "Migrate to bootstrap-vue popovers (#1033)",
+            "messageBody": "",
+            "insertions": 602,
+            "deletions": 56
+          },
+          {
+            "hash": "a0ae237617ced17aff4b1d22aaf035da9d05031a",
+            "messageTitle": "Render plugins on dynamic resources (#1051)",
+            "messageBody": "",
+            "insertions": 25,
+            "deletions": 0
+          }
+        ]
       }
     ],
     "yash-chowdhary": [
@@ -425,6 +446,20 @@
             "deletions": 6
           }
         ]
+      },
+      {
+        "insertions": 603,
+        "deletions": 372,
+        "date": "2020-03-03",
+        "commitResults": [
+          {
+            "hash": "2eb7b7de8f510349e47447cdd7e7b92a25eeb7cc",
+            "messageTitle": "Refactor preprocess and url processing functions (#1026)",
+            "messageBody": "The parser class houses a large number of functions.\r\nThis can be daunting for newer developers to the project, and decreases\r\nmaintainability of the code.\r\n\r\nLet’s start by modularising the preprocess and url processing functions\r\ninto separate files.\r\nLet’s also enhance some in-code documentation for these functions.\r\nSome of these functions can also be abstracted into smaller units of\r\nfunctionality, increasing the maintainability of the code.",
+            "insertions": 603,
+            "deletions": 372
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -470,6 +505,20 @@
             "messageBody": "",
             "insertions": 180,
             "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 38,
+        "deletions": 0,
+        "date": "2020-03-03",
+        "commitResults": [
+          {
+            "hash": "962ddd13d54811e1d330f9e0336285b695291bf0",
+            "messageTitle": "Documentation for Implement no-* attributes for \u003cbox\u003e  (#1042)",
+            "messageBody": "",
+            "insertions": 38,
+            "deletions": 0
           }
         ]
       }
@@ -597,8 +646,8 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 333,
-    "yash-chowdhary": 457,
+    "openorclose": 960,
+    "yash-chowdhary": 455,
     "anubh-v": 0,
     "Tejas2805": 5,
     "dvrylc": 71,
@@ -608,11 +657,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 1390,
+    "ang-zeyu": 1920,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 0,
-    "le0tan": 1044,
+    "nbriannl": 37,
+    "le0tan": 958,
     "tiuweehan": 0,
     "madanalogy": 113,
     "daekoon": 0
@@ -656,19 +705,19 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 49,
-      "css": 210,
-      "json": 13,
-      "md": 37,
+      "js": 447,
+      "css": 413,
+      "json": 27,
+      "md": 45,
       "mbd": 0,
-      "mbdf": 24,
+      "mbdf": 28,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 186,
+      "js": 184,
       "css": 0,
       "json": 2,
       "md": 231,
@@ -788,12 +837,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 943,
+      "js": 1474,
       "css": 35,
       "json": 201,
       "md": 90,
       "mbd": 0,
-      "mbdf": 109,
+      "mbdf": 108,
       "njk": 12,
       "py": 0,
       "yml": 0
@@ -829,19 +878,19 @@
       "json": 0,
       "md": 0,
       "mbd": 0,
-      "mbdf": 0,
+      "mbdf": 37,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "le0tan": {
       "java": 0,
-      "js": 907,
+      "js": 820,
       "css": 8,
       "json": 0,
       "md": 21,
       "mbd": 0,
-      "mbdf": 61,
+      "mbdf": 62,
       "njk": 47,
       "py": 0,
       "yml": 0
@@ -887,24 +936,24 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 1315.9484,
-    "yash-chowdhary": 3077.8235,
+    "openorclose": 6129.242,
+    "yash-chowdhary": 2982.9695,
     "anubh-v": 0.0,
-    "Tejas2805": 0.22485206,
-    "dvrylc": 64.53741,
+    "Tejas2805": 0.21785869,
+    "dvrylc": 62.50218,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 35.367508,
-    "ang-zeyu": 15851.361,
+    "hcwong": 34.252174,
+    "ang-zeyu": 24949.002,
     "geshuming": 0.0,
-    "alyip98": 6.2919893,
-    "nbriannl": 371.9658,
-    "le0tan": 342526.62,
+    "alyip98": 6.093703,
+    "nbriannl": 373.8301,
+    "le0tan": 331722.44,
     "tiuweehan": 0.0,
-    "madanalogy": 368.7313,
+    "madanalogy": 357.10742,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
