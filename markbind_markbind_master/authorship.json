@@ -1196,7 +1196,7 @@
         "author": {
           "gitId": "le0tan"
         },
-        "content": "    z-index: 9999;"
+        "content": "    z-index: 1000;"
       },
       {
         "lineNumber": 98,
@@ -3115,10 +3115,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "le0tan": 8,
       "-": 299,
       "ang-zeyu": 5
@@ -10914,6 +11209,155 @@
     "authorContributionMap": {
       "-": 39,
       "ang-zeyu": 1
+    }
+  },
+  {
+    "path": "docs/userGuide/plugins/codeBlockCopyButtons.mbdf",
+    "fileType": "mbdf",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "#### `codeBlockCopyButtons`: Enabling code-blocks to be copied"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "This plugin allows you to copy code in code-blocks on a button-click."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "To enable it, simply add `codeBlockCopyButtons` to your site\u0027s plugins."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "```js"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "site.json"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "{"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  ..."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  \"plugins\": ["
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    \"codeBlockCopyButtons\""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  ],"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "This is what it\u0027ll look like once added - "
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "\u003cpic src\u003d\"{{baseUrl}}/images/copyCode.png\" width\u003d\"750\" alt\u003d\"copyCode\"/\u003e"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "yash-chowdhary": 20
     }
   },
   {
@@ -27299,33 +27743,40 @@
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "-"
+          "gitId": "yash-chowdhary"
         },
-        "content": "\u003cinclude src\u003d\"plugins/filterTags.mbdf\" /\u003e"
+        "content": "\u003cinclude src\u003d\"plugins/codeBlockCopyButtons.mbdf\" /\u003e"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cinclude src\u003d\"plugins/googleAnalytics.mbdf\" /\u003e"
+        "content": "\u003cinclude src\u003d\"plugins/filterTags.mbdf\" /\u003e"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003cinclude src\u003d\"plugins/googleAnalytics.mbdf\" /\u003e"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "{% from \"njk/common.njk\" import previous_next %}"
+        "content": ""
       },
       {
         "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{% from \"njk/common.njk\" import previous_next %}"
+      },
+      {
+        "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
@@ -27333,6 +27784,7 @@
       }
     ],
     "authorContributionMap": {
+      "yash-chowdhary": 1,
       "Tejas2805": 1,
       "-": 179,
       "ang-zeyu": 34
@@ -87443,6 +87895,407 @@
     }
   },
   {
+    "path": "src/plugins/codeBlockCopyButtons.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "const cheerio \u003d module.parent.require(\u0027cheerio\u0027);"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "const COPIED_TO_CLIPBOARD \u003d \u0027Copied!\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "const COPY_ICON \u003d \u0027\u003csvg class\u003d\"cpy\" xmlns\u003d\"http://www.w3.org/2000/svg\" width\u003d\"15\" height\u003d\"15\"\u0027"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "+ \u0027viewBox\u003d\"0 0 24 24\"\u003e\u003cpath d\u003d\"M13.508 11.504l.93-2.494 2.998 6.268-6.31 2.779.\u0027"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "+ \u0027894-2.478s-8.271-4.205-7.924-11.58c2.716 5.939 9.412 7.505 9.412 7.505zm7.492-9.\u0027"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "+ \u0027504v-2h-21v21h2v-19h19zm-14.633 2c.441.757.958 1.422 1.521 2h14.112v16h-16v-8.\u0027"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "+ \u0027548c-.713-.752-1.4-1.615-2-2.576v13.124h20v-20h-17.633z\" class\u003d\"cpy\"/\u003e\u003c/svg\u003e\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "const COPY_TO_CLIPBOARD \u003d \u0027Copy\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "function getButtonHTML() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  const html \u003d `\u003cbutton onclick\u003d\"copyCodeBlock(this)\" class\u003d\"copy-btn\" type\u003d\"button\"\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    \u003cdiv class\u003d\"copy-btn-body\"\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    ${COPY_ICON}"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    \u003cstrong class\u003d\"copy-btn-label\"\u003e${COPY_TO_CLIPBOARD}\u003c/strong\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    \u003c/button\u003e`;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  return html;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "const copyCodeBlockScript \u003d `\u003cscript\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    function copyCodeBlock(element) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        const pre \u003d element.parentElement;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        const codeElement \u003d pre.querySelector(\u0027code\u0027);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        const copyButtonLabel \u003d element.querySelector(\u0027.copy-btn-label\u0027);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        // create dummy text element to select() the text field"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        const textElement \u003d document.createElement(\u0027textarea\u0027);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        textElement.value \u003d codeElement.textContent;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        document.body.appendChild(textElement);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        textElement.select();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        document.execCommand(\u0027copy\u0027);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        document.body.removeChild(textElement);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        copyButtonLabel.textContent \u003d \u0027${COPIED_TO_CLIPBOARD}\u0027;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        setTimeout(function() {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "            copyButtonLabel.textContent \u003d \u0027${COPY_TO_CLIPBOARD}\u0027;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "        }, 2000);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    \u003c/script\u003e`;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "module.exports \u003d {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  getScripts: () \u003d\u003e copyCodeBlockScript,"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  postRender: (content) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    const $ \u003d cheerio.load(content, { xmlMode: false });"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    const codeBlockSelector \u003d \u0027pre\u0027;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    const buttonHTML \u003d getButtonHTML();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    $(codeBlockSelector).each((i, codeBlock) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "      $(codeBlock).append(buttonHTML);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    return $.html();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "};"
+      }
+    ],
+    "authorContributionMap": {
+      "yash-chowdhary": 56
+    }
+  },
+  {
     "path": "src/plugins/default/markbind-plugin-anchors.js",
     "fileType": "js",
     "lines": [
@@ -93325,10 +94178,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "-": 307,
       "ang-zeyu": 5
     }
@@ -104950,10 +106098,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "-": 307,
       "ang-zeyu": 5
     }
@@ -109866,10 +111309,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "-": 307,
       "ang-zeyu": 5
     }
@@ -114638,10 +116376,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "-": 307,
       "ang-zeyu": 5
     }
@@ -118892,10 +120925,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "-": 307,
       "ang-zeyu": 5
     }
@@ -123461,10 +125789,305 @@
           "gitId": "openorclose"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "/* \"Copy\" code block button */"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "pre {"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: relative;"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn {"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    background-color: #b4b4b9;"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    border-radius: 0.25rem;"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #f8f8ff;"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 75%;"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    line-height: 1;"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    padding: 0.25em 0.4em;"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    position: absolute;"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    right: 0.5em;"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    top: 0.4em;"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    white-space: nowrap;"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:hover {"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    color: #555;"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-body {"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    align-items: center;"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    display: flex;"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn svg {"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    fill: currentColor;"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    margin-right: 0.4em;"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn-label {"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": ".copy-btn:focus {"
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "    outline: none;"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "yash-chowdhary"
+        },
+        "content": "}"
       }
     ],
     "authorContributionMap": {
       "openorclose": 59,
+      "yash-chowdhary": 42,
       "-": 307,
       "ang-zeyu": 5
     }
