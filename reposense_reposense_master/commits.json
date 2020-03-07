@@ -189,6 +189,20 @@
             "deletions": 25
           }
         ]
+      },
+      {
+        "insertions": 12,
+        "deletions": 17,
+        "date": "2020-03-06",
+        "commitResults": [
+          {
+            "hash": "33e24b8d009acfe69932b8b8ceb4427778c5195c",
+            "messageTitle": "[#1076] Author: add a `isIgnoringFile` method (#1085)",
+            "messageBody": "There are a few instances where we obtain the `ignoreGlobMatcher` \r\nfrom an Author instance first to manually check if this matches with \r\na given file path.\r\n\r\nLet\u0027s allow the Author instance to tell clients if it is ignoring a \r\nparticular file (given a filepath) - instead of giving clients the\r\nignoreGlobMatcher and letting clients figure out the answer on their \r\nown.",
+            "insertions": 12,
+            "deletions": 17
+          }
+        ]
       }
     ],
     "Tejas2805": [
@@ -696,10 +710,10 @@
     "niqiukun": 0,
     "openorclose": 0,
     "yash-chowdhary": 7,
-    "anubh-v": 319,
+    "anubh-v": 331,
     "Tejas2805": 647,
     "dvrylc": 0,
-    "jamessspanggg": 223,
+    "jamessspanggg": 222,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
@@ -765,7 +779,7 @@
       "gradle": 0
     },
     "anubh-v": {
-      "java": 284,
+      "java": 296,
       "js": 0,
       "scss": 34,
       "json": 0,
@@ -795,7 +809,7 @@
       "gradle": 0
     },
     "jamessspanggg": {
-      "java": 179,
+      "java": 178,
       "js": 8,
       "scss": 33,
       "json": 0,
@@ -926,21 +940,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 2.0095315,
+    "ccyccyccy": 1.9691776,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.760221,
-    "anubh-v": 479.68396,
-    "Tejas2805": 4356.6016,
+    "yash-chowdhary": 1.724306,
+    "anubh-v": 475.6384,
+    "Tejas2805": 4270.6177,
     "dvrylc": 0.0,
-    "jamessspanggg": 233.43762,
+    "jamessspanggg": 228.85658,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 347.7912,
+    "0blivious": 341.1061,
     "hcwong": 0.0,
-    "ang-zeyu": 0.2603874,
+    "ang-zeyu": 0.25507486,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

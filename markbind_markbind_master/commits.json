@@ -66,6 +66,20 @@
             "deletions": 0
           }
         ]
+      },
+      {
+        "insertions": 180,
+        "deletions": 201,
+        "date": "2020-03-07",
+        "commitResults": [
+          {
+            "hash": "e521f97abad4097729ae286c0c379f7f9b68fa3c",
+            "messageTitle": "Allow changing parameter properties (#1075)",
+            "messageBody": "",
+            "insertions": 180,
+            "deletions": 201
+          }
+        ]
       }
     ],
     "yash-chowdhary": [
@@ -178,6 +192,27 @@
             "messageBody": "",
             "insertions": 371,
             "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 846,
+        "deletions": 3,
+        "date": "2020-03-07",
+        "commitResults": [
+          {
+            "hash": "fb9b00e504d1007d3260733d036f2e0a454e12a6",
+            "messageTitle": "Enable AppVeyor CI (#1040)",
+            "messageBody": "",
+            "insertions": 18,
+            "deletions": 1
+          },
+          {
+            "hash": "4ea52c23ece2fa277afac552691580d6b9c4d89d",
+            "messageTitle": "Custom timezone for built-in timestamp (#1073)",
+            "messageBody": "",
+            "insertions": 828,
+            "deletions": 2
           }
         ]
       }
@@ -474,6 +509,20 @@
             "deletions": 372
           }
         ]
+      },
+      {
+        "insertions": 1404,
+        "deletions": 63,
+        "date": "2020-03-07",
+        "commitResults": [
+          {
+            "hash": "c2b68e8fe54d801999022c6f4b9d2f982ab90495",
+            "messageTitle": "Implement an api to ignore content in certain tags (#1047)",
+            "messageBody": "The parsers MarkBind uses parses content in html tags as html\r\nor markdown respectively.\r\nThis makes it difficult to add custom components that utilize\r\nconflicting syntax.\r\n\r\nLet’s add an interface to ignore content in certain special tags.\r\nThis interface is also exposed to plugins as the getSpecialTags option.",
+            "insertions": 1404,
+            "deletions": 63
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -533,6 +582,20 @@
             "messageBody": "",
             "insertions": 38,
             "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 341,
+        "deletions": 12,
+        "date": "2020-03-07",
+        "commitResults": [
+          {
+            "hash": "3a4177373ea41f8ad66ffa7f70266d3c8d0c37b7",
+            "messageTitle": "Add heading and line highlighting to code blocks (#1034)",
+            "messageBody": "",
+            "insertions": 341,
+            "deletions": 12
           }
         ]
       }
@@ -674,8 +737,8 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 960,
-    "yash-chowdhary": 826,
+    "openorclose": 1060,
+    "yash-chowdhary": 1672,
     "anubh-v": 0,
     "Tejas2805": 5,
     "dvrylc": 71,
@@ -685,11 +748,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 1920,
+    "ang-zeyu": 3267,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 37,
-    "le0tan": 958,
+    "nbriannl": 366,
+    "le0tan": 938,
     "tiuweehan": 0,
     "madanalogy": 113,
     "daekoon": 0
@@ -733,27 +796,27 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 447,
+      "js": 550,
       "css": 413,
       "json": 27,
       "md": 45,
       "mbd": 0,
-      "mbdf": 28,
+      "mbdf": 25,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 240,
+      "js": 251,
       "css": 294,
-      "json": 2,
-      "md": 232,
+      "json": 3,
+      "md": 1045,
       "mbd": 0,
-      "mbdf": 58,
+      "mbdf": 61,
       "njk": 0,
       "py": 0,
-      "yml": 0
+      "yml": 18
     },
     "anubh-v": {
       "java": 0,
@@ -865,10 +928,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 1474,
-      "css": 35,
-      "json": 201,
-      "md": 90,
+      "js": 2031,
+      "css": 682,
+      "json": 240,
+      "md": 194,
       "mbd": 0,
       "mbdf": 108,
       "njk": 12,
@@ -901,19 +964,19 @@
     },
     "nbriannl": {
       "java": 0,
-      "js": 0,
-      "css": 0,
+      "js": 45,
+      "css": 198,
       "json": 0,
       "md": 0,
       "mbd": 0,
-      "mbdf": 37,
+      "mbdf": 123,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "le0tan": {
       "java": 0,
-      "js": 820,
+      "js": 800,
       "css": 8,
       "json": 0,
       "md": 21,
@@ -964,24 +1027,24 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6065.9966,
-    "yash-chowdhary": 4308.198,
+    "openorclose": 7267.535,
+    "yash-chowdhary": 11228.722,
     "anubh-v": 0.0,
-    "Tejas2805": 0.21562335,
-    "dvrylc": 61.851982,
+    "Tejas2805": 0.2091837,
+    "dvrylc": 59.9801,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 33.89586,
-    "ang-zeyu": 24695.984,
+    "hcwong": 32.87001,
+    "ang-zeyu": 44830.32,
     "geshuming": 0.0,
-    "alyip98": 6.0303583,
-    "nbriannl": 369.95428,
-    "le0tan": 328268.56,
+    "alyip98": 5.847977,
+    "nbriannl": 1600.9452,
+    "le0tan": 318331.7,
     "tiuweehan": 0.0,
-    "madanalogy": 353.39474,
+    "madanalogy": 342.7034,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
