@@ -183,6 +183,20 @@
             "deletions": 23
           }
         ]
+      },
+      {
+        "insertions": 2,
+        "deletions": 1,
+        "date": "2020-03-07",
+        "commitResults": [
+          {
+            "hash": "0d17cc55175c6edf9957af715748a455491133b9",
+            "messageTitle": "[#9773] Student course detail page: Standardize picture size and title length (#9938)",
+            "messageBody": "* Standardize profile picture on student view team\r\n\r\n* Add max-height element\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
+            "insertions": 2,
+            "deletions": 1
+          }
+        ]
       }
     ],
     "ang-zeyu": [],
@@ -250,6 +264,20 @@
             "messageBody": "* Add Nationalities Service\r\n\r\n* Update tests for NationalitiesService\r\n\r\n* Remove HttpRequestService from student home page\r\n\r\n* Remove HttpRequestService from student course details\r\n\r\n* Add test for nationalities service\r\n\r\n* Remove HttpRequestService from course join page\r\n\r\n* Add API Endpoints for resources\r\n\r\n* Add tests for NationalitiesService\r\n\r\n* Add Instructor service tests\r\n\r\n* Fix java linting issues\r\n\r\n* Add tests for courses service\r\n\r\n* Refactor Course Service to use api-endpoints\r\n\r\n* Refactor URIs to use Resource Endpoints in api-endpoints\r\n\r\n* fix e2e tests\r\n",
             "insertions": 369,
             "deletions": 66
+          }
+        ]
+      },
+      {
+        "insertions": 485,
+        "deletions": 227,
+        "date": "2020-03-07",
+        "commitResults": [
+          {
+            "hash": "55f1f66cb2c74d266dcbdd5058703cfd6b3611f8",
+            "messageTitle": "[#9940] Instructor module: standardize API endpoints, remove HttpRequestService (#9972)",
+            "messageBody": "* Create unpublishFeedbackSession in feedback session service\r\n\r\n* Refactor URI string literals\r\n\r\n* Add all API endpoints\r\n\r\n* Remove HttpRequestService from instructor-student-list-page\r\n\r\n* Refactor load instructor privilege\r\n\r\n* Remove HttpRequestService from instructor-session-base-page\r\n\r\n* Remove HttpRequestService from instructor sessions\r\n\r\n* Add tests for course and questions service\r\n\r\n* Add sessions and instructor tests\r\n\r\n* Remove Cron job and Legacy API endpoints\r\n\r\n* Refactor to not pass model as parameter\r\n\r\n* Remove WebPageEndpoints\r\n\r\n* Move optionals to an object parameter",
+            "insertions": 485,
+            "deletions": 227
           }
         ]
       }
@@ -370,13 +398,13 @@
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 153,
+    "hcwong": 155,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 439,
-    "madanalogy": 639,
+    "tiuweehan": 859,
+    "madanalogy": 635,
     "daekoon": 0
   },
   "authorFileTypeContributionMap": {
@@ -513,7 +541,7 @@
     "hcwong": {
       "java": 53,
       "js": 0,
-      "scss": 0,
+      "scss": 2,
       "md": 0,
       "py": 0,
       "tag": 0,
@@ -561,14 +589,14 @@
       "ts": 0
     },
     "tiuweehan": {
-      "java": 76,
+      "java": 77,
       "js": 0,
       "scss": 0,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 363
+      "ts": 782
     },
     "madanalogy": {
       "java": 470,
@@ -578,7 +606,7 @@
       "py": 0,
       "tag": 0,
       "html": 9,
-      "ts": 160
+      "ts": 156
     },
     "daekoon": {
       "java": 0,
@@ -594,24 +622,24 @@
   "authorContributionVariance": {
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 1009.9977,
+    "niqiukun": 929.2842,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "anubh-v": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 70.0258,
+    "dvrylc": 64.46817,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 116.845604,
+    "hcwong": 107.6106,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 2249.2354,
-    "madanalogy": 2372.758,
+    "tiuweehan": 7094.2246,
+    "madanalogy": 2184.283,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
