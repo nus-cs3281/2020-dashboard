@@ -207,16 +207,16 @@
     ],
     "Tejas2805": [
       {
-        "insertions": 3,
-        "deletions": 6,
+        "insertions": 8,
+        "deletions": 9,
         "date": "2019-12-20",
         "commitResults": [
           {
             "hash": "efa7969f68907fc07ae3b17a5027f6aa5e876f07",
             "messageTitle": "[#931] Code view: Default sorting in descending order (#932)",
             "messageBody": "In Code view, the default order for LoC is ascending.\r\n\r\nLet\u0027s make the default order descending as it is more meaningful to\r\nhave bigger changes on top as they should be more interesting.\r\n",
-            "insertions": 3,
-            "deletions": 6
+            "insertions": 8,
+            "deletions": 9
           }
         ]
       },
@@ -235,21 +235,21 @@
         ]
       },
       {
-        "insertions": 4,
-        "deletions": 5,
+        "insertions": 14,
+        "deletions": 8,
         "date": "2020-01-16",
         "commitResults": [
           {
             "hash": "74ac22a3848f1009bab31d3ecb865c00f227e71e",
             "messageTitle": "[#947] Synchronising different tab views (#948)",
             "messageBody": "It\u0027s difficult to distinguish between the authorship and zoom views as \r\nthere are no obvious symbols to identify which is which. \r\n\r\nLet\u0027s add a header to both the views for easy identification and a link \r\nto the zoom title to make it more consistent with authorship.",
-            "insertions": 4,
-            "deletions": 5
+            "insertions": 14,
+            "deletions": 8
           }
         ]
       },
       {
-        "insertions": 255,
+        "insertions": 256,
         "deletions": 254,
         "date": "2020-01-22",
         "commitResults": [
@@ -257,13 +257,13 @@
             "hash": "b3aaf1c56e3e81eda3c99e7eb66e19fe3c89a7d9",
             "messageTitle": "[#960]Refactor Authorship Css (#986)",
             "messageBody": "The JS/HTML code of each component has already rested in its own \r\nfile, but all the CSS are still in one file. \r\n\r\nLet\u0027s refactor the Authorship CSS into a new file for better \r\nscalability and readability.\r\n",
-            "insertions": 255,
+            "insertions": 256,
             "deletions": 254
           }
         ]
       },
       {
-        "insertions": 177,
+        "insertions": 178,
         "deletions": 176,
         "date": "2020-01-30",
         "commitResults": [
@@ -271,64 +271,64 @@
             "hash": "5b1fb323dc18c52e930158a4cdd184232dd8a826",
             "messageTitle": "[#960] Refactor Summary CSS (#1003)",
             "messageBody": "The JS/HTML code of each component has already rested in its own \r\nfile, but all the CSS are still in one file. \r\n\r\nLet\u0027s refactor the Summary CSS into a new file for better scalability \r\nand readability.\r\n\r\n",
-            "insertions": 177,
+            "insertions": 178,
             "deletions": 176
           }
         ]
       },
       {
-        "insertions": 3,
-        "deletions": 6,
+        "insertions": 5,
+        "deletions": 8,
         "date": "2020-02-03",
         "commitResults": [
           {
             "hash": "b98f31eaa04839fa7d3883b684f933bd51241a93",
             "messageTitle": "[#964] Add UG link to report page (#983)",
             "messageBody": "The link to the UG in the documents points to the released version of \r\nthe UG. As a result, there may be some discrepancies between the master \r\nand the release branch.\r\n\r\nLet\u0027s add a link to the UG on the report page corresponding to the \r\nversion that RepoSense was ran on.",
-            "insertions": 3,
-            "deletions": 6
+            "insertions": 5,
+            "deletions": 8
           }
         ]
       },
       {
-        "insertions": 18,
-        "deletions": 10,
+        "insertions": 33,
+        "deletions": 13,
         "date": "2020-02-05",
         "commitResults": [
           {
             "hash": "0b151faf17df809193000461713a2b4b1329a50b",
             "messageTitle": "[#873, #1016, #1049]Enable octocat icon for merge group (#1017)",
             "messageBody": "There are not a lot of features that the user can use when merge \r\ngroup is active. \r\n\r\nLet\u0027s \r\n  - add the octocat icon to enhance the usage of merge group. \r\n  - fix the thickness of contribution bars by changing rem to pix.\r\n\r\nWhen it\u0027s `group by Repo`, the octocat icon will link to the group\u0027s\r\nrepository. When it\u0027s `group by Author`, the octocat icon will link \r\nto the author\u0027s github profile. \r\n",
-            "insertions": 18,
-            "deletions": 10
+            "insertions": 33,
+            "deletions": 13
           }
         ]
       },
       {
-        "insertions": 39,
-        "deletions": 38,
+        "insertions": 41,
+        "deletions": 39,
         "date": "2020-02-14",
         "commitResults": [
           {
             "hash": "5cd4123966a51b1916858b08bc45d12014ad8157",
             "messageTitle": "[#960] Refactor Ramp CSS (#1055)",
             "messageBody": "The JS/HTML code of each component has already rested in its own \r\nfile, but all the CSS are still in one file. \r\n\r\nLet\u0027s refactor the Ramp CSS into a new file for better scalability \r\nand readability.\r\n",
-            "insertions": 39,
-            "deletions": 38
+            "insertions": 41,
+            "deletions": 39
           }
         ]
       },
       {
-        "insertions": 37,
-        "deletions": 15,
+        "insertions": 152,
+        "deletions": 116,
         "date": "2020-02-22",
         "commitResults": [
           {
             "hash": "1a08d0561a7c29283c532f0d064b6b88ba6dedee",
             "messageTitle": "[#522] Implement style checker on .pug files (#987)",
             "messageBody": "RepoSense has CheckStyle, ESLint and Stylelint to check our java, \r\njavascript and css code styles automatically. However, `.pug` files \r\nare not covered by any of these tools.\r\n\r\nLet\u0027s implement pug-lint to check the code styles of .pug files.\r\n\r\nTODO: Add a line wrap rule in the future\r\n",
-            "insertions": 26,
-            "deletions": 1
+            "insertions": 141,
+            "deletions": 102
           },
           {
             "hash": "7d16236189d17e4a12926337863b81d3708fe53f",
@@ -354,7 +354,7 @@
         ]
       },
       {
-        "insertions": 94,
+        "insertions": 95,
         "deletions": 93,
         "date": "2020-02-27",
         "commitResults": [
@@ -362,7 +362,7 @@
             "hash": "893436fbf6dacf5eca051b42f3327bbdef942727",
             "messageTitle": "[#960] Refactor Zoom CSS (#1079)",
             "messageBody": "The JS/HTML code of each component has already rested in its own \r\nfile, but all the CSS are still in one file. \r\n\r\nLet\u0027s refactor the Zoom CSS into a new file for better scalability \r\nand readability.\r\n",
-            "insertions": 94,
+            "insertions": 95,
             "deletions": 93
           }
         ]
@@ -413,30 +413,30 @@
         ]
       },
       {
-        "insertions": 94,
-        "deletions": 9,
+        "insertions": 107,
+        "deletions": 10,
         "date": "2020-01-22",
         "commitResults": [
           {
             "hash": "e2f1ec8fffe7ed8140bc9af968f7d26582a67fdd",
             "messageTitle": "[#879] Display commit tags in commits panel (#969)",
             "messageBody": "The tags of each commit are not shown in the commits panel.\r\n\r\nWith the active use of git tags in CS21x3 repositories, it is useful to \r\nprovide tutors on the usage and information of tags in each commit.\r\n\r\nLet\u0027s display the tags of each commit (if there\u0027s any) in the commits \r\npanel.",
-            "insertions": 94,
-            "deletions": 9
+            "insertions": 107,
+            "deletions": 10
           }
         ]
       },
       {
-        "insertions": 3,
-        "deletions": 3,
+        "insertions": 4,
+        "deletions": 4,
         "date": "2020-01-29",
         "commitResults": [
           {
             "hash": "8ed76d0dfebad2e509d87879661501239c35acb9",
             "messageTitle": "[#984] Fix miscalculation of expanded commit message count (#998)",
             "messageBody": "We get the number of expanded commit message count in zoom tab based on\r\nthe number of divs with class name \u0027commit-message active\u0027.\r\n\r\nCommit messages without commit message bodies also have default class\r\nname of \u0027commit-message active\u0027, which leads to the expanded commit\r\nmessage count to not reflect on the true number of commit messages that\r\nare expanded.\r\n\r\nLet\u0027s append the class name \u0027message-body\u0027 to commit messages that have\r\ncommit message bodies, to distinguish between messages that can be\r\nexpanded and vice versa.\r\n",
-            "insertions": 3,
-            "deletions": 3
+            "insertions": 4,
+            "deletions": 4
           }
         ]
       },
@@ -476,16 +476,16 @@
         ]
       },
       {
-        "insertions": 4,
-        "deletions": 2,
+        "insertions": 27,
+        "deletions": 26,
         "date": "2020-02-22",
         "commitResults": [
           {
             "hash": "636f4d98583c49c18dc25fe66b0c4d196ad05271",
             "messageTitle": "[#999] Remove empty zoom__day divs (#1000)",
             "messageBody": "When granularity is set to week, the \u0027pushCommitsWeek\u0027 method gets \r\nall possible weeks (week 1, 2, 3, etc...) from start date until the \r\nend date and pushes it to \u0027user.commits\u0027, no matter the week has any \r\ncommits at all. Additionally, commits with zero insertions but with \r\ndeletions are also not taken into consideration in the commits \r\npanel.\r\n\r\nWeeks that have no commits is not useful and redundant. Commits with\r\nonly deletions are maybe useful as it may represent \r\nrefactoring/removing redundant code.\r\n\r\nLet\u0027s add a check to add a week only if it has commits. And remove \r\nthe check for commits with zero insertions, so that commits with \r\nonly deletions are also included.",
-            "insertions": 4,
-            "deletions": 2
+            "insertions": 27,
+            "deletions": 26
           }
         ]
       },
@@ -504,16 +504,16 @@
         ]
       },
       {
-        "insertions": 35,
-        "deletions": 1,
+        "insertions": 39,
+        "deletions": 2,
         "date": "2020-03-04",
         "commitResults": [
           {
             "hash": "9725a25d4e34164cefbb51f7f6e39964cb0a521a",
             "messageTitle": "Add commit message length configuration border (#1048)",
             "messageBody": "GitHub\u0027s maximum length of commit message\u0027s subject line and body is \r\ndefaulted at 50 and 72 characters respectively.\r\n\r\nCommits panel does not show the indication of the maximum lengths.\r\n\r\nLet\u0027s add a dotted lines for commit message bodies at 72 characters \r\nand subject lines at 50 characters, these lines indicate whether a \r\ncommit message\u0027s subject line or body exceed GitHub\u0027s maximum \r\nlength.\r\n",
-            "insertions": 35,
-            "deletions": 1
+            "insertions": 39,
+            "deletions": 2
           }
         ]
       }
@@ -582,16 +582,16 @@
         ]
       },
       {
-        "insertions": 26,
-        "deletions": 1,
+        "insertions": 28,
+        "deletions": 2,
         "date": "2020-01-23",
         "commitResults": [
           {
             "hash": "6fe782466dc827ab5c37c095000dfaba6e2ee3db",
             "messageTitle": "[#885] Allow reset search filter (#895)",
             "messageBody": "The user has to manually delete the keywords and press another enter \r\nto go back to the full view.\r\n\r\nHowever, this can be improved by providing a reset button to clear \r\nthe search bar, which can help the user save time for deleting. \r\n\r\nLet\u0027s provide a button to reset the search bar.",
-            "insertions": 26,
-            "deletions": 1
+            "insertions": 28,
+            "deletions": 2
           }
         ]
       },
@@ -610,7 +610,7 @@
         ]
       },
       {
-        "insertions": 24,
+        "insertions": 28,
         "deletions": 8,
         "date": "2020-02-05",
         "commitResults": [
@@ -618,22 +618,22 @@
             "hash": "a9fedc6689c5bea63706bde2c01101b42b058cb2",
             "messageTitle": "[#920] Ramp chart: show percentile for each item (#922)",
             "messageBody": "We have index number for each group in the ramp chart but not its\r\npercentile. It is hard to tell the ranking position of the group.\r\n\r\nThis can be improved to show the percentile of each item so that it\r\nis easy to see whether an item is in the 20%th percentile and so on.\r\n\r\nLet\u0027s add a percentile number at the right side of each group.\r\n",
-            "insertions": 24,
+            "insertions": 28,
             "deletions": 8
           }
         ]
       },
       {
-        "insertions": 45,
-        "deletions": 31,
+        "insertions": 68,
+        "deletions": 39,
         "date": "2020-02-10",
         "commitResults": [
           {
             "hash": "61f1fc4f4f854a176ab1f6672f6759c42712c9c3",
             "messageTitle": "[#838] ZoomTab: add sort controls  (#943)",
             "messageBody": "We have Zoom tab shows the list of commits in the order from\r\nearliest to latest commits (without an option to reverse the sorting\r\norder or change the sorting type).\r\n\r\nThis can be improved by allowing the user to view the commits in\r\nreverse chronological order and add other sorting options such as\r\nLOC.\r\n\r\nLet\u0027s add a sorting field to allow the user to sort the commits\r\naccording to Loc or time, and also allow the commits to be\r\ndisplayed in reverse order.",
-            "insertions": 45,
-            "deletions": 31
+            "insertions": 68,
+            "deletions": 39
           }
         ]
       },
@@ -652,30 +652,37 @@
         ]
       },
       {
-        "insertions": 44,
-        "deletions": 64,
+        "insertions": 51,
+        "deletions": 73,
         "date": "2020-02-22",
         "commitResults": [
           {
             "hash": "cd9e636fec6c7919fc50ed040da195e699760fa3",
             "messageTitle": "[#1023] Authorship Panel: expand all button always appear when first open the page (#1040)",
             "messageBody": "The `expand all` button will always appear on the authorship panel \r\nwhen we first open the page or when refresh the page, until the\r\nloading is complete. The button to display is supposed to be\r\n`collapse all` as we are to display all the file details initially.\r\n\r\nLet\u0027s display the `collapse all` button at the very beginning, and \r\nupdate all relevant checkboxes, radio buttons using proper Vue \r\nmodel.\r\n",
-            "insertions": 44,
-            "deletions": 64
+            "insertions": 51,
+            "deletions": 73
           }
         ]
       },
       {
-        "insertions": 21,
-        "deletions": 4,
+        "insertions": 234,
+        "deletions": 211,
         "date": "2020-02-25",
         "commitResults": [
           {
             "hash": "bb4316ce679041b27f2b5e8a4b95799c8383159f",
             "messageTitle": "[#1071] Zoom view: provide a way to highlight the commit (#1075)",
             "messageBody": "Clicking a tag jumps to a list of commits full of tags. Users may\r\nnot be able to find the commit with that tag easily.\r\n\r\nWe can highlight the resulting commit with that particular tag by \r\nproviding a light blue border around the message div.\r\n\r\nLet\u0027s add a focus property to the commit message body.\r\n",
-            "insertions": 21,
-            "deletions": 4
+            "insertions": 30,
+            "deletions": 8
+          },
+          {
+            "hash": "be80abbd06b7c3f6bee2e06025f9925f930e9349",
+            "messageTitle": "[#576] Refactor summary from index (#1062)",
+            "messageBody": "The entire v_summary template resides in the index pug file.\r\n\r\nLet\u0027s refactor v_summary to move it into its own component so that \r\nRepoSense\u0027s dashboard is much more extendable in the future.",
+            "insertions": 204,
+            "deletions": 203
           }
         ]
       }
@@ -711,13 +718,13 @@
     "openorclose": 0,
     "yash-chowdhary": 7,
     "anubh-v": 331,
-    "Tejas2805": 647,
+    "Tejas2805": 686,
     "dvrylc": 0,
-    "jamessspanggg": 222,
+    "jamessspanggg": 235,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 168,
+    "0blivious": 403,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -735,7 +742,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "Parcly-Taxel": {
@@ -745,7 +752,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "niqiukun": {
@@ -755,7 +762,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "openorclose": {
@@ -765,7 +772,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "yash-chowdhary": {
@@ -775,7 +782,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "anubh-v": {
@@ -785,7 +792,7 @@
       "json": 0,
       "md": 1,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "Tejas2805": {
@@ -795,7 +802,7 @@
       "json": 26,
       "md": 66,
       "py": 0,
-      "jade": 0,
+      "pug": 39,
       "gradle": 0
     },
     "dvrylc": {
@@ -805,7 +812,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "jamessspanggg": {
@@ -815,7 +822,7 @@
       "json": 0,
       "md": 3,
       "py": 0,
-      "jade": 0,
+      "pug": 13,
       "gradle": 0
     },
     "j-lum": {
@@ -825,7 +832,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "iskandarzulkarnaien": {
@@ -835,7 +842,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "xantho09": {
@@ -845,7 +852,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "0blivious": {
@@ -855,7 +862,7 @@
       "json": 0,
       "md": 10,
       "py": 0,
-      "jade": 0,
+      "pug": 235,
       "gradle": 0
     },
     "hcwong": {
@@ -865,7 +872,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "ang-zeyu": {
@@ -875,7 +882,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "geshuming": {
@@ -885,7 +892,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "alyip98": {
@@ -895,7 +902,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "nbriannl": {
@@ -905,7 +912,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "tiuweehan": {
@@ -915,7 +922,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "madanalogy": {
@@ -925,7 +932,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     },
     "daekoon": {
@@ -935,7 +942,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "jade": 0,
+      "pug": 0,
       "gradle": 0
     }
   },
@@ -946,13 +953,13 @@
     "openorclose": 0.0,
     "yash-chowdhary": 1.724306,
     "anubh-v": 475.6384,
-    "Tejas2805": 4270.6177,
+    "Tejas2805": 4949.338,
     "dvrylc": 0.0,
-    "jamessspanggg": 228.85658,
+    "jamessspanggg": 288.30905,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 341.1061,
+    "0blivious": 2406.646,
     "hcwong": 0.0,
     "ang-zeyu": 0.25507486,
     "geshuming": 0.0,
