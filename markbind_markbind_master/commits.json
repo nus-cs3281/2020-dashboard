@@ -523,6 +523,27 @@
             "deletions": 63
           }
         ]
+      },
+      {
+        "insertions": 339,
+        "deletions": 82,
+        "date": "2020-03-08",
+        "commitResults": [
+          {
+            "hash": "1451bd5d9594c414a4bfd3d800fbc493c44e7df7",
+            "messageTitle": "Implement lazy page building for markbind serve (#1038)",
+            "messageBody": "During live reload, changes to a source file rebuilds all files that are\r\ndependent on it.\r\n\r\nIn addition, rebuilding all dependent source files slows the live reload\r\nprocess, leading to a less pleasant user experience.\r\n\r\nIn addition, when running markbind serve, all pages are built and\r\nrendered initially.\r\nThis significantly slows down the time to first page load, which can\r\nbe substantial when the number of source files is huge.\r\n\r\nLet\u0027s implement lazy page building in these operations, which is opt-in\r\nusing the existing -o \u003cfile\u003e or --one-page \u003cfile\u003e flags for the markbind\r\nserve command.\r\n\r\nChanges to a source file will only rebuild pages that are dependent on\r\nit, and is currently being viewed by the author. Other pages not being\r\nviewed by the author are rebuilt when the author navigates to them.\r\nIn addition, only the landing page is built initially when serving.\r\nSubsequent pages are built when the author navigates to them.",
+            "insertions": 337,
+            "deletions": 79
+          },
+          {
+            "hash": "940127ac06eb7f8aef25d9afec6c866510bb1fd3",
+            "messageTitle": "Fix refactor to processDynamicResources (#1092)",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 3
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -596,6 +617,20 @@
             "messageBody": "",
             "insertions": 341,
             "deletions": 12
+          }
+        ]
+      },
+      {
+        "insertions": 91,
+        "deletions": 10,
+        "date": "2020-03-08",
+        "commitResults": [
+          {
+            "hash": "ba7981362668e54d9216f0278ad82d49493dfaa5",
+            "messageTitle": "Add warnings for conflicting/deprecated component attribs (#1057)",
+            "messageBody": "",
+            "insertions": 91,
+            "deletions": 10
           }
         ]
       }
@@ -737,24 +772,24 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1060,
+    "openorclose": 1059,
     "yash-chowdhary": 1672,
     "anubh-v": 0,
     "Tejas2805": 5,
-    "dvrylc": 71,
+    "dvrylc": 70,
     "jamessspanggg": 0,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 3267,
+    "ang-zeyu": 3564,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 366,
-    "le0tan": 938,
+    "nbriannl": 457,
+    "le0tan": 941,
     "tiuweehan": 0,
-    "madanalogy": 113,
+    "madanalogy": 61,
     "daekoon": 0
   },
   "authorFileTypeContributionMap": {
@@ -796,7 +831,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 550,
+      "js": 549,
       "css": 413,
       "json": 27,
       "md": 45,
@@ -844,7 +879,7 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 29,
+      "js": 28,
       "css": 30,
       "json": 3,
       "md": 0,
@@ -928,10 +963,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2031,
-      "css": 682,
+      "js": 2265,
+      "css": 681,
       "json": 240,
-      "md": 194,
+      "md": 258,
       "mbd": 0,
       "mbdf": 108,
       "njk": 12,
@@ -964,7 +999,7 @@
     },
     "nbriannl": {
       "java": 0,
-      "js": 45,
+      "js": 136,
       "css": 198,
       "json": 0,
       "md": 0,
@@ -976,7 +1011,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 800,
+      "js": 803,
       "css": 8,
       "json": 0,
       "md": 21,
@@ -1003,7 +1038,7 @@
       "js": 27,
       "css": 0,
       "json": 0,
-      "md": 85,
+      "md": 33,
       "mbd": 0,
       "mbdf": 0,
       "njk": 1,
@@ -1027,24 +1062,24 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 7267.535,
-    "yash-chowdhary": 11228.722,
+    "openorclose": 7196.2256,
+    "yash-chowdhary": 11120.201,
     "anubh-v": 0.0,
-    "Tejas2805": 0.2091837,
-    "dvrylc": 59.9801,
+    "Tejas2805": 0.20712167,
+    "dvrylc": 59.38108,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 32.87001,
-    "ang-zeyu": 44830.32,
+    "hcwong": 32.541718,
+    "ang-zeyu": 45797.793,
     "geshuming": 0.0,
-    "alyip98": 5.847977,
-    "nbriannl": 1600.9452,
-    "le0tan": 318331.7,
+    "alyip98": 5.7896132,
+    "nbriannl": 1675.2452,
+    "le0tan": 315151.72,
     "tiuweehan": 0.0,
-    "madanalogy": 342.7034,
+    "madanalogy": 339.2831,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
