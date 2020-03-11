@@ -1,5 +1,3378 @@
 [
   {
+    "path": "langs/config.go",
+    "fileType": "go",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Copyright 2018 The Hugo Authors. All rights reserved."
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "//"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// You may obtain a copy of the License at"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "//"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Unless required by applicable law or agreed to in writing, software"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// limitations under the License."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package langs"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import ("
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"fmt\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"path/filepath\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"sort\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"strings\""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/gohugoio/hugo/common/maps\""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/spf13/cast\""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/pkg/errors\""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/gohugoio/hugo/config\""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ")"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "type LanguagesConfig struct {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tLanguages                      Languages"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tMultihost                      bool"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tDefaultContentLanguageInSubdir bool"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func LoadLanguageSettings(cfg config.Provider, oldLangs Languages) (c LanguagesConfig, err error) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tdefaultLang :\u003d cfg.GetString(\"defaultContentLanguage\")"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif defaultLang \u003d\u003d \"\" {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tdefaultLang \u003d \"en\""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tcfg.Set(\"defaultContentLanguage\", defaultLang)"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tvar languages map[string]interface{}"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tlanguagesFromConfig :\u003d cfg.GetStringMap(\"languages\")"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tdisableLanguages :\u003d cfg.GetStringSlice(\"disableLanguages\")"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif len(disableLanguages) \u003d\u003d 0 {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguages \u003d languagesFromConfig"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t} else {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguages \u003d make(map[string]interface{})"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tfor k, v :\u003d range languagesFromConfig {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tfor _, disabled :\u003d range disableLanguages {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tif disabled \u003d\u003d defaultLang {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t\treturn c, fmt.Errorf(\"cannot disable default language %q\", defaultLang)"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t}"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tif strings.EqualFold(k, disabled) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t\tv.(map[string]interface{})[\"disabled\"] \u003d true"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t\tbreak"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t}"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t}"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tlanguages[k] \u003d v"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tvar languages2 Languages"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif len(languages) \u003d\u003d 0 {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguages2 \u003d append(languages2, NewDefaultLanguage(cfg))"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t} else {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguages2, err \u003d toSortedLanguages(cfg, languages)"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif err !\u003d nil {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn c, errors.Wrap(err, \"Failed to parse multilingual config\")"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif oldLangs !\u003d nil {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// When in multihost mode, the languages are mapped to a server, so"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// some structural language changes will need a restart of the dev server."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// The validation below isn\u0027t complete, but should cover the most"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// important cases."
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tvar invalid bool"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif languages2.IsMultihost() !\u003d oldLangs.IsMultihost() {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tinvalid \u003d true"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t} else {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tif languages2.IsMultihost() \u0026\u0026 len(languages2) !\u003d len(oldLangs) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tinvalid \u003d true"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t}"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif invalid {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn c, errors.New(\"language change needing a server restart detected\")"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif languages2.IsMultihost() {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t// We need to transfer any server baseURL to the new language"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tfor i, ol :\u003d range oldLangs {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tnl :\u003d languages2[i]"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tnl.Set(\"baseURL\", ol.GetString(\"baseURL\"))"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t}"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// The defaultContentLanguage is something the user has to decide, but it needs"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// to match a language in the language definition list."
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tlangExists :\u003d false"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor _, lang :\u003d range languages2 {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif lang.Lang \u003d\u003d defaultLang {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tlangExists \u003d true"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tbreak"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif !langExists {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\treturn c, fmt.Errorf(\"site config value %q for defaultContentLanguage does not match any language definition\", defaultLang)"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tc.Languages \u003d languages2"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tc.Multihost \u003d languages2.IsMultihost()"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tc.DefaultContentLanguageInSubdir \u003d c.Multihost"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tsortedDefaultFirst :\u003d make(Languages, len(c.Languages))"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor i, v :\u003d range c.Languages {"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tsortedDefaultFirst[i] \u003d v"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tsort.Slice(sortedDefaultFirst, func(i, j int) bool {"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tli, lj :\u003d sortedDefaultFirst[i], sortedDefaultFirst[j]"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif li.Lang \u003d\u003d defaultLang {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn true"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif lj.Lang \u003d\u003d defaultLang {"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn false"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\treturn i \u003c j"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t})"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tcfg.Set(\"languagesSorted\", c.Languages)"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tcfg.Set(\"languagesSortedDefaultFirst\", sortedDefaultFirst)"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tcfg.Set(\"multilingual\", len(languages2) \u003e 1)"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tmultihost :\u003d c.Multihost"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif multihost {"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tcfg.Set(\"defaultContentLanguageInSubdir\", true)"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tcfg.Set(\"multihost\", true)"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif multihost {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// The baseURL may be provided at the language level. If that is true,"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// then every language must have a baseURL. In this case we always render"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t// to a language sub folder, which is then stripped from all the Permalink URLs etc."
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tfor _, l :\u003d range languages2 {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tburl :\u003d l.GetLocal(\"baseURL\")"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tif burl \u003d\u003d nil {"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\treturn c, errors.New(\"baseURL must be set on all or none of the languages\")"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t}"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn c, nil"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func toSortedLanguages(cfg config.Provider, l map[string]interface{}) (Languages, error) {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tlanguages :\u003d make(Languages, len(l))"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\ti :\u003d 0"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor lang, langConf :\u003d range l {"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlangsMap, err :\u003d maps.ToStringMapE(langConf)"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif err !\u003d nil {"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn nil, fmt.Errorf(\"Language config is not a map: %T\", langConf)"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguage :\u003d NewLanguage(lang, cfg)"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tfor loki, v :\u003d range langsMap {"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tswitch loki {"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tcase \"title\":"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tlanguage.Title \u003d cast.ToString(v)"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tcase \"languagename\":"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tlanguage.LanguageName \u003d cast.ToString(v)"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "\t\t\tcase \"languagedirection\":"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "\t\t\t\tlanguage.LanguageDirection \u003d cast.ToString(v)"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tcase \"weight\":"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tlanguage.Weight \u003d cast.ToInt(v)"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tcase \"contentdir\":"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tlanguage.ContentDir \u003d filepath.Clean(cast.ToString(v))"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tcase \"disabled\":"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tlanguage.Disabled \u003d cast.ToBool(v)"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tcase \"params\":"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tm :\u003d maps.ToStringMap(v)"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t// Needed for case insensitive fetching of params values"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tmaps.ToLower(m)"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\tfor k, vv :\u003d range m {"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t\tlanguage.SetParam(k, vv)"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t\t}"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t}"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t// Put all into the Params map"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tlanguage.SetParam(loki, v)"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\t// Also set it in the configuration map (for baseURL etc.)"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\tlanguage.Set(loki, v)"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguages[i] \u003d language"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\ti++"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tsort.Sort(languages)"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn languages, nil"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "le0tan": 2,
+      "-": 217
+    }
+  },
+  {
+    "path": "langs/language.go",
+    "fileType": "go",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Copyright 2018 The Hugo Authors. All rights reserved."
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "//"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// You may obtain a copy of the License at"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "//"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Unless required by applicable law or agreed to in writing, software"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// limitations under the License."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package langs"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import ("
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"sort\""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"strings\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"sync\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/gohugoio/hugo/common/maps\""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/gohugoio/hugo/config\""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\"github.com/spf13/cast\""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ")"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// These are the settings that should only be looked up in the global Viper"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// config and not per language."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// This list may not be complete, but contains only settings that we know"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// will be looked up in both."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// This isn\u0027t perfect, but it is ultimately the user who shoots him/herself in"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// the foot."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// See the pathSpec."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "var globalOnlySettings \u003d map[string]bool{"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tstrings.ToLower(\"defaultContentLanguageInSubdir\"): true,"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tstrings.ToLower(\"defaultContentLanguage\"):         true,"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tstrings.ToLower(\"multilingual\"):                   true,"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tstrings.ToLower(\"assetDir\"):                       true,"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tstrings.ToLower(\"resourceDir\"):                    true,"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tstrings.ToLower(\"build\"):                          true,"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Language manages specific-language configuration."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "type Language struct {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tLang              string"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tLanguageName      string"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "\tLanguageDirection string"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tTitle             string"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tWeight            int"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tDisabled bool"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// If set per language, this tells Hugo that all content files without any"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// language indicator (e.g. my-page.en.md) is in this language."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// This is usually a path relative to the working dir, but it can be an"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// absolute directory reference. It is what we get."
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tContentDir string"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tCfg config.Provider"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// These are params declared in the [params] section of the language merged with the"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// site\u0027s params, the most specific (language) wins on duplicate keys."
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tparams    map[string]interface{}"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tparamsMu  sync.Mutex"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tparamsSet bool"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// These are config values, i.e. the settings declared outside of the [params] section of the language."
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// This is the map Hugo looks in when looking for configuration values (baseURL etc.)."
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// Values in this map can also be fetched from the params map above."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tsettings map[string]interface{}"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) String() string {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn l.Lang"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// NewLanguage creates a new language."
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func NewLanguage(lang string, cfg config.Provider) *Language {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// Note that language specific params will be overridden later."
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// We should improve that, but we need to make a copy:"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tparams :\u003d make(map[string]interface{})"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor k, v :\u003d range cfg.GetStringMap(\"params\") {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tparams[k] \u003d v"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tmaps.ToLower(params)"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tl :\u003d \u0026Language{Lang: lang, ContentDir: cfg.GetString(\"contentDir\"), Cfg: cfg, params: params, settings: make(map[string]interface{})}"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn l"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// NewDefaultLanguage creates the default language for a config.Provider."
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// If not otherwise specified the default is \"en\"."
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func NewDefaultLanguage(cfg config.Provider) *Language {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tdefaultLang :\u003d cfg.GetString(\"defaultContentLanguage\")"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif defaultLang \u003d\u003d \"\" {"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tdefaultLang \u003d \"en\""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn NewLanguage(defaultLang, cfg)"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Languages is a sortable list of languages."
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "type Languages []*Language"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// NewLanguages creates a sorted list of languages."
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// NOTE: function is currently unused."
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func NewLanguages(l ...*Language) Languages {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tlanguages :\u003d make(Languages, len(l))"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor i :\u003d 0; i \u003c len(l); i++ {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tlanguages[i] \u003d l[i]"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tsort.Sort(languages)"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn languages"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l Languages) Len() int { return len(l) }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l Languages) Less(i, j int) bool {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\twi, wj :\u003d l[i].Weight, l[j].Weight"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif wi \u003d\u003d wj {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\treturn l[i].Lang \u003c l[j].Lang"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn wj \u003d\u003d 0 || wi \u003c wj"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l Languages) Swap(i, j int) { l[i], l[j] \u003d l[j], l[i] }"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Params retunrs language-specific params merged with the global params."
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) Params() maps.Params {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// TODO(bep) this construct should not be needed. Create the"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t// language params in one go."
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tl.paramsMu.Lock()"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tdefer l.paramsMu.Unlock()"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif !l.paramsSet {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tmaps.ToLower(l.params)"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tl.paramsSet \u003d true"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn l.params"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l Languages) AsSet() map[string]bool {"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tm :\u003d make(map[string]bool)"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor _, lang :\u003d range l {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tm[lang.Lang] \u003d true"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn m"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l Languages) AsOrdinalSet() map[string]int {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tm :\u003d make(map[string]int)"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor i, lang :\u003d range l {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tm[lang.Lang] \u003d i"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn m"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// IsMultihost returns whether there are more than one language and at least one of"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// the languages has baseURL specificed on the language level."
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l Languages) IsMultihost() bool {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif len(l) \u003c\u003d 1 {"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\treturn false"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tfor _, lang :\u003d range l {"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif lang.GetLocal(\"baseURL\") !\u003d nil {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn true"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn false"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// SetParam sets a param with the given key and value."
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// SetParam is case-insensitive."
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) SetParam(k string, v interface{}) {"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tl.paramsMu.Lock()"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tdefer l.paramsMu.Unlock()"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif l.paramsSet {"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tpanic(\"params cannot be changed once set\")"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tl.params[k] \u003d v"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetBool returns the value associated with the key as a boolean."
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetBool(key string) bool { return cast.ToBool(l.Get(key)) }"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetString returns the value associated with the key as a string."
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetString(key string) string { return cast.ToString(l.Get(key)) }"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetInt returns the value associated with the key as an int."
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetInt(key string) int { return cast.ToInt(l.Get(key)) }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetStringMap returns the value associated with the key as a map of interfaces."
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetStringMap(key string) map[string]interface{} {"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn maps.ToStringMap(l.Get(key))"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetStringMapString returns the value associated with the key as a map of strings."
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetStringMapString(key string) map[string]string {"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn cast.ToStringMapString(l.Get(key))"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetStringSlice returns the value associated with the key as a slice of strings."
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetStringSlice(key string) []string {"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn cast.ToStringSlice(l.Get(key))"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Get returns a value associated with the key relying on specified language."
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Get is case-insensitive for a key."
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "//"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Get returns an interface. For a specific value use one of the Get____ methods."
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) Get(key string) interface{} {"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tlocal :\u003d l.GetLocal(key)"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif local !\u003d nil {"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\treturn local"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn l.Cfg.Get(key)"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// GetLocal gets a configuration value set on language level. It will"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// not fall back to any global value."
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// It will return nil if a value with the given key cannot be found."
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) GetLocal(key string) interface{} {"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif l \u003d\u003d nil {"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tpanic(\"language not set\")"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tkey \u003d strings.ToLower(key)"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif !globalOnlySettings[key] {"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif v, ok :\u003d l.settings[key]; ok {"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn v"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn nil"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Set sets the value for the key in the language\u0027s params."
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) Set(key string, value interface{}) {"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif l \u003d\u003d nil {"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tpanic(\"language not set\")"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tkey \u003d strings.ToLower(key)"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tl.settings[key] \u003d value"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// IsSet checks whether the key is set in the language or the related config store."
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func (l *Language) IsSet(key string) bool {"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tkey \u003d strings.ToLower(key)"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tkey \u003d strings.ToLower(key)"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif !globalOnlySettings[key] {"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tif _, ok :\u003d l.settings[key]; ok {"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t\treturn true"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\t}"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn l.Cfg.IsSet(key)"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "le0tan": 1,
+      "-": 259
+    }
+  },
+  {
     "path": "tpl/compare/compare.go",
     "fileType": "go",
     "lines": [

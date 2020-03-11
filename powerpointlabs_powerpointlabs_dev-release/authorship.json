@@ -203,5 +203,1898 @@
     "authorContributionMap": {
       "daekoon": 28
     }
+  },
+  {
+    "path": "PowerPointLabs/PowerPointLabs/HighlightLab/HighlightBulletsBackground.cs",
+    "fileType": "cs",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "﻿using System;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using System.Collections.Generic;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using System.Linq;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using PowerPointLabs.ActionFramework.Common.Extension;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using PowerPointLabs.ActionFramework.Common.Log;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using PowerPointLabs.AnimationLab;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using PowerPointLabs.Models;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using Office \u003d Microsoft.Office.Core;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "using PowerPoint \u003d Microsoft.Office.Interop.PowerPoint;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "namespace PowerPointLabs.HighlightLab"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class HighlightBulletsBackground"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "#pragma warning disable 0618"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        public enum HighlightBackgroundSelection { kShapeSelected, kTextSelected, kNoneSelected };"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        public static HighlightBackgroundSelection userSelection \u003d HighlightBackgroundSelection.kNoneSelected;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        public static bool IsHighlightBackgroundEnabled { get; set; } \u003d true;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        public static void AddHighlightBulletsBackground()"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            try"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                PowerPointSlide currentSlide \u003d PowerPointCurrentPresentationInfo.CurrentSlide as PowerPointSlide;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                currentSlide.Name \u003d \"PPTLabsHighlightBulletsSlide\" + DateTime.Now.ToString(\"yyyyMMddHHmmssffff\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                PowerPoint.ShapeRange selectedShapes \u003d null;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                Office.TextRange2 selectedText \u003d null;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                //Get shapes to consider for animation"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                List\u003cPowerPoint.Shape\u003e shapesToUse \u003d null;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                switch (userSelection)"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    case HighlightBackgroundSelection.kShapeSelected:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        selectedShapes \u003d Globals.ThisAddIn.Application.ActiveWindow.Selection.ShapeRange;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        shapesToUse \u003d GetShapesToUse(currentSlide, selectedShapes);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    case HighlightBackgroundSelection.kTextSelected:"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        selectedShapes \u003d Globals.ThisAddIn.Application.ActiveWindow.Selection.ShapeRange;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        selectedText \u003d Globals.ThisAddIn.Application.ActiveWindow.Selection.TextRange2.TrimText();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        shapesToUse \u003d GetShapesToUse(currentSlide, selectedShapes);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    case HighlightBackgroundSelection.kNoneSelected:"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        currentSlide.DeleteIndicator();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        shapesToUse \u003d GetAllUsableShapesInSlide(currentSlide);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    default:"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                Globals.ThisAddIn.Application.ActiveWindow.Selection.Unselect();"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                Globals.ThisAddIn.Application.ActiveWindow.View.GotoSlide(currentSlide.Index);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                if (shapesToUse \u003d\u003d null || shapesToUse.Count \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    return;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                SelectOldShapesToAnimate(currentSlide, shapesToUse);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                bool newShapesAdded \u003d AddNewShapesToAnimate(currentSlide, shapesToUse, selectedText);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                if (newShapesAdded)"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    bool oldValue \u003d AnimationLabSettings.IsUseFrameAnimation;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    AnimationLabSettings.IsUseFrameAnimation \u003d false;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    AnimateInSlide.AddAnimationInSlide(isHighlightBullets: true);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    AnimationLabSettings.IsUseFrameAnimation \u003d oldValue;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    PowerPointPresentation.Current.AddAckSlide();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "                if (currentSlide.HasAnimationForClick(clickNumber: 1))"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "                    Globals.ThisAddIn.Application.CommandBars.ExecuteMso(\"AnimationPreview\");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                Globals.ThisAddIn.Application.ActiveWindow.Selection.Unselect();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            catch (Exception e)"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                Logger.LogException(e, \"AddHighlightBulletsBackground\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                throw;"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        //Add highlight shape for paragraphs within selected shape which have bullets or with text selected by user"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static bool AddNewShapesToAnimate(PowerPointSlide currentSlide, List\u003cPowerPoint.Shape\u003e shapesToUse, Office.TextRange2 selectedText)"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            bool anySelected \u003d false;"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            foreach (PowerPoint.Shape sh in shapesToUse)"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                sh.Name \u003d \"HighlightBackgroundShape\" + Guid.NewGuid();"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (userSelection \u003d\u003d HighlightBackgroundSelection.kTextSelected)"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                foreach (PowerPoint.Shape sh in shapesToUse)"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    foreach (Office.TextRange2 paragraph in sh.TextFrame2.TextRange.Paragraphs)"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        if (paragraph.Start \u003c\u003d selectedText.Start + selectedText.Length"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            \u0026\u0026 selectedText.Start \u003c\u003d paragraph.Start + paragraph.Length - 1"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            \u0026\u0026 paragraph.TrimText().Length \u003e 0)"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            GenerateHighlightShape(currentSlide, paragraph, sh);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            anySelected \u003d true;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                foreach (PowerPoint.Shape sh in shapesToUse)"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    bool anySelectedForShape \u003d false;"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    foreach (Office.TextRange2 paragraph in sh.TextFrame2.TextRange.Paragraphs)"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        if (paragraph.ParagraphFormat.Bullet.Visible \u003d\u003d Office.MsoTriState.msoTrue"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            \u0026\u0026 paragraph.TrimText().Length \u003e 0)"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        {"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            GenerateHighlightShape(currentSlide, paragraph, sh);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            anySelected \u003d true;"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            anySelectedForShape \u003d true;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    if (anySelectedForShape)"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        continue;"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    foreach (Office.TextRange2 paragraph in sh.TextFrame2.TextRange.Paragraphs)"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        if (paragraph.TrimText().Length \u003e 0)"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            GenerateHighlightShape(currentSlide, paragraph, sh);"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            anySelected \u003d true;"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return anySelected;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static void GenerateHighlightShape(PowerPointSlide currentSlide, Office.TextRange2 paragraph, PowerPoint.Shape sh)"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            PowerPoint.Shape highlightShape \u003d currentSlide.Shapes.AddShape(Office.MsoAutoShapeType.msoShapeRoundedRectangle,"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                            paragraph.BoundLeft,"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                            paragraph.BoundTop,"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                            paragraph.BoundWidth,"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                            paragraph.BoundHeight);"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Adjustments[1] \u003d 0.25f;"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Fill.ForeColor.RGB \u003d Utils.GraphicsUtil.ConvertColorToRgb(HighlightLabSettings.bulletsBackgroundColor);"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Fill.Transparency \u003d 0.50f;"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Line.Visible \u003d Office.MsoTriState.msoFalse;"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            Utils.ShapeUtil.MoveZToJustBehind(highlightShape, sh);"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Name \u003d \"PPTLabsHighlightBackgroundShape\" + DateTime.Now.ToString(\"yyyyMMddHHmmssffff\");"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Tags.Add(\"HighlightBackground\", sh.Name);"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            highlightShape.Select(Office.MsoTriState.msoFalse);"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static void SelectOldShapesToAnimate(PowerPointSlide currentSlide, List\u003cPowerPoint.Shape\u003e shapesToUse)"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            List\u003cPowerPoint.Shape\u003e shapesToDelete \u003d new List\u003cPowerPoint.Shape\u003e();"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            bool shouldSelect;"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            List\u003cPowerPoint.Shape\u003e shapes \u003d currentSlide.GetShapesOrderedByTimeline();"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            foreach (PowerPoint.Shape sh in shapes)"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                shouldSelect \u003d true; //We should not select existing highlight shapes. Instead they should be deleted"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                if (sh.Name.Contains(\"PPTLabsHighlightBackgroundShape\"))"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    if (userSelection !\u003d HighlightBackgroundSelection.kTextSelected)"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        foreach (PowerPoint.Shape tmp in shapesToUse)"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        {"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            //Each highlight shape stores a tag of the shape it is associated with"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            if (sh.Tags[\"HighlightBackground\"].Equals(tmp.Name))"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            {"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                shapesToDelete.Add(sh);"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                shouldSelect \u003d false;"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                break;"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            }"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    if (shouldSelect)"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    {"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        currentSlide.DeleteShapeAnimations(sh);"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        sh.Select(Office.MsoTriState.msoFalse);"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (shapesToDelete.Count \u003e 0)"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                foreach (PowerPoint.Shape sh in shapesToDelete)"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                {"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    sh.SafeDelete();"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003csummary\u003e"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// Get shapes to use for animation."
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// If user does not select anything: Select shapes which have bullet points"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// If user selects some shapes: Keep shapes from user selection which have bullet points"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// If user selects some text: Keep shapes used to store text"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003c/summary\u003e"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static List\u003cPowerPoint.Shape\u003e GetShapesToUse(PowerPointSlide currentSlide, PowerPoint.ShapeRange shapes)"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            List\u003cPowerPoint.Shape\u003e shapesToUse \u003d shapes.Cast\u003cPowerPoint.Shape\u003e()"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                    .Where(sh \u003d\u003e !sh.Name.Contains(\"PPTLabsHighlightBackgroundShape\")"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                    \u0026\u0026 HasText(sh))"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                    .ToList();"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return shapesToUse;"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003csummary\u003e"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// Get all shapes in slide to use for animation."
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// If there are text boxes with bullet points, returns only the text boxes with bullet points."
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// If there are no text boxes with bullet points, returns everything."
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003c/summary\u003e"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static List\u003cPowerPoint.Shape\u003e GetAllUsableShapesInSlide(PowerPointSlide currentSlide)"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            PowerPoint.Shape[] selectedShapes \u003d currentSlide.Shapes.Range().Cast\u003cPowerPoint.Shape\u003e().ToArray();"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            List\u003cPowerPoint.Shape\u003e usableShapesWithBullets \u003d selectedShapes"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                            .Where(sh \u003d\u003e !sh.Name.Contains(\"PPTLabsHighlightBackgroundShape\")"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                        \u0026\u0026 HasText(sh)"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                        \u0026\u0026 HasBullets(sh))"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                            .ToList();"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            List\u003cPowerPoint.Shape\u003e allUsableShapes \u003d selectedShapes"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                    .Where(sh \u003d\u003e !sh.Name.Contains(\"PPTLabsHighlightBackgroundShape\")"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                                    \u0026\u0026 HasText(sh))"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                                    .ToList();"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (usableShapesWithBullets.Count \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                return allUsableShapes;"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            {"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                return usableShapesWithBullets;"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003csummary\u003e"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// Returns true iff shape (assuming has text) has bullet points."
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// Duplicate method in HighlightBulletsText.cs"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003c/summary\u003e"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static bool HasBullets(PowerPoint.Shape shape)"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return shape.TextFrame2.TextRange.ParagraphFormat.Bullet.Visible \u003d\u003d Office.MsoTriState.msoTrue \u0026\u0026"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   shape.TextFrame2.TextRange.ParagraphFormat.Bullet.Type !\u003d Office.MsoBulletType.msoBulletNone;"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003csummary\u003e"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// Returns true iff shape has a text frame."
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// Duplicate method in HighlightBulletsText.cs"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /// \u003c/summary\u003e"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private static bool HasText(PowerPoint.Shape shape)"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return shape.HasTextFrame \u003d\u003d Office.MsoTriState.msoTrue \u0026\u0026"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                   shape.TextFrame2.HasText \u003d\u003d Office.MsoTriState.msoTrue;"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ccyccyccy": 6,
+      "-": 263
+    }
   }
 ]
