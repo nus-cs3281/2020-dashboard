@@ -2944,7 +2944,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "   Close #2410"
+        "content": "  Close #2410"
       },
       {
         "lineNumber": 45,
@@ -3343,7 +3343,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "   Close #3301"
+        "content": "  Close #3301"
       },
       {
         "lineNumber": 102,
@@ -3371,7 +3371,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "   Close #498"
+        "content": "  Close #498"
       },
       {
         "lineNumber": 106,
@@ -35873,9 +35873,9 @@
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "* A new check ``isinstance-second-argument-not-valid-type``` was added."
+        "content": "* A new check ``isinstance-second-argument-not-valid-type`` was added."
       },
       {
         "lineNumber": 17,
@@ -35889,21 +35889,21 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  This check is emitted whenever **pylint** finds a call to the `isinstance`"
+        "content": "   This check is emitted whenever **pylint** finds a call to the `isinstance`"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  function with a second argument that is not a type. Such code is likely"
+        "content": "   function with a second argument that is not a type. Such code is likely"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  unintended as it will cause a TypeError to be thrown at runtime error."
+        "content": "   unintended as it will cause a TypeError to be thrown at runtime error."
       },
       {
         "lineNumber": 21,
@@ -35931,21 +35931,21 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  This check is emitted whenever **pylint** finds an assert statement"
+        "content": "   This check is emitted whenever **pylint** finds an assert statement"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  with a string literal as its first argument. Such assert statements"
+        "content": "   with a string literal as its first argument. Such assert statements"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "  are probably unintended as they will always pass."
+        "content": "   are probably unintended as they will always pass."
       },
       {
         "lineNumber": 27,
@@ -35973,21 +35973,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  This check is emitted whenever **pylint** detects the use of an"
+        "content": "   This check is emitted whenever **pylint** detects the use of an"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "  f-string without having any interpolated values in it, which means"
+        "content": "   f-string without having any interpolated values in it, which means"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "  that the f-string can be a normal string."
+        "content": "   that the f-string can be a normal string."
       },
       {
         "lineNumber": 33,
@@ -36106,42 +36106,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  This check is emitted when quotes delimiters (\" and \u0027) are not used"
+        "content": "   This check is emitted when quotes delimiters (``\"`` and ``\u0027``) are not used"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "  consistently throughout a module.  It makes allowances for avoiding"
+        "content": "   consistently throughout a module.  It allows avoiding unnecessary escaping,"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "  unnecessary escaping, allowing, for example, ``\"Don\u0027t error\"`` in a module in"
+        "content": "   allowing, for example, ``\"Don\u0027t error\"`` in a module in which single-quotes"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "  which single-quotes otherwise delimit strings so that the single quote in"
+        "content": "   otherwise delimit strings so that the single quote in ``Don\u0027t`` doesn\u0027t need to be escaped."
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "  ``Don\u0027t`` doesn\u0027t need to be escaped."
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* A new check ``non-str-assignment-to-dunder-name`` was added to ensure that only strings are assigned to ``__name__`` attributes."
       },
       {
         "lineNumber": 55,
@@ -36155,217 +36155,217 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Other Changes"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "Other Changes"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "* Don\u0027t emit ``line-too-long`` for multilines when a"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "  `pylint:disable\u003dline-too-long` comment stands at their end."
+        "content": "* Configuration can be read from a setup.cfg or pyproject.toml file in the current directory."
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  A setup.cfg must prepend pylintrc section names with ``pylint.``, for example ``[pylint.MESSAGES CONTROL]``."
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "  For example the following code will not trigger any ``line-too-long`` message::"
+        "content": "  A pyproject.toml file must prepend section names with ``tool.pylint.``, for example ``[tool.pylint.\u0027MESSAGES CONTROL\u0027]``."
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  These files can also be passed in on the command line."
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    def example():"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"\"\""
+        "content": "* Add new ``good-names-rgx`` and ``bad-names-rgx`` to enable permitting or disallowing of names via regular expressions"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "      This is a very very very long line within a docstring that should trigger a pylint C0301 error line-too-long"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  To enable better handling of whitelisting/blacklisting names, we added two new config options: good-names-rgxs: a comma-"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "      Even spread on multiple lines, the disable command is still effective on very very very, maybe too much long docstring"
+        "content": "  separated list of regexes, that if a name matches will be exempt of naming-checking. bad-names-rgxs: a comma-"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"\"\"#pylint: disable\u003dline-too-long"
+        "content": "  separated list of regexes, that if a name matches will be always marked as a blacklisted name."
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    pass"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Mutable ``collections.*`` are now flagged as dangerous defaults."
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "* Configuration can be read from a setup.cfg or pyproject.toml file"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "  in the current directory."
+        "content": "* Add new ``--fail-under`` flag for setting the threshold for the score to fail overall tests. If the score is over the fail-under threshold, pylint will complete SystemExit with value 0 to indicate no errors."
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "  A setup.cfg must prepend pylintrc section names with ``pylint.``,"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "  for example ``[pylint.MESSAGES CONTROL]``."
+        "content": "* Added a new option ``notes-rgx`` to make fixme warnings more flexible. Now either ``notes`` or ``notes-rgx`` option can be used to detect fixme warnings."
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "  A pyproject.toml file must prepend section names with ``tool.pylint.``,"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "  for example ``[tool.pylint.\u0027MESSAGES CONTROL\u0027]``."
+        "content": "* Non-ASCII characters are now allowed by ``invalid-name``."
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "  These files can also be passed in on the command line."
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* ``pylint`` no longer emits ``invalid-name`` for non-constants found at module level."
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "* Add new good-names-rgx and bad-names-rgx to enable white-/blacklisting of regular expressions"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  Pylint was considering all module level variables as constants, which is not what PEP 8 is actually mandating."
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "To enable better handling of whitelisting/blacklisting names, we added two new config options: good-names-rgxs: a comma-"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "separated list of regexes, that if a name matches will be exempt of naming-checking. bad-names-rgxs: a comma-"
+        "content": "* A new check ``non-ascii-name`` was added to detect identifiers with non-ASCII characters."
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "separated list of regexes, that if a name matches will be always marked as a blacklisted name."
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Overloaded typing functions no longer trigger ``no-self-use``, ``unused-argument``, ``missing-docstring`` and similar checks"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "* Mutable ``collections.*`` are now flagged as dangerous defaults."
+        "content": "  that assumed that overloaded functions are normal functions."
       },
       {
         "lineNumber": 87,
@@ -36379,7 +36379,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* Add new --fail-under flag for setting the threshold for the score to fail overall tests. If the score is over the fail-under threshold, pylint will complete SystemExit with value 0 to indicate no errors."
+        "content": "* ``python -m pylint`` can no longer be made to import files from the local directory."
       },
       {
         "lineNumber": 89,
@@ -36393,54 +36393,12 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* Add a new check (non-str-assignment-to-dunder-name) to ensure that only strings are assigned to ``__name__`` attributes"
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 92,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* Add a new option ``notes-rgx`` to make fixme warnings more flexible. Now either ``notes`` or ``notes-rgx`` option can be used to detect fixme warnings."
-      },
-      {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 94,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* Non-ASCII characters are now allowed by ``invalid-name``."
-      },
-      {
-        "lineNumber": 95,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 96,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* Add a new check ``non-ascii-name`` to detect identifiers with non-ASCII characters."
+        "content": "* Various false positives have been fixed which you can read more about in the Changelog files."
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 12,
-      "-": 84
+      "anubh-v": 11,
+      "-": 79
     }
   },
   {
