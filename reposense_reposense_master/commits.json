@@ -42,6 +42,20 @@
             "deletions": 0
           }
         ]
+      },
+      {
+        "insertions": 12,
+        "deletions": 2,
+        "date": "2020-03-16",
+        "commitResults": [
+          {
+            "hash": "f166e23b07d76eb870c88147a838047f093450fc",
+            "messageTitle": "[#850] Ignore git submodules when analyzing repos (#1127)",
+            "messageBody": "Repos that contains git submodules are not handled properly and cannot\r\nbe analyzed.\r\n\r\nThis is due to the diff result including the submodule information.\r\n\r\nLet set `--ignore-submodules\u003dall` in the git diff command to ignore all\r\nsubmodule information.",
+            "insertions": 12,
+            "deletions": 2
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -572,6 +586,20 @@
             "deletions": 6
           }
         ]
+      },
+      {
+        "insertions": 2,
+        "deletions": 0,
+        "date": "2020-03-16",
+        "commitResults": [
+          {
+            "hash": "e42884b81029c9a2c221448bdc86d570d8774511",
+            "messageTitle": "[#1140] Update date hashes when updating date range (#1141)",
+            "messageBody": "Clicking on the `show ramp chart in this period` button does not update \r\nthe `since` and `until` date hashes, which leads to a different summary \r\nperiod after reloading the page.\r\n\r\nThis is due to the `hasModifedSinceDate` and `hasModifiedUntilDate` not\r\nset to true when calling `updateDateRange`, which prevents the since and \r\nuntil date hashes to be updated.\r\n\r\nLet\u0027s set `hasModifedSinceDate` and `hasModifiedUntilDate` to be true \r\nwhen updateDateRange is called.",
+            "insertions": 2,
+            "deletions": 0
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -741,6 +769,20 @@
             "deletions": 203
           }
         ]
+      },
+      {
+        "insertions": 317,
+        "deletions": 180,
+        "date": "2020-03-16",
+        "commitResults": [
+          {
+            "hash": "26ad1f7d71238a78ede45843dc05e4aa2867f6c1",
+            "messageTitle": "[#892] Ramp chart: allow filtering by file type/group (#1025)",
+            "messageBody": "We have code view can be filtered by file type/group but ramp chart in \r\nChart Panel cannot be filtered and sorted like that.\r\n\r\nThis can be improved by only display selected portion of contribution\r\nbar corresponding to selected file type. Also, if the user choose to \r\nsort by contribution, only the file types in selected ones will be \r\nconsidered.\r\n\r\nLet\u0027s add a set of file type check boxes in Chart panel and only display\r\nand sort according to selected file types.",
+            "insertions": 317,
+            "deletions": 180
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -768,19 +810,19 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 20,
+    "ccyccyccy": 32,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 0,
     "yash-chowdhary": 7,
     "anubh-v": 360,
-    "Tejas2805": 710,
+    "Tejas2805": 707,
     "dvrylc": 0,
-    "jamessspanggg": 242,
+    "jamessspanggg": 244,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 403,
+    "0blivious": 541,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -792,7 +834,7 @@
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 16,
+      "java": 28,
       "js": 4,
       "scss": 0,
       "json": 0,
@@ -854,7 +896,7 @@
     "Tejas2805": {
       "java": 0,
       "js": 19,
-      "scss": 558,
+      "scss": 555,
       "json": 26,
       "md": 66,
       "py": 0,
@@ -873,7 +915,7 @@
     },
     "jamessspanggg": {
       "java": 172,
-      "js": 8,
+      "js": 10,
       "scss": 40,
       "json": 6,
       "md": 3,
@@ -913,12 +955,12 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 67,
-      "scss": 23,
+      "js": 165,
+      "scss": 46,
       "json": 0,
-      "md": 10,
+      "md": 12,
       "py": 0,
-      "pug": 235,
+      "pug": 250,
       "gradle": 0
     },
     "hcwong": {
@@ -1003,21 +1045,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 1.8059806,
+    "ccyccyccy": 3.5503573,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.5792999,
-    "anubh-v": 449.51895,
-    "Tejas2805": 4550.2173,
+    "yash-chowdhary": 1.5646763,
+    "anubh-v": 445.641,
+    "Tejas2805": 4509.8223,
     "dvrylc": 0.0,
-    "jamessspanggg": 265.71112,
+    "jamessspanggg": 263.2609,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 2209.6052,
+    "0blivious": 4394.9927,
     "hcwong": 0.0,
-    "ang-zeyu": 0.23362477,
+    "ang-zeyu": 0.2314615,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
