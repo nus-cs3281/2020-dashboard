@@ -120,6 +120,27 @@
             "deletions": 2
           }
         ]
+      },
+      {
+        "insertions": 443,
+        "deletions": 16,
+        "date": "2020-03-16",
+        "commitResults": [
+          {
+            "hash": "8ce800938faed1da40baf7bea2d9795debfb3b80",
+            "messageTitle": "[#9946] Migration to new RESTful search endpoints - Students (#9979)",
+            "messageBody": "* Implement search student endpoint\r\n\r\n* Implement instructors search endpoint (#2)\r\n\r\n* Add instructor search endpoint\r\n\r\n* Add tests\r\n\r\n* Switch from SearchInstructorsData to InstructorsData (#6)\r\n\r\n* Switch from SearchStudentsData to StudentsData (#7)\r\n\r\n* Allow travis to build search migration branch (#5)\r\n\r\n* Implement sessions search endpoint (#3)\r\n\r\n* Add sessions search endpoint\r\n\r\n* Add tests\r\n\r\n* Fix lint errors\r\n\r\n* Add course endpoint (#8)\r\n\r\n* Implement Links Endpoint (#4)\r\n\r\n* Add googleId  field to StudentData (#9)\r\n\r\n* Add googleid to studentdata\r\n\r\n* Add nullable to student data\r\n\r\n* Improve search response classes (#12)\r\n\r\n* Improve students endpoint classes\r\n\r\n* Move joinState attribute from common to student\r\n\r\n* Improve instructors endpoint classes\r\n\r\n* Revert \"Add googleId  field to StudentData (#9)\"\r\n\r\nThis reverts commit b5d46cabc092bf3bedc429ae1c771515bf149606.\r\n\r\n* Revert unnecessary InstructorData changes\r\n\r\n* Fix typo\r\n\r\n* Make joinState common\r\n\r\n* Make names sane again\r\n\r\n* Remove unused setters\r\n\r\n* Standardize search endpoints (#13)\r\n\r\n* Improve course endpoint class names\r\n\r\n* Improve links endpoint class names\r\n\r\n* Improve sessions endpoint class names\r\n\r\n* Standardize comments\r\n\r\n* Fix import order\r\n\r\n* Revert travis config\r\n\r\n* Split PR\r\n\r\n* Revert to existing response classes\r\n\r\n* Allow some attributes to be optional\r\n\r\n* Improve information hiding logic\r\n\r\n* Improve resource name\r\n\r\nCo-authored-by: Joshua Wong \u003cjoshwonghc@gmail.com\u003e",
+            "insertions": 242,
+            "deletions": 10
+          },
+          {
+            "hash": "c2d26d4ae41381142beb72b3fda53eabab67bcfd",
+            "messageTitle": "[#9946] Migration to new RESTful search endpoints - Instructors (#9982)",
+            "messageBody": "* Implement search student endpoint\r\n\r\n* Implement instructors search endpoint (#2)\r\n\r\n* Add instructor search endpoint\r\n\r\n* Add tests\r\n\r\n* Switch from SearchInstructorsData to InstructorsData (#6)\r\n\r\n* Switch from SearchStudentsData to StudentsData (#7)\r\n\r\n* Allow travis to build search migration branch (#5)\r\n\r\n* Implement sessions search endpoint (#3)\r\n\r\n* Add sessions search endpoint\r\n\r\n* Add tests\r\n\r\n* Fix lint errors\r\n\r\n* Add course endpoint (#8)\r\n\r\n* Implement Links Endpoint (#4)\r\n\r\n* Add googleId  field to StudentData (#9)\r\n\r\n* Add googleid to studentdata\r\n\r\n* Add nullable to student data\r\n\r\n* Improve search response classes (#12)\r\n\r\n* Improve students endpoint classes\r\n\r\n* Move joinState attribute from common to student\r\n\r\n* Improve instructors endpoint classes\r\n\r\n* Revert \"Add googleId  field to StudentData (#9)\"\r\n\r\nThis reverts commit b5d46cabc092bf3bedc429ae1c771515bf149606.\r\n\r\n* Revert unnecessary InstructorData changes\r\n\r\n* Fix typo\r\n\r\n* Make joinState common\r\n\r\n* Make names sane again\r\n\r\n* Remove unused setters\r\n\r\n* Standardize search endpoints (#13)\r\n\r\n* Improve course endpoint class names\r\n\r\n* Improve links endpoint class names\r\n\r\n* Improve sessions endpoint class names\r\n\r\n* Standardize comments\r\n\r\n* Fix import order\r\n\r\n* Revert travis config\r\n\r\n* Split PR\r\n\r\n* Revert to existing response classes\r\n\r\n* Fix lint\r\n\r\n* Improve information hiding logic\r\n\r\n* Improve resource name\r\n\r\nCo-authored-by: Joshua Wong \u003cjoshwonghc@gmail.com\u003e\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
+            "insertions": 201,
+            "deletions": 6
+          }
+        ]
       }
     ],
     "jamessspanggg": [],
@@ -406,7 +427,7 @@
     "yash-chowdhary": 0,
     "anubh-v": 0,
     "Tejas2805": 0,
-    "dvrylc": 96,
+    "dvrylc": 539,
     "jamessspanggg": 0,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
@@ -493,14 +514,14 @@
       "ts": 0
     },
     "dvrylc": {
-      "java": 64,
+      "java": 496,
       "js": 0,
       "scss": 0,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 5,
-      "ts": 27
+      "ts": 38
     },
     "jamessspanggg": {
       "java": 0,
@@ -641,7 +662,7 @@
     "yash-chowdhary": 0.0,
     "anubh-v": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 59.18338,
+    "dvrylc": 1999.2592,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,

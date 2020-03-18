@@ -600,6 +600,20 @@
             "deletions": 0
           }
         ]
+      },
+      {
+        "insertions": 10,
+        "deletions": 15,
+        "date": "2020-03-17",
+        "commitResults": [
+          {
+            "hash": "53fe9f408e25a058f9f2d7c3f38e416df98022c8",
+            "messageTitle": "v_summary: refactor the structure of summary-charts__title (#1106)",
+            "messageBody": "The `summary-charts__title` div is separated in two, each for when\r\n`filterGroupSelection` is `groupByRepos` and `groupByAuthors` \r\nrespectively.\r\n\r\nThere is overlapping in code among the two, and adding a new \r\ncommon component in `summary-charts__title` needs to be done twice, \r\nwhich is redundant.\r\n\r\nLet\u0027s refactor the structure `summary-charts__title` div to share \r\nthe common divs/components.",
+            "insertions": 10,
+            "deletions": 15
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -816,13 +830,13 @@
     "openorclose": 0,
     "yash-chowdhary": 7,
     "anubh-v": 360,
-    "Tejas2805": 707,
+    "Tejas2805": 706,
     "dvrylc": 0,
-    "jamessspanggg": 244,
+    "jamessspanggg": 254,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 541,
+    "0blivious": 527,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -896,7 +910,7 @@
     "Tejas2805": {
       "java": 0,
       "js": 19,
-      "scss": 555,
+      "scss": 554,
       "json": 26,
       "md": 66,
       "py": 0,
@@ -916,11 +930,11 @@
     "jamessspanggg": {
       "java": 172,
       "js": 10,
-      "scss": 40,
+      "scss": 41,
       "json": 6,
       "md": 3,
       "py": 0,
-      "pug": 13,
+      "pug": 22,
       "gradle": 0
     },
     "j-lum": {
@@ -960,7 +974,7 @@
       "json": 0,
       "md": 12,
       "py": 0,
-      "pug": 250,
+      "pug": 236,
       "gradle": 0
     },
     "hcwong": {
@@ -1045,21 +1059,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3.5503573,
+    "ccyccyccy": 3.5185206,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.5646763,
-    "anubh-v": 445.641,
-    "Tejas2805": 4509.8223,
+    "yash-chowdhary": 1.550328,
+    "anubh-v": 441.82928,
+    "Tejas2805": 4470.1387,
     "dvrylc": 0.0,
-    "jamessspanggg": 263.2609,
+    "jamessspanggg": 264.92264,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4394.9927,
+    "0blivious": 4355.952,
     "hcwong": 0.0,
-    "ang-zeyu": 0.2314615,
+    "ang-zeyu": 0.22933856,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
