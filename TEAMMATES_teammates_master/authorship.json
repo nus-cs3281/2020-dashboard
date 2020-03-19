@@ -113816,6 +113816,653 @@
     }
   },
   {
+    "path": "src/web/services/student-profile.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { TestBed } from \u0027@angular/core/testing\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { HttpClientTestingModule } from \u0027@angular/common/http/testing\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "import { ResourceEndpoints } from \u0027../types/api-endpoints\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "import { StudentProfileUpdateRequest } from \u0027../types/api-request\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "import { HttpRequestService } from \u0027./http-request.service\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { StudentProfileService } from \u0027./student-profile.service\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "describe(\u0027StudentProfileService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  let spyHttpRequestService: any;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  let service: StudentProfileService;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  beforeEach(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    spyHttpRequestService \u003d {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      get: jest.fn(),"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      post: jest.fn(),"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      put: jest.fn(),"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      delete: jest.fn(),"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    TestBed.configureTestingModule({"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      imports: ["
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        HttpClientTestingModule,"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      providers: ["
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "        { provide: HttpRequestService, useValue: spyHttpRequestService },"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service \u003d TestBed.get(StudentProfileService);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  it(\u0027should be created\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    expect(service).toBeTruthy();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute GET on student profile endpoint with params\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const studentEmail: string \u003d \u0027test@123.com\u0027;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const courseId: string \u003d \u0027test-course\u0027;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      studentemail: studentEmail,"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      courseid: courseId,"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.getStudentProfile(studentEmail, courseId);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE, paramsMap);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute GET on student profile endpoint without email\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const studentEmail: string \u003d \u0027test@123.com\u0027;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.getStudentProfile(studentEmail, \u0027\u0027);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute GET on student profile endpoint without params\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.getStudentProfile();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute GET on student profile picture endpoint\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.getProfilePicture();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.get).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE_PICTURE, {}, \u0027blob\u0027);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute PUT on student profile endpoint\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const googleId: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const requestBody: StudentProfileUpdateRequest \u003d new class implements StudentProfileUpdateRequest {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      email: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      existingNationality: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      gender: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      institute: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      moreInfo: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      nationality: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      shortName: string \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "      googleid: googleId,"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    };"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.updateStudentProfile(googleId, requestBody);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.put).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE, paramsMap, requestBody);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute POST on student profile picture endpoint\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const formData: FormData \u003d new FormData();"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.postProfilePicture(formData);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.post).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE_PICTURE, {}, formData);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  it(\u0027should execute DELETE on student profile picture endpoint\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    const paramsMap: { [key: string]: string } \u003d {};"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    service.deleteProfilePicture(paramsMap);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "    expect(spyHttpRequestService.delete).toHaveBeenCalledWith(ResourceEndpoints.STUDENT_PROFILE_PICTURE, paramsMap);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "madanalogy"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "madanalogy": 77,
+      "-": 14
+    }
+  },
+  {
     "path": "src/web/services/student-profile.service.ts",
     "fileType": "ts",
     "lines": [
