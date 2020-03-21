@@ -797,6 +797,20 @@
             "deletions": 180
           }
         ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-03-20",
+        "commitResults": [
+          {
+            "hash": "e0afe5593ef3062fe6625e11784be91261af1545",
+            "messageTitle": "[#1124] Authorship: file name starting with period not displayed (#1125)",
+            "messageBody": "File with name starting with period will not have its detail \r\ndisplayed on authorship panel.\r\n\r\nThis is due to the minimatch library used which by default will not\r\nmatch name `a/**/b` with `a/.d/b`, unless dot is set. So the file is\r\nfiltered out from selected files.\r\n\r\nLet\u0027s set the dot property to true to allow the file details to be\r\ndisplayed properly.",
+            "insertions": 1,
+            "deletions": 1
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -836,7 +850,7 @@
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 527,
+    "0blivious": 528,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -969,7 +983,7 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 165,
+      "js": 166,
       "scss": 46,
       "json": 0,
       "md": 12,
@@ -1059,21 +1073,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3.5185206,
+    "ccyccyccy": 3.4263418,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.550328,
-    "anubh-v": 441.82928,
-    "Tejas2805": 4470.1387,
+    "yash-chowdhary": 1.5088065,
+    "anubh-v": 430.77045,
+    "Tejas2805": 4355.1455,
     "dvrylc": 0.0,
-    "jamessspanggg": 264.92264,
+    "jamessspanggg": 258.19516,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4355.952,
+    "0blivious": 4242.4487,
     "hcwong": 0.0,
-    "ang-zeyu": 0.22933856,
+    "ang-zeyu": 0.22319646,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
