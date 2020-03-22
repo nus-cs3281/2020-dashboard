@@ -526,7 +526,7 @@
         "author": {
           "gitId": "le0tan"
         },
-        "content": "- **:py:meth:`__init__ \u003cobject.__init__\u003e` method has no annotated "
+        "content": "- **:py:meth:`__init__ \u003cobject.__init__\u003e` method has no annotated"
       },
       {
         "lineNumber": 76,
@@ -540,7 +540,7 @@
         "author": {
           "gitId": "le0tan"
         },
-        "content": "  is considered fully-annotated **if at least one argument is annotated**, "
+        "content": "  is considered fully-annotated **if at least one argument is annotated**,"
       },
       {
         "lineNumber": 78,
@@ -561,7 +561,7 @@
         "author": {
           "gitId": "le0tan"
         },
-        "content": "  that has no argument, you\u0027ll have to explicitly annotate the return type "
+        "content": "  that has no argument, you\u0027ll have to explicitly annotate the return type"
       },
       {
         "lineNumber": 81,
@@ -673,7 +673,7 @@
         "author": {
           "gitId": "le0tan"
         },
-        "content": "      "
+        "content": ""
       },
       {
         "lineNumber": 97,
@@ -5279,7 +5279,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "   "
+        "content": ""
       },
       {
         "lineNumber": 755,
@@ -5307,222 +5307,376 @@
         "author": {
           "gitId": "-"
         },
-        "content": "It\u0027s unsafe to override a method with a more specific argument type, as it violates"
+        "content": "It\u0027s unsafe to override a method with a more specific argument type,"
       },
       {
         "lineNumber": 759,
         "author": {
           "gitId": "-"
         },
-        "content": "the `Liskov substitution principle \u003chttps://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle\u003e`_. For return types, it\u0027s unsafe to override a method with a more general return type."
+        "content": "as it violates the `Liskov substitution principle"
       },
       {
         "lineNumber": 760,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003chttps://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle\u003e`_."
       },
       {
         "lineNumber": 761,
         "author": {
           "gitId": "-"
         },
-        "content": "Here is an example to demonstrate this"
+        "content": "For return types, it\u0027s unsafe to override a method with a more general"
       },
       {
         "lineNumber": 762,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "return type."
       },
       {
         "lineNumber": 763,
         "author": {
           "gitId": "-"
         },
-        "content": ".. code-block:: python"
+        "content": ""
       },
       {
         "lineNumber": 764,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Other incompatible signature changes in method overrides, such as"
       },
       {
         "lineNumber": 765,
         "author": {
           "gitId": "-"
         },
-        "content": "    from typing import Sequence, List, Iterable"
+        "content": "adding an extra required parameter, or removing an optional parameter,"
       },
       {
         "lineNumber": 766,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "will also generate errors. The signature of a method in a subclass"
       },
       {
         "lineNumber": 767,
         "author": {
           "gitId": "-"
         },
-        "content": "    class A:"
+        "content": "should accept all valid calls to the base class method. Mypy"
       },
       {
         "lineNumber": 768,
         "author": {
           "gitId": "-"
         },
-        "content": "        def test(self, t: Sequence[int]) -\u003e Sequence[str]:"
+        "content": "treats a subclass as a subtype of the base class. An instance of a"
       },
       {
         "lineNumber": 769,
         "author": {
           "gitId": "-"
         },
-        "content": "            pass"
+        "content": "subclass is valid everywhere where an instance of the base class is"
       },
       {
         "lineNumber": 770,
         "author": {
           "gitId": "-"
         },
-        "content": "      "
+        "content": "valid."
       },
       {
         "lineNumber": 771,
         "author": {
           "gitId": "-"
         },
-        "content": "    # Specific argument type doesn\u0027t work"
+        "content": ""
       },
       {
         "lineNumber": 772,
         "author": {
           "gitId": "-"
         },
-        "content": "    class OverwriteArgumentSpecific(A):"
+        "content": "This example demonstrates both safe and unsafe overrides:"
       },
       {
         "lineNumber": 773,
         "author": {
           "gitId": "-"
         },
-        "content": "        def test(self, t: List[int]) -\u003e Sequence[str]:"
+        "content": ""
       },
       {
         "lineNumber": 774,
         "author": {
           "gitId": "-"
         },
-        "content": "            pass"
+        "content": ".. code-block:: python"
       },
       {
         "lineNumber": 775,
         "author": {
           "gitId": "-"
         },
-        "content": "    "
+        "content": ""
       },
       {
         "lineNumber": 776,
         "author": {
           "gitId": "-"
         },
-        "content": "    # Specific return type works"
+        "content": "    from typing import Sequence, List, Iterable"
       },
       {
         "lineNumber": 777,
         "author": {
           "gitId": "-"
         },
-        "content": "    class OverwriteReturnSpecific(A):"
+        "content": ""
       },
       {
         "lineNumber": 778,
         "author": {
           "gitId": "-"
         },
-        "content": "        def test(self, t: Sequence[int]) -\u003e List[str]:"
+        "content": "    class A:"
       },
       {
         "lineNumber": 779,
         "author": {
           "gitId": "-"
         },
-        "content": "            pass"
+        "content": "        def test(self, t: Sequence[int]) -\u003e Sequence[str]:"
       },
       {
         "lineNumber": 780,
         "author": {
           "gitId": "-"
         },
-        "content": "    "
+        "content": "            ..."
       },
       {
         "lineNumber": 781,
         "author": {
           "gitId": "-"
         },
-        "content": "    # Generic return type doesn\u0027t work"
+        "content": ""
       },
       {
         "lineNumber": 782,
         "author": {
           "gitId": "-"
         },
-        "content": "    class OverwriteReturnGeneric(A):"
+        "content": "    class GeneralizedArgument(A):"
       },
       {
         "lineNumber": 783,
         "author": {
           "gitId": "-"
         },
-        "content": "        def test(self, t: Sequence[int]) -\u003e Iterable[str]:"
+        "content": "        # A more general argument type is okay"
       },
       {
         "lineNumber": 784,
         "author": {
           "gitId": "-"
         },
-        "content": "            pass"
+        "content": "        def test(self, t: Iterable[int]) -\u003e Sequence[str]:  # OK"
       },
       {
         "lineNumber": 785,
         "author": {
           "gitId": "-"
         },
-        "content": "            "
+        "content": "            ..."
       },
       {
         "lineNumber": 786,
         "author": {
           "gitId": "-"
         },
-        "content": "mypy won\u0027t report an error for ``OverwriteReturnSpecific`` but it does for ``OverwriteReturnGeneric`` and ``OverwriteArgumentSpecific``."
+        "content": ""
       },
       {
         "lineNumber": 787,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    class NarrowerArgument(A):"
       },
       {
         "lineNumber": 788,
         "author": {
           "gitId": "-"
         },
-        "content": "We can use ``# type: ignore[override]`` to silence the error (add it to the line that genreates the error) if type safety is not needed."
+        "content": "        # A more specific argument type isn\u0027t accepted"
+      },
+      {
+        "lineNumber": 789,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: List[int]) -\u003e Sequence[str]:  # Error"
+      },
+      {
+        "lineNumber": 790,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ..."
+      },
+      {
+        "lineNumber": 791,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 792,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class NarrowerReturn(A):"
+      },
+      {
+        "lineNumber": 793,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        # A more specific return type is fine"
+      },
+      {
+        "lineNumber": 794,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: Sequence[int]) -\u003e List[str]:  # OK"
+      },
+      {
+        "lineNumber": 795,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ..."
+      },
+      {
+        "lineNumber": 796,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 797,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class GeneralizedReturn(A):"
+      },
+      {
+        "lineNumber": 798,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        # A more general return type is an error"
+      },
+      {
+        "lineNumber": 799,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: Sequence[int]) -\u003e Iterable[str]:  # Error"
+      },
+      {
+        "lineNumber": 800,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ..."
+      },
+      {
+        "lineNumber": 801,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 802,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "You can use ``# type: ignore[override]`` to silence the error. Add it"
+      },
+      {
+        "lineNumber": 803,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "to the line that generates the error, if you decide that type safety is"
+      },
+      {
+        "lineNumber": 804,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "not necessary:"
+      },
+      {
+        "lineNumber": 805,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 806,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".. code-block:: python"
+      },
+      {
+        "lineNumber": 807,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 808,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    class NarrowerArgument(A):"
+      },
+      {
+        "lineNumber": 809,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        def test(self, t: List[int]) -\u003e Sequence[str]:  # type: ignore[override]"
+      },
+      {
+        "lineNumber": 810,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ..."
       }
     ],
     "authorContributionMap": {
       "le0tan": 26,
-      "-": 762
+      "-": 784
     }
   }
 ]

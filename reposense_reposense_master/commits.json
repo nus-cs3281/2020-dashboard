@@ -231,6 +231,20 @@
             "deletions": 12
           }
         ]
+      },
+      {
+        "insertions": 103,
+        "deletions": 17,
+        "date": "2020-03-21",
+        "commitResults": [
+          {
+            "hash": "eb72f295cec2b1504641b8b4f4b8f31478eb0bde",
+            "messageTitle": "[#823, #981] AnnotatorAnalyzer: Fix code disowning mechanism (#1067)",
+            "messageBody": "Suppose that `random-user` is not the git author name of any author\r\nin a git repository(i.e. it is just a placeholder name). RepoSense \r\ndoes not correctly mark code as disowned when a user marks a code \r\nblock with the `@@author random-user` tag. Only the line containing \r\nthe `@@author random-user` tag is treated as disowned, while the \r\nremaining code block is still attributed to the author deduced from \r\nthe git blame analysis.\r\n\r\nThis bug occurs because the code in AnnotatorAnalyzer uses a \r\nconstant UNKNOWN_AUTHOR to represent both the case where there is no \r\ncurrently active annotation override AND the case where the user has \r\nused a \"@@author random-user\" tag.\r\n\r\nLet\u0027s use Optionals to store the author names obtained from the\r\n`@@author` tags, so we can identify the case where the user has used\r\na `@@author random-user` tag.",
+            "insertions": 103,
+            "deletions": 17
+          }
+        ]
       }
     ],
     "Tejas2805": [
@@ -843,14 +857,14 @@
     "niqiukun": 0,
     "openorclose": 0,
     "yash-chowdhary": 7,
-    "anubh-v": 360,
-    "Tejas2805": 706,
+    "anubh-v": 446,
+    "Tejas2805": 692,
     "dvrylc": 0,
-    "jamessspanggg": 254,
+    "jamessspanggg": 251,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 528,
+    "0blivious": 516,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -912,11 +926,11 @@
       "gradle": 0
     },
     "anubh-v": {
-      "java": 322,
+      "java": 409,
       "js": 1,
       "scss": 34,
       "json": 0,
-      "md": 1,
+      "md": 0,
       "py": 0,
       "pug": 2,
       "gradle": 0
@@ -926,7 +940,7 @@
       "js": 19,
       "scss": 554,
       "json": 26,
-      "md": 66,
+      "md": 52,
       "py": 0,
       "pug": 41,
       "gradle": 0
@@ -946,7 +960,7 @@
       "js": 10,
       "scss": 41,
       "json": 6,
-      "md": 3,
+      "md": 0,
       "py": 0,
       "pug": 22,
       "gradle": 0
@@ -986,7 +1000,7 @@
       "js": 166,
       "scss": 46,
       "json": 0,
-      "md": 12,
+      "md": 0,
       "py": 0,
       "pug": 236,
       "gradle": 0
@@ -1073,21 +1087,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3.4263418,
+    "ccyccyccy": 3.396684,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.5088065,
-    "anubh-v": 430.77045,
-    "Tejas2805": 4355.1455,
+    "yash-chowdhary": 1.4954563,
+    "anubh-v": 542.6522,
+    "Tejas2805": 4318.1216,
     "dvrylc": 0.0,
-    "jamessspanggg": 258.19516,
+    "jamessspanggg": 256.0275,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4242.4487,
+    "0blivious": 4206.057,
     "hcwong": 0.0,
-    "ang-zeyu": 0.22319646,
+    "ang-zeyu": 0.22122145,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

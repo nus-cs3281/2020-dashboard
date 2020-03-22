@@ -5741,6 +5741,639 @@
     }
   },
   {
+    "path": "src/Retriever.vue",
+    "fileType": "vue",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003ctemplate\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cdiv\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Loading..."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/template\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cscript\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {getFragmentByHash, toBoolean} from \u0027./utils/utils.js\u0027"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export default {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  props: {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    src: {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      type: String"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    fragment: {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      type: String // fragment identified (the \u0027#\u0027 in URI)"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    delay: {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      type: Boolean,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      default: false"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    _hasFetched: {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      type: Boolean,"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      default: false"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  computed: {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Vue 2.0 coerce migration"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    delayBool () {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return toBoolean(this.delay);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Vue 2.0 coerce migration end"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  methods: {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    fetch() {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      if (!this.src) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      if (this._hasFetched) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      jQuery.get(this.src)"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .done((response) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          var result \u003d response;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          if (this.fragment) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            var tempDom \u003d jQuery(\u0027\u003ctemp\u003e\u0027).append(jQuery.parseHTML(result));"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            var appContainer \u003d jQuery(\u0027#\u0027 + this.fragment, tempDom);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            result \u003d appContainer.html();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this._hasFetched \u003d true"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          // result is empty / undefined"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          if (result \u003d\u003d void(0) \u0026\u0026 this.fragment) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.$el.innerHTML \u003d `\u003cstrong\u003eError\u003c/strong\u003e: Failed to retrieve page fragment: ${this.src}#${this.fragment}`"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          // Mount result in retriever"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          let tempComponent \u003d Vue.extend({"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            template: `\u003cdiv\u003e\\n${result}\\n\u003c/div\u003e`,"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          })"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          new tempComponent().$mount(this.$el);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "          this.$emit(\u0027src-loaded\u0027);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .fail((error) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          console.error(error.responseText)"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.$el.innerHTML \u003d `\u003cstrong\u003eError\u003c/strong\u003e: Failed to retrieve content from source: \u003cem\u003e${this.src}\u003c/em\u003e`"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "          this.$emit(\u0027src-loaded\u0027);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  mounted() {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.$nextTick( function () {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!this.src) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.$el.innerHTML \u003d \u0027\u0027"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          var hash \u003d getFragmentByHash(this.src)"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          if (hash) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.fragment \u003d hash"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.src \u003d this.src.split(\u0027#\u0027)[0];"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!this.delayBool) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.fetch();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    })"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/script\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 87,
+      "ang-zeyu": 2
+    }
+  },
+  {
     "path": "src/Searchbar.vue",
     "fileType": "vue",
     "lines": [
@@ -9331,9 +9964,9 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "ang-zeyu"
+          "gitId": "le0tan"
         },
-        "content": "                \u003cslot name\u003d\"_icon\"\u003e"
+        "content": "                \u003cslot name\u003d\"icon\"\u003e"
       },
       {
         "lineNumber": 6,
@@ -9429,9 +10062,9 @@
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "ang-zeyu"
+          "gitId": "le0tan"
         },
-        "content": "                \u003cslot name\u003d\"_icon\"\u003e"
+        "content": "                \u003cslot name\u003d\"icon\"\u003e"
       },
       {
         "lineNumber": 20,
@@ -10521,16 +11154,16 @@
       {
         "lineNumber": 175,
         "author": {
-          "gitId": "nbriannl"
+          "gitId": "le0tan"
         },
-        "content": "        // this.$slots._icon is either undefined or an object"
+        "content": "        // this.$slots.icon is either undefined or an object"
       },
       {
         "lineNumber": 176,
         "author": {
-          "gitId": "nbriannl"
+          "gitId": "le0tan"
         },
-        "content": "        const isIconSlotFilled \u003d !!this.$slots._icon;"
+        "content": "        const isIconSlotFilled \u003d !!this.$slots.icon;"
       },
       {
         "lineNumber": 177,
@@ -11689,12 +12322,12 @@
       }
     ],
     "authorContributionMap": {
-      "nbriannl": 40,
+      "nbriannl": 38,
       "yash-chowdhary": 10,
-      "le0tan": 23,
+      "le0tan": 27,
       "-": 132,
       "hcwong": 37,
-      "ang-zeyu": 99
+      "ang-zeyu": 97
     }
   },
   {
@@ -12270,7 +12903,7 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      \u003cdiv :class\u003d\"[\u0027header-wrapper\u0027, { \u0027header-wrapper-bottom\u0027: localExpanded, \u0027header-toggle\u0027: isExpandableCard }]\""
+        "content": "      \u003cdiv :class\u003d\"[\u0027header-wrapper\u0027, { \u0027header-wrapper-bottom\u0027: isHeaderAtBottom, \u0027header-toggle\u0027: isExpandableCard }]\""
       },
       {
         "lineNumber": 14,
@@ -12284,595 +12917,595 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003cspan v-show\u003d\"!localExpanded\" ref\u003d\"headerWrapper\""
+        "content": "        \u003ctransition name\u003d\"header-fade\"\u003e"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              :class\u003d\"[\u0027card-title\u0027, \u0027card-title-transparent\u0027, { \u0027card-title-opaque\u0027: onHeaderHover, \u0027ellipses\u0027: !hasHeaderBool }]\"\u003e"
+        "content": "          \u003cspan v-show\u003d\"!isHeaderAtBottom\" ref\u003d\"headerWrapper\""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003cslot name\u003d\"header\"\u003e"
+        "content": "                :class\u003d\"[\u0027card-title\u0027, \u0027card-title-transparent\u0027, { \u0027card-title-opaque\u0027: onHeaderHover, \u0027ellipses\u0027: !hasHeaderBool }]\"\u003e"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cspan class\u003d\"card-title-inline\"\u003e\u003cslot name\u003d\"_header\"\u003e\u003c/slot\u003e\u003c/span\u003e"
+        "content": "            \u003cslot name\u003d\"header\"\u003e"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cspan v-show\u003d\"showDownSwitch\" aria-hidden\u003d\"true\""
+        "content": "              \u003cspan class\u003d\"card-title-inline\"\u003e\u003cslot name\u003d\"_header\"\u003e\u003c/slot\u003e\u003c/span\u003e"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                  class\u003d\"minimal-button glyphicon glyphicon-menu-down minimal-menu-down\"\u003e\u003c/span\u003e"
+        "content": "              \u003cspan v-show\u003d\"showDownSwitch\" aria-hidden\u003d\"true\""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003c/slot\u003e"
+        "content": "                    class\u003d\"minimal-button glyphicon glyphicon-menu-down minimal-menu-down\"\u003e\u003c/span\u003e"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003c/span\u003e"
+        "content": "            \u003c/slot\u003e"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003cdiv :class\u003d\"[\u0027button-wrapper\u0027, { \u0027button-wrapper-expanded\u0027: localExpanded, \u0027button-wrapper-visible\u0027: onHeaderHover }]\"\u003e"
+        "content": "          \u003c/span\u003e"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003cslot name\u003d\"button\"\u003e"
+        "content": "        \u003c/transition\u003e"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cbutton v-show\u003d\"!noCloseBool\" class\u003d\"minimal-button\" type\u003d\"button\" @click.stop\u003d\"close()\"\u003e"
+        "content": "        \u003cdiv :class\u003d\"[\u0027button-wrapper\u0027, { \u0027button-wrapper-expanded\u0027: isHeaderAtBottom, \u0027button-wrapper-visible\u0027: onHeaderHover }]\"\u003e"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              \u003cspan class\u003d\"glyphicon glyphicon-remove minimal-close-button\" aria-hidden\u003d\"true\"\u003e\u003c/span\u003e"
+        "content": "          \u003cslot name\u003d\"button\"\u003e"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003c/button\u003e"
+        "content": "            \u003cbutton v-show\u003d\"!noCloseBool\" class\u003d\"minimal-button\" type\u003d\"button\" @click.stop\u003d\"close()\"\u003e"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cbutton v-show\u003d\"popupUrl !\u003d\u003d null\" class\u003d\"minimal-button\" type\u003d\"button\" @click.stop\u003d\"openPopup()\"\u003e"
+        "content": "              \u003cspan class\u003d\"glyphicon glyphicon-remove minimal-close-button\" aria-hidden\u003d\"true\"\u003e\u003c/span\u003e"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              \u003cspan class\u003d\"glyphicon glyphicon-new-window minimal-popup-button\" aria-hidden\u003d\"true\"\u003e\u003c/span\u003e"
+        "content": "            \u003c/button\u003e"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003c/button\u003e"
+        "content": "            \u003cbutton v-show\u003d\"popupUrl !\u003d\u003d null\" class\u003d\"minimal-button\" type\u003d\"button\" @click.stop\u003d\"openPopup()\"\u003e"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cbutton v-show\u003d\"localExpanded \u0026\u0026 isExpandableCard \u0026\u0026 bottomSwitchBool\" class\u003d\"minimal-button\" type\u003d\"button\""
+        "content": "              \u003cspan class\u003d\"glyphicon glyphicon-new-window minimal-popup-button\" aria-hidden\u003d\"true\"\u003e\u003c/span\u003e"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                    @click.prevent.stop\u003d\"collapseThenScrollIntoViewIfNeeded()\"\u003e"
+        "content": "            \u003c/button\u003e"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              \u003cspan class\u003d\"glyphicon glyphicon-menu-up minimal-menu-up\" aria-hidden\u003d\"true\"\u003e\u003c/span\u003e"
+        "content": "            \u003cbutton v-show\u003d\"isHeaderAtBottom \u0026\u0026 isExpandableCard \u0026\u0026 bottomSwitchBool\" class\u003d\"minimal-button\" type\u003d\"button\"\u003e"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003c/button\u003e"
+        "content": "              \u003cspan class\u003d\"glyphicon glyphicon-menu-up minimal-menu-up\" aria-hidden\u003d\"true\"\u003e\u003c/span\u003e"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003c/slot\u003e"
+        "content": "            \u003c/button\u003e"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003c/div\u003e"
+        "content": "          \u003c/slot\u003e"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      \u003c/div\u003e"
+        "content": "        \u003c/div\u003e"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      \u003ctemplate v-if\u003d\"preloadBool || isCached\"\u003e"
+        "content": "      \u003c/div\u003e"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003cdiv class\u003d\"card-collapse\""
+        "content": "      \u003ctransition @before-enter\u003d\"beforeExpandMinimal\""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "             ref\u003d\"panel\""
+        "content": "                  @enter\u003d\"duringExpand\""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "             v-show\u003d\"localExpanded\""
+        "content": "                  @leave\u003d\"duringCollapse\""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003e"
+        "content": "                  @after-leave\u003d\"afterCollapseMinimal\""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003cdiv class\u003d\"card-body\"\u003e"
+        "content": "                  v-if\u003d\"preloadBool || wasRetrieverLoaded\""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cslot\u003e\u003c/slot\u003e"
+        "content": "      \u003e"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            \u003cretriever v-if\u003d\"hasSrc\" ref\u003d\"retriever\" :src\u003d\"src\" :fragment\u003d\"fragment\"/\u003e"
+        "content": "        \u003cdiv v-show\u003d\"localExpanded\""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003c/div\u003e"
+        "content": "             class\u003d\"card-collapse\""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        \u003c/div\u003e"
+        "content": "             ref\u003d\"panel\"\u003e"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      \u003c/template\u003e"
+        "content": "          \u003cdiv class\u003d\"card-body\"\u003e"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    \u003c/div\u003e"
+        "content": "            \u003cslot\u003e\u003c/slot\u003e"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  \u003c/span\u003e"
+        "content": "            \u003cretriever v-if\u003d\"hasSrc\""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003c/template\u003e"
+        "content": "                       ref\u003d\"retriever\""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "                       :src\u003d\"src\""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003cscript\u003e"
+        "content": "                       :fragment\u003d\"fragment\""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "import retriever from \u0027../Retriever.vue\u0027;"
+        "content": "                       @src-loaded\u003d\"setMaxHeight\"/\u003e"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "import panelBase from \u0027./PanelBase\u0027;"
+        "content": "          \u003c/div\u003e"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        \u003c/div\u003e"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "export default {"
+        "content": "      \u003c/transition\u003e"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  mixins: [panelBase],"
+        "content": "    \u003c/div\u003e"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  components: {"
+        "content": "  \u003c/span\u003e"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    retriever,"
+        "content": "\u003c/template\u003e"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  },"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  computed: {"
+        "content": "\u003cscript\u003e"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    showDownSwitch() {"
+        "content": "import retriever from \u0027../Retriever.vue\u0027;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return this.hasHeaderBool \u0026\u0026 this.isExpandableCard \u0026\u0026 !this.noSwitchBool;"
+        "content": "import panelBase from \u0027./PanelBase\u0027;"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "export default {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "};"
+        "content": "  mixins: [panelBase],"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003c/script\u003e"
+        "content": "  components: {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    retriever,"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003cstyle scoped\u003e"
+        "content": "  },"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .morph-title {"
+        "content": "  data() {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    padding: 0 0.3em;"
+        "content": "    return {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    color: rgba(0, 0, 0, 0.5);"
+        "content": "      /*"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border-color: rgba(0, 0, 0, 0.5);"
+        "content": "      \u0027Copy\u0027 of localExpanded that is updated on certain animation events."
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    background-color: transparent;"
+        "content": "      It is minimal-panel specific due to its design (the header can shift to the bottom)."
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    vertical-align: top;"
+        "content": "      Its purpose is to show the header text only once the collapse animation has finished."
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "       */"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "      isHeaderAtBottom: false,"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .morph-title:hover, .morph-title:active, .morph-title:focus {"
+        "content": "    };"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    color: black;"
+        "content": "  },"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border-color: black;"
+        "content": "  computed: {"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    background-color: rgba(244, 244, 244, 0.3);"
+        "content": "    showDownSwitch() {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "      return this.hasHeaderBool \u0026\u0026 this.isExpandableCard \u0026\u0026 !this.noSwitchBool;"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    },"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .card-flex {"
+        "content": "  },"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    display: flex;"
+        "content": "  methods: {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    flex-direction: column;"
+        "content": "    beforeExpandMinimal(el) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border: 0;"
+        "content": "      this.isHeaderAtBottom \u003d true;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    margin: 0;"
+        "content": "      this.beforeExpand(el);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    },"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    afterCollapseMinimal(el) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .card-title-transparent {"
+        "content": "      this.isHeaderAtBottom \u003d false;"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    opacity: 0.5;"
+        "content": "    }"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    transition: opacity 0.5s;"
+        "content": "  },"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "  created() {"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    this.isHeaderAtBottom \u003d this.localExpanded;"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .card-title-opaque {"
+        "content": "  },"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    opacity: 1;"
+        "content": "};"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "\u003c/script\u003e"
       },
       {
         "lineNumber": 100,
@@ -12886,689 +13519,1025 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .card-title-inline {"
+        "content": "\u003cstyle scoped\u003e"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    display: inline-block;"
+        "content": "  .morph-title {"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    padding: 0 0.3em;"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    color: rgba(0, 0, 0, 0.5);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .card-body {"
+        "content": "    border-color: rgba(0, 0, 0, 0.5);"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    padding: 0;"
+        "content": "    background-color: transparent;"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    vertical-align: top;"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .header-wrapper {"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    width: 100%;"
+        "content": "  .morph-title:hover, .morph-title:active, .morph-title:focus {"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    display: inline-block;"
+        "content": "    color: black;"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    background-color: white;"
+        "content": "    border-color: black;"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    background-color: rgba(244, 244, 244, 0.3);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .header-wrapper-bottom {"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    order: 1;"
+        "content": "  .card-collapse {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    overflow: hidden;"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    transition: max-height 0.7s ease-in-out;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .ellipses::before {"
+        "content": "  }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    position: relative;"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    bottom: 3px;"
+        "content": "  .card-flex {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    content: \u0027...\u0027;"
+        "content": "    display: flex;"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    font-weight: 900;"
+        "content": "    flex-direction: column;"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    margin-right: 4px;"
+        "content": "    border: 0;"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    margin: 0;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .button-wrapper {"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    padding-left: 2px;"
+        "content": "  .card-title-transparent {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border-width: 0 0 0 1px;"
+        "content": "    opacity: 0.5;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border-color: rgba(150, 150, 150, 0.2);"
+        "content": "    transition: opacity 0.5s;"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border-style: solid;"
+        "content": "  }"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    margin-left: 2px;"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    width: auto;"
+        "content": "  .card-title-opaque {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    float: none;"
+        "content": "    opacity: 1;"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    opacity: 0;"
+        "content": "  }"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    transition: opacity 0.5s;"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    vertical-align: text-top;"
+        "content": "  .header-fade-enter {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    opacity: 0;"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .button-wrapper-visible {"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    opacity: 1;"
+        "content": "  .header-fade-leave-active {"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    position: absolute;"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .button-wrapper-expanded {"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    padding-left: 0;"
+        "content": "  .header-fade-leave-to {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border: 0;"
+        "content": "    opacity: 0;"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    margin-left: 0;"
+        "content": "  }"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  .card-title-inline {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .header-toggle {"
+        "content": "    display: inline-block;"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    cursor: pointer;"
+        "content": "  }"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  .card-body {"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .minimal-button {"
+        "content": "    padding: 0;"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    padding: 0 3px;"
+        "content": "  }"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    border: 0;"
+        "content": ""
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    color: rgb(150, 150, 150);"
+        "content": "  .header-wrapper {"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    background-color: transparent;"
+        "content": "    width: 100%;"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    cursor: pointer;"
+        "content": "    display: inline-block;"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    background-color: white;"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .minimal-button:hover, .minimal-button:active, .minimal-button:focus {"
+        "content": ""
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    color: rgb(30, 30, 30);"
+        "content": "  .header-wrapper-bottom {"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    order: 1;"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .minimal-popup-button {"
+        "content": ""
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    top: 1px;"
+        "content": "  .ellipses::before {"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    font-size: 9px;"
+        "content": "    position: relative;"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    bottom: 3px;"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    content: \u0027...\u0027;"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .minimal-menu-up {"
+        "content": "    font-weight: 900;"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    top: 3px;"
+        "content": "    margin-right: 4px;"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    font-size: 13px;"
+        "content": "  }"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  .button-wrapper {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .minimal-menu-down {"
+        "content": "    padding-left: 2px;"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    top: 1px;"
+        "content": "    border-width: 0 0 0 1px;"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    font-size: 13px;"
+        "content": "    border-color: rgba(150, 150, 150, 0.2);"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    border-style: solid;"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    margin-left: 2px;"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  .minimal-close-button {"
+        "content": "    width: auto;"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    top: 2px;"
+        "content": "    float: none;"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    font-size: 11px;"
+        "content": "    opacity: 0;"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "    transition: opacity 0.5s;"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    vertical-align: text-top;"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  /* Bootstrap extra small(xs) responsive breakpoint */"
+        "content": "  }"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  @media (max-width: 575.98px) {"
+        "content": ""
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .button-wrapper-expanded {"
+        "content": "  .button-wrapper-visible {"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      padding-left: 0;"
+        "content": "    opacity: 1;"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      border: 0;"
+        "content": "  }"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      margin-left: 0;"
+        "content": ""
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      opacity: 0.15;"
+        "content": "  .button-wrapper-expanded {"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "    padding-left: 0;"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    border: 0;"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .button-wrapper-visible {"
+        "content": "    margin-left: 0;"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      opacity: 1;"
+        "content": "  }"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  }"
+        "content": "  .header-toggle {"
       },
       {
         "lineNumber": 199,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    cursor: pointer;"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  .minimal-button {"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    padding: 0 3px;"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    border: 0;"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    color: rgb(150, 150, 150);"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    background-color: transparent;"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    cursor: pointer;"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  .minimal-button:hover, .minimal-button:active, .minimal-button:focus {"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    color: rgb(30, 30, 30);"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  .minimal-popup-button {"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    top: 1px;"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    font-size: 9px;"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  .minimal-menu-up {"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    top: 3px;"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    font-size: 13px;"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  .minimal-menu-down {"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    top: 1px;"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    font-size: 13px;"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  .minimal-close-button {"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    top: 2px;"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  /* Bootstrap extra small(xs) responsive breakpoint */"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  @media (max-width: 575.98px) {"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    .button-wrapper-expanded {"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "      padding-left: 0;"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "      border: 0;"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "      margin-left: 0;"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "      opacity: 0.15;"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    .button-wrapper-visible {"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "      opacity: 1;"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 247,
         "author": {
           "gitId": "ang-zeyu"
         },
@@ -13576,7 +14545,7 @@
       }
     ],
     "authorContributionMap": {
-      "ang-zeyu": 199
+      "ang-zeyu": 247
     }
   },
   {
@@ -13777,14 +14746,14 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                      \u003cpanel-switch v-show\u003d\"isExpandableCard \u0026\u0026 !noSwitchBool \u0026\u0026 !showCaret\" :is-open\u003d\"localExpanded\""
+        "content": "                      \u003cpanel-switch v-show\u003d\"isExpandableCard \u0026\u0026 !noSwitchBool \u0026\u0026 !showCaret\""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                                    @click.native.stop.prevent\u003d\"expand()\""
+        "content": "                                    :is-open\u003d\"localExpanded\""
       },
       {
         "lineNumber": 30,
@@ -13889,945 +14858,945 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003ctemplate v-if\u003d\"preloadBool || isCached\"\u003e"
+        "content": "          \u003ctransition @before-enter\u003d\"beforeExpand\""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              \u003cdiv class\u003d\"card-collapse\""
+        "content": "                      @enter\u003d\"duringExpand\""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                   ref\u003d\"panel\""
+        "content": "                      @leave\u003d\"duringCollapse\""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                   v-show\u003d\"localExpanded\""
+        "content": "                      v-if\u003d\"preloadBool || wasRetrieverLoaded\""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              \u003e"
+        "content": "          \u003e"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                  \u003cdiv class\u003d\"card-body\"\u003e"
+        "content": "              \u003cdiv class\u003d\"card-collapse\""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                      \u003cslot\u003e\u003c/slot\u003e"
+        "content": "                   ref\u003d\"panel\""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                      \u003cretriever v-if\u003d\"hasSrc\" ref\u003d\"retriever\" :src\u003d\"src\" :fragment\u003d\"fragment\"\u003e\u003c/retriever\u003e"
+        "content": "                   v-show\u003d\"localExpanded\""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                      \u003cpanel-switch v-show\u003d\"isExpandableCard \u0026\u0026 bottomSwitchBool\" :is-open\u003d\"localExpanded\""
+        "content": "              \u003e"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                                    @click.native.stop.prevent\u003d\"collapseThenScrollIntoViewIfNeeded()\""
+        "content": "                  \u003cdiv class\u003d\"card-body\"\u003e"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                      \u003e\u003c/panel-switch\u003e"
+        "content": "                      \u003cslot\u003e\u003c/slot\u003e"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                  \u003c/div\u003e"
+        "content": "                      \u003cretriever v-if\u003d\"hasSrc\""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "                  \u003chr v-show\u003d\"isSeamless\" /\u003e"
+        "content": "                                 ref\u003d\"retriever\""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "              \u003c/div\u003e"
+        "content": "                                 :src\u003d\"src\""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          \u003c/template\u003e"
+        "content": "                                 :fragment\u003d\"fragment\""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      \u003c/div\u003e"
+        "content": "                                 @src-loaded\u003d\"setMaxHeight\" /\u003e"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  \u003c/span\u003e"
+        "content": "                      \u003cpanel-switch v-show\u003d\"isExpandableCard \u0026\u0026 bottomSwitchBool\" :is-open\u003d\"localExpanded\""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003c/template\u003e"
+        "content": "                                    @click.native.stop.prevent\u003d\"toggle()\" /\u003e"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "                  \u003c/div\u003e"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003cscript\u003e"
+        "content": "                  \u003chr v-show\u003d\"isSeamless\" /\u003e"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "import panelBase from \u0027./PanelBase\u0027;"
+        "content": "              \u003c/div\u003e"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "import panelSwitch from \u0027./PanelSwitch.vue\u0027;"
+        "content": "          \u003c/transition\u003e"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "import retriever from \u0027../Retriever.vue\u0027;"
+        "content": "      \u003c/div\u003e"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "  \u003c/span\u003e"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "export default {"
+        "content": "\u003c/template\u003e"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  mixins: [panelBase],"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  components: {"
+        "content": "\u003cscript\u003e"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    panelSwitch,"
+        "content": "import panelBase from \u0027./PanelBase\u0027;"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    retriever,"
+        "content": "import panelSwitch from \u0027./PanelSwitch.vue\u0027;"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  },"
+        "content": "import retriever from \u0027../Retriever.vue\u0027;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  computed: {"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    showCaret() {"
+        "content": "export default {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return this.isSeamless \u0026\u0026 this.expandableBool;"
+        "content": "  mixins: [panelBase],"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "  components: {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    isSeamless() {"
+        "content": "    panelSwitch,"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return this.type \u003d\u003d\u003d \u0027seamless\u0027;"
+        "content": "    retriever,"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "  },"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    btnType() {"
+        "content": "  computed: {"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (this.isSeamless || this.type \u003d\u003d\u003d \u0027light\u0027) {"
+        "content": "    showCaret() {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        return \u0027btn-outline-secondary\u0027;"
+        "content": "      return this.isSeamless \u0026\u0026 this.expandableBool;"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "    },"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return `btn-outline-${this.type || \u0027secondary\u0027}`;"
+        "content": "    isSeamless() {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      return this.type \u003d\u003d\u003d \u0027seamless\u0027;"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    borderType() {"
+        "content": "    },"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (this.isSeamless) {"
+        "content": "    btnType() {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        return \u0027border-0\u0027;"
+        "content": "      if (this.isSeamless || this.type \u003d\u003d\u003d \u0027light\u0027) {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      } else if (this.type) {"
+        "content": "        return \u0027btn-outline-secondary\u0027;"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        if (this.type \u003d\u003d\u003d \u0027light\u0027) {"
+        "content": "      }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "          return \u0027\u0027; // Bootstrap 4.x light border is almost invisible on a white page"
+        "content": "      return `btn-outline-${this.type || \u0027secondary\u0027}`;"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        }"
+        "content": "    },"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        return `border-${this.type}`;"
+        "content": "    borderType() {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "      if (this.isSeamless) {"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return \u0027\u0027;"
+        "content": "        return \u0027border-0\u0027;"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      } else if (this.type) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    cardType() {"
+        "content": "        if (this.type \u003d\u003d\u003d \u0027light\u0027) {"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (this.isSeamless) {"
+        "content": "          return \u0027\u0027; // Bootstrap 4.x light border is almost invisible on a white page"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        return \u0027bg-white\u0027;"
+        "content": "        }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "        return `border-${this.type}`;"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return `bg-${this.type || \u0027light\u0027}`;"
+        "content": "      }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      return \u0027\u0027;"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    isLightBg() {"
+        "content": "    },"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return this.cardType \u003d\u003d\u003d \u0027bg-light\u0027 || this.cardType \u003d\u003d\u003d \u0027bg-white\u0027 || this.cardType \u003d\u003d\u003d \u0027bg-warning\u0027;"
+        "content": "    cardType() {"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      if (this.isSeamless) {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    showCloseButton() {"
+        "content": "        return \u0027bg-white\u0027;"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (!this.isSeamless) {"
+        "content": "      }"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        return !this.noCloseBool;"
+        "content": "      return `bg-${this.type || \u0027light\u0027}`;"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "    },"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      return this.onHeaderHover;"
+        "content": "    isLightBg() {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      return this.cardType \u003d\u003d\u003d \u0027bg-light\u0027 || this.cardType \u003d\u003d\u003d \u0027bg-white\u0027 || this.cardType \u003d\u003d\u003d \u0027bg-warning\u0027;"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  },"
+        "content": "    },"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "};"
+        "content": "    showCloseButton() {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003c/script\u003e"
+        "content": "      if (!this.isSeamless) {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        return !this.noCloseBool;"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "\u003cstyle\u003e"
+        "content": "      }"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-heading {"
+        "content": "      return this.onHeaderHover;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        width: 100%;"
+        "content": "    },"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "  },"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-title {"
+        "content": "\u003c/script\u003e"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        display: inline-block;"
+        "content": ""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        font-size: 1em;"
+        "content": "\u003cstyle scoped\u003e"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin: 0;"
+        "content": "    .card-collapse {"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        vertical-align: middle;"
+        "content": "        overflow: hidden;"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        transition: max-height 0.7s ease-in-out;"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-title * {"
+        "content": "\u003c/style\u003e"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin: 0px !important;"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "\u003cstyle\u003e"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .card-heading {"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .caret-wrapper {"
+        "content": "        width: 100%;"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        float: left;"
+        "content": "    }"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        display: inline-block;"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        width: 32px;"
+        "content": "    .card-title {"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        display: inline-block;"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        font-size: 1em;"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .header-wrapper {"
+        "content": "        margin: 0;"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        display: inline-block;"
+        "content": "        vertical-align: middle;"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        width: calc(100% - 32px - 96px);"
+        "content": "    }"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .card-title * {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .button-wrapper {"
+        "content": "        margin: 0px !important;"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        float: right;"
+        "content": "    }"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        display: inline-block;"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        width: 96px;"
+        "content": "    .caret-wrapper {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        float: left;"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        display: inline-block;"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .header-toggle {"
+        "content": "        width: 32px;"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        cursor: pointer;"
+        "content": "    }"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .header-wrapper {"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .expandable-card {"
+        "content": "        display: inline-block;"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-bottom: 0 !important;"
+        "content": "        width: calc(100% - 32px - 96px);"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-top: 5px;"
+        "content": "    }"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .button-wrapper {"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-group \u003e .card-container \u003e .expandable-card {"
+        "content": "        float: right;"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-top: 0!important;"
+        "content": "        display: inline-block;"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        width: 96px;"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-seamless {"
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        padding: 0;"
+        "content": "    .header-toggle {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        cursor: pointer;"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card.card-seamless {"
+        "content": ""
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        box-shadow: none;"
+        "content": "    .expandable-card {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        border: none;"
+        "content": "        margin-bottom: 0 !important;"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        margin-top: 5px;"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-seamless \u003e .card-heading {"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        padding: 0;"
+        "content": "    .card-group \u003e .card-container \u003e .expandable-card {"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        margin-top: 0!important;"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-seamless \u003e .card-collapse \u003e hr {"
+        "content": ""
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin: 0;"
+        "content": "    .card-seamless {"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        width: calc(100% - 27px);"
+        "content": "        padding: 0;"
       },
       {
         "lineNumber": 179,
@@ -14848,49 +15817,49 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-seamless \u003e .card-collapse \u003e .card-body {"
+        "content": "    .card.card-seamless {"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        padding: 10px 0;"
+        "content": "        box-shadow: none;"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        border: none;"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-seamless \u003e .card-collapse \u003e .card-body \u003e .collapse-button {"
+        "content": ""
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        position: relative;"
+        "content": "    .card-seamless \u003e .card-heading {"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        top: 22px;"
+        "content": "        padding: 0;"
       },
       {
         "lineNumber": 188,
@@ -14911,322 +15880,322 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-body \u003e .collapse-button {"
+        "content": "    .card-seamless \u003e .card-collapse \u003e hr {"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-bottom: 13px;"
+        "content": "        margin: 0;"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-top: 5px;"
+        "content": "        width: calc(100% - 27px);"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        opacity: 0.2;"
+        "content": "    }"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .card-seamless \u003e .card-collapse \u003e .card-body {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .card-body \u003e .collapse-button:hover {"
+        "content": "        padding: 10px 0;"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        opacity: 1;"
+        "content": "    }"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .card-seamless \u003e .card-collapse \u003e .card-body \u003e .collapse-button {"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .close-button {"
+        "content": "        position: relative;"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        font-size: 10px !important;"
+        "content": "        top: 22px;"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        float: right;"
+        "content": "    }"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        padding: 3px 8px !important;"
+        "content": ""
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-left: 3px;"
+        "content": "    .card-body \u003e .collapse-button {"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-top: 2px;"
+        "content": "        margin-bottom: 13px;"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        margin-top: 5px;"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        opacity: 0.2;"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .popup-button {"
+        "content": "    }"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        font-size: 10px !important;"
+        "content": ""
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        float: right;"
+        "content": "    .card-body \u003e .collapse-button:hover {"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        margin-top: 2px;"
+        "content": "        opacity: 1;"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        padding: 3px 8px !important;"
+        "content": "    }"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .close-button {"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .morph {"
+        "content": "        font-size: 10px !important;"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        display: inline-block;"
+        "content": "        float: right;"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "        padding: 3px 8px !important;"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        margin-left: 3px;"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    .morph-display-wrapper {"
+        "content": "        margin-top: 2px;"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        white-space: normal;"
+        "content": "    }"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    .popup-button {"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    /* Bootstrap extra small(xs) responsive breakpoint */"
+        "content": "        font-size: 10px !important;"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    @media (max-width: 575.98px) {"
+        "content": "        float: right;"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        margin-top: 2px;"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        .caret-wrapper {"
+        "content": "        padding: 3px 8px !important;"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            float: left;"
+        "content": "    }"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            display: inline-block;"
+        "content": ""
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            width: 32px;"
+        "content": "    .morph {"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        }"
+        "content": "        display: inline-block;"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        .header-wrapper {"
+        "content": ""
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            display: inline-block;"
+        "content": "    .morph-display-wrapper {"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            width: calc(100% - 32px - 32px);"
+        "content": "        white-space: normal;"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 236,
@@ -15240,84 +16209,84 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        .button-wrapper {"
+        "content": "    /* Bootstrap extra small(xs) responsive breakpoint */"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            float: right;"
+        "content": "    @media (max-width: 575.98px) {"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            display: inline-block;"
+        "content": ""
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            width: 32px;"
+        "content": "        .caret-wrapper {"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        }"
+        "content": "            float: left;"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "            display: inline-block;"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        .card-body {"
+        "content": "            width: 32px;"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            padding: 0.5rem;"
+        "content": "        }"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": ""
+        "content": "        .header-wrapper {"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        .card-collapse \u003e hr {"
+        "content": "            display: inline-block;"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            margin-top: 1.5rem;"
+        "content": "            width: calc(100% - 32px - 32px);"
       },
       {
         "lineNumber": 249,
@@ -15338,31 +16307,129 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        .card-header {"
+        "content": "        .button-wrapper {"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "            padding: 0.5rem;"
+        "content": "            float: right;"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        }"
+        "content": "            display: inline-block;"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "            width: 32px;"
       },
       {
         "lineNumber": 255,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        .card-body {"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "            padding: 0.5rem;"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        .card-collapse \u003e hr {"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "            margin-top: 1.5rem;"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        .card-header {"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "            padding: 0.5rem;"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 269,
         "author": {
           "gitId": "ang-zeyu"
         },
@@ -15370,7 +16437,7 @@
       }
     ],
     "authorContributionMap": {
-      "ang-zeyu": 255
+      "ang-zeyu": 269
     }
   },
   {
@@ -16040,7 +17107,7 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      isCached: false,"
+        "content": "      wasRetrieverLoaded: false,"
       },
       {
         "lineNumber": 96,
@@ -16075,63 +17142,63 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.localExpanded \u003d !this.localExpanded;"
+        "content": "      if (!this.wasRetrieverLoaded \u0026\u0026 !this.localExpanded) {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (this.localExpanded) {"
+        "content": "        /*"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        this.isCached \u003d true;"
+        "content": "        Let the retriever load before toggling localExpanded which triggers the animation,"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "        as we need to know the scrollHeight of the content for the animation to work."
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "        */"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    expand() {"
+        "content": "        this.wasRetrieverLoaded \u003d true;"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.localExpanded \u003d !this.localExpanded;"
+        "content": "        this.$nextTick(() \u003d\u003e this.localExpanded \u003d true);"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (this.localExpanded) {"
+        "content": "      } else {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        this.isCached \u003d true;"
+        "content": "        this.localExpanded \u003d !this.localExpanded;"
       },
       {
         "lineNumber": 109,
@@ -16159,91 +17226,91 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.localMinimized \u003d true;"
+        "content": "      this.localExpanded \u003d false;"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      this.localMinimized \u003d true;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    open() {"
+        "content": "    },"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.localExpanded \u003d true;"
+        "content": "    open() {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.isCached \u003d true;"
+        "content": "      this.wasRetrieverLoaded \u003d true;"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.localMinimized \u003d false;"
+        "content": "      this.$nextTick(() \u003d\u003e this.localExpanded \u003d true);"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      this.localMinimized \u003d false;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    scrollIntoViewIfNeeded() {"
+        "content": "    },"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      const top \u003d this.$el.getBoundingClientRect().top;"
+        "content": "    openPopup() {"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      const isTopInView \u003d (top \u003e\u003d 0) \u0026\u0026 (top \u003c\u003d window.innerHeight);"
+        "content": "      window.open(this.popupUrl);"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (!isTopInView) {"
+        "content": "    },"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        this.$el.scrollIntoView();"
+        "content": "    setMaxHeight() {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "      this.$refs.panel.style.maxHeight \u003d `${this.$refs.panel.scrollHeight}px`;"
       },
       {
         "lineNumber": 125,
@@ -16257,178 +17324,255 @@
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    collapseThenScrollIntoViewIfNeeded() {"
+        "content": "    beforeExpand(el) {"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.$once(\u0027is-open-event\u0027, (el, isOpen) \u003d\u003e {"
+        "content": "      el.style.maxHeight \u003d \u00270\u0027;"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        this.scrollIntoViewIfNeeded();"
+        "content": "    },"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      });"
+        "content": "    duringExpand(el) {"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      this.expand();"
+        "content": "      jQuery(\"html\").stop();"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      el.style.maxHeight \u003d `${el.scrollHeight}px`;"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    openPopup() {"
+        "content": "    },"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      window.open(this.popupUrl);"
+        "content": "    duringCollapse(el) {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    },"
+        "content": "      if (this.$el.getBoundingClientRect().top \u003c 0) {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  },"
+        "content": "        jQuery(\"html\").animate({"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  created() {"
+        "content": "          scrollTop: window.scrollY + this.$el.getBoundingClientRect().top - 3"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    if (this.src) {"
+        "content": "        }, 700, \u0027swing\u0027)"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      const hash \u003d getFragmentByHash(this.src);"
+        "content": "      }"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      if (hash) {"
+        "content": "      el.style.maxHeight \u003d \u00270\u0027;"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        this.fragment \u003d hash;"
+        "content": "    },"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "        this.src \u003d this.src.split(\u0027#\u0027)[0];"
+        "content": "  },"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "      }"
+        "content": "  created() {"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    }"
+        "content": "    if (this.src) {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    // Edge case where user might want non-expandable card that isn\u0027t expanded by default"
+        "content": "      const hash \u003d getFragmentByHash(this.src);"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    const notExpandableNoExpand \u003d !this.expandableBool \u0026\u0026 this.expanded !\u003d\u003d \u0027false\u0027;"
+        "content": "      if (hash) {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    // Set local data to computed prop value"
+        "content": "        this.fragment \u003d hash;"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    this.localExpanded \u003d notExpandableNoExpand || this.expandedBool; // Ensure this expr ordering is maintained"
+        "content": "        this.src \u003d this.src.split(\u0027#\u0027)[0];"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    this.isCached \u003d this.localExpanded; // If it is expanded, it will be cached."
+        "content": "      }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "    this.localMinimized \u003d this.minimizedBool;"
+        "content": "    }"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "ang-zeyu"
         },
-        "content": "  },"
+        "content": "    // Edge case where user might want non-expandable card that isn\u0027t expanded by default"
       },
       {
         "lineNumber": 151,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    const notExpandableNoExpand \u003d !this.expandableBool \u0026\u0026 this.expanded !\u003d\u003d \u0027false\u0027;"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    // Set local data to computed prop value"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    this.localExpanded \u003d notExpandableNoExpand || this.expandedBool; // Ensure this expr ordering is maintained"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    this.wasRetrieverLoaded \u003d this.localExpanded; // If it is expanded, load the retriever immediately."
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    this.localMinimized \u003d this.minimizedBool;"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  mounted() {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    // For this case, we want to set and calculate the maximum height only after the"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    // panel has been mounted."
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    if (this.expandedBool \u0026\u0026 !this.hasSrc) this.setMaxHeight();"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 162,
         "author": {
           "gitId": "ang-zeyu"
         },
@@ -16436,7 +17580,7 @@
       }
     ],
     "authorContributionMap": {
-      "ang-zeyu": 151
+      "ang-zeyu": 162
     }
   },
   {
@@ -16651,136 +17795,129 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        this.$emit(\u0027is-open-event\u0027, this, this.isOpenBool)"
+        "content": "      }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    },"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    created () {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    created () {"
+        "content": "      if (this.isOpen \u003d\u003d\u003d null) {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (this.isOpen \u003d\u003d\u003d null) {"
+        "content": "        this.isOpen \u003d false"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.isOpen \u003d false"
+        "content": "      }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "\u003c/script\u003e"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/script\u003e"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003cstyle\u003e"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cstyle\u003e"
+        "content": "    .collapse-button {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    .collapse-button {"
+        "content": "        font-size: 10px !important;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "        font-size: 10px !important;"
+        "content": "        float: right;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "        float: right;"
+        "content": "        padding: 3px 8px !important;"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        padding: 3px 8px !important;"
+        "content": "        margin-left: 3px;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "        margin-left: 3px;"
+        "content": "        margin-top: 2px;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        margin-top: 2px;"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
@@ -16788,7 +17925,7 @@
       }
     ],
     "authorContributionMap": {
-      "-": 48,
+      "-": 47,
       "ang-zeyu": 1
     }
   },
