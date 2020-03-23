@@ -16145,6 +16145,288 @@
     }
   },
   {
+    "path": "src/app/shared/error-toasters/form-error/form-error.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {Component, Inject, OnInit} from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from \u0027@angular/material\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027app-form-error\u0027,"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./form-error.component.html\u0027,"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export class FormErrorComponent {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor("
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public snackBarRef: MatSnackBarRef\u003cFormErrorComponent\u003e,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Inject(MAT_SNACK_BAR_DATA) public data: any) {}"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 1,
+      "-": 11
+    }
+  },
+  {
+    "path": "src/app/shared/error-toasters/general-message-error/general-message-error.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {Component, Inject, OnInit} from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from \u0027@angular/material\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027app-general-message-error\u0027,"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./general-message-error.component.html\u0027,"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export class GeneralMessageErrorComponent {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor("
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public snackBarRef: MatSnackBarRef\u003cGeneralMessageErrorComponent\u003e,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Inject(MAT_SNACK_BAR_DATA) public data: any) {}"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 1,
+      "-": 11
+    }
+  },
+  {
+    "path": "src/app/shared/error-toasters/invalid-credentials-error/invalid-credentials-error.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import {Component, Inject, OnInit} from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from \u0027@angular/material\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027app-form-error\u0027,"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./invalid-credentials-error.component.html\u0027,"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export class InvalidCredentialsErrorComponent {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor("
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public snackBarRef: MatSnackBarRef\u003cInvalidCredentialsErrorComponent\u003e,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Inject(MAT_SNACK_BAR_DATA) public data: any) {}"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 1,
+      "-": 11
+    }
+  },
+  {
     "path": "src/app/shared/issue-tables/IssuesDataTable.ts",
     "fileType": "ts",
     "lines": [
@@ -22905,6 +23187,141 @@
     "authorContributionMap": {
       "anubh-v": 2,
       "-": 150
+    }
+  },
+  {
+    "path": "tests/services/application.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import {ApplicationService} from \u0027../../src/app/core/services/application.service\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "let applicationService \u003d new ApplicationService(null);"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "const currentVersion \u003d \u00273.2.5\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "describe(\u0027Test the ApplicationService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    it(\u0027Test whether the ApplicationService can detect outdated versions\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00272.2.5\u0027, currentVersion)).toBe(false);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00273.1\u0027, currentVersion)).toBe(false);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.4\u0027, currentVersion)).toBe(false);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.4.8.9\u0027, currentVersion)).toBe(false);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(currentVersion, currentVersion)).toBe(false);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.5.0\u0027, currentVersion)).toBe(true);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.5.5\u0027, currentVersion)).toBe(true);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.6\u0027, currentVersion)).toBe(true);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        expect(applicationService.isOutdatedVersion(\u002710\u0027, currentVersion)).toBe(true);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 18
     }
   },
   {
