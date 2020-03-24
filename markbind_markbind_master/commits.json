@@ -80,6 +80,34 @@
             "deletions": 201
           }
         ]
+      },
+      {
+        "insertions": 156,
+        "deletions": 59,
+        "date": "2020-03-23",
+        "commitResults": [
+          {
+            "hash": "c437f3f3787166b2286d5cc2fc097833c2bfddbd",
+            "messageTitle": "Remove redundant file writing (#1090)",
+            "messageBody": "We are writing to a temp path, and then reading it immediately.\r\nLet\u0027s avoid this by passing the string directly instead.",
+            "insertions": 19,
+            "deletions": 50
+          },
+          {
+            "hash": "409e90c70bef6676bd32f65c1a462be54b91d22f",
+            "messageTitle": "Add start from line number functionality to code blocks (#1115)",
+            "messageBody": "Let\u0027s do this by checking for the `start-from` attribute on a code block\r\nand then set an inline style that sets the `line` counter to the \r\nappropriate value.",
+            "insertions": 87,
+            "deletions": 4
+          },
+          {
+            "hash": "407158b4ca2db1b3094c97c65aeb8c616cdf81dc",
+            "messageTitle": "Remove OK button from modals (#1134)",
+            "messageBody": "Let\u0027s remove the redundant OK button from modals,\r\nand only show it if the `ok-title` attribute is present.",
+            "insertions": 50,
+            "deletions": 5
+          }
+        ]
       }
     ],
     "yash-chowdhary": [
@@ -614,6 +642,34 @@
             "deletions": 43
           }
         ]
+      },
+      {
+        "insertions": 209,
+        "deletions": 149,
+        "date": "2020-03-23",
+        "commitResults": [
+          {
+            "hash": "e88900f69c6604e8795d4fb2376520e517478381",
+            "messageTitle": "Simplify baseUrl resolving process (#1087)",
+            "messageBody": "BaseUrls for static includes are rendered once during pre-processing\r\nand another time during resolveBaseUrls.\r\nThe rebaseReference subroutine used during resolveBaseUrls also has\r\nsome unnecessary complexity.\r\nIn addition, in calculateNewBaseUrls, the relative baseUrl for doubly\r\nnested subsites are not resolved correctly.\r\n\r\nLet’s remove the rendering during pre-processing, unifying where baseUrl\r\nis resolved for statically included content.\r\nLet’s also refactor the rebaseReference method, simplifying its logic.\r\nAt the same time, we can standardise usages of the calculateNewBaseUrls\r\nmethod to calculateImmediateParentSitePath, and fix the relative baseUrl\r\nreturned for doubly nested subsites.",
+            "insertions": 163,
+            "deletions": 140
+          },
+          {
+            "hash": "7850366398a00b4e1ecfdac63a1a472b292e9118",
+            "messageTitle": "Allow special tags to be self-closing (#1101)",
+            "messageBody": "Unlike the html script and style special tags, plugin authors may want\r\ninjected special tags to be able to be self-closing as well.\r\nThis can help unify the syntax used in the plugin, which makes for\r\nbetter author usability of the plugin.\r\n\r\nLet’s allow injected special tags to be self-closing.\r\nLet’s also do so for the script and style tags, which would be\r\nexpanded to their normal form after rendering.",
+            "insertions": 39,
+            "deletions": 2
+          },
+          {
+            "hash": "2bbe32ba8bd14f30f3e23ff637ee412e7497bfeb",
+            "messageTitle": "Update test files (#1138)",
+            "messageBody": "",
+            "insertions": 7,
+            "deletions": 7
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -856,8 +912,8 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1054,
-    "yash-chowdhary": 1670,
+    "openorclose": 1189,
+    "yash-chowdhary": 1671,
     "anubh-v": 0,
     "Tejas2805": 76,
     "dvrylc": 70,
@@ -867,11 +923,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 3514,
+    "ang-zeyu": 3648,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 457,
-    "le0tan": 984,
+    "nbriannl": 453,
+    "le0tan": 956,
     "tiuweehan": 0,
     "madanalogy": 61,
     "daekoon": 0
@@ -915,19 +971,19 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 545,
+      "js": 603,
       "css": 413,
       "json": 27,
-      "md": 45,
+      "md": 79,
       "mbd": 0,
-      "mbdf": 24,
+      "mbdf": 67,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 251,
+      "js": 252,
       "css": 294,
       "json": 4,
       "md": 1042,
@@ -1047,10 +1103,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2203,
-      "css": 682,
-      "json": 240,
-      "md": 258,
+      "js": 2255,
+      "css": 688,
+      "json": 275,
+      "md": 299,
       "mbd": 0,
       "mbdf": 119,
       "njk": 12,
@@ -1083,19 +1139,19 @@
     },
     "nbriannl": {
       "java": 0,
-      "js": 136,
+      "js": 133,
       "css": 198,
       "json": 0,
       "md": 0,
       "mbd": 0,
-      "mbdf": 123,
+      "mbdf": 122,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "le0tan": {
       "java": 0,
-      "js": 797,
+      "js": 769,
       "css": 8,
       "json": 0,
       "md": 70,
@@ -1146,24 +1202,24 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6326.9927,
-    "yash-chowdhary": 9871.503,
+    "openorclose": 6627.8027,
+    "yash-chowdhary": 9788.471,
     "anubh-v": 0.0,
-    "Tejas2805": 126.456116,
-    "dvrylc": 52.096752,
+    "Tejas2805": 125.36254,
+    "dvrylc": 51.644287,
     "jamessspanggg": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 28.549953,
-    "ang-zeyu": 40361.07,
+    "hcwong": 28.30199,
+    "ang-zeyu": 40872.04,
     "geshuming": 0.0,
-    "alyip98": 5.079795,
-    "nbriannl": 1472.7699,
-    "le0tan": 276462.25,
+    "alyip98": 5.0356994,
+    "nbriannl": 1460.1619,
+    "le0tan": 274060.78,
     "tiuweehan": 0.0,
-    "madanalogy": 297.6774,
+    "madanalogy": 295.09198,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
