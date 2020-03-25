@@ -59,7 +59,22 @@
       }
     ],
     "Parcly-Taxel": [],
-    "niqiukun": [],
+    "niqiukun": [
+      {
+        "insertions": 1,
+        "deletions": 12,
+        "date": "2020-03-25",
+        "commitResults": [
+          {
+            "hash": "333a4733436b5ed55759b3ac594332445f808937",
+            "messageTitle": "[#1083] RepoConfiguration: remove `annotationOverwrite` flag  (#1117)",
+            "messageBody": "There is an `annotationOverwrite` flag in the `RepoConfiguration`. \r\nThe flag is redundant because it defaults to `true` and is never \r\nutilized in the main code.\r\n\r\nSince there is currently no planned use case, for better code \r\nquality, we should remove the unnecessary code.\r\n\r\nLet\u0027s remove this flag from the `RepoConfiguration`.",
+            "insertions": 1,
+            "deletions": 12
+          }
+        ]
+      }
+    ],
     "openorclose": [],
     "yash-chowdhary": [
       {
@@ -73,6 +88,20 @@
             "messageBody": "There are multiple occurrences of the same string \r\n\u0027https://github.com\u0027 in the frontend.\r\n\r\nLet\u0027s replace the string with a constant \u0027BASE_URL\u0027 in the files.",
             "insertions": 7,
             "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 15,
+        "date": "2020-03-25",
+        "commitResults": [
+          {
+            "hash": "ac0909a177c043183807bb4cea027eab111ba931",
+            "messageTitle": "[#1046] v_summary: refactor duplicate code (#1056)",
+            "messageBody": "There is an instance of code duplication in \u0027v_summary.js\u0027. \r\nSpecifically, the definition of a function that is passed to the \r\ncomparator has been duplicated in the case of grouping by repos and \r\nby authors.\r\n\r\nLet\u0027s extract this duplicated portion of code into a helper function \r\nso that it may be referenced by the comparator.",
+            "insertions": 22,
+            "deletions": 15
           }
         ]
       }
@@ -870,7 +899,7 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 0,
-    "yash-chowdhary": 7,
+    "yash-chowdhary": 29,
     "anubh-v": 446,
     "Tejas2805": 692,
     "dvrylc": 0,
@@ -931,7 +960,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 7,
+      "js": 29,
       "scss": 0,
       "json": 0,
       "md": 0,
@@ -1101,21 +1130,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3.310697,
+    "ccyccyccy": 3.2829964,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 0.0,
+    "niqiukun": 1.4443371,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.4567838,
-    "anubh-v": 529.624,
-    "Tejas2805": 4210.708,
+    "yash-chowdhary": 13.072831,
+    "anubh-v": 525.4178,
+    "Tejas2805": 4176.0845,
     "dvrylc": 0.0,
-    "jamessspanggg": 271.2962,
+    "jamessspanggg": 269.11453,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4100.528,
+    "0blivious": 4066.5164,
     "hcwong": 0.0,
-    "ang-zeyu": 0.21550079,
+    "ang-zeyu": 0.21365924,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
