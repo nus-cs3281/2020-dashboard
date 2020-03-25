@@ -628,6 +628,20 @@
             "deletions": 15
           }
         ]
+      },
+      {
+        "insertions": 16,
+        "deletions": 38,
+        "date": "2020-03-24",
+        "commitResults": [
+          {
+            "hash": "af93ed1758c3a8f66149bd99f194248a90aec76b",
+            "messageTitle": "[#1167] Revert PR #967 while keeping zoom tab independent of summary (#1172)",
+            "messageBody": "PR #967 causes multiple bugs in zoom tab and authorship tab, due to\r\nsome data value inside the side panels are not re-rendered when prop \r\n`info` changes.\r\n\r\nFixing these bugs may delay our upcoming release, so reverting the \r\nchanges that lead to these bugs may be the best option.\r\n\r\nLet\u0027s revert that PR while only keeping the changes to make the zoom \r\ntab to be independent of summary.",
+            "insertions": 16,
+            "deletions": 38
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -864,7 +878,7 @@
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 516,
+    "0blivious": 515,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -997,7 +1011,7 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 166,
+      "js": 165,
       "scss": 46,
       "json": 0,
       "md": 0,
@@ -1087,21 +1101,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3.396684,
+    "ccyccyccy": 3.310697,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 0.0,
-    "yash-chowdhary": 1.4954563,
-    "anubh-v": 542.6522,
-    "Tejas2805": 4318.1216,
+    "yash-chowdhary": 1.4567838,
+    "anubh-v": 529.624,
+    "Tejas2805": 4210.708,
     "dvrylc": 0.0,
-    "jamessspanggg": 256.0275,
+    "jamessspanggg": 271.2962,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4206.057,
+    "0blivious": 4100.528,
     "hcwong": 0.0,
-    "ang-zeyu": 0.22122145,
+    "ang-zeyu": 0.21550079,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
