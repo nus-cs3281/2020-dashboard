@@ -122,16 +122,16 @@
         ]
       },
       {
-        "insertions": 76,
-        "deletions": 4,
+        "insertions": 77,
+        "deletions": 5,
         "date": "2019-12-03",
         "commitResults": [
           {
             "hash": "c6ffecd214e73fc8ecf97a742108af5ac6d2ceab",
             "messageTitle": "[#871, #952] CSV files: ignore blank lines before the header (#903)",
             "messageBody": "CsvParser treats the first non-empty line as the header row.\r\n\r\nWhen a CSV file contains blank line(s) above the header, the blank line\r\nwould be taken as the header, causing the subsequent rows in the CSV\r\nfile to be flagged as malformed. Hence, any CSV file with blank lines\r\nbefore the header will be parsed incorrectly. \r\n\r\nLet\u0027s modify CsvParser such that it skips all the blank lines preceding\r\nthe header, and picks the first non blank line as the header.\r\n\r\nThe Apache Commons CSV library currently does not provide any methods\r\nto skip blank lines preceding the header. This limitation is documented\r\nin:\r\nhttps://issues.apache.org/jira/browse/CSV-127 \r\n\r\nHence, let\u0027s implement a custom line-skipping behavior using a\r\nBufferedReader.",
-            "insertions": 76,
-            "deletions": 4
+            "insertions": 77,
+            "deletions": 5
           }
         ]
       },
@@ -659,6 +659,20 @@
         ]
       },
       {
+        "insertions": 64,
+        "deletions": 3,
+        "date": "2020-03-23",
+        "commitResults": [
+          {
+            "hash": "07c16f1e7970b3d2585f168fa7cf663e97968bd6",
+            "messageTitle": "[#950] Use Surge as alternative for Netlify (#1165)",
+            "messageBody": "Netlify\u0027s build quota is not enough for RepoSense\u0027s build usage.\r\n\r\nLet\u0027s deploy on Surge instead, using Travis to run the build and \r\nprovide a Github Status on each PR that links users to the deployed \r\nSurge site.",
+            "insertions": 64,
+            "deletions": 3
+          }
+        ]
+      },
+      {
         "insertions": 16,
         "deletions": 38,
         "date": "2020-03-24",
@@ -900,10 +914,10 @@
     "niqiukun": 0,
     "openorclose": 0,
     "yash-chowdhary": 29,
-    "anubh-v": 446,
+    "anubh-v": 447,
     "Tejas2805": 692,
     "dvrylc": 0,
-    "jamessspanggg": 251,
+    "jamessspanggg": 315,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
@@ -926,7 +940,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -936,7 +952,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "niqiukun": {
       "java": 0,
@@ -946,7 +964,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "openorclose": {
       "java": 0,
@@ -956,7 +976,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "yash-chowdhary": {
       "java": 0,
@@ -966,7 +988,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "anubh-v": {
       "java": 409,
@@ -976,7 +1000,9 @@
       "md": 0,
       "py": 0,
       "pug": 2,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 1,
+      "yml": 0
     },
     "Tejas2805": {
       "java": 0,
@@ -986,7 +1012,9 @@
       "md": 52,
       "py": 0,
       "pug": 41,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "dvrylc": {
       "java": 0,
@@ -996,7 +1024,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "jamessspanggg": {
       "java": 172,
@@ -1006,7 +1036,9 @@
       "md": 0,
       "py": 0,
       "pug": 22,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 57,
+      "yml": 7
     },
     "j-lum": {
       "java": 0,
@@ -1016,7 +1048,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "iskandarzulkarnaien": {
       "java": 0,
@@ -1026,7 +1060,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "xantho09": {
       "java": 0,
@@ -1036,7 +1072,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "0blivious": {
       "java": 68,
@@ -1046,7 +1084,9 @@
       "md": 0,
       "py": 0,
       "pug": 236,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "hcwong": {
       "java": 0,
@@ -1056,7 +1096,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "ang-zeyu": {
       "java": 0,
@@ -1066,7 +1108,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "geshuming": {
       "java": 0,
@@ -1076,7 +1120,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "alyip98": {
       "java": 0,
@@ -1086,7 +1132,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "nbriannl": {
       "java": 0,
@@ -1096,7 +1144,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "tiuweehan": {
       "java": 0,
@@ -1106,7 +1156,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "madanalogy": {
       "java": 0,
@@ -1116,7 +1168,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     },
     "daekoon": {
       "java": 0,
@@ -1126,7 +1180,9 @@
       "md": 0,
       "py": 0,
       "pug": 0,
-      "gradle": 0
+      "gradle": 0,
+      "sh": 0,
+      "yml": 0
     }
   },
   "authorContributionVariance": {
@@ -1135,10 +1191,10 @@
     "niqiukun": 1.4443371,
     "openorclose": 0.0,
     "yash-chowdhary": 13.072831,
-    "anubh-v": 525.4178,
+    "anubh-v": 527.98926,
     "Tejas2805": 4176.0845,
     "dvrylc": 0.0,
-    "jamessspanggg": 269.11453,
+    "jamessspanggg": 302.57944,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
