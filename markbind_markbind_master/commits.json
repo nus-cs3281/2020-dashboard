@@ -682,6 +682,20 @@
             "deletions": 7
           }
         ]
+      },
+      {
+        "insertions": 27,
+        "deletions": 10,
+        "date": "2020-03-27",
+        "commitResults": [
+          {
+            "hash": "d3a07aa50e7a4889e3682156d2716931632a9b19",
+            "messageTitle": "Fix lazy reload for urls without index (#1110)",
+            "messageBody": "Lazy live reloading uses the file extension of the request url to\r\ndetermine whether the request is for a html page, and not from a\r\ndynamic include.\r\nHence, requests for index.html with urls that do not end with\r\nindex.html fail to be detected.\r\n\r\nLet’s add extra processing to detect such requests.",
+            "insertions": 27,
+            "deletions": 10
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -933,7 +947,7 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 3648,
+    "ang-zeyu": 3665,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 453,
@@ -1089,7 +1103,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2255,
+      "js": 2272,
       "css": 688,
       "json": 275,
       "md": 299,
@@ -1188,22 +1202,22 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6571.942,
-    "yash-chowdhary": 9706.829,
-    "Tejas2805": 125.65551,
-    "dvrylc": 51.199547,
+    "openorclose": 6409.871,
+    "yash-chowdhary": 9469.803,
+    "Tejas2805": 122.512535,
+    "dvrylc": 49.910152,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 28.058224,
-    "ang-zeyu": 40534.375,
+    "hcwong": 27.35162,
+    "ang-zeyu": 39537.97,
     "geshuming": 0.0,
-    "alyip98": 4.9923534,
-    "nbriannl": 1447.7697,
-    "le0tan": 271701.03,
+    "alyip98": 4.866696,
+    "nbriannl": 1411.8228,
+    "le0tan": 264858.12,
     "tiuweehan": 0.0,
-    "madanalogy": 292.55206,
+    "madanalogy": 285.18817,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
