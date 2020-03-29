@@ -471,7 +471,22 @@
         ]
       }
     ],
-    "daekoon": []
+    "daekoon": [
+      {
+        "insertions": 896,
+        "deletions": 58,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "44e08946ca0b1f3cbc91a1d8f2d758449dfda925",
+            "messageTitle": "[#9956] Make dataBundle return the json of actual objects created in backend (#9967)",
+            "messageBody": "* Make persistDataBundle return updated databundle\r\n\r\n* Add test for dataBundle updating its values\r\n\r\n* Make putDataBundle return updated json\r\n\r\n* Make LnP tests use updated data bundles\r\n\r\n* Add hashcode method for related attributes\r\n\r\n* Add hash and equal method for attributes\r\n\r\n* Update removeAndRestoreDataBundle to throw exception when request fails\r\n\r\n* Compress all updateXXX methods into a single generic method\r\n\r\n* Update BaseLnPTestCase to use FileHelper\r\n\r\n* Move custom equals class to EntityAttribute class\r\n\r\n* Add test for equals method\r\n\r\n* Change nullableObjectEquals to java\u0027s Objects.equal method\r\n\r\n* Add tests for xxxAttributes\u0027 hash code\r\n\r\nCo-authored-by: Wang Junming \u003c905760127@qq.com\u003e",
+            "insertions": 896,
+            "deletions": 58
+          }
+        ]
+      }
+    ]
   },
   "authorFinalContributionMap": {
     "ccyccyccy": 0,
@@ -492,7 +507,7 @@
     "nbriannl": 0,
     "tiuweehan": 1383,
     "madanalogy": 942,
-    "daekoon": 0
+    "daekoon": 893
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
@@ -676,7 +691,7 @@
       "ts": 269
     },
     "daekoon": {
-      "java": 0,
+      "java": 893,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -689,23 +704,23 @@
   "authorContributionVariance": {
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 787.64325,
+    "niqiukun": 761.8392,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1846.3206,
+    "dvrylc": 1785.6096,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 97.775566,
+    "hcwong": 94.6332,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 14601.587,
-    "madanalogy": 2302.145,
-    "daekoon": 0.0
+    "tiuweehan": 14128.3125,
+    "madanalogy": 2228.349,
+    "daekoon": 7521.097
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",

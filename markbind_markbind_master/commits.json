@@ -108,6 +108,34 @@
             "deletions": 5
           }
         ]
+      },
+      {
+        "insertions": 50,
+        "deletions": 8,
+        "date": "2020-03-28",
+        "commitResults": [
+          {
+            "hash": "4bc3edbd22f4eb6d0d1f786a9dfce159093da988",
+            "messageTitle": "Show pointer and use underline dashed for click trigger (#1111)",
+            "messageBody": "Fix a regression from #1033.\r\n\r\nLet\u0027s add back the two styles of triggers:\r\n- click: show mouse pointer to signal that it is clickable\r\n  and use underline dashed\r\n- not click: no special cursor, and use underline dotted",
+            "insertions": 50,
+            "deletions": 8
+          }
+        ]
+      },
+      {
+        "insertions": 112,
+        "deletions": 14,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "46061437b0dd5498fc02fbe84e9054588449b79c",
+            "messageTitle": "Upgrade to bootstrap-vue 2.5.0 (#1085)",
+            "messageBody": "",
+            "insertions": 112,
+            "deletions": 14
+          }
+        ]
       }
     ],
     "yash-chowdhary": [
@@ -371,6 +399,20 @@
             "messageBody": "",
             "insertions": 71,
             "deletions": 6
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 0,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "de21751ba4227418862aa4fb2d0cf2c7caa928e4",
+            "messageTitle": "Fix octicon sizing (#1132)",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 0
           }
         ]
       }
@@ -696,6 +738,34 @@
             "deletions": 10
           }
         ]
+      },
+      {
+        "insertions": 79,
+        "deletions": 123,
+        "date": "2020-03-28",
+        "commitResults": [
+          {
+            "hash": "f7351af6af2bafdf09497a99971b1c3ef0c56816",
+            "messageTitle": "Allow an array for specifying page src or glob (#1118)",
+            "messageBody": "The site configuration does not allow using an array for specifying\r\npages in the src or glob property.\r\nThe method for collecting the addressable pages can also be\r\nmade slightly simpler in the process.\r\n\r\nLet’s do so, reducing the amount of repeated configuration the\r\nauthor potentially needs to write.\r\nLet’s also simplify the method for collecting addressable pages\r\nin the process.",
+            "insertions": 79,
+            "deletions": 123
+          }
+        ]
+      },
+      {
+        "insertions": 42,
+        "deletions": 3,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "13dc7b7d013e4d3781e9d5a68cc7710f22880807",
+            "messageTitle": "Fix baseUrl not working in include src attribute (#1088)",
+            "messageBody": "While pre-processing includes or panels, we have not yet resolved\r\nthe baseUrl of the src attribute.\r\nThis causes markbind to fail in finding the source file, since baseUrl\r\nremains in the src attribute.\r\n\r\nLet’s resolve the baseUrl for such cases first, allowing the user to use\r\nthe baseUrl attribute in include and panel src attributes.",
+            "insertions": 42,
+            "deletions": 3
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -783,6 +853,27 @@
             "messageBody": "",
             "insertions": 91,
             "deletions": 10
+          }
+        ]
+      },
+      {
+        "insertions": 231,
+        "deletions": 3,
+        "date": "2020-03-28",
+        "commitResults": [
+          {
+            "hash": "e1b292b4a3779d3be9a0367a905a70340854c7b0",
+            "messageTitle": "Code blocks: Implement inline markdown support for heading (#1137)",
+            "messageBody": "",
+            "insertions": 70,
+            "deletions": 1
+          },
+          {
+            "hash": "2af279113846b00296ce5d58efaabbe8a328e8ea",
+            "messageTitle": "Docs: Add contributing.md (#1139)",
+            "messageBody": "",
+            "insertions": 161,
+            "deletions": 2
           }
         ]
       }
@@ -885,6 +976,20 @@
             "deletions": 4
           }
         ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 1,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "7c78b7722788de019519e85ac6344b7b79b92d32",
+            "messageTitle": "Update navbar doc (#1146)",
+            "messageBody": "",
+            "insertions": 6,
+            "deletions": 1
+          }
+        ]
       }
     ],
     "tiuweehan": [],
@@ -938,20 +1043,20 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1189,
-    "yash-chowdhary": 1671,
-    "Tejas2805": 84,
-    "dvrylc": 70,
+    "openorclose": 1349,
+    "yash-chowdhary": 1670,
+    "Tejas2805": 83,
+    "dvrylc": 76,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 58,
-    "ang-zeyu": 3665,
+    "ang-zeyu": 3763,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 453,
-    "le0tan": 956,
+    "nbriannl": 682,
+    "le0tan": 960,
     "tiuweehan": 0,
     "madanalogy": 61,
     "daekoon": 0
@@ -995,12 +1100,12 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 603,
-      "css": 413,
+      "js": 685,
+      "css": 488,
       "json": 27,
       "md": 79,
       "mbd": 0,
-      "mbdf": 67,
+      "mbdf": 70,
       "njk": 0,
       "py": 0,
       "yml": 0
@@ -1010,7 +1115,7 @@
       "js": 252,
       "css": 294,
       "json": 4,
-      "md": 1042,
+      "md": 1041,
       "mbd": 0,
       "mbdf": 61,
       "njk": 0,
@@ -1024,7 +1129,7 @@
       "json": 0,
       "md": 4,
       "mbd": 0,
-      "mbdf": 76,
+      "mbdf": 75,
       "njk": 0,
       "py": 0,
       "yml": 0
@@ -1032,7 +1137,7 @@
     "dvrylc": {
       "java": 0,
       "js": 28,
-      "css": 30,
+      "css": 36,
       "json": 3,
       "md": 0,
       "mbd": 0,
@@ -1103,12 +1208,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2272,
+      "js": 2310,
       "css": 688,
-      "json": 275,
-      "md": 299,
+      "json": 309,
+      "md": 326,
       "mbd": 0,
-      "mbdf": 119,
+      "mbdf": 118,
       "njk": 12,
       "py": 0,
       "yml": 0
@@ -1139,24 +1244,24 @@
     },
     "nbriannl": {
       "java": 0,
-      "js": 133,
-      "css": 198,
-      "json": 0,
-      "md": 0,
+      "js": 135,
+      "css": 230,
+      "json": 1,
+      "md": 175,
       "mbd": 0,
-      "mbdf": 122,
+      "mbdf": 141,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "le0tan": {
       "java": 0,
-      "js": 769,
+      "js": 767,
       "css": 8,
       "json": 0,
       "md": 70,
       "mbd": 0,
-      "mbdf": 62,
+      "mbdf": 68,
       "njk": 47,
       "py": 0,
       "yml": 0
@@ -1202,22 +1307,22 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6409.871,
-    "yash-chowdhary": 9469.803,
-    "Tejas2805": 122.512535,
-    "dvrylc": 49.910152,
+    "openorclose": 6422.3794,
+    "yash-chowdhary": 9318.119,
+    "Tejas2805": 120.5031,
+    "dvrylc": 49.315964,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 27.35162,
-    "ang-zeyu": 39537.97,
+    "hcwong": 26.9,
+    "ang-zeyu": 39084.93,
     "geshuming": 0.0,
-    "alyip98": 4.866696,
-    "nbriannl": 1411.8228,
-    "le0tan": 264858.12,
+    "alyip98": 4.786386,
+    "nbriannl": 1819.3257,
+    "le0tan": 260480.08,
     "tiuweehan": 0.0,
-    "madanalogy": 285.18817,
+    "madanalogy": 280.48004,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
