@@ -685,6 +685,34 @@
             "deletions": 38
           }
         ]
+      },
+      {
+        "insertions": 261,
+        "deletions": 82,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "eac21ab589ebcdf79f596a94d7ff3f9c7a09e3e9",
+            "messageTitle": "[#779] Restore zoom tab (#830)",
+            "messageBody": "The zoom tab hashes are not encoded in the URL when zoom tab is \r\nopened.\r\n\r\nZoom tab will not be restorable with the URL after reloading the \r\npage.\r\n\r\nLet\u0027s add the encoding of zoom tab hashes to the URL make the zoom \r\ntab restorable after reloading the page.",
+            "insertions": 245,
+            "deletions": 79
+          },
+          {
+            "hash": "f39df542959252e9d3b88c247f11fa0c2574afe3",
+            "messageTitle": "[#873] Enable view commits option when merge group (#1100)",
+            "messageBody": "The view commits option is not available when merge group option is \r\nchecked.\r\n\r\nLet\u0027s enable the view option when merge group, as the zoom in \r\nfunction is already working with merged ramps. Let\u0027s also fix the \r\nregression from #1106 that removes the github icon when merge group \r\nand `filterGroupSelection` is \u0027groupByRepos\u0027.",
+            "insertions": 11,
+            "deletions": 1
+          },
+          {
+            "hash": "0e39bb7ffa5094e13fb120a36e3c2666f2566572",
+            "messageTitle": "[#1087] Update badges in README (#1194)",
+            "messageBody": "RepoSense\u0027s Netlify badge icon is a custom icon. We are missing \r\nacknowledgment to Surge as well.\r\n\r\nLet\u0027s update the badge to Netlify\u0027s official badge that reflects our\r\nNetlify deployment status. Let\u0027s also acknowledge Surge in helping \r\nwith our web previews.",
+            "insertions": 5,
+            "deletions": 2
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -913,15 +941,15 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 0,
-    "yash-chowdhary": 29,
+    "yash-chowdhary": 27,
     "anubh-v": 447,
-    "Tejas2805": 692,
+    "Tejas2805": 686,
     "dvrylc": 0,
-    "jamessspanggg": 315,
+    "jamessspanggg": 574,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 515,
+    "0blivious": 510,
     "hcwong": 0,
     "ang-zeyu": 3,
     "geshuming": 0,
@@ -982,7 +1010,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 29,
+      "js": 27,
       "scss": 0,
       "json": 0,
       "md": 0,
@@ -1006,12 +1034,12 @@
     },
     "Tejas2805": {
       "java": 0,
-      "js": 19,
-      "scss": 554,
+      "js": 15,
+      "scss": 553,
       "json": 26,
       "md": 52,
       "py": 0,
-      "pug": 41,
+      "pug": 40,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -1030,12 +1058,12 @@
     },
     "jamessspanggg": {
       "java": 172,
-      "js": 10,
-      "scss": 41,
+      "js": 239,
+      "scss": 45,
       "json": 6,
-      "md": 0,
+      "md": 5,
       "py": 0,
-      "pug": 22,
+      "pug": 43,
       "gradle": 0,
       "sh": 57,
       "yml": 7
@@ -1078,12 +1106,12 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 165,
+      "js": 162,
       "scss": 46,
       "json": 0,
       "md": 0,
       "py": 0,
-      "pug": 236,
+      "pug": 234,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -1186,21 +1214,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3.2829964,
+    "ccyccyccy": 3.1766646,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 1.4443371,
+    "niqiukun": 1.3965971,
     "openorclose": 0.0,
-    "yash-chowdhary": 13.072831,
-    "anubh-v": 527.98926,
-    "Tejas2805": 4176.0845,
+    "yash-chowdhary": 12.643055,
+    "anubh-v": 511.72894,
+    "Tejas2805": 4043.0745,
     "dvrylc": 0.0,
-    "jamessspanggg": 302.57944,
+    "jamessspanggg": 1238.8495,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4066.5164,
+    "0blivious": 3935.926,
     "hcwong": 0.0,
-    "ang-zeyu": 0.21365924,
+    "ang-zeyu": 0.2065969,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
