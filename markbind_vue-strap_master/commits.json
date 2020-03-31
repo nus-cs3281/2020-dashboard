@@ -3,7 +3,22 @@
     "ccyccyccy": [],
     "Parcly-Taxel": [],
     "niqiukun": [],
-    "openorclose": [],
+    "openorclose": [
+      {
+        "insertions": 0,
+        "deletions": 652,
+        "date": "2020-03-30",
+        "commitResults": [
+          {
+            "hash": "ddbbd32bfac334734b3cb0a24e90572c44cfa320",
+            "messageTitle": "Remove uneeded components (#135)",
+            "messageBody": "* Remove uneeded components\r\n\r\nWe have migrated popovers, tooltips,\r\nmodals, and triggers to bootstrap-vue.\r\n\r\nLet\u0027s remove these from vue-strap.\r\n\r\n* Remove GlobalEventBus.js",
+            "insertions": 0,
+            "deletions": 652
+          }
+        ]
+      }
+    ],
     "yash-chowdhary": [
       {
         "insertions": 15,
@@ -156,8 +171,8 @@
         ]
       },
       {
-        "insertions": 4,
-        "deletions": 0,
+        "insertions": 30,
+        "deletions": 5,
         "date": "2020-03-30",
         "commitResults": [
           {
@@ -166,6 +181,13 @@
             "messageBody": "",
             "insertions": 4,
             "deletions": 0
+          },
+          {
+            "hash": "400d198a771ebb922b7c710380260f036a8c0193",
+            "messageTitle": "Fix cropped nested expandable content in panels (#137)",
+            "messageBody": "After finishing the panel expand animation or before the collapse\r\nanimation, the max height of the panel content wrapper is not\r\nreset to their appropriate values.\r\nThis causes expandable content inside panels, such as nested panels.\r\n\r\nLet’s do so, allowing the outer panel to react to changes in its\r\ncontent height after expanding it.",
+            "insertions": 26,
+            "deletions": 5
           }
         ]
       }
@@ -283,8 +305,8 @@
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 41,
-    "ang-zeyu": 1013,
+    "hcwong": 38,
+    "ang-zeyu": 1021,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 37,
@@ -400,16 +422,16 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "vue": 41
+      "vue": 38
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 162,
+      "js": 179,
       "css": 0,
       "json": 0,
       "md": 0,
       "py": 0,
-      "vue": 851
+      "vue": 842
     },
     "geshuming": {
       "java": 0,
@@ -479,7 +501,7 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 0.0,
+    "openorclose": 3484.2212,
     "yash-chowdhary": 2.986408,
     "Tejas2805": 0.0,
     "dvrylc": 0.0,
@@ -488,7 +510,7 @@
     "xantho09": 0.0,
     "0blivious": 0.0,
     "hcwong": 17.205824,
-    "ang-zeyu": 11827.732,
+    "ang-zeyu": 11828.684,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 20.490385,
