@@ -86,6 +86,20 @@
             "deletions": 1
           }
         ]
+      },
+      {
+        "insertions": 801,
+        "deletions": 13,
+        "date": "2020-04-01",
+        "commitResults": [
+          {
+            "hash": "cb7a01a88a91f96a515ffda4fea7df8e16622227",
+            "messageTitle": "[#9382] Enable downloading of feedback session results as CSV (#9961)",
+            "messageBody": "* Enable downloading of feedback session results as csv\r\n\r\n* Create runtime wrapper for ExceedingRangeException\r\n\r\n* Add GetSessionResultsAction Tests\r\n\r\n* Add tests for GetSessionResultsAsCsvAction\r\n\r\n* Enable downloading session results from instructor home page\r\n\r\n* Migrate tests from InstructorFeedbackResultsDownloadActionTest to GetSessionResultsAsCsvActionTest\r\n\r\n* Change return type of containsSectionDetail and group params\r\n\r\n* Remove hardcoded value of `section \u003d\u003d \"All\"`\r\n\r\n* Add test cases for statistics hidden and shown\r\n\r\n* Use custom data bundle for GetSessionResultsAsCsvActionTest\r\n\r\n* Remove param for `ExceedingRangeException` testing\r\n\r\n* Move helper methods to test and change accessibility of inner classes",
+            "insertions": 801,
+            "deletions": 13
+          }
+        ]
       }
     ],
     "openorclose": [],
@@ -505,7 +519,7 @@
   "authorFinalContributionMap": {
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
-    "niqiukun": 363,
+    "niqiukun": 1158,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -545,14 +559,14 @@
       "ts": 0
     },
     "niqiukun": {
-      "java": 6,
+      "java": 739,
       "js": 0,
       "scss": 43,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 35,
-      "ts": 279
+      "html": 38,
+      "ts": 338
     },
     "openorclose": {
       "java": 0,
@@ -718,23 +732,23 @@
   "authorContributionVariance": {
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 755.6372,
+    "niqiukun": 6039.376,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1771.0514,
+    "dvrylc": 1742.6343,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 93.87899,
+    "hcwong": 92.40593,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 14014.74,
-    "madanalogy": 2210.633,
-    "daekoon": 7459.458
+    "tiuweehan": 13792.99,
+    "madanalogy": 2176.0325,
+    "daekoon": 7339.1606
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",

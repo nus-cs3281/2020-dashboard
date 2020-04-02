@@ -285,6 +285,20 @@
             "deletions": 112
           }
         ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 1,
+        "date": "2020-04-01",
+        "commitResults": [
+          {
+            "hash": "69ad5b16530aca3cbf594bf8040fe02d98ff60f9",
+            "messageTitle": "Fix hrefs for headings with angular brackets (#1089)",
+            "messageBody": "```\r\nThe hrefs of headings with angular brackets are incorrect because\r\nmarkdown-it escapes the characters to \"\u0026lt;\" and \"\u0026gt;\" and the\r\nsubsequent slugify operation converts it to \"and-lt\" or \"and-gt\".\r\n\r\nLet\u0027s fix this by removing the occurrences of the strings \r\n\"\u0026lt;\" and \"\u0026gt;\" before the slugify operation\r\n```",
+            "insertions": 3,
+            "deletions": 1
+          }
+        ]
       }
     ],
     "Tejas2805": [
@@ -1006,8 +1020,8 @@
         ]
       },
       {
-        "insertions": 6,
-        "deletions": 1,
+        "insertions": 7,
+        "deletions": 2,
         "date": "2020-03-29",
         "commitResults": [
           {
@@ -1015,6 +1029,13 @@
             "messageTitle": "Update navbar doc (#1146)",
             "messageBody": "",
             "insertions": 6,
+            "deletions": 1
+          },
+          {
+            "hash": "12673b08ba5abdfcb42a54a0aa7dfb0c6607c02f",
+            "messageTitle": "Update devGuide.md",
+            "messageBody": "#990 removes ejs as a dependency",
+            "insertions": 1,
             "deletions": 1
           }
         ]
@@ -1072,7 +1093,7 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 1327,
-    "yash-chowdhary": 1670,
+    "yash-chowdhary": 1672,
     "Tejas2805": 83,
     "dvrylc": 76,
     "j-lum": 0,
@@ -1084,7 +1105,7 @@
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 696,
-    "le0tan": 960,
+    "le0tan": 961,
     "tiuweehan": 0,
     "madanalogy": 61,
     "daekoon": 0
@@ -1140,7 +1161,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 252,
+      "js": 254,
       "css": 294,
       "json": 4,
       "md": 1041,
@@ -1287,7 +1308,7 @@
       "js": 767,
       "css": 8,
       "json": 0,
-      "md": 70,
+      "md": 71,
       "mbd": 0,
       "mbdf": 68,
       "njk": 47,
@@ -1336,7 +1357,7 @@
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
     "openorclose": 6271.2046,
-    "yash-chowdhary": 9099.453,
+    "yash-chowdhary": 9098.387,
     "Tejas2805": 117.60948,
     "dvrylc": 48.125793,
     "j-lum": 0.0,
@@ -1348,7 +1369,7 @@
     "geshuming": 0.0,
     "alyip98": 4.670763,
     "nbriannl": 1781.9866,
-    "le0tan": 254184.3,
+    "le0tan": 254183.22,
     "tiuweehan": 0.0,
     "madanalogy": 273.70364,
     "daekoon": 0.0
