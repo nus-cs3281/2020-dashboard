@@ -513,6 +513,20 @@
             "deletions": 58
           }
         ]
+      },
+      {
+        "insertions": 532,
+        "deletions": 1,
+        "date": "2020-04-03",
+        "commitResults": [
+          {
+            "hash": "0bc073e2f84edb1b7c9aa0e1925000246f973814",
+            "messageTitle": "[#9646] Add L\u0026P tests for backend endpoints (#9958)",
+            "messageBody": "* Add skeleton for Feedback Session load testing\r\n\r\n* Add method to generate feedback session\r\n\r\n* Add method to generate feedback questions\r\n\r\n* Complete feedback view lnp test\r\n\r\n* Change test to use login method\r\n\r\n* Fix lnp test for viewing feedback form not working properly\r\n\r\n* Add more HTTP request to simulate real case scenario better\r\n\r\n* Fix FeedbackSessionQuestion giving errors\r\n\r\n* Create new lnp test for submitting feedback session form\r\n\r\n* Attempt to fix regexMatcher\r\n\r\n* Fix lnp testing for Feedback session submit response\r\n\r\n* Remove debugging code and stray character\r\n\r\n* Disable standard output stream for lnp tests\r\n\r\n* Revert ordering of data bundle generation in lnp test\r\n\r\n* Add comments and documentation to explain new backdoor API\r\n\r\n* Update LnP tests to work with new BaseLNPTestCase\r\n\r\n* Update FeedbackSessionView LnP test to handle multiple questions per feedbackSession\r\n\r\n* Update FeedbackSessionSubmit LnP to support multiple questions, and remove dependency on backdoor",
+            "insertions": 532,
+            "deletions": 1
+          }
+        ]
       }
     ]
   },
@@ -535,7 +549,7 @@
     "nbriannl": 0,
     "tiuweehan": 1383,
     "madanalogy": 942,
-    "daekoon": 893
+    "daekoon": 1425
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
@@ -719,7 +733,7 @@
       "ts": 269
     },
     "daekoon": {
-      "java": 893,
+      "java": 1425,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -732,23 +746,23 @@
   "authorContributionVariance": {
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 6039.376,
+    "niqiukun": 5944.383,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1742.6343,
+    "dvrylc": 1715.114,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 92.40593,
+    "hcwong": 90.97825,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 13792.99,
-    "madanalogy": 2176.0325,
-    "daekoon": 7339.1606
+    "tiuweehan": 13578.138,
+    "madanalogy": 2142.498,
+    "daekoon": 9412.125
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
