@@ -190,6 +190,41 @@
             "deletions": 5
           }
         ]
+      },
+      {
+        "insertions": 167,
+        "deletions": 128,
+        "date": "2020-04-04",
+        "commitResults": [
+          {
+            "hash": "4811dc61370e0c917f6d1702cbc30aad451e1746",
+            "messageTitle": "Update dependencies and restructure webpack config (#130)",
+            "messageBody": "The vue-strap fork is using highly outdated dependencies, which results\r\nin being unable to use some new features of vue-loader which can be\r\nhelpful in development.\r\n\r\nLet’s update these dependencies, and restructure the webpack configs to\r\naccommodate webpack 4.\r\nLet’s also refactor the npm build script to only build the minified\r\nbundle, while also preserving the ability to build the non-minified\r\nbundle with a builddev script.",
+            "insertions": 134,
+            "deletions": 100
+          },
+          {
+            "hash": "6d2d1914de07c29289d979a904d8a4fc53841aaf",
+            "messageTitle": "Fix panel max height for older browsers (#139)",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 3
+          },
+          {
+            "hash": "7f45fe75c5875dd68021455b3b78a678e6053510",
+            "messageTitle": "Increase panel animation speed (#138)",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 3
+          },
+          {
+            "hash": "a296496e109de1bc00c80d3b43caae72bc7d5b5c",
+            "messageTitle": "Refactor panel onHeaderHover to css (#140)",
+            "messageBody": "The panel component uses a data variable, onHeaderHover, to trigger\r\ncss changes of its various buttons.\r\n\r\nLet’s refactor this to use the css hover pseudo selector instead, which\r\nincreases code readability and maintenance of the component.",
+            "insertions": 27,
+            "deletions": 22
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -306,11 +341,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 38,
-    "ang-zeyu": 1021,
+    "ang-zeyu": 1160,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 37,
-    "le0tan": 60,
+    "le0tan": 59,
     "tiuweehan": 0,
     "madanalogy": 0,
     "daekoon": 0
@@ -426,12 +461,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 179,
+      "js": 286,
       "css": 0,
-      "json": 0,
+      "json": 26,
       "md": 0,
       "py": 0,
-      "vue": 842
+      "vue": 848
     },
     "geshuming": {
       "java": 0,
@@ -464,7 +499,7 @@
       "java": 0,
       "js": 0,
       "css": 0,
-      "json": 1,
+      "json": 0,
       "md": 0,
       "py": 0,
       "vue": 59
@@ -501,20 +536,20 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 3484.2212,
-    "yash-chowdhary": 2.986408,
+    "openorclose": 3347.0647,
+    "yash-chowdhary": 2.8690448,
     "Tejas2805": 0.0,
     "dvrylc": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 17.205824,
-    "ang-zeyu": 11828.684,
+    "hcwong": 16.530594,
+    "ang-zeyu": 11976.805,
     "geshuming": 0.0,
     "alyip98": 0.0,
-    "nbriannl": 20.490385,
-    "le0tan": 291.81036,
+    "nbriannl": 19.683802,
+    "le0tan": 280.3818,
     "tiuweehan": 0.0,
     "madanalogy": 0.0,
     "daekoon": 0.0

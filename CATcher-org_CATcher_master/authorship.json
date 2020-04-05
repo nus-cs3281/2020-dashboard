@@ -24586,6 +24586,176 @@
     }
   },
   {
+    "path": "tests/model/issue.model.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { Issue } from \u0027../../src/app/core/models/issue.model\u0027"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "describe(\u0027Issue model class\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    describe(\u0027.updateDescription(description) and .updateTeamResponse(teamResponse)\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        it(\u0027correctly clean strings obtained from users\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const noDetailsFromBugReporter \u003d \u0027No details provided by bug reporter.\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const noDetailsFromTeam \u003d \u0027No details provided by team.\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(\u0027\u0027)).toBe(noDetailsFromBugReporter);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(\u0027\u0027)).toBe(noDetailsFromTeam);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(null)).toBe(noDetailsFromBugReporter);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(undefined)).toBe(noDetailsFromTeam);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const typicalDescription \u003d \u0027The app crashes after parsing config files.\u0027"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const typicalTeamResponse \u003d \u0027Cannot replicate the bug.\u0027"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(typicalDescription)).toBe(typicalDescription);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(typicalTeamResponse)).toBe(typicalTeamResponse);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const inputWithSpecialChars \u003d \u0027$%^!@\u0026-_test\u0027;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(inputWithSpecialChars)).toBe(inputWithSpecialChars);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(inputWithSpecialChars)).toBe(inputWithSpecialChars);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 23
+    }
+  },
+  {
     "path": "tests/services/application.service.spec.ts",
     "fileType": "ts",
     "lines": [

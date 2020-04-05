@@ -299,6 +299,20 @@
             "deletions": 1
           }
         ]
+      },
+      {
+        "insertions": 39,
+        "deletions": 21,
+        "date": "2020-04-04",
+        "commitResults": [
+          {
+            "hash": "d6bf21098092485f517145d79b7ddb66ac6c0baf",
+            "messageTitle": "Upgrade js-beautify and provide option to turn it off (#1116)",
+            "messageBody": "MarkBind currently runs js-beautify v1.7.5, although later versions\r\nof the library have been released (the latest version as of this PR\r\nis v1.10.3).\r\n\r\nLet\u0027s upgrade js-beautify to the latest version.\r\n\r\nTurning off js-beautify can improve the performance of MarkBind\u0027s \r\nbuild process. Let\u0027s also give the user the option to turn off js-beautify (whenever\r\nnecessary) through an option in site.json.",
+            "insertions": 39,
+            "deletions": 21
+          }
+        ]
       }
     ],
     "Tejas2805": [
@@ -1128,7 +1142,7 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 1327,
-    "yash-chowdhary": 1666,
+    "yash-chowdhary": 1699,
     "Tejas2805": 135,
     "dvrylc": 76,
     "j-lum": 0,
@@ -1136,11 +1150,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 60,
-    "ang-zeyu": 3763,
+    "ang-zeyu": 3754,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 696,
-    "le0tan": 961,
+    "le0tan": 958,
     "tiuweehan": 0,
     "madanalogy": 61,
     "daekoon": 0
@@ -1196,10 +1210,10 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 254,
+      "js": 272,
       "css": 294,
-      "json": 4,
-      "md": 1035,
+      "json": 7,
+      "md": 1047,
       "mbd": 0,
       "mbdf": 61,
       "njk": 0,
@@ -1292,9 +1306,9 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2312,
+      "js": 2305,
       "css": 687,
-      "json": 309,
+      "json": 307,
       "md": 325,
       "mbd": 0,
       "mbdf": 118,
@@ -1340,7 +1354,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 767,
+      "js": 764,
       "css": 8,
       "json": 0,
       "md": 71,
@@ -1391,22 +1405,22 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6174.309,
-    "yash-chowdhary": 8958.249,
-    "Tejas2805": 172.62376,
-    "dvrylc": 47.36357,
+    "openorclose": 6126.9814,
+    "yash-chowdhary": 8900.846,
+    "Tejas2805": 171.28572,
+    "dvrylc": 46.99142,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 25.993666,
-    "ang-zeyu": 37598.17,
+    "hcwong": 25.789423,
+    "ang-zeyu": 37314.812,
     "geshuming": 0.0,
-    "alyip98": 4.5967393,
-    "nbriannl": 1754.406,
-    "le0tan": 250152.45,
+    "alyip98": 4.5606036,
+    "nbriannl": 1740.9325,
+    "le0tan": 248185.39,
     "tiuweehan": 0.0,
-    "madanalogy": 269.3645,
+    "madanalogy": 267.24634,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
