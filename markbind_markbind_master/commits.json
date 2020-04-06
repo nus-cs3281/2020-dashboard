@@ -843,6 +843,20 @@
             "deletions": 1
           }
         ]
+      },
+      {
+        "insertions": 119,
+        "deletions": 89,
+        "date": "2020-04-06",
+        "commitResults": [
+          {
+            "hash": "1519ad183ad05a4449747c3bf4ff633e0b5e758d",
+            "messageTitle": "Expand test extensions and fix whitespace checks (#1156)",
+            "messageBody": "The diffing utilities used for functional tests only check for\r\ndifferences in html files and the siteData json file.\r\nAdditionally, the diffs are whitespace and newline insensitive, which\r\ncan cause subtle, unintended changes to go unnoticed.\r\n\r\nLet\u0027s expand the range of files to diff, using the isTextOrBinary\r\npackage as a first guard against diffing binary files.\r\nLet\u0027s add additional constants that guard against binary files not\r\nrecognised by the package, or misrecognised as such.\r\n\r\nLet\u0027s also change the diffing function used to be whitespace and\r\nnewline sensitive.\r\nSince whitespaces and newlines now appear in the diffs, let\u0027s also\r\nimprove the diff printing utilities to account for it.",
+            "insertions": 119,
+            "deletions": 89
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -1150,7 +1164,7 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 60,
-    "ang-zeyu": 3754,
+    "ang-zeyu": 3871,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 696,
@@ -1306,9 +1320,9 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2305,
+      "js": 2421,
       "css": 687,
-      "json": 307,
+      "json": 308,
       "md": 325,
       "mbd": 0,
       "mbdf": 118,
@@ -1405,22 +1419,22 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6126.9814,
-    "yash-chowdhary": 8900.846,
-    "Tejas2805": 171.28572,
-    "dvrylc": 46.99142,
+    "openorclose": 6034.445,
+    "yash-chowdhary": 8767.121,
+    "Tejas2805": 168.67087,
+    "dvrylc": 46.264565,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 25.789423,
-    "ang-zeyu": 37314.812,
+    "hcwong": 25.390526,
+    "ang-zeyu": 36957.383,
     "geshuming": 0.0,
-    "alyip98": 4.5606036,
-    "nbriannl": 1740.9325,
-    "le0tan": 248185.39,
+    "alyip98": 4.48999,
+    "nbriannl": 1714.5981,
+    "le0tan": 244340.67,
     "tiuweehan": 0.0,
-    "madanalogy": 267.24634,
+    "madanalogy": 263.10715,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
