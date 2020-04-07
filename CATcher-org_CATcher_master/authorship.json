@@ -24586,6 +24586,386 @@
     }
   },
   {
+    "path": "tests/constants/data.constants.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const csvString \u003d `"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "role,name,team"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "student,JunWei96,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "admin,damithc,"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "tutor,anubh-v,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "admin,geshuming,"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "tutor,jj-lim,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "tutor,jj-lim,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "tutor,jj-lim,CS2103T-W12-4"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "tutor,q,CS2103T-W12-4"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "student,003-samuel,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "student,damithc,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "student,RonakLakhotia,CS2103T-W12-4"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "student,ptvrajsk,CS2103T-W12-3"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "`"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "// jsonData is a json representation of csvString"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const jsonData \u003d {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    roles: {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      students: {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        junwei96: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        \u0027003-samuel\u0027: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        damithc: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        ronaklakhotia: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        ptvrajsk: \u0027true\u0027"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      tutors: { \u0027anubh-v\u0027: \u0027true\u0027, \u0027jj-lim\u0027: \u0027true\u0027, q: \u0027true\u0027 },"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      admins: { damithc: \u0027true\u0027, geshuming: \u0027true\u0027 }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027team-structure\u0027: {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      \u0027CS2103T-W12-3\u0027: {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        junwei96: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        \u0027003-samuel\u0027: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        damithc: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        ptvrajsk: \u0027true\u0027"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      \u0027CS2103T-W12-4\u0027: { ronaklakhotia: \u0027true\u0027 }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027students-allocation\u0027: {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      junwei96: { teamId: \u0027CS2103T-W12-3\u0027 },"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      \u0027003-samuel\u0027: { teamId: \u0027CS2103T-W12-3\u0027 },"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      damithc: { teamId: \u0027CS2103T-W12-3\u0027 },"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      ronaklakhotia: { teamId: \u0027CS2103T-W12-4\u0027 },"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      ptvrajsk: { teamId: \u0027CS2103T-W12-3\u0027 }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027tutors-allocation\u0027: {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      \u0027anubh-v\u0027: { \u0027CS2103T-W12-3\u0027: \u0027true\u0027 },"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      \u0027jj-lim\u0027: { \u0027CS2103T-W12-3\u0027: \u0027true\u0027, \u0027CS2103T-W12-4\u0027: \u0027true\u0027 },"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      q: { \u0027CS2103T-W12-4\u0027: \u0027true\u0027 }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027admins-allocation\u0027: { damithc: {}, geshuming: {} }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  }"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 53
+    }
+  },
+  {
     "path": "tests/model/issue.model.spec.ts",
     "fileType": "ts",
     "lines": [
