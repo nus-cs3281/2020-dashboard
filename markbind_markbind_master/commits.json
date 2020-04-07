@@ -136,6 +136,27 @@
             "deletions": 14
           }
         ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 4,
+        "date": "2020-04-07",
+        "commitResults": [
+          {
+            "hash": "99843741cf862c5dc317a1ddf5a61f8a7156a2a0",
+            "messageTitle": "Parse popovers for footnotes (#1155)",
+            "messageBody": "During the migration to bootstrap-vue,\r\npopovers had to be parsed into bootstrap-vue syntax.\r\n\r\nThis is done before the plugins stage, where footnotes are implemented, so the popovers don\u0027t work there.\r\n\r\nLet\u0027s add the parsing of popovers to the footnotes plugin to solve this.",
+            "insertions": 4,
+            "deletions": 0
+          },
+          {
+            "hash": "e61cbc3334cfef57c94b6d1741f11fdcc91f4468",
+            "messageTitle": "Use \u003cbr\u003e to separate lines of code block (#1176)",
+            "messageBody": "",
+            "insertions": 2,
+            "deletions": 4
+          }
+        ]
       }
     ],
     "yash-chowdhary": [
@@ -1104,7 +1125,6 @@
         ]
       }
     ],
-    "tiuweehan": [],
     "madanalogy": [
       {
         "insertions": 10,
@@ -1155,7 +1175,7 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1327,
+    "openorclose": 1333,
     "yash-chowdhary": 1699,
     "Tejas2805": 135,
     "dvrylc": 76,
@@ -1167,9 +1187,8 @@
     "ang-zeyu": 3871,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 696,
+    "nbriannl": 692,
     "le0tan": 958,
-    "tiuweehan": 0,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -1212,7 +1231,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 685,
+      "js": 691,
       "css": 466,
       "json": 27,
       "md": 79,
@@ -1356,7 +1375,7 @@
     },
     "nbriannl": {
       "java": 0,
-      "js": 135,
+      "js": 131,
       "css": 244,
       "json": 1,
       "md": 175,
@@ -1375,18 +1394,6 @@
       "mbd": 0,
       "mbdf": 68,
       "njk": 47,
-      "py": 0,
-      "yml": 0
-    },
-    "tiuweehan": {
-      "java": 0,
-      "js": 0,
-      "css": 0,
-      "json": 0,
-      "md": 0,
-      "mbd": 0,
-      "mbdf": 0,
-      "njk": 0,
       "py": 0,
       "yml": 0
     },
@@ -1419,22 +1426,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6034.445,
-    "yash-chowdhary": 8767.121,
-    "Tejas2805": 168.67087,
-    "dvrylc": 46.264565,
+    "openorclose": 5987.8003,
+    "yash-chowdhary": 8701.726,
+    "Tejas2805": 167.39323,
+    "dvrylc": 45.9096,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 25.390526,
-    "ang-zeyu": 36957.383,
+    "hcwong": 25.19573,
+    "ang-zeyu": 36686.01,
     "geshuming": 0.0,
-    "alyip98": 4.48999,
-    "nbriannl": 1714.5981,
-    "le0tan": 244340.67,
-    "tiuweehan": 0.0,
-    "madanalogy": 263.10715,
+    "alyip98": 4.4555125,
+    "nbriannl": 1701.7266,
+    "le0tan": 242463.48,
+    "madanalogy": 261.08643,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
@@ -1455,7 +1461,6 @@
     "alyip98": "YIP ..YEUN",
     "nbriannl": "LABA..RIDO",
     "le0tan": "TAN ..HONG",
-    "tiuweehan": "TIU .. HAN",
     "madanalogy": "MUHA..JJAJ",
     "daekoon": "LIM ..KOON"
   }
