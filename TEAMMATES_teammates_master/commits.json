@@ -272,6 +272,27 @@
             "deletions": 4
           }
         ]
+      },
+      {
+        "insertions": 175,
+        "deletions": 11,
+        "date": "2020-04-07",
+        "commitResults": [
+          {
+            "hash": "3f9494cfe77ed525084b26f7d8d62986adf37ce0",
+            "messageTitle": "[#9946] Add additional fields for Instructor Search Migration  (#9991)",
+            "messageBody": "* Add institute and key to InstructorData\r\n\r\n* Fix logic\r\n\r\n* Make institute nullable\r\n\r\n* Neaten code\r\n\r\n* Refactor code\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\n\r\n* Fix comments\r\n\r\n* Remove O(n^2) calls\r\n\r\n* Add comment on key\r\n\r\n* Fix comments\r\n\r\n* Fix comment\r\n\r\n* Fix comments\r\n\r\n* Retrigger travis\r\n\r\n* retrigger travis again again\r\n\r\n* Retrigger travis x3\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e",
+            "insertions": 75,
+            "deletions": 4
+          },
+          {
+            "hash": "b4010c49d817d509c62760d075029c40e33e956b",
+            "messageTitle": "[#9946] Add additional fields for Student Search Migration (#9990)",
+            "messageBody": "* Implement search student endpoint\r\n\r\n* Implement instructors search endpoint (#2)\r\n\r\n* Add instructor search endpoint\r\n\r\n* Add tests\r\n\r\n* Switch from SearchInstructorsData to InstructorsData (#6)\r\n\r\n* Switch from SearchStudentsData to StudentsData (#7)\r\n\r\n* Allow travis to build search migration branch (#5)\r\n\r\n* Implement sessions search endpoint (#3)\r\n\r\n* Add sessions search endpoint\r\n\r\n* Add tests\r\n\r\n* Fix lint errors\r\n\r\n* Add course endpoint (#8)\r\n\r\n* Implement Links Endpoint (#4)\r\n\r\n* Add googleId  field to StudentData (#9)\r\n\r\n* Add googleid to studentdata\r\n\r\n* Add nullable to student data\r\n\r\n* Improve search response classes (#12)\r\n\r\n* Improve students endpoint classes\r\n\r\n* Move joinState attribute from common to student\r\n\r\n* Improve instructors endpoint classes\r\n\r\n* Revert \"Add googleId  field to StudentData (#9)\"\r\n\r\nThis reverts commit b5d46cabc092bf3bedc429ae1c771515bf149606.\r\n\r\n* Revert unnecessary InstructorData changes\r\n\r\n* Fix typo\r\n\r\n* Make joinState common\r\n\r\n* Make names sane again\r\n\r\n* Remove unused setters\r\n\r\n* Standardize search endpoints (#13)\r\n\r\n* Improve course endpoint class names\r\n\r\n* Improve links endpoint class names\r\n\r\n* Improve sessions endpoint class names\r\n\r\n* Standardize comments\r\n\r\n* Fix import order\r\n\r\n* Revert travis config\r\n\r\n* Split PR\r\n\r\n* Revert to existing response classes\r\n\r\n* Allow some attributes to be optional\r\n\r\n* Improve information hiding logic\r\n\r\n* Add key and institute field to students\r\n\r\n* Improve resource name\r\n\r\n* Fix rebase issues\r\n\r\n* lint\r\n\r\n* Fix str equality\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\n\r\n* Add mapping for courseId to instructorId\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\n\r\n* Fix some comments\r\n\r\n* Move key generation logic to studentData\r\n\r\n* Modify to avoid O(n^2) calls\r\n\r\n* Hide Key for instructor\r\n\r\n* Fix comments\r\n\r\n* Add helpful comment\r\n\r\n* Fix comments\r\n\r\n* Fix comments again\r\n\r\n* Rebuild travis\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\nCo-authored-by: Daryl Chan \u003cdckj95@gmail.com\u003e",
+            "insertions": 100,
+            "deletions": 7
+          }
+        ]
       }
     ],
     "ang-zeyu": [],
@@ -565,12 +586,12 @@
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
-    "dvrylc": 539,
+    "dvrylc": 530,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 180,
+    "hcwong": 355,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
@@ -641,7 +662,7 @@
       "ts": 0
     },
     "dvrylc": {
-      "java": 496,
+      "java": 487,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -691,7 +712,7 @@
       "ts": 0
     },
     "hcwong": {
-      "java": 68,
+      "java": 243,
       "js": 0,
       "scss": 2,
       "md": 0,
@@ -774,23 +795,23 @@
   "authorContributionVariance": {
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 5852.0503,
+    "niqiukun": 5762.8145,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1688.4486,
+    "dvrylc": 1662.6017,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 89.59398,
+    "hcwong": 349.41772,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 17120.98,
-    "madanalogy": 2109.9746,
-    "daekoon": 9266.096
+    "tiuweehan": 16864.52,
+    "madanalogy": 2078.4263,
+    "daekoon": 9124.528
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
