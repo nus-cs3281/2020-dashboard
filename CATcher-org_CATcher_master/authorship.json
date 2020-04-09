@@ -24966,6 +24966,740 @@
     }
   },
   {
+    "path": "tests/constants/githubcomment.constants.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { GithubComment } from \"../../src/app/core/models/github/github-comment.model\";"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const EMPTY_TEAM_RESPONSE : GithubComment \u003d {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    author_association: \u0027CONTRIBUTOR\u0027,"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    body: \"# Team\u0027s Response\\n\" +"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027\\n\u0027 +"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027 ## Duplicate status (if any):\\n\u0027 +"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    \u0027--\u0027,"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    created_at: \u00272020-02-16T18:31:38Z\u0027,"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    html_url: \u0027https://github.com/CATcher-org/pe-results/issues/91#issuecomment-586737495\u0027,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 586737495,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    issue_url: \u0027https://api.github.com/repos/CATcher-org/pe-results/issues/91\u0027,"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    updated_at: \u00272020-03-02T12:50:02Z\u0027,"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/issues/comments/586737495\u0027,"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    user: {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      login: \u0027testathorStudent\u0027,"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      id: 46639862,"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      avatar_url: \u0027https://avatars3.githubusercontent.com/u/46639862?v\u003d4\u0027,"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      url: \u0027https://api.github.com/users/testathorStudent\u0027,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  }"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 21
+    }
+  },
+  {
+    "path": "tests/constants/githubissue.constants.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { GithubIssue } from \u0027../../src/app/core/models/github/github-issue.model\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL, "
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "         GITHUB_LABEL_FUNCTIONALITY_BUG, GITHUB_LABEL_MEDIUM_SEVERITY } from \u0027../constants/githublabel.constants\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const ISSUE_WITH_EMPTY_DESCRIPTION \u003d new GithubIssue({"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 574085971,"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    number: 92,"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    assignees: [],"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    body: \u0027\u0027,"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    created_at: \u00272020-03-02T16:19:02Z\u0027,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labels: [GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL, "
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "             GITHUB_LABEL_FUNCTIONALITY_BUG, GITHUB_LABEL_MEDIUM_SEVERITY"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            ],"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    state: \u0027open\u0027,"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    title: \u0027App starts to lag when given large amount of input\u0027,"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    updated_at: \u00272020-03-13T13:37:32Z\u0027,"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/issues/92\u0027,"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    user: {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        login: \u0027anubh-v\u0027,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        id: 35621759,"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        avatar_url: \u0027https://avatars1.githubusercontent.com/u/35621759?v\u003d4\u0027,"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        url: \u0027https://api.github.com/users/anubh-v\u0027,"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "} as GithubIssue);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const ISSUE_WITH_ASSIGNEES \u003d new GithubIssue({"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 551732011,"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    number: 91,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    assignees: ["
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          login: \u0027anubh-v\u0027,"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          id: 35621759,"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          url: \u0027https://api.github.com/users/anubh-v\u0027,"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      ],"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    body: \u0027Screen freezes every few minutes\u0027,"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    created_at: \u00272020-01-18T07:01:45Z\u0027,"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labels: [GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL, "
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        GITHUB_LABEL_FUNCTIONALITY_BUG, GITHUB_LABEL_MEDIUM_SEVERITY"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "       ],"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    state: \u0027open\u0027,"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    title: \u0027Screen freezes\u0027,"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    updated_at: \u00272020-03-02T12:50:02Z\u0027,"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/issues/91\u0027,"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    user: {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        login: \u0027anubh-v\u0027,"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        id: 35621759,"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        avatar_url: \u0027https://avatars1.githubusercontent.com/u/35621759?v\u003d4\u0027,"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        url: \u0027https://api.github.com/users/anubh-v\u0027,"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "} as GithubIssue);"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 51
+    }
+  },
+  {
+    "path": "tests/constants/githublabel.constants.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { GithubLabel } from \"../../src/app/core/models/github/github-issue.model\";"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const GITHUB_LABEL_FUNCTIONALITY_BUG \u003d {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    color: \u00279900cc\u0027,"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    name: \u0027type.FunctionalityBug\u0027,"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 1226647550,"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/labels/type.FunctionalityBug\u0027,"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "} as GithubLabel"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const GITHUB_LABEL_MEDIUM_SEVERITY \u003d  {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    color: \u0027ff9999\u0027,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    name: \u0027severity.Medium\u0027,"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 1226647149,"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/labels/severity.Medium\u0027,"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "} as GithubLabel"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const GITHUB_LABEL_TUTORIAL_LABEL \u003d {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/labels/tutorial.CS2103T-W12\u0027,"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    name: \u0027tutorial.CS2103T-W12\u0027,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    color: \u0027c2e0c6\u0027,"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 1226649736,"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "} as GithubLabel"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const GITHUB_LABEL_TEAM_LABEL \u003d {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    id: 1226649835,"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    url: \u0027https://api.github.com/repos/CATcher-org/pe-results/labels/team.3\u0027,"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    name: \u0027team.3\u0027,"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    color: \u0027d4c5f9\u0027,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "} as GithubLabel"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 29
+    }
+  },
+  {
     "path": "tests/model/issue.model.spec.ts",
     "fileType": "ts",
     "lines": [
@@ -24988,143 +25722,304 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "describe(\u0027Issue model class\u0027, () \u003d\u003e {"
+        "content": "import { ISSUE_WITH_EMPTY_DESCRIPTION, ISSUE_WITH_ASSIGNEES } from \u0027../constants/githubissue.constants\u0027"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    describe(\u0027.updateDescription(description) and .updateTeamResponse(teamResponse)\u0027, () \u003d\u003e {"
+        "content": "import { EMPTY_TEAM_RESPONSE } from \u0027../constants/githubcomment.constants\u0027;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "        it(\u0027correctly clean strings obtained from users\u0027, () \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const noDetailsFromBugReporter \u003d \u0027No details provided by bug reporter.\u0027;"
+        "content": "describe(\u0027Issue model class\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const noDetailsFromTeam \u003d \u0027No details provided by team.\u0027;"
+        "content": "    describe(\u0027.createPhaseBugReportIssue(githubIssue)\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateDescription(\u0027\u0027)).toBe(noDetailsFromBugReporter);"
+        "content": "        it(\u0027correctly creates a bug reporting issue that has an empty description\u0027, async () \u003d\u003e {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateTeamResponse(\u0027\u0027)).toBe(noDetailsFromTeam);"
+        "content": "            const issue \u003d Issue.createPhaseBugReportingIssue(ISSUE_WITH_EMPTY_DESCRIPTION);"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateDescription(null)).toBe(noDetailsFromBugReporter);"
+        "content": "            expect(issue.title).toBe(\u0027App starts to lag when given large amount of input\u0027);"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateTeamResponse(undefined)).toBe(noDetailsFromTeam);"
+        "content": "            expect(issue.description).toBe(\u0027No details provided by bug reporter.\u0027);"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": ""
+        "content": "            expect(issue.severity).toBe(\u0027Medium\u0027);"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const typicalDescription \u003d \u0027The app crashes after parsing config files.\u0027"
+        "content": "            expect(issue.type).toBe(\u0027FunctionalityBug\u0027);"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const typicalTeamResponse \u003d \u0027Cannot replicate the bug.\u0027"
+        "content": "        });"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateDescription(typicalDescription)).toBe(typicalDescription);"
+        "content": "    });"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateTeamResponse(typicalTeamResponse)).toBe(typicalTeamResponse);"
+        "content": "    describe(\u0027.createPhaseTeamResponseIssue(githubIssue, githubComment)\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": ""
+        "content": "        it(\u0027correctly creates a team response issue that has an empty team response\u0027, async() \u003d\u003e {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const inputWithSpecialChars \u003d \u0027$%^!@\u0026-_test\u0027;"
+        "content": "            const dummyTeam \u003d null;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateDescription(inputWithSpecialChars)).toBe(inputWithSpecialChars);"
+        "content": "            const issue \u003d Issue.createPhaseTeamResponseIssue(ISSUE_WITH_ASSIGNEES, [EMPTY_TEAM_RESPONSE], dummyTeam);"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateTeamResponse(inputWithSpecialChars)).toBe(inputWithSpecialChars);"
+        "content": "            expect(issue.title).toBe(\u0027Screen freezes\u0027);"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "        });"
+        "content": "            expect(issue.teamResponse).toBe(\u0027No details provided by team.\u0027);"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    });"
+        "content": "            expect(issue.severity).toBe(\u0027Medium\u0027);"
       },
       {
         "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(issue.assignees).toContain(\u0027anubh-v\u0027);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(issue.assignees.length).toBe(1);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    describe(\u0027.updateDescription(description) and .updateTeamResponse(teamResponse)\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        it(\u0027correctly clean strings obtained from users\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const noDetailsFromBugReporter \u003d \u0027No details provided by bug reporter.\u0027;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const noDetailsFromTeam \u003d \u0027No details provided by team.\u0027;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(\u0027\u0027)).toBe(noDetailsFromBugReporter);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(\u0027\u0027)).toBe(noDetailsFromTeam);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(null)).toBe(noDetailsFromBugReporter);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(undefined)).toBe(noDetailsFromTeam);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const typicalDescription \u003d \u0027The app crashes after parsing config files.\u0027"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const typicalTeamResponse \u003d \u0027Cannot replicate the bug.\u0027"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(typicalDescription)).toBe(typicalDescription);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(typicalTeamResponse)).toBe(typicalTeamResponse);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const inputWithSpecialChars \u003d \u0027$%^!@\u0026-_test\u0027;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(inputWithSpecialChars)).toBe(inputWithSpecialChars);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(inputWithSpecialChars)).toBe(inputWithSpecialChars);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 46,
         "author": {
           "gitId": "anubh-v"
         },
@@ -25132,7 +26027,7 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 23
+      "anubh-v": 46
     }
   },
   {
