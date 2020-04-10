@@ -189,21 +189,42 @@
             "deletions": 2
           }
         ]
+      },
+      {
+        "insertions": 32,
+        "deletions": 20,
+        "date": "2020-04-10",
+        "commitResults": [
+          {
+            "hash": "67992907b8d40efed045b850a0c79b7325f0a40b",
+            "messageTitle": "Fix #2 (implement parallel repository transfers)",
+            "messageBody": "The built-in multiprocessing module allows parallel processes. Since\ndownloading repositories is inherently I/O-bound, it makes sense to\nparallelise the downloads – no conflicts are foreseen, as the processes\nonly write files with UUID names to a central location.\n\nNow a significant portion of the time is spent pushing the grand\nensemble of files back up.\n",
+            "insertions": 21,
+            "deletions": 14
+          },
+          {
+            "hash": "110f9d83c72eccf904ebf7081973c096288203cb",
+            "messageTitle": "Add option to control parallelism",
+            "messageBody": "",
+            "insertions": 11,
+            "deletions": 6
+          }
+        ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "Parcly-Taxel": 331
+    "Parcly-Taxel": 343
   },
   "authorFileTypeContributionMap": {
     "Parcly-Taxel": {
-      "py": 281,
+      "py": 293,
       "md": 48,
       "txt": 2
     }
   },
   "authorContributionVariance": {
-    "Parcly-Taxel": 4026.7803
+    "Parcly-Taxel": 2767.7034
   },
   "authorDisplayNameMap": {
     "Parcly-Taxel": "JERE..ERUI"
