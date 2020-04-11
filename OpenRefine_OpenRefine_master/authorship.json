@@ -19014,7 +19014,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        if (column.name in self._collapsedColumnNames) {"
+        "content": "        if (self._collapsedColumnNames.hasOwnProperty(column.name)) {"
       },
       {
         "lineNumber": 233,
@@ -19623,7 +19623,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    if (column.name in self._collapsedColumnNames) {"
+        "content": "    if (self._collapsedColumnNames.hasOwnProperty(column.name)) {"
       },
       {
         "lineNumber": 320,
@@ -20246,7 +20246,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      if (column.name in self._collapsedColumnNames) {"
+        "content": "      if (self._collapsedColumnNames.hasOwnProperty(column.name)) {"
       },
       {
         "lineNumber": 409,

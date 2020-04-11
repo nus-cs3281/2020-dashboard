@@ -47,110 +47,75 @@
         ]
       },
       {
-        "insertions": 627,
-        "deletions": 56,
-        "date": "2020-03-03",
+        "insertions": 1131,
+        "deletions": 342,
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "f215eeedac66e08cbee9f79c0573a566f4480f40",
+            "hash": "2310c8621d9702b42d05c7ff59d2f68d245083e9",
             "messageTitle": "Migrate to bootstrap-vue popovers (#1033)",
             "messageBody": "",
             "insertions": 602,
             "deletions": 56
           },
           {
-            "hash": "a0ae237617ced17aff4b1d22aaf035da9d05031a",
+            "hash": "cba8d080120c3ccdcf2c0fe20b449b696b9c55fc",
             "messageTitle": "Render plugins on dynamic resources (#1051)",
             "messageBody": "",
             "insertions": 25,
             "deletions": 0
-          }
-        ]
-      },
-      {
-        "insertions": 180,
-        "deletions": 201,
-        "date": "2020-03-07",
-        "commitResults": [
+          },
           {
-            "hash": "e521f97abad4097729ae286c0c379f7f9b68fa3c",
+            "hash": "d0cc8f3c15bf78dde985c8f506388fda2a86f83c",
             "messageTitle": "Allow changing parameter properties (#1075)",
             "messageBody": "",
             "insertions": 180,
             "deletions": 201
-          }
-        ]
-      },
-      {
-        "insertions": 156,
-        "deletions": 59,
-        "date": "2020-03-23",
-        "commitResults": [
+          },
           {
-            "hash": "c437f3f3787166b2286d5cc2fc097833c2bfddbd",
+            "hash": "ba2d7ec76600084ede61ebee80e16361ad8d5866",
             "messageTitle": "Remove redundant file writing (#1090)",
             "messageBody": "We are writing to a temp path, and then reading it immediately.\r\nLet\u0027s avoid this by passing the string directly instead.",
             "insertions": 19,
             "deletions": 50
           },
           {
-            "hash": "409e90c70bef6676bd32f65c1a462be54b91d22f",
+            "hash": "48a76e1263f04af1fdaf38e3ec716558539ef8a3",
             "messageTitle": "Add start from line number functionality to code blocks (#1115)",
             "messageBody": "Let\u0027s do this by checking for the `start-from` attribute on a code block\r\nand then set an inline style that sets the `line` counter to the \r\nappropriate value.",
             "insertions": 87,
             "deletions": 4
           },
           {
-            "hash": "407158b4ca2db1b3094c97c65aeb8c616cdf81dc",
+            "hash": "ea117150233a1dcaec3307ce2947e44fd4c49cd6",
             "messageTitle": "Remove OK button from modals (#1134)",
             "messageBody": "Let\u0027s remove the redundant OK button from modals,\r\nand only show it if the `ok-title` attribute is present.",
             "insertions": 50,
             "deletions": 5
-          }
-        ]
-      },
-      {
-        "insertions": 50,
-        "deletions": 8,
-        "date": "2020-03-28",
-        "commitResults": [
+          },
           {
-            "hash": "4bc3edbd22f4eb6d0d1f786a9dfce159093da988",
+            "hash": "ef51c9e16d7a2832fa726ba163b8a92ef710c156",
             "messageTitle": "Show pointer and use underline dashed for click trigger (#1111)",
             "messageBody": "Fix a regression from #1033.\r\n\r\nLet\u0027s add back the two styles of triggers:\r\n- click: show mouse pointer to signal that it is clickable\r\n  and use underline dashed\r\n- not click: no special cursor, and use underline dotted",
             "insertions": 50,
             "deletions": 8
-          }
-        ]
-      },
-      {
-        "insertions": 112,
-        "deletions": 14,
-        "date": "2020-03-29",
-        "commitResults": [
+          },
           {
-            "hash": "46061437b0dd5498fc02fbe84e9054588449b79c",
+            "hash": "886027563e84dce9b78b7afbfb3ff8658dfba43d",
             "messageTitle": "Upgrade to bootstrap-vue 2.5.0 (#1085)",
             "messageBody": "",
             "insertions": 112,
             "deletions": 14
-          }
-        ]
-      },
-      {
-        "insertions": 6,
-        "deletions": 4,
-        "date": "2020-04-07",
-        "commitResults": [
+          },
           {
-            "hash": "99843741cf862c5dc317a1ddf5a61f8a7156a2a0",
+            "hash": "fc3f4c3a46cae5917a6ae968e22cfca0cda8e558",
             "messageTitle": "Parse popovers for footnotes (#1155)",
             "messageBody": "During the migration to bootstrap-vue,\r\npopovers had to be parsed into bootstrap-vue syntax.\r\n\r\nThis is done before the plugins stage, where footnotes are implemented, so the popovers don\u0027t work there.\r\n\r\nLet\u0027s add the parsing of popovers to the footnotes plugin to solve this.",
             "insertions": 4,
             "deletions": 0
           },
           {
-            "hash": "e61cbc3334cfef57c94b6d1741f11fdcc91f4468",
+            "hash": "e25f89f3fae0daa937ff74e4fa0b32a3cd9ba6a2",
             "messageTitle": "Use \u003cbr\u003e to separate lines of code block (#1176)",
             "messageBody": "",
             "insertions": 2,
@@ -259,75 +224,47 @@
         ]
       },
       {
-        "insertions": 371,
-        "deletions": 0,
-        "date": "2020-03-04",
+        "insertions": 1262,
+        "deletions": 137,
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "b8413c62a8332504a2776d2e0696b5316ce38e84",
+            "hash": "ddaa948a09580949afcbdeafe8d364378805776c",
             "messageTitle": "Add copy code-block plugin (#1043)",
             "messageBody": "",
             "insertions": 371,
             "deletions": 0
-          }
-        ]
-      },
-      {
-        "insertions": 846,
-        "deletions": 3,
-        "date": "2020-03-07",
-        "commitResults": [
+          },
           {
-            "hash": "fb9b00e504d1007d3260733d036f2e0a454e12a6",
+            "hash": "8829cec737825a334770640d8b4fa302e443efa2",
             "messageTitle": "Enable AppVeyor CI (#1040)",
             "messageBody": "",
             "insertions": 18,
             "deletions": 1
           },
           {
-            "hash": "4ea52c23ece2fa277afac552691580d6b9c4d89d",
+            "hash": "7102a9664f8710cdc77fcd7a67c9336d8bab4010",
             "messageTitle": "Custom timezone for built-in timestamp (#1073)",
             "messageBody": "",
             "insertions": 828,
             "deletions": 2
-          }
-        ]
-      },
-      {
-        "insertions": 3,
-        "deletions": 112,
-        "date": "2020-03-22",
-        "commitResults": [
+          },
           {
-            "hash": "2a1573174826040f84276d00e1fdac2fe927a7ad",
+            "hash": "2255ece565751a519225936255bb531b8bcbb97a",
             "messageTitle": "Remove dynamic include feature (#1037)",
             "messageBody": "",
             "insertions": 3,
             "deletions": 112
-          }
-        ]
-      },
-      {
-        "insertions": 3,
-        "deletions": 1,
-        "date": "2020-04-01",
-        "commitResults": [
+          },
           {
-            "hash": "69ad5b16530aca3cbf594bf8040fe02d98ff60f9",
+            "hash": "481b811ecba96fbfbf2949237f91828917792d57",
             "messageTitle": "Fix hrefs for headings with angular brackets (#1089)",
             "messageBody": "```\r\nThe hrefs of headings with angular brackets are incorrect because\r\nmarkdown-it escapes the characters to \"\u0026lt;\" and \"\u0026gt;\" and the\r\nsubsequent slugify operation converts it to \"and-lt\" or \"and-gt\".\r\n\r\nLet\u0027s fix this by removing the occurrences of the strings \r\n\"\u0026lt;\" and \"\u0026gt;\" before the slugify operation\r\n```",
             "insertions": 3,
             "deletions": 1
-          }
-        ]
-      },
-      {
-        "insertions": 39,
-        "deletions": 21,
-        "date": "2020-04-04",
-        "commitResults": [
+          },
           {
-            "hash": "d6bf21098092485f517145d79b7ddb66ac6c0baf",
+            "hash": "4ad51d037739c751e5e7c54ba7c8b865067ed5a1",
             "messageTitle": "Upgrade js-beautify and provide option to turn it off (#1116)",
             "messageBody": "MarkBind currently runs js-beautify v1.7.5, although later versions\r\nof the library have been released (the latest version as of this PR\r\nis v1.10.3).\r\n\r\nLet\u0027s upgrade js-beautify to the latest version.\r\n\r\nTurning off js-beautify can improve the performance of MarkBind\u0027s \r\nbuild process. Let\u0027s also give the user the option to turn off js-beautify (whenever\r\nnecessary) through an option in site.json.",
             "insertions": 39,
@@ -366,89 +303,54 @@
         ]
       },
       {
-        "insertions": 1,
-        "deletions": 0,
-        "date": "2020-02-29",
+        "insertions": 171,
+        "deletions": 113,
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "3591bc564bfd6a3a6cb81465b8b51b1ef40ae4f1",
+            "hash": "0e83e7dfc71bac167bbb7a59913d5a8a94609f97",
             "messageTitle": "Add pageNav to Using Plugins Page (#1062)",
             "messageBody": "",
             "insertions": 1,
             "deletions": 0
-          }
-        ]
-      },
-      {
-        "insertions": 26,
-        "deletions": 2,
-        "date": "2020-03-11",
-        "commitResults": [
+          },
           {
-            "hash": "d409741c6e3f5f601145a844fd630af669a45deb",
+            "hash": "85aa4f101fccfc370cfea8bd860acbe450211b94",
             "messageTitle": "Add example for using multiple features in code-blocks (#1102)",
             "messageBody": "The user will have to try out how to add multiple features when using \r\ncode blocks.\r\n\r\nLet\u0027s add an example regarding how to use multiple features in code\r\nblocks so that it\u0027s easier for the user to understand.",
             "insertions": 26,
             "deletions": 2
-          }
-        ]
-      },
-      {
-        "insertions": 49,
-        "deletions": 68,
-        "date": "2020-03-17",
-        "commitResults": [
+          },
           {
-            "hash": "bdd1f60bd9955fec3497c4720e658244ee06656a",
+            "hash": "ab430ce99914dc9cec55f6b71422c1069d3c387a",
             "messageTitle": "Convert code in boxes to code block (#1086)",
             "messageBody": "Let\u0027s convert \u003ccode\u003e boxes to code blocks to better showcase the \r\nfeature",
             "insertions": 49,
             "deletions": 68
-          }
-        ]
-      },
-      {
-        "insertions": 8,
-        "deletions": 6,
-        "date": "2020-03-24",
-        "commitResults": [
+          },
           {
-            "hash": "d5a44737454b4722fdc43763aa6d4c475733842e",
+            "hash": "ac313041018ffa7bac0597fc09142ee9292073f2",
             "messageTitle": "Fix pageNav in tweaking the page structure (#1127)",
             "messageBody": "The pageNav for tweaking the page structure is missing filter tags.\r\n\r\nLet\u0027s fix the headings in filter tags and the pageNav so that pageNav\r\ndisplay filter tags appropriately.",
             "insertions": 8,
             "deletions": 6
-          }
-        ]
-      },
-      {
-        "insertions": 52,
-        "deletions": 34,
-        "date": "2020-04-02",
-        "commitResults": [
+          },
           {
-            "hash": "12e62f7f526a55e2a3b8cb7a82d77d049a643548",
+            "hash": "7a46aa01db0eff5698a32bc17bde8a1f106e2a1b",
             "messageTitle": "Fix bug in Search for UG and DG (#1147)",
             "messageBody": "",
             "insertions": 6,
             "deletions": 2
           },
           {
-            "hash": "7ec7bc4bd76aae9325050b08a59f020c50a1dcf6",
+            "hash": "b02f0656c73d749a57363658a1ad00ce6d08bf34",
             "messageTitle": "Remove fixed bugs from test\\functional\\test_site\\bugs\\index.md` (#1148)",
             "messageBody": "",
             "insertions": 46,
             "deletions": 32
-          }
-        ]
-      },
-      {
-        "insertions": 35,
-        "deletions": 3,
-        "date": "2020-04-09",
-        "commitResults": [
+          },
           {
-            "hash": "b54b76f1323b4727e88372eff798103836f3dab0",
+            "hash": "9e7a46079f8cee4f95a9335903e10eb76b4dfaa1",
             "messageTitle": "Document adding new site content in DG (#1153)",
             "messageBody": "New developers contributing a new feature to MarkBind have a hard time \r\nadding new content to the test site.\r\n\r\nLet\u0027s add documentation regarding how to do so.",
             "insertions": 35,
@@ -489,10 +391,10 @@
       {
         "insertions": 6,
         "deletions": 0,
-        "date": "2020-03-29",
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "de21751ba4227418862aa4fb2d0cf2c7caa928e4",
+            "hash": "5a603f5fb6d53e32cbe460dd0af201fe2d484329",
             "messageTitle": "Fix octicon sizing (#1132)",
             "messageBody": "",
             "insertions": 6,
@@ -537,10 +439,10 @@
       {
         "insertions": 2,
         "deletions": 3,
-        "date": "2020-03-30",
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "a9c4d559a87868e3ab8ae2557a5f43541e8b2bc8",
+            "hash": "28d039f669127a8227da9c1cabe2e7f1099f8def",
             "messageTitle": "Fix fontawsome icons don\u0027t show underlines to indicate modal/tooltip (#1133)",
             "messageBody": "",
             "insertions": 2,
@@ -719,177 +621,114 @@
         ]
       },
       {
-        "insertions": 603,
-        "deletions": 372,
-        "date": "2020-03-03",
+        "insertions": 3033,
+        "deletions": 1221,
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "2eb7b7de8f510349e47447cdd7e7b92a25eeb7cc",
+            "hash": "6d57ffc2ab682d2bb6b07d640ebc37103bccb514",
             "messageTitle": "Refactor preprocess and url processing functions (#1026)",
             "messageBody": "The parser class houses a large number of functions.\r\nThis can be daunting for newer developers to the project, and decreases\r\nmaintainability of the code.\r\n\r\nLet’s start by modularising the preprocess and url processing functions\r\ninto separate files.\r\nLet’s also enhance some in-code documentation for these functions.\r\nSome of these functions can also be abstracted into smaller units of\r\nfunctionality, increasing the maintainability of the code.",
             "insertions": 603,
             "deletions": 372
-          }
-        ]
-      },
-      {
-        "insertions": 1404,
-        "deletions": 63,
-        "date": "2020-03-07",
-        "commitResults": [
+          },
           {
-            "hash": "c2b68e8fe54d801999022c6f4b9d2f982ab90495",
+            "hash": "9060f5666ab442028a6eeb10e161710e43c9e898",
             "messageTitle": "Implement an api to ignore content in certain tags (#1047)",
             "messageBody": "The parsers MarkBind uses parses content in html tags as html\r\nor markdown respectively.\r\nThis makes it difficult to add custom components that utilize\r\nconflicting syntax.\r\n\r\nLet’s add an interface to ignore content in certain special tags.\r\nThis interface is also exposed to plugins as the getSpecialTags option.",
             "insertions": 1404,
             "deletions": 63
-          }
-        ]
-      },
-      {
-        "insertions": 339,
-        "deletions": 82,
-        "date": "2020-03-08",
-        "commitResults": [
+          },
           {
-            "hash": "1451bd5d9594c414a4bfd3d800fbc493c44e7df7",
+            "hash": "89e63fbd4a31fae5c9400a852d4c298ce6fdbc9b",
             "messageTitle": "Implement lazy page building for markbind serve (#1038)",
             "messageBody": "During live reload, changes to a source file rebuilds all files that are\r\ndependent on it.\r\n\r\nIn addition, rebuilding all dependent source files slows the live reload\r\nprocess, leading to a less pleasant user experience.\r\n\r\nIn addition, when running markbind serve, all pages are built and\r\nrendered initially.\r\nThis significantly slows down the time to first page load, which can\r\nbe substantial when the number of source files is huge.\r\n\r\nLet\u0027s implement lazy page building in these operations, which is opt-in\r\nusing the existing -o \u003cfile\u003e or --one-page \u003cfile\u003e flags for the markbind\r\nserve command.\r\n\r\nChanges to a source file will only rebuild pages that are dependent on\r\nit, and is currently being viewed by the author. Other pages not being\r\nviewed by the author are rebuilt when the author navigates to them.\r\nIn addition, only the landing page is built initially when serving.\r\nSubsequent pages are built when the author navigates to them.",
             "insertions": 337,
             "deletions": 79
           },
           {
-            "hash": "940127ac06eb7f8aef25d9afec6c866510bb1fd3",
+            "hash": "ecbc6022a41bdadc1be538d3c8567602276ce3d6",
             "messageTitle": "Fix refactor to processDynamicResources (#1092)",
             "messageBody": "",
             "insertions": 2,
             "deletions": 3
-          }
-        ]
-      },
-      {
-        "insertions": 1,
-        "deletions": 1,
-        "date": "2020-03-21",
-        "commitResults": [
+          },
           {
-            "hash": "d920fda26c6e87b1ca1a23f97aed4694a82e3527",
+            "hash": "643804e0f3412e4ec8434a28cb3b5e66b3a87c80",
             "messageTitle": "Fix flex shrink not applying in content wrapper (#1135)",
             "messageBody": "",
             "insertions": 1,
             "deletions": 1
-          }
-        ]
-      },
-      {
-        "insertions": 24,
-        "deletions": 43,
-        "date": "2020-03-22",
-        "commitResults": [
+          },
           {
-            "hash": "690bb6f2c767b04a60222199d622498ecfc1d160",
+            "hash": "d8b51b9fe34708d6926bdb85350963ad6c9729bb",
             "messageTitle": "Unify markdown-it parser variants (#1056)",
             "messageBody": "The markdown-it parser used for attributes in components\r\nuses a different set of plugins from the one used throughout markbind.\r\n\r\nLet\u0027s unify the two variants to reduce the potential amount of\r\nmaintainence needed, and standardise the usable markdown\r\nsyntax throughout markbind.",
             "insertions": 24,
             "deletions": 43
-          }
-        ]
-      },
-      {
-        "insertions": 209,
-        "deletions": 149,
-        "date": "2020-03-23",
-        "commitResults": [
+          },
           {
-            "hash": "e88900f69c6604e8795d4fb2376520e517478381",
+            "hash": "68691eb4b8bf4dd11b218e2aa9af6392f64cf4bb",
             "messageTitle": "Simplify baseUrl resolving process (#1087)",
             "messageBody": "BaseUrls for static includes are rendered once during pre-processing\r\nand another time during resolveBaseUrls.\r\nThe rebaseReference subroutine used during resolveBaseUrls also has\r\nsome unnecessary complexity.\r\nIn addition, in calculateNewBaseUrls, the relative baseUrl for doubly\r\nnested subsites are not resolved correctly.\r\n\r\nLet’s remove the rendering during pre-processing, unifying where baseUrl\r\nis resolved for statically included content.\r\nLet’s also refactor the rebaseReference method, simplifying its logic.\r\nAt the same time, we can standardise usages of the calculateNewBaseUrls\r\nmethod to calculateImmediateParentSitePath, and fix the relative baseUrl\r\nreturned for doubly nested subsites.",
             "insertions": 163,
             "deletions": 140
           },
           {
-            "hash": "7850366398a00b4e1ecfdac63a1a472b292e9118",
+            "hash": "193c89551cb176d9c881ec059d6d73227b738fd8",
             "messageTitle": "Allow special tags to be self-closing (#1101)",
             "messageBody": "Unlike the html script and style special tags, plugin authors may want\r\ninjected special tags to be able to be self-closing as well.\r\nThis can help unify the syntax used in the plugin, which makes for\r\nbetter author usability of the plugin.\r\n\r\nLet’s allow injected special tags to be self-closing.\r\nLet’s also do so for the script and style tags, which would be\r\nexpanded to their normal form after rendering.",
             "insertions": 39,
             "deletions": 2
           },
           {
-            "hash": "2bbe32ba8bd14f30f3e23ff637ee412e7497bfeb",
+            "hash": "c4eaf03f26f4916168fb4ec478415d33c228190a",
             "messageTitle": "Update test files (#1138)",
             "messageBody": "",
             "insertions": 7,
             "deletions": 7
-          }
-        ]
-      },
-      {
-        "insertions": 27,
-        "deletions": 10,
-        "date": "2020-03-27",
-        "commitResults": [
+          },
           {
-            "hash": "d3a07aa50e7a4889e3682156d2716931632a9b19",
+            "hash": "5096be174b53f1750b271f7a63fff759590cbf45",
             "messageTitle": "Fix lazy reload for urls without index (#1110)",
             "messageBody": "Lazy live reloading uses the file extension of the request url to\r\ndetermine whether the request is for a html page, and not from a\r\ndynamic include.\r\nHence, requests for index.html with urls that do not end with\r\nindex.html fail to be detected.\r\n\r\nLet’s add extra processing to detect such requests.",
             "insertions": 27,
             "deletions": 10
-          }
-        ]
-      },
-      {
-        "insertions": 79,
-        "deletions": 123,
-        "date": "2020-03-28",
-        "commitResults": [
+          },
           {
-            "hash": "f7351af6af2bafdf09497a99971b1c3ef0c56816",
+            "hash": "bf1239de3d050fc37d07587e1aeaf9aeab552273",
             "messageTitle": "Allow an array for specifying page src or glob (#1118)",
             "messageBody": "The site configuration does not allow using an array for specifying\r\npages in the src or glob property.\r\nThe method for collecting the addressable pages can also be\r\nmade slightly simpler in the process.\r\n\r\nLet’s do so, reducing the amount of repeated configuration the\r\nauthor potentially needs to write.\r\nLet’s also simplify the method for collecting addressable pages\r\nin the process.",
             "insertions": 79,
             "deletions": 123
-          }
-        ]
-      },
-      {
-        "insertions": 42,
-        "deletions": 3,
-        "date": "2020-03-29",
-        "commitResults": [
+          },
           {
-            "hash": "13dc7b7d013e4d3781e9d5a68cc7710f22880807",
+            "hash": "a9f49ca326e80e25baf3f4cfa659b1215af28f7c",
             "messageTitle": "Fix baseUrl not working in include src attribute (#1088)",
             "messageBody": "While pre-processing includes or panels, we have not yet resolved\r\nthe baseUrl of the src attribute.\r\nThis causes markbind to fail in finding the source file, since baseUrl\r\nremains in the src attribute.\r\n\r\nLet’s resolve the baseUrl for such cases first, allowing the user to use\r\nthe baseUrl attribute in include and panel src attributes.",
             "insertions": 42,
             "deletions": 3
-          }
-        ]
-      },
-      {
-        "insertions": 3,
-        "deletions": 1,
-        "date": "2020-04-03",
-        "commitResults": [
+          },
           {
-            "hash": "fc51d0f3329bf2acbb4afdbbe2700523b7d18f2b",
+            "hash": "9e2ee7cb89e7dc39e99f6997d5a89e20f921bd56",
             "messageTitle": "Normalize inline puml line ending before hashing (#1174)",
             "messageBody": "",
             "insertions": 3,
             "deletions": 1
-          }
-        ]
-      },
-      {
-        "insertions": 119,
-        "deletions": 89,
-        "date": "2020-04-06",
-        "commitResults": [
+          },
           {
-            "hash": "1519ad183ad05a4449747c3bf4ff633e0b5e758d",
+            "hash": "7c3c1605c17c0dbd49bcb1772bca71833ac6997f",
             "messageTitle": "Expand test extensions and fix whitespace checks (#1156)",
             "messageBody": "The diffing utilities used for functional tests only check for\r\ndifferences in html files and the siteData json file.\r\nAdditionally, the diffs are whitespace and newline insensitive, which\r\ncan cause subtle, unintended changes to go unnoticed.\r\n\r\nLet\u0027s expand the range of files to diff, using the isTextOrBinary\r\npackage as a first guard against diffing binary files.\r\nLet\u0027s add additional constants that guard against binary files not\r\nrecognised by the package, or misrecognised as such.\r\n\r\nLet\u0027s also change the diffing function used to be whitespace and\r\nnewline sensitive.\r\nSince whitespaces and newlines now appear in the diffs, let\u0027s also\r\nimprove the diff printing utilities to account for it.",
             "insertions": 119,
             "deletions": 89
+          },
+          {
+            "hash": "da8c0f5fbf493728a292cde304cf3e1515273356",
+            "messageTitle": "Standardise code style and remove eslint disables (#1180)",
+            "messageBody": "",
+            "insertions": 183,
+            "deletions": 285
           }
         ]
       }
@@ -941,75 +780,47 @@
         ]
       },
       {
-        "insertions": 38,
-        "deletions": 0,
-        "date": "2020-03-03",
+        "insertions": 715,
+        "deletions": 46,
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "962ddd13d54811e1d330f9e0336285b695291bf0",
+            "hash": "bc03a0b4dc79eee33c1fda0ed864d637803171b6",
             "messageTitle": "Documentation for Implement no-* attributes for \u003cbox\u003e  (#1042)",
             "messageBody": "",
             "insertions": 38,
             "deletions": 0
-          }
-        ]
-      },
-      {
-        "insertions": 341,
-        "deletions": 12,
-        "date": "2020-03-07",
-        "commitResults": [
+          },
           {
-            "hash": "3a4177373ea41f8ad66ffa7f70266d3c8d0c37b7",
+            "hash": "65809a95ff5d4f4d98e4b879fe55adac96c6ea40",
             "messageTitle": "Add heading and line highlighting to code blocks (#1034)",
             "messageBody": "",
             "insertions": 341,
             "deletions": 12
-          }
-        ]
-      },
-      {
-        "insertions": 91,
-        "deletions": 10,
-        "date": "2020-03-08",
-        "commitResults": [
+          },
           {
-            "hash": "ba7981362668e54d9216f0278ad82d49493dfaa5",
+            "hash": "fe53950941237105eb9d3ae122ab777e4836b33d",
             "messageTitle": "Add warnings for conflicting/deprecated component attribs (#1057)",
             "messageBody": "",
             "insertions": 91,
             "deletions": 10
-          }
-        ]
-      },
-      {
-        "insertions": 231,
-        "deletions": 3,
-        "date": "2020-03-28",
-        "commitResults": [
+          },
           {
-            "hash": "e1b292b4a3779d3be9a0367a905a70340854c7b0",
+            "hash": "2b22118368a4ba70ce366b5a19dd0b655f8ce015",
             "messageTitle": "Code blocks: Implement inline markdown support for heading (#1137)",
             "messageBody": "",
             "insertions": 70,
             "deletions": 1
           },
           {
-            "hash": "2af279113846b00296ce5d58efaabbe8a328e8ea",
+            "hash": "79259124a8bd714ecefe36aafd8276ac31e70218",
             "messageTitle": "Docs: Add contributing.md (#1139)",
             "messageBody": "",
             "insertions": 161,
             "deletions": 2
-          }
-        ]
-      },
-      {
-        "insertions": 14,
-        "deletions": 21,
-        "date": "2020-04-01",
-        "commitResults": [
+          },
           {
-            "hash": "cfe3a2e31114c18e37ee9c099b8b08a68f0ae25b",
+            "hash": "c4d8526938b923c802d13620e5ef0ccedf0f5176",
             "messageTitle": "Update tests for 2.13.1 (#1169)",
             "messageBody": "",
             "insertions": 14,
@@ -1069,20 +880,6 @@
         ]
       },
       {
-        "insertions": 43,
-        "deletions": 0,
-        "date": "2020-02-11",
-        "commitResults": [
-          {
-            "hash": "9d1b0ac01658871628f5dcc8a4de6ab715c32e0a",
-            "messageTitle": "Add JSDoc for pageconfig",
-            "messageBody": "",
-            "insertions": 43,
-            "deletions": 0
-          }
-        ]
-      },
-      {
         "insertions": 155,
         "deletions": 3,
         "date": "2020-02-22",
@@ -1104,163 +901,51 @@
         ]
       },
       {
-        "insertions": 1,
-        "deletions": 1,
-        "date": "2020-03-04",
+        "insertions": 323,
+        "deletions": 22,
+        "date": "2020-04-10",
         "commitResults": [
           {
-            "hash": "f4036cc30bfb02439ef002072c3d537ef5284923",
+            "hash": "040bf7e1931c5e4e408a0fcaaf36fd81e4815619",
             "messageTitle": "Fixed navbar no longer covers modals (#1070)",
             "messageBody": "",
             "insertions": 1,
             "deletions": 1
-          }
-        ]
-      },
-      {
-        "insertions": 53,
-        "deletions": 9,
-        "date": "2020-03-08",
-        "commitResults": [
-          {
-            "hash": "4a065d5a9b7dad2f4b5d157c64d99f88ea56a59d",
-            "messageTitle": "Update documentation for Site.js",
-            "messageBody": "",
-            "insertions": 53,
-            "deletions": 9
-          }
-        ]
-      },
-      {
-        "insertions": 7,
-        "deletions": 1,
-        "date": "2020-03-14",
-        "commitResults": [
-          {
-            "hash": "ac60496f66e7db1e21ccdb9c323cfcaca5394156",
-            "messageTitle": "Add class support for octicons",
-            "messageBody": "",
-            "insertions": 6,
-            "deletions": 1
           },
           {
-            "hash": "d853b33d2e6956d226ef1b6f4a2a1dc6debf12a0",
-            "messageTitle": "Update documentation of Octicon style",
-            "messageBody": "",
-            "insertions": 1,
-            "deletions": 0
-          }
-        ]
-      },
-      {
-        "insertions": 53,
-        "deletions": 4,
-        "date": "2020-03-21",
-        "commitResults": [
-          {
-            "hash": "2ee765b6b5092b6fe80eb68069fa732f9b2c13fc",
+            "hash": "461697bf00d587265a63e503fdd8b59d7bf24498",
             "messageTitle": "Update documentation on icon slot for boxes (#1123)",
             "messageBody": "* Update documentation on icon slot for boxes\r\n\r\n* Update the examples for using icon slot for boxes.\r\n\r\n* Resolve comments.",
             "insertions": 53,
             "deletions": 4
-          }
-        ]
-      },
-      {
-        "insertions": 4,
-        "deletions": 1,
-        "date": "2020-03-25",
-        "commitResults": [
-          {
-            "hash": "f40e0e500ea3133be67e129a23dd70f062380573",
-            "messageTitle": "Add octiconlight option",
-            "messageBody": "",
-            "insertions": 3,
-            "deletions": 1
           },
           {
-            "hash": "827fafe2309fb6baa5c1e2c333c105faa8e2a56e",
-            "messageTitle": "Update documentation on octiconlight",
-            "messageBody": "",
-            "insertions": 1,
-            "deletions": 0
-          }
-        ]
-      },
-      {
-        "insertions": 5,
-        "deletions": 7,
-        "date": "2020-03-28",
-        "commitResults": [
-          {
-            "hash": "a8c0be2a39320629130a744f2e9cf393e21c158c",
-            "messageTitle": "Resolve comments",
-            "messageBody": "",
-            "insertions": 5,
-            "deletions": 7
-          }
-        ]
-      },
-      {
-        "insertions": 179,
-        "deletions": 18,
-        "date": "2020-03-29",
-        "commitResults": [
-          {
-            "hash": "7c78b7722788de019519e85ac6344b7b79b92d32",
+            "hash": "4de030042eec05ba145d6111397518e2bb956474",
             "messageTitle": "Update navbar doc (#1146)",
             "messageBody": "",
             "insertions": 6,
             "deletions": 1
           },
           {
-            "hash": "71d9795375663e99f4f34c362aa92eb945115c11",
-            "messageTitle": "Add additional type comments",
+            "hash": "bbe3e4f266266573120e75775590e6969ac2536f",
+            "messageTitle": "Update devGuide.md (#1158)",
             "messageBody": "",
-            "insertions": 167,
-            "deletions": 10
-          },
-          {
-            "hash": "a6114eece61da2c53cf2ea441aae5a7d816e0bcf",
-            "messageTitle": "Fix minor formatting issues",
-            "messageBody": "",
-            "insertions": 5,
-            "deletions": 6
-          },
-          {
-            "hash": "12673b08ba5abdfcb42a54a0aa7dfb0c6607c02f",
-            "messageTitle": "Update devGuide.md",
-            "messageBody": "#990 removes ejs as a dependency",
             "insertions": 1,
             "deletions": 1
-          }
-        ]
-      },
-      {
-        "insertions": 14,
-        "deletions": 11,
-        "date": "2020-04-05",
-        "commitResults": [
+          },
           {
-            "hash": "aba15437f7200071678b3051bb9f804c39d062fd",
-            "messageTitle": "Address comments",
+            "hash": "b956db6a136350f7a7be937150bfc9debe29689c",
+            "messageTitle": "Add JSDoc for pageconfig (#1039)",
             "messageBody": "",
-            "insertions": 14,
-            "deletions": 11
-          }
-        ]
-      },
-      {
-        "insertions": 2,
-        "deletions": 2,
-        "date": "2020-04-06",
-        "commitResults": [
+            "insertions": 252,
+            "deletions": 12
+          },
           {
-            "hash": "7fd4f9caa2188503efbb001043e82fd1940c74d2",
-            "messageTitle": "Resolve comments",
+            "hash": "dab3a28e90a0038d7090e13bae1408d9c0a07909",
+            "messageTitle": "Add class support for octicons (#1122)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 2
+            "insertions": 10,
+            "deletions": 3
           }
         ]
       }
@@ -1315,20 +1000,20 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1333,
-    "yash-chowdhary": 1702,
+    "openorclose": 1331,
+    "yash-chowdhary": 1701,
     "Tejas2805": 170,
-    "dvrylc": 75,
+    "dvrylc": 74,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 60,
-    "ang-zeyu": 3869,
+    "ang-zeyu": 3967,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 692,
-    "le0tan": 1215,
+    "le0tan": 1060,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -1371,7 +1056,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 691,
+      "js": 689,
       "css": 466,
       "json": 27,
       "md": 79,
@@ -1383,7 +1068,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 275,
+      "js": 274,
       "css": 294,
       "json": 7,
       "md": 1047,
@@ -1407,7 +1092,7 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 27,
+      "js": 26,
       "css": 36,
       "json": 3,
       "md": 0,
@@ -1479,7 +1164,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2419,
+      "js": 2517,
       "css": 687,
       "json": 308,
       "md": 325,
@@ -1527,7 +1212,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 1019,
+      "js": 864,
       "css": 8,
       "json": 0,
       "md": 71,
@@ -1566,21 +1251,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 5899.411,
-    "yash-chowdhary": 8573.866,
-    "Tejas2805": 174.71765,
-    "dvrylc": 45.215374,
+    "openorclose": 17163.105,
+    "yash-chowdhary": 16707.682,
+    "Tejas2805": 606.35516,
+    "dvrylc": 44.87628,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 24.814806,
-    "ang-zeyu": 36154.93,
+    "hcwong": 24.628698,
+    "ang-zeyu": 146157.08,
     "geshuming": 0.0,
-    "alyip98": 4.3880796,
-    "nbriannl": 1676.5525,
-    "le0tan": 238892.58,
-    "madanalogy": 257.13562,
+    "alyip98": 4.355151,
+    "nbriannl": 4595.1978,
+    "le0tan": 237683.58,
+    "madanalogy": 255.2041,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {

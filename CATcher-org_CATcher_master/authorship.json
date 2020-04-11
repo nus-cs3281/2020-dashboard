@@ -26684,5 +26684,343 @@
     "authorContributionMap": {
       "anubh-v": 73
     }
+  },
+  {
+    "path": "tests/services/upload.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import {UploadService, SUPPORTED_FILE_TYPES, FILE_TYPE_SUPPORT_ERROR} from \u0027../../src/app/core/services/upload.service\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "const PERIOD \u003d \".\""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "describe(\u0027UploadService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    describe(\u0027.isSupportedFileType(fileName)\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        it(\u0027can distinguish valid / invalid filetypes\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const uploadService \u003d new UploadService(null);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            for (const validFileType of SUPPORTED_FILE_TYPES) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "                const validFileName \u003d \"testFile\" + PERIOD + validFileType;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "                expect(uploadService.isSupportedFileType(validFileName)).toBe(true);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const invalidFileName \u003d \"testFile\" + PERIOD + \u0027java\u0027;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(uploadService.isSupportedFileType(invalidFileName)).toBe(false);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        it(\u0027is case insensitive\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          const uploadService \u003d new UploadService(null);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          const invalidFileName \u003d \"TESTfile\" + PERIOD + \"JS\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          expect(uploadService.isSupportedFileType(invalidFileName)).toBe(false);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        it(\u0027returns false for filenames that do not have a file extension\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          const uploadService \u003d new UploadService(null);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          for (const validFileType of SUPPORTED_FILE_TYPES) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            const fileNameWithoutFileExtension \u003d \"testFile\" + validFileType;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(uploadService.isSupportedFileType(fileNameWithoutFileExtension)).toBe(false);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    describe(\u0027.uploadFile(fileData, fileName)\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        it(\u0027throws an error if an invalid filetype is uploaded\u0027, done \u003d\u003e {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          const uploadService \u003d new UploadService(null);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          uploadService.uploadFile(\u0027testdata\u0027, \u0027testFile.java\u0027).subscribe("
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            val \u003d\u003e {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "              fail(\u0027This test case should fail.\u0027);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "              done();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            },"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            error \u003d\u003e {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "              expect(error).toBe(FILE_TYPE_SUPPORT_ERROR);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "              done();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "          );"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 47
+    }
   }
 ]
