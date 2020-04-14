@@ -33,7 +33,7 @@
         ]
       },
       {
-        "insertions": 330,
+        "insertions": 201,
         "deletions": 18,
         "date": "2020-02-23",
         "commitResults": [
@@ -41,28 +41,28 @@
             "hash": "5afcaa90e57e70c6b26a729a44ad466969636d1f",
             "messageTitle": "Support line numbers for code blocks (#991)",
             "messageBody": "",
-            "insertions": 330,
+            "insertions": 201,
             "deletions": 18
           }
         ]
       },
       {
-        "insertions": 1131,
-        "deletions": 342,
+        "insertions": 784,
+        "deletions": 334,
         "date": "2020-04-10",
         "commitResults": [
           {
             "hash": "2310c8621d9702b42d05c7ff59d2f68d245083e9",
             "messageTitle": "Migrate to bootstrap-vue popovers (#1033)",
             "messageBody": "",
-            "insertions": 602,
+            "insertions": 353,
             "deletions": 56
           },
           {
             "hash": "cba8d080120c3ccdcf2c0fe20b449b696b9c55fc",
             "messageTitle": "Render plugins on dynamic resources (#1051)",
             "messageBody": "",
-            "insertions": 25,
+            "insertions": 16,
             "deletions": 0
           },
           {
@@ -97,15 +97,15 @@
             "hash": "ef51c9e16d7a2832fa726ba163b8a92ef710c156",
             "messageTitle": "Show pointer and use underline dashed for click trigger (#1111)",
             "messageBody": "Fix a regression from #1033.\r\n\r\nLet\u0027s add back the two styles of triggers:\r\n- click: show mouse pointer to signal that it is clickable\r\n  and use underline dashed\r\n- not click: no special cursor, and use underline dotted",
-            "insertions": 50,
+            "insertions": 25,
             "deletions": 8
           },
           {
             "hash": "886027563e84dce9b78b7afbfb3ff8658dfba43d",
             "messageTitle": "Upgrade to bootstrap-vue 2.5.0 (#1085)",
             "messageBody": "",
-            "insertions": 112,
-            "deletions": 14
+            "insertions": 48,
+            "deletions": 6
           },
           {
             "hash": "fc3f4c3a46cae5917a6ae968e22cfca0cda8e558",
@@ -168,16 +168,16 @@
         ]
       },
       {
-        "insertions": 189,
-        "deletions": 249,
+        "insertions": 178,
+        "deletions": 118,
         "date": "2019-12-16",
         "commitResults": [
           {
             "hash": "28aac0647d72595d962907057a69a939673c30a9",
             "messageTitle": "Replace headers in test .md files with bold text (#954)",
             "messageBody": "",
-            "insertions": 189,
-            "deletions": 249
+            "insertions": 178,
+            "deletions": 118
           }
         ]
       },
@@ -197,7 +197,7 @@
       },
       {
         "insertions": 13,
-        "deletions": 82,
+        "deletions": 15,
         "date": "2020-02-16",
         "commitResults": [
           {
@@ -205,7 +205,7 @@
             "messageTitle": "Exclude *.md files from being copied over on build (#1010)",
             "messageBody": "",
             "insertions": 13,
-            "deletions": 82
+            "deletions": 15
           }
         ]
       },
@@ -224,7 +224,7 @@
         ]
       },
       {
-        "insertions": 1262,
+        "insertions": 1093,
         "deletions": 137,
         "date": "2020-04-10",
         "commitResults": [
@@ -232,7 +232,7 @@
             "hash": "ddaa948a09580949afcbdeafe8d364378805776c",
             "messageTitle": "Add copy code-block plugin (#1043)",
             "messageBody": "",
-            "insertions": 371,
+            "insertions": 203,
             "deletions": 0
           },
           {
@@ -253,7 +253,7 @@
             "hash": "2255ece565751a519225936255bb531b8bcbb97a",
             "messageTitle": "Remove dynamic include feature (#1037)",
             "messageBody": "",
-            "insertions": 3,
+            "insertions": 2,
             "deletions": 112
           },
           {
@@ -303,7 +303,7 @@
         ]
       },
       {
-        "insertions": 171,
+        "insertions": 153,
         "deletions": 113,
         "date": "2020-04-10",
         "commitResults": [
@@ -346,7 +346,7 @@
             "hash": "b02f0656c73d749a57363658a1ad00ce6d08bf34",
             "messageTitle": "Remove fixed bugs from test\\functional\\test_site\\bugs\\index.md` (#1148)",
             "messageBody": "",
-            "insertions": 46,
+            "insertions": 28,
             "deletions": 32
           },
           {
@@ -396,7 +396,7 @@
         ]
       },
       {
-        "insertions": 71,
+        "insertions": 51,
         "deletions": 6,
         "date": "2020-02-15",
         "commitResults": [
@@ -404,7 +404,7 @@
             "hash": "c17a61539ca08794af30473c47db3d1cd0f5dac4",
             "messageTitle": "Add support for Octicons (#1000)",
             "messageBody": "",
-            "insertions": 71,
+            "insertions": 51,
             "deletions": 6
           }
         ]
@@ -537,8 +537,8 @@
         ]
       },
       {
-        "insertions": 951,
-        "deletions": 190,
+        "insertions": 923,
+        "deletions": 185,
         "date": "2020-02-01",
         "commitResults": [
           {
@@ -559,7 +559,7 @@
             "hash": "18a89d9eababaa32d2459a274a4128aaa68c9cf2",
             "messageTitle": "Import markdown-it parser variant from /vue-strap",
             "messageBody": "Markdown-it in /vue-strap uses different plugins for parsing\nits markdown content inside component attributes.\n\nIn preparation for moving markdown-it parsing to /markbind, let\u0027s move\nthe markdown-it variant from /vue-strap over to maintain parity with the\npast markdown rendering behaviour for attributes in vue components.\nLet\u0027s also restructure the directory hierarchy for markdown-it in here,\nto reduce code duplication between the two variants.\n",
-            "insertions": 93,
+            "insertions": 78,
             "deletions": 19
           },
           {
@@ -594,8 +594,8 @@
             "hash": "ba9ad886719e7f266a5d38ef97909cfe8db15f0d",
             "messageTitle": "Update expected test files",
             "messageBody": "Moving markdown parsing to build time results in markdown\nin attributes being parsed into html in the dom.\n\nLet’s update the expected test files to reflect these changes.\n",
-            "insertions": 13,
-            "deletions": 6
+            "insertions": 0,
+            "deletions": 1
           },
           {
             "hash": "26c36a4835866950bbd2627620a38d624c8aaca1",
@@ -607,8 +607,8 @@
         ]
       },
       {
-        "insertions": 202,
-        "deletions": 156,
+        "insertions": 44,
+        "deletions": 55,
         "date": "2020-02-15",
         "commitResults": [
           {
@@ -622,8 +622,8 @@
             "hash": "0dde42daf237c1934952a7ba6f82666bce8830e3",
             "messageTitle": "Restructure generated site data for searchbar ui (#1006)",
             "messageBody": "Keywords tied to a heading are appended to the heading with a prepending\r\n\u0027|\u0027 character.\r\nThis is so that the \u0027|\u0027 character would serve as a visual separator\r\nbetween the heading and the keyword.\r\n\r\nHowever, it is thus not possible to extract a keyword from its heading\r\ndeterministically, as a heading can also include the \u0027|\u0027 character.\r\n\r\nLet\u0027s move the keywords to its own field, allowing the searchbar to\r\nextract a heading\u0027s keyword from it.",
-            "insertions": 190,
-            "deletions": 135
+            "insertions": 32,
+            "deletions": 34
           }
         ]
       },
@@ -642,8 +642,8 @@
         ]
       },
       {
-        "insertions": 3033,
-        "deletions": 1221,
+        "insertions": 2109,
+        "deletions": 1203,
         "date": "2020-04-10",
         "commitResults": [
           {
@@ -657,7 +657,7 @@
             "hash": "9060f5666ab442028a6eeb10e161710e43c9e898",
             "messageTitle": "Implement an api to ignore content in certain tags (#1047)",
             "messageBody": "The parsers MarkBind uses parses content in html tags as html\r\nor markdown respectively.\r\nThis makes it difficult to add custom components that utilize\r\nconflicting syntax.\r\n\r\nLet’s add an interface to ignore content in certain special tags.\r\nThis interface is also exposed to plugins as the getSpecialTags option.",
-            "insertions": 1404,
+            "insertions": 507,
             "deletions": 63
           },
           {
@@ -692,7 +692,7 @@
             "hash": "68691eb4b8bf4dd11b218e2aa9af6392f64cf4bb",
             "messageTitle": "Simplify baseUrl resolving process (#1087)",
             "messageBody": "BaseUrls for static includes are rendered once during pre-processing\r\nand another time during resolveBaseUrls.\r\nThe rebaseReference subroutine used during resolveBaseUrls also has\r\nsome unnecessary complexity.\r\nIn addition, in calculateNewBaseUrls, the relative baseUrl for doubly\r\nnested subsites are not resolved correctly.\r\n\r\nLet’s remove the rendering during pre-processing, unifying where baseUrl\r\nis resolved for statically included content.\r\nLet’s also refactor the rebaseReference method, simplifying its logic.\r\nAt the same time, we can standardise usages of the calculateNewBaseUrls\r\nmethod to calculateImmediateParentSitePath, and fix the relative baseUrl\r\nreturned for doubly nested subsites.",
-            "insertions": 163,
+            "insertions": 154,
             "deletions": 140
           },
           {
@@ -706,8 +706,8 @@
             "hash": "c4eaf03f26f4916168fb4ec478415d33c228190a",
             "messageTitle": "Update test files (#1138)",
             "messageBody": "",
-            "insertions": 7,
-            "deletions": 7
+            "insertions": 2,
+            "deletions": 2
           },
           {
             "hash": "5096be174b53f1750b271f7a63fff759590cbf45",
@@ -720,8 +720,8 @@
             "hash": "bf1239de3d050fc37d07587e1aeaf9aeab552273",
             "messageTitle": "Allow an array for specifying page src or glob (#1118)",
             "messageBody": "The site configuration does not allow using an array for specifying\r\npages in the src or glob property.\r\nThe method for collecting the addressable pages can also be\r\nmade slightly simpler in the process.\r\n\r\nLet’s do so, reducing the amount of repeated configuration the\r\nauthor potentially needs to write.\r\nLet’s also simplify the method for collecting addressable pages\r\nin the process.",
-            "insertions": 79,
-            "deletions": 123
+            "insertions": 66,
+            "deletions": 110
           },
           {
             "hash": "a9f49ca326e80e25baf3f4cfa659b1215af28f7c",
@@ -801,7 +801,7 @@
     ],
     "nbriannl": [
       {
-        "insertions": 180,
+        "insertions": 120,
         "deletions": 5,
         "date": "2019-12-19",
         "commitResults": [
@@ -809,14 +809,14 @@
             "hash": "c854937051f1222e4e68bf3659dc0b53196c4d8a",
             "messageTitle": "Add language indicator to code blocks (#957)",
             "messageBody": "",
-            "insertions": 180,
+            "insertions": 120,
             "deletions": 5
           }
         ]
       },
       {
-        "insertions": 715,
-        "deletions": 46,
+        "insertions": 565,
+        "deletions": 31,
         "date": "2020-04-10",
         "commitResults": [
           {
@@ -830,7 +830,7 @@
             "hash": "65809a95ff5d4f4d98e4b879fe55adac96c6ea40",
             "messageTitle": "Add heading and line highlighting to code blocks (#1034)",
             "messageBody": "",
-            "insertions": 341,
+            "insertions": 221,
             "deletions": 12
           },
           {
@@ -844,7 +844,7 @@
             "hash": "2b22118368a4ba70ce366b5a19dd0b655f8ce015",
             "messageTitle": "Code blocks: Implement inline markdown support for heading (#1137)",
             "messageBody": "",
-            "insertions": 70,
+            "insertions": 50,
             "deletions": 1
           },
           {
@@ -858,8 +858,8 @@
             "hash": "c4d8526938b923c802d13620e5ef0ccedf0f5176",
             "messageTitle": "Update tests for 2.13.1 (#1169)",
             "messageBody": "",
-            "insertions": 14,
-            "deletions": 21
+            "insertions": 4,
+            "deletions": 6
           }
         ]
       },
@@ -1063,19 +1063,19 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1331,
-    "yash-chowdhary": 1692,
-    "Tejas2805": 172,
-    "dvrylc": 74,
+    "openorclose": 868,
+    "yash-chowdhary": 1521,
+    "Tejas2805": 154,
+    "dvrylc": 54,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 60,
-    "ang-zeyu": 3905,
+    "ang-zeyu": 2853,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 713,
+    "nbriannl": 569,
     "le0tan": 1077,
     "madanalogy": 61,
     "daekoon": 0
@@ -1119,9 +1119,9 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 689,
-      "css": 466,
-      "json": 27,
+      "js": 513,
+      "css": 198,
+      "json": 8,
       "md": 79,
       "mbd": 0,
       "mbdf": 70,
@@ -1132,8 +1132,8 @@
     "yash-chowdhary": {
       "java": 0,
       "js": 265,
-      "css": 294,
-      "json": 7,
+      "css": 126,
+      "json": 4,
       "md": 1047,
       "mbd": 0,
       "mbdf": 61,
@@ -1145,7 +1145,7 @@
       "java": 0,
       "js": 3,
       "css": 1,
-      "json": 26,
+      "json": 8,
       "md": 67,
       "mbd": 0,
       "mbdf": 75,
@@ -1156,7 +1156,7 @@
     "dvrylc": {
       "java": 0,
       "js": 26,
-      "css": 36,
+      "css": 16,
       "json": 3,
       "md": 0,
       "mbd": 0,
@@ -1227,9 +1227,9 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2470,
-      "css": 673,
-      "json": 307,
+      "js": 2262,
+      "css": 18,
+      "json": 118,
       "md": 325,
       "mbd": 0,
       "mbdf": 118,
@@ -1264,7 +1264,7 @@
     "nbriannl": {
       "java": 0,
       "js": 131,
-      "css": 244,
+      "css": 100,
       "json": 2,
       "md": 195,
       "mbd": 0,
@@ -1314,19 +1314,19 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 16909.764,
-    "yash-chowdhary": 16462.965,
-    "Tejas2805": 597.3653,
-    "dvrylc": 44.212738,
+    "openorclose": 9585.259,
+    "yash-chowdhary": 12398.87,
+    "Tejas2805": 524.0562,
+    "dvrylc": 24.384329,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
     "hcwong": 24.26474,
-    "ang-zeyu": 143998.78,
+    "ang-zeyu": 90134.26,
     "geshuming": 0.0,
     "alyip98": 4.290715,
-    "nbriannl": 4532.3486,
+    "nbriannl": 2744.3516,
     "le0tan": 234415.1,
     "madanalogy": 251.42761,
     "daekoon": 0.0
