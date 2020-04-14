@@ -206,16 +206,16 @@
         ]
       },
       {
-        "insertions": 7937,
-        "deletions": 5764,
+        "insertions": 167,
+        "deletions": 128,
         "date": "2020-04-04",
         "commitResults": [
           {
             "hash": "4811dc61370e0c917f6d1702cbc30aad451e1746",
             "messageTitle": "Update dependencies and restructure webpack config (#130)",
             "messageBody": "The vue-strap fork is using highly outdated dependencies, which results\r\nin being unable to use some new features of vue-loader which can be\r\nhelpful in development.\r\n\r\nLet’s update these dependencies, and restructure the webpack configs to\r\naccommodate webpack 4.\r\nLet’s also refactor the npm build script to only build the minified\r\nbundle, while also preserving the ability to build the non-minified\r\nbundle with a builddev script.",
-            "insertions": 7904,
-            "deletions": 5736
+            "insertions": 134,
+            "deletions": 100
           },
           {
             "hash": "6d2d1914de07c29289d979a904d8a4fc53841aaf",
@@ -275,16 +275,16 @@
         ]
       },
       {
-        "insertions": 1838,
-        "deletions": 1460,
+        "insertions": 1,
+        "deletions": 1,
         "date": "2020-01-21",
         "commitResults": [
           {
             "hash": "0cdb16d37bbc9a881fda7f9fd3518b6ecfbd9cfe",
             "messageTitle": "Bump node-sass version to v4.0.0 (#121)",
             "messageBody": "node-sass@3.10.1 does not build on nodejs 12.14.1 (LTS). The package is \r\ntoo old, so it uses features of nodejs that has been made obsolete,\r\nresulting in a failed build when the package is building its C++\r\nlibraries.\r\n\r\nLet\u0027s upgrade to node-sass@4.0.0. A simple run of `npm build` seems to\r\nindicate that there\u0027s no changes to our `dist` builds, hence we should \r\nnot expect any broken changes.",
-            "insertions": 1838,
-            "deletions": 1460
+            "insertions": 1,
+            "deletions": 1
           }
         ]
       },
@@ -354,11 +354,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 38,
-    "ang-zeyu": 7148,
+    "ang-zeyu": 1160,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 37,
-    "le0tan": 550,
+    "le0tan": 59,
     "madanalogy": 0,
     "daekoon": 0
   },
@@ -475,7 +475,7 @@
       "java": 0,
       "js": 286,
       "css": 0,
-      "json": 6014,
+      "json": 26,
       "md": 0,
       "py": 0,
       "vue": 848
@@ -511,7 +511,7 @@
       "java": 0,
       "js": 0,
       "css": 0,
-      "json": 491,
+      "json": 0,
       "md": 0,
       "py": 0,
       "vue": 59
@@ -548,11 +548,11 @@
     "xantho09": 0.0,
     "0blivious": 0.0,
     "hcwong": 15.43997,
-    "ang-zeyu": 1387603.8,
+    "ang-zeyu": 11201.706,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 18.381355,
-    "le0tan": 80147.29,
+    "le0tan": 261.91705,
     "madanalogy": 0.0,
     "daekoon": 0.0
   },
