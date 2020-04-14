@@ -51,7 +51,50 @@
     "Tejas2805": [],
     "dvrylc": [],
     "j-lum": [],
-    "iskandarzulkarnaien": [],
+    "iskandarzulkarnaien": [
+      {
+        "insertions": 166,
+        "deletions": 96,
+        "date": "2020-02-20",
+        "commitResults": [
+          {
+            "hash": "02348be069eb82ed8bfa1d58643dde0d7151b8aa",
+            "messageTitle": "#1597 copying overrides clipboard (#2007)",
+            "messageBody": "* Add RestoreClipboardAfterAction to Spotlight\r\n\r\n* Restore clipboard after blurring actions\r\n\r\n* Return 0 instead of null after adding spotlight effect\r\n\r\n* Restore clipboard after recolor actions\r\n\r\n* Shift clipboard restoration for spotlight to action handler\r\n\r\n* Restore clipboard after agenda lab actions\r\n\r\n* Restore clipboard after synclab actions \u0026 use ClipboardRestoreSuccess constant\r\n\r\n* SyncLabShapeStorage: Remove trailing whitespace in line 138\r\n\r\n* ActionFramework.ZoomLab: Restore clipboard after actions\r\n\r\n* ZoomLab: Fix bug introduced by restoring clipboard\r\n\r\n* Spotlight.cs: Remove redundant import\r\n\r\n* ZoomLab: Retreive current presentation and slide from ActionHandler instead\r\n\r\nCo-authored-by: Bryan Lew \u003cblewjy@gmail.com\u003e\r\nCo-authored-by: yuhongherald \u003cyuhongherald@gmail.com\u003e\r\n",
+            "insertions": 166,
+            "deletions": 96
+          }
+        ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 0,
+        "date": "2020-03-20",
+        "commitResults": [
+          {
+            "hash": "b5cf9962a6554ac42d195abe2a85b60992379094",
+            "messageTitle": "#1370 paste into group exception after undo (#2015)",
+            "messageBody": "",
+            "insertions": 3,
+            "deletions": 0
+          }
+        ]
+      },
+      {
+        "insertions": 64,
+        "deletions": 6,
+        "date": "2020-03-26",
+        "commitResults": [
+          {
+            "hash": "8de0055e59d6f89a949d0fb1e260aa56da2d2437",
+            "messageTitle": "#2002 replace with clipboard lose image quality (#2013)",
+            "messageBody": "* Replace with clipboard: prevent degrading formats from being applied to pictures\r\n\r\n* ReplaceWithClipboard: add tests to verify non-degradation of pictures\r\n\r\n* PasteLabFT: uncomment erroneously commented out tests\r\n\r\n* PasteLabFT: Refactor AssertNotSame",
+            "insertions": 64,
+            "deletions": 6
+          }
+        ]
+      }
+    ],
     "xantho09": [],
     "0blivious": [],
     "hcwong": [],
@@ -86,7 +129,7 @@
     "Tejas2805": 0,
     "dvrylc": 0,
     "j-lum": 0,
-    "iskandarzulkarnaien": 0,
+    "iskandarzulkarnaien": 136,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 0,
@@ -150,7 +193,7 @@
       "html": 0,
       "js": 0,
       "css": 0,
-      "cs": 0
+      "cs": 136
     },
     "xantho09": {
       "html": 0,
@@ -216,7 +259,7 @@
     "Tejas2805": 0.0,
     "dvrylc": 0.0,
     "j-lum": 0.0,
-    "iskandarzulkarnaien": 0.0,
+    "iskandarzulkarnaien": 563.43384,
     "xantho09": 0.0,
     "0blivious": 0.0,
     "hcwong": 0.0,
