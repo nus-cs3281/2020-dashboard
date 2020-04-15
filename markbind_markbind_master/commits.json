@@ -766,6 +766,20 @@
             "deletions": 6
           }
         ]
+      },
+      {
+        "insertions": 128,
+        "deletions": 39,
+        "date": "2020-04-15",
+        "commitResults": [
+          {
+            "hash": "3934f3e1c527f2d7e0155b50e4fcaa3f591ebc69",
+            "messageTitle": "Add SiteConfig model (#1175)",
+            "messageBody": "The undefined properties of the site configuration object of Site are\r\nlazily initialised throughout site generation.\r\nThis decreases the maintainability of site configuration logic.\r\n\r\nLet’s consolidate all such initialisation to a new SiteConfig model.",
+            "insertions": 128,
+            "deletions": 39
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -881,6 +895,20 @@
             "messageBody": "",
             "insertions": 19,
             "deletions": 5
+          }
+        ]
+      },
+      {
+        "insertions": 298,
+        "deletions": 1180,
+        "date": "2020-04-15",
+        "commitResults": [
+          {
+            "hash": "da845ddb226bcb414b0672742b32465a18ab5888",
+            "messageTitle": "Remove duplicate code in syntax doc (#1168)",
+            "messageBody": "",
+            "insertions": 298,
+            "deletions": 1180
           }
         ]
       }
@@ -1077,20 +1105,20 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 868,
-    "yash-chowdhary": 1521,
-    "Tejas2805": 154,
-    "dvrylc": 54,
+    "openorclose": 820,
+    "yash-chowdhary": 1497,
+    "Tejas2805": 139,
+    "dvrylc": 55,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 60,
-    "ang-zeyu": 2853,
+    "hcwong": 29,
+    "ang-zeyu": 2936,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 569,
-    "le0tan": 1078,
+    "nbriannl": 794,
+    "le0tan": 1034,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -1138,19 +1166,19 @@
       "json": 8,
       "md": 79,
       "mbd": 0,
-      "mbdf": 70,
+      "mbdf": 22,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 265,
+      "js": 261,
       "css": 126,
       "json": 4,
       "md": 1047,
       "mbd": 0,
-      "mbdf": 61,
+      "mbdf": 41,
       "njk": 0,
       "py": 0,
       "yml": 18
@@ -1162,14 +1190,14 @@
       "json": 8,
       "md": 67,
       "mbd": 0,
-      "mbdf": 75,
+      "mbdf": 60,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "dvrylc": {
       "java": 0,
-      "js": 26,
+      "js": 27,
       "css": 16,
       "json": 3,
       "md": 0,
@@ -1234,19 +1262,19 @@
       "json": 0,
       "md": 2,
       "mbd": 0,
-      "mbdf": 56,
+      "mbdf": 25,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2262,
+      "js": 2387,
       "css": 18,
       "json": 118,
       "md": 325,
       "mbd": 0,
-      "mbdf": 118,
+      "mbdf": 76,
       "njk": 12,
       "py": 0,
       "yml": 0
@@ -1280,21 +1308,21 @@
       "js": 131,
       "css": 100,
       "json": 2,
-      "md": 195,
+      "md": 244,
       "mbd": 0,
-      "mbdf": 141,
+      "mbdf": 317,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "le0tan": {
       "java": 0,
-      "js": 881,
+      "js": 879,
       "css": 8,
       "json": 0,
       "md": 72,
       "mbd": 0,
-      "mbdf": 70,
+      "mbdf": 28,
       "njk": 47,
       "py": 0,
       "yml": 0
@@ -1328,21 +1356,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 9445.758,
-    "yash-chowdhary": 12219.665,
-    "Tejas2805": 516.4108,
-    "dvrylc": 24.029348,
+    "openorclose": 9377.5205,
+    "yash-chowdhary": 12131.982,
+    "Tejas2805": 512.67145,
+    "dvrylc": 23.855757,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 23.911337,
-    "ang-zeyu": 88828.29,
+    "hcwong": 23.738392,
+    "ang-zeyu": 88303.99,
     "geshuming": 0.0,
-    "alyip98": 4.228162,
-    "nbriannl": 2704.453,
-    "le0tan": 230998.0,
-    "madanalogy": 247.76175,
+    "alyip98": 4.1975574,
+    "nbriannl": 18394.78,
+    "le0tan": 229327.52,
+    "madanalogy": 245.96812,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
