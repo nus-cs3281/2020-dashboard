@@ -1053,6 +1053,20 @@
             "deletions": 0
           }
         ]
+      },
+      {
+        "insertions": 71,
+        "deletions": 42,
+        "date": "2020-04-15",
+        "commitResults": [
+          {
+            "hash": "5db6351df9898ac2cfc958181ce694abe756a2d3",
+            "messageTitle": "Fix anchor navigation in panel headers (#1191)",
+            "messageBody": "To avoid dynamically injecting lots of dummy spans in a document with\r\nmany headings, let\u0027s generate these spans at build time.\r\n\r\nTo make anchor navigation function properly on panel headers, let\u0027s\r\nintroduce ::before element to card-container to make space for the\r\nfixed top nav.",
+            "insertions": 71,
+            "deletions": 42
+          }
+        ]
       }
     ],
     "madanalogy": [
@@ -1105,7 +1119,7 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 820,
+    "openorclose": 819,
     "yash-chowdhary": 1497,
     "Tejas2805": 139,
     "dvrylc": 55,
@@ -1114,11 +1128,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 29,
-    "ang-zeyu": 2936,
+    "ang-zeyu": 2935,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 794,
-    "le0tan": 1034,
+    "le0tan": 1090,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -1161,7 +1175,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 513,
+      "js": 512,
       "css": 198,
       "json": 8,
       "md": 79,
@@ -1269,7 +1283,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2387,
+      "js": 2386,
       "css": 18,
       "json": 118,
       "md": 325,
@@ -1317,12 +1331,12 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 879,
-      "css": 8,
+      "js": 919,
+      "css": 10,
       "json": 0,
-      "md": 72,
+      "md": 75,
       "mbd": 0,
-      "mbdf": 28,
+      "mbdf": 39,
       "njk": 47,
       "py": 0,
       "yml": 0
@@ -1369,7 +1383,7 @@
     "geshuming": 0.0,
     "alyip98": 4.1975574,
     "nbriannl": 18394.78,
-    "le0tan": 229327.52,
+    "le0tan": 229344.88,
     "madanalogy": 245.96812,
     "daekoon": 0.0
   },
