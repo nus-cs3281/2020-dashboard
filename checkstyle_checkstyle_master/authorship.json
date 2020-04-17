@@ -2003,388 +2003,395 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param ast the AST to check"
+        "content": "     *"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return true iff ast is a comparison operator."
+        "content": "     * @param ast the AST to check"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @return true iff ast is a comparison operator."
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static boolean isComparison(DetailAST ast) {"
+        "content": "     */"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": "        final int astType \u003d ast.getType();"
+        "content": "    private static boolean isComparison(DetailAST ast) {"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Arrays.binarySearch(COMPARISON_TYPES, astType) \u003e\u003d 0;"
+        "content": "        final int astType \u003d ast.getType();"
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return Arrays.binarySearch(COMPARISON_TYPES, astType) \u003e\u003d 0;"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Tests whether the provided AST is in"
+        "content": "    /**"
       },
       {
         "lineNumber": 296,
         "author": {
           "gitId": "-"
         },
-        "content": "     * one of the given contexts."
+        "content": "     * Tests whether the provided AST is in"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * one of the given contexts."
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param ast the AST from which to start walking towards root"
+        "content": "     *"
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param contextSet the contexts to test against."
+        "content": "     * @param ast the AST from which to start walking towards root"
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param skipTokens parent token types to ignore"
+        "content": "     * @param contextSet the contexts to test against."
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * @param skipTokens parent token types to ignore"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return whether the parents nodes of ast match one of the allowed type paths."
+        "content": "     *"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @return whether the parents nodes of ast match one of the allowed type paths."
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static boolean isInContext(DetailAST ast, int[][] contextSet, int... skipTokens) {"
+        "content": "     */"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "        boolean found \u003d false;"
+        "content": "    private static boolean isInContext(DetailAST ast, int[][] contextSet, int... skipTokens) {"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (int[] element : contextSet) {"
+        "content": "        boolean found \u003d false;"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "            DetailAST current \u003d ast;"
+        "content": "        for (int[] element : contextSet) {"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "            for (int anElement : element) {"
+        "content": "            DetailAST current \u003d ast;"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": "                current \u003d getParent(current, skipTokens);"
+        "content": "            for (int anElement : element) {"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "                if (current.getType() \u003d\u003d anElement) {"
+        "content": "                current \u003d getParent(current, skipTokens);"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": "                    found \u003d true;"
+        "content": "                if (current.getType() \u003d\u003d anElement) {"
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "                }"
+        "content": "                    found \u003d true;"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": "                else {"
+        "content": "                }"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "-"
         },
-        "content": "                    found \u003d false;"
+        "content": "                else {"
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "-"
         },
-        "content": "                    break;"
+        "content": "                    found \u003d false;"
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "-"
         },
-        "content": "                }"
+        "content": "                    break;"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                }"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (found) {"
+        "content": ""
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": "                break;"
+        "content": "            if (found) {"
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                break;"
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": "        return found;"
+        "content": "        }"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return found;"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Get ast parent, ignoring token types from {@code skipTokens}."
+        "content": "    /**"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Get ast parent, ignoring token types from {@code skipTokens}."
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param ast token to get parent"
+        "content": "     *"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param skipTokens token types to skip"
+        "content": "     * @param ast token to get parent"
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return first not ignored parent of ast"
+        "content": "     * @param skipTokens token types to skip"
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @return first not ignored parent of ast"
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static DetailAST getParent(DetailAST ast, int... skipTokens) {"
+        "content": "     */"
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "-"
         },
-        "content": "        DetailAST result \u003d ast.getParent();"
+        "content": "    private static DetailAST getParent(DetailAST ast, int... skipTokens) {"
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "-"
         },
-        "content": "        while (Arrays.binarySearch(skipTokens, result.getType()) \u003e -1) {"
+        "content": "        DetailAST result \u003d ast.getParent();"
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "-"
         },
-        "content": "            result \u003d result.getParent();"
+        "content": "        while (Arrays.binarySearch(skipTokens, result.getType()) \u003e -1) {"
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            result \u003d result.getParent();"
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "-"
         },
-        "content": "        return result;"
+        "content": "        }"
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return result;"
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 341,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 342,
         "author": {
           "gitId": "-"
         },
@@ -2393,7 +2400,7 @@
     ],
     "authorContributionMap": {
       "anubh-v": 44,
-      "-": 297
+      "-": 298
     }
   },
   {

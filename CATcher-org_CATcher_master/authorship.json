@@ -24650,80 +24650,87 @@
         "author": {
           "gitId": "geshuming"
         },
-        "content": "    // turns out that in target:es2015 the methods attached to the prototype are not enumerable so Object.keys returns []. So to workaround that and keep some backwards compatibility - merge with ownPropertyNames - that disregards the enumerable property."
+        "content": "    // turns out that in target:es2015 the methods attached to the prototype are not enumerable so Object.keys returns []."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "    const keys \u003d [...Object.keys(obj.prototype), ...Object.getOwnPropertyNames(obj.prototype)];"
+        "content": "    // So to workaround that and keep some backwards compatibility - merge with ownPropertyNames - that disregards the enumerable property."
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "    keys.forEach(key \u003d\u003e {"
+        "content": "    const keys \u003d [...Object.keys(obj.prototype), ...Object.getOwnPropertyNames(obj.prototype)];"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "        res[key] \u003d jasmine.createSpy(key);"
+        "content": "    keys.forEach(key \u003d\u003e {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "    });"
+        "content": "        res[key] \u003d jasmine.createSpy(key);"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "geshuming"
         },
-        "content": ""
+        "content": "    });"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "    return res;"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "    return res;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "geshuming"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "/** Keeps the types of properties of a type but assigns type of Spy to the methods */"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "type SpyOf\u003cT\u003e \u003d T \u0026"
+        "content": "/** Keeps the types of properties of a type but assigns type of Spy to the methods */"
       },
       {
         "lineNumber": 16,
+        "author": {
+          "gitId": "geshuming"
+        },
+        "content": "type SpyOf\u003cT\u003e \u003d T \u0026"
+      },
+      {
+        "lineNumber": 17,
         "author": {
           "gitId": "geshuming"
         },
@@ -24731,7 +24738,7 @@
       }
     ],
     "authorContributionMap": {
-      "geshuming": 16
+      "geshuming": 17
     }
   },
   {
@@ -25126,9 +25133,9 @@
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "  }"
+        "content": "  };"
       },
       {
         "lineNumber": 57,
@@ -25189,9 +25196,9 @@
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 66,
@@ -25224,9 +25231,9 @@
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 71,
@@ -25266,9 +25273,9 @@
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 77,
@@ -25308,9 +25315,9 @@
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 83,
@@ -25350,9 +25357,9 @@
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 89,
@@ -25392,9 +25399,9 @@
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 95,
@@ -25496,8 +25503,8 @@
       }
     ],
     "authorContributionMap": {
-      "geshuming": 17,
-      "anubh-v": 91
+      "geshuming": 24,
+      "anubh-v": 84
     }
   },
   {
@@ -25507,9 +25514,9 @@
       {
         "lineNumber": 1,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "import { GithubComment } from \"../../src/app/core/models/github/github-comment.model\";"
+        "content": "import { GithubComment } from \u0027../../src/app/core/models/github/github-comment.model\u0027;"
       },
       {
         "lineNumber": 2,
@@ -25523,7 +25530,7 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "export const EMPTY_TEAM_RESPONSE : GithubComment \u003d {"
+        "content": "export const EMPTY_TEAM_RESPONSE: GithubComment \u003d {"
       },
       {
         "lineNumber": 4,
@@ -25535,9 +25542,9 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "    body: \"# Team\u0027s Response\\n\" +"
+        "content": "    body: \u0027# Team\\\u0027s Response\\n\u0027 +"
       },
       {
         "lineNumber": 6,
@@ -25647,13 +25654,14 @@
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "  }"
+        "content": "  };"
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 21
+      "geshuming": 3,
+      "anubh-v": 18
     }
   },
   {
@@ -25672,7 +25680,7 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "import { GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL, "
+        "content": "import { GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL,"
       },
       {
         "lineNumber": 3,
@@ -25735,7 +25743,7 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    labels: [GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL, "
+        "content": "    labels: [GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL,"
       },
       {
         "lineNumber": 12,
@@ -25924,7 +25932,7 @@
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    labels: [GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL, "
+        "content": "    labels: [GITHUB_LABEL_TEAM_LABEL, GITHUB_LABEL_TUTORIAL_LABEL,"
       },
       {
         "lineNumber": 39,
@@ -26029,9 +26037,9 @@
       {
         "lineNumber": 1,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "import { GithubLabel } from \"../../src/app/core/models/github/github-issue.model\";"
+        "content": "import { GithubLabel } from \u0027../../src/app/core/models/github/github-issue.model\u0027;"
       },
       {
         "lineNumber": 2,
@@ -26078,9 +26086,9 @@
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "} as GithubLabel"
+        "content": "} as GithubLabel;"
       },
       {
         "lineNumber": 9,
@@ -26127,9 +26135,9 @@
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "} as GithubLabel"
+        "content": "} as GithubLabel;"
       },
       {
         "lineNumber": 16,
@@ -26176,9 +26184,9 @@
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "} as GithubLabel"
+        "content": "} as GithubLabel;"
       },
       {
         "lineNumber": 23,
@@ -26225,13 +26233,14 @@
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "} as GithubLabel"
+        "content": "} as GithubLabel;"
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 29
+      "geshuming": 5,
+      "anubh-v": 24
     }
   },
   {
@@ -26241,9 +26250,9 @@
       {
         "lineNumber": 1,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "import { Issue } from \u0027../../src/app/core/models/issue.model\u0027"
+        "content": "import { Issue } from \u0027../../src/app/core/models/issue.model\u0027;"
       },
       {
         "lineNumber": 2,
@@ -26255,9 +26264,9 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "import { ISSUE_WITH_EMPTY_DESCRIPTION, ISSUE_WITH_ASSIGNEES } from \u0027../constants/githubissue.constants\u0027"
+        "content": "import { ISSUE_WITH_EMPTY_DESCRIPTION, ISSUE_WITH_ASSIGNEES } from \u0027../constants/githubissue.constants\u0027;"
       },
       {
         "lineNumber": 4,
@@ -26486,16 +26495,16 @@
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "            const typicalDescription \u003d \u0027The app crashes after parsing config files.\u0027"
+        "content": "            const typicalDescription \u003d \u0027The app crashes after parsing config files.\u0027;"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "            const typicalTeamResponse \u003d \u0027Cannot replicate the bug.\u0027"
+        "content": "            const typicalTeamResponse \u003d \u0027Cannot replicate the bug.\u0027;"
       },
       {
         "lineNumber": 38,
@@ -26562,7 +26571,8 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 46
+      "geshuming": 4,
+      "anubh-v": 42
     }
   },
   {
@@ -26586,9 +26596,9 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "let applicationService \u003d new ApplicationService(null);"
+        "content": "const applicationService \u003d new ApplicationService(null);"
       },
       {
         "lineNumber": 4,
@@ -26697,7 +26707,8 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 18
+      "geshuming": 1,
+      "anubh-v": 17
     }
   },
   {
@@ -27507,9 +27518,9 @@
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 15,
@@ -27542,9 +27553,9 @@
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "}"
+        "content": "};"
       },
       {
         "lineNumber": 20,
@@ -27556,23 +27567,23 @@
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "let mockUserService \u003d new UserService(null, null);"
+        "content": "const mockUserService \u003d new UserService(null, null);"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "let mockPhaseService \u003d new PhaseService(null, null, null, null, null);"
+        "content": "const mockPhaseService \u003d new PhaseService(null, null, null, null, null);"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "let permissionService \u003d new PermissionService(null, mockUserService, mockPhaseService);"
+        "content": "const permissionService \u003d new PermissionService(null, mockUserService, mockPhaseService);"
       },
       {
         "lineNumber": 24,
@@ -27926,7 +27937,8 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 73
+      "geshuming": 5,
+      "anubh-v": 68
     }
   },
   {
@@ -27950,9 +27962,9 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "const PERIOD \u003d \".\""
+        "content": "const PERIOD \u003d \u0027.\u0027;"
       },
       {
         "lineNumber": 4,
@@ -27999,9 +28011,9 @@
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "                const validFileName \u003d \"testFile\" + PERIOD + validFileType;"
+        "content": "                const validFileName \u003d \u0027testFile\u0027 + PERIOD + validFileType;"
       },
       {
         "lineNumber": 11,
@@ -28020,9 +28032,9 @@
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "            const invalidFileName \u003d \"testFile\" + PERIOD + \u0027java\u0027;"
+        "content": "            const invalidFileName \u003d \u0027testFile\u0027 + PERIOD + \u0027java\u0027;"
       },
       {
         "lineNumber": 14,
@@ -28062,9 +28074,9 @@
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "          const invalidFileName \u003d \"TESTfile\" + PERIOD + \"JS\";"
+        "content": "          const invalidFileName \u003d \u0027TESTfile\u0027 + PERIOD + \u0027JS\u0027;"
       },
       {
         "lineNumber": 20,
@@ -28111,9 +28123,9 @@
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "            const fileNameWithoutFileExtension \u003d \"testFile\" + validFileType;"
+        "content": "            const fileNameWithoutFileExtension \u003d \u0027testFile\u0027 + validFileType;"
       },
       {
         "lineNumber": 27,
@@ -28264,7 +28276,8 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 47
+      "geshuming": 5,
+      "anubh-v": 42
     }
   },
   {
@@ -28274,16 +28287,16 @@
       {
         "lineNumber": 1,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "import { jsonData, USER_JUNWEI, USER_Q, USER_SHUMING, USER_WITH_TWO_ROLES } from \u0027../constants/data.constants\u0027"
+        "content": "import { jsonData, USER_JUNWEI, USER_Q, USER_SHUMING, USER_WITH_TWO_ROLES } from \u0027../constants/data.constants\u0027;"
       },
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "import { UserService } from \u0027../../src/app/core/services/user.service\u0027"
+        "content": "import { UserService } from \u0027../../src/app/core/services/user.service\u0027;"
       },
       {
         "lineNumber": 3,
@@ -28344,9 +28357,9 @@
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "      dataService \u003d jasmine.createSpyObj(\"DataService\", [\u0027getDataFile\u0027]);"
+        "content": "      dataService \u003d jasmine.createSpyObj(\u0027DataService\u0027, [\u0027getDataFile\u0027]);"
       },
       {
         "lineNumber": 12,
@@ -28658,7 +28671,8 @@
       }
     ],
     "authorContributionMap": {
-      "anubh-v": 55
+      "geshuming": 3,
+      "anubh-v": 52
     }
   }
 ]
