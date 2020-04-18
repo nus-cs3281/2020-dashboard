@@ -12,8 +12,12 @@
             "hash": "638fb374561659a1142421d81fe045bb73f08465",
             "messageTitle": "[#9841] Instructor/Courses: Courses recycle bin table overflow if text is too long (#9916)",
             "messageBody": "Co-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -26,8 +30,12 @@
             "hash": "3efc8fcc29e156d426765a4f38bfb2830fcff2d2",
             "messageTitle": "[#9920] Don\u0027t load all courses again when deleting/archiving courses in InstructorHomePageComponent (#9922)",
             "messageBody": "Co-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 6,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 6,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -40,8 +48,16 @@
             "hash": "553956e58e38a6d73925ab51d6bee5f99c1752e5",
             "messageTitle": "[#9921] Don\u0027t load all courses again when deleting/archiving courses in InstructorCoursesPageComponent (#9923)",
             "messageBody": "* Prevent multiple loading of courses after archiving/deleting courses in courses page\r\n\r\n* Organise various model types into one CourseModel\r\n\r\n* Fix deletion date not assigned after moving the course into recycle bin\r\n\r\n* Make sorting persistent after courses restored from archive\r\n\r\n* Refactor and return deletion timestamp from backend\r\n\r\n* Add test to verify deletion timestamp has been set\r\n",
-            "insertions": 87,
-            "deletions": 28
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 6,
+                "deletions": 3
+              },
+              "ts": {
+                "insertions": 81,
+                "deletions": 25
+              }
+            }
           }
         ]
       },
@@ -54,8 +70,16 @@
             "hash": "569635f576a9e6e9b21581e105b70beb383e12ad",
             "messageTitle": "[#9948] Add Cancel Button for Course Editing (#9949)",
             "messageBody": "* Add cancel button for course editing\r\n\r\n* Center save changes button\r\n\r\n* Change variable name from savedCourse to originalCourse\r\n\r\n* Retry testing\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 25,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 8,
+                "deletions": 2
+              },
+              "ts": {
+                "insertions": 17,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -68,8 +92,20 @@
             "hash": "c8da11f601e6cb97b0660ad493b86a5f94e46556",
             "messageTitle": "[#9302] Support rich text for MCQ option text (#9944)",
             "messageBody": "* Add support for rich text for MCQ options\r\n\r\n* Fix failing tests\r\n\r\n* Fix drag and drop interfering with text editor\r\n\r\n* Fix failing test\r\n\r\n* Customise rich text editor panel for editing MCQ options\r\n\r\n* Fix display of MCQ responses on results page\r\n\r\n* Fix display of MCQ options in additional details\r\n\r\n* Change HTML strip rules for image and table\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 254,
-            "deletions": 27
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 43,
+                "deletions": 1
+              },
+              "html": {
+                "insertions": 32,
+                "deletions": 24
+              },
+              "ts": {
+                "insertions": 179,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -82,8 +118,12 @@
             "hash": "12f2d08634dcb4da5875613142706cc10d04f542",
             "messageTitle": "[#9950] Prevent form submission to backend when invalid fields defected in frontend (#9953)",
             "messageBody": "* Simple fix to disable submit button when form is invalid\r\n\r\n* Retry testing\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
-            "insertions": 6,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 6,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -96,8 +136,20 @@
             "hash": "cb7a01a88a91f96a515ffda4fea7df8e16622227",
             "messageTitle": "[#9382] Enable downloading of feedback session results as CSV (#9961)",
             "messageBody": "* Enable downloading of feedback session results as csv\r\n\r\n* Create runtime wrapper for ExceedingRangeException\r\n\r\n* Add GetSessionResultsAction Tests\r\n\r\n* Add tests for GetSessionResultsAsCsvAction\r\n\r\n* Enable downloading session results from instructor home page\r\n\r\n* Migrate tests from InstructorFeedbackResultsDownloadActionTest to GetSessionResultsAsCsvActionTest\r\n\r\n* Change return type of containsSectionDetail and group params\r\n\r\n* Remove hardcoded value of `section \u003d\u003d \"All\"`\r\n\r\n* Add test cases for statistics hidden and shown\r\n\r\n* Use custom data bundle for GetSessionResultsAsCsvActionTest\r\n\r\n* Remove param for `ExceedingRangeException` testing\r\n\r\n* Move helper methods to test and change accessibility of inner classes",
-            "insertions": 801,
-            "deletions": 13
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 733,
+                "deletions": 8
+              },
+              "html": {
+                "insertions": 7,
+                "deletions": 5
+              },
+              "ts": {
+                "insertions": 61,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -110,8 +162,12 @@
             "hash": "5f35ee0592e69640fde47c735088f1d6d39fdd6b",
             "messageTitle": "Fix incorrect disabled flag for student view responses button (#10007)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       }
@@ -129,8 +185,16 @@
             "hash": "7619ce905d01c91f1371dd4dd8f6d1cc1b40df1e",
             "messageTitle": "[#9761] Feedback Session Edit: Button names should be more appropriate (#9910)",
             "messageBody": "* Improve button labels when editing feedback session questions\r\n\r\n* Add snapshot\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
-            "insertions": 24,
-            "deletions": 5
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 5,
+                "deletions": 5
+              },
+              "ts": {
+                "insertions": 19,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -143,8 +207,12 @@
             "hash": "8d627b6a2c4c4fbc0380d19e39a6857e6eaf47e7",
             "messageTitle": "[#9688] Resolve TinyMCE conflicts with Snapshot tests (#9932)",
             "messageBody": "* Add helper for mocking TinyMCE UUID\r\n\r\n* Update app tsconfig to exclude test helpers\r\n\r\n* Refactor function import/export\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 22,
-            "deletions": 14
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 22,
+                "deletions": 14
+              }
+            }
           }
         ]
       },
@@ -157,8 +225,12 @@
             "hash": "fcf52e5530b340f54bfb5ffc86ee9f802a49d34b",
             "messageTitle": "[#9382] Add tests for RestoreFeedbackSessionAction (#9934)",
             "messageBody": "* Add tests for RestoreFeedbackSessionAction\r\n\r\n* Improve test structure\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 64,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 64,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -171,15 +243,27 @@
             "hash": "8ce800938faed1da40baf7bea2d9795debfb3b80",
             "messageTitle": "[#9946] Migration to new RESTful search endpoints - Students (#9979)",
             "messageBody": "* Implement search student endpoint\r\n\r\n* Implement instructors search endpoint (#2)\r\n\r\n* Add instructor search endpoint\r\n\r\n* Add tests\r\n\r\n* Switch from SearchInstructorsData to InstructorsData (#6)\r\n\r\n* Switch from SearchStudentsData to StudentsData (#7)\r\n\r\n* Allow travis to build search migration branch (#5)\r\n\r\n* Implement sessions search endpoint (#3)\r\n\r\n* Add sessions search endpoint\r\n\r\n* Add tests\r\n\r\n* Fix lint errors\r\n\r\n* Add course endpoint (#8)\r\n\r\n* Implement Links Endpoint (#4)\r\n\r\n* Add googleId  field to StudentData (#9)\r\n\r\n* Add googleid to studentdata\r\n\r\n* Add nullable to student data\r\n\r\n* Improve search response classes (#12)\r\n\r\n* Improve students endpoint classes\r\n\r\n* Move joinState attribute from common to student\r\n\r\n* Improve instructors endpoint classes\r\n\r\n* Revert \"Add googleId  field to StudentData (#9)\"\r\n\r\nThis reverts commit b5d46cabc092bf3bedc429ae1c771515bf149606.\r\n\r\n* Revert unnecessary InstructorData changes\r\n\r\n* Fix typo\r\n\r\n* Make joinState common\r\n\r\n* Make names sane again\r\n\r\n* Remove unused setters\r\n\r\n* Standardize search endpoints (#13)\r\n\r\n* Improve course endpoint class names\r\n\r\n* Improve links endpoint class names\r\n\r\n* Improve sessions endpoint class names\r\n\r\n* Standardize comments\r\n\r\n* Fix import order\r\n\r\n* Revert travis config\r\n\r\n* Split PR\r\n\r\n* Revert to existing response classes\r\n\r\n* Allow some attributes to be optional\r\n\r\n* Improve information hiding logic\r\n\r\n* Improve resource name\r\n\r\nCo-authored-by: Joshua Wong \u003cjoshwonghc@gmail.com\u003e",
-            "insertions": 242,
-            "deletions": 10
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 242,
+                "deletions": 10
+              }
+            }
           },
           {
             "hash": "c2d26d4ae41381142beb72b3fda53eabab67bcfd",
             "messageTitle": "[#9946] Migration to new RESTful search endpoints - Instructors (#9982)",
             "messageBody": "* Implement search student endpoint\r\n\r\n* Implement instructors search endpoint (#2)\r\n\r\n* Add instructor search endpoint\r\n\r\n* Add tests\r\n\r\n* Switch from SearchInstructorsData to InstructorsData (#6)\r\n\r\n* Switch from SearchStudentsData to StudentsData (#7)\r\n\r\n* Allow travis to build search migration branch (#5)\r\n\r\n* Implement sessions search endpoint (#3)\r\n\r\n* Add sessions search endpoint\r\n\r\n* Add tests\r\n\r\n* Fix lint errors\r\n\r\n* Add course endpoint (#8)\r\n\r\n* Implement Links Endpoint (#4)\r\n\r\n* Add googleId  field to StudentData (#9)\r\n\r\n* Add googleid to studentdata\r\n\r\n* Add nullable to student data\r\n\r\n* Improve search response classes (#12)\r\n\r\n* Improve students endpoint classes\r\n\r\n* Move joinState attribute from common to student\r\n\r\n* Improve instructors endpoint classes\r\n\r\n* Revert \"Add googleId  field to StudentData (#9)\"\r\n\r\nThis reverts commit b5d46cabc092bf3bedc429ae1c771515bf149606.\r\n\r\n* Revert unnecessary InstructorData changes\r\n\r\n* Fix typo\r\n\r\n* Make joinState common\r\n\r\n* Make names sane again\r\n\r\n* Remove unused setters\r\n\r\n* Standardize search endpoints (#13)\r\n\r\n* Improve course endpoint class names\r\n\r\n* Improve links endpoint class names\r\n\r\n* Improve sessions endpoint class names\r\n\r\n* Standardize comments\r\n\r\n* Fix import order\r\n\r\n* Revert travis config\r\n\r\n* Split PR\r\n\r\n* Revert to existing response classes\r\n\r\n* Fix lint\r\n\r\n* Improve information hiding logic\r\n\r\n* Improve resource name\r\n\r\nCo-authored-by: Joshua Wong \u003cjoshwonghc@gmail.com\u003e\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
-            "insertions": 201,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 190,
+                "deletions": 3
+              },
+              "ts": {
+                "insertions": 11,
+                "deletions": 3
+              }
+            }
           }
         ]
       },
@@ -192,8 +276,16 @@
             "hash": "e311529371a4cf273fc6e4d700e86c8f800e1920",
             "messageTitle": "[#9946] Migration to new RESTful search endpoints - Instructor search service (#9995)",
             "messageBody": "* Implement instructor search service\r\n\r\n* Add tests for instructor search service\r\n\r\n* Make privilege fetching deterministic\r\n\r\n* Update tests\r\n\r\n* Use instructor service instead of direct request",
-            "insertions": 344,
-            "deletions": 111
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 0,
+                "deletions": 18
+              },
+              "ts": {
+                "insertions": 344,
+                "deletions": 93
+              }
+            }
           }
         ]
       }
@@ -212,8 +304,12 @@
             "hash": "4955ddc8eb3450c196ea05a88669db891a0f65fc",
             "messageTitle": "[#9898] All records page does not show profile picture (#9901)",
             "messageBody": "* Fix bug\r\n\r\n* Fix lint error\r\n\r\n* Add snapshot\r\n\r\n* add assert statement for url\r\n\r\n* Fix bug\r\n\r\n* Add populated snapshot\r\n\r\n* Fix test\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
-            "insertions": 39,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 39,
+                "deletions": 3
+              }
+            }
           }
         ]
       },
@@ -226,8 +322,16 @@
             "hash": "3c8d6071f1bb9b54d4d2f8cde8cd7a6baf0643e7",
             "messageTitle": "[#9679] Instructor: Preview Sessions Submission Page\u0027s navbar covers some content on the page (#9926)",
             "messageBody": "* Fix the navbar covering content\r\n\r\n* Make navbar div to go into main content container\r\n\r\n* Remove unused variable\r\n",
-            "insertions": 6,
-            "deletions": 10
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 0,
+                "deletions": 4
+              },
+              "html": {
+                "insertions": 6,
+                "deletions": 6
+              }
+            }
           }
         ]
       },
@@ -240,8 +344,12 @@
             "hash": "01a717c4b67fef90b8e18c8b36df1415a421cb36",
             "messageTitle": "[#9382] Add ActionFactoryTest (#9931)",
             "messageBody": "* WIP ActionFactoryTest\r\n\r\n* Add more tests for ActionFactory\r\n\r\n* Add newline at end\r\n\r\n* Add comment\r\n\r\n* Fix lint errors\r\n\r\n* Fix comments\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 53,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 53,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -254,8 +362,12 @@
             "hash": "3d63185659edd46eb457026d3b7212e05740c6b8",
             "messageTitle": "[#9642] Feedback sessions with # or ? in their name can\u0027t be edited. (#9925)",
             "messageBody": "",
-            "insertions": 55,
-            "deletions": 23
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 55,
+                "deletions": 23
+              }
+            }
           }
         ]
       },
@@ -268,8 +380,12 @@
             "hash": "0d17cc55175c6edf9957af715748a455491133b9",
             "messageTitle": "[#9773] Student course detail page: Standardize picture size and title length (#9938)",
             "messageBody": "* Standardize profile picture on student view team\r\n\r\n* Add max-height element\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
-            "insertions": 2,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 2,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -282,8 +398,20 @@
             "hash": "7961e89d556fa127d8854597b532a229fd4e9fd0",
             "messageTitle": "[#9939] View Team on Student Page does not show teammates details (#9942)",
             "messageBody": "* Fix names not showing\r\n\r\n* Fix lint\r\n\r\n* Update snapshot\r\n\r\n* Do not show long term email\r\n\r\n* Hide some fields that should not be shown to students\r\n\r\n* Fix lint error\r\n\r\n* Fix comments\r\n\r\n* Fix linter errors\r\n\r\n* Fix failing test\r\n\r\nCo-authored-by: Joanne Ong \u003cjoanneongcf@u.nus.edu\u003e",
-            "insertions": 25,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 15,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 3,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 7,
+                "deletions": 3
+              }
+            }
           }
         ]
       },
@@ -296,15 +424,23 @@
             "hash": "3f9494cfe77ed525084b26f7d8d62986adf37ce0",
             "messageTitle": "[#9946] Add additional fields for Instructor Search Migration  (#9991)",
             "messageBody": "* Add institute and key to InstructorData\r\n\r\n* Fix logic\r\n\r\n* Make institute nullable\r\n\r\n* Neaten code\r\n\r\n* Refactor code\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\n\r\n* Fix comments\r\n\r\n* Remove O(n^2) calls\r\n\r\n* Add comment on key\r\n\r\n* Fix comments\r\n\r\n* Fix comment\r\n\r\n* Fix comments\r\n\r\n* Retrigger travis\r\n\r\n* retrigger travis again again\r\n\r\n* Retrigger travis x3\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e",
-            "insertions": 75,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 75,
+                "deletions": 4
+              }
+            }
           },
           {
             "hash": "b4010c49d817d509c62760d075029c40e33e956b",
             "messageTitle": "[#9946] Add additional fields for Student Search Migration (#9990)",
             "messageBody": "* Implement search student endpoint\r\n\r\n* Implement instructors search endpoint (#2)\r\n\r\n* Add instructor search endpoint\r\n\r\n* Add tests\r\n\r\n* Switch from SearchInstructorsData to InstructorsData (#6)\r\n\r\n* Switch from SearchStudentsData to StudentsData (#7)\r\n\r\n* Allow travis to build search migration branch (#5)\r\n\r\n* Implement sessions search endpoint (#3)\r\n\r\n* Add sessions search endpoint\r\n\r\n* Add tests\r\n\r\n* Fix lint errors\r\n\r\n* Add course endpoint (#8)\r\n\r\n* Implement Links Endpoint (#4)\r\n\r\n* Add googleId  field to StudentData (#9)\r\n\r\n* Add googleid to studentdata\r\n\r\n* Add nullable to student data\r\n\r\n* Improve search response classes (#12)\r\n\r\n* Improve students endpoint classes\r\n\r\n* Move joinState attribute from common to student\r\n\r\n* Improve instructors endpoint classes\r\n\r\n* Revert \"Add googleId  field to StudentData (#9)\"\r\n\r\nThis reverts commit b5d46cabc092bf3bedc429ae1c771515bf149606.\r\n\r\n* Revert unnecessary InstructorData changes\r\n\r\n* Fix typo\r\n\r\n* Make joinState common\r\n\r\n* Make names sane again\r\n\r\n* Remove unused setters\r\n\r\n* Standardize search endpoints (#13)\r\n\r\n* Improve course endpoint class names\r\n\r\n* Improve links endpoint class names\r\n\r\n* Improve sessions endpoint class names\r\n\r\n* Standardize comments\r\n\r\n* Fix import order\r\n\r\n* Revert travis config\r\n\r\n* Split PR\r\n\r\n* Revert to existing response classes\r\n\r\n* Allow some attributes to be optional\r\n\r\n* Improve information hiding logic\r\n\r\n* Add key and institute field to students\r\n\r\n* Improve resource name\r\n\r\n* Fix rebase issues\r\n\r\n* lint\r\n\r\n* Fix str equality\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\n\r\n* Add mapping for courseId to instructorId\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\n\r\n* Fix some comments\r\n\r\n* Move key generation logic to studentData\r\n\r\n* Modify to avoid O(n^2) calls\r\n\r\n* Hide Key for instructor\r\n\r\n* Fix comments\r\n\r\n* Add helpful comment\r\n\r\n* Fix comments\r\n\r\n* Fix comments again\r\n\r\n* Rebuild travis\r\n\r\nCo-authored-by: Daryl Chan \u003c6095637+dvrylc@users.noreply.github.com\u003e\r\nCo-authored-by: Daryl Chan \u003cdckj95@gmail.com\u003e",
-            "insertions": 100,
-            "deletions": 7
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 100,
+                "deletions": 7
+              }
+            }
           }
         ]
       },
@@ -317,8 +453,12 @@
             "hash": "e01257fdd6870d5b9c569c26e55e33f6ad6a1875",
             "messageTitle": "[#9946] Migration to new RESTful search endpoints - Admin search service (#9998)",
             "messageBody": "",
-            "insertions": 790,
-            "deletions": 12
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 790,
+                "deletions": 12
+              }
+            }
           }
         ]
       }
@@ -337,15 +477,23 @@
             "hash": "3939686df39c47bf4920ef8919b07753a68456d2",
             "messageTitle": "[#9906] Refactor Intent to be a type (#9908)",
             "messageBody": "* Move Intent to types\r\n\r\n* Fix linting issues\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
-            "insertions": 10,
-            "deletions": 10
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 10,
+                "deletions": 10
+              }
+            }
           },
           {
             "hash": "36944e6154c7595a681cd10b8850a022498a4315",
             "messageTitle": "[#9902] Replace src/web/types/gender.ts with Gender in api-output.ts (#9909)",
             "messageBody": "* Refactor Gender\r\n\r\n* Fix linting issues\r\n\r\nCo-authored-by: Xiao Pu \u003cacesscp@gmail.com\u003e\r\n",
-            "insertions": 10,
-            "deletions": 36
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 10,
+                "deletions": 36
+              }
+            }
           }
         ]
       },
@@ -358,8 +506,12 @@
             "hash": "34b2d22e679451e5952ac394e4ff18fa21cc1a5f",
             "messageTitle": "[#9903] Replace src/web/app/pages-instructor/student-profile/student-profile.ts with StudentProfile in api-output.ts (#9928)",
             "messageBody": "",
-            "insertions": 6,
-            "deletions": 24
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 6,
+                "deletions": 24
+              }
+            }
           }
         ]
       },
@@ -372,8 +524,12 @@
             "hash": "c0bf6a4e581b738a4b8be8c93989a2cd4fe3e829",
             "messageTitle": "[#9919] Remove HttpRequestService dependency from UploadEditProfilePictureModalComponent (#9937)",
             "messageBody": "* Remove HttpRequestDependency from UploadEditProfilePictureModalComponent\r\n\r\n* Flatten nesting of callbacks\r\n\r\n* Code cleanup\r\n\r\n* Update Student Profile Page Snapshot\r\n\r\n* Consolidate pipe\r\n\r\n* Migrate profile picture methods to student profile service\r\n\r\n* Fix failing tests\r\n\r\n* Refactor to throw error when image not uploaded\r\n\r\n* Fix linting issue\r\n\r\n* Use string literals\r\n",
-            "insertions": 76,
-            "deletions": 36
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 76,
+                "deletions": 36
+              }
+            }
           }
         ]
       },
@@ -386,8 +542,16 @@
             "hash": "004e6a0e948941aef0a5fa0c9c08a4bb350266f9",
             "messageTitle": "[#9952] Standardize Student Api Endpoints (#9951)",
             "messageBody": "* Add Nationalities Service\r\n\r\n* Update tests for NationalitiesService\r\n\r\n* Remove HttpRequestService from student home page\r\n\r\n* Remove HttpRequestService from student course details\r\n\r\n* Add test for nationalities service\r\n\r\n* Remove HttpRequestService from course join page\r\n\r\n* Add API Endpoints for resources\r\n\r\n* Add tests for NationalitiesService\r\n\r\n* Add Instructor service tests\r\n\r\n* Fix java linting issues\r\n\r\n* Add tests for courses service\r\n\r\n* Refactor Course Service to use api-endpoints\r\n\r\n* Refactor URIs to use Resource Endpoints in api-endpoints\r\n\r\n* fix e2e tests\r\n",
-            "insertions": 369,
-            "deletions": 66
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 76,
+                "deletions": 0
+              },
+              "ts": {
+                "insertions": 293,
+                "deletions": 66
+              }
+            }
           }
         ]
       },
@@ -400,8 +564,16 @@
             "hash": "55f1f66cb2c74d266dcbdd5058703cfd6b3611f8",
             "messageTitle": "[#9940] Instructor module: standardize API endpoints, remove HttpRequestService (#9972)",
             "messageBody": "* Create unpublishFeedbackSession in feedback session service\r\n\r\n* Refactor URI string literals\r\n\r\n* Add all API endpoints\r\n\r\n* Remove HttpRequestService from instructor-student-list-page\r\n\r\n* Refactor load instructor privilege\r\n\r\n* Remove HttpRequestService from instructor-session-base-page\r\n\r\n* Remove HttpRequestService from instructor sessions\r\n\r\n* Add tests for course and questions service\r\n\r\n* Add sessions and instructor tests\r\n\r\n* Remove Cron job and Legacy API endpoints\r\n\r\n* Refactor to not pass model as parameter\r\n\r\n* Remove WebPageEndpoints\r\n\r\n* Move optionals to an object parameter",
-            "insertions": 485,
-            "deletions": 227
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "ts": {
+                "insertions": 484,
+                "deletions": 227
+              }
+            }
           }
         ]
       },
@@ -414,8 +586,12 @@
             "hash": "48fbb31c64826d2c5bca9e8f01a9cf7961b195c2",
             "messageTitle": "[#9940] Refactor remaining instructor endpoints (#9978)",
             "messageBody": "* Remove HttpRequestService from instructor course edit page\r\n\r\n* Remove HttpRequestService from instructor course details page\r\n\r\n* Remove HttpRequestService from instructor courses page\r\n\r\n* Remove HttpRequestService from course enroll and search pages\r\n\r\n* Remove HttpRequestService from student edit page\r\n\r\n* Add tests for CourseService\r\n\r\n* Add tests for FeedbackSessionsService\r\n\r\n* Add tests for InstructorService\r\n\r\n* Add tests for StudentService\r\n\r\n* Update params to be lowercase",
-            "insertions": 685,
-            "deletions": 329
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 685,
+                "deletions": 329
+              }
+            }
           }
         ]
       },
@@ -428,8 +604,12 @@
             "hash": "23ea7c3b15640afe902e4366787c56779f71600d",
             "messageTitle": "[#9940] Refactor Admin Endpoints (#10004)",
             "messageBody": "* Refactor admin endpoints for sessions page\r\n\r\n* Refactor admin endpoints for submissions page\r\n\r\n* Add Error reporting service\r\n\r\n* Refactor admin endpoints for recovery and submissions page\r\n\r\n* Refactor admin DELETE endpoints\r\n\r\n* Add dummy value to test\r\n\r\n* Fix minor syntax issues",
-            "insertions": 499,
-            "deletions": 213
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 499,
+                "deletions": 213
+              }
+            }
           }
         ]
       }
@@ -444,8 +624,16 @@
             "hash": "e54f2d6bd7c27924cda4d3b57bac5cae7e3451b6",
             "messageTitle": "[#9740] Fix Instructor Homepage UI (#9893)",
             "messageBody": "* removed static height declaration\r\n\r\n* updated instructor-home-page test snapshot\r\n\r\n* removed height declaration in css\r\n",
-            "insertions": 1,
-            "deletions": 5
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 0,
+                "deletions": 4
+              },
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -458,8 +646,16 @@
             "hash": "021db57bd3ee4cb25a7ad75bb3ad63c8aa053076",
             "messageTitle": "[#9911] Auto-sync API output type: ConfirmationResponse (#9914)",
             "messageBody": "",
-            "insertions": 44,
-            "deletions": 51
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 42,
+                "deletions": 31
+              },
+              "ts": {
+                "insertions": 2,
+                "deletions": 20
+              }
+            }
           }
         ]
       },
@@ -472,8 +668,12 @@
             "hash": "07fa66b5302f5ebb7d55e24b7c655a01da3e24eb",
             "messageTitle": "[#9886] Login Dropdown List is Not Positioned Properly (#9924)",
             "messageBody": "* Fix Login Dropdown List\r\n\r\n* Fix dropdown when logged in\r\n",
-            "insertions": 2,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -486,8 +686,16 @@
             "hash": "ec3456d086142482aa9fab4a942d82a698db182a",
             "messageTitle": "[#9918] Remove HttpRequestService dependency from StudentListComponent (#9927)",
             "messageBody": "* Remove HttpRequestService dependency from StudentList\r\n\r\n* Move method invocation to StudentService\r\n\r\n* Move student deletion to courseService\r\n\r\n* Move removeStudentFromCourse method invocation to parent component\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\r\n",
-            "insertions": 57,
-            "deletions": 21
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 6,
+                "deletions": 3
+              },
+              "ts": {
+                "insertions": 51,
+                "deletions": 18
+              }
+            }
           }
         ]
       },
@@ -500,8 +708,12 @@
             "hash": "87f9c7180f17083161986b3311cf3785e32a8494",
             "messageTitle": "[#9382] Add Access Control Tests for UpdateFeedbackResponseAction (#9930)",
             "messageBody": "* Prepare draft test code\r\n\r\n* Implement generic access control tests\r\n\r\n* Implement access control tests with update requests\r\n\r\n* Refactor test helpers and test cases\r\n\r\n* Add additional test cases\r\n\r\n* Refactor static variables to local scope\r\n\r\n* Edit containsQuestionNotForInstructor for clarity\r\n\r\n* Refactor verifyAccess method signatures to more generic request\r\n",
-            "insertions": 428,
-            "deletions": 14
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 428,
+                "deletions": 14
+              }
+            }
           }
         ]
       },
@@ -514,8 +726,12 @@
             "hash": "6b16f366e9085b5e0ae889f7f8edd4935a652886",
             "messageTitle": "[#9382] Add AccountService Tests (#9964)",
             "messageBody": "* Add AccountService Tests\r\n\r\n* Reorder test cases\r\n\r\n* Remove node modules for travis\r\n\r\n* Revert commit 4d62b49a \"Remove node modules for travis\"\r\n",
-            "insertions": 83,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 83,
+                "deletions": 6
+              }
+            }
           }
         ]
       },
@@ -528,8 +744,12 @@
             "hash": "87980378a4f0575c3fe3066bc94a41e683757929",
             "messageTitle": "[#9382] Add MasqueradeModeService Tests (#9955)",
             "messageBody": "",
-            "insertions": 30,
-            "deletions": 7
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 30,
+                "deletions": 7
+              }
+            }
           }
         ]
       },
@@ -542,8 +762,20 @@
             "hash": "85cda0bd6ef5ec058dd8f592acbba424d38efe02",
             "messageTitle": "[#9419] Add form validation to course edit (#9975)",
             "messageBody": "* Initial Implementation\r\n\r\n* Working Implementation\r\n\r\n* Fix lint error\r\n\r\n* Changed look and feel of error message\r\n\r\n* Removed validation from timezone\r\n\r\n* Removed validation from Course ID\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
-            "insertions": 45,
-            "deletions": 9
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 17,
+                "deletions": 8
+              },
+              "ts": {
+                "insertions": 24,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -556,8 +788,12 @@
             "hash": "f208a3a6690e913581d69096335d5f3213e0f2dc",
             "messageTitle": "[#9382] Add StudentProfileService Tests (#9985)",
             "messageBody": "* Draft Implementation\r\n\r\n* Add all test cases\r\n\r\n* Add test case",
-            "insertions": 80,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 80,
+                "deletions": 6
+              }
+            }
           }
         ]
       },
@@ -570,8 +806,20 @@
             "hash": "dcac5dad2da0654e013a52959992170b41e385ba",
             "messageTitle": "[#4854] Add Instructor Institution Validation (#9912)",
             "messageBody": "",
-            "insertions": 190,
-            "deletions": 28
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 170,
+                "deletions": 20
+              },
+              "html": {
+                "insertions": 7,
+                "deletions": 4
+              },
+              "ts": {
+                "insertions": 13,
+                "deletions": 4
+              }
+            }
           }
         ]
       },
@@ -584,8 +832,12 @@
             "hash": "440051d789678bb732533241f182d9876dbd04a6",
             "messageTitle": "[#9382] Add CourseService Tests (#10005)",
             "messageBody": "* Initial addition of test cases\r\n\r\n* Add test cases to cover all service methods",
-            "insertions": 178,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 178,
+                "deletions": 2
+              }
+            }
           }
         ]
       }
@@ -600,8 +852,12 @@
             "hash": "44e08946ca0b1f3cbc91a1d8f2d758449dfda925",
             "messageTitle": "[#9956] Make dataBundle return the json of actual objects created in backend (#9967)",
             "messageBody": "* Make persistDataBundle return updated databundle\r\n\r\n* Add test for dataBundle updating its values\r\n\r\n* Make putDataBundle return updated json\r\n\r\n* Make LnP tests use updated data bundles\r\n\r\n* Add hashcode method for related attributes\r\n\r\n* Add hash and equal method for attributes\r\n\r\n* Update removeAndRestoreDataBundle to throw exception when request fails\r\n\r\n* Compress all updateXXX methods into a single generic method\r\n\r\n* Update BaseLnPTestCase to use FileHelper\r\n\r\n* Move custom equals class to EntityAttribute class\r\n\r\n* Add test for equals method\r\n\r\n* Change nullableObjectEquals to java\u0027s Objects.equal method\r\n\r\n* Add tests for xxxAttributes\u0027 hash code\r\n\r\nCo-authored-by: Wang Junming \u003c905760127@qq.com\u003e",
-            "insertions": 896,
-            "deletions": 58
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 896,
+                "deletions": 58
+              }
+            }
           }
         ]
       },
@@ -614,8 +870,12 @@
             "hash": "0bc073e2f84edb1b7c9aa0e1925000246f973814",
             "messageTitle": "[#9646] Add L\u0026P tests for backend endpoints (#9958)",
             "messageBody": "* Add skeleton for Feedback Session load testing\r\n\r\n* Add method to generate feedback session\r\n\r\n* Add method to generate feedback questions\r\n\r\n* Complete feedback view lnp test\r\n\r\n* Change test to use login method\r\n\r\n* Fix lnp test for viewing feedback form not working properly\r\n\r\n* Add more HTTP request to simulate real case scenario better\r\n\r\n* Fix FeedbackSessionQuestion giving errors\r\n\r\n* Create new lnp test for submitting feedback session form\r\n\r\n* Attempt to fix regexMatcher\r\n\r\n* Fix lnp testing for Feedback session submit response\r\n\r\n* Remove debugging code and stray character\r\n\r\n* Disable standard output stream for lnp tests\r\n\r\n* Revert ordering of data bundle generation in lnp test\r\n\r\n* Add comments and documentation to explain new backdoor API\r\n\r\n* Update LnP tests to work with new BaseLNPTestCase\r\n\r\n* Update FeedbackSessionView LnP test to handle multiple questions per feedbackSession\r\n\r\n* Update FeedbackSessionSubmit LnP to support multiple questions, and remove dependency on backdoor",
-            "insertions": 532,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 532,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -628,8 +888,12 @@
             "hash": "f7ce51f19738970c251abbd049ec789ffd6d4b3b",
             "messageTitle": "[#10008] Deprecate getfeedbackquestionid method from Backdoor (#10009)",
             "messageBody": "* Remove getFeedbackQuestionId method from Backdoor\r\n\r\n* Rename misleading variable\r\n\r\n* Modify LnP tests to not use getFeedbackQuestionId method",
-            "insertions": 12,
-            "deletions": 34
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 12,
+                "deletions": 34
+              }
+            }
           }
         ]
       }

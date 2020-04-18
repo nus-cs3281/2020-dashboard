@@ -13,8 +13,16 @@
             "hash": "0e984c619538e8d6566d5cdcf32062c340deae1f",
             "messageTitle": "Standardize multiple references to the same footnote (#976)",
             "messageBody": "Multiple references to the same footnote (e.g. footnote 1) now look like\r\n\r\n[1]\r\n[1:1]\r\n[1:2]\r\n...etc\r\n\r\nLet\u0027s standardize them so they all just show `[1]` instead.",
-            "insertions": 2,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 2,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 0,
+                "deletions": 4
+              }
+            }
           }
         ]
       },
@@ -27,8 +35,12 @@
             "hash": "b1f025f53c9c466185fccfb3f705c28b4f49a097",
             "messageTitle": "Fix main page syntax link (#1024)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -41,8 +53,28 @@
             "hash": "5afcaa90e57e70c6b26a729a44ad466969636d1f",
             "messageTitle": "Support line numbers for code blocks (#991)",
             "messageBody": "",
-            "insertions": 201,
-            "deletions": 18
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 90,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 24,
+                "deletions": 1
+              },
+              "md": {
+                "insertions": 34,
+                "deletions": 4
+              },
+              "js": {
+                "insertions": 49,
+                "deletions": 13
+              },
+              "json": {
+                "insertions": 4,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -55,71 +87,151 @@
             "hash": "2310c8621d9702b42d05c7ff59d2f68d245083e9",
             "messageTitle": "Migrate to bootstrap-vue popovers (#1033)",
             "messageBody": "",
-            "insertions": 353,
-            "deletions": 56
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 87,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 4,
+                "deletions": 13
+              },
+              "js": {
+                "insertions": 262,
+                "deletions": 43
+              }
+            }
           },
           {
             "hash": "cba8d080120c3ccdcf2c0fe20b449b696b9c55fc",
             "messageTitle": "Render plugins on dynamic resources (#1051)",
             "messageBody": "",
-            "insertions": 16,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 8,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 4,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "d0cc8f3c15bf78dde985c8f506388fda2a86f83c",
             "messageTitle": "Allow changing parameter properties (#1075)",
             "messageBody": "",
-            "insertions": 180,
-            "deletions": 201
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 180,
+                "deletions": 201
+              }
+            }
           },
           {
             "hash": "ba2d7ec76600084ede61ebee80e16361ad8d5866",
             "messageTitle": "Remove redundant file writing (#1090)",
             "messageBody": "We are writing to a temp path, and then reading it immediately.\r\nLet\u0027s avoid this by passing the string directly instead.",
-            "insertions": 19,
-            "deletions": 50
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 19,
+                "deletions": 50
+              }
+            }
           },
           {
             "hash": "48a76e1263f04af1fdaf38e3ec716558539ef8a3",
             "messageTitle": "Add start from line number functionality to code blocks (#1115)",
             "messageBody": "Let\u0027s do this by checking for the `start-from` attribute on a code block\r\nand then set an inline style that sets the `line` counter to the \r\nappropriate value.",
-            "insertions": 87,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 25,
+                "deletions": 1
+              },
+              "md": {
+                "insertions": 34,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 28,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "ea117150233a1dcaec3307ce2947e44fd4c49cd6",
             "messageTitle": "Remove OK button from modals (#1134)",
             "messageBody": "Let\u0027s remove the redundant OK button from modals,\r\nand only show it if the `ok-title` attribute is present.",
-            "insertions": 50,
-            "deletions": 5
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 18,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 32,
+                "deletions": 5
+              }
+            }
           },
           {
             "hash": "ef51c9e16d7a2832fa726ba163b8a92ef710c156",
             "messageTitle": "Show pointer and use underline dashed for click trigger (#1111)",
             "messageBody": "Fix a regression from #1033.\r\n\r\nLet\u0027s add back the two styles of triggers:\r\n- click: show mouse pointer to signal that it is clickable\r\n  and use underline dashed\r\n- not click: no special cursor, and use underline dotted",
-            "insertions": 25,
-            "deletions": 8
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 15,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 2,
+                "deletions": 5
+              },
+              "js": {
+                "insertions": 8,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "886027563e84dce9b78b7afbfb3ff8658dfba43d",
             "messageTitle": "Upgrade to bootstrap-vue 2.5.0 (#1085)",
             "messageBody": "",
-            "insertions": 48,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 15,
+                "deletions": 3
+              },
+              "js": {
+                "insertions": 33,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "fc3f4c3a46cae5917a6ae968e22cfca0cda8e558",
             "messageTitle": "Parse popovers for footnotes (#1155)",
             "messageBody": "During the migration to bootstrap-vue,\r\npopovers had to be parsed into bootstrap-vue syntax.\r\n\r\nThis is done before the plugins stage, where footnotes are implemented, so the popovers don\u0027t work there.\r\n\r\nLet\u0027s add the parsing of popovers to the footnotes plugin to solve this.",
-            "insertions": 4,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 4,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "e25f89f3fae0daa937ff74e4fa0b32a3cd9ba6a2",
             "messageTitle": "Use \u003cbr\u003e to separate lines of code block (#1176)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 2,
+                "deletions": 4
+              }
+            }
           }
         ]
       }
@@ -134,22 +246,34 @@
             "hash": "c3b354b7ae19eec955b5f9d4370c7336331ef50f",
             "messageTitle": "Move constants to separate file",
             "messageBody": "",
-            "insertions": 166,
-            "deletions": 74
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 166,
+                "deletions": 74
+              }
+            }
           },
           {
             "hash": "fad5b093198ae6c8189c9b64db197e2cfd4d98c2",
             "messageTitle": "Add core library constants and improve quality",
             "messageBody": "",
-            "insertions": 24,
-            "deletions": 19
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 24,
+                "deletions": 19
+              }
+            }
           },
           {
             "hash": "d0772d325296c6d562780b291c225c74f3ffe63e",
             "messageTitle": "Correct file paths",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -162,8 +286,12 @@
             "hash": "690f1a7ae4473a62992a9b3ef041b36f64f6f5c3",
             "messageTitle": "Add feature-request issue template (#951)",
             "messageBody": "",
-            "insertions": 71,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 71,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -176,8 +304,12 @@
             "hash": "28aac0647d72595d962907057a69a939673c30a9",
             "messageTitle": "Replace headers in test .md files with bold text (#954)",
             "messageBody": "",
-            "insertions": 178,
-            "deletions": 118
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 178,
+                "deletions": 118
+              }
+            }
           }
         ]
       },
@@ -190,8 +322,12 @@
             "hash": "450fcd1427b01033c53d8c6fc8b8a695803aeb15",
             "messageTitle": "UserGuide: Document the use of icon-size in boxes (#1021)",
             "messageBody": "",
-            "insertions": 32,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 32,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -204,8 +340,16 @@
             "hash": "3a91923db10b93ce379ce8a61c7aff81b67aeb24",
             "messageTitle": "Exclude *.md files from being copied over on build (#1010)",
             "messageBody": "",
-            "insertions": 13,
-            "deletions": 15
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 0,
+                "deletions": 2
+              },
+              "js": {
+                "insertions": 13,
+                "deletions": 13
+              }
+            }
           }
         ]
       },
@@ -218,8 +362,16 @@
             "hash": "e67dce102b72c32e4261455118c1468274faabd9",
             "messageTitle": "Allow using \u0027none\u0027 footer attribute in frontmatter (#1002)",
             "messageBody": "",
-            "insertions": 26,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 6,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 20,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -232,43 +384,103 @@
             "hash": "ddaa948a09580949afcbdeafe8d364378805776c",
             "messageTitle": "Add copy code-block plugin (#1043)",
             "messageBody": "",
-            "insertions": 203,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 126,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 20,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 56,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "8829cec737825a334770640d8b4fa302e443efa2",
             "messageTitle": "Enable AppVeyor CI (#1040)",
             "messageBody": "",
-            "insertions": 18,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "yml": {
+                "insertions": 18,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "7102a9664f8710cdc77fcd7a67c9336d8bab4010",
             "messageTitle": "Custom timezone for built-in timestamp (#1073)",
             "messageBody": "",
-            "insertions": 828,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 3,
+                "deletions": 1
+              },
+              "md": {
+                "insertions": 813,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 11,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "2255ece565751a519225936255bb531b8bcbb97a",
             "messageTitle": "Remove dynamic include feature (#1037)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 112
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 2,
+                "deletions": 8
+              },
+              "js": {
+                "insertions": 0,
+                "deletions": 104
+              }
+            }
           },
           {
             "hash": "481b811ecba96fbfbf2949237f91828917792d57",
             "messageTitle": "Fix hrefs for headings with angular brackets (#1089)",
             "messageBody": "```\r\nThe hrefs of headings with angular brackets are incorrect because\r\nmarkdown-it escapes the characters to \"\u0026lt;\" and \"\u0026gt;\" and the\r\nsubsequent slugify operation converts it to \"and-lt\" or \"and-gt\".\r\n\r\nLet\u0027s fix this by removing the occurrences of the strings \r\n\"\u0026lt;\" and \"\u0026gt;\" before the slugify operation\r\n```",
-            "insertions": 3,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 3,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "4ad51d037739c751e5e7c54ba7c8b865067ed5a1",
             "messageTitle": "Upgrade js-beautify and provide option to turn it off (#1116)",
             "messageBody": "MarkBind currently runs js-beautify v1.7.5, although later versions\r\nof the library have been released (the latest version as of this PR\r\nis v1.10.3).\r\n\r\nLet\u0027s upgrade js-beautify to the latest version.\r\n\r\nTurning off js-beautify can improve the performance of MarkBind\u0027s \r\nbuild process. Let\u0027s also give the user the option to turn off js-beautify (whenever\r\nnecessary) through an option in site.json.",
-            "insertions": 39,
-            "deletions": 21
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 12,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 3,
+                "deletions": 3
+              },
+              "js": {
+                "insertions": 24,
+                "deletions": 18
+              }
+            }
           }
         ]
       }
@@ -283,8 +495,12 @@
             "hash": "c5a8df275189295560230f2fa981e2efaf32a122",
             "messageTitle": "Add \u0027_site\u0027 to the ignored folders in site.json (#1046)",
             "messageBody": "",
-            "insertions": 3,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 3,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -297,8 +513,12 @@
             "hash": "b1556eb86bf022a0d61ed98f2676abd1cf7d6b1f",
             "messageTitle": "Make highlighting bold (#1045)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -311,50 +531,86 @@
             "hash": "0e83e7dfc71bac167bbb7a59913d5a8a94609f97",
             "messageTitle": "Add pageNav to Using Plugins Page (#1062)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 1,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "85aa4f101fccfc370cfea8bd860acbe450211b94",
             "messageTitle": "Add example for using multiple features in code-blocks (#1102)",
             "messageBody": "The user will have to try out how to add multiple features when using \r\ncode blocks.\r\n\r\nLet\u0027s add an example regarding how to use multiple features in code\r\nblocks so that it\u0027s easier for the user to understand.",
-            "insertions": 26,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 26,
+                "deletions": 2
+              }
+            }
           },
           {
             "hash": "ab430ce99914dc9cec55f6b71422c1069d3c387a",
             "messageTitle": "Convert code in boxes to code block (#1086)",
             "messageBody": "Let\u0027s convert \u003ccode\u003e boxes to code blocks to better showcase the \r\nfeature",
-            "insertions": 49,
-            "deletions": 68
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 49,
+                "deletions": 68
+              }
+            }
           },
           {
             "hash": "ac313041018ffa7bac0597fc09142ee9292073f2",
             "messageTitle": "Fix pageNav in tweaking the page structure (#1127)",
             "messageBody": "The pageNav for tweaking the page structure is missing filter tags.\r\n\r\nLet\u0027s fix the headings in filter tags and the pageNav so that pageNav\r\ndisplay filter tags appropriately.",
-            "insertions": 8,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 5,
+                "deletions": 3
+              },
+              "md": {
+                "insertions": 3,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "7a46aa01db0eff5698a32bc17bde8a1f106e2a1b",
             "messageTitle": "Fix bug in Search for UG and DG (#1147)",
             "messageBody": "",
-            "insertions": 6,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 6,
+                "deletions": 2
+              }
+            }
           },
           {
             "hash": "b02f0656c73d749a57363658a1ad00ce6d08bf34",
             "messageTitle": "Remove fixed bugs from test\\functional\\test_site\\bugs\\index.md` (#1148)",
             "messageBody": "",
-            "insertions": 28,
-            "deletions": 32
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 20,
+                "deletions": 32
+              },
+              "json": {
+                "insertions": 8,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "9e7a46079f8cee4f95a9335903e10eb76b4dfaa1",
             "messageTitle": "Document adding new site content in DG (#1153)",
             "messageBody": "New developers contributing a new feature to MarkBind have a hard time \r\nadding new content to the test site.\r\n\r\nLet\u0027s add documentation regarding how to do so.",
-            "insertions": 35,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 35,
+                "deletions": 3
+              }
+            }
           }
         ]
       },
@@ -367,15 +623,23 @@
             "hash": "705949aeac10dc423cf78f1f40027401e9fc300d",
             "messageTitle": "User Guide: Fix link to user profile (#1197)",
             "messageBody": "The link to a contributor\u0027s profile is pointing to someone\r\nelse\u0027s profile.\r\n\r\nLet\u0027s fix the link by pointing to the correct profile.",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "18cf0912473ea9ec3fe0eedc5ce0fe2f6c0a2faa",
             "messageTitle": "Fix typo in fullSyntaxReference (#1195)",
             "messageBody": "There is a typo in fullSyntaxReference.md for the component\r\nheading.\r\n\r\nLet\u0027s fix the typo and add angular brackets to make it consistent\r\nwith the other components.",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       }
@@ -390,8 +654,12 @@
             "hash": "f1bf5718ccc92126c430b51b14b33c05c21bd336",
             "messageTitle": "Allow stylelint to ignore test sites (#1011)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "json": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -404,8 +672,28 @@
             "hash": "c17a61539ca08794af30473c47db3d1cd0f5dac4",
             "messageTitle": "Add support for Octicons (#1000)",
             "messageBody": "",
-            "insertions": 51,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 10,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 9,
+                "deletions": 3
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 30,
+                "deletions": 3
+              },
+              "njk": {
+                "insertions": 1,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -418,8 +706,12 @@
             "hash": "5a603f5fb6d53e32cbe460dd0af201fe2d484329",
             "messageTitle": "Fix octicon sizing (#1132)",
             "messageBody": "",
-            "insertions": 6,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 6,
+                "deletions": 0
+              }
+            }
           }
         ]
       }
@@ -438,8 +730,12 @@
             "hash": "dea0559d8181bfe5bd639e21952324f5cd983ad6",
             "messageTitle": "Update UG with minimum required Node version (#953)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 2,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -452,8 +748,12 @@
             "hash": "2a4963b5299aa676abeb574b393fefac0496e27e",
             "messageTitle": "Update docs for light color scheme box (#977)",
             "messageBody": "",
-            "insertions": 56,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 56,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -466,8 +766,12 @@
             "hash": "28d039f669127a8227da9c1cabe2e7f1099f8def",
             "messageTitle": "Fix fontawsome icons don\u0027t show underlines to indicate modal/tooltip (#1133)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 2,
+                "deletions": 3
+              }
+            }
           }
         ]
       }
@@ -482,8 +786,16 @@
             "hash": "b6e5acae8601e7f279fba73f6b8fa4144da50841",
             "messageTitle": "Update docs and tests for heading addition to box (#952)",
             "messageBody": "",
-            "insertions": 21,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 10,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 11,
+                "deletions": 2
+              }
+            }
           }
         ]
       },
@@ -496,15 +808,31 @@
             "hash": "211cd6e8e77d9175bb03b4c70daef7e145d65168",
             "messageTitle": "Allow live reloading for plugin defined sources (#955)",
             "messageBody": "",
-            "insertions": 82,
-            "deletions": 12
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 35,
+                "deletions": 1
+              },
+              "js": {
+                "insertions": 47,
+                "deletions": 11
+              }
+            }
           },
           {
             "hash": "606eb8aae15e7170fb85aa9feb8dd5722e5f9a0f",
             "messageTitle": "Update docs and tests for minimal panels addition (#960)",
             "messageBody": "",
-            "insertions": 25,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 12,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 13,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -517,8 +845,12 @@
             "hash": "0e61ed45329ac5ac0ed761057ea9e066ad1e787e",
             "messageTitle": "Update missing documentation for minimal panels (#961)",
             "messageBody": "",
-            "insertions": 4,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 4,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -531,8 +863,16 @@
             "hash": "0acd97c3fd836ad49442f10e678b660d75924124",
             "messageTitle": "Fix plugin live reloading for relative file paths (#974)",
             "messageBody": "Relative file paths provided by plugins are not resolved against the\r\nprocessed page or included file.\r\n\r\nThis results in live reloading failing for pages not in the root\r\ndirectory.\r\n\r\nLet\u0027s fix this, and also rewrite plugin source collection, allowing\r\nplugins to simply define tags and corresponding source attributes\r\nto watch.\r\n\r\nThis moves the logic for checking whether the source is part of an\r\nincluded file to the main markbind repo, reducing potential code\r\nduplication and simplifying the api.",
-            "insertions": 161,
-            "deletions": 23
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 17,
+                "deletions": 11
+              },
+              "js": {
+                "insertions": 144,
+                "deletions": 12
+              }
+            }
           }
         ]
       },
@@ -545,64 +885,116 @@
             "hash": "1b286173d924e9e34a94de4133eb32f88fc98ed5",
             "messageTitle": "Fix heading indexing for pure html headings",
             "messageBody": "",
-            "insertions": 53,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 53,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "c0d6f3fff2af5c64186fcbe78fcb89c653bf1280",
             "messageTitle": "Update docs for fixing html heading indexing",
             "messageBody": "",
-            "insertions": 25,
-            "deletions": 18
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 24,
+                "deletions": 17
+              },
+              "md": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "18a89d9eababaa32d2459a274a4128aaa68c9cf2",
             "messageTitle": "Import markdown-it parser variant from /vue-strap",
             "messageBody": "Markdown-it in /vue-strap uses different plugins for parsing\nits markdown content inside component attributes.\n\nIn preparation for moving markdown-it parsing to /markbind, let\u0027s move\nthe markdown-it variant from /vue-strap over to maintain parity with the\npast markdown rendering behaviour for attributes in vue components.\nLet\u0027s also restructure the directory hierarchy for markdown-it in here,\nto reduce code duplication between the two variants.\n",
-            "insertions": 78,
-            "deletions": 19
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 15,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 14,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 49,
+                "deletions": 19
+              }
+            }
           },
           {
             "hash": "0114e66f17aaba6fa1f242130f424120441756dd",
             "messageTitle": "Implement per component markdown attribute parsing",
             "messageBody": "Markdown passed in attributes are being rendered in the client.\n\nThis results in a dependency on the markdown parsing library\n(markdown-it) on the client, bloating the resulting client bundle size.\nIt also slows webpage loading, especially on older devices.\nMoreover, /markbind already parses some amount of markdown in attributes\nfor other purposes when building the site. This results in a less\ncohesive codebase.\n\nLet\u0027s move all markdown-it parsing from /vue-strap to /markbind,\npassing the rendered html into vue slots.\nAdditionally, let\u0027s conveniently standardise the attribute naming for\nthese components at the same time.\n",
-            "insertions": 255,
-            "deletions": 10
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 255,
+                "deletions": 10
+              }
+            }
           },
           {
             "hash": "91804319a6b06172682b82b654bb102fb36f069d",
             "messageTitle": "Adapt panel header indexing",
             "messageBody": "Markdown in attributes are now being parsed at build time.\n\nLet’s adapt the panel header indexing, so that it appropriately\nindexes the header in the correct slot.\n",
-            "insertions": 62,
-            "deletions": 45
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 62,
+                "deletions": 45
+              }
+            }
           },
           {
             "hash": "59e0a3eb80051035e479f2d03137b5dfdd7c63f0",
             "messageTitle": "Add unit tests for ComponentParser",
             "messageBody": "",
-            "insertions": 349,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 349,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "c99bf2f5a5cd1d1a1b610afa42620f32ac7b3d1f",
             "messageTitle": "Update input test files for attribute names update",
             "messageBody": "",
-            "insertions": 12,
-            "deletions": 12
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 12,
+                "deletions": 12
+              }
+            }
           },
           {
             "hash": "ba9ad886719e7f266a5d38ef97909cfe8db15f0d",
             "messageTitle": "Update expected test files",
             "messageBody": "Moving markdown parsing to build time results in markdown\nin attributes being parsed into html in the dom.\n\nLet’s update the expected test files to reflect these changes.\n",
-            "insertions": 0,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "json": {
+                "insertions": 0,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "26c36a4835866950bbd2627620a38d624c8aaca1",
             "messageTitle": "Update docs for attribute name standardisation",
             "messageBody": "",
-            "insertions": 89,
-            "deletions": 80
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 73,
+                "deletions": 71
+              },
+              "md": {
+                "insertions": 16,
+                "deletions": 9
+              }
+            }
           }
         ]
       },
@@ -615,15 +1007,27 @@
             "hash": "a1458b2350bfb5a2c7597e91ecd73506cc7abc44",
             "messageTitle": "Remove extra blank lines from page.njk output (#1005)",
             "messageBody": "",
-            "insertions": 12,
-            "deletions": 21
+            "fileTypesAndContributionMap": {
+              "njk": {
+                "insertions": 12,
+                "deletions": 21
+              }
+            }
           },
           {
             "hash": "0dde42daf237c1934952a7ba6f82666bce8830e3",
             "messageTitle": "Restructure generated site data for searchbar ui (#1006)",
             "messageBody": "Keywords tied to a heading are appended to the heading with a prepending\r\n\u0027|\u0027 character.\r\nThis is so that the \u0027|\u0027 character would serve as a visual separator\r\nbetween the heading and the keyword.\r\n\r\nHowever, it is thus not possible to extract a keyword from its heading\r\ndeterministically, as a heading can also include the \u0027|\u0027 character.\r\n\r\nLet\u0027s move the keywords to its own field, allowing the searchbar to\r\nextract a heading\u0027s keyword from it.",
-            "insertions": 32,
-            "deletions": 34
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 5,
+                "deletions": 13
+              },
+              "json": {
+                "insertions": 27,
+                "deletions": 21
+              }
+            }
           }
         ]
       },
@@ -636,8 +1040,16 @@
             "hash": "5a99762f37c3ff66b6ecd01fe6225c32779e6bb0",
             "messageTitle": "Implement box markdown header attributes parsing (#1025)",
             "messageBody": "",
-            "insertions": 44,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 6,
+                "deletions": 6
+              },
+              "js": {
+                "insertions": 38,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -650,106 +1062,210 @@
             "hash": "6d57ffc2ab682d2bb6b07d640ebc37103bccb514",
             "messageTitle": "Refactor preprocess and url processing functions (#1026)",
             "messageBody": "The parser class houses a large number of functions.\r\nThis can be daunting for newer developers to the project, and decreases\r\nmaintainability of the code.\r\n\r\nLet’s start by modularising the preprocess and url processing functions\r\ninto separate files.\r\nLet’s also enhance some in-code documentation for these functions.\r\nSome of these functions can also be abstracted into smaller units of\r\nfunctionality, increasing the maintainability of the code.",
-            "insertions": 603,
-            "deletions": 372
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 603,
+                "deletions": 372
+              }
+            }
           },
           {
             "hash": "9060f5666ab442028a6eeb10e161710e43c9e898",
             "messageTitle": "Implement an api to ignore content in certain tags (#1047)",
             "messageBody": "The parsers MarkBind uses parses content in html tags as html\r\nor markdown respectively.\r\nThis makes it difficult to add custom components that utilize\r\nconflicting syntax.\r\n\r\nLet’s add an interface to ignore content in certain special tags.\r\nThis interface is also exposed to plugins as the getSpecialTags option.",
-            "insertions": 507,
-            "deletions": 63
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 104,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 379,
+                "deletions": 63
+              },
+              "json": {
+                "insertions": 24,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "89e63fbd4a31fae5c9400a852d4c298ce6fdbc9b",
             "messageTitle": "Implement lazy page building for markbind serve (#1038)",
             "messageBody": "During live reload, changes to a source file rebuilds all files that are\r\ndependent on it.\r\n\r\nIn addition, rebuilding all dependent source files slows the live reload\r\nprocess, leading to a less pleasant user experience.\r\n\r\nIn addition, when running markbind serve, all pages are built and\r\nrendered initially.\r\nThis significantly slows down the time to first page load, which can\r\nbe substantial when the number of source files is huge.\r\n\r\nLet\u0027s implement lazy page building in these operations, which is opt-in\r\nusing the existing -o \u003cfile\u003e or --one-page \u003cfile\u003e flags for the markbind\r\nserve command.\r\n\r\nChanges to a source file will only rebuild pages that are dependent on\r\nit, and is currently being viewed by the author. Other pages not being\r\nviewed by the author are rebuilt when the author navigates to them.\r\nIn addition, only the landing page is built initially when serving.\r\nSubsequent pages are built when the author navigates to them.",
-            "insertions": 337,
-            "deletions": 79
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 67,
+                "deletions": 20
+              },
+              "js": {
+                "insertions": 270,
+                "deletions": 59
+              }
+            }
           },
           {
             "hash": "ecbc6022a41bdadc1be538d3c8567602276ce3d6",
             "messageTitle": "Fix refactor to processDynamicResources (#1092)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 2,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "643804e0f3412e4ec8434a28cb3b5e66b3a87c80",
             "messageTitle": "Fix flex shrink not applying in content wrapper (#1135)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "d8b51b9fe34708d6926bdb85350963ad6c9729bb",
             "messageTitle": "Unify markdown-it parser variants (#1056)",
             "messageBody": "The markdown-it parser used for attributes in components\r\nuses a different set of plugins from the one used throughout markbind.\r\n\r\nLet\u0027s unify the two variants to reduce the potential amount of\r\nmaintainence needed, and standardise the usable markdown\r\nsyntax throughout markbind.",
-            "insertions": 24,
-            "deletions": 43
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 13,
+                "deletions": 6
+              },
+              "js": {
+                "insertions": 11,
+                "deletions": 37
+              }
+            }
           },
           {
             "hash": "68691eb4b8bf4dd11b218e2aa9af6392f64cf4bb",
             "messageTitle": "Simplify baseUrl resolving process (#1087)",
             "messageBody": "BaseUrls for static includes are rendered once during pre-processing\r\nand another time during resolveBaseUrls.\r\nThe rebaseReference subroutine used during resolveBaseUrls also has\r\nsome unnecessary complexity.\r\nIn addition, in calculateNewBaseUrls, the relative baseUrl for doubly\r\nnested subsites are not resolved correctly.\r\n\r\nLet’s remove the rendering during pre-processing, unifying where baseUrl\r\nis resolved for statically included content.\r\nLet’s also refactor the rebaseReference method, simplifying its logic.\r\nAt the same time, we can standardise usages of the calculateNewBaseUrls\r\nmethod to calculateImmediateParentSitePath, and fix the relative baseUrl\r\nreturned for doubly nested subsites.",
-            "insertions": 154,
-            "deletions": 140
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 29,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 94,
+                "deletions": 140
+              },
+              "json": {
+                "insertions": 31,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "193c89551cb176d9c881ec059d6d73227b738fd8",
             "messageTitle": "Allow special tags to be self-closing (#1101)",
             "messageBody": "Unlike the html script and style special tags, plugin authors may want\r\ninjected special tags to be able to be self-closing as well.\r\nThis can help unify the syntax used in the plugin, which makes for\r\nbetter author usability of the plugin.\r\n\r\nLet’s allow injected special tags to be self-closing.\r\nLet’s also do so for the script and style tags, which would be\r\nexpanded to their normal form after rendering.",
-            "insertions": 39,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 14,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 25,
+                "deletions": 2
+              }
+            }
           },
           {
             "hash": "c4eaf03f26f4916168fb4ec478415d33c228190a",
             "messageTitle": "Update test files (#1138)",
             "messageBody": "",
-            "insertions": 2,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
           },
           {
             "hash": "5096be174b53f1750b271f7a63fff759590cbf45",
             "messageTitle": "Fix lazy reload for urls without index (#1110)",
             "messageBody": "Lazy live reloading uses the file extension of the request url to\r\ndetermine whether the request is for a html page, and not from a\r\ndynamic include.\r\nHence, requests for index.html with urls that do not end with\r\nindex.html fail to be detected.\r\n\r\nLet’s add extra processing to detect such requests.",
-            "insertions": 27,
-            "deletions": 10
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 27,
+                "deletions": 10
+              }
+            }
           },
           {
             "hash": "bf1239de3d050fc37d07587e1aeaf9aeab552273",
             "messageTitle": "Allow an array for specifying page src or glob (#1118)",
             "messageBody": "The site configuration does not allow using an array for specifying\r\npages in the src or glob property.\r\nThe method for collecting the addressable pages can also be\r\nmade slightly simpler in the process.\r\n\r\nLet’s do so, reducing the amount of repeated configuration the\r\nauthor potentially needs to write.\r\nLet’s also simplify the method for collecting addressable pages\r\nin the process.",
-            "insertions": 66,
-            "deletions": 110
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 5,
+                "deletions": 2
+              },
+              "json": {
+                "insertions": 37,
+                "deletions": 87
+              },
+              "js": {
+                "insertions": 24,
+                "deletions": 21
+              }
+            }
           },
           {
             "hash": "a9f49ca326e80e25baf3f4cfa659b1215af28f7c",
             "messageTitle": "Fix baseUrl not working in include src attribute (#1088)",
             "messageBody": "While pre-processing includes or panels, we have not yet resolved\r\nthe baseUrl of the src attribute.\r\nThis causes markbind to fail in finding the source file, since baseUrl\r\nremains in the src attribute.\r\n\r\nLet’s resolve the baseUrl for such cases first, allowing the user to use\r\nthe baseUrl attribute in include and panel src attributes.",
-            "insertions": 42,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 24,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 18,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "9e2ee7cb89e7dc39e99f6997d5a89e20f921bd56",
             "messageTitle": "Normalize inline puml line ending before hashing (#1174)",
             "messageBody": "",
-            "insertions": 3,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 3,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "7c3c1605c17c0dbd49bcb1772bca71833ac6997f",
             "messageTitle": "Expand test extensions and fix whitespace checks (#1156)",
             "messageBody": "The diffing utilities used for functional tests only check for\r\ndifferences in html files and the siteData json file.\r\nAdditionally, the diffs are whitespace and newline insensitive, which\r\ncan cause subtle, unintended changes to go unnoticed.\r\n\r\nLet\u0027s expand the range of files to diff, using the isTextOrBinary\r\npackage as a first guard against diffing binary files.\r\nLet\u0027s add additional constants that guard against binary files not\r\nrecognised by the package, or misrecognised as such.\r\n\r\nLet\u0027s also change the diffing function used to be whitespace and\r\nnewline sensitive.\r\nSince whitespaces and newlines now appear in the diffs, let\u0027s also\r\nimprove the diff printing utilities to account for it.",
-            "insertions": 119,
-            "deletions": 89
+            "fileTypesAndContributionMap": {
+              "json": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 118,
+                "deletions": 89
+              }
+            }
           },
           {
             "hash": "da8c0f5fbf493728a292cde304cf3e1515273356",
             "messageTitle": "Standardise code style and remove eslint disables (#1180)",
             "messageBody": "",
-            "insertions": 183,
-            "deletions": 285
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 183,
+                "deletions": 285
+              }
+            }
           }
         ]
       },
@@ -762,8 +1278,12 @@
             "hash": "bdc4b0cf5f160674931286b52b6d0a01976d5654",
             "messageTitle": "Allow variable tags to contain malformed xml (#1193)",
             "messageBody": "With the special tags patch, variables are able to contain custom\r\ncontent possibly containing malformed xml.\r\n\r\nLet’s add variable to the list of special tags to do so.",
-            "insertions": 9,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 9,
+                "deletions": 6
+              }
+            }
           }
         ]
       },
@@ -776,8 +1296,12 @@
             "hash": "3934f3e1c527f2d7e0155b50e4fcaa3f591ebc69",
             "messageTitle": "Add SiteConfig model (#1175)",
             "messageBody": "The undefined properties of the site configuration object of Site are\r\nlazily initialised throughout site generation.\r\nThis decreases the maintainability of site configuration logic.\r\n\r\nLet’s consolidate all such initialisation to a new SiteConfig model.",
-            "insertions": 128,
-            "deletions": 39
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 128,
+                "deletions": 39
+              }
+            }
           }
         ]
       }
@@ -793,8 +1317,12 @@
             "hash": "e22fb283cdacb78a7a98ca7eca84bc2e51dc1c86",
             "messageTitle": "Change number emoji to use unicode characters (#1016)",
             "messageBody": "",
-            "insertions": 13,
-            "deletions": 11
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 13,
+                "deletions": 11
+              }
+            }
           }
         ]
       },
@@ -807,8 +1335,12 @@
             "hash": "de991ba3b10197b39b3b1071a9845fc0c5c96025",
             "messageTitle": "Use path.join instead of string interpolation (#1052)",
             "messageBody": "Assuming forward slashes may cause errors on windows systems",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       }
@@ -823,8 +1355,20 @@
             "hash": "c854937051f1222e4e68bf3659dc0b53196c4d8a",
             "messageTitle": "Add language indicator to code blocks (#957)",
             "messageBody": "",
-            "insertions": 120,
-            "deletions": 5
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 60,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "js": {
+                "insertions": 59,
+                "deletions": 4
+              }
+            }
           }
         ]
       },
@@ -837,43 +1381,91 @@
             "hash": "bc03a0b4dc79eee33c1fda0ed864d637803171b6",
             "messageTitle": "Documentation for Implement no-* attributes for \u003cbox\u003e  (#1042)",
             "messageBody": "",
-            "insertions": 38,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 38,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "65809a95ff5d4f4d98e4b879fe55adac96c6ea40",
             "messageTitle": "Add heading and line highlighting to code blocks (#1034)",
             "messageBody": "",
-            "insertions": 221,
-            "deletions": 12
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 90,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 86,
+                "deletions": 6
+              },
+              "js": {
+                "insertions": 45,
+                "deletions": 6
+              }
+            }
           },
           {
             "hash": "fe53950941237105eb9d3ae122ab777e4836b33d",
             "messageTitle": "Add warnings for conflicting/deprecated component attribs (#1057)",
             "messageBody": "",
-            "insertions": 91,
-            "deletions": 10
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 91,
+                "deletions": 10
+              }
+            }
           },
           {
             "hash": "2b22118368a4ba70ce366b5a19dd0b655f8ce015",
             "messageTitle": "Code blocks: Implement inline markdown support for heading (#1137)",
             "messageBody": "",
-            "insertions": 50,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 12,
+                "deletions": 0
+              },
+              "mbdf": {
+                "insertions": 19,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 16,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 3,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "79259124a8bd714ecefe36aafd8276ac31e70218",
             "messageTitle": "Docs: Add contributing.md (#1139)",
             "messageBody": "",
-            "insertions": 161,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 160,
+                "deletions": 1
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "c4d8526938b923c802d13620e5ef0ccedf0f5176",
             "messageTitle": "Update tests for 2.13.1 (#1169)",
             "messageBody": "",
-            "insertions": 4,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 4,
+                "deletions": 6
+              }
+            }
           }
         ]
       },
@@ -886,15 +1478,27 @@
             "hash": "a3b7a071796716991a765c1e3267a084e0160972",
             "messageTitle": "Fix links in contributing.md (#1170)",
             "messageBody": "Fix baseurl to baseUrl and added Code of Conduct to siteNav",
-            "insertions": 6,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 5,
+                "deletions": 3
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "2c2c43c5d2e13dcc42c5dd3eeb4f2daa429ccad3",
             "messageTitle": "User Guide: Update members in About Us (#1186)",
             "messageBody": "",
-            "insertions": 19,
-            "deletions": 5
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 19,
+                "deletions": 5
+              }
+            }
           }
         ]
       },
@@ -907,8 +1511,16 @@
             "hash": "da845ddb226bcb414b0672742b32465a18ab5888",
             "messageTitle": "Remove duplicate code in syntax doc (#1168)",
             "messageBody": "",
-            "insertions": 298,
-            "deletions": 1180
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 248,
+                "deletions": 1165
+              },
+              "md": {
+                "insertions": 50,
+                "deletions": 15
+              }
+            }
           }
         ]
       }
@@ -923,8 +1535,12 @@
             "hash": "146bbb46b7840dda97a44c928605b7eb6e4eb3b6",
             "messageTitle": "Mention development environment prerequisites in DG (#965)",
             "messageBody": "",
-            "insertions": 17,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 17,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -937,15 +1553,31 @@
             "hash": "2b378dbff80b12ab509bbd4c8b482e5ef887bfef",
             "messageTitle": "Remove dependency on EJS (#990)",
             "messageBody": "MarkBind is using two templating engines (i.e. EJS and Nunjucks) while\r\nNunjucks is essential to the functionality since it\u0027s user accessible,\r\nEJS seems a bit redundant and can be fully replaced by Nunjucks.\r\n\r\n* Re-write page.ejs with Nunjucks grammar\r\n* Make necessary changes to remove dependency on EJS\r\n* Change test on nested variable reference as initial Nunjucks renderer\r\n  is set to not auto-escape",
-            "insertions": 143,
-            "deletions": 72
+            "fileTypesAndContributionMap": {
+              "json": {
+                "insertions": 0,
+                "deletions": 1
+              },
+              "js": {
+                "insertions": 75,
+                "deletions": 71
+              },
+              "njk": {
+                "insertions": 68,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "af47ed018176216e10b8a7a510c85e9465714b41",
             "messageTitle": "Adopt ES6 class syntax (#979)",
             "messageBody": "",
-            "insertions": 2737,
-            "deletions": 2662
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 2737,
+                "deletions": 2662
+              }
+            }
           }
         ]
       },
@@ -958,8 +1590,12 @@
             "hash": "d6654485a5743cab146af00157d0b8bf68f1aa98",
             "messageTitle": "doc: Update seamless style boxes (#1019)",
             "messageBody": "",
-            "insertions": 60,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 60,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -972,15 +1608,35 @@
             "hash": "b9009625f73d16497ffda65a780b6cd65ae36a01",
             "messageTitle": "Make the position of top navbar fixed (#982)",
             "messageBody": "",
-            "insertions": 39,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 8,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 31,
+                "deletions": 0
+              }
+            }
           },
           {
             "hash": "b90f9aad108e23c1558fc40cfcc7dcc8f62a4723",
             "messageTitle": "Support markdown for header attr in dropdown (#1029)",
             "messageBody": "",
-            "insertions": 116,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 4,
+                "deletions": 3
+              },
+              "md": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 108,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -993,50 +1649,86 @@
             "hash": "040bf7e1931c5e4e408a0fcaaf36fd81e4815619",
             "messageTitle": "Fixed navbar no longer covers modals (#1070)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "461697bf00d587265a63e503fdd8b59d7bf24498",
             "messageTitle": "Update documentation on icon slot for boxes (#1123)",
             "messageBody": "* Update documentation on icon slot for boxes\r\n\r\n* Update the examples for using icon slot for boxes.\r\n\r\n* Resolve comments.",
-            "insertions": 53,
-            "deletions": 4
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 49,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 4,
+                "deletions": 4
+              }
+            }
           },
           {
             "hash": "4de030042eec05ba145d6111397518e2bb956474",
             "messageTitle": "Update navbar doc (#1146)",
             "messageBody": "",
-            "insertions": 6,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 6,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "bbe3e4f266266573120e75775590e6969ac2536f",
             "messageTitle": "Update devGuide.md (#1158)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           },
           {
             "hash": "b956db6a136350f7a7be937150bfc9debe29689c",
             "messageTitle": "Add JSDoc for pageconfig (#1039)",
             "messageBody": "",
-            "insertions": 252,
-            "deletions": 12
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 252,
+                "deletions": 12
+              }
+            }
           },
           {
             "hash": "dab3a28e90a0038d7090e13bae1408d9c0a07909",
             "messageTitle": "Add class support for octicons (#1122)",
             "messageBody": "",
-            "insertions": 10,
-            "deletions": 3
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 2,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 8,
+                "deletions": 3
+              }
+            }
           },
           {
             "hash": "3f462c638f86889fc95668055ae952ed21159067",
             "messageTitle": "Move preprocessThumbnails to componentParser",
             "messageBody": "",
-            "insertions": 23,
-            "deletions": 28
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 23,
+                "deletions": 28
+              }
+            }
           }
         ]
       },
@@ -1049,8 +1741,12 @@
             "hash": "2e385d8fc02740c41bd051673ca64e56dbce1715",
             "messageTitle": "Add notes on merging conflicts (#1192)",
             "messageBody": "* Update docs/devGuide/maintainerGuide.md",
-            "insertions": 2,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 2,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -1063,8 +1759,24 @@
             "hash": "5db6351df9898ac2cfc958181ce694abe756a2d3",
             "messageTitle": "Fix anchor navigation in panel headers (#1191)",
             "messageBody": "To avoid dynamically injecting lots of dummy spans in a document with\r\nmany headings, let\u0027s generate these spans at build time.\r\n\r\nTo make anchor navigation function properly on panel headers, let\u0027s\r\nintroduce ::before element to card-container to make space for the\r\nfixed top nav.",
-            "insertions": 71,
-            "deletions": 42
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 3,
+                "deletions": 3
+              },
+              "mbdf": {
+                "insertions": 11,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 3,
+                "deletions": 3
+              },
+              "js": {
+                "insertions": 54,
+                "deletions": 36
+              }
+            }
           }
         ]
       }
@@ -1079,8 +1791,12 @@
             "hash": "d85a54f56ae1deb8883c0d74ff7ce6254f0e35e2",
             "messageTitle": "Fix expected help message to show header (#946)",
             "messageBody": "",
-            "insertions": 10,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 10,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -1093,8 +1809,12 @@
             "hash": "c3aac494affbb5a366c9d182a5501c663cc85c12",
             "messageTitle": "docs: Fix inconsistent navigation links whitespace (#1018)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 1
+            "fileTypesAndContributionMap": {
+              "njk": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
           }
         ]
       },
@@ -1107,8 +1827,16 @@
             "hash": "6b44e3c9d9300e2f50566de94fa2da15a9088f2d",
             "messageTitle": "Add help usage to user guide (#996)",
             "messageBody": "",
-            "insertions": 103,
-            "deletions": 81
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 85,
+                "deletions": 63
+              },
+              "js": {
+                "insertions": 18,
+                "deletions": 18
+              }
+            }
           }
         ]
       }

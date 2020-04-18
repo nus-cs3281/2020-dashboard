@@ -10,8 +10,12 @@
             "hash": "ca60414520cd601d92151d74ee60557a6c09cb55",
             "messageTitle": "Bug fix for background highlight and point highlight overwriting each other (#2006)",
             "messageBody": "",
-            "insertions": 1,
-            "deletions": 12
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 1,
+                "deletions": 12
+              }
+            }
           }
         ]
       },
@@ -24,8 +28,12 @@
             "hash": "4dd87ba51a3f84237a52278d3ff83455fc490082",
             "messageTitle": "Add preview for background highlight points (#2011)",
             "messageBody": "",
-            "insertions": 6,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 6,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -38,8 +46,12 @@
             "hash": "d4df0eefa5c8427073ef4975a094f3444c7e3c06",
             "messageTitle": "#1681 Optimize sync selection pane ui (#2019)",
             "messageBody": "* Reduce vertical margin of sync panel\r\n\r\n* Adjust some margin and size to make it look nicer\r\n\r\n* Adjust margins\r\n\r\n* Restore image size, reduce image margins",
-            "insertions": 2,
-            "deletions": 2
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
           }
         ]
       }
@@ -61,8 +73,12 @@
             "hash": "02348be069eb82ed8bfa1d58643dde0d7151b8aa",
             "messageTitle": "#1597 copying overrides clipboard (#2007)",
             "messageBody": "* Add RestoreClipboardAfterAction to Spotlight\r\n\r\n* Restore clipboard after blurring actions\r\n\r\n* Return 0 instead of null after adding spotlight effect\r\n\r\n* Restore clipboard after recolor actions\r\n\r\n* Shift clipboard restoration for spotlight to action handler\r\n\r\n* Restore clipboard after agenda lab actions\r\n\r\n* Restore clipboard after synclab actions \u0026 use ClipboardRestoreSuccess constant\r\n\r\n* SyncLabShapeStorage: Remove trailing whitespace in line 138\r\n\r\n* ActionFramework.ZoomLab: Restore clipboard after actions\r\n\r\n* ZoomLab: Fix bug introduced by restoring clipboard\r\n\r\n* Spotlight.cs: Remove redundant import\r\n\r\n* ZoomLab: Retreive current presentation and slide from ActionHandler instead\r\n\r\nCo-authored-by: Bryan Lew \u003cblewjy@gmail.com\u003e\r\nCo-authored-by: yuhongherald \u003cyuhongherald@gmail.com\u003e\r\n",
-            "insertions": 166,
-            "deletions": 96
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 166,
+                "deletions": 96
+              }
+            }
           }
         ]
       },
@@ -75,8 +91,12 @@
             "hash": "b5cf9962a6554ac42d195abe2a85b60992379094",
             "messageTitle": "#1370 paste into group exception after undo (#2015)",
             "messageBody": "",
-            "insertions": 3,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 3,
+                "deletions": 0
+              }
+            }
           }
         ]
       },
@@ -89,8 +109,12 @@
             "hash": "8de0055e59d6f89a949d0fb1e260aa56da2d2437",
             "messageTitle": "#2002 replace with clipboard lose image quality (#2013)",
             "messageBody": "* Replace with clipboard: prevent degrading formats from being applied to pictures\r\n\r\n* ReplaceWithClipboard: add tests to verify non-degradation of pictures\r\n\r\n* PasteLabFT: uncomment erroneously commented out tests\r\n\r\n* PasteLabFT: Refactor AssertNotSame",
-            "insertions": 64,
-            "deletions": 6
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 64,
+                "deletions": 6
+              }
+            }
           }
         ]
       }
@@ -113,8 +137,12 @@
             "hash": "82019d0826f67057622d5dae2ac96c434908aa7e",
             "messageTitle": "#1918 UI bug in E-Learning Lab: Text overflow cannot scroll (#1998)",
             "messageBody": "* Create ShapeNameWidthConverter\r\n\r\nThis commit creates a class that helps calculate the exact width for\r\nthe textblock that displays the ShapeName for eLearningLab\u0027s side\r\npanel.\r\n\r\n* Allow auto wrapping of names for eLearningLab\r\n\r\n* Minor style fixes\r\n\r\n* Remove unnecessary naming\r\n\r\n* Replace repeated value with constant\r\n\r\n* Remove unused directive from ShapeNameWidthConverter.cs\r\n",
-            "insertions": 28,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "cs": {
+                "insertions": 28,
+                "deletions": 0
+              }
+            }
           }
         ]
       }

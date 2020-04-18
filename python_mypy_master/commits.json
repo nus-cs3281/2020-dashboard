@@ -10,8 +10,12 @@
             "hash": "41b40aa4fc7cdeb32f5ee4fec97f5379ebbe795d",
             "messageTitle": "Update common issues to include __init__ without arguments (#8303)",
             "messageBody": "This is the implication of #5677 where the return type of `__init__` is inferred given that at least one argument is typed.\r\n\r\nHowever, if no argument is present in `__init__`, `-\u003e None` becomes compulsory if we are to enable type-checking on that method without using `--check-untyped-defs` flag. I believe it is worth mentioning in the section of \"No errors reported for obviously wrong code\".\r\n",
-            "insertions": 26,
-            "deletions": 0
+            "fileTypesAndContributionMap": {
+              "rst": {
+                "insertions": 26,
+                "deletions": 0
+              }
+            }
           }
         ]
       }
