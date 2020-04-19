@@ -171,6 +171,35 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 194,
+        "deletions": 140,
+        "date": "2020-04-18",
+        "commitResults": [
+          {
+            "hash": "dabdf0e889595ebc0f3fd093238b8f1f77bb6300",
+            "messageTitle": "[#937] Use generic \u0027throw Exception\u0027 in all tests (#1072)",
+            "messageBody": "It is alright to use a generic \"throws Exception\" in test cases,\r\nas all exceptions result in failure.\r\n\r\nLet\u0027s use a generic \"throws Exception\" clause in all tests.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 96,
+                "deletions": 140
+              }
+            }
+          },
+          {
+            "hash": "e1a10e69576f8f16b93e805c0700623dd845553b",
+            "messageTitle": "[#1052] Add issue templates (#1063)",
+            "messageBody": "Issue templates help guide the user to provide the required information\r\nneeded for a developer to understand what is required. Templates for \r\nbug reports, feature requests and documentation changes help clarify \r\nthe motivation as well as summarize the expectations and requirements.\r\n\r\nLet\u0027s add issue templates for these issue types.",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 98,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "anubh-v": [
@@ -401,6 +430,24 @@
               "java": {
                 "insertions": 103,
                 "deletions": 17
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 56,
+        "deletions": 19,
+        "date": "2020-04-18",
+        "commitResults": [
+          {
+            "hash": "53167059d1c940e469d8a6861b156b6ecc06724e",
+            "messageTitle": "Docs: Update current members\u0027 list (#1208)",
+            "messageBody": "Let\u0027s update the list of current members to include\r\nthe new contributors.",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 56,
+                "deletions": 19
               }
             }
           }
@@ -1596,6 +1643,24 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 5,
+        "deletions": 32,
+        "date": "2020-04-19",
+        "commitResults": [
+          {
+            "hash": "831c36581718d873342d813421b4da9b2e4f0297",
+            "messageTitle": "[#1213] Regressions from #1059 (#1218)",
+            "messageBody": "With the recent merged PR #1059, the data related to sorting were not\r\npassed from v_summary to v_summary_charts, even though\r\nv_summary_charts uses those data within openTabZoom method.\r\n\r\nThis results in zoom tab to not be restorable at some situations, as it \r\nis unable to utilise the sorting options. However, the sorting options\r\nand the call for sortFiltered is actually not needed\r\nwithin the restoreZoomFiltered method. This is because the\r\nmatchZoomUser within restoreZoomFiltered will already filter out\r\nother groups/repos. Thus, there is no need to pass those props into\r\nv_summary_charts.\r\n\r\nLet\u0027s remove the unnecessary parameters and methods.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 5,
+                "deletions": 32
+              }
+            }
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -1715,21 +1780,21 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 32,
+    "ccyccyccy": 31,
     "Parcly-Taxel": 0,
     "niqiukun": 44,
     "openorclose": 0,
-    "yash-chowdhary": 11,
-    "anubh-v": 443,
+    "yash-chowdhary": 205,
+    "anubh-v": 494,
     "Tejas2805": 803,
     "dvrylc": 0,
-    "jamessspanggg": 1286,
+    "jamessspanggg": 1257,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 820,
+    "0blivious": 819,
     "hcwong": 0,
-    "ang-zeyu": 87,
+    "ang-zeyu": 85,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -1738,7 +1803,7 @@
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 28,
+      "java": 27,
       "js": 4,
       "scss": 0,
       "json": 0,
@@ -1786,11 +1851,11 @@
       "yml": 0
     },
     "yash-chowdhary": {
-      "java": 0,
+      "java": 96,
       "js": 11,
       "scss": 0,
       "json": 0,
-      "md": 0,
+      "md": 98,
       "py": 0,
       "pug": 0,
       "gradle": 0,
@@ -1798,11 +1863,11 @@
       "yml": 0
     },
     "anubh-v": {
-      "java": 409,
+      "java": 404,
       "js": 1,
       "scss": 30,
       "json": 0,
-      "md": 0,
+      "md": 56,
       "py": 0,
       "pug": 2,
       "gradle": 0,
@@ -1834,8 +1899,8 @@
       "yml": 0
     },
     "jamessspanggg": {
-      "java": 377,
-      "js": 414,
+      "java": 374,
+      "js": 388,
       "scss": 45,
       "json": 42,
       "md": 297,
@@ -1883,7 +1948,7 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 436,
+      "js": 435,
       "scss": 35,
       "json": 0,
       "md": 10,
@@ -1906,7 +1971,7 @@
       "yml": 0
     },
     "ang-zeyu": {
-      "java": 24,
+      "java": 22,
       "js": 41,
       "scss": 9,
       "json": 3,
@@ -1979,21 +2044,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 2.7338777,
+    "ccyccyccy": 2.7149525,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 63.737286,
+    "niqiukun": 63.289417,
     "openorclose": 0.0,
-    "yash-chowdhary": 18.412813,
-    "anubh-v": 443.38303,
-    "Tejas2805": 3906.3433,
+    "yash-chowdhary": 801.062,
+    "anubh-v": 474.4063,
+    "Tejas2805": 3879.9983,
     "dvrylc": 0.0,
-    "jamessspanggg": 4217.653,
+    "jamessspanggg": 4189.1,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 8039.4053,
+    "0blivious": 7985.447,
     "hcwong": 0.0,
-    "ang-zeyu": 91.1235,
+    "ang-zeyu": 90.4853,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
