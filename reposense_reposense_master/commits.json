@@ -72,6 +72,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 48,
+        "deletions": 37,
+        "date": "2020-04-21",
+        "commitResults": [
+          {
+            "hash": "238596bb01304259436912927656b0400ee449c4",
+            "messageTitle": "[#1178] Make github profile and repo hyperlinks more consistent (#1186)",
+            "messageBody": "When grouped by repo, the same icon to link to the repo is duplicated\r\nmultiple times for no reason. Also, the icon to link to the author\u0027s\r\nprofile is hard to find.\r\n\r\nWe can make the links more intuitive and consistent by putting links to\r\nthe author\u0027s profile beside author names, and links to repo beside repo\r\nnames.\r\n\r\nLet\u0027s reorder the icon group such that the hyperlinks are closer to the\r\nrespective names, as well as always showing the icons beside their\r\nrespective names. As this change heavily relies on the icons being\r\nresponsive, let\u0027s resolve issue #1191 as well to make use of\r\nvue-fontawesome to make the icons responsive.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 46,
+                "deletions": 37
+              },
+              "js": {
+                "insertions": 2,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -813,6 +835,24 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 18,
+        "deletions": 2,
+        "date": "2020-04-20",
+        "commitResults": [
+          {
+            "hash": "cf2c9f76b4fe32be5df82abc9d5e76cc80022b9a",
+            "messageTitle": "Deploy MarkBind site (#1222)",
+            "messageBody": "Our documentation has migrated to MarkBind, but users have no link \r\navailable to view the latest MarkBind documentation site from our \r\nmaster branch.\r\n\r\nLet\u0027s deploy the MarkBind site to gh pages, subsequently we can provide\r\nthe gh pages link in our README to provide the link to the users.",
+            "fileTypesAndContributionMap": {
+              "yml": {
+                "insertions": 18,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "dvrylc": [],
@@ -1300,6 +1340,32 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 25,
+        "deletions": 15,
+        "date": "2020-04-21",
+        "commitResults": [
+          {
+            "hash": "f31051249067ef181c004d360c25cc9b1a8150e4",
+            "messageTitle": "[#1170] Update total contribution to reflect based on checked file types (#1171)",
+            "messageBody": "When some filetypes are unchecked, the contribution bar length adjusts \r\nto the correct length, while the total line contribution of each group \r\ndoes not. Additionally, when toggling sorting controls to decreasing \r\norder of contribution, groups with higher total contribution are seen \r\nto be in lower position than groups with lower contribution. This may \r\ncause confusion among users.\r\n\r\nLet\u0027s update the total contribution to reflect the total contribution \r\namong those file types that are checked.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 2,
+                "deletions": 2
+              },
+              "md": {
+                "insertions": 3,
+                "deletions": 2
+              },
+              "js": {
+                "insertions": 20,
+                "deletions": 11
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -1661,6 +1727,32 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 96,
+        "deletions": 99,
+        "date": "2020-04-20",
+        "commitResults": [
+          {
+            "hash": "f040ad94dcf9b4e2b18ae6ea808b03286c8ba224",
+            "messageTitle": "[#1084] Authorship: append file type label (#1093)",
+            "messageBody": "The user has no means to see the file belong to which file group.\r\n\r\nThis can be improved by appending a label at the end of the file\r\ntitle to allow user get an easy view of which file type the file\r\nbelongs to.\r\n\r\nLet\u0027s append a coloured label at the end of the file title to indicate\r\nwhich file type the tile belongs to.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 35,
+                "deletions": 25
+              },
+              "scss": {
+                "insertions": 31,
+                "deletions": 54
+              },
+              "js": {
+                "insertions": 30,
+                "deletions": 20
+              }
+            }
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -1771,6 +1863,32 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 117,
+        "deletions": 48,
+        "date": "2020-04-20",
+        "commitResults": [
+          {
+            "hash": "84c133fa7dfd2ac5b9d65f75ba1c4da504490720",
+            "messageTitle": "[#910] Save authorship tab controls as hash parameters (#1057)",
+            "messageBody": "The filter and sorting options for the authorship tab are not persisted\r\nacross page reloads.\r\n\r\nThis results having to re-select the options whenever the page is\r\nreloaded, leading to a less pleasant user experience.\r\n\r\nLet\u0027s save the options for these controls as hash parameters, and use\r\nthem across page reloads when available.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 26,
+                "deletions": 7
+              },
+              "scss": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 87,
+                "deletions": 41
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -1780,21 +1898,21 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 31,
+    "ccyccyccy": 73,
     "Parcly-Taxel": 0,
     "niqiukun": 44,
     "openorclose": 0,
     "yash-chowdhary": 205,
     "anubh-v": 494,
-    "Tejas2805": 803,
+    "Tejas2805": 786,
     "dvrylc": 0,
-    "jamessspanggg": 1257,
+    "jamessspanggg": 1251,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 819,
+    "0blivious": 827,
     "hcwong": 0,
-    "ang-zeyu": 85,
+    "ang-zeyu": 193,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -1804,12 +1922,12 @@
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
       "java": 27,
-      "js": 4,
+      "js": 6,
       "scss": 0,
       "json": 0,
       "md": 0,
       "py": 0,
-      "pug": 0,
+      "pug": 40,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -1877,14 +1995,14 @@
     "Tejas2805": {
       "java": 31,
       "js": 10,
-      "scss": 638,
+      "scss": 603,
       "json": 25,
       "md": 53,
       "py": 0,
       "pug": 46,
       "gradle": 0,
       "sh": 0,
-      "yml": 0
+      "yml": 18
     },
     "dvrylc": {
       "java": 0,
@@ -1900,12 +2018,12 @@
     },
     "jamessspanggg": {
       "java": 374,
-      "js": 388,
+      "js": 386,
       "scss": 45,
       "json": 42,
-      "md": 297,
+      "md": 300,
       "py": 0,
-      "pug": 35,
+      "pug": 28,
       "gradle": 0,
       "sh": 67,
       "yml": 9
@@ -1948,12 +2066,12 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 435,
-      "scss": 35,
+      "js": 432,
+      "scss": 47,
       "json": 0,
-      "md": 10,
+      "md": 8,
       "py": 0,
-      "pug": 271,
+      "pug": 272,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -1972,12 +2090,12 @@
     },
     "ang-zeyu": {
       "java": 22,
-      "js": 41,
-      "scss": 9,
+      "js": 119,
+      "scss": 13,
       "json": 3,
       "md": 1,
       "py": 0,
-      "pug": 9,
+      "pug": 35,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2044,21 +2162,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 2.7149525,
+    "ccyccyccy": 52.549755,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 63.289417,
+    "niqiukun": 62.412094,
     "openorclose": 0.0,
-    "yash-chowdhary": 801.062,
-    "anubh-v": 474.4063,
-    "Tejas2805": 3879.9983,
+    "yash-chowdhary": 789.97894,
+    "anubh-v": 468.24017,
+    "Tejas2805": 3827.3252,
     "dvrylc": 0.0,
-    "jamessspanggg": 4189.1,
+    "jamessspanggg": 4136.636,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 7985.447,
+    "0blivious": 8097.6895,
     "hcwong": 0.0,
-    "ang-zeyu": 90.4853,
+    "ang-zeyu": 275.86795,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
