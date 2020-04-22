@@ -39865,675 +39865,682 @@
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          title\u003d\"click to view group\u0027s code\","
+        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByAuthors\u0027\""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          onclick\u003d\"deactivateAllOverlays()\","
+        "content": "          title\u003d\"click to view group\u0027s code\","
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          v-on:click\u003d\"openTabAuthorship(repo[0], repo, 0)\""
+        "content": "          onclick\u003d\"deactivateAllOverlays()\","
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "        )"
+        "content": "          v-on:click\u003d\"openTabAuthorship(repo[0], repo, 0)\""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          font-awesome-icon.icon-button(icon\u003d\"code\")"
+        "content": "        )"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "ccyccyccy"
         },
-        "content": "        a("
+        "content": "          font-awesome-icon.icon-button(icon\u003d\"code\")"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          title\u003d\"click to view breakdown of commits\","
+        "content": "        a("
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          onclick\u003d\"deactivateAllOverlays()\","
+        "content": "          title\u003d\"click to view breakdown of commits\","
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-on:click\u003d\"openTabZoom(repo[0], filterSinceDate, filterUntilDate, repo, 0)\""
+        "content": "          onclick\u003d\"deactivateAllOverlays()\","
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        )"
+        "content": "          v-on:click\u003d\"openTabZoom(repo[0], filterSinceDate, filterUntilDate, repo, 0)\""
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "ccyccyccy"
+          "gitId": "0blivious"
         },
-        "content": "          font-awesome-icon.icon-button(icon\u003d\"list-ul\")"
+        "content": "        )"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "ccyccyccy"
         },
-        "content": "      .summary-charts__title--percentile.mini-font {{ getPercentile(i) }} %"
+        "content": "          font-awesome-icon.icon-button(icon\u003d\"list-ul\")"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    .summary-charts__fileType--breakdown(v-if\u003d\"filterBreakdown\")"
+        "content": "      .summary-charts__title--percentile.mini-font {{ getPercentile(i) }} %"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      template(v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByNone\u0027\")"
+        "content": "    .summary-charts__fileType--breakdown(v-if\u003d\"filterBreakdown\")"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        .summary-charts__fileType--breakdown__legend("
+        "content": "      template(v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByNone\u0027\")"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-for\u003d\"fileType in getFileTypes(repo)\","
+        "content": "        .summary-charts__fileType--breakdown__legend("
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:key\u003d\"fileType\""
+        "content": "          v-for\u003d\"fileType in getFileTypes(repo)\","
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        )"
+        "content": "          v-bind:key\u003d\"fileType\""
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "ccyccyccy"
+          "gitId": "0blivious"
         },
-        "content": "          font-awesome-icon("
+        "content": "        )"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "            icon\u003d\"circle\","
+        "content": "          font-awesome-icon("
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "ccyccyccy"
         },
-        "content": "            v-bind:style\u003d\"{ \u0027color\u0027: fileTypeColors[fileType] }\""
+        "content": "            icon\u003d\"circle\","
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          )"
+        "content": "            v-bind:style\u003d\"{ \u0027color\u0027: fileTypeColors[fileType] }\""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          span \u0026nbsp; {{ fileType }} \u0026nbsp;"
+        "content": "          )"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    .summary-chart(v-for\u003d\"(user, i) in repo\")"
+        "content": "          span \u0026nbsp; {{ fileType }} \u0026nbsp;"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      .summary-chart__title(v-if\u003d\"!isMergeGroup\")"
+        "content": "    .summary-chart(v-for\u003d\"(user, i) in repo\")"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        .summary-chart__title--index {{ i+1 }}"
+        "content": "      .summary-chart__title(v-if\u003d\"!isMergeGroup\")"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        .summary-chart__title--repo(v-if\u003d\"filterGroupSelection \u003d\u003d\u003d \u0027groupByNone\u0027\") {{ user.repoName }}"
+        "content": "        .summary-chart__title--index {{ i+1 }}"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        .summary-chart__title--author-repo(v-if\u003d\"filterGroupSelection \u003d\u003d\u003d \u0027groupByAuthors\u0027\") {{ user.repoName }}"
+        "content": "        .summary-chart__title--repo(v-if\u003d\"filterGroupSelection \u003d\u003d\u003d \u0027groupByNone\u0027\") {{ user.repoName }}"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        .summary-chart__title--name("
+        "content": "        .summary-chart__title--author-repo(v-if\u003d\"filterGroupSelection \u003d\u003d\u003d \u0027groupByAuthors\u0027\") {{ user.repoName }}"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByAuthors\u0027\","
+        "content": "        .summary-chart__title--name("
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:class\u003d\"{ warn: user.name \u003d\u003d\u003d \u0027-\u0027 }\""
+        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByAuthors\u0027\","
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        ) {{ user.displayName }} ({{ user.name }})"
+        "content": "          v-bind:class\u003d\"{ warn: user.name \u003d\u003d\u003d \u0027-\u0027 }\""
       },
       {
         "lineNumber": 60,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "        ) {{ user.displayName }} ({{ user.name }})"
+      },
+      {
+        "lineNumber": 61,
         "author": {
           "gitId": "jamessspanggg"
         },
         "content": "        .summary-chart__title--contribution.mini-font [{{ getUserTotalContribution(user) }} lines]"
       },
       {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "ccyccyccy"
-        },
-        "content": "        a("
-      },
-      {
         "lineNumber": 62,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByRepos\u0027\","
+        "content": "        a("
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          v-bind:href\u003d\"getRepoLink(repo[i])\", target\u003d\"_blank\","
+        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByRepos\u0027\","
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          title\u003d\"click to view repo\""
+        "content": "          v-bind:href\u003d\"getRepoLink(repo[i])\", target\u003d\"_blank\","
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "        )"
+        "content": "          title\u003d\"click to view repo\""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          font-awesome-icon.icon-button(:icon\u003d\"[\u0027fab\u0027, \u0027github\u0027]\")"
+        "content": "        )"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "        a("
+        "content": "          font-awesome-icon.icon-button(:icon\u003d\"[\u0027fab\u0027, \u0027github\u0027]\")"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByAuthors\u0027\","
+        "content": "        a("
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          v-bind:href\u003d\"getAuthorProfileLink(repo[i].name)\", target\u003d\"_blank\","
+        "content": "          v-if\u003d\"filterGroupSelection !\u003d\u003d \u0027groupByAuthors\u0027\","
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          title\u003d\"click to view author\u0027s profile\""
+        "content": "          v-bind:href\u003d\"getAuthorProfileLink(repo[i].name)\", target\u003d\"_blank\","
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "        )"
+        "content": "          title\u003d\"click to view author\u0027s profile\""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "ccyccyccy"
         },
-        "content": "          font-awesome-icon.icon-button(icon\u003d\"user\")"
+        "content": "        )"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "ccyccyccy"
         },
-        "content": "        a("
+        "content": "          font-awesome-icon.icon-button(icon\u003d\"user\")"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          title\u003d\"click to view author\u0027s code\","
+        "content": "        a("
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          onclick\u003d\"deactivateAllOverlays()\","
+        "content": "          title\u003d\"click to view author\u0027s code\","
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-on:click\u003d\"openTabAuthorship(user, repo, i)\""
+        "content": "          onclick\u003d\"deactivateAllOverlays()\","
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        )"
+        "content": "          v-on:click\u003d\"openTabAuthorship(user, repo, i)\""
       },
       {
         "lineNumber": 78,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "        )"
+      },
+      {
+        "lineNumber": 79,
         "author": {
           "gitId": "ccyccyccy"
         },
         "content": "          font-awesome-icon.icon-button(icon\u003d\"code\")"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 80,
         "author": {
           "gitId": "0blivious"
         },
         "content": "        a("
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 81,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          title\u003d\"click to view breakdown of commits\","
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 82,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          onclick\u003d\"deactivateAllOverlays()\","
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 83,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          v-on:click\u003d\"openTabZoom(user, filterSinceDate, filterUntilDate)\""
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 84,
         "author": {
           "gitId": "0blivious"
         },
         "content": "        )"
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 85,
         "author": {
           "gitId": "ccyccyccy"
         },
         "content": "          font-awesome-icon.icon-button(icon\u003d\"list-ul\")"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 86,
         "author": {
           "gitId": "0blivious"
         },
         "content": "        .summary-chart__title--percentile.mini-font("
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 87,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          v-if\u003d\"filterGroupSelection \u003d\u003d\u003d \u0027groupByNone\u0027\""
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 88,
         "author": {
           "gitId": "0blivious"
         },
         "content": "        ) {{ getPercentile(i) }} %"
       },
       {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 89,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      .summary-chart__ramp("
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        onclick\u003d\"viewClick(event)\","
+        "content": "      .summary-chart__ramp("
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        v-on:click\u003d\"openTabZoomSubrange(user)\""
+        "content": "        onclick\u003d\"viewClick(event)\","
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      )"
+        "content": "        v-on:click\u003d\"openTabZoomSubrange(user)\""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        v-ramp("
+        "content": "      )"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:groupby\u003d\"filterGroupSelection\","
+        "content": "        v-ramp("
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:user\u003d\"user\","
+        "content": "          v-bind:groupby\u003d\"filterGroupSelection\","
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:tframe\u003d\"filterTimeFrame\","
+        "content": "          v-bind:user\u003d\"user\","
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:sdate\u003d\"filterSinceDate\","
+        "content": "          v-bind:tframe\u003d\"filterTimeFrame\","
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:udate\u003d\"filterUntilDate\","
+        "content": "          v-bind:sdate\u003d\"filterSinceDate\","
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:avgsize\u003d\"avgCommitSize\","
+        "content": "          v-bind:udate\u003d\"filterUntilDate\","
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          v-bind:mergegroup\u003d\"isMergeGroup\")"
+        "content": "          v-bind:avgsize\u003d\"avgCommitSize\","
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        .overlay"
+        "content": "          v-bind:mergegroup\u003d\"isMergeGroup\")"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "        .overlay"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      .summary-chart__contribution"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        template(v-if\u003d\"filterBreakdown\")"
+        "content": "      .summary-chart__contribution"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          .summary-chart__contrib("
+        "content": "        template(v-if\u003d\"filterBreakdown\")"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "            v-for\u003d\"(widths, fileType) in getFileTypeContributionBars(user.fileTypeContribution)\""
+        "content": "          .summary-chart__contrib("
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          )"
+        "content": "            v-for\u003d\"(widths, fileType) in getFileTypeContributionBars(user.fileTypeContribution)\""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "            .summary-chart__contrib--bar("
+        "content": "          )"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "              v-for\u003d\"width in widths\","
+        "content": "            .summary-chart__contrib--bar("
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "              v-bind:style\u003d\"{ width: width + \u0027%\u0027,\\"
+        "content": "              v-for\u003d\"width in widths\","
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "                \u0027background-color\u0027: fileTypeColors[fileType] }\","
+        "content": "              v-bind:style\u003d\"{ width: width + \u0027%\u0027,\\"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "              v-bind:title\u003d\"fileType + \u0027: \u0027 + user.fileTypeContribution[fileType] + \u0027 lines, \u0027\\"
+        "content": "                \u0027background-color\u0027: fileTypeColors[fileType] }\","
       },
       {
         "lineNumber": 113,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "              v-bind:title\u003d\"fileType + \u0027: \u0027 + user.fileTypeContribution[fileType] + \u0027 lines, \u0027\\"
+      },
+      {
+        "lineNumber": 114,
         "author": {
           "gitId": "jamessspanggg"
         },
         "content": "                + \u0027total: \u0027 + user.checkedFileTypeContribution + \u0027 lines \u0027 + \u0027(contribution from \u0027 + minDate + \u0027 to \u0027\\"
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 115,
         "author": {
           "gitId": "0blivious"
         },
         "content": "                + maxDate + \u0027)\u0027\""
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 116,
         "author": {
           "gitId": "0blivious"
         },
         "content": "            )"
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 117,
         "author": {
           "gitId": "0blivious"
         },
         "content": "        template(v-else)"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 118,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          .summary-chart__contrib("
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 119,
         "author": {
           "gitId": "0blivious"
         },
         "content": "            v-bind:title\u003d\"\u0027Total contribution from \u0027 + minDate + \u0027 to \u0027 + maxDate + \u0027: \u0027\\"
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 120,
         "author": {
           "gitId": "0blivious"
         },
         "content": "              + user.totalCommits + \u0027 lines\u0027\""
       },
       {
-        "lineNumber": 120,
+        "lineNumber": 121,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          )"
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 122,
         "author": {
           "gitId": "0blivious"
         },
         "content": "            .summary-chart__contrib--bar("
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 123,
         "author": {
           "gitId": "0blivious"
         },
         "content": "              v-for\u003d\"width in getContributionBars(user.totalCommits)\","
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 124,
         "author": {
           "gitId": "0blivious"
         },
         "content": "              v-bind:style\u003d\"{ width: width+\u0027%\u0027 }\""
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 125,
         "author": {
           "gitId": "0blivious"
         },
@@ -40541,7 +40548,7 @@
       }
     ],
     "authorContributionMap": {
-      "ccyccyccy": 27,
+      "ccyccyccy": 28,
       "jamessspanggg": 2,
       "0blivious": 95
     }
@@ -41141,159 +41148,180 @@
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "ang-zeyu"
+          "gitId": "ccyccyccy"
         },
-        "content": "          span.path(v-on:click\u003d\"toggleFileActiveProperty(file)\") {{ file.path }}\u0026nbsp;"
+        "content": "          span.path(v-on:click\u003d\"toggleFileActiveProperty(file)\")"
       },
       {
         "lineNumber": 86,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "            font-awesome-icon(icon\u003d\"caret-down\", fixed-width, v-show\u003d\"file.active\")"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "            font-awesome-icon(icon\u003d\"caret-right\", fixed-width, v-show\u003d\"!file.active\")"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "ccyccyccy"
+        },
+        "content": "            span {{ file.path }} \u0026nbsp;"
+      },
+      {
+        "lineNumber": 89,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          span.icons"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
         "content": "            a("
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": "              v-bind:href\u003d\"getFileLink(file, \u0027commits\u0027)\", target\u003d\"_blank\","
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
         "content": "              title\u003d\"click to view the history view of file\""
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
         "content": "            )"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 94,
         "author": {
           "gitId": "ccyccyccy"
         },
         "content": "              font-awesome-icon.button(icon\u003d\"history\")"
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
         "content": "            a("
       },
       {
-        "lineNumber": 93,
+        "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
         "content": "              v-bind:href\u003d\"getFileLink(file, \u0027blame\u0027)\", target\u003d\"_blank\","
       },
       {
-        "lineNumber": 94,
+        "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
         "content": "              title\u003d\"click to view the blame view of file\""
       },
       {
-        "lineNumber": 95,
+        "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
         "content": "            )"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 99,
         "author": {
           "gitId": "ccyccyccy"
         },
         "content": "              font-awesome-icon.button(icon\u003d\"user-edit\")"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 100,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          span.fileTypeLabel.medium-font("
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 101,
         "author": {
           "gitId": "0blivious"
         },
         "content": "            v-bind:style\u003d\"{\\"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 102,
         "author": {
           "gitId": "0blivious"
         },
         "content": "              \u0027background-color\u0027: info.fileTypeColors[file.fileType],\\"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 103,
         "author": {
           "gitId": "0blivious"
         },
         "content": "              \u0027color\u0027: this.getFontColor(info.fileTypeColors[file.fileType])\\"
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 104,
         "author": {
           "gitId": "0blivious"
         },
         "content": "              }\""
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 105,
         "author": {
           "gitId": "0blivious"
         },
         "content": "          ) {{ file.fileType }}\u0026nbsp;{{ file.lineCount }}\u0026nbsp;({{ file.blankLineCount }})"
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 106,
         "author": {
           "gitId": "ang-zeyu"
         },
         "content": "        pre.hljs.file-content(v-if\u003d\"file.wasCodeLoaded\", v-show\u003d\"file.active\")"
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 107,
         "author": {
           "gitId": "Tejas2805"
         },
         "content": "          template(v-for\u003d\"segment in file.segments\")"
       },
       {
-        "lineNumber": 105,
+        "lineNumber": 108,
         "author": {
           "gitId": "0blivious"
         },
         "content": "            v-segment(v-bind:segment\u003d\"segment\", v-bind:path\u003d\"file.path\")"
       },
       {
-        "lineNumber": 106,
+        "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
@@ -41301,12 +41329,12 @@
       }
     ],
     "authorContributionMap": {
-      "ccyccyccy": 2,
+      "ccyccyccy": 6,
       "Tejas2805": 12,
       "jamessspanggg": 1,
       "-": 37,
       "0blivious": 24,
-      "ang-zeyu": 31
+      "ang-zeyu": 30
     }
   },
   {
@@ -75731,9 +75759,9 @@
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "    public void unix_cloneInvalidWindowsFilePaths_success() {"
+        "content": "    public void unix_cloneInvalidWindowsFilePaths_success() throws Exception {"
       },
       {
         "lineNumber": 74,
@@ -75766,96 +75794,103 @@
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "    }"
+        "content": "        validateFilePaths(config);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Clones a bare repo in {@code config} and verifies that the repo contains only file paths that are"
+        "content": "    /**"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "     * compatible in Windows."
+        "content": "     * Clones a bare repo in {@code config} and verifies that the repo contains only file paths that are"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws IOException if it fails to create/delete the folders."
+        "content": "     * compatible in Windows."
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws InvalidFilePathException if the repository contains invalid file paths that are not compatible with"
+        "content": "     * @throws IOException if it fails to create/delete the folders."
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Windows."
+        "content": "     * @throws InvalidFilePathException if the repository contains invalid file paths that are not compatible with"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Windows."
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void validateFilePaths(RepoConfiguration config) throws IOException, InvalidFilePathException {"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        GitClone.cloneBare(config, FileUtil.getBareRepoFolderName(config));"
+        "content": "    private void validateFilePaths(RepoConfiguration config) throws IOException, InvalidFilePathException {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "        GitLsTree.validateFilePaths(config, FileUtil.getBareRepoPath(config));"
+        "content": "        GitClone.cloneBare(config, FileUtil.getBareRepoFolderName(config));"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        GitLsTree.validateFilePaths(config, FileUtil.getBareRepoPath(config));"
       },
       {
         "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
@@ -75864,7 +75899,8 @@
     ],
     "authorContributionMap": {
       "yash-chowdhary": 2,
-      "-": 89
+      "anubh-v": 2,
+      "-": 88
     }
   },
   {

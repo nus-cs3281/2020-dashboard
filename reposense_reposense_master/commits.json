@@ -74,8 +74,8 @@
         ]
       },
       {
-        "insertions": 48,
-        "deletions": 37,
+        "insertions": 53,
+        "deletions": 38,
         "date": "2020-04-21",
         "commitResults": [
           {
@@ -90,6 +90,28 @@
               "js": {
                 "insertions": 2,
                 "deletions": 0
+              }
+            }
+          },
+          {
+            "hash": "057aa14a6892b595c39daf6c24c7c874be83af86",
+            "messageTitle": "[#1249] Disable view code icon when merge group and group by authors (#1250)",
+            "messageBody": "View code icon shows when group by authors and merge group is\r\nselected.\r\n\r\nHowever, the functionality is not implemented yet. Clicking on the\r\nicon shows garbage results.\r\n\r\nLet\u0027s remove the icon when group by authors and merge group is selected.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 1,
+                "deletions": 0
+              }
+            }
+          },
+          {
+            "hash": "a35e00429b9053d2724b2f46d149b97a024891ab",
+            "messageTitle": "[#1146] Add caret icon to indicate collapsible authorship file panel (#1169)",
+            "messageBody": "It is not apparent that the authorship file details can be collapsed by\r\nclicking on the title.\r\n\r\nLet\u0027s add caret icons to show that the title is clickable to collapse the\r\nfile details view.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 4,
+                "deletions": 1
               }
             }
           }
@@ -470,6 +492,24 @@
               "md": {
                 "insertions": 56,
                 "deletions": 19
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 2,
+        "deletions": 1,
+        "date": "2020-04-21",
+        "commitResults": [
+          {
+            "hash": "0c9e261b17e54731e6eb2f204c93c3fd3ebab8d3",
+            "messageTitle": "Call validateFilePaths in unix_cloneInvalidWindowsFilePaths_success (#1210)",
+            "messageBody": "When RepoSense is run on Windows OS, it uses the \u0027validateFilePaths\u0027 \r\nmethod of the GitLsTree class to verify  if all the file paths in \r\nthe repo are valid file paths on Windows OS.\r\n\r\nWithin unix_cloneInvalidWindowsFilePaths_success test case, it \r\nchecks whether \u0027validateFilePaths\u0027 method runs correctly on \r\nnon Windows OS. However, this test does not actually call\r\nthe `validateFilePaths` method.\r\n\r\nLet\u0027s call \u0027validateFilePaths\u0027 in the test case, so we can \r\nconfirm that the method works correctly on non Windows OS.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 2,
+                "deletions": 1
               }
             }
           }
@@ -1898,12 +1938,12 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 73,
+    "ccyccyccy": 78,
     "Parcly-Taxel": 0,
     "niqiukun": 44,
     "openorclose": 0,
     "yash-chowdhary": 205,
-    "anubh-v": 494,
+    "anubh-v": 496,
     "Tejas2805": 786,
     "dvrylc": 0,
     "jamessspanggg": 1251,
@@ -1912,7 +1952,7 @@
     "xantho09": 0,
     "0blivious": 827,
     "hcwong": 0,
-    "ang-zeyu": 193,
+    "ang-zeyu": 192,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -1927,7 +1967,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "pug": 40,
+      "pug": 45,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -1981,7 +2021,7 @@
       "yml": 0
     },
     "anubh-v": {
-      "java": 404,
+      "java": 406,
       "js": 1,
       "scss": 30,
       "json": 0,
@@ -2095,7 +2135,7 @@
       "json": 3,
       "md": 1,
       "py": 0,
-      "pug": 35,
+      "pug": 34,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2162,12 +2202,12 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 52.549755,
+    "ccyccyccy": 59.861607,
     "Parcly-Taxel": 0.0,
     "niqiukun": 62.412094,
     "openorclose": 0.0,
     "yash-chowdhary": 789.97894,
-    "anubh-v": 468.24017,
+    "anubh-v": 468.0614,
     "Tejas2805": 3827.3252,
     "dvrylc": 0.0,
     "jamessspanggg": 4136.636,

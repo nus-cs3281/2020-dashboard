@@ -3882,84 +3882,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  List list1 \u003d new ArrayList\u0026lt;Object\u0026gt; { // violation"
+        "content": "    List\u0026lt;Integer\u0026gt; list1 \u003d new ArrayList\u0026lt;\u0026gt;() { // violation"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "        {"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "      add(new Object());"
+        "content": "            add(1);"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    };"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "  List list2 \u003d new ArrayList\u0026lt;Object\u0026gt; { // violation, comments and semicolons are ignored"
+        "content": "    List\u0026lt;String\u0026gt; list2 \u003d new ArrayList\u0026lt;\u0026gt;() { // violation"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "    ;"
+        "content": "        ;"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "    // my comment"
+        "content": "        // comments and semicolons are ignored"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "        {"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "      add(new Object());"
+        "content": "            add(\"foo\");"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    };"
       },
       {
         "lineNumber": 224,
@@ -4036,42 +4036,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  List list \u003d new ArrayList\u0026lt;Object\u0026gt; { // OK as it is not pure double brace pattern"
+        "content": "    List\u0026lt;Object\u0026gt; list \u003d new ArrayList\u0026lt;\u0026gt;() { // OK, not pure double brace pattern"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "     private int field;"
+        "content": "        private int field;"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "     {"
+        "content": "        {"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "       add(new Object());"
+        "content": "            add(new Object());"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "     }"
+        "content": "        }"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    };"
       },
       {
         "lineNumber": 240,
