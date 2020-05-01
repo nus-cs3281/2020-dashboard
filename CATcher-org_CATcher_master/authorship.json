@@ -5955,222 +5955,236 @@
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "      columns: true"
+        "content": "      columns: true,"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "    });"
+        "content": "      skip_empty_lines: true,"
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": "  }"
+        "content": "      trim: true"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    });"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "  getTeam(teamId: string): Team {"
+        "content": "  }"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.dataFile.teamStructure.get(teamId);"
+        "content": ""
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  getTeam(teamId: string): Team {"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return this.dataFile.teamStructure.get(teamId);"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "  getTeams(): string[] {"
+        "content": "  }"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "    return Array.from(this.dataFile.teamStructure.keys());"
+        "content": ""
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  getTeams(): string[] {"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return Array.from(this.dataFile.teamStructure.keys());"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "  // returns a mapping from teamId to their respective team structure."
+        "content": "  }"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "  private extractTeamStructure(jsonData: {}): Map\u003cstring, Team\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "    const teamStructure \u003d new Map\u003cstring, Team\u003e();"
+        "content": "  // returns a mapping from teamId to their respective team structure."
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "    const jsonTeamStructure \u003d jsonData[\u0027team-structure\u0027];"
+        "content": "  private extractTeamStructure(jsonData: {}): Map\u003cstring, Team\u003e {"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "    const teamIds \u003d Object.keys(jsonTeamStructure);"
+        "content": "    const teamStructure \u003d new Map\u003cstring, Team\u003e();"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "    for (const teamId of teamIds) {"
+        "content": "    const jsonTeamStructure \u003d jsonData[\u0027team-structure\u0027];"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "      const teamMembers \u003d new Array\u003cUser\u003e();"
+        "content": "    const teamIds \u003d Object.keys(jsonTeamStructure);"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "      const teamMemberIds \u003d Object.keys(jsonTeamStructure[teamId]);"
+        "content": "    for (const teamId of teamIds) {"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "      for (const teamMemberId of teamMemberIds) {"
+        "content": "      const teamMembers \u003d new Array\u003cUser\u003e();"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "        teamMembers.push(\u003cUser\u003e{loginId: teamMemberId, role: UserRole.Student});"
+        "content": "      const teamMemberIds \u003d Object.keys(jsonTeamStructure[teamId]);"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "      for (const teamMemberId of teamMemberIds) {"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "      teamStructure.set(teamId, \u003cTeam\u003e{id: teamId, teamMembers: teamMembers});"
+        "content": "        teamMembers.push(\u003cUser\u003e{loginId: teamMemberId, role: UserRole.Student});"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      }"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "    return teamStructure;"
+        "content": "      teamStructure.set(teamId, \u003cTeam\u003e{id: teamId, teamMembers: teamMembers});"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return teamStructure;"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "  reset() {"
+        "content": "  }"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.dataFile \u003d undefined;"
+        "content": ""
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  reset() {"
       },
       {
         "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.dataFile \u003d undefined;"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
@@ -6178,8 +6192,8 @@
       }
     ],
     "authorContributionMap": {
-      "geshuming": 12,
-      "-": 233
+      "geshuming": 15,
+      "-": 232
     }
   },
   {
