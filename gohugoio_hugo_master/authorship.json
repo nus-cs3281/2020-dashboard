@@ -5159,154 +5159,154 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\t}"
+        "content": "\tcase reflect.Bool:"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\t\tleft \u003d 0"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "\tbv :\u003d reflect.ValueOf(b)"
+        "content": "\t\tif av.Bool() {"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\t\t\tleft \u003d 1"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "\tswitch bv.Kind() {"
+        "content": "\t\t}"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase reflect.Array, reflect.Chan, reflect.Map, reflect.Slice:"
+        "content": "\t}"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tright \u003d float64(bv.Len())"
+        "content": ""
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:"
+        "content": "\tbv :\u003d reflect.ValueOf(b)"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tright \u003d float64(bv.Int())"
+        "content": ""
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase reflect.Float32, reflect.Float64:"
+        "content": "\tswitch bv.Kind() {"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tright \u003d bv.Float()"
+        "content": "\tcase reflect.Array, reflect.Chan, reflect.Map, reflect.Slice:"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase reflect.String:"
+        "content": "\t\tright \u003d float64(bv.Len())"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tvar err error"
+        "content": "\tcase reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tright, err \u003d strconv.ParseFloat(bv.String(), 64)"
+        "content": "\t\tright \u003d float64(bv.Int())"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tif err !\u003d nil {"
+        "content": "\tcase reflect.Float32, reflect.Float64:"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t\tstr :\u003d bv.String()"
+        "content": "\t\tright \u003d bv.Float()"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t\trightStr \u003d \u0026str"
+        "content": "\tcase reflect.String:"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t}"
+        "content": "\t\tvar err error"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase reflect.Struct:"
+        "content": "\t\tright, err \u003d strconv.ParseFloat(bv.String(), 64)"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tswitch bv.Type() {"
+        "content": "\t\tif err !\u003d nil {"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tcase timeType:"
+        "content": "\t\t\tstr :\u003d bv.String()"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t\tright \u003d float64(toTimeUnix(bv))"
+        "content": "\t\t\trightStr \u003d \u0026str"
       },
       {
         "lineNumber": 277,
@@ -5320,147 +5320,147 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\t}"
+        "content": "\tcase reflect.Struct:"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\t\tswitch bv.Type() {"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
-        "content": "\tif ns.caseInsensitive \u0026\u0026 leftStr !\u003d nil \u0026\u0026 rightStr !\u003d nil {"
+        "content": "\t\tcase timeType:"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tc :\u003d compare.Strings(*leftStr, *rightStr)"
+        "content": "\t\t\tright \u003d float64(toTimeUnix(bv))"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tif c \u003c 0 {"
+        "content": "\t\t}"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t\treturn 0, 1"
+        "content": "\tcase reflect.Bool:"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t} else if c \u003e 0 {"
+        "content": "\t\tright \u003d 0"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t\treturn 1, 0"
+        "content": "\t\tif bv.Bool() {"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t} else {"
+        "content": "\t\t\tright \u003d 1"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t\treturn 0, 0"
+        "content": "\t\t}"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\t}"
+        "content": "\t}"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
-        "content": "\t}"
+        "content": ""
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\tif ns.caseInsensitive \u0026\u0026 leftStr !\u003d nil \u0026\u0026 rightStr !\u003d nil {"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
-        "content": "\tswitch {"
+        "content": "\t\tc :\u003d compare.Strings(*leftStr, *rightStr)"
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase leftStr \u003d\u003d nil || rightStr \u003d\u003d nil:"
+        "content": "\t\tif c \u003c 0 {"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase *leftStr \u003c *rightStr:"
+        "content": "\t\t\treturn 0, 1"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\treturn 0, 1"
+        "content": "\t\t} else if c \u003e 0 {"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
-        "content": "\tcase *leftStr \u003e *rightStr:"
+        "content": "\t\t\treturn 1, 0"
       },
       {
         "lineNumber": 296,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\treturn 1, 0"
+        "content": "\t\t} else {"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "-"
         },
-        "content": "\tdefault:"
+        "content": "\t\t\treturn 0, 0"
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\treturn 0, 0"
+        "content": "\t\t}"
       },
       {
         "lineNumber": 299,
@@ -5481,56 +5481,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\treturn left, right"
+        "content": "\tswitch {"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "\tcase leftStr \u003d\u003d nil || rightStr \u003d\u003d nil:"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\tcase *leftStr \u003c *rightStr:"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "var timeType \u003d reflect.TypeOf((*time.Time)(nil)).Elem()"
+        "content": "\t\treturn 0, 1"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\tcase *leftStr \u003e *rightStr:"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "func toTimeUnix(v reflect.Value) int64 {"
+        "content": "\t\treturn 1, 0"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "\tif v.Kind() \u003d\u003d reflect.Interface {"
+        "content": "\tdefault:"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\treturn toTimeUnix(v.Elem())"
+        "content": "\t\treturn 0, 0"
       },
       {
         "lineNumber": 309,
@@ -5544,31 +5544,101 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\tif v.Type() !\u003d timeType {"
+        "content": ""
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tpanic(\"coding error: argument must be time.Time type reflect Value\")"
+        "content": "\treturn left, right"
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "\t}"
+        "content": "}"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": "\treturn v.MethodByName(\"Unix\").Call([]reflect.Value{})[0].Int()"
+        "content": ""
       },
       {
         "lineNumber": 314,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "var timeType \u003d reflect.TypeOf((*time.Time)(nil)).Elem()"
+      },
+      {
+        "lineNumber": 315,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 316,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "func toTimeUnix(v reflect.Value) int64 {"
+      },
+      {
+        "lineNumber": 317,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif v.Kind() \u003d\u003d reflect.Interface {"
+      },
+      {
+        "lineNumber": 318,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\treturn toTimeUnix(v.Elem())"
+      },
+      {
+        "lineNumber": 319,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 320,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\tif v.Type() !\u003d timeType {"
+      },
+      {
+        "lineNumber": 321,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t\tpanic(\"coding error: argument must be time.Time type reflect Value\")"
+      },
+      {
+        "lineNumber": 322,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\t}"
+      },
+      {
+        "lineNumber": 323,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\treturn v.MethodByName(\"Unix\").Call([]reflect.Value{})[0].Int()"
+      },
+      {
+        "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
@@ -5577,7 +5647,7 @@
     ],
     "authorContributionMap": {
       "le0tan": 44,
-      "-": 270
+      "-": 280
     }
   },
   {
