@@ -1424,6 +1424,35 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 65,
+        "deletions": 21,
+        "date": "2020-05-08",
+        "commitResults": [
+          {
+            "hash": "a1e70a75ab2b4d1266028aeb61bfd779d2b062eb",
+            "messageTitle": "[#1242] Move removal of zoom hashes to be within v_zoom component (#1243)",
+            "messageBody": "The removal of zoom hashes are done in main.js, while the removal\r\nof authorship hashes is done within the v_authorship component\r\nitself.\r\n\r\nWe can move the responsibility to remove zoom hashes to be within \r\nthe v_zoom component itself, in the \u0027beforeDestroy\u0027 hook. This \r\nwill result in a cleaner implementation and separation of concern.\r\n\r\nLet\u0027s move the removal of zoom hashes to be within v_zoom\r\ncomponent itself.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 16,
+                "deletions": 14
+              }
+            }
+          },
+          {
+            "hash": "ecd5594aef7f5cd2492e644d0411eb73321ba8e6",
+            "messageTitle": "[#1244] Add handling of filenames wrapped in double quotes (#1247)",
+            "messageBody": "When a filename contains special characters such as double quotes\r\nor the backslash character \\, git log will escape those characters and\r\nsurround the entire file name with double quotes.\r\n\r\nCommitInfoAnalyzer is not handling these cases, which will lead to an\r\nassertion error that fails the entire analysis.\r\n\r\nLet\u0027s add the handling of such cases, removing the surrounded quotes\r\nfrom the filenames, if available.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 49,
+                "deletions": 7
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -1964,7 +1993,7 @@
     "anubh-v": 523,
     "Tejas2805": 786,
     "dvrylc": 0,
-    "jamessspanggg": 1249,
+    "jamessspanggg": 1295,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
@@ -2075,8 +2104,8 @@
       "yml": 0
     },
     "jamessspanggg": {
-      "java": 374,
-      "js": 386,
+      "java": 418,
+      "js": 388,
       "scss": 45,
       "json": 42,
       "md": 298,
@@ -2228,7 +2257,7 @@
     "anubh-v": 425.4659,
     "Tejas2805": 3438.5933,
     "dvrylc": 0.0,
-    "jamessspanggg": 3715.4192,
+    "jamessspanggg": 3748.018,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
