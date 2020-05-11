@@ -962,6 +962,24 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 247,
+        "deletions": 12,
+        "date": "2020-05-10",
+        "commitResults": [
+          {
+            "hash": "2918cc169ceb9f6d585c1cc6d645b9a6f2ea7593",
+            "messageTitle": "[#9651] Enhance Jmeter result population upon running test (#10022)",
+            "messageBody": "* add default version of jmetergenerator.properties for populating result analysis\r\n\r\n* update on generating result in the console\r\n\r\n* generate and delete from a statistics.json file\r\n\r\n* update table to take into account threshold\r\n\r\n* update method of populating result\r\n\r\n* fix styling and add java docs\r\n\r\n* add assert error when any tests fails\r\n\r\n* update ReportAnalysis location being generated\r\n\r\n* add @override method and refactor names\r\n\r\n* add an abstract method to handle filename\r\n\r\n* add a renaming function of the default statistics flle so that we can keep unique files\r\n\r\n* update result analysis and rename function\r\n\r\n* update naming conventions\r\n\r\n* update test cases to show in seconds and percentage instead\r\n\r\n* fix errors from solving merge conflict\r\n\r\n* update errorPct, naming conventions and remove testName\r\n\r\n* update exceptions caught\r\n\r\n* update displayLnpResults method to populate in gradlew\r\n\r\n* minor comment changes and set summariser to false\r\n\r\n* Update LnP test files to override limit methods\r\n\r\n* Add timeStamp to LnP test data files to prevent concurrency issues\r\n\r\n* Fix a bug which caused error messages to be displayed when the results were within limit\r\n\r\n* Update errorRateLimit and menRespTimeLimit to a more realistic value\r\n\r\n* Make LnP tests clean up previous results as specified\r\n\r\n* Abstract out specification and result verification logic to LNPSpecification\r\n\r\n* Add comment to LNPSpecification class regarding Builder pattern\r\n\r\nCo-authored-by: Jacob Li Peng Cheng \u003clipech@hotmail.com\u003e",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 247,
+                "deletions": 12
+              }
+            }
+          }
+        ]
       }
     ]
   },
@@ -984,7 +1002,7 @@
     "nbriannl": 0,
     "tiuweehan": 1860,
     "madanalogy": 1096,
-    "daekoon": 1435
+    "daekoon": 1680
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
@@ -1168,7 +1186,7 @@
       "ts": 423
     },
     "daekoon": {
-      "java": 1435,
+      "java": 1680,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -1181,23 +1199,23 @@
   "authorContributionVariance": {
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 6195.019,
+    "niqiukun": 5557.206,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2873.5703,
+    "dvrylc": 2576.904,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 7426.488,
+    "hcwong": 6662.4507,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 15832.476,
-    "madanalogy": 2059.259,
-    "daekoon": 8138.7104
+    "tiuweehan": 14223.898,
+    "madanalogy": 1850.5858,
+    "daekoon": 7676.419
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
