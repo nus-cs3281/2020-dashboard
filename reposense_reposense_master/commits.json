@@ -155,6 +155,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 20,
+        "deletions": 12,
+        "date": "2020-05-12",
+        "commitResults": [
+          {
+            "hash": "9b835ac0b7a03b6290e2c0030df28f5e3de0b281",
+            "messageTitle": "[#1230] v_zoom: hide `show all commit messages` when no message is available (#1231)",
+            "messageBody": "The `show all commit messages`  button on the zoom view displays \r\neven when there is no message available to show. \r\n\r\nThis may cause confusion to the user because clicking on the button \r\ngives no effect.\r\n\r\nLet\u0027s hide the link when there is no available message to show.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 10,
+                "deletions": 4
+              },
+              "scss": {
+                "insertions": 10,
+                "deletions": 8
+              }
+            }
+          }
+        ]
       }
     ],
     "openorclose": [],
@@ -1453,6 +1475,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 254,
+        "deletions": 7,
+        "date": "2020-05-12",
+        "commitResults": [
+          {
+            "hash": "838ef11f5e41638a07f26338e2e47ac0b789bf4b",
+            "messageTitle": "[#1220] Add front end tests for summary chart functionalities (#1228)",
+            "messageBody": "Our coverage for front end tests is rather low. UI regressions will be\r\nharder to discover due to this.\r\n\r\nLet\u0027s add front end tests for summary chart\u0027s functionalities such as \r\nmerge group, zoom, filter breakdown features and the restoring of \r\nsummary controls after page reloads.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 7,
+                "deletions": 7
+              },
+              "js": {
+                "insertions": 247,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -1862,6 +1906,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 225,
+        "deletions": 239,
+        "date": "2020-05-12",
+        "commitResults": [
+          {
+            "hash": "989a86c3857eed116bbfd3b33f924674d11b5d45",
+            "messageTitle": "[#1164] Move to api.js for all global functions (#1176)",
+            "messageBody": "Global functions and constants are registered in multiple js files\r\nwhich makes them hard to trace.\r\n\r\nWe can move all the global functions to api.js to make the code more \r\nreadable and easier to refactor in the future.\r\n\r\nLet\u0027s use api.js to store all the global functions and constants.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 2,
+                "deletions": 3
+              },
+              "js": {
+                "insertions": 223,
+                "deletions": 236
+              }
+            }
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -2009,19 +2075,19 @@
   "authorFinalContributionMap": {
     "ccyccyccy": 78,
     "Parcly-Taxel": 0,
-    "niqiukun": 44,
+    "niqiukun": 64,
     "openorclose": 0,
-    "yash-chowdhary": 205,
+    "yash-chowdhary": 203,
     "anubh-v": 523,
-    "Tejas2805": 786,
+    "Tejas2805": 784,
     "dvrylc": 0,
-    "jamessspanggg": 1286,
+    "jamessspanggg": 1539,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 886,
+    "0blivious": 965,
     "hcwong": 0,
-    "ang-zeyu": 192,
+    "ang-zeyu": 184,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -2056,11 +2122,11 @@
     "niqiukun": {
       "java": 0,
       "js": 0,
-      "scss": 0,
+      "scss": 10,
       "json": 0,
       "md": 44,
       "py": 0,
-      "pug": 0,
+      "pug": 10,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2079,7 +2145,7 @@
     },
     "yash-chowdhary": {
       "java": 96,
-      "js": 11,
+      "js": 9,
       "scss": 0,
       "json": 0,
       "md": 98,
@@ -2108,7 +2174,7 @@
       "json": 25,
       "md": 53,
       "py": 0,
-      "pug": 46,
+      "pug": 44,
       "gradle": 0,
       "sh": 0,
       "yml": 18
@@ -2127,12 +2193,12 @@
     },
     "jamessspanggg": {
       "java": 418,
-      "js": 379,
+      "js": 625,
       "scss": 45,
       "json": 42,
       "md": 298,
       "py": 0,
-      "pug": 28,
+      "pug": 35,
       "gradle": 0,
       "sh": 67,
       "yml": 9
@@ -2175,12 +2241,12 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 483,
+      "js": 571,
       "scss": 47,
       "json": 0,
       "md": 8,
       "py": 0,
-      "pug": 280,
+      "pug": 271,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2200,7 +2266,7 @@
     "ang-zeyu": {
       "java": 22,
       "js": 119,
-      "scss": 13,
+      "scss": 5,
       "json": 3,
       "md": 1,
       "py": 0,
@@ -2271,21 +2337,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 53.247307,
+    "ccyccyccy": 52.284454,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 55.489918,
+    "niqiukun": 60.434177,
     "openorclose": 0.0,
-    "yash-chowdhary": 702.5031,
-    "anubh-v": 423.0022,
-    "Tejas2805": 3418.1606,
+    "yash-chowdhary": 689.7731,
+    "anubh-v": 415.77243,
+    "Tejas2805": 3358.3057,
     "dvrylc": 0.0,
-    "jamessspanggg": 3725.767,
+    "jamessspanggg": 4033.2314,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 7263.9463,
+    "0blivious": 8351.133,
     "hcwong": 0.0,
-    "ang-zeyu": 245.50745,
+    "ang-zeyu": 241.08496,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
