@@ -520,7 +520,7 @@
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "alyip98"
         },
         "content": "    * [Github Actions]({{baseUrl}}/contents/projectManagement/githubActions.html)"
       },
@@ -960,10 +960,11 @@
       "Tejas2805": 2,
       "j-lum": 1,
       "iskandarzulkarnaien": 1,
-      "-": 94,
+      "-": 93,
       "xantho09": 1,
       "0blivious": 1,
       "ang-zeyu": 1,
+      "alyip98": 1,
       "nbriannl": 1,
       "le0tan": 2,
       "tiuweehan": 1,
@@ -77689,6 +77690,1051 @@
       "jamessspanggg": 17,
       "iskandarzulkarnaien": 12,
       "-": 160
+    }
+  },
+  {
+    "path": "contents/projectManagement/githubActions.md",
+    "fileType": "md",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003cfrontmatter\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "  title: Workflow Automation with GitHub Actions"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "  header: pagetop.md"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "  footer: footer.md"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "  head: head.md"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "  siteNav: mainNav.md"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "  pageNav: 3"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c/frontmatter\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003cdiv class\u003d\"website-content\"\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "{{ booktitle | safe }}"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "# GitHub Actions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Author: [Alfred Yip](https://github.com/alyip98)"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Reviewers: [James Pang](https://github.com/jamessspanggg), [Tan Yuanhong](https://github.com/le0tan), [Tejas Bhuwania](https://github.com/Tejas2805), [Daryl Tan](https://github.com/openorclose)"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003cbox id\u003d\"article-toc\"\u003e"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* [What is GitHub Actions‎](#what-is-github-actions)"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* [Why GitHub Actions‎](#why-github-actions)"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    * [Easy to Use](#1-easy-to-use)"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    * [Reusable Actions](#2-reusable-actions)"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    * [Cross OS Support](#3-cross-os-support)"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    * [Docker Support](#4-docker-support)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    * [Powerful](#5-powerful)"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    * [Affordable](#6-affordable)"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* [Concepts](#concepts)"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* [Set up a Simple Workflow for a Node.js App](#set-up-a-simple-workflow-for-a-node-js-app)"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* [Where to Go From Here‎](#where-to-go-from-here)"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c/box\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "## What is GitHub Actions"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c!--Explain how X fits into the big picture of SE. Describe it relative to topics the reader is likely to know.--\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "GitHub Actions is a **workflow automation** solution that is tightly **integrated** into the GitHub ecosystem. "
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "It is commonly used to provide end-to-end continuous integration and deployment (CI/CD) directly in a repository. "
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Beyond that, users also have the potential to automate more than just CI/CD with GitHub Actions through GitHub\u0027s webhooks API,"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "including workflows such as labelling issues and tracking bundle size."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "## Why GitHub Actions"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c!--Motivate the reader to learn about X. Describe benefits of X to make the reader interested in X. Try to give a balanced view of by mentioning also WHY NOT X i.e., mention both advantages and disadvantages.--\u003e"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "### 1. Easy to Use"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Setting up a workflow in a repository is easy and hassle-free. [Starter workflows](https://github.com/actions/starter-workflows) for popular languages are available and the built-in editor offers code completion and documentation at a glance."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "![](images/editor.png)"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "### 2. Reusable Actions"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Actions are small, reusable units in a workflow. When setting up a workflow, we can reuse actions written by the community. These actions are available at the marketplace."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "![](images/marketplace.png)"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "### 3. Cross OS Support"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "GitHub Actions gives you the option to [run workflows](https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#supported-runners-and-hardware-resources) on Ubuntu, Windows and macOS."
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "### 4. Docker Support"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "GitHub Actions provides the ability to run docker images for projects that use a dockerized environment."
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "### 5. Powerful"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Integration with the GitHub ecosystem allows GitHub Actions to do more than just build/test/deploy. You can automate everything related to your GitHub project, including bug triaging, labeling, automated dependency updating etc."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Workflows can be triggered by events that happen on GitHub and will have access to the context of the issue/PR/commit that triggered it. "
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "### 6. Affordable"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Like many of its competitors, GitHub Actions provides **free unlimited runner time for public repositories**. "
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "For private repositories, the runner time you get with a free plan is limited, but still ample for hobby projects."
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "## Concepts"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c!--This is a simple high-level overview of the tool to give the reader some concrete sense of X (as opposed to limiting to an entirely abstract description). It\u0027s useful to give concrete examples such as code examples. Do not try to \u0027teach\u0027 how to use the X (assuming your in the style of a tutorial. If the tool is worth learning, there must be good tutorials about it already.--\u003e"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* **Workflow**"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    A workflow describes a sequence of jobs to be run when a trigger event occurs. "
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    Each job consists of a series of steps, which may be actions or shell commands. "
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    Each workflow is defined as a `.yml` file in the `.github/workflows` directory of a repository."
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* **Action**"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    An action is a piece of code that performs an atomic task. "
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    For example, [checking out a repository](https://github.com/actions/checkout), or [caching dependencies](https://github.com/actions/cache)."
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "* **Triggers**"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    Workflows can be triggered by events on the GitHub repository, ranging from opening pull requests or issues, making commits to scheduled events, or even from an external event by calling GitHub\u0027s REST API endpoint."
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "## Set Up a Simple Workflow for a Node.js App"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c!--"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Provide a learning path for the reader. Try to give one good learning path rather than many random resources."
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "--\u003e "
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "GitHub has made it extremely easy to set up a simple workflow without even leaving the browser. "
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "![](images/actions-tab.png)"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "1. Head to the Actions tab on your repository"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "1. You can choose to set up a workflow from a template or from scratch. We will use the Node.js template in this example"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "1. The online editor is powerful and easy to use, boasting features such as inline documentation and autocomplete"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "![](images/editor.png)"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "1. The template workflow will"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    1. Begin when a commit is pushed or a pull request is opened to `master`"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    1. Checkout the current repo (using `actions/checkout`)"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    1. Install dependencies `npm ci`"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    1. Build `npm run build --if-present`"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    1. Run tests `npm run test`"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    1. Report the status of the workflow via a status badge"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    ![](images/status.png)"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "1. Since we set the workflow up on the `master` branch, when we commit the newly-created workflow file, we can see GitHub Actions in action by navigating to the Actions tab"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "    ![](images/progress.png)"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "## Where to Go From Here"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c!--"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Give more resources. Instead of listing a lot of links, provide a brief summary of what value each resource can provide the reader."
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "--\u003e"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "The official [documentation](https://help.github.com/en/actions) is a good resource to learn more about GitHub Actions."
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "The [starter workflows](https://github.com/actions/starter-workflows) repository contains good examples of "
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "CI workflows for popular languages as well as automation workflows for GitHub."
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Here is a list of [awesome actions](https://github.com/sdras/awesome-actions) that you can use when writing your workflow."
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": " "
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "A powerful extension to GitHub Actions is to use the [github-script](https://github.com/actions/github-script) action "
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "to run JavaScript within the workflow using GitHub\u0027s [Octokit](https://octokit.github.io/rest.js/v17/) API. "
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "The Octokit API allows you to create workflows that span across GitHub\u0027s ecosystem of services."
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Here is a compiled list of popular repositories that use GitHub Actions that you can use as a reference. Do note that this is far from a comprehensive list and is more of a sample of how organizations are leveraging GitHub Actions in their development and production workflow."
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003cpanel header\u003d\"Examples of different ways GitHub Actions can be used\"\u003e"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Org/Project | Workflows | Notes"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "--- | --- | ---"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Bootstrap | [test](https://github.com/twbs/bootstrap/blob/master/.github/workflows/test.yml) | Comprehensive set of tests including custom tests and coveralls"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Oh My Zsh | [test](https://github.com/ohmyzsh/ohmyzsh/blob/master/.github/workflows/main.yml) | Workflow uses mainly shell commands"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "React Native | [needs-attention](https://github.com/facebook/react-native/blob/master/.github/workflows/needs-attention.yml), [process-label-actions](https://github.com/facebook/react-native/blob/master/.github/workflows/process-label-actions.yml) | Automatically apply labels to newly created issues and adds comments to issues based on labels"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Node.js | [workflows](https://github.com/nodejs/node/tree/master/.github/workflows) | Linters, tests and build jobs"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Chart.js | [CI](https://github.com/chartjs/Chart.js/blob/master/.github/workflows/ci.yml) | Conditional workflow for windows and ubuntu"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "Next.js | [workflows](https://github.com/zeit/next.js/tree/canary/.github/workflows) | Complex yet well structured build/test/deploy workflow. Automatically reports bundle size statistics in pull requests and on releases. Scheduled tests that run every 12 hours."
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "alyip98"
+        },
+        "content": "\u003c/panel\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "alyip98": 148
     }
   },
   {
