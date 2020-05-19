@@ -18,6 +18,42 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 8,
+        "date": "2020-05-18",
+        "commitResults": [
+          {
+            "hash": "311b248c3a28967dd16fe3102a80221a29478d78",
+            "messageTitle": "[#10058] Fix inconsistent exception thrown in BasicFeedbackSubmissionAction#checkAccessControl* (#10060)",
+            "messageBody": "* Make exception thrown by checkAccessControl* consistent\r\n\r\n* Remove unused import\r\n\r\n* Remove unused imports\r\n\r\n* Restore null check, but change type of exception thrown\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 3,
+                "deletions": 8
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 34,
+        "deletions": 1,
+        "date": "2020-05-19",
+        "commitResults": [
+          {
+            "hash": "4cd584421b0021045e35674305f1d444af30f824",
+            "messageTitle": "[#9382] Add tests for GetFeedbackSessionActionTest (#10057)",
+            "messageBody": "* Add tests for GetFeedbackSessionActionTest\r\n\r\n* Fix other tests\r\n\r\n* Change description of test segments\r\n\r\n* Revert unrelated change\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 34,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -925,6 +961,46 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 1,
+        "date": "2020-05-18",
+        "commitResults": [
+          {
+            "hash": "d45824aca164bc783f148ea7d1de03b41dd7c340",
+            "messageTitle": "[#9382] Fix typo (#10063)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 59,
+        "deletions": 3,
+        "date": "2020-05-19",
+        "commitResults": [
+          {
+            "hash": "2b4e2e5e987750a877a429c4241eef3884518083",
+            "messageTitle": "[#9382] Add essay question example box (#10071)",
+            "messageBody": "* Fix typo\r\n\r\n* Add example essay question\r\n\r\n* Add test dependencies",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 7,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 52,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1003,9 +1079,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 1,
+    "ccyccyccy": 38,
     "Parcly-Taxel": 0,
-    "niqiukun": 1526,
+    "niqiukun": 1375,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -1019,13 +1095,13 @@
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1860,
-    "madanalogy": 1096,
+    "tiuweehan": 1843,
+    "madanalogy": 1155,
     "daekoon": 1680
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 0,
+      "java": 37,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -1051,8 +1127,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 90,
-      "ts": 636
+      "html": 84,
+      "ts": 491
     },
     "openorclose": {
       "java": 0,
@@ -1192,7 +1268,7 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1784
+      "ts": 1767
     },
     "madanalogy": {
       "java": 640,
@@ -1201,8 +1277,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 30,
-      "ts": 423
+      "html": 37,
+      "ts": 475
     },
     "daekoon": {
       "java": 1680,
@@ -1216,25 +1292,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 0.023951227,
+    "ccyccyccy": 7.8159437,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 5425.7563,
+    "niqiukun": 5269.939,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2515.785,
+    "dvrylc": 2443.3494,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 6504.985,
+    "hcwong": 6318.294,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 13891.752,
-    "madanalogy": 1807.4764,
-    "daekoon": 7494.3115
+    "tiuweehan": 13497.737,
+    "madanalogy": 1773.0603,
+    "daekoon": 7278.509
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
