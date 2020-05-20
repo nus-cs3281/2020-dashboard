@@ -116,6 +116,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 11,
+        "deletions": 11,
+        "date": "2020-05-19",
+        "commitResults": [
+          {
+            "hash": "5d8cf3e57c941c7545aafa13d409dde7895f9e34",
+            "messageTitle": "Change totalLineCount and totalBlankLineCount to computed values (#1088)",
+            "messageBody": "The variables `totalLineCount` and `totalBlankLineCount` are \r\ncalculated in `processFiles()`, a method that executes a big chunk\r\nof logic.\r\n\r\nTheir values are calculated in a loop through every files, which is\r\ninefficient when we can instead calculate it from\r\n`getFileTypeExistingLinesObj` and `fileTypeBlankLinesObj` which already\r\nhave most of the the information available.\r\n\r\nLet\u0027s extract out the calculations into computed values from\r\n`getFileTypeExistingLinesObj` and `fileTypeBlankLinesObj` which is\r\nclearer and more efficient.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 2,
+                "deletions": 2
+              },
+              "js": {
+                "insertions": 9,
+                "deletions": 9
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -1497,6 +1519,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 24,
+        "deletions": 16,
+        "date": "2020-05-19",
+        "commitResults": [
+          {
+            "hash": "d5eec7cdc96194d73cb6c4df4a3c08a85bc88c3c",
+            "messageTitle": "Fix bug when restoring zoom tab (#1261)",
+            "messageBody": "When group by authors and groups are merged, the commits are \r\nnot shown correctly in the zoom tab after reloading the page.\r\n\r\nThis occurs especially for an author with contribution in several \r\nrepositories, as the repositories of the author are treated as \r\nseparate groups (should be pushed into same group) within the\r\n\u0027restoreZoomFiltered\u0027 method. This leads to the merging of group \r\nnot being able to merge all the repositories of the author, as \r\nthey are treated as separate groups. \r\n\r\nThe searched field is also not handled by zoom tab as well, \r\nleading to the reloaded zoom tab containing commits that are\r\nnot by users that match the searched field.\r\n\r\nLet\u0027s modify the \u0027restoreZoomFiltered\u0027 method to treat the\r\nrepositories of an author to be in the same group, instead of \r\nbeing separate groups. Let\u0027s also add the handling of the\r\nsearch field when reloading the zoom tab.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 23,
+                "deletions": 16
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -2073,7 +2117,7 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 78,
+    "ccyccyccy": 89,
     "Parcly-Taxel": 0,
     "niqiukun": 64,
     "openorclose": 0,
@@ -2081,11 +2125,11 @@
     "anubh-v": 523,
     "Tejas2805": 784,
     "dvrylc": 0,
-    "jamessspanggg": 1539,
+    "jamessspanggg": 1556,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 965,
+    "0blivious": 960,
     "hcwong": 0,
     "ang-zeyu": 184,
     "geshuming": 0,
@@ -2097,12 +2141,12 @@
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
       "java": 27,
-      "js": 6,
+      "js": 15,
       "scss": 0,
       "json": 0,
       "md": 0,
       "py": 0,
-      "pug": 45,
+      "pug": 47,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2193,12 +2237,12 @@
     },
     "jamessspanggg": {
       "java": 418,
-      "js": 625,
+      "js": 641,
       "scss": 45,
       "json": 42,
       "md": 298,
       "py": 0,
-      "pug": 35,
+      "pug": 36,
       "gradle": 0,
       "sh": 67,
       "yml": 9
@@ -2241,12 +2285,12 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 571,
+      "js": 567,
       "scss": 47,
       "json": 0,
       "md": 8,
       "py": 0,
-      "pug": 271,
+      "pug": 270,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2337,21 +2381,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 52.284454,
+    "ccyccyccy": 52.790394,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 60.434177,
+    "niqiukun": 57.98848,
     "openorclose": 0.0,
-    "yash-chowdhary": 689.7731,
-    "anubh-v": 415.77243,
-    "Tejas2805": 3358.3057,
+    "yash-chowdhary": 661.78986,
+    "anubh-v": 399.82446,
+    "Tejas2805": 3226.4624,
     "dvrylc": 0.0,
-    "jamessspanggg": 4033.2314,
+    "jamessspanggg": 3878.9932,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 8351.133,
+    "0blivious": 8022.902,
     "hcwong": 0.0,
-    "ang-zeyu": 241.08496,
+    "ang-zeyu": 231.36125,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
