@@ -5909,1522 +5909,1669 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    parentIds: PropTypes.arrayOf(PropTypes.string),"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "  state \u003d {"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    activeLabel: false,"
+        "content": "  static defaultProps \u003d {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    parentIds: [],"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "  uniqueFieldId \u003d uniqueId(`${this.props.field.get(\u0027name\u0027)}-field-`);"
+        "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  state \u003d {"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "  render() {"
+        "content": "    activeLabel: false,"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    const {"
+        "content": "  };"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "      value,"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "      entry,"
+        "content": "  uniqueFieldId \u003d uniqueId(`${this.props.field.get(\u0027name\u0027)}-field-`);"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "      collection,"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "      config,"
+        "content": "  isAncestorOfFieldError \u003d () \u003d\u003e {"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "      field,"
+        "content": "    const { fieldsErrors } \u003d this.props;"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "      fieldsMetaData,"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "      fieldsErrors,"
+        "content": "    if (fieldsErrors \u0026\u0026 fieldsErrors.size \u003e 0) {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "      mediaPaths,"
+        "content": "      return Object.values(fieldsErrors.toJS()).some(arr \u003d\u003e"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "      boundGetAsset,"
+        "content": "        arr.some(err \u003d\u003e err.parentIds \u0026\u0026 err.parentIds.includes(this.uniqueFieldId)),"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "      onChange,"
+        "content": "      );"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "      openMediaLibrary,"
+        "content": "    }"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "      clearMediaControl,"
+        "content": "    return false;"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "      removeMediaControl,"
+        "content": "  };"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "      addAsset,"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "      removeInsertedMedia,"
+        "content": "  render() {"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "      onValidate,"
+        "content": "    const {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "      processControlRef,"
+        "content": "      value,"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "      controlRef,"
+        "content": "      entry,"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "      query,"
+        "content": "      collection,"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "      queryHits,"
+        "content": "      config,"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "      isFetching,"
+        "content": "      field,"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "      clearSearch,"
+        "content": "      fieldsMetaData,"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "      clearFieldErrors,"
+        "content": "      fieldsErrors,"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadEntry,"
+        "content": "      mediaPaths,"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "      className,"
+        "content": "      boundGetAsset,"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "      isSelected,"
+        "content": "      onChange,"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "      isEditorComponent,"
+        "content": "      openMediaLibrary,"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "      isNewEditorComponent,"
+        "content": "      clearMediaControl,"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "      t,"
+        "content": "      removeMediaControl,"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    } \u003d this.props;"
+        "content": "      addAsset,"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      removeInsertedMedia,"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    const widgetName \u003d field.get(\u0027widget\u0027);"
+        "content": "      onValidate,"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "    const widget \u003d resolveWidget(widgetName);"
+        "content": "      processControlRef,"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    const fieldName \u003d field.get(\u0027name\u0027);"
+        "content": "      controlRef,"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "    const fieldHint \u003d field.get(\u0027hint\u0027);"
+        "content": "      query,"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    const isFieldOptional \u003d field.get(\u0027required\u0027) \u003d\u003d\u003d false;"
+        "content": "      queryHits,"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    const onValidateObject \u003d onValidate;"
+        "content": "      isFetching,"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "    const metadata \u003d fieldsMetaData \u0026\u0026 fieldsMetaData.get(fieldName);"
+        "content": "      clearSearch,"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    const errors \u003d fieldsErrors \u0026\u0026 fieldsErrors.get(this.uniqueFieldId);"
+        "content": "      clearFieldErrors,"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "    return ("
+        "content": "      loadEntry,"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003cClassNames\u003e"
+        "content": "      className,"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "        {({ css, cx }) \u003d\u003e ("
+        "content": "      isSelected,"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "          \u003cControlContainer className\u003d{className}\u003e"
+        "content": "      isEditorComponent,"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "            {widget.globalStyles \u0026\u0026 \u003cGlobal styles\u003d{coreCss`${widget.globalStyles}`} /\u003e}"
+        "content": "      isNewEditorComponent,"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "            {errors \u0026\u0026 ("
+        "content": "      parentIds,"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003cControlErrorsList\u003e"
+        "content": "      t,"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "                {errors.map("
+        "content": "    } \u003d this.props;"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "                  error \u003d\u003e"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "                    error.message \u0026\u0026"
+        "content": "    const widgetName \u003d field.get(\u0027widget\u0027);"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "                    typeof error.message \u003d\u003d\u003d \u0027string\u0027 \u0026\u0026 ("
+        "content": "    const widget \u003d resolveWidget(widgetName);"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "                      \u003cli key\u003d{error.message.trim().replace(/[^a-z0-9]+/gi, \u0027-\u0027)}\u003e"
+        "content": "    const fieldName \u003d field.get(\u0027name\u0027);"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "                        {error.message}"
+        "content": "    const fieldHint \u003d field.get(\u0027hint\u0027);"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "                      \u003c/li\u003e"
+        "content": "    const isFieldOptional \u003d field.get(\u0027required\u0027) \u003d\u003d\u003d false;"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "                    ),"
+        "content": "    const onValidateObject \u003d onValidate;"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "                )}"
+        "content": "    const metadata \u003d fieldsMetaData \u0026\u0026 fieldsMetaData.get(fieldName);"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003c/ControlErrorsList\u003e"
+        "content": "    const errors \u003d fieldsErrors \u0026\u0026 fieldsErrors.get(this.uniqueFieldId);"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "            )}"
+        "content": "    const childErrors \u003d this.isAncestorOfFieldError();"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cFieldLabel"
+        "content": "    const hasErrors \u003d !!errors || childErrors;"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{isSelected || this.state.styleActive}"
+        "content": ""
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "              hasErrors\u003d{!!errors}"
+        "content": "    return ("
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "              htmlFor\u003d{this.uniqueFieldId}"
+        "content": "      \u003cClassNames\u003e"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003e"
+        "content": "        {({ css, cx }) \u003d\u003e ("
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "              {`${field.get(\u0027label\u0027, field.get(\u0027name\u0027))}${"
+        "content": "          \u003cControlContainer className\u003d{className}\u003e"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "                isFieldOptional ? ` (${t(\u0027editor.editorControl.field.optional\u0027)})` : \u0027\u0027"
+        "content": "            {widget.globalStyles \u0026\u0026 \u003cGlobal styles\u003d{coreCss`${widget.globalStyles}`} /\u003e}"
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "              }`}"
+        "content": "            {errors \u0026\u0026 ("
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003c/FieldLabel\u003e"
+        "content": "              \u003cControlErrorsList\u003e"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cWidget"
+        "content": "                {errors.map("
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "              classNameWrapper\u003d{cx("
+        "content": "                  error \u003d\u003e"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "                css`"
+        "content": "                    error.message \u0026\u0026"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "                  ${styleStrings.widget};"
+        "content": "                    typeof error.message \u003d\u003d\u003d \u0027string\u0027 \u0026\u0026 ("
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "                `,"
+        "content": "                      \u003cli key\u003d{error.message.trim().replace(/[^a-z0-9]+/gi, \u0027-\u0027)}\u003e"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "                {"
+        "content": "                        {error.message}"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "                  [css`"
+        "content": "                      \u003c/li\u003e"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "                    ${styleStrings.widgetActive};"
+        "content": "                    ),"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "                  `]: isSelected || this.state.styleActive,"
+        "content": "                )}"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "                },"
+        "content": "              \u003c/ControlErrorsList\u003e"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "                {"
+        "content": "            )}"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "                  [css`"
+        "content": "            \u003cFieldLabel"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "                    ${styleStrings.widgetError};"
+        "content": "              isActive\u003d{isSelected || this.state.styleActive}"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "                  `]: !!errors,"
+        "content": "              hasErrors\u003d{hasErrors}"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "                },"
+        "content": "              htmlFor\u003d{this.uniqueFieldId}"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "              )}"
+        "content": "            \u003e"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "              classNameWidget\u003d{css`"
+        "content": "              {`${field.get(\u0027label\u0027, field.get(\u0027name\u0027))}${"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "                ${styleStrings.widget};"
+        "content": "                isFieldOptional ? ` (${t(\u0027editor.editorControl.field.optional\u0027)})` : \u0027\u0027"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "              `}"
+        "content": "              }`}"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "              classNameWidgetActive\u003d{css`"
+        "content": "            \u003c/FieldLabel\u003e"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "                ${styleStrings.widgetActive};"
+        "content": "            \u003cWidget"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "              `}"
+        "content": "              classNameWrapper\u003d{cx("
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "              classNameLabel\u003d{css`"
+        "content": "                css`"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "                ${styleStrings.label};"
+        "content": "                  ${styleStrings.widget};"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "              `}"
+        "content": "                `,"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "              classNameLabelActive\u003d{css`"
+        "content": "                {"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "                ${styleStrings.labelActive};"
+        "content": "                  [css`"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "              `}"
+        "content": "                    ${styleStrings.widgetActive};"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "              controlComponent\u003d{widget.control}"
+        "content": "                  `]: isSelected || this.state.styleActive,"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "              entry\u003d{entry}"
+        "content": "                },"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "              collection\u003d{collection}"
+        "content": "                {"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "              config\u003d{config}"
+        "content": "                  [css`"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "              field\u003d{field}"
+        "content": "                    ${styleStrings.widgetError};"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "              uniqueFieldId\u003d{this.uniqueFieldId}"
+        "content": "                  `]: hasErrors,"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "              value\u003d{value}"
+        "content": "                },"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "              mediaPaths\u003d{mediaPaths}"
+        "content": "              )}"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "              metadata\u003d{metadata}"
+        "content": "              classNameWidget\u003d{css`"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "              onChange\u003d{(newValue, newMetadata) \u003d\u003e onChange(fieldName, newValue, newMetadata)}"
+        "content": "                ${styleStrings.widget};"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "              onValidate\u003d{onValidate \u0026\u0026 partial(onValidate, this.uniqueFieldId)}"
+        "content": "              `}"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "              onOpenMediaLibrary\u003d{openMediaLibrary}"
+        "content": "              classNameWidgetActive\u003d{css`"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClearMediaControl\u003d{clearMediaControl}"
+        "content": "                ${styleStrings.widgetActive};"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "              onRemoveMediaControl\u003d{removeMediaControl}"
+        "content": "              `}"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "              onRemoveInsertedMedia\u003d{removeInsertedMedia}"
+        "content": "              classNameLabel\u003d{css`"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "              onAddAsset\u003d{addAsset}"
+        "content": "                ${styleStrings.label};"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "              getAsset\u003d{boundGetAsset}"
+        "content": "              `}"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "              hasActiveStyle\u003d{isSelected || this.state.styleActive}"
+        "content": "              classNameLabelActive\u003d{css`"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "              setActiveStyle\u003d{() \u003d\u003e this.setState({ styleActive: true })}"
+        "content": "                ${styleStrings.labelActive};"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "              setInactiveStyle\u003d{() \u003d\u003e this.setState({ styleActive: false })}"
+        "content": "              `}"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "              resolveWidget\u003d{resolveWidget}"
+        "content": "              controlComponent\u003d{widget.control}"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "              widget\u003d{widget}"
+        "content": "              entry\u003d{entry}"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "              getEditorComponents\u003d{getEditorComponents}"
+        "content": "              collection\u003d{collection}"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "              ref\u003d{processControlRef \u0026\u0026 partial(processControlRef, field)}"
+        "content": "              config\u003d{config}"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "              controlRef\u003d{controlRef}"
+        "content": "              field\u003d{field}"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "              editorControl\u003d{ConnectedEditorControl}"
+        "content": "              uniqueFieldId\u003d{this.uniqueFieldId}"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "              query\u003d{query}"
+        "content": "              value\u003d{value}"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "              loadEntry\u003d{loadEntry}"
+        "content": "              mediaPaths\u003d{mediaPaths}"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "              queryHits\u003d{queryHits}"
+        "content": "              metadata\u003d{metadata}"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "              clearSearch\u003d{clearSearch}"
+        "content": "              onChange\u003d{(newValue, newMetadata) \u003d\u003e onChange(fieldName, newValue, newMetadata)}"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "              clearFieldErrors\u003d{clearFieldErrors}"
+        "content": "              onValidate\u003d{onValidate \u0026\u0026 partial(onValidate, this.uniqueFieldId)}"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "              isFetching\u003d{isFetching}"
+        "content": "              onOpenMediaLibrary\u003d{openMediaLibrary}"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "              fieldsErrors\u003d{fieldsErrors}"
+        "content": "              onClearMediaControl\u003d{clearMediaControl}"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "              onValidateObject\u003d{onValidateObject}"
+        "content": "              onRemoveMediaControl\u003d{removeMediaControl}"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "              isEditorComponent\u003d{isEditorComponent}"
+        "content": "              onRemoveInsertedMedia\u003d{removeInsertedMedia}"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "              isNewEditorComponent\u003d{isNewEditorComponent}"
+        "content": "              onAddAsset\u003d{addAsset}"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "              t\u003d{t}"
+        "content": "              getAsset\u003d{boundGetAsset}"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              hasActiveStyle\u003d{isSelected || this.state.styleActive}"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": "            {fieldHint \u0026\u0026 ("
+        "content": "              setActiveStyle\u003d{() \u003d\u003e this.setState({ styleActive: true })}"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003cControlHint active\u003d{isSelected || this.state.styleActive} error\u003d{!!errors}\u003e"
+        "content": "              setInactiveStyle\u003d{() \u003d\u003e this.setState({ styleActive: false })}"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": "                {fieldHint}"
+        "content": "              resolveWidget\u003d{resolveWidget}"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003c/ControlHint\u003e"
+        "content": "              widget\u003d{widget}"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": "            )}"
+        "content": "              getEditorComponents\u003d{getEditorComponents}"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "          \u003c/ControlContainer\u003e"
+        "content": "              ref\u003d{processControlRef \u0026\u0026 partial(processControlRef, field)}"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "        )}"
+        "content": "              controlRef\u003d{controlRef}"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003c/ClassNames\u003e"
+        "content": "              editorControl\u003d{ConnectedEditorControl}"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": "    );"
+        "content": "              query\u003d{query}"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "              loadEntry\u003d{loadEntry}"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "              queryHits\u003d{queryHits}"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "              clearSearch\u003d{clearSearch}"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": "const mapStateToProps \u003d state \u003d\u003e {"
+        "content": "              clearFieldErrors\u003d{clearFieldErrors}"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "  const { collections, entryDraft } \u003d state;"
+        "content": "              isFetching\u003d{isFetching}"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": "  const entry \u003d entryDraft.get(\u0027entry\u0027);"
+        "content": "              fieldsErrors\u003d{fieldsErrors}"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": "  const collection \u003d collections.get(entryDraft.getIn([\u0027entry\u0027, \u0027collection\u0027]));"
+        "content": "              onValidateObject\u003d{onValidateObject}"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "  const isLoadingAsset \u003d selectIsLoadingAsset(state.medias);"
+        "content": "              isEditorComponent\u003d{isEditorComponent}"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "              isNewEditorComponent\u003d{isNewEditorComponent}"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "-"
         },
-        "content": "  const loadEntry \u003d async (collectionName, slug) \u003d\u003e {"
+        "content": "              parentIds\u003d{parentIds}"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
-        "content": "    const targetCollection \u003d collections.get(collectionName);"
+        "content": "              t\u003d{t}"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (targetCollection) {"
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
-        "content": "      const loadedEntry \u003d await tryLoadEntry(state, targetCollection, slug);"
+        "content": "            {fieldHint \u0026\u0026 ("
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
-        "content": "      return loadedEntry;"
+        "content": "              \u003cControlHint active\u003d{isSelected || this.state.styleActive} error\u003d{hasErrors}\u003e"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
-        "content": "    } else {"
+        "content": "                {fieldHint}"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
-        "content": "      throw new Error(`Can\u0027t find collection \u0027${collectionName}\u0027`);"
+        "content": "              \u003c/ControlHint\u003e"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            )}"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "          \u003c/ControlContainer\u003e"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        )}"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
-        "content": "  return {"
+        "content": "      \u003c/ClassNames\u003e"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaPaths: state.mediaLibrary.get(\u0027controlMedia\u0027),"
+        "content": "    );"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": "    isFetching: state.search.get(\u0027isFetching\u0027),"
+        "content": "  }"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
-        "content": "    queryHits: state.search.get(\u0027queryHits\u0027),"
+        "content": "}"
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "-"
         },
-        "content": "    config: state.config,"
+        "content": ""
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "-"
         },
-        "content": "    collection,"
+        "content": "const mapStateToProps \u003d state \u003d\u003e {"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "-"
         },
-        "content": "    entry,"
+        "content": "  const { collections, entryDraft } \u003d state;"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
-        "content": "    isLoadingAsset,"
+        "content": "  const entry \u003d entryDraft.get(\u0027entry\u0027);"
       },
       {
         "lineNumber": 296,
         "author": {
           "gitId": "-"
         },
-        "content": "    loadEntry,"
+        "content": "  const collection \u003d collections.get(entryDraft.getIn([\u0027entry\u0027, \u0027collection\u0027]));"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "  const isLoadingAsset \u003d selectIsLoadingAsset(state.medias);"
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": ""
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  const loadEntry \u003d async (collectionName, slug) \u003d\u003e {"
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
-        "content": "const mapDispatchToProps \u003d dispatch \u003d\u003e {"
+        "content": "    const targetCollection \u003d collections.get(collectionName);"
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "-"
         },
-        "content": "  const creators \u003d bindActionCreators("
+        "content": "    if (targetCollection) {"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "      const loadedEntry \u003d await tryLoadEntry(state, targetCollection, slug);"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": "      openMediaLibrary,"
+        "content": "      return loadedEntry;"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "      clearMediaControl,"
+        "content": "    } else {"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "      removeMediaControl,"
+        "content": "      throw new Error(`Can\u0027t find collection \u0027${collectionName}\u0027`);"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "      removeInsertedMedia,"
+        "content": "    }"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "      addAsset,"
+        "content": "  };"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "      query,"
+        "content": ""
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": "      clearSearch,"
+        "content": "  return {"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "      clearFieldErrors,"
+        "content": "    mediaPaths: state.mediaLibrary.get(\u0027controlMedia\u0027),"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    isFetching: state.search.get(\u0027isFetching\u0027),"
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "    dispatch,"
+        "content": "    queryHits: state.search.get(\u0027queryHits\u0027),"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": "  );"
+        "content": "    config: state.config,"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "-"
         },
-        "content": "  return {"
+        "content": "    collection,"
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "-"
         },
-        "content": "    ...creators,"
+        "content": "    entry,"
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "-"
         },
-        "content": "    boundGetAsset: (collection, entry) \u003d\u003e boundGetAsset(dispatch, collection, entry),"
+        "content": "    isLoadingAsset,"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    loadEntry,"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "  };"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": "const mergeProps \u003d (stateProps, dispatchProps, ownProps) \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": "  return {"
+        "content": "const mapDispatchToProps \u003d dispatch \u003d\u003e {"
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "-"
         },
-        "content": "    ...stateProps,"
+        "content": "  const creators \u003d bindActionCreators("
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": "    ...dispatchProps,"
+        "content": "    {"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "    ...ownProps,"
+        "content": "      openMediaLibrary,"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": "    boundGetAsset: dispatchProps.boundGetAsset(stateProps.collection, stateProps.entry),"
+        "content": "      clearMediaControl,"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "      removeMediaControl,"
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "      removeInsertedMedia,"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      addAsset,"
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "-"
         },
-        "content": "const ConnectedEditorControl \u003d connect("
+        "content": "      query,"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": "  mapStateToProps,"
+        "content": "      clearSearch,"
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "-"
         },
-        "content": "  mapDispatchToProps,"
+        "content": "      clearFieldErrors,"
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "-"
         },
-        "content": "  mergeProps,"
+        "content": "    },"
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "-"
         },
-        "content": ")(translate()(EditorControl));"
+        "content": "    dispatch,"
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  );"
       },
       {
         "lineNumber": 335,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  return {"
+      },
+      {
+        "lineNumber": 336,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ...creators,"
+      },
+      {
+        "lineNumber": 337,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    boundGetAsset: (collection, entry) \u003d\u003e boundGetAsset(dispatch, collection, entry),"
+      },
+      {
+        "lineNumber": 338,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  };"
+      },
+      {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 340,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 341,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "const mergeProps \u003d (stateProps, dispatchProps, ownProps) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 342,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  return {"
+      },
+      {
+        "lineNumber": 343,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ...stateProps,"
+      },
+      {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ...dispatchProps,"
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ...ownProps,"
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    boundGetAsset: dispatchProps.boundGetAsset(stateProps.collection, stateProps.entry),"
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  };"
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 349,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 350,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "const ConnectedEditorControl \u003d connect("
+      },
+      {
+        "lineNumber": 351,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  mapStateToProps,"
+      },
+      {
+        "lineNumber": 352,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  mapDispatchToProps,"
+      },
+      {
+        "lineNumber": 353,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  mergeProps,"
+      },
+      {
+        "lineNumber": 354,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ")(translate()(EditorControl));"
+      },
+      {
+        "lineNumber": 355,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 356,
         "author": {
           "gitId": "-"
         },
@@ -7433,7 +7580,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 3,
-      "-": 332
+      "-": 353
     }
   },
   {
@@ -22613,1382 +22760,1571 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      searchAll: \u0027Zoeken\u0027,"
+        "content": "      allCollections: \u0027Alle inhoudstypen\u0027,"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      searchAll: \u0027Zoeken\u0027,"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    collectionTop: {"
+        "content": "      searchIn: \u0027Zoeken in\u0027,"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "      viewAs: \u0027Bekijk als\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "      newButton: \u0027Nieuwe %{collectionLabel}\u0027,"
+        "content": "    collectionTop: {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      sortBy: \u0027Sorteer op\u0027,"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "    entries: {"
+        "content": "      viewAs: \u0027Bekijk als\u0027,"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingEntries: \u0027Items laden\u0027,"
+        "content": "      newButton: \u0027Nieuwe %{collectionLabel}\u0027,"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "      cachingEntries: \u0027Items cachen\u0027,"
+        "content": "      ascending: \u0027Oplopend\u0027,"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "      longerLoading: \u0027Dit kan een paar minuten duren\u0027,"
+        "content": "      descending: \u0027Aflopend\u0027,"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      searchResults: \u0027Zoekresultaten voor \"%{searchTerm}\"\u0027,"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      searchResultsInCollection: \u0027Zoekresultaten voor \"%{searchTerm}\" in %{collection}\u0027,"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "  editor: {"
+        "content": "      filterBy: \u0027Filteren op\u0027,"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    editorControl: {"
+        "content": "    },"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      field: {"
+        "content": "    entries: {"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        optional: \u0027optioneel\u0027,"
+        "content": "      loadingEntries: \u0027Items laden\u0027,"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      },"
+        "content": "      cachingEntries: \u0027Items cachen\u0027,"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    },"
+        "content": "      longerLoading: \u0027Dit kan een paar minuten duren\u0027,"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorControlPane: {"
+        "content": "      noEntries: \u0027Geen items\u0027,"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "      widget: {"
+        "content": "    },"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        required: \u0027%{fieldLabel} is vereist.\u0027,"
+        "content": "    defaultFields: {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        regexPattern: \u0027%{fieldLabel} komt niet overeen met het patroon: %{pattern}.\u0027,"
+        "content": "      author: {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        processing: \u0027%{fieldLabel} wordt verwerkt.\u0027,"
+        "content": "        label: \u0027Auteur\u0027,"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        range: \u0027%{fieldLabel} moet tussen %{minValue} en %{maxValue} liggen.\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        min: \u0027%{fieldLabel} moet tenminste %{minValue} bevatten.\u0027,"
+        "content": "      updatedOn: {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        max: \u0027%{fieldLabel} moet hoogstens %{maxValue} bevatten.\u0027,"
+        "content": "        label: \u0027Bijgewerkt op\u0027,"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        rangeCount: \u0027%{fieldLabel} moet tussen %{minCount} en %{maxCount} item(s) bevatten.\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        rangeCountExact: \u0027%{fieldLabel} moet exact %{count} item(s) bevatten.\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        minCount: \u0027%{fieldLabel} moet tenminste %{minCount} item(s) bevatten.\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "        maxCount: \u0027%{fieldLabel} moet hoogstens %{maxCount} item(s) bevatten.\u0027,"
+        "content": "  editor: {"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      },"
+        "content": "    editorControl: {"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    },"
+        "content": "      field: {"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    editor: {"
+        "content": "        optional: \u0027optioneel\u0027,"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      onLeavePage: \u0027Weet je zeker dat je deze pagina wilt verlaten?\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      onUpdatingWithUnsavedChanges:"
+        "content": "    },"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Er zijn nog niet-opgeslagen wijzigingen. Bewaar ze voordat u de status bijwerkt.\u0027,"
+        "content": "    editorControlPane: {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingNotReady: \u0027Stel de status in op \"Voltooid\" voordat u publiceert.\u0027,"
+        "content": "      widget: {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingWithUnsavedChanges:"
+        "content": "        required: \u0027%{fieldLabel} is vereist.\u0027,"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Er zijn nog niet-opgeslagen wijzigingen. Bewaar deze voordat u publiceert.\u0027,"
+        "content": "        regexPattern: \u0027%{fieldLabel} komt niet overeen met het patroon: %{pattern}.\u0027,"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishing: \u0027Weet u zeker dat u dit item wil publiceren?\u0027,"
+        "content": "        processing: \u0027%{fieldLabel} wordt verwerkt.\u0027,"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteWithUnsavedChanges:"
+        "content": "        range: \u0027%{fieldLabel} moet tussen %{minValue} en %{maxValue} liggen.\u0027,"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Weet u zeker dat u dit gepubliceerde item en uw niet-opgeslagen wijzigingen uit de huidige sessie wilt verwijderen?\u0027,"
+        "content": "        min: \u0027%{fieldLabel} moet tenminste %{minValue} bevatten.\u0027,"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeletePublishedEntry: \u0027Weet u zeker dat u dit gepubliceerde item wilt verwijderen?\u0027,"
+        "content": "        max: \u0027%{fieldLabel} moet hoogstens %{maxValue} bevatten.\u0027,"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChangesWithUnsavedChanges:"
+        "content": "        rangeCount: \u0027%{fieldLabel} moet tussen %{minCount} en %{maxCount} item(s) bevatten.\u0027,"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Alle niet-gepubliceerde wijzigingen in dit item worden verwijderd, evenals uw niet-opgeslagen wijzigingen uit de huidige sessie. Wilt u nog steeds verwijderen?\u0027,"
+        "content": "        rangeCountExact: \u0027%{fieldLabel} moet exact %{count} item(s) bevatten.\u0027,"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChanges:"
+        "content": "        minCount: \u0027%{fieldLabel} moet tenminste %{minCount} item(s) bevatten.\u0027,"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Alle niet-gepubliceerde wijzigingen in dit item worden verwijderd. Wilt u nog steeds verwijderen?\u0027,"
+        "content": "        maxCount: \u0027%{fieldLabel} moet hoogstens %{maxCount} item(s) bevatten.\u0027,"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingEntry: \u0027Item laden...\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "      confirmLoadBackup: \u0027Voor dit item is een lokale back-up hersteld, wilt u deze gebruiken?\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    editor: {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorToolbar: {"
+        "content": "      onLeavePage: \u0027Weet je zeker dat je deze pagina wilt verlaten?\u0027,"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishing: \u0027Publiceren...\u0027,"
+        "content": "      onUpdatingWithUnsavedChanges:"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "      publish: \u0027Publiceer\u0027,"
+        "content": "        \u0027Er zijn nog niet-opgeslagen wijzigingen. Bewaar ze voordat u de status bijwerkt.\u0027,"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "      published: \u0027Gepubliceerd\u0027,"
+        "content": "      onPublishingNotReady: \u0027Stel de status in op \"Voltooid\" voordat u publiceert.\u0027,"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "      unpublish: \u0027Publicatie terugtrekken\u0027,"
+        "content": "      onPublishingWithUnsavedChanges:"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "      unpublished: \u0027Publicatie teruggetrokken\u0027,"
+        "content": "        \u0027Er zijn nog niet-opgeslagen wijzigingen. Bewaar deze voordat u publiceert.\u0027,"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "      duplicate: \u0027Dupliceren\u0027,"
+        "content": "      onPublishing: \u0027Weet u zeker dat u dit item wil publiceren?\u0027,"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "      unpublishing: \u0027Publicatie ongedaan maken...\u0027,"
+        "content": "      onDeleteWithUnsavedChanges:"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishAndCreateNew: \u0027Publiceer en maak nieuw item aan\u0027,"
+        "content": "        \u0027Weet u zeker dat u dit gepubliceerde item en uw niet-opgeslagen wijzigingen uit de huidige sessie wilt verwijderen?\u0027,"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishAndDuplicate: \u0027Publiceer en dupliceer item\u0027,"
+        "content": "      onDeletePublishedEntry: \u0027Weet u zeker dat u dit gepubliceerde item wilt verwijderen?\u0027,"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteUnpublishedChanges: \u0027Verwijder niet-gepubliceerde wijzigingen\u0027,"
+        "content": "      onDeleteUnpublishedChangesWithUnsavedChanges:"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteUnpublishedEntry: \u0027Niet-gepubliceerd item verwijderen\u0027,"
+        "content": "        \u0027Alle niet-gepubliceerde wijzigingen in dit item worden verwijderd, evenals uw niet-opgeslagen wijzigingen uit de huidige sessie. Wilt u nog steeds verwijderen?\u0027,"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "      deletePublishedEntry: \u0027Gepubliceerd item verwijderen\u0027,"
+        "content": "      onDeleteUnpublishedChanges:"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteEntry: \u0027Item verwijderen\u0027,"
+        "content": "        \u0027Alle niet-gepubliceerde wijzigingen in dit item worden verwijderd. Wilt u nog steeds verwijderen?\u0027,"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "      saving: \u0027Opslaan...\u0027,"
+        "content": "      loadingEntry: \u0027Item laden...\u0027,"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "      save: \u0027Opslaan\u0027,"
+        "content": "      confirmLoadBackup: \u0027Voor dit item is een lokale back-up hersteld, wilt u deze gebruiken?\u0027,"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleting: \u0027Verwijderen...\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "      updating: \u0027Bijwerken...\u0027,"
+        "content": "    editorToolbar: {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "      setStatus: \u0027Stel status in\u0027,"
+        "content": "      publishing: \u0027Publiceren...\u0027,"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "      backCollection: \u0027 Terug naar %{collectionLabel}\u0027,"
+        "content": "      publish: \u0027Publiceer\u0027,"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "      unsavedChanges: \u0027Niet-opgeslagen wijzigingen\u0027,"
+        "content": "      published: \u0027Gepubliceerd\u0027,"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "      changesSaved: \u0027Wijzigingen opgeslagen\u0027,"
+        "content": "      unpublish: \u0027Publicatie terugtrekken\u0027,"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "      draft: \u0027Concept\u0027,"
+        "content": "      duplicate: \u0027Dupliceren\u0027,"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReview: \u0027Wordt beoordeeld\u0027,"
+        "content": "      unpublishing: \u0027Publicatie ongedaan maken...\u0027,"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "      ready: \u0027Klaar\u0027,"
+        "content": "      publishAndCreateNew: \u0027Publiceer en maak nieuw item aan\u0027,"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNow: \u0027Publiceer nu\u0027,"
+        "content": "      publishAndDuplicate: \u0027Publiceer en dupliceer item\u0027,"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployPreviewPendingButtonLabel: \u0027Controleer of voorvertoning geladen is\u0027,"
+        "content": "      deleteUnpublishedChanges: \u0027Verwijder niet-gepubliceerde wijzigingen\u0027,"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployPreviewButtonLabel: \u0027Bekijk voorvertoning\u0027,"
+        "content": "      deleteUnpublishedEntry: \u0027Niet-gepubliceerd item verwijderen\u0027,"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployButtonLabel: \u0027Bekijk Live\u0027,"
+        "content": "      deletePublishedEntry: \u0027Gepubliceerd item verwijderen\u0027,"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      deleteEntry: \u0027Item verwijderen\u0027,"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      saving: \u0027Opslaan...\u0027,"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorWidgets: {"
+        "content": "      save: \u0027Opslaan\u0027,"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "      markdown: {"
+        "content": "      deleting: \u0027Verwijderen...\u0027,"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "        richText: \u0027Rijke tekst\u0027,"
+        "content": "      updating: \u0027Bijwerken...\u0027,"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "        markdown: \u0027Markdown\u0027,"
+        "content": "      setStatus: \u0027Stel status in\u0027,"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      backCollection: \u0027 Terug naar %{collectionLabel}\u0027,"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "      image: {"
+        "content": "      unsavedChanges: \u0027Niet-opgeslagen wijzigingen\u0027,"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "        choose: \u0027Kies een afbeelding\u0027,"
+        "content": "      changesSaved: \u0027Wijzigingen opgeslagen\u0027,"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "        chooseDifferent: \u0027Kies een andere afbeelding\u0027,"
+        "content": "      draft: \u0027Concept\u0027,"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "        remove: \u0027Verwijder afbeelding\u0027,"
+        "content": "      inReview: \u0027Wordt beoordeeld\u0027,"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      ready: \u0027Klaar\u0027,"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "      file: {"
+        "content": "      publishNow: \u0027Publiceer nu\u0027,"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "        choose: \u0027Kies een bestand\u0027,"
+        "content": "      deployPreviewPendingButtonLabel: \u0027Controleer of voorvertoning geladen is\u0027,"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        chooseDifferent: \u0027Kies een ander bestand\u0027,"
+        "content": "      deployPreviewButtonLabel: \u0027Bekijk voorvertoning\u0027,"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "        remove: \u0027Verwijder bestand\u0027,"
+        "content": "      deployButtonLabel: \u0027Bekijk Live\u0027,"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "    },"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "      unknownControl: {"
+        "content": "    editorWidgets: {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        noControl: \"Geen control voor widget \u0027%{widget}\u0027.\","
+        "content": "      markdown: {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "        richText: \u0027Rijke tekst\u0027,"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "      unknownPreview: {"
+        "content": "        markdown: \u0027Markdown\u0027,"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        noPreview: \"Geen voorvertoning voor widget \u0027%{widget}\u0027.\","
+        "content": "      },"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      image: {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "      headingOptions: {"
+        "content": "        choose: \u0027Kies een afbeelding\u0027,"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingOne: \u0027Heading 1\u0027,"
+        "content": "        chooseDifferent: \u0027Kies een andere afbeelding\u0027,"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingTwo: \u0027Heading 2\u0027,"
+        "content": "        remove: \u0027Verwijder afbeelding\u0027,"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingThree: \u0027Heading 3\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingFour: \u0027Heading 4\u0027,"
+        "content": "      file: {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingFive: \u0027Heading 5\u0027,"
+        "content": "        choose: \u0027Kies een bestand\u0027,"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingSix: \u0027Heading 6\u0027,"
+        "content": "        chooseDifferent: \u0027Kies een ander bestand\u0027,"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "        remove: \u0027Verwijder bestand\u0027,"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      },"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      unknownControl: {"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "  mediaLibrary: {"
+        "content": "        noControl: \"Geen control voor widget \u0027%{widget}\u0027.\","
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaLibraryCard: {"
+        "content": "      },"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "      draft: \u0027Concept\u0027,"
+        "content": "      unknownPreview: {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        noPreview: \"Geen voorvertoning voor widget \u0027%{widget}\u0027.\","
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaLibrary: {"
+        "content": "      },"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDelete: \u0027Weet u zeker dat u de geselecteerde media wilt verwijderen?\u0027,"
+        "content": "      headingOptions: {"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "      fileTooLarge:"
+        "content": "        headingOne: \u0027Heading 1\u0027,"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Het bestand is te groot.\\n De instellingen staan geen bestanden toe groter dan %{size} kB.\u0027,"
+        "content": "        headingTwo: \u0027Heading 2\u0027,"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        headingThree: \u0027Heading 3\u0027,"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaLibraryModal: {"
+        "content": "        headingFour: \u0027Heading 4\u0027,"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "      loading: \u0027Laden...\u0027,"
+        "content": "        headingFive: \u0027Heading 5\u0027,"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "      noResults: \u0027Geen resultaten.\u0027,"
+        "content": "        headingSix: \u0027Heading 6\u0027,"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "      noAssetsFound: \u0027Geen media gevonden.\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "      noImagesFound: \u0027Geen afbeeldingen gevonden.\u0027,"
+        "content": "      datetime: {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "      private: \u0027Privé\u0027,"
+        "content": "        now: \u0027Nu\u0027,"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "      mediaAssets: \u0027Media\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "      search: \u0027Zoeken...\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "      uploading: \u0027Uploaden...\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "      upload: \u0027Nieuwe uploaden\u0027,"
+        "content": "  mediaLibrary: {"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleting: \u0027Verwijderen...\u0027,"
+        "content": "    mediaLibraryCard: {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteSelected: \u0027Verwijder selectie\u0027,"
+        "content": "      draft: \u0027Concept\u0027,"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "      chooseSelected: \u0027Gebruik selectie\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    mediaLibrary: {"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      onDelete: \u0027Weet u zeker dat u de geselecteerde media wilt verwijderen?\u0027,"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "  ui: {"
+        "content": "      fileTooLarge:"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "    errorBoundary: {"
+        "content": "        \u0027Het bestand is te groot.\\n De instellingen staan geen bestanden toe groter dan %{size} kB.\u0027,"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "      title: \u0027Fout\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "      details: \u0027Er is een fout opgetreden - \u0027,"
+        "content": "    mediaLibraryModal: {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "      reportIt: \u0027maak er alstublieft een melding van.\u0027,"
+        "content": "      loading: \u0027Laden...\u0027,"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "      detailsHeading: \u0027Details\u0027,"
+        "content": "      noResults: \u0027Geen resultaten.\u0027,"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "      recoveredEntry: {"
+        "content": "      noAssetsFound: \u0027Geen media gevonden.\u0027,"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "        heading: \u0027Hersteld document\u0027,"
+        "content": "      noImagesFound: \u0027Geen afbeeldingen gevonden.\u0027,"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "        warning: \u0027Kopieer / plak dit ergens voordat u weggaat!\u0027,"
+        "content": "      private: \u0027Privé\u0027,"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "        copyButtonLabel: \u0027Kopieer naar klembord\u0027,"
+        "content": "      images: \u0027Afbeeldingen\u0027,"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      mediaAssets: \u0027Media\u0027,"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      search: \u0027Zoeken...\u0027,"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    settingsDropdown: {"
+        "content": "      uploading: \u0027Uploaden...\u0027,"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "      logOut: \u0027Uitloggen\u0027,"
+        "content": "      upload: \u0027Nieuwe uploaden\u0027,"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      download: \u0027Downloaden\u0027,"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "    toast: {"
+        "content": "      deleting: \u0027Verwijderen...\u0027,"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToLoadEntries: \u0027Kan item niet laden: %{details}\u0027,"
+        "content": "      deleteSelected: \u0027Verwijder selectie\u0027,"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToLoadDeployPreview: \u0027Kan voorvertoning niet laden: %{details}\u0027,"
+        "content": "      chooseSelected: \u0027Gebruik selectie\u0027,"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToPersist: \u0027Kan item niet opslaan: %{details}\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToDelete: \u0027Kan item niet verwijderen: %{details}\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToUpdateStatus: \u0027Kan status niet updaten: %{details}\u0027,"
+        "content": "  ui: {"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "      missingRequiredField: \u0027Oeps, sommige verplichte velden zijn niet ingevuld.\u0027,"
+        "content": "    default: {"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "      entrySaved: \u0027Item opgeslagen\u0027,"
+        "content": "      goBackToSite: \u0027Ga terug naar site\u0027,"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryPublished: \u0027Item gepubliceerd\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToPublishEntry: \u0027Kan item niet publiceren: %{details}\u0027,"
+        "content": "    errorBoundary: {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryUpdated: \u0027Status van item geüpdatet\u0027,"
+        "content": "      title: \u0027Fout\u0027,"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChanges: \u0027Niet-gepubliceerde wijzigingen verwijderd\u0027,"
+        "content": "      details: \u0027Er is een fout opgetreden - \u0027,"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToAuth: \u0027%{details}\u0027,"
+        "content": "      reportIt: \u0027maak er alstublieft een melding van.\u0027,"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      detailsHeading: \u0027Details\u0027,"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      privacyWarning:"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "  workflow: {"
+        "content": "        \u0027Als u een probleem opent, wordt het vooraf gevuld met het foutbericht en foutopsporingsgegevens. \\nControleer of de informatie correct is en verwijder, indien aanwezig, gevoelige gegevens.\u0027,"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflow: {"
+        "content": "      recoveredEntry: {"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "      loading: \u0027Redactionele Workflow items laden\u0027,"
+        "content": "        heading: \u0027Hersteld document\u0027,"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "      workflowHeading: \u0027Redactionele Workflow\u0027,"
+        "content": "        warning: \u0027Kopieer / plak dit ergens voordat u weggaat!\u0027,"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "      newPost: \u0027Nieuw bericht\u0027,"
+        "content": "        copyButtonLabel: \u0027Kopieer naar klembord\u0027,"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "      description:"
+        "content": "      },"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027%{smart_count} item wacht op beoordeling, %{readyCount} klaar om live te gaan. |||| %{smart_count} items wachten op beoordeling, %{readyCount} klaar om live te gaan. \u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "      dateFormat: \u0027MMMM D\u0027,"
+        "content": "    settingsDropdown: {"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      logOut: \u0027Uitloggen\u0027,"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowCard: {"
+        "content": "    },"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChange: \u0027%{date} door %{author}\u0027,"
+        "content": "    toast: {"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+        "content": "      onFailToLoadEntries: \u0027Kan item niet laden: %{details}\u0027,"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoDate: \u0027door %{author}\u0027,"
+        "content": "      onFailToLoadDeployPreview: \u0027Kan voorvertoning niet laden: %{details}\u0027,"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteChanges: \u0027Verwijder wijzigingen\u0027,"
+        "content": "      onFailToPersist: \u0027Kan item niet opslaan: %{details}\u0027,"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteNewEntry: \u0027Verwijder nieuw item\u0027,"
+        "content": "      onFailToDelete: \u0027Kan item niet verwijderen: %{details}\u0027,"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishChanges: \u0027Publiceer wijzigingen\u0027,"
+        "content": "      onFailToUpdateStatus: \u0027Kan status niet updaten: %{details}\u0027,"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNewEntry: \u0027Publiceer nieuw item\u0027,"
+        "content": "      missingRequiredField: \u0027Oeps, sommige verplichte velden zijn niet ingevuld.\u0027,"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      entrySaved: \u0027Item opgeslagen\u0027,"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowList: {"
+        "content": "      entryPublished: \u0027Item gepubliceerd\u0027,"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteEntry: \u0027Weet u zeker dat u dit item wilt verwijderen?\u0027,"
+        "content": "      entryUnpublished: \u0027Publicatie teruggetrokken\u0027,"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingNotReadyEntry:"
+        "content": "      onFailToPublishEntry: \u0027Kan item niet publiceren: %{details}\u0027,"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Alleen items met de status \"Gereed\" kunnen worden gepubliceerd. Sleep de kaart naar de kolom \"Gereed\" om publiceren mogelijk te maken.\u0027,"
+        "content": "      onFailToUnpublishEntry: \u0027Kan item niet terugtrekken: %{details}\u0027,"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishEntry: \u0027Weet u zeker dat u dit item wilt publiceren?\u0027,"
+        "content": "      entryUpdated: \u0027Status van item geüpdatet\u0027,"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "      draftHeader: \u0027Concepten\u0027,"
+        "content": "      onDeleteUnpublishedChanges: \u0027Niet-gepubliceerde wijzigingen verwijderd\u0027,"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReviewHeader: \u0027Wordt beoordeeld\u0027,"
+        "content": "      onFailToAuth: \u0027%{details}\u0027,"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "      readyHeader: \u0027Klaar\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "      currentEntries: \u0027%{smart_count} item |||| %{smart_count} items\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "  workflow: {"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    workflow: {"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "      loading: \u0027Redactionele Workflow items laden\u0027,"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      workflowHeading: \u0027Redactionele Workflow\u0027,"
       },
       {
         "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      newPost: \u0027Nieuw bericht\u0027,"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      description:"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027%{smart_count} item wacht op beoordeling, %{readyCount} klaar om live te gaan. |||| %{smart_count} items wachten op beoordeling, %{readyCount} klaar om live te gaan. \u0027,"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      dateFormat: \u0027MMMM D\u0027,"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflowCard: {"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChange: \u0027%{date} door %{author}\u0027,"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChangeNoDate: \u0027door %{author}\u0027,"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deleteChanges: \u0027Verwijder wijzigingen\u0027,"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deleteNewEntry: \u0027Verwijder nieuw item\u0027,"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishChanges: \u0027Publiceer wijzigingen\u0027,"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishNewEntry: \u0027Publiceer nieuw item\u0027,"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflowList: {"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onDeleteEntry: \u0027Weet u zeker dat u dit item wilt verwijderen?\u0027,"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onPublishingNotReadyEntry:"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027Alleen items met de status \"Gereed\" kunnen worden gepubliceerd. Sleep de kaart naar de kolom \"Gereed\" om publiceren mogelijk te maken.\u0027,"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onPublishEntry: \u0027Weet u zeker dat u dit item wilt publiceren?\u0027,"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      draftHeader: \u0027Concepten\u0027,"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      inReviewHeader: \u0027Wordt beoordeeld\u0027,"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      readyHeader: \u0027Klaar\u0027,"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      currentEntries: \u0027%{smart_count} item |||| %{smart_count} items\u0027,"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
@@ -23997,7 +24333,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 5,
-      "-": 229
+      "-": 256
     }
   },
   {
