@@ -199,6 +199,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 184,
+        "deletions": 69,
+        "date": "2020-05-26",
+        "commitResults": [
+          {
+            "hash": "6aed081457bc7073aafbdab85cdbc2e81799b0d8",
+            "messageTitle": "[#1221] Allow merging of individual groups (#1223)",
+            "messageBody": "Currently the `merge group` checkbox only supports merging/expanding all \r\ngroups. \r\n\r\nIt is inconvenient for users who want to have an overview across all \r\nrepos first, then take a detailed look within a particular group, because\r\nthere is a need to relocate the group on the page after expanding all \r\ngroups. This is especially the case when there are many authors and repos\r\non the dashboard.\r\n\r\nLet\u0027s add the feature to allow merging/expanding individual groups \r\ninstead.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 28,
+                "deletions": 17
+              },
+              "js": {
+                "insertions": 156,
+                "deletions": 52
+              }
+            }
+          }
+        ]
       }
     ],
     "openorclose": [],
@@ -951,6 +973,28 @@
               "yml": {
                 "insertions": 18,
                 "deletions": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 67,
+        "deletions": 42,
+        "date": "2020-05-26",
+        "commitResults": [
+          {
+            "hash": "0c50470e5c671e2911b5f0778ec4151f73d26a3f",
+            "messageTitle": "[#1198] Replace custom font class names with @mixin (#1211)",
+            "messageBody": "We are using class names such as `mini-font`, `medium-font` etc to \r\ninject font size css to those components. This results in nesting a \r\nlot of unnecessary class names for those components that want to \r\ninherit such font sizes.\r\n\r\nWe can utilise css mixins and include instead, which eliminates the\r\nneed to nest/append class names, resulting to a more cleaner html \r\nstructure.\r\n\r\nLet\u0027s create css mixins for font sizes to allow a more cleaner html\r\nstructure.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 23,
+                "deletions": 21
+              },
+              "scss": {
+                "insertions": 44,
+                "deletions": 21
               }
             }
           }
@@ -2146,21 +2190,21 @@
     "daekoon": []
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 88,
+    "ccyccyccy": 83,
     "Parcly-Taxel": 0,
-    "niqiukun": 64,
+    "niqiukun": 226,
     "openorclose": 0,
     "yash-chowdhary": 203,
     "anubh-v": 523,
-    "Tejas2805": 784,
+    "Tejas2805": 841,
     "dvrylc": 0,
-    "jamessspanggg": 1572,
+    "jamessspanggg": 1559,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 960,
+    "0blivious": 931,
     "hcwong": 0,
-    "ang-zeyu": 184,
+    "ang-zeyu": 180,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -2175,7 +2219,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "pug": 46,
+      "pug": 41,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2194,12 +2238,12 @@
     },
     "niqiukun": {
       "java": 0,
-      "js": 0,
+      "js": 134,
       "scss": 10,
       "json": 0,
       "md": 44,
       "py": 0,
-      "pug": 10,
+      "pug": 38,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2243,11 +2287,11 @@
     "Tejas2805": {
       "java": 31,
       "js": 10,
-      "scss": 603,
+      "scss": 641,
       "json": 25,
       "md": 53,
       "py": 0,
-      "pug": 44,
+      "pug": 63,
       "gradle": 0,
       "sh": 0,
       "yml": 18
@@ -2266,12 +2310,12 @@
     },
     "jamessspanggg": {
       "java": 418,
-      "js": 654,
+      "js": 643,
       "scss": 45,
       "json": 42,
       "md": 298,
       "py": 0,
-      "pug": 39,
+      "pug": 37,
       "gradle": 0,
       "sh": 67,
       "yml": 9
@@ -2314,12 +2358,12 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 567,
+      "js": 561,
       "scss": 47,
       "json": 0,
       "md": 8,
       "py": 0,
-      "pug": 270,
+      "pug": 247,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2338,12 +2382,12 @@
     },
     "ang-zeyu": {
       "java": 22,
-      "js": 119,
+      "js": 117,
       "scss": 5,
       "json": 3,
       "md": 1,
       "py": 0,
-      "pug": 34,
+      "pug": 32,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2410,21 +2454,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 51.60073,
+    "ccyccyccy": 50.74321,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 56.677673,
+    "niqiukun": 411.09384,
     "openorclose": 0.0,
-    "yash-chowdhary": 646.79663,
-    "anubh-v": 391.24664,
-    "Tejas2805": 3155.6497,
+    "yash-chowdhary": 635.9885,
+    "anubh-v": 385.0493,
+    "Tejas2805": 3157.4165,
     "dvrylc": 0.0,
-    "jamessspanggg": 3793.8794,
+    "jamessspanggg": 3733.0361,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 7846.622,
+    "0blivious": 7719.437,
     "hcwong": 0.0,
-    "ang-zeyu": 226.14825,
+    "ang-zeyu": 222.39099,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
