@@ -146,6 +146,46 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 93,
+        "deletions": 31,
+        "date": "2020-05-28",
+        "commitResults": [
+          {
+            "hash": "6e993c984f466f04d2ad683ba9ac14a86fc8782b",
+            "messageTitle": "[#10102] Add participant comment to student session result (#10120)",
+            "messageBody": "* Add participant comment to student session result\r\n\r\n* Fix test\r\n\r\n* Convert to use pipes\r\n\r\n* Add visibility for comments\r\n\r\n* Fix issues raised by review\r\n\r\n* Fix lint",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 22,
+                "deletions": 5
+              },
+              "ts": {
+                "insertions": 71,
+                "deletions": 26
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 2,
+        "deletions": 2,
+        "date": "2020-05-29",
+        "commitResults": [
+          {
+            "hash": "012af961bfd6cba22918dbca733e9e3864736edb",
+            "messageTitle": "[#10123] Remove removeAnonymousHash method (#10125)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -1155,6 +1195,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 157,
+        "deletions": 8,
+        "date": "2020-05-29",
+        "commitResults": [
+          {
+            "hash": "54ac9c7d070594f062a174c83f2e7ef7dc2c8f0a",
+            "messageTitle": "[#10109] Add all responses for student in records page (#10129)",
+            "messageBody": "* Initial implementation from #9798\r\n\r\n* Add additional grq-rgq-view\r\n\r\n* Add instructor comments\r\n\r\n* Revert to single question set\r\n\r\n* Revert to double question set\r\n\r\n* Remove unnecessary initial filter\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 18,
+                "deletions": 3
+              },
+              "ts": {
+                "insertions": 139,
+                "deletions": 5
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1233,7 +1295,7 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 231,
+    "ccyccyccy": 325,
     "Parcly-Taxel": 0,
     "niqiukun": 1363,
     "openorclose": 0,
@@ -1244,25 +1306,25 @@
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 1216,
+    "hcwong": 1215,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
     "tiuweehan": 1800,
-    "madanalogy": 1187,
+    "madanalogy": 1344,
     "daekoon": 1656
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 37,
+      "java": 39,
       "js": 0,
       "scss": 21,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 62,
-      "ts": 111
+      "html": 84,
+      "ts": 181
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1372,7 +1434,7 @@
       "py": 0,
       "tag": 0,
       "html": 9,
-      "ts": 937
+      "ts": 936
     },
     "ang-zeyu": {
       "java": 0,
@@ -1431,8 +1493,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 37,
-      "ts": 500
+      "html": 55,
+      "ts": 639
     },
     "daekoon": {
       "java": 1656,
@@ -1446,25 +1508,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 195.08092,
+    "ccyccyccy": 274.30627,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 5066.246,
+    "niqiukun": 4983.7007,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2348.6753,
+    "dvrylc": 2310.31,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 6074.245,
+    "hcwong": 5975.338,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 12982.184,
-    "madanalogy": 1906.9308,
-    "daekoon": 6996.417
+    "tiuweehan": 12773.1045,
+    "madanalogy": 2010.1262,
+    "daekoon": 6882.0933
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
