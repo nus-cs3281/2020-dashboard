@@ -186,6 +186,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 240,
+        "deletions": 151,
+        "date": "2020-05-31",
+        "commitResults": [
+          {
+            "hash": "c2ce258fd591f3c983627cecc98b7f71426c315a",
+            "messageTitle": "[#10124] Show instructor comments on student result page (#10136)",
+            "messageBody": "* Rename participant-comment-to-comment-row-model pipe\r\n\r\n* Rename old pipe to better name\r\n\r\n* Add table for instructor comments\r\n\r\n* Rename pipe names to be more accurate\r\n\r\n* Add documentation\r\n\r\n* Add readonly mode to comment table model\r\n\r\n* Refactor pipe, add readonly option\r\n\r\n* Add test\r\n\r\n* Fix lint\r\n\r\n* Refactor to remove duplicate code\r\n\r\n* Add pipes to scope\r\n\r\n* Fix missing timezone param\r\n\r\n* Attempt to fix test\r\n\r\n* Update snapshot\r\n\r\n* Change isReadonly to isReadOnly",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 26,
+                "deletions": 9
+              },
+              "ts": {
+                "insertions": 214,
+                "deletions": 142
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -1217,6 +1239,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 165,
+        "deletions": 123,
+        "date": "2020-06-01",
+        "commitResults": [
+          {
+            "hash": "db2dde3e7cab67837132ca908ac9ae04e11c929e",
+            "messageTitle": "[#10109] Add response comment CRUD operations (#10138)",
+            "messageBody": "* Add response comment CRUD operations\r\n\r\n* Extract duplicate functions into common parent class\r\n\r\n* Fix typo in preprocessComments\r\n\r\n* Fix method documentation alignment\r\n\r\n* Remove access modifiers for inherited services\r\n\r\n* Fix tslint comment indentations",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 2,
+                "deletions": 0
+              },
+              "ts": {
+                "insertions": 163,
+                "deletions": 123
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1295,9 +1339,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 325,
+    "ccyccyccy": 509,
     "Parcly-Taxel": 0,
-    "niqiukun": 1367,
+    "niqiukun": 1362,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -1312,7 +1356,7 @@
     "alyip98": 0,
     "nbriannl": 0,
     "tiuweehan": 1800,
-    "madanalogy": 1341,
+    "madanalogy": 1456,
     "daekoon": 1656
   },
   "authorFileTypeContributionMap": {
@@ -1323,8 +1367,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 84,
-      "ts": 181
+      "html": 103,
+      "ts": 346
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1344,7 +1388,7 @@
       "py": 0,
       "tag": 0,
       "html": 82,
-      "ts": 489
+      "ts": 484
     },
     "openorclose": {
       "java": 0,
@@ -1493,8 +1537,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 53,
-      "ts": 638
+      "html": 55,
+      "ts": 751
     },
     "daekoon": {
       "java": 1656,
@@ -1508,25 +1552,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 274.30627,
+    "ccyccyccy": 1087.055,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4983.7007,
+    "niqiukun": 4903.78,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2310.31,
+    "dvrylc": 2273.172,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 5975.338,
+    "hcwong": 5879.591,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 12773.1045,
-    "madanalogy": 2010.1262,
-    "daekoon": 6882.0933
+    "tiuweehan": 12570.617,
+    "madanalogy": 2397.2124,
+    "daekoon": 6771.4727
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
