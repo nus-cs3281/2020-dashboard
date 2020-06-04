@@ -347,472 +347,479 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    const {"
+        "content": "    const { auth_type: authType \u003d \u0027\u0027 } \u003d this.props.config.backend;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "      auth_type: authType \u003d \u0027\u0027,"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "      base_url \u003d \u0027https://bitbucket.org\u0027,"
+        "content": "    if (authType \u003d\u003d\u003d \u0027implicit\u0027) {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "      auth_endpoint \u003d \u0027site/oauth2/authorize\u0027,"
+        "content": "      const {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "      app_id \u003d \u0027\u0027,"
+        "content": "        base_url \u003d \u0027https://bitbucket.org\u0027,"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    } \u003d this.props.config.backend;"
+        "content": "        auth_endpoint \u003d \u0027site/oauth2/authorize\u0027,"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        app_id \u003d \u0027\u0027,"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (authType \u003d\u003d\u003d \u0027implicit\u0027) {"
+        "content": "      } \u003d this.props.config.backend;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.auth \u003d new ImplicitAuthenticator({"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        base_url,"
+        "content": "      this.auth \u003d new ImplicitAuthenticator({"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        auth_endpoint,"
+        "content": "        base_url,"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        app_id,"
+        "content": "        auth_endpoint,"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        clearHash: this.props.clearHash,"
+        "content": "        app_id,"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": "        clearHash: this.props.clearHash,"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "      // Complete implicit authentication if we were redirected back to from the provider."
+        "content": "      });"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.auth.completeAuth((err, data) \u003d\u003e {"
+        "content": "      // Complete implicit authentication if we were redirected back to from the provider."
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (err) {"
+        "content": "      this.auth.completeAuth((err, data) \u003d\u003e {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "          this.setState({ loginError: err.toString() });"
+        "content": "        if (err) {"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "          return;"
+        "content": "          this.setState({ loginError: err.toString() });"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "          return;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.props.onLogin(data);"
+        "content": "        }"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": "        this.props.onLogin(data);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.authSettings \u003d { scope: \u0027repository:write\u0027 };"
+        "content": "      });"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "    } else {"
+        "content": "      this.authSettings \u003d { scope: \u0027repository:write\u0027 };"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.auth \u003d new NetlifyAuthenticator({"
+        "content": "    } else {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        base_url: this.props.base_url,"
+        "content": "      this.auth \u003d new NetlifyAuthenticator({"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        site_id:"
+        "content": "        base_url: this.props.base_url,"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "          document.location.host.split(\u0027:\u0027)[0] \u003d\u003d\u003d \u0027localhost\u0027"
+        "content": "        site_id:"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "            ? \u0027cms.netlify.com\u0027"
+        "content": "          document.location.host.split(\u0027:\u0027)[0] \u003d\u003d\u003d \u0027localhost\u0027"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "            : this.props.siteId,"
+        "content": "            ? \u0027cms.netlify.com\u0027"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        auth_endpoint: this.props.authEndpoint,"
+        "content": "            : this.props.siteId,"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": "        auth_endpoint: this.props.authEndpoint,"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.authSettings \u003d { provider: \u0027bitbucket\u0027, scope: \u0027repo\u0027 };"
+        "content": "      });"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      this.authSettings \u003d { provider: \u0027bitbucket\u0027, scope: \u0027repo\u0027 };"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleLogin \u003d e \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    e.preventDefault();"
+        "content": "  handleLogin \u003d e \u003d\u003e {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.auth.authenticate(this.authSettings, (err, data) \u003d\u003e {"
+        "content": "    e.preventDefault();"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (err) {"
+        "content": "    this.auth.authenticate(this.authSettings, (err, data) \u003d\u003e {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.setState({ loginError: err.toString() });"
+        "content": "      if (err) {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "        return;"
+        "content": "        this.setState({ loginError: err.toString() });"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "        return;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.props.onLogin(data);"
+        "content": "      }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "      this.props.onLogin(data);"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    });"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "  render() {"
+        "content": ""
       },
       {
         "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  render() {"
+      },
+      {
+        "lineNumber": 75,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "    const { inProgress, config, t } \u003d this.props;"
       },
       {
-        "lineNumber": 75,
+        "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
         "content": "    return ("
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
         "content": "      \u003cAuthenticationPage"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
         "content": "        onLogin\u003d{this.handleLogin}"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": "        loginDisabled\u003d{inProgress}"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
         "content": "        loginErrorMessage\u003d{this.state.loginError}"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": "        logoUrl\u003d{config.logo_url}"
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
         "content": "        siteUrl\u003d{config.site_url}"
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
         "content": "        renderButtonContent\u003d{() \u003d\u003e ("
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
         "content": "          \u003cReact.Fragment\u003e"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
         "content": "            \u003cLoginButtonIcon type\u003d\"bitbucket\" /\u003e"
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 87,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "            {inProgress ? t(\u0027auth.loggingIn\u0027) : t(\u0027auth.loginWithBitbucket\u0027)}"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
         "content": "          \u003c/React.Fragment\u003e"
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
         "content": "        )}"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 90,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "        t\u003d{t}"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": "      /\u003e"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
         "content": "    );"
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
       },
       {
-        "lineNumber": 93,
+        "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
@@ -821,7 +828,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 4,
-      "-": 89
+      "-": 90
     }
   },
   {
@@ -12449,234 +12456,241 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      onLoggedOut: \u0027You have been logged out, please back up any data and login again\u0027,"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    },"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "  workflow: {"
+        "content": "  },"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflow: {"
+        "content": "  workflow: {"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "      loading: \u0027Loading Editorial Workflow Entries\u0027,"
+        "content": "    workflow: {"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "      workflowHeading: \u0027Editorial Workflow\u0027,"
+        "content": "      loading: \u0027Loading Editorial Workflow Entries\u0027,"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "      newPost: \u0027New Post\u0027,"
+        "content": "      workflowHeading: \u0027Editorial Workflow\u0027,"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "      description:"
+        "content": "      newPost: \u0027New Post\u0027,"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027%{smart_count} entry waiting for review, %{readyCount} ready to go live. |||| %{smart_count} entries waiting for review, %{readyCount} ready to go live. \u0027,"
+        "content": "      description:"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "      dateFormat: \u0027MMMM D\u0027,"
+        "content": "        \u0027%{smart_count} entry waiting for review, %{readyCount} ready to go live. |||| %{smart_count} entries waiting for review, %{readyCount} ready to go live. \u0027,"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      dateFormat: \u0027MMMM D\u0027,"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowCard: {"
+        "content": "    },"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChange: \u0027%{date} by %{author}\u0027,"
+        "content": "    workflowCard: {"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+        "content": "      lastChange: \u0027%{date} by %{author}\u0027,"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoDate: \u0027by %{author}\u0027,"
+        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteChanges: \u0027Delete changes\u0027,"
+        "content": "      lastChangeNoDate: \u0027by %{author}\u0027,"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteNewEntry: \u0027Delete new entry\u0027,"
+        "content": "      deleteChanges: \u0027Delete changes\u0027,"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishChanges: \u0027Publish changes\u0027,"
+        "content": "      deleteNewEntry: \u0027Delete new entry\u0027,"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNewEntry: \u0027Publish new entry\u0027,"
+        "content": "      publishChanges: \u0027Publish changes\u0027,"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      publishNewEntry: \u0027Publish new entry\u0027,"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowList: {"
+        "content": "    },"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteEntry: \u0027Are you sure you want to delete this entry?\u0027,"
+        "content": "    workflowList: {"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingNotReadyEntry:"
+        "content": "      onDeleteEntry: \u0027Are you sure you want to delete this entry?\u0027,"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Only items with a \"Ready\" status can be published. Please drag the card to the \"Ready\" column to enable publishing.\u0027,"
+        "content": "      onPublishingNotReadyEntry:"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishEntry: \u0027Are you sure you want to publish this entry?\u0027,"
+        "content": "        \u0027Only items with a \"Ready\" status can be published. Please drag the card to the \"Ready\" column to enable publishing.\u0027,"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "      draftHeader: \u0027Drafts\u0027,"
+        "content": "      onPublishEntry: \u0027Are you sure you want to publish this entry?\u0027,"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReviewHeader: \u0027In Review\u0027,"
+        "content": "      draftHeader: \u0027Drafts\u0027,"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "      readyHeader: \u0027Ready\u0027,"
+        "content": "      inReviewHeader: \u0027In Review\u0027,"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "      currentEntries: \u0027%{smart_count} entry |||| %{smart_count} entries\u0027,"
+        "content": "      readyHeader: \u0027Ready\u0027,"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      currentEntries: \u0027%{smart_count} entry |||| %{smart_count} entries\u0027,"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    },"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "  },"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
@@ -12685,7 +12699,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 25,
-      "-": 234
+      "-": 235
     }
   },
   {
