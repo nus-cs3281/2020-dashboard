@@ -252,6 +252,69 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 370,
+        "deletions": 26,
+        "date": "2020-06-05",
+        "commitResults": [
+          {
+            "hash": "5bea3ab37d4579371be60bb2c27f3ffae7dbbd4c",
+            "messageTitle": "[#10144] Add instructor view session result help example component (#10162)",
+            "messageBody": "* Add example control box\r\n\r\n* Add example GRQ session result\r\n\r\n* Disabled buttons for instructor\u003dsession-no-response-panel\r\n\r\n* Add example component for student view\r\n\r\n* Lint and test fix\r\n\r\n* Remove unintended change\r\n\r\n* Reuse instructor\u003dsession-no-response-panel\r\n\r\n* Fix merge conflicts",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 107,
+                "deletions": 5
+              },
+              "ts": {
+                "insertions": 259,
+                "deletions": 21
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 217,
+        "deletions": 27,
+        "date": "2020-06-06",
+        "commitResults": [
+          {
+            "hash": "2c43261b7797e8dbcb9f9e96335cbcdc5a923431",
+            "messageTitle": "[#10168] Fix checkbox ui at Instructor Session Result Page (#10169)",
+            "messageBody": "* Modify checkbox to allow clicking on label to check the box\r\n\r\n* Fix formatting",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 9,
+                "deletions": 7
+              }
+            }
+          },
+          {
+            "hash": "949d600b9703214f793e1d179b09b1803cd1baf6",
+            "messageTitle": "[#10155] Add sortable table, with MCQ statistics calling it (#10166)",
+            "messageBody": "* Add sortable table, with MCQ statistics calling it\r\n\r\n* Fix CSS\r\n\r\n* Refactor to use more of table comparator service\r\n\r\n* Fix doc\r\n\r\n* Clone original row instead of assigning\r\n\r\n* Fix enum casing, change enum placement\r\n\r\n* Make sortBy comment more concise",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 3,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 20,
+                "deletions": 20
+              },
+              "ts": {
+                "insertions": 185,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -1305,6 +1368,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 310,
+        "deletions": 244,
+        "date": "2020-06-05",
+        "commitResults": [
+          {
+            "hash": "331664bd87c176b2a69a27e616d94a0bdc285d40",
+            "messageTitle": "[#10140] Add comment search functionality in the backend (#10150)",
+            "messageBody": "* Refactor resource endpoints and define API output format\r\n\r\n* Utilise FeedbackResponseCommentSearchResultBundle to build CommentSearchResultsData\r\n\r\n* Add documentation to searchComments method\r\n\r\n* Implement SearchCommentsAction and clean up unused action\r\n\r\n* Implement logical skeleton for data transform\r\n\r\n* Implement data transform to output logic\r\n\r\n* Fix checkstyle errors for SearchCommentsAction\r\n\r\n* Fix non executing test cases\r\n\r\n* Clean up code style and documentation\r\n\r\n* Fix imports for search action test files\r\n\r\n* Add documentation to explain null CommentOutput\r\n\r\n* Add response details when building ResponseOutput\r\n\r\n* Convert code comments to javadocs and fix name email mismatch\r\n\r\n* Add unit tests, change access to instructors only",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 295,
+                "deletions": 242
+              },
+              "ts": {
+                "insertions": 15,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1383,36 +1468,36 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 615,
+    "ccyccyccy": 1190,
     "Parcly-Taxel": 0,
     "niqiukun": 1323,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
-    "dvrylc": 858,
+    "dvrylc": 834,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 1214,
+    "hcwong": 1213,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
     "tiuweehan": 1795,
-    "madanalogy": 1448,
+    "madanalogy": 1752,
     "daekoon": 1656
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
       "java": 37,
       "js": 0,
-      "scss": 21,
+      "scss": 28,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 140,
-      "ts": 417
+      "html": 276,
+      "ts": 849
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1465,14 +1550,14 @@
       "ts": 0
     },
     "dvrylc": {
-      "java": 486,
+      "java": 481,
       "js": 0,
       "scss": 0,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 5,
-      "ts": 367
+      "ts": 348
     },
     "j-lum": {
       "java": 0,
@@ -1522,7 +1607,7 @@
       "py": 0,
       "tag": 0,
       "html": 9,
-      "ts": 935
+      "ts": 934
     },
     "ang-zeyu": {
       "java": 0,
@@ -1575,14 +1660,14 @@
       "ts": 1721
     },
     "madanalogy": {
-      "java": 647,
+      "java": 936,
       "js": 0,
       "scss": 3,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 54,
-      "ts": 744
+      "ts": 759
     },
     "daekoon": {
       "java": 1656,
@@ -1596,25 +1681,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 1157.8353,
+    "ccyccyccy": 2239.006,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4851.9106,
+    "niqiukun": 4776.137,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2249.0735,
+    "dvrylc": 2213.8665,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 5817.4263,
+    "hcwong": 5726.6284,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 12439.157,
-    "madanalogy": 2372.7583,
-    "daekoon": 6699.679
+    "tiuweehan": 12247.05,
+    "madanalogy": 3888.6755,
+    "daekoon": 6594.76
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
