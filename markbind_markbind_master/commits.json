@@ -1376,6 +1376,65 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 348,
+        "deletions": 375,
+        "date": "2020-06-07",
+        "commitResults": [
+          {
+            "hash": "4140a70179f37b006fb30e14fe667bcdb5736e76",
+            "messageTitle": "Simplify site nav generation (#1221)",
+            "messageBody": "The site nav generation algorithm is heavily recursive.\r\n\r\nLet\u0027s remove the recursion in favour of a simple iterative process.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 99,
+                "deletions": 102
+              }
+            }
+          },
+          {
+            "hash": "cd4cbaf58f11690fd132cf2aa4b62629a06eb5ff",
+            "messageTitle": "Tweak site navigation design (#1222)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 183,
+                "deletions": 171
+              },
+              "md": {
+                "insertions": 6,
+                "deletions": 6
+              },
+              "js": {
+                "insertions": 60,
+                "deletions": 96
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 114,
+        "deletions": 124,
+        "date": "2020-06-08",
+        "commitResults": [
+          {
+            "hash": "af495cfbcb9bed8e6dbd929198991a8e5bf6555c",
+            "messageTitle": "Update variable documentation (#1203)",
+            "messageBody": "The limitation of variables not being able to contain incomplete or\r\nmalformed xml has been patched.\r\nSome areas of the variable documentation can also be formatted with\r\nnewly introduced features to be more visually appealing.\r\n\r\nLet’s update the user guide to reflect the patch, and reformat some\r\nareas of the variable documentation.",
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 112,
+                "deletions": 122
+              },
+              "md": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -1978,7 +2037,7 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 794,
-    "yash-chowdhary": 1497,
+    "yash-chowdhary": 1485,
     "Tejas2805": 136,
     "dvrylc": 55,
     "j-lum": 0,
@@ -1986,11 +2045,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 28,
-    "ang-zeyu": 2909,
+    "ang-zeyu": 3299,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 864,
-    "le0tan": 1071,
+    "le0tan": 1028,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -2045,12 +2104,12 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 261,
+      "js": 254,
       "css": 126,
       "json": 4,
-      "md": 1047,
+      "md": 1045,
       "mbd": 0,
-      "mbdf": 41,
+      "mbdf": 38,
       "njk": 0,
       "py": 0,
       "yml": 18
@@ -2141,12 +2200,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2361,
-      "css": 18,
+      "js": 2455,
+      "css": 201,
       "json": 118,
-      "md": 324,
+      "md": 332,
       "mbd": 0,
-      "mbdf": 76,
+      "mbdf": 181,
       "njk": 12,
       "py": 0,
       "yml": 0
@@ -2189,7 +2248,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 888,
+      "js": 845,
       "css": 22,
       "json": 0,
       "md": 75,
@@ -2228,21 +2287,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 7399.2515,
-    "yash-chowdhary": 9586.803,
-    "Tejas2805": 404.3344,
-    "dvrylc": 18.822952,
+    "openorclose": 6745.567,
+    "yash-chowdhary": 8743.928,
+    "Tejas2805": 368.55,
+    "dvrylc": 17.15967,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 18.728338,
-    "ang-zeyu": 70147.836,
+    "hcwong": 17.0726,
+    "ang-zeyu": 66705.77,
     "geshuming": 0.0,
-    "alyip98": 3.3110113,
-    "nbriannl": 14585.931,
-    "le0tan": 180932.95,
-    "madanalogy": 194.0109,
+    "alyip98": 3.0181334,
+    "nbriannl": 13303.186,
+    "le0tan": 164936.56,
+    "madanalogy": 176.84633,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
