@@ -351,6 +351,36 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 17653,
+        "deletions": 0,
+        "date": "2020-06-13",
+        "commitResults": [
+          {
+            "hash": "93e0f50cdc46f1a4b83ae56e72386f65aa8a1b78",
+            "messageTitle": "Change directory structure for repo merge (#147)",
+            "messageBody": "Markbind\u0027s vue component definitions are stored in the vue-strap fork.\r\nThis has some implications on development and maintainer workflow (see\r\nissue #411 for more detail), most notably needing to manually copy the\r\nminified bundle to test changes in /vue-strap.\r\n\r\nAn alternative was raised in issue #981 to alleviate this, that is to\r\nmake /vue-strap a scoped package. This still has several drawbacks as\r\ncompared to a complete repo merge as outlined in #411, such as needing\r\nto run tests on both repos.\r\n\r\nHence, let\u0027s prepare the directory structure of the vue-strap fork\r\nto allow for a clean merge into the /markbind repo, preserving\r\nthe commit history of /vue-strap.",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "vue": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 17653,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -512,7 +542,7 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 0,
-    "yash-chowdhary": 12,
+    "yash-chowdhary": 16,
     "Tejas2805": 0,
     "dvrylc": 0,
     "j-lum": 0,
@@ -520,11 +550,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 38,
-    "ang-zeyu": 1135,
+    "ang-zeyu": 5857,
     "geshuming": 0,
     "alyip98": 0,
-    "nbriannl": 58,
-    "le0tan": 59,
+    "nbriannl": 320,
+    "le0tan": 471,
     "madanalogy": 0,
     "daekoon": 0
   },
@@ -572,7 +602,7 @@
       "json": 0,
       "md": 0,
       "py": 0,
-      "vue": 12
+      "vue": 16
     },
     "Tejas2805": {
       "java": 0,
@@ -641,10 +671,10 @@
       "java": 0,
       "js": 273,
       "css": 0,
-      "json": 22,
+      "json": 4733,
       "md": 0,
       "py": 0,
-      "vue": 840
+      "vue": 851
     },
     "geshuming": {
       "java": 0,
@@ -668,19 +698,19 @@
       "java": 0,
       "js": 2,
       "css": 0,
-      "json": 7,
+      "json": 266,
       "md": 0,
       "py": 0,
-      "vue": 49
+      "vue": 52
     },
     "le0tan": {
       "java": 0,
       "js": 0,
       "css": 0,
-      "json": 0,
+      "json": 410,
       "md": 0,
       "py": 0,
-      "vue": 59
+      "vue": 61
     },
     "madanalogy": {
       "java": 0,
@@ -705,20 +735,20 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 2742.4934,
-    "yash-chowdhary": 2.3737996,
+    "openorclose": 2157.8308,
+    "yash-chowdhary": 1.868878,
     "Tejas2805": 0.0,
     "dvrylc": 0.0,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 13.552408,
-    "ang-zeyu": 9855.003,
+    "hcwong": 10.66901,
+    "ang-zeyu": 1587371.2,
     "geshuming": 0.0,
     "alyip98": 0.0,
-    "nbriannl": 25.283817,
-    "le0tan": 229.94714,
+    "nbriannl": 19.920904,
+    "le0tan": 181.08495,
     "madanalogy": 0.0,
     "daekoon": 0.0
   },

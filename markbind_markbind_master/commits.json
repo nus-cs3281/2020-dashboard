@@ -1435,6 +1435,36 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 102,
+        "deletions": 46,
+        "date": "2020-06-13",
+        "commitResults": [
+          {
+            "hash": "cc68c207c68515d0bc87975325bacad93bce99c7",
+            "messageTitle": "Fix site nav highlight and padding (#1242)",
+            "messageBody": "Needing to start content without padding in the site navigation menu is\r\na rare use case. Let\u0027s revert the padding removal from the site nav.\r\n\r\nThe site nav supports adding custom content in between navigation items\r\nas a markdown list item, but erroneously applies the highlight and\r\nclick wrapper.\r\nLet\u0027s not apply the wrapper when there is no anchor or nested list in\r\nsaid list item to rectify this.",
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 21,
+                "deletions": 6
+              },
+              "mbdf": {
+                "insertions": 68,
+                "deletions": 36
+              },
+              "md": {
+                "insertions": 4,
+                "deletions": 4
+              },
+              "js": {
+                "insertions": 9,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2037,15 +2067,15 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 785,
-    "yash-chowdhary": 1479,
-    "Tejas2805": 136,
+    "yash-chowdhary": 1473,
+    "Tejas2805": 126,
     "dvrylc": 54,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 28,
-    "ang-zeyu": 3249,
+    "ang-zeyu": 3293,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 859,
@@ -2107,9 +2137,9 @@
       "js": 248,
       "css": 126,
       "json": 4,
-      "md": 1045,
+      "md": 1044,
       "mbd": 0,
-      "mbdf": 38,
+      "mbdf": 33,
       "njk": 0,
       "py": 0,
       "yml": 18
@@ -2119,9 +2149,9 @@
       "js": 3,
       "css": 1,
       "json": 8,
-      "md": 67,
+      "md": 66,
       "mbd": 0,
-      "mbdf": 57,
+      "mbdf": 48,
       "njk": 0,
       "py": 0,
       "yml": 0
@@ -2200,12 +2230,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2405,
-      "css": 201,
+      "js": 2412,
+      "css": 195,
       "json": 118,
-      "md": 332,
+      "md": 316,
       "mbd": 0,
-      "mbdf": 181,
+      "mbdf": 240,
       "njk": 12,
       "py": 0,
       "yml": 0
@@ -2287,21 +2317,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6745.567,
-    "yash-chowdhary": 8743.928,
-    "Tejas2805": 368.55,
-    "dvrylc": 17.15967,
+    "openorclose": 6574.7354,
+    "yash-chowdhary": 8523.507,
+    "Tejas2805": 359.2012,
+    "dvrylc": 16.72504,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 17.0726,
-    "ang-zeyu": 66705.77,
+    "hcwong": 16.63993,
+    "ang-zeyu": 65093.953,
     "geshuming": 0.0,
-    "alyip98": 3.0181334,
-    "nbriannl": 13303.186,
-    "le0tan": 164936.56,
-    "madanalogy": 176.84633,
+    "alyip98": 2.941576,
+    "nbriannl": 12967.755,
+    "le0tan": 160756.66,
+    "madanalogy": 172.3632,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
