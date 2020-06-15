@@ -40463,14 +40463,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        except KeyError:"
+        "content": "        except KeyError as e:"
       },
       {
         "lineNumber": 400,
         "author": {
           "gitId": "-"
         },
-        "content": "            raise exceptions.EmptyReportError()"
+        "content": "            raise exceptions.EmptyReportError() from e"
       },
       {
         "lineNumber": 401,
@@ -58974,7 +58974,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            except exceptions.NotFoundError:"
+        "content": "            except exceptions.NotFoundError as e:"
       },
       {
         "lineNumber": 540,
@@ -58988,7 +58988,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "                raise ValueError"
+        "content": "                raise ValueError from e"
       },
       {
         "lineNumber": 542,
