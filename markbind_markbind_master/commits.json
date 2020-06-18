@@ -1465,6 +1465,39 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 19,
+        "deletions": 23,
+        "date": "2020-06-17",
+        "commitResults": [
+          {
+            "hash": "215a6f593de59102defdb05c2f4ffc8dabc46a07",
+            "messageTitle": "Update ignore configs for /vue-strap merge",
+            "messageBody": "Vue-strap enables coverage reporting for snapshot tests.\n\nThe linting and jest configurations need to be updated as well to\nisolate linting and tests to their original repos as well.\n\nLet\u0027s add the coverage folder to .gitignore to avoid large coverage\ndiffs. Let\u0027s also update the eslint, stylelint and jest configurations\nto ignore the appropriate folders.\n\nSome vue component no longer exist that are still in the .eslintrc file\nas well.\nLet\u0027s remove these.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 0
+              }
+            }
+          },
+          {
+            "hash": "0d2ee5add5cd3c5b8db183ee803ecc480aa13b96",
+            "messageTitle": "Update developer guide for /vue-strap merge",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 17,
+                "deletions": 23
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2075,7 +2108,7 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 28,
-    "ang-zeyu": 3293,
+    "ang-zeyu": 3312,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 702,
@@ -2230,10 +2263,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2412,
+      "js": 2413,
       "css": 195,
-      "json": 118,
-      "md": 316,
+      "json": 119,
+      "md": 333,
       "mbd": 0,
       "mbdf": 240,
       "njk": 12,
@@ -2317,21 +2350,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6574.7354,
-    "yash-chowdhary": 8523.507,
-    "Tejas2805": 359.2012,
-    "dvrylc": 16.72504,
+    "openorclose": 6444.1733,
+    "yash-chowdhary": 8355.017,
+    "Tejas2805": 352.0562,
+    "dvrylc": 16.392824,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 16.63993,
-    "ang-zeyu": 65093.953,
+    "hcwong": 16.309443,
+    "ang-zeyu": 63808.87,
     "geshuming": 0.0,
-    "alyip98": 2.941576,
-    "nbriannl": 12967.755,
-    "le0tan": 160756.66,
-    "madanalogy": 172.3632,
+    "alyip98": 2.8831043,
+    "nbriannl": 12711.335,
+    "le0tan": 157563.48,
+    "madanalogy": 168.9338,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
