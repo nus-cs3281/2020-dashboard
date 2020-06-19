@@ -389,6 +389,32 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 117,
+        "deletions": 105,
+        "date": "2020-06-19",
+        "commitResults": [
+          {
+            "hash": "cfe4f61e8c8f92a8fedd333f70d78058c948e3d6",
+            "messageTitle": "[#10176] UAT: Session edit page fix (#10203)",
+            "messageBody": "* Scroll to new question when new question is added\r\n\r\n* Add smooth drag and drop animations for MSQ and rank options, along with some refactoring of CSS\r\n\r\n* Fix numerical scale input box error checking\r\n\r\n* Fix rubric question delete modal mix up\r\n\r\n* Remove useless classes\r\n\r\n* Add smooth drag and drop for distribution points for options\r\n\r\n* Test fix\r\n\r\n* Refactor smooth dragging animation to use module level stylesheet",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 21,
+                "deletions": 22
+              },
+              "html": {
+                "insertions": 74,
+                "deletions": 79
+              },
+              "ts": {
+                "insertions": 22,
+                "deletions": 4
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -1564,9 +1590,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 1736,
+    "ccyccyccy": 1829,
     "Parcly-Taxel": 0,
-    "niqiukun": 1321,
+    "niqiukun": 1302,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -1588,12 +1614,12 @@
     "ccyccyccy": {
       "java": 37,
       "js": 0,
-      "scss": 32,
+      "scss": 53,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 300,
-      "ts": 1367
+      "html": 350,
+      "ts": 1389
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1608,11 +1634,11 @@
     "niqiukun": {
       "java": 694,
       "js": 0,
-      "scss": 61,
+      "scss": 46,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 82,
+      "html": 78,
       "ts": 484
     },
     "openorclose": {
@@ -1777,25 +1803,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3633.7122,
+    "ccyccyccy": 3814.4106,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4517.4663,
+    "niqiukun": 4473.4033,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2093.6978,
+    "dvrylc": 2073.2283,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 5416.64,
+    "hcwong": 5363.866,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 11590.727,
-    "madanalogy": 3690.5972,
-    "daekoon": 6236.7173
+    "tiuweehan": 11478.801,
+    "madanalogy": 3655.7844,
+    "daekoon": 6175.784
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
