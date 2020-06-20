@@ -391,8 +391,8 @@
         ]
       },
       {
-        "insertions": 117,
-        "deletions": 105,
+        "insertions": 173,
+        "deletions": 130,
         "date": "2020-06-19",
         "commitResults": [
           {
@@ -411,6 +411,25 @@
               "ts": {
                 "insertions": 22,
                 "deletions": 4
+              }
+            }
+          },
+          {
+            "hash": "d0036f43832f64bf9a83df43171e5a89a1cfe654",
+            "messageTitle": "[#10176] Fixes for UAT: Instructor edit page (#10201)",
+            "messageBody": "* Disable dropdown for feedback path when there is no alternatives\r\n\r\n* Remember previous input for toggling generate option\r\n\r\nMight have a better way to do this. But since the model have to be sync, I don\u0027t see a better way without introducing excessive overhead just for 2 components\r\n\r\n* Add cursor not-allowed styling to disabled input fields",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 6,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 49,
+                "deletions": 24
               }
             }
           }
@@ -1512,6 +1531,55 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 215,
+        "deletions": 26,
+        "date": "2020-06-20",
+        "commitResults": [
+          {
+            "hash": "c98e6b1a1f0860a61d86356117497557f093e652",
+            "messageTitle": "[#10176] Fix Admin Search Issues from UAT (#10199)",
+            "messageBody": "* Implement all fixes for UAT issues\n\n* Add admin-search-page.component.spec.ts tests\n\n* Add modal confirmation to e2e test\n\n* Fix getStudentRow and getInstructorRow xpath format\n\n* Fix indentation and add course tooltip\n\n* Fix e2e test for tooltip addition\n\n* Fix import order for lint",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 22,
+                "deletions": 4
+              },
+              "scss": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 52,
+                "deletions": 7
+              },
+              "ts": {
+                "insertions": 124,
+                "deletions": 13
+              }
+            }
+          },
+          {
+            "hash": "95ec1381dde069b965606b28283920a57e63e1e3",
+            "messageTitle": "[#10176] UAT: Fix Instructor Search Page (#10207)",
+            "messageBody": "* Add input validation to instructor-search-bar\r\n\r\n* Add open in new tab for action buttons\r\n\r\n* Move validation to parent and update snapshot\r\n\r\n* Update snapshots and instructor-search-bar.component.scss\r\n\r\n* Fix guard clause indentation",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 9,
+                "deletions": 2
+              },
+              "ts": {
+                "insertions": 4,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1590,13 +1658,13 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 1829,
+    "ccyccyccy": 1873,
     "Parcly-Taxel": 0,
     "niqiukun": 1302,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
-    "dvrylc": 834,
+    "dvrylc": 830,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
@@ -1606,20 +1674,20 @@
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1795,
-    "madanalogy": 1797,
+    "tiuweehan": 1797,
+    "madanalogy": 1986,
     "daekoon": 1653
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
       "java": 37,
       "js": 0,
-      "scss": 53,
+      "scss": 59,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 350,
-      "ts": 1389
+      "html": 351,
+      "ts": 1426
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1679,7 +1747,7 @@
       "py": 0,
       "tag": 0,
       "html": 5,
-      "ts": 348
+      "ts": 344
     },
     "j-lum": {
       "java": 0,
@@ -1779,17 +1847,17 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1721
+      "ts": 1723
     },
     "madanalogy": {
-      "java": 936,
+      "java": 958,
       "js": 0,
-      "scss": 3,
+      "scss": 7,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 58,
-      "ts": 800
+      "html": 118,
+      "ts": 903
     },
     "daekoon": {
       "java": 1653,
@@ -1803,25 +1871,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 3814.4106,
+    "ccyccyccy": 3994.989,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4473.4033,
+    "niqiukun": 4451.689,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2073.2283,
+    "dvrylc": 2063.1506,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 5363.866,
+    "hcwong": 5337.8394,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 11478.801,
-    "madanalogy": 3655.7844,
-    "daekoon": 6175.784
+    "tiuweehan": 11423.714,
+    "madanalogy": 3892.2764,
+    "daekoon": 6145.71
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",

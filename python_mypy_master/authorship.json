@@ -5685,14 +5685,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Unreachable code during typechecking"
+        "content": "Unreachable code"
       },
       {
         "lineNumber": 813,
         "author": {
           "gitId": "-"
         },
-        "content": "------------------------------------"
+        "content": "----------------"
       },
       {
         "lineNumber": 814,
@@ -5706,21 +5706,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Sometimes a part of the code can become unreachable, even if not immediately obvious."
+        "content": "Mypy may consider some code as *unreachable*, even if it might not be"
       },
       {
         "lineNumber": 816,
         "author": {
           "gitId": "-"
         },
-        "content": "It is important to note that in such cases, that part of the code will *not* be type-checked"
+        "content": "immediately obvious why.  It\u0027s important to note that mypy will *not*"
       },
       {
         "lineNumber": 817,
         "author": {
           "gitId": "-"
         },
-        "content": "by mypy anymore. Consider the following code snippet:"
+        "content": "type check such code. Consider this example:"
       },
       {
         "lineNumber": 818,
@@ -5755,7 +5755,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        bar:str \u003d \u0027\u0027"
+        "content": "        bar: str \u003d \u0027\u0027"
       },
       {
         "lineNumber": 823,
@@ -5790,7 +5790,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        x:int \u003d \u0027abc\u0027"
+        "content": "        x: int \u003d \u0027abc\u0027  # Unreachable -- no error"
       },
       {
         "lineNumber": 828,
@@ -5804,133 +5804,133 @@
         "author": {
           "gitId": "-"
         },
-        "content": "It is trivial to notice that any statement after ``return`` is unreachable and hence mypy will"
+        "content": "It\u0027s easy to see that any statement after ``return`` is unreachable,"
       },
       {
         "lineNumber": 830,
         "author": {
           "gitId": "-"
         },
-        "content": "not complain about the mis-typed code below it. For a more subtle example, consider:"
+        "content": "and hence mypy will not complain about the mis-typed code below"
       },
       {
         "lineNumber": 831,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "it. For a more subtle example, consider this code:"
       },
       {
         "lineNumber": 832,
         "author": {
           "gitId": "-"
         },
-        "content": ".. code-block:: python"
+        "content": ""
       },
       {
         "lineNumber": 833,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".. code-block:: python"
       },
       {
         "lineNumber": 834,
         "author": {
           "gitId": "-"
         },
-        "content": "    class Foo:"
+        "content": ""
       },
       {
         "lineNumber": 835,
         "author": {
           "gitId": "-"
         },
-        "content": "        bar:str \u003d \u0027\u0027"
+        "content": "    class Foo:"
       },
       {
         "lineNumber": 836,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        bar: str \u003d \u0027\u0027"
       },
       {
         "lineNumber": 837,
         "author": {
           "gitId": "-"
         },
-        "content": "    def bar() -\u003e None:"
+        "content": ""
       },
       {
         "lineNumber": 838,
         "author": {
           "gitId": "-"
         },
-        "content": "        foo: Foo \u003d Foo()"
+        "content": "    def bar() -\u003e None:"
       },
       {
         "lineNumber": 839,
         "author": {
           "gitId": "-"
         },
-        "content": "        assert foo.bar is None"
+        "content": "        foo: Foo \u003d Foo()"
       },
       {
         "lineNumber": 840,
         "author": {
           "gitId": "-"
         },
-        "content": "        x:int \u003d \u0027abc\u0027"
+        "content": "        assert foo.bar is None"
       },
       {
         "lineNumber": 841,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        x: int \u003d \u0027abc\u0027  # Unreachable -- no error"
       },
       {
         "lineNumber": 842,
         "author": {
           "gitId": "-"
         },
-        "content": "Again, mypy will not throw any errors because the type of ``foo.bar`` says it\u0027s ``str`` and never ``None``."
+        "content": ""
       },
       {
         "lineNumber": 843,
         "author": {
           "gitId": "-"
         },
-        "content": "Hence the ``assert`` statement will always fail and the statement below will never be executed."
+        "content": "Again, mypy will not report any errors. The type of ``foo.bar`` is"
       },
       {
         "lineNumber": 844,
         "author": {
           "gitId": "-"
         },
-        "content": "Note that in Python, ``None`` is not a null-reference but an object of type ``NoneType``. This can"
+        "content": "``str``, and mypy reasons that it can never be ``None``.  Hence the"
       },
       {
         "lineNumber": 845,
         "author": {
           "gitId": "-"
         },
-        "content": "also be demonstrated by the following:"
+        "content": "``assert`` statement will always fail and the statement below will"
       },
       {
         "lineNumber": 846,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "never be executed.  (Note that in Python, ``None`` is not an empty"
       },
       {
         "lineNumber": 847,
         "author": {
           "gitId": "-"
         },
-        "content": ".. code-block:: python"
+        "content": "reference but an object of type ``None``.)"
       },
       {
         "lineNumber": 848,
@@ -5944,56 +5944,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    class Foo:"
+        "content": "In this example mypy will go on to check the last line and report an"
       },
       {
         "lineNumber": 850,
         "author": {
           "gitId": "-"
         },
-        "content": "        bar: str \u003d \u0027\u0027"
+        "content": "error, since mypy thinks that the condition could be either True or"
       },
       {
         "lineNumber": 851,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "False:"
       },
       {
         "lineNumber": 852,
         "author": {
           "gitId": "-"
         },
-        "content": "    def bar() -\u003e None:"
+        "content": ""
       },
       {
         "lineNumber": 853,
         "author": {
           "gitId": "-"
         },
-        "content": "        foo: Foo \u003d Foo()"
+        "content": ".. code-block:: python"
       },
       {
         "lineNumber": 854,
         "author": {
           "gitId": "-"
         },
-        "content": "        if not foo.bar:"
+        "content": ""
       },
       {
         "lineNumber": 855,
         "author": {
           "gitId": "-"
         },
-        "content": "            return"
+        "content": "    class Foo:"
       },
       {
         "lineNumber": 856,
         "author": {
           "gitId": "-"
         },
-        "content": "        x:int \u003d \u0027abc\u0027"
+        "content": "        bar: str \u003d \u0027\u0027"
       },
       {
         "lineNumber": 857,
@@ -6007,40 +6007,61 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Here mypy will go on to check the last line as well and report ``Incompatible types in assignment``."
+        "content": "    def bar() -\u003e None:"
       },
       {
         "lineNumber": 859,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        foo: Foo \u003d Foo()"
       },
       {
         "lineNumber": 860,
         "author": {
           "gitId": "-"
         },
-        "content": "If we want to let mypy warn us of such unreachable code blocks, we can use the ``--warn-unreachable``"
+        "content": "        if not foo.bar:"
       },
       {
         "lineNumber": 861,
         "author": {
           "gitId": "-"
         },
-        "content": "option. With this mypy will throw ``Statement is unreachable`` error along with the line number from"
+        "content": "            return"
       },
       {
         "lineNumber": 862,
         "author": {
           "gitId": "-"
         },
-        "content": "where the unreachable block starts."
+        "content": "        x: int \u003d \u0027abc\u0027  # Reachable -- error"
+      },
+      {
+        "lineNumber": 863,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 864,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "If you use the :option:`--warn-unreachable \u003cmypy --warn-unreachable\u003e` flag, mypy will generate"
+      },
+      {
+        "lineNumber": 865,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "an error about each unreachable code block."
       }
     ],
     "authorContributionMap": {
       "le0tan": 25,
-      "-": 837
+      "-": 840
     }
   }
 ]
