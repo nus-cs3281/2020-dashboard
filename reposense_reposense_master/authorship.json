@@ -4139,7 +4139,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "{% from \u0027scripts/macros.njk\u0027 import thumbnail with context %}"
+        "content": "{% from \u0027scripts/macros.njk\u0027 import show_sitenav_items, thumbnail with context %}"
       },
       {
         "lineNumber": 7,
@@ -4734,7 +4734,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cinclude src\u003d\"_markbind\\navigation\\ugSiteNav.md\" /\u003e"
+        "content": "****USER GUIDE****"
       },
       {
         "lineNumber": 92,
@@ -4748,21 +4748,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "{% from \"_markbind/navigation/ugSiteNav.md\" import ug_sitenav_items %}"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "  \u003c/div\u003e"
+        "content": "{{ show_sitenav_items(ug_sitenav_items, is_flat\u003dtrue) }}"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "  \u003cdiv class\u003d\"col-sm\"\u003e"
+        "content": ""
       },
       {
         "lineNumber": 96,
@@ -4776,14 +4776,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cinclude src\u003d\"_markbind\\navigation\\dgSiteNav.md\" /\u003e"
+        "content": "  \u003c/div\u003e"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  \u003cdiv class\u003d\"col-sm\"\u003e"
       },
       {
         "lineNumber": 99,
@@ -4797,38 +4797,87 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  \u003c/div\u003e"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "  \u003c/div\u003e"
+        "content": "****DEVELOPER GUIDE****"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": "{% from \"_markbind/navigation/dgSiteNav.md\" import dg_sitenav_items %}"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": "{{ show_sitenav_items(dg_sitenav_items, is_flat\u003dtrue) }}"
       },
       {
         "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 112,
         "author": {
           "gitId": "jamessspanggg"
         },
@@ -4838,7 +4887,7 @@
     "authorContributionMap": {
       "anubh-v": 6,
       "jamessspanggg": 10,
-      "-": 89
+      "-": 96
     }
   },
   {
