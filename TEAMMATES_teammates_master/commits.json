@@ -1639,6 +1639,46 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 760,
+        "deletions": 192,
+        "date": "2020-06-29",
+        "commitResults": [
+          {
+            "hash": "5aecda4eafb3648fca65e3569d2d573b33fbe75b",
+            "messageTitle": "[#9993] Add Access Control Tests for Actions from API Endpoints (#10231)",
+            "messageBody": "* Set up base access control modifications\r\n\r\n* Add Instructor CRUD Tests\r\n\r\n* Add Student CRUD Tests\r\n\r\n* Add Course CRUD Tests\r\n\r\n* Add FeedbackSession CRUD Tests\r\n\r\n* Add FeedbackQuestion CRUD Tests\r\n\r\n* Add FeedbackResponse CRUD Tests\r\n\r\n* Add Session Results \u0026 Submission Tests",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 760,
+                "deletions": 192
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 72,
+        "deletions": 281,
+        "date": "2020-06-30",
+        "commitResults": [
+          {
+            "hash": "fc3fc9bdc2a8368f92aaf1377459eb46663fab36",
+            "messageTitle": "[#10220] Migrate Student List CSV Generation to Frontend (#10235)",
+            "messageBody": "* Implement student list csv generation in frontend\r\n\r\n* Add snapshot tests for student list csv generation\r\n\r\n* Remove student list csv generation from backend\r\n\r\n* Add sort logic to csv generation\r\n\r\n* Add http request test for csv generation\r\n\r\n* Refactor service methods and tests\r\n\r\n* Add last names to all test students",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 0,
+                "deletions": 253
+              },
+              "ts": {
+                "insertions": 72,
+                "deletions": 28
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1717,13 +1757,13 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 1956,
+    "ccyccyccy": 1932,
     "Parcly-Taxel": 0,
-    "niqiukun": 1288,
+    "niqiukun": 798,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
-    "dvrylc": 829,
+    "dvrylc": 827,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
@@ -1733,8 +1773,8 @@
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1776,
-    "madanalogy": 1966,
+    "tiuweehan": 1746,
+    "madanalogy": 2774,
     "daekoon": 1653
   },
   "authorFileTypeContributionMap": {
@@ -1745,8 +1785,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 376,
-      "ts": 1438
+      "html": 372,
+      "ts": 1418
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1759,14 +1799,14 @@
       "ts": 0
     },
     "niqiukun": {
-      "java": 687,
+      "java": 207,
       "js": 0,
       "scss": 46,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 77,
-      "ts": 478
+      "ts": 468
     },
     "openorclose": {
       "java": 0,
@@ -1799,7 +1839,7 @@
       "ts": 0
     },
     "dvrylc": {
-      "java": 481,
+      "java": 479,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -1899,24 +1939,24 @@
       "ts": 0
     },
     "tiuweehan": {
-      "java": 74,
+      "java": 73,
       "js": 0,
       "scss": 0,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1702
+      "ts": 1673
     },
     "madanalogy": {
-      "java": 958,
+      "java": 1696,
       "js": 0,
       "scss": 7,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 116,
-      "ts": 885
+      "ts": 955
     },
     "daekoon": {
       "java": 1653,
@@ -1930,25 +1970,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 5052.309,
+    "ccyccyccy": 4939.665,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4346.2583,
+    "niqiukun": 4245.6694,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 2014.1797,
+    "dvrylc": 1967.4712,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 5211.495,
+    "hcwong": 5090.947,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 11155.795,
-    "madanalogy": 3803.4849,
-    "daekoon": 5999.834
+    "tiuweehan": 10900.254,
+    "madanalogy": 8354.475,
+    "daekoon": 5860.6704
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
