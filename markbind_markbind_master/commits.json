@@ -1520,6 +1520,73 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 20,
+        "deletions": 19,
+        "date": "2020-06-30",
+        "commitResults": [
+          {
+            "hash": "9d89140e64987d0c376b52292951d6a901db0e03",
+            "messageTitle": "Move components package to packages/vue-components",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 5,
+                "deletions": 5
+              },
+              "js": {
+                "insertions": 3,
+                "deletions": 3
+              },
+              "json": {
+                "insertions": 12,
+                "deletions": 11
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 183,
+        "deletions": 116,
+        "date": "2020-07-10",
+        "commitResults": [
+          {
+            "hash": "ad4e90c3bf0e0fde754b9bb109d32ec32cbde0ec",
+            "messageTitle": "Fix puml plugin spawning zombie jvm processes (#1245)",
+            "messageBody": "Asynchronously executing the puml child process results in zombie jvm\r\nprocesses as there are multiple callbacks attached to it and page\r\ngeneration is heavily callback based.\r\n\r\nLet\u0027s break page generation into chunks, which allows node to clean up\r\nthe zombie processes in a timely fashion.\r\n\r\nLet\u0027s also change the generated image\u0027s path to resolve from the\r\nlocation of it\u0027s definition (ie. the file where the \u003cpuml\u003e tag is\r\nused), to reduce the amount of jvms spawned through including the same\r\nfile multiple times.",
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 25,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 3,
+                "deletions": 12
+              },
+              "js": {
+                "insertions": 112,
+                "deletions": 78
+              }
+            }
+          },
+          {
+            "hash": "fcc37e0c7da0039cf261f4400acb7ff49ac1c4d9",
+            "messageTitle": "Tweak box styles and revamp box code (#1268)",
+            "messageBody": "The box component has numerous possible styles which relies heavily on\r\nhighly cascaded classes\u0027 styles.\r\nThis introduces a high degree of coupling between the classes. Also, as\r\na result of the cascading, some classes are rendered but completely\r\noverwritten by others, making them redundant.\r\n\r\nLet\u0027s revamp the box template and code to fix this.\r\nWe centralize the dynamic styles of each element into computed\r\nproperties, and extract helper methods to make these computed\r\nproperties as lean as possible.\r\n\r\nAlso, the component was already heavily rewritten prior to this. Hence,\r\nlet\u0027s remove it from the eslint ignore list to achieve consistent code\r\nstyling.\r\n\r\nWhile revamping the code, let\u0027s tweak the box styles a little as well:\r\n- Add some more padding for the header wrapper to better accomodate\r\nmarkdown taking up a lot of space.\r\n- Use the bootstrap \u0027primary\u0027 coloring for definition type boxes,\r\nproviding better visual diversity.\r\n- Separate the applying of colors to the content wrapper and icon\r\nwrapper. In so doing, the color attribute applies only to the content\r\n(#1234), and seamless boxes\u0027 content correctly inherit color (#1233).\r\n- Use the lighter `text-xx` bootstrap classes for seamless boxes\u0027\r\ncoloring instead which are more suitable against a common white\r\nbackground than the overly dark `alert-xx` classes.",
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 42,
+                "deletions": 26
+              },
+              "js": {
+                "insertions": 1,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2121,20 +2188,20 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 771,
-    "yash-chowdhary": 1457,
+    "openorclose": 766,
+    "yash-chowdhary": 1448,
     "Tejas2805": 91,
-    "dvrylc": 51,
+    "dvrylc": 52,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 28,
-    "ang-zeyu": 3237,
+    "hcwong": 21,
+    "ang-zeyu": 3405,
     "geshuming": 0,
     "alyip98": 13,
-    "nbriannl": 701,
-    "le0tan": 951,
+    "nbriannl": 691,
+    "le0tan": 949,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -2177,7 +2244,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 485,
+      "js": 480,
       "css": 201,
       "json": 7,
       "md": 56,
@@ -2189,12 +2256,12 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 236,
+      "js": 235,
       "css": 126,
       "json": 1,
-      "md": 1044,
+      "md": 1040,
       "mbd": 0,
-      "mbdf": 33,
+      "mbdf": 29,
       "njk": 0,
       "py": 0,
       "yml": 17
@@ -2213,7 +2280,7 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 26,
+      "js": 27,
       "css": 16,
       "json": 0,
       "md": 0,
@@ -2278,19 +2345,19 @@
       "json": 0,
       "md": 2,
       "mbd": 0,
-      "mbdf": 25,
+      "mbdf": 18,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2327,
+      "js": 2421,
       "css": 225,
-      "json": 108,
-      "md": 325,
+      "json": 120,
+      "md": 331,
       "mbd": 0,
-      "mbdf": 240,
+      "mbdf": 296,
       "njk": 12,
       "py": 0,
       "yml": 0
@@ -2321,24 +2388,24 @@
     },
     "nbriannl": {
       "java": 0,
-      "js": 134,
+      "js": 132,
       "css": 98,
       "json": 3,
       "md": 149,
       "mbd": 0,
-      "mbdf": 317,
+      "mbdf": 309,
       "njk": 0,
       "py": 0,
       "yml": 0
     },
     "le0tan": {
       "java": 0,
-      "js": 788,
+      "js": 780,
       "css": 22,
       "json": 0,
       "md": 56,
       "mbd": 0,
-      "mbdf": 39,
+      "mbdf": 45,
       "njk": 46,
       "py": 0,
       "yml": 0
@@ -2372,21 +2439,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 6380.8257,
-    "yash-chowdhary": 8273.26,
-    "Tejas2805": 348.58868,
-    "dvrylc": 16.231628,
+    "openorclose": 5783.7686,
+    "yash-chowdhary": 7502.259,
+    "Tejas2805": 315.92087,
+    "dvrylc": 14.712461,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 16.14891,
-    "ang-zeyu": 63192.887,
+    "hcwong": 14.6370125,
+    "ang-zeyu": 57649.406,
     "geshuming": 0.0,
-    "alyip98": 2.8547037,
-    "nbriannl": 12586.927,
-    "le0tan": 156013.39,
-    "madanalogy": 167.2704,
+    "alyip98": 2.5873141,
+    "nbriannl": 11413.674,
+    "le0tan": 141405.53,
+    "madanalogy": 151.60133,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {

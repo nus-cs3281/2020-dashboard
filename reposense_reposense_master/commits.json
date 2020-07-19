@@ -1035,6 +1035,24 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 9,
+        "deletions": 16,
+        "date": "2020-07-18",
+        "commitResults": [
+          {
+            "hash": "2791ec30bfdc46b832cb41320da324df347324de",
+            "messageTitle": "Update Gradle Version (#1300)",
+            "messageBody": "The `downloadNode` Gradle extension is outdated, as a result, CI is \r\nfailing. \r\n\r\nLet\u0027s update the Gradle version to keep up to date with its \r\ndevelopment.\r\n\r\nFrom Gradle 5.0 onwards, the tasks running with code coverage are \r\nconfigured to delete the execution data before they start executing\r\nanother task. As a result, our code coverage dropped significantly \r\nsince we use the same file to store the execution data of the \r\ndifferent tests. \r\n\r\nLet\u0027s also use different files to store the execution data of the \r\ndifferent tests to fix this problem. ",
+            "fileTypesAndContributionMap": {
+              "gradle": {
+                "insertions": 9,
+                "deletions": 16
+              }
+            }
+          }
+        ]
       }
     ],
     "dvrylc": [],
@@ -2081,6 +2099,24 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 15,
+        "deletions": 7,
+        "date": "2020-06-30",
+        "commitResults": [
+          {
+            "hash": "6c59593168fb5df060df95d288b11db14421cb31",
+            "messageTitle": "[#1150] Consistency between Code panel and Chart panel for file type selection (#1152)",
+            "messageBody": "The file type selection is always set to select all when opened at\r\nfirst.\r\n\r\nWith the new sort by file type feature in Chart Panel, we can\r\nauto-set the file types of the code panel to match the file type\r\nselection of the ramp chart.\r\n\r\nLet\u0027s pass the file type selection information to Code Panel.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 15,
+                "deletions": 7
+              }
+            }
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -2280,19 +2316,19 @@
   "authorFinalContributionMap": {
     "ccyccyccy": 81,
     "Parcly-Taxel": 0,
-    "niqiukun": 180,
+    "niqiukun": 179,
     "openorclose": 0,
     "yash-chowdhary": 203,
     "anubh-v": 494,
-    "Tejas2805": 764,
+    "Tejas2805": 773,
     "dvrylc": 0,
     "jamessspanggg": 1272,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
-    "0blivious": 923,
+    "0blivious": 936,
     "hcwong": 0,
-    "ang-zeyu": 329,
+    "ang-zeyu": 325,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -2326,7 +2362,7 @@
     },
     "niqiukun": {
       "java": 0,
-      "js": 134,
+      "js": 133,
       "scss": 12,
       "json": 0,
       "md": 0,
@@ -2380,7 +2416,7 @@
       "md": 0,
       "py": 0,
       "pug": 63,
-      "gradle": 0,
+      "gradle": 9,
       "sh": 0,
       "yml": 18
     },
@@ -2446,7 +2482,7 @@
     },
     "0blivious": {
       "java": 68,
-      "js": 561,
+      "js": 574,
       "scss": 47,
       "json": 0,
       "md": 0,
@@ -2470,7 +2506,7 @@
     },
     "ang-zeyu": {
       "java": 22,
-      "js": 199,
+      "js": 195,
       "scss": 37,
       "json": 3,
       "md": 0,
@@ -2542,21 +2578,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 47.828125,
+    "ccyccyccy": 39.224625,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 387.41522,
+    "niqiukun": 317.62534,
     "openorclose": 0.0,
-    "yash-chowdhary": 599.27466,
-    "anubh-v": 363.91116,
-    "Tejas2805": 2980.8843,
+    "yash-chowdhary": 491.03958,
+    "anubh-v": 300.80457,
+    "Tejas2805": 2457.575,
     "dvrylc": 0.0,
-    "jamessspanggg": 3525.6738,
+    "jamessspanggg": 2908.4885,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 7286.299,
+    "0blivious": 5999.947,
     "hcwong": 0.0,
-    "ang-zeyu": 523.9892,
+    "ang-zeyu": 430.0758,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

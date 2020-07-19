@@ -6197,6 +6197,562 @@
     }
   },
   {
+    "path": "src/app/core/services/githubevent.service.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Injectable } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { GithubService } from \u0027./github.service\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Observable, of } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { map, flatMap } from \u0027rxjs/operators\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { IssueService } from \u0027./issue.service\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Injectable({"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  providedIn: \u0027root\u0027"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class GithubEventService {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  private lastModified: string; // The timestamp when the title or label of an issue is changed"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  private lastModifiedComment: string; // The timestamp when the comment of an issue is changed"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor(private githubService: GithubService, private issueService: IssueService) { }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Calls the Github service api to return the latest github event (e.g renaming an issue\u0027s title)"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * of current repository and store the timestamps of the event in this service"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  setLatestChangeEvent(): Observable\u003cany\u003e {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return this.githubService.fetchEventsForRepo().pipe("
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        map((response) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          if (response.length \u003d\u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return response;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.setLastModifiedTime(response[0][\u0027created_at\u0027]);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.setLastModifiedCommentTime(response[0][\u0027issue\u0027][\u0027updated_at\u0027]);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          return response;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      );"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  /**"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * Returns the latest github event (e.g renaming an issue\u0027s title) of current repository"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   * @returns the json data of the latest event"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "   */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  reloadPage() {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return this.githubService.fetchEventsForRepo().pipe("
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      flatMap((response: any[]) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (response.length \u003d\u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          return of(response);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const eventResponse \u003d response[0];"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Will only allow page to reload if the latest modify time is different"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // from last modified, meaning that some changes to the repo has occured."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (eventResponse[\u0027created_at\u0027] !\u003d\u003d this.getLastModifiedTime() ||"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        eventResponse[\u0027issue\u0027][\u0027updated_at\u0027] !\u003d\u003d this.getLastModifiedCommentTime()) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.setLastModifiedTime(eventResponse[\u0027created_at\u0027]);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          this.setLastModifiedCommentTime(eventResponse[\u0027issue\u0027][\u0027updated_at\u0027]);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          return this.issueService.reloadAllIssues();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return of(response);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      })"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    );"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  private setLastModifiedTime(lastModified: string): void {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.lastModified \u003d lastModified;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  private setLastModifiedCommentTime(lastModified: string): void {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.lastModifiedComment \u003d lastModified;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  getLastModifiedTime(): string {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return this.lastModified;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  getLastModifiedCommentTime(): string {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return this.lastModifiedComment;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  reset() {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.lastModified \u003d undefined;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.lastModifiedComment \u003d undefined;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 4,
+      "-": 74
+    }
+  },
+  {
     "path": "src/app/core/services/issue.service.ts",
     "fileType": "ts",
     "lines": [
@@ -25686,6 +26242,211 @@
     }
   },
   {
+    "path": "tests/constants/githubevent.constants.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { ISSUE_WITH_ASSIGNEES, ISSUE_WITH_EMPTY_DESCRIPTION } from \u0027./githubissue.constants\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "/* Contains a simplified version of the data obtained when we query"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "   for the latest events on a repository using the Octokit API."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "   (specifically, the data obtained from octokit.issues.listEventsForRepo())"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "   For repos used by CATcher, these events will only involve issues. */"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const CHANGE_TITLE_EVENT \u003d {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    event: \u0027renamed\u0027,"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    created_at: \u00272020-03-13T12:40:47Z\u0027,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    rename: {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        from: \u0027App lags on large amount of input\u0027,"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "        to: \u0027App starts to lag when given large amount of input\u0027"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    issue: ISSUE_WITH_EMPTY_DESCRIPTION"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const ADD_LABEL_EVENT \u003d {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    event: \u0027labeled\u0027,"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    created_at: \u00272020-03-02T16:34:03Z\u0027,"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    label: { name: \u0027severity.VeryLow\u0027, color: \u0027ffe0e0\u0027 },"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    issue: ISSUE_WITH_ASSIGNEES"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "/* In the list of events returned by Octokit API,"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "   the events are ordered by time of creation,"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "   with the most recent events appearing first. */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const EVENTS \u003d [CHANGE_TITLE_EVENT, ADD_LABEL_EVENT];"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 28
+    }
+  },
+  {
     "path": "tests/constants/githubissue.constants.ts",
     "fileType": "ts",
     "lines": [
@@ -27440,6 +28201,596 @@
     "authorContributionMap": {
       "geshuming": 91,
       "anubh-v": 9
+    }
+  },
+  {
+    "path": "tests/services/githubevent.service.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { GithubEventService } from \u0027../../src/app/core/services/githubevent.service\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { of } from \u0027rxjs\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { EVENTS, ADD_LABEL_EVENT, CHANGE_TITLE_EVENT } from \u0027../constants/githubevent.constants\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "let githubService: any;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "let issueService: any;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "describe(\u0027GithubEventService\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  beforeAll(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    githubService \u003d jasmine.createSpyObj(\u0027GithubService\u0027, [\u0027fetchEventsForRepo\u0027]);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  describe(\u0027.setLatestChangeEvent()\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    it(\u0027stores the time of the most recent issue event\\ and most recent issue update.\u0027, async () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      githubService.fetchEventsForRepo.and.returnValue(of(EVENTS));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      const githubEventService: GithubEventService \u003d new GithubEventService(githubService, null);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      await githubEventService.setLatestChangeEvent().toPromise();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      assertLastModified(githubEventService, EVENTS);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  describe(\u0027.reloadPage()\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    beforeAll(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      issueService \u003d jasmine.createSpyObj(\u0027IssueService\u0027, [\u0027reloadAllIssues\u0027]);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      issueService.reloadAllIssues.and.returnValue(of([]));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    afterEach(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      issueService.reloadAllIssues.calls.reset();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    it(\u0027triggers the IssueService to re-initialise the issue list if there are new events\u0027, async () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      const FIRST_EVENT \u003d [ADD_LABEL_EVENT];"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      const SECOND_EVENT \u003d [CHANGE_TITLE_EVENT];"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      githubService.fetchEventsForRepo.and.returnValue(of(FIRST_EVENT));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      const githubEventService: GithubEventService \u003d new GithubEventService(githubService, issueService);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      await githubEventService.reloadPage().toPromise();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(issueService.reloadAllIssues.calls.count()).toBe(1);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      assertLastModified(githubEventService, FIRST_EVENT);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      githubService.fetchEventsForRepo.and.returnValue(of(SECOND_EVENT));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      await githubEventService.reloadPage().toPromise();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(issueService.reloadAllIssues.calls.count()).toBe(2);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      assertLastModified(githubEventService, SECOND_EVENT);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    it(\u0027does not trigger the IssueService to re-initialise the issue list, if there are no new events\u0027,"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      async () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      githubService.fetchEventsForRepo.and.returnValue(of(EVENTS));"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      const githubEventService: GithubEventService \u003d new GithubEventService(githubService, issueService);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      await githubEventService.reloadPage().toPromise();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(issueService.reloadAllIssues.calls.count()).toBe(1);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      assertLastModified(githubEventService, EVENTS);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      await githubEventService.reloadPage().toPromise();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      // issueService.reloadAllIssues must not have been called again"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(issueService.reloadAllIssues.calls.count()).toBe(1);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      assertLastModified(githubEventService, EVENTS);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  describe(\u0027.reset()\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    it(\u0027clears the details of the most recent event\u0027, async () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      githubService.fetchEventsForRepo.and.returnValue(of(EVENTS));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      const githubEventService: GithubEventService \u003d new GithubEventService(githubService, null);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      await githubEventService.setLatestChangeEvent().toPromise();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(githubEventService.getLastModifiedTime()).toBeDefined();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(githubEventService.getLastModifiedCommentTime()).toBeDefined();"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      githubEventService.reset();"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(githubEventService.getLastModifiedTime()).toBeUndefined();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      expect(githubEventService.getLastModifiedCommentTime()).toBeUndefined();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "});"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "function assertLastModified(githubEventService: GithubEventService, expectedEvents) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  expect(githubEventService.getLastModifiedTime()).toBe(expectedEvents[0].created_at);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  expect(githubEventService.getLastModifiedCommentTime()).toBe(expectedEvents[0].issue.updated_at);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 83
     }
   },
   {

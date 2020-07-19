@@ -14611,271 +14611,271 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  app: {"
+        "content": "  auth: {"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "-"
         },
-        "content": "    header: {"
+        "content": "    login: \u0027Se connecter\u0027,"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "-"
         },
-        "content": "      content: \u0027Contenus\u0027,"
+        "content": "    loggingIn: \u0027Connexion en cours...\u0027,"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "      workflow: \u0027Flux\u0027,"
+        "content": "    loginWithNetlifyIdentity: \u0027Se connecter avec Netlify Identity\u0027,"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "      media: \u0027Media\u0027,"
+        "content": "    loginWithBitbucket: \u0027Se connecter avec Bitbucket\u0027,"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "      quickAdd: \u0027Ajout rapide\u0027,"
+        "content": "    loginWithGitHub: \u0027Se connecter avec GitHub\u0027,"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "    loginWithGitLab: \u0027Se connecter avec GitLab\u0027,"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": "    app: {"
+        "content": "    errors: {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "      errorHeader: \u0027Erreur au chargement de la configuration du CMS\u0027,"
+        "content": "      email: \"Assurez-vous d\u0027avoir entré votre email.\","
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "      configErrors: \u0027Erreurs de configuration\u0027,"
+        "content": "      password: \u0027Merci de saisir votre mot de passe.\u0027,"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "      checkConfigYml: \u0027Vérifiez votre fichier config.yml.\u0027,"
+        "content": "      identitySettings:"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingConfig: \u0027Chargement de la configuration...\u0027,"
+        "content": "        \"Impsosible d\u0027accéder aux paramètres d\u0027identité. Si vous utilisez le backend git-gateway, merci de vous assurer que vous avez bien activé le service Identity et la passerelle Git.\","
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "      waitingBackend: \u0027En attente du serveur...\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "  },"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "    notFoundPage: {"
+        "content": "  app: {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "      header: \u0027Introuvable\u0027,"
+        "content": "    header: {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      content: \u0027Contenus\u0027,"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      workflow: \u0027Flux\u0027,"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "  collection: {"
+        "content": "      media: \u0027Media\u0027,"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "    sidebar: {"
+        "content": "      quickAdd: \u0027Ajout rapide\u0027,"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "      collections: \u0027Collections\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "      searchAll: \u0027Tout rechercher\u0027,"
+        "content": "    app: {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      errorHeader: \u0027Erreur au chargement de la configuration du CMS\u0027,"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "    collectionTop: {"
+        "content": "      configErrors: \u0027Erreurs de configuration\u0027,"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "      viewAs: \u0027Voir comme\u0027,"
+        "content": "      checkConfigYml: \u0027Vérifiez votre fichier config.yml.\u0027,"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "      newButton: \u0027Créer une entrée de type %{collectionLabel}\u0027,"
+        "content": "      loadingConfig: \u0027Chargement de la configuration...\u0027,"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      waitingBackend: \u0027En attente du serveur...\u0027,"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    entries: {"
+        "content": "    },"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingEntries: \u0027Chargement des entrées\u0027,"
+        "content": "    notFoundPage: {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "      cachingEntries: \u0027Mise en cache des entrées\u0027,"
+        "content": "      header: \u0027Introuvable\u0027,"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "      longerLoading: \u0027Cela peut prendre quelques minutes\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "  },"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "  collection: {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "  editor: {"
+        "content": "    sidebar: {"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    editorControl: {"
+        "content": "      collections: \u0027Collections\u0027,"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      field: {"
+        "content": "      allCollections: \u0027Toutes les collections\u0027,"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        optional: \u0027optionnel\u0027,"
+        "content": "      searchAll: \u0027Tout rechercher\u0027,"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      },"
+        "content": "      searchIn: \u0027Rechercher dans\u0027,"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
         "content": "    },"
       },
@@ -14884,924 +14884,924 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    editorControlPane: {"
+        "content": "    collectionTop: {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "      widget: {"
+        "content": "      sortBy: \u0027Trier par\u0027,"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "        required: \u0027Le champ %{fieldLabel} est requis.\u0027,"
+        "content": "      viewAs: \u0027Voir comme\u0027,"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "        regexPattern: \u0027Le champ %{fieldLabel} ne correspond pas au schéma: %{pattern}.\u0027,"
+        "content": "      newButton: \u0027Créer une entrée de type %{collectionLabel}\u0027,"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        processing: \u0027Le champ %{fieldLabel} est en cours de traitement.\u0027,"
+        "content": "      ascending: \u0027Croissant\u0027,"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "        range: \u0027Le champ %{fieldLabel} doit être compris entre %{minValue} et %{maxValue}.\u0027,"
+        "content": "      descending: \u0027Décroissant\u0027,"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        min: \u0027Le champ %{fieldLabel} doit avoir une valeur de %{minValue} ou plus.\u0027,"
+        "content": "      searchResults: \u0027Résultats de la recherche pour \"%{searchTerm}\"\u0027,"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        max: \u0027Le champ %{fieldLabel} doit avoir une valeur de %{maxValue} ou moins.\u0027,"
+        "content": "      searchResultsInCollection:"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "        \u0027Résultats de la recherche pour \"%{searchTerm}\" dans %{collection}\u0027,"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      filterBy: \u0027Filtrer par\u0027,"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    editor: {"
+        "content": "    },"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "      onLeavePage: \u0027Voulez-vous vraiment quitter cette page ?\u0027,"
+        "content": "    entries: {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "      onUpdatingWithUnsavedChanges:"
+        "content": "      loadingEntries: \u0027Chargement des entrées\u0027,"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Veuillez enregistrer vos modifications avant de mettre à jour le statut.\u0027,"
+        "content": "      cachingEntries: \u0027Mise en cache des entrées\u0027,"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingNotReady: \u0027Veuillez mettre à jour le statut à \"Prêt\" avant de publier.\u0027,"
+        "content": "      longerLoading: \u0027Cela peut prendre quelques minutes\u0027,"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingWithUnsavedChanges: \u0027Veuillez enregistrer vos modifications avant de publier.\u0027,"
+        "content": "      noEntries: \u0027Aucune entrée\u0027,"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishing: \u0027Voulez-vous vraiment publier cette entrée ?\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteWithUnsavedChanges:"
+        "content": "    defaultFields: {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Voulez-vous vraiment supprimer cette entrée publiée ainsi que vos modifications non enregistrées de cette session ?\u0027,"
+        "content": "      author: {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeletePublishedEntry: \u0027Voulez-vous vraiment supprimer cette entrée publiée ?\u0027,"
+        "content": "        label: \u0027Auteur\u0027,"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChangesWithUnsavedChanges:"
+        "content": "      },"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Ceci supprimera toutes les modifications non publiées de cette entrée ainsi que vos modifications non enregistrées de cette session. Voulez-vous toujours supprimer ?\u0027,"
+        "content": "      updatedOn: {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChanges:"
+        "content": "        label: \u0027Mis à jour le\u0027,"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Toutes les modifications non publiées de cette entrée seront supprimées. Voulez-vous toujours supprimer ?\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingEntry: \"Chargement de l\u0027entrée...\","
+        "content": "    },"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "      confirmLoadBackup:"
+        "content": "  },"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"Une sauvegarde locale a été trouvée pour cette entrée. Voulez-vous l\u0027utiliser\","
+        "content": "  editor: {"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    },"
+        "content": "    editorControl: {"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    editorToolbar: {"
+        "content": "      field: {"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      publishing: \u0027Publication...\u0027,"
+        "content": "        optional: \u0027optionnel\u0027,"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      publish: \u0027Publier\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      published: \u0027Publiée\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishAndCreateNew: \u0027Publier et créer une nouvelle entrée\u0027,"
+        "content": "    editorControlPane: {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteUnpublishedChanges: \u0027Supprimer les modications non publiées\u0027,"
+        "content": "      widget: {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteUnpublishedEntry: \"Supprimer l\u0027entrée non publiée\","
+        "content": "        required: \u0027Le champ %{fieldLabel} est requis.\u0027,"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "      deletePublishedEntry: \"Supprimer l\u0027entrée publiée\","
+        "content": "        regexPattern: \u0027Le champ %{fieldLabel} ne correspond pas au schéma: %{pattern}.\u0027,"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteEntry: \"Supprimer l\u0027entrée\","
+        "content": "        processing: \u0027Le champ %{fieldLabel} est en cours de traitement.\u0027,"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "      saving: \u0027Enregistrement...\u0027,"
+        "content": "        range: \u0027Le champ %{fieldLabel} doit être compris entre %{minValue} et %{maxValue}.\u0027,"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "      save: \u0027Enregistrer\u0027,"
+        "content": "        min: \u0027Le champ %{fieldLabel} doit avoir une valeur de %{minValue} ou plus.\u0027,"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleting: \u0027Suppression...\u0027,"
+        "content": "        max: \u0027Le champ %{fieldLabel} doit avoir une valeur de %{maxValue} ou moins.\u0027,"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "      updating: \u0027Mise à jour...\u0027,"
+        "content": "        rangeCount: \u0027%{fieldLabel} doit avoir entre %{minCount} et %{maxCount} élément(s).\u0027,"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "      setStatus: \u0027Définir le statut\u0027,"
+        "content": "        rangeCountExact: \u0027%{fieldLabel} doit avoir exactement %{count} éléments(s).\u0027,"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "      backCollection: \u0027 Écriture dans la collection %{collectionLabel}\u0027,"
+        "content": "        minCount: \u0027%{fieldLabel} doit avoir au moins %{minCount} éléments(s).\u0027,"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "      unsavedChanges: \u0027Modifications non enregistrées\u0027,"
+        "content": "        maxCount: \u0027%{fieldLabel} doit avoir %{maxCount} éléments(s) ou moins.\u0027,"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "      changesSaved: \u0027Modifications enregistrées\u0027,"
+        "content": "        invalidPath: `\u0027%{path}\u0027 n\u0027est pas un chemin valide`,"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "      draft: \u0027Brouillon\u0027,"
+        "content": "        pathExists: `Le chemin \u0027%{path}\u0027 existe déjà`,"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReview: \u0027En cours de révision\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "      ready: \u0027Prêt\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNow: \u0027Publier maintenant\u0027,"
+        "content": "    editor: {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployPreviewPendingButtonLabel: \"Vérifier l\u0027aperçu\","
+        "content": "      onLeavePage: \u0027Voulez-vous vraiment quitter cette page ?\u0027,"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployPreviewButtonLabel: \"Voir l\u0027aperçu\","
+        "content": "      onUpdatingWithUnsavedChanges:"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployButtonLabel: \u0027Voir en direct\u0027,"
+        "content": "        \u0027Veuillez enregistrer vos modifications avant de mettre à jour le statut.\u0027,"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      onPublishingNotReady: \u0027Veuillez mettre à jour le statut à \"Prêt\" avant de publier.\u0027,"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorWidgets: {"
+        "content": "      onPublishingWithUnsavedChanges: \u0027Veuillez enregistrer vos modifications avant de publier.\u0027,"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      image: {"
+        "content": "      onPublishing: \u0027Voulez-vous vraiment publier cette entrée ?\u0027,"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        choose: \u0027Choisissez une image\u0027,"
+        "content": "      onDeleteWithUnsavedChanges:"
       },
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        chooseDifferent: \u0027Choisissez une image différente\u0027,"
+        "content": "        \u0027Voulez-vous vraiment supprimer cette entrée publiée ainsi que vos modifications non enregistrées de cette session ?\u0027,"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        remove: \"Supprimer l\u0027image\","
+        "content": "      onDeletePublishedEntry: \u0027Voulez-vous vraiment supprimer cette entrée publiée ?\u0027,"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      },"
+        "content": "      onDeleteUnpublishedChangesWithUnsavedChanges:"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      file: {"
+        "content": "        \u0027Ceci supprimera toutes les modifications non publiées de cette entrée ainsi que vos modifications non enregistrées de cette session. Voulez-vous toujours supprimer ?\u0027,"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        choose: \u0027Choisissez un fichier\u0027,"
+        "content": "      onDeleteUnpublishedChanges:"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        chooseDifferent: \u0027Choisissez un fichier différent\u0027,"
+        "content": "        \u0027Toutes les modifications non publiées de cette entrée seront supprimées. Voulez-vous toujours supprimer ?\u0027,"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        remove: \u0027Effacer le fichier\u0027,"
+        "content": "      loadingEntry: \"Chargement de l\u0027entrée...\","
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      },"
+        "content": "      confirmLoadBackup:"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "      unknownControl: {"
+        "content": "        \"Une sauvegarde locale a été trouvée pour cette entrée. Voulez-vous l\u0027utiliser\","
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "        noControl: \"Pas de contrôle pour le gadget \u0027%{widget}\u0027.\","
+        "content": "    },"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "    editorToolbar: {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "      unknownPreview: {"
+        "content": "      publishing: \u0027Publication...\u0027,"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "        noPreview: \"Pas d\u0027aperçu pour le gadget \u0027%{widget}\u0027.\","
+        "content": "      publish: \u0027Publier\u0027,"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      published: \u0027Publiée\u0027,"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "      headingOptions: {"
+        "content": "      unpublish: \u0027Dépublier\u0027,"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingOne: \u0027Heading 1\u0027,"
+        "content": "      duplicate: \u0027Dupliquer\u0027,"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingTwo: \u0027Heading 2\u0027,"
+        "content": "      unpublishing: \u0027Dépublication...\u0027,"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingThree: \u0027Heading 3\u0027,"
+        "content": "      publishAndCreateNew: \u0027Publier et créer une nouvelle entrée\u0027,"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingFour: \u0027Heading 4\u0027,"
+        "content": "      publishAndDuplicate: \u0027Publier et dupliquer\u0027,"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingFive: \u0027Heading 5\u0027,"
+        "content": "      deleteUnpublishedChanges: \u0027Supprimer les modications non publiées\u0027,"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "        headingSix: \u0027Heading 6\u0027,"
+        "content": "      deleteUnpublishedEntry: \"Supprimer l\u0027entrée non publiée\","
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      deletePublishedEntry: \"Supprimer l\u0027entrée publiée\","
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      deleteEntry: \"Supprimer l\u0027entrée\","
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      saving: \u0027Enregistrement...\u0027,"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "  mediaLibrary: {"
+        "content": "      save: \u0027Enregistrer\u0027,"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaLibraryCard: {"
+        "content": "      deleting: \u0027Suppression...\u0027,"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "      draft: \u0027Brouillon\u0027,"
+        "content": "      updating: \u0027Mise à jour...\u0027,"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      setStatus: \u0027Définir le statut\u0027,"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaLibrary: {"
+        "content": "      backCollection: \u0027 Écriture dans la collection %{collectionLabel}\u0027,"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDelete: \u0027Voulez-vous vraiment supprimer la ressource sélectionné ?\u0027,"
+        "content": "      unsavedChanges: \u0027Modifications non enregistrées\u0027,"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      changesSaved: \u0027Modifications enregistrées\u0027,"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "    mediaLibraryModal: {"
+        "content": "      draft: \u0027Brouillon\u0027,"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "      loading: \u0027Chargement...\u0027,"
+        "content": "      inReview: \u0027En cours de révision\u0027,"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "      noResults: \u0027Aucun résultat.\u0027,"
+        "content": "      ready: \u0027Prêt\u0027,"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "      noAssetsFound: \u0027Aucune ressource trouvée.\u0027,"
+        "content": "      publishNow: \u0027Publier maintenant\u0027,"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "      noImagesFound: \u0027Aucune image trouvée.\u0027,"
+        "content": "      deployPreviewPendingButtonLabel: \"Vérifier l\u0027aperçu\","
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "      private: \u0027Privé \u0027,"
+        "content": "      deployPreviewButtonLabel: \"Voir l\u0027aperçu\","
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "      images: \u0027Images\u0027,"
+        "content": "      deployButtonLabel: \u0027Voir en direct\u0027,"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "      mediaAssets: \u0027Ressources\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "      search: \u0027Recherche...\u0027,"
+        "content": "    editorWidgets: {"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "      uploading: \u0027Téléversement...\u0027,"
+        "content": "      markdown: {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "      upload: \u0027Téléverser une nouvelle ressource\u0027,"
+        "content": "        richText: \u0027Texte enrichi\u0027,"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleting: \u0027Suppression...\u0027,"
+        "content": "        markdown: \u0027Markdown\u0027,"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteSelected: \u0027Supprimer les éléments sélectionnés\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 141,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      chooseSelected: \u0027Choisir les éléments sélectionnés\u0027,"
+        "content": "      image: {"
       },
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    },"
+        "content": "        choose: \u0027Choisissez une image\u0027,"
       },
       {
         "lineNumber": 143,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  },"
+        "content": "        chooseDifferent: \u0027Choisissez une image différente\u0027,"
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  ui: {"
+        "content": "        remove: \"Supprimer l\u0027image\","
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    errorBoundary: {"
+        "content": "      },"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      title: \u0027Erreur\u0027,"
+        "content": "      file: {"
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      details: \u0027Une erreur est survenue, veuillez \u0027,"
+        "content": "        choose: \u0027Choisissez un fichier\u0027,"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      reportIt: \u0027la signaler.\u0027,"
+        "content": "        chooseDifferent: \u0027Choisissez un fichier différent\u0027,"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      detailsHeading: \u0027Détails\u0027,"
+        "content": "        remove: \u0027Effacer le fichier\u0027,"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      recoveredEntry: {"
+        "content": "      },"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        heading: \u0027Document récupéré\u0027,"
+        "content": "      unknownControl: {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "        warning: \u0027Veuillez copier/coller ceci quelque part avant de naviguer ailleurs!\u0027,"
+        "content": "        noControl: \"Pas de contrôle pour le gadget \u0027%{widget}\u0027.\","
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        copyButtonLabel: \u0027Copier dans le presse-papier\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      unknownPreview: {"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        noPreview: \"Pas d\u0027aperçu pour le gadget \u0027%{widget}\u0027.\","
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    settingsDropdown: {"
+        "content": "      },"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "      logOut: \u0027Déconnexion\u0027,"
+        "content": "      headingOptions: {"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        headingOne: \u0027Titre 1\u0027,"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    toast: {"
+        "content": "        headingTwo: \u0027Titre 2\u0027,"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToLoadEntries: \"Échec du chargement de l\u0027entrée: %{details}\","
+        "content": "        headingThree: \u0027Titre 3\u0027,"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToLoadDeployPreview: \"Échec du chargement de l\u0027aperçu: %{details}\","
+        "content": "        headingFour: \u0027Titre 4\u0027,"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToPersist: \"Échec de l\u0027enregistrement de l\u0027entrée: %{details}\","
+        "content": "        headingFive: \u0027Titre 5\u0027,"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToDelete: \"Échec de la suppression de l\u0027entrée: %{details}\","
+        "content": "        headingSix: \u0027Titre 6\u0027,"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToUpdateStatus: \u0027Échec de la mise à jour du statut: %{details}\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "      missingRequiredField:"
+        "content": "      datetime: {"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Oops, il manque un champ requis. Veuillez le renseigner avant de soumettre.\u0027,"
+        "content": "        now: \u0027Maintenant\u0027,"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "      entrySaved: \u0027Entrée enregistrée\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryPublished: \u0027Entrée publiée\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToPublishEntry: \u0027Échec de la publication: %{details}\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryUpdated: \"Statut de l\u0027entrée mis à jour\","
+        "content": "  mediaLibrary: {"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChanges: \u0027Modifications non publiées supprimées\u0027,"
+        "content": "    mediaLibraryCard: {"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToAuth: \u0027%{details}\u0027,"
+        "content": "      draft: \u0027Brouillon\u0027,"
       },
       {
         "lineNumber": 173,
@@ -15815,227 +15815,661 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    mediaLibrary: {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "  workflow: {"
+        "content": "      onDelete: \u0027Voulez-vous vraiment supprimer la ressource sélectionné ?\u0027,"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflow: {"
+        "content": "      fileTooLarge:"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "      loading: \u0027Chargement des entrées du flux éditorial\u0027,"
+        "content": "        \"Le fichier est trop volumineux.\\nL\u0027instance est configurée pour bloquer les envois de plus de %{size} kB.\","
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "      workflowHeading: \u0027Flux éditorial\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "      newPost: \u0027Nouvel article\u0027,"
+        "content": "    mediaLibraryModal: {"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "      description:"
+        "content": "      loading: \u0027Chargement...\u0027,"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027%{smart_count} entrée en attente de revue, %{readyCount} prête(s) à être publiée(s). |||| %{smart_count} entrées en attente de revue, %{readyCount} prête(s) à être publiée(s). \u0027,"
+        "content": "      noResults: \u0027Aucun résultat.\u0027,"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "      dateFormat: \u0027MMMM D\u0027,"
+        "content": "      noAssetsFound: \u0027Aucune ressource trouvée.\u0027,"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      noImagesFound: \u0027Aucune image trouvée.\u0027,"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowCard: {"
+        "content": "      private: \u0027Privé \u0027,"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChange: \u0027%{date} par %{author}\u0027,"
+        "content": "      images: \u0027Images\u0027,"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+        "content": "      mediaAssets: \u0027Ressources\u0027,"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoDate: \u0027par %{author}\u0027,"
+        "content": "      search: \u0027Recherche...\u0027,"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteChanges: \u0027Supprimer les mofications\u0027,"
+        "content": "      uploading: \u0027Téléversement...\u0027,"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteNewEntry: \u0027Supprimer la nouvelle entrée\u0027,"
+        "content": "      upload: \u0027Téléverser une nouvelle ressource\u0027,"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishChanges: \u0027Publier les modifications\u0027,"
+        "content": "      download: \u0027Télécharger\u0027,"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNewEntry: \u0027Publier la nouvelle entrée\u0027,"
+        "content": "      deleting: \u0027Suppression...\u0027,"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      deleteSelected: \u0027Supprimer les éléments sélectionnés\u0027,"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowList: {"
+        "content": "      chooseSelected: \u0027Choisir les éléments sélectionnés\u0027,"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteEntry: \u0027Voulez-vous vraiment supprimer cette entrée ?\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingNotReadyEntry:"
+        "content": "  },"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Seul les éléments ayant le statut \"Prêt\" peuvent être publiés. Veuillez glisser/déposer la carte dans la colonne \"Prêt\" pour activer la publication\u0027,"
+        "content": "  ui: {"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishEntry: \u0027Voulez-vous vraiment publier cette entrée ?\u0027,"
+        "content": "    default: {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "      draftHeader: \u0027Brouillons\u0027,"
+        "content": "      goBackToSite: \u0027Retourner sur le site\u0027,"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReviewHeader: \u0027En cours de révision\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "      readyHeader: \u0027Prêt\u0027,"
+        "content": "    errorBoundary: {"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "      currentEntries: \u0027%{smart_count} entrée |||| %{smart_count} entrées\u0027,"
+        "content": "      title: \u0027Erreur\u0027,"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      details: \u0027Une erreur est survenue, veuillez \u0027,"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      reportIt: \u0027la signaler.\u0027,"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "      detailsHeading: \u0027Détails\u0027,"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      privacyWarning:"
       },
       {
         "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \"Ouvrir une issue la préremplie avec le message d\u0027erreur et des données de déboggage.\\nMerci de vérifier l\u0027exactitude des informations et de supprimer toute donnée sensible si nécessaire.\","
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      recoveredEntry: {"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        heading: \u0027Document récupéré\u0027,"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        warning: \u0027Veuillez copier/coller ceci quelque part avant de naviguer ailleurs!\u0027,"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        copyButtonLabel: \u0027Copier dans le presse-papier\u0027,"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    settingsDropdown: {"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      logOut: \u0027Déconnexion\u0027,"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    toast: {"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToLoadEntries: \"Échec du chargement de l\u0027entrée : %{details}\","
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToLoadDeployPreview: \"Échec du chargement de l\u0027aperçu : %{details}\","
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToPersist: \"Échec de l\u0027enregistrement de l\u0027entrée : %{details}\","
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToDelete: \"Échec de la suppression de l\u0027entrée : %{details}\","
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToUpdateStatus: \u0027Échec de la mise à jour du statut : %{details}\u0027,"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      missingRequiredField:"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027Oops, il manque un champ requis. Veuillez le renseigner avant de soumettre.\u0027,"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      entrySaved: \u0027Entrée enregistrée\u0027,"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      entryPublished: \u0027Entrée publiée\u0027,"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      entryUnpublished: \u0027Entrée dépubliée\u0027,"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToPublishEntry: \u0027Échec de la publication : %{details}\u0027,"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToUnpublishEntry: \"Impossible de dépublier l\u0027entrée : %{details}\","
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      entryUpdated: \"Statut de l\u0027entrée mis à jour\","
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onDeleteUnpublishedChanges: \u0027Modifications non publiées supprimées\u0027,"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToAuth: \u0027%{details}\u0027,"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onLoggedOut: \u0027Vous avez été déconnecté, merci de sauvegarder les données et vous reconnecter\u0027,"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onBackendDown:"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \"Le serveur est actuellement hors-service. Pour plus d\u0027informations : %{details}\","
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  workflow: {"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflow: {"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      loading: \u0027Chargement des entrées du flux éditorial\u0027,"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      workflowHeading: \u0027Flux éditorial\u0027,"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      newPost: \u0027Nouvel article\u0027,"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      description:"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027%{smart_count} entrée en attente de revue, %{readyCount} prête(s) à être publiée(s). |||| %{smart_count} entrées en attente de revue, %{readyCount} prête(s) à être publiée(s). \u0027,"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      dateFormat: \u0027MMMM D\u0027,"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflowCard: {"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChange: \u0027%{date} par %{author}\u0027,"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChangeNoDate: \u0027par %{author}\u0027,"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deleteChanges: \u0027Supprimer les mofications\u0027,"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deleteNewEntry: \u0027Supprimer la nouvelle entrée\u0027,"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishChanges: \u0027Publier les modifications\u0027,"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishNewEntry: \u0027Publier la nouvelle entrée\u0027,"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflowList: {"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onDeleteEntry: \u0027Voulez-vous vraiment supprimer cette entrée ?\u0027,"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onPublishingNotReadyEntry:"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027Seuls les éléments ayant le statut \"Prêt\" peuvent être publiés. Veuillez glisser/déposer la carte dans la colonne \"Prêt\" pour activer la publication\u0027,"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onPublishEntry: \u0027Voulez-vous vraiment publier cette entrée ?\u0027,"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      draftHeader: \u0027Brouillons\u0027,"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      inReviewHeader: \u0027En cours de révision\u0027,"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      readyHeader: \u0027Prêt\u0027,"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      currentEntries: \u0027%{smart_count} entrée |||| %{smart_count} entrées\u0027,"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
@@ -16044,7 +16478,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 15,
-      "-": 191
+      "-": 253
     }
   },
   {
@@ -39939,7 +40373,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    editorControl: PropTypes.func.isRequired,"
+        "content": "    editorControl: PropTypes.elementType.isRequired,"
       },
       {
         "lineNumber": 24,

@@ -493,6 +493,125 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 315,
+        "deletions": 206,
+        "date": "2020-07-04",
+        "commitResults": [
+          {
+            "hash": "9d1a44fbf2afcc02507a57482ae39ccabdc200fd",
+            "messageTitle": "[#10213] Fix instructor session edit UI UX (#10259)",
+            "messageBody": "* Add collapsing for editing question\r\n\r\n* Reduce size of optional description box\r\n\r\n* Add click on hover submenu not dismiss menu\r\n\r\n* Add stricter typing for some functions\r\n\r\n* Add no modal saving and cancelling if no change detected. Side-effect include hasResponse modal for saving popping up more than once for multiple saves\"\r\n\r\n* Add red highlight on click for delete option buttons\r\n\r\n* Add divider below \u0027Choose from template questions\u0027\r\n\r\n* Add some space between questions to more distinctly separate them\r\n\r\n* Add icon for \u0027Save Changes\u0027 button to make it more similar to the other save button\r\n\r\n* Rename cancel to discard\r\n\r\n* Add cancel to the bottom of the question beside \u0027Save Changes\u0027\r\n\r\n* Lint and test fix\r\n\r\n* Change direct assignment to triggerModelChange for isCollapsed\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 28,
+                "deletions": 2
+              },
+              "html": {
+                "insertions": 208,
+                "deletions": 190
+              },
+              "ts": {
+                "insertions": 79,
+                "deletions": 14
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 25,
+        "deletions": 25,
+        "date": "2020-07-06",
+        "commitResults": [
+          {
+            "hash": "3f076d08d495186d3c506500768b03ec794a30a7",
+            "messageTitle": "[#10213] Fix clickable area / cursor related issues (#10275)",
+            "messageBody": "* Fix clickable area / cursor related issues\r\n* Update snapshot",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 25,
+                "deletions": 25
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 328,
+        "deletions": 67,
+        "date": "2020-07-08",
+        "commitResults": [
+          {
+            "hash": "5da3cd22e793f69c461c540cff9893692ddc778d",
+            "messageTitle": "[#10245] Add send email feature for admin search (#10270)",
+            "messageBody": "* Add API for email request\r\n\r\n* Add frontend buttons for email feature\r\n\r\n* Test fix\r\n\r\n* Rename generateemail endpoint to email\r\n\r\n* Change auth type\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e\r\n\r\n* Link EmailType from backend to frontend\r\n\r\n* Change params of getEmail\r\n\r\n* Fix year not showing\r\n\r\n* Refactor data shape returned by generating strings to display\r\n\r\n* Remove comment\r\n\r\n* Move formatProperties to searchservice.ts\r\n\r\n* Change error message for unaccepted email type\r\n\r\n* Abstration for email opening link\r\n\r\n* Lint fix\r\n\r\n* Fix bad merge\r\n\r\n* Remove useless enum\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 111,
+                "deletions": 0
+              },
+              "scss": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 10,
+                "deletions": 6
+              },
+              "ts": {
+                "insertions": 203,
+                "deletions": 61
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 261,
+        "deletions": 203,
+        "date": "2020-07-09",
+        "commitResults": [
+          {
+            "hash": "8461a63ce7ab065b11c457cd7f56810d5f66ab99",
+            "messageTitle": "[#10245] Add and refactor collapse animations (#10281)",
+            "messageBody": "* Add skeleton for new collapse\r\n\r\n* Convert old collapse animations to use new ones\r\n\r\n* Add collapse animations for multiple places\r\n\r\n* Update snapshots\r\n\r\n* Lint fix\r\n\r\n* Fix E2E by adding timer for animation to play\r\n\r\n* Indentation fix\r\n\r\n* Change animation waiting method",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 9,
+                "deletions": 0
+              },
+              "scss": {
+                "insertions": 0,
+                "deletions": 45
+              },
+              "html": {
+                "insertions": 147,
+                "deletions": 143
+              },
+              "ts": {
+                "insertions": 79,
+                "deletions": 0
+              }
+            }
+          },
+          {
+            "hash": "f3cbea3481e5a12cb55ad3f2d64754e89bf63a25",
+            "messageTitle": "[#10245] Show error details on submit feedback (#10291)",
+            "messageBody": "* Show error details on submit\r\n\r\n* Change map type to be more accurate, add comment to explain map\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 12,
+                "deletions": 8
+              },
+              "ts": {
+                "insertions": 14,
+                "deletions": 7
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -1679,6 +1798,210 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 22,
+        "deletions": 25,
+        "date": "2020-07-01",
+        "commitResults": [
+          {
+            "hash": "0abdd43da065eb8ed25b7ac4fbe63d66eb224ff1",
+            "messageTitle": "[#10263] Clean up endpoint access control (#10266)",
+            "messageBody": "* Clean up endpoint access control\r\n\r\n* Set search comments access to only instructors",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 22,
+                "deletions": 25
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 49,
+        "deletions": 10,
+        "date": "2020-07-06",
+        "commitResults": [
+          {
+            "hash": "1557c7294c47e96ce92119677aaf3ff3d792cb65",
+            "messageTitle": "[#10245] UAT Fix: Instructor Search Page (#10273)",
+            "messageBody": "* Fix instructor student search as admin\r\n\r\n* Move entity param validation to execute",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 43,
+                "deletions": 6
+              },
+              "ts": {
+                "insertions": 6,
+                "deletions": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 187,
+        "deletions": 102,
+        "date": "2020-07-08",
+        "commitResults": [
+          {
+            "hash": "05f722b5c7fb7a9da70aba900b744a9139b55e8c",
+            "messageTitle": "[#10264] Encrypt Feedback Response ID (#10283)",
+            "messageBody": "* Add encryption to API output\n\n* Add decryption to API endpoints\n\n* Update tests for encryption and decryption",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 187,
+                "deletions": 102
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 1,
+        "deletions": 2,
+        "date": "2020-07-10",
+        "commitResults": [
+          {
+            "hash": "560eb09e763c0b0523b238d1171b025c3564802a",
+            "messageTitle": "[#10019] Add secure flag to cookie in server response (#10292)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 1,
+                "deletions": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 26,
+        "deletions": 26,
+        "date": "2020-07-11",
+        "commitResults": [
+          {
+            "hash": "a5f15f9f634d1b988b3f6f50a85959365da48b1b",
+            "messageTitle": "[#10264] Remove Student Google ID from Output (#10287)",
+            "messageBody": "* Remove googleId from StudentData output\r\n\r\n* Refactor frontend use of JoinState",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 24,
+                "deletions": 24
+              },
+              "ts": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 15,
+        "deletions": 11,
+        "date": "2020-07-13",
+        "commitResults": [
+          {
+            "hash": "3f7f9bae060daa4c47e829400970d0ff9ac96cde",
+            "messageTitle": "[#9474] Change Email Validation to Enforce TLD (#10300)",
+            "messageBody": "* Change email validation to enforce TLD\r\n\r\n* Fix emails used in other tests",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 15,
+                "deletions": 11
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 77,
+        "deletions": 20,
+        "date": "2020-07-15",
+        "commitResults": [
+          {
+            "hash": "5deb81a13108950736b7484f938f1f989f962ce2",
+            "messageTitle": "[#9495] Add cancel button when editing an existing session (#10301)",
+            "messageBody": "* Adds \"Discard\" button to session edit\n\n* Removes unnecessary change.\n\n* Added warning modal and tooltip\n\n* Update package.json\n\n* Changes modal text to match others\n\n* Removes call to backend, instead stores session instructions locally on clicking \"Edit\"\n\n* fixes linting issues\n\n* Uses getSessionEditFormModel to update form\n\n* tslint ignores no null assertion for one line\n\n* Removed Map for FeedbackSession\n\n* Renamed variables and updated comments\n\n* Renamed cancel event and handler\n\n* renamed functions and variables\n\n* Change feedbackSessionModelBeforeEditing to model\n\n* Refactor edit model in subscription\n\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e\n\n* Implement deep copy of session model\n\nCo-authored-by: martinoamigo \u003cmartinoman98@gmail.com\u003e\nCo-authored-by: Xiao Pu \u003cxp.xiaopu@gmail.com\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 17,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 24,
+                "deletions": 0
+              }
+            }
+          },
+          {
+            "hash": "8677046d5d91410ad4421ddb2423afbe665f29f1",
+            "messageTitle": "[#10264] Remove Instructor Google ID from Output (#10295)",
+            "messageBody": "* Remove instructor googleId from output\r\n\r\n* Change access control to appropriate permission",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 34,
+                "deletions": 17
+              },
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 26,
+        "deletions": 0,
+        "date": "2020-07-17",
+        "commitResults": [
+          {
+            "hash": "dd9977ec150a49c93040004c4eb034a43fe0180a",
+            "messageTitle": "[#10264] Hide MCQ/MSQ/Rubric Question Weights from Students (#10320)",
+            "messageBody": "* Hide weights from students in FeedbackQuestionData\r\n\r\n* Update javadoc description\r\n\r\n* Hide other weights by setting to zero",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 26,
+                "deletions": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 135,
+        "deletions": 13,
+        "date": "2020-07-18",
+        "commitResults": [
+          {
+            "hash": "966c11c879fc54027088daef427eeb345145c7dd",
+            "messageTitle": "[#9673] Fix feedback session names with \u0027+\u0027 encoding (#10313)",
+            "messageBody": "* add custom httpparameter encode and url encoder to accept plus sign\r\n\r\n* add test for custom url serializer\r\n\r\n* update method doc\r\n\r\n* update doc\r\n\r\n* Clean up docs\r\n\r\n* Refactor CustomEncoder to use HttpUrlEncodingCodec\r\n\r\n* Update method reference link\r\n\r\n* Enforce type parameters\r\n\r\nCo-authored-by: crizyli \u003cliyufei6666@gmail.com\u003e",
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 77,
+                "deletions": 5
+              }
+            }
+          },
+          {
+            "hash": "9ebb3b502d61f7d8a6b9cbad2c2e62f7e91e8bc3",
+            "messageTitle": "[#10264] Hide FeedbackSession and Course Data (#10328)",
+            "messageBody": "* Hide FeedbackSessionData information\r\n\r\n* Hide CourseData information for student\r\n\r\n* Clean up comments and refactor hide method",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 58,
+                "deletions": 8
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -1757,36 +2080,36 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 1932,
+    "ccyccyccy": 2124,
     "Parcly-Taxel": 0,
-    "niqiukun": 798,
+    "niqiukun": 746,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
-    "dvrylc": 827,
+    "dvrylc": 744,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 1182,
+    "hcwong": 1135,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1746,
-    "madanalogy": 2774,
+    "tiuweehan": 1725,
+    "madanalogy": 3202,
     "daekoon": 1653
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 37,
+      "java": 157,
       "js": 0,
-      "scss": 105,
+      "scss": 89,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 372,
-      "ts": 1418
+      "html": 471,
+      "ts": 1407
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -1801,12 +2124,12 @@
     "niqiukun": {
       "java": 207,
       "js": 0,
-      "scss": 46,
+      "scss": 34,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 77,
-      "ts": 468
+      "html": 70,
+      "ts": 435
     },
     "openorclose": {
       "java": 0,
@@ -1839,14 +2162,14 @@
       "ts": 0
     },
     "dvrylc": {
-      "java": 479,
+      "java": 463,
       "js": 0,
       "scss": 0,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 5,
-      "ts": 343
+      "html": 4,
+      "ts": 277
     },
     "j-lum": {
       "java": 0,
@@ -1889,14 +2212,14 @@
       "ts": 0
     },
     "hcwong": {
-      "java": 268,
+      "java": 254,
       "js": 0,
-      "scss": 2,
+      "scss": 1,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 9,
-      "ts": 903
+      "html": 6,
+      "ts": 874
     },
     "ang-zeyu": {
       "java": 0,
@@ -1946,17 +2269,17 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1673
+      "ts": 1652
     },
     "madanalogy": {
-      "java": 1696,
+      "java": 2065,
       "js": 0,
       "scss": 7,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 116,
-      "ts": 955
+      "html": 134,
+      "ts": 996
     },
     "daekoon": {
       "java": 1653,
@@ -1970,25 +2293,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 4939.665,
+    "ccyccyccy": 7147.873,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4245.6694,
+    "niqiukun": 3919.1948,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1967.4712,
+    "dvrylc": 1815.8965,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 5090.947,
+    "hcwong": 4699.682,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 10900.254,
-    "madanalogy": 8354.475,
-    "daekoon": 5860.6704
+    "tiuweehan": 10069.64,
+    "madanalogy": 8142.6963,
+    "daekoon": 5409.0684
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
