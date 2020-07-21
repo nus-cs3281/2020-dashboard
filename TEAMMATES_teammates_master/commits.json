@@ -612,6 +612,36 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 878,
+        "deletions": 2014,
+        "date": "2020-07-20",
+        "commitResults": [
+          {
+            "hash": "2f0dfb7c717d751148b2b35ede2e9713f9f6af61",
+            "messageTitle": "[#9551] Standardize modals (#10293)",
+            "messageBody": "* Partial working port of old PR\r\n\r\n* Add notification only modal\r\n\r\n* Replace confirm-delete-comment-modal\r\n\r\n* Add custom text options for modal\r\n\r\n* Refactor modals for student-profile-page.component\r\n\r\n* Refactor modals for contribution-question-edit-answer-form\r\n\r\n* Refactor modals for contribution-question-statistics\r\n\r\n* Refactor modals for more-info\r\n\r\n* Rename service to simpleModal from confirmationModal, and fixes from review\r\n\r\n* Refactor modals for instructor-course-enroll-page.component\r\n\r\n* Refactor modals for instructor-course-student-edit-page.component\r\n\r\nDid not convert resendPastLinksModal as it have 3 buttons\r\n\r\n* Refactor modals for instructor-help-questions-section.component\r\n\r\n* Refactor modals for student-list.component\r\n\r\n* Refactor modals for instructor-session-edit-page.component\r\n\r\n* Refactor modals for instructor-courses-page.component\r\n\r\n* Refactor modals for instructor-course-edit-page.component\r\n\r\n* Refactor modals for session-submission-page.component\r\n\r\n* Refactor modals for admin-search-page.component\r\n\r\n* Refactor modals for rubric-question-edit-details-form.component\r\n\r\n* Refactor modals for session-edit-form.component\r\n\r\n* Remove unused components and update snapshots\r\n\r\n* Fix bad commits\r\n\r\n* Add error catcher to .then calls\r\n\r\n* Reword confirmation modal headers to be questions, as well as bolding variables\r\n\r\n* Use TemplateRef for large HTML modals\r\n\r\n* Remove PRIMARY modal type as it is very similar to INFO\r\n\r\n* e2e test fix\r\n\r\n* Make modalContents a bit more detailed\r\n\r\n* Refactor complex html to TemplateRef\r\n\r\n* Refactor modals for instructor-course-detail-page.component\r\n\r\n* miscellaneous fixes from review\r\n\r\n* Rename all modalService to ngbModal\r\n\r\n* Convert template to be passed in as argument instead of using ViewChild",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 3,
+                "deletions": 9
+              },
+              "scss": {
+                "insertions": 3,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 270,
+                "deletions": 815
+              },
+              "ts": {
+                "insertions": 602,
+                "deletions": 1190
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -812,7 +842,7 @@
       },
       {
         "insertions": 12,
-        "deletions": 7,
+        "deletions": 10,
         "date": "2020-07-20",
         "commitResults": [
           {
@@ -834,6 +864,17 @@
               "html": {
                 "insertions": 6,
                 "deletions": 6
+              }
+            }
+          },
+          {
+            "hash": "1ac404a6d199ff19d8c860cde865fad81ddaadc5",
+            "messageTitle": "[#10370] Remove extra border around rich text editor (#10371)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 0,
+                "deletions": 3
               }
             }
           }
@@ -2109,9 +2150,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 2124,
+    "ccyccyccy": 2703,
     "Parcly-Taxel": 0,
-    "niqiukun": 758,
+    "niqiukun": 739,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -2120,25 +2161,25 @@
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 1135,
+    "hcwong": 1134,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1725,
-    "madanalogy": 3202,
-    "daekoon": 1653
+    "tiuweehan": 1722,
+    "madanalogy": 3083,
+    "daekoon": 1641
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 157,
+      "java": 160,
       "js": 0,
-      "scss": 89,
+      "scss": 92,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 471,
-      "ts": 1407
+      "html": 513,
+      "ts": 1938
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -2151,14 +2192,14 @@
       "ts": 0
     },
     "niqiukun": {
-      "java": 207,
+      "java": 191,
       "js": 0,
       "scss": 34,
       "md": 0,
       "py": 0,
       "tag": 0,
       "html": 76,
-      "ts": 441
+      "ts": 438
     },
     "openorclose": {
       "java": 0,
@@ -2241,7 +2282,7 @@
       "ts": 0
     },
     "hcwong": {
-      "java": 254,
+      "java": 253,
       "js": 0,
       "scss": 1,
       "md": 0,
@@ -2298,20 +2339,20 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1652
+      "ts": 1649
     },
     "madanalogy": {
-      "java": 2065,
+      "java": 2047,
       "js": 0,
       "scss": 7,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 134,
-      "ts": 996
+      "html": 102,
+      "ts": 927
     },
     "daekoon": {
-      "java": 1653,
+      "java": 1641,
       "js": 0,
       "scss": 0,
       "md": 0,
@@ -2322,9 +2363,9 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 7090.162,
+    "ccyccyccy": 42322.07,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 3886.386,
+    "niqiukun": 3886.73,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,

@@ -1587,6 +1587,66 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 306,
+        "deletions": 309,
+        "date": "2020-07-20",
+        "commitResults": [
+          {
+            "hash": "7fbe72f9c87fa8d1108eb2e6e2addd142493a54e",
+            "messageTitle": "Move lots of things to the core package (#1272)",
+            "messageBody": "Move non-cli functionalities to @markbind/core\r\n\r\nThe cli package houses numerous key functionalities in site generation,\r\nsuch as the Site and Page models, assets, plugins and unit tests\r\nbelonging to files in @markbind/core.\r\n\r\nLet\u0027s move all non-cli related functionality to the @markbind/core\r\npackage instead.\r\nThis encourages markbind-cli to focus solely on the cli aspect of\r\nthe application.",
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "md": {
+                "insertions": 14,
+                "deletions": 19
+              },
+              "js": {
+                "insertions": 278,
+                "deletions": 278
+              },
+              "json": {
+                "insertions": 14,
+                "deletions": 12
+              },
+              "njk": {
+                "insertions": 0,
+                "deletions": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 0,
+        "deletions": 0,
+        "date": "2020-07-21",
+        "commitResults": [
+          {
+            "hash": "5927ff473dd454e7120c685600bdd07ce5fa3587",
+            "messageTitle": "Revert file permission changes (#1281)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 0,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2189,19 +2249,19 @@
     "Parcly-Taxel": 0,
     "niqiukun": 0,
     "openorclose": 766,
-    "yash-chowdhary": 1448,
-    "Tejas2805": 91,
-    "dvrylc": 52,
+    "yash-chowdhary": 1382,
+    "Tejas2805": 90,
+    "dvrylc": 49,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 21,
-    "ang-zeyu": 3405,
+    "ang-zeyu": 3700,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 691,
-    "le0tan": 949,
+    "le0tan": 942,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -2256,7 +2316,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 235,
+      "js": 169,
       "css": 126,
       "json": 1,
       "md": 1040,
@@ -2268,7 +2328,7 @@
     },
     "Tejas2805": {
       "java": 0,
-      "js": 3,
+      "js": 2,
       "css": 1,
       "json": 8,
       "md": 31,
@@ -2280,7 +2340,7 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 27,
+      "js": 24,
       "css": 16,
       "json": 0,
       "md": 0,
@@ -2352,10 +2412,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2421,
+      "js": 2718,
       "css": 225,
-      "json": 120,
-      "md": 331,
+      "json": 104,
+      "md": 345,
       "mbd": 0,
       "mbdf": 296,
       "njk": 12,
@@ -2400,7 +2460,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 780,
+      "js": 773,
       "css": 22,
       "json": 0,
       "md": 56,
@@ -2439,21 +2499,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 5783.7686,
-    "yash-chowdhary": 7502.259,
-    "Tejas2805": 315.92087,
-    "dvrylc": 14.712461,
+    "openorclose": 5513.526,
+    "yash-chowdhary": 7153.0967,
+    "Tejas2805": 301.1385,
+    "dvrylc": 14.024889,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 14.6370125,
-    "ang-zeyu": 57649.406,
+    "hcwong": 13.9527445,
+    "ang-zeyu": 56435.68,
     "geshuming": 0.0,
-    "alyip98": 2.5873141,
-    "nbriannl": 11413.674,
-    "le0tan": 141405.53,
-    "madanalogy": 151.60133,
+    "alyip98": 2.4662757,
+    "nbriannl": 10882.308,
+    "le0tan": 134795.48,
+    "madanalogy": 144.50797,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
