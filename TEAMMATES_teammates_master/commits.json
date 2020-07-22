@@ -642,6 +642,65 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 7,
+        "deletions": 5,
+        "date": "2020-07-21",
+        "commitResults": [
+          {
+            "hash": "99436f3bb6fb0679ebc8dfcce6bed213f3e31495",
+            "messageTitle": "[#10299] UAT Round 3 fixes (#10326)",
+            "messageBody": "* Fix comments not available on MCQ questions\r\n\r\n* Prevent users from typing in floating point numbers\r\n\r\n* Move allowedToHaveParticipantComment to set on model change\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e\r\nCo-authored-by: t-cheepeng \u003ctcp97@hotmail.com\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 6,
+                "deletions": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 24,
+        "deletions": 18,
+        "date": "2020-07-22",
+        "commitResults": [
+          {
+            "hash": "c9d43b3f687ab56868f597219723e1026e719561",
+            "messageTitle": "Add ordering prefix to rubric choices and sort them (#10378)",
+            "messageBody": "Co-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 2,
+                "deletions": 2
+              },
+              "ts": {
+                "insertions": 9,
+                "deletions": 3
+              }
+            }
+          },
+          {
+            "hash": "d0d9c0b4c8885c7bb38ae1d7257a4d095c692c11",
+            "messageTitle": "[#10347] Fix inconsistency in indicating end of the day (#10377)",
+            "messageBody": "* Change usage of time 00:00 to use 23:59\r\n\r\n* Add option for 23:00",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 12,
+                "deletions": 12
+              }
+            }
+          }
+        ]
       }
     ],
     "Parcly-Taxel": [],
@@ -875,6 +934,50 @@
               "scss": {
                 "insertions": 0,
                 "deletions": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 6,
+        "date": "2020-07-21",
+        "commitResults": [
+          {
+            "hash": "5b516ce6b98c889a85866c27510cdbde8c14d1a5",
+            "messageTitle": "[#10355] Use default order for MCQ response summary (#10369)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 2,
+                "deletions": 5
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 81,
+        "deletions": 64,
+        "date": "2020-07-22",
+        "commitResults": [
+          {
+            "hash": "cba514ec8086caa93f86e1fcc414694bb91f8624",
+            "messageTitle": "[#10335] Instructor course details page: add initial sorting to student table (#10363)",
+            "messageBody": "* Add initial sorting to student table\r\n\r\n* Update snapshot\r\n\r\n* Update snapshot of instructor course details page\r\n\r\n* Update snapshot of instructor search page\r\n\r\n* Copy students array from input property\r\n\r\n* Move sorting to instructor student list page\r\n\r\n* Add default sort order to sortby function\r\n\r\n* Retry test",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 11,
+                "deletions": 6
+              },
+              "ts": {
+                "insertions": 70,
+                "deletions": 58
               }
             }
           }
@@ -2150,9 +2253,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 2703,
+    "ccyccyccy": 2711,
     "Parcly-Taxel": 0,
-    "niqiukun": 739,
+    "niqiukun": 815,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -2161,13 +2264,13 @@
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 0,
-    "hcwong": 1134,
+    "hcwong": 1133,
     "ang-zeyu": 0,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1722,
-    "madanalogy": 3083,
+    "tiuweehan": 1718,
+    "madanalogy": 3076,
     "daekoon": 1641
   },
   "authorFileTypeContributionMap": {
@@ -2178,8 +2281,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 513,
-      "ts": 1938
+      "html": 501,
+      "ts": 1958
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -2198,8 +2301,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 76,
-      "ts": 438
+      "html": 86,
+      "ts": 504
     },
     "openorclose": {
       "java": 0,
@@ -2289,7 +2392,7 @@
       "py": 0,
       "tag": 0,
       "html": 6,
-      "ts": 874
+      "ts": 873
     },
     "ang-zeyu": {
       "java": 0,
@@ -2339,7 +2442,7 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1649
+      "ts": 1645
     },
     "madanalogy": {
       "java": 2047,
@@ -2348,8 +2451,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 102,
-      "ts": 927
+      "html": 101,
+      "ts": 921
     },
     "daekoon": {
       "java": 1641,
@@ -2363,25 +2466,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 42322.07,
+    "ccyccyccy": 41964.098,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 3886.73,
+    "niqiukun": 3934.1118,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1800.4851,
+    "dvrylc": 1785.3319,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 4659.877,
+    "hcwong": 4620.7783,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 9985.0,
-    "madanalogy": 8076.708,
-    "daekoon": 5363.163
+    "tiuweehan": 9901.94,
+    "madanalogy": 8011.77,
+    "daekoon": 5318.0186
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
