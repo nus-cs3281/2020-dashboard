@@ -666,8 +666,8 @@
         ]
       },
       {
-        "insertions": 24,
-        "deletions": 18,
+        "insertions": 227,
+        "deletions": 230,
         "date": "2020-07-22",
         "commitResults": [
           {
@@ -697,6 +697,65 @@
               "ts": {
                 "insertions": 12,
                 "deletions": 12
+              }
+            }
+          },
+          {
+            "hash": "dbc978ddc5a2b31add2a34b1de4da698a6280276",
+            "messageTitle": "[#10297] Tooltips behaviour improvement (#10321)",
+            "messageBody": "* Set global config for tooltip delay\r\n\r\n* Fix tooltips for comment-edit-form.component.html\r\n\r\n* Updated tooltip behavior\r\n\r\n* Fix tooltips for question-edit-form.component.html\r\n\r\n* Fix tooltips for question-submission-form.component.html\r\n\r\n* Fix tooltips for constsum-options-question-edit-details-form.component.html\r\n\r\n* Fix tooltips for constsum-recipients-question-edit-details-form.component.html\r\n\r\n* Fix tooltips for contribution-question-edit-details-form.component.html\r\n\r\n* Fix tooltips for session-edit-form-component.html\r\n\r\n* Fix tooltips for sesssions-recycle-bin-table.component.html\r\n\r\n* Fix tooltips for sessions-table.component.html\r\n\r\n* Fix tooltips for instructor-course-edit-page.component.html\r\n\r\n* Fix tooltips for instructor-edit-panel.component.html\r\n\r\n* Fix tooltips for instructor-courses-page.component.html\r\n\r\n* Fix tooltips for add-course-form.component.html\r\n\r\n* Fix tooltips for instructor-home-page.component.html\r\n\r\n* Fix tooltips for instructor-session-edit-page.component.html\r\n\r\n* Fix tooltips for instructor-session-result-page.component.html\r\n\r\n* Fix tooltips for student-home-page.component.html\r\n\r\n* Fix tooltips for student-profile-page.component.html\r\n\r\n* Fix tooltips for instructor-help-sessions-section.component.html\r\n\r\n* Lint and test fix",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 21,
+                "deletions": 19
+              },
+              "html": {
+                "insertions": 116,
+                "deletions": 135
+              },
+              "ts": {
+                "insertions": 7,
+                "deletions": 1
+              }
+            }
+          },
+          {
+            "hash": "a29a80e962055f007a3a72435df71fed43d246ac",
+            "messageTitle": "[#10384] Fix loading spinner blocked by navbar (#10385)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 59,
+                "deletions": 57
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 6,
+        "deletions": 4,
+        "date": "2020-07-23",
+        "commitResults": [
+          {
+            "hash": "fd47435c0190cf9e3b66aa9fcc3680da7cbea2ff",
+            "messageTitle": "[#10336] Make instructor course details page table styling more consistent (#10386)",
+            "messageBody": "* Make student list tables more in line with rest of tables\r\n\r\n* Update snapshots",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 4,
+                "deletions": 4
+              }
+            }
+          },
+          {
+            "hash": "be19ce3a14ed6c132e47499e817b08c4f717a5af",
+            "messageTitle": "[#10341] Set panel to expand on load #10389",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 2,
+                "deletions": 0
               }
             }
           }
@@ -962,8 +1021,8 @@
         ]
       },
       {
-        "insertions": 81,
-        "deletions": 64,
+        "insertions": 203,
+        "deletions": 136,
         "date": "2020-07-22",
         "commitResults": [
           {
@@ -978,6 +1037,62 @@
               "ts": {
                 "insertions": 70,
                 "deletions": 58
+              }
+            }
+          },
+          {
+            "hash": "69fc0b9804067957644130c55f151d9498558f5f",
+            "messageTitle": "[#10331] Instructor course page: add sorting to archived/deleted courses (#10362)",
+            "messageBody": "* Add sorting to instructor course page archived/deleted courses\r\n\r\n* Update snapshot\r\n\r\n* Fix a bug where newly archived/deleted courses not sorted\r\n\r\n* Update snapshot\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 57,
+                "deletions": 22
+              },
+              "ts": {
+                "insertions": 42,
+                "deletions": 10
+              }
+            }
+          },
+          {
+            "hash": "77e35f3b6656ce07bc567e8c101c0750dc4b50de",
+            "messageTitle": "[#10372] Remove modal padding and outline around close button while on focus (#10383)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 2,
+                "deletions": 26
+              }
+            }
+          },
+          {
+            "hash": "6931510dcf8debae5a68b9cef29fde66af726580",
+            "messageTitle": "[#10345] Add header for view role privileges modal (#10373)",
+            "messageBody": "* Add header for view role privileges modal\r\n\r\n* Fix tests\r\n\r\n* Remove InstructorRoleTitlePipe and use InstructorRoleNamePipe\r\n\r\n* Move InstructorRoleDescriptionPipe to teammates-common",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 14,
+                "deletions": 9
+              }
+            }
+          },
+          {
+            "hash": "9746ef834a32a72a4c43f58298071e411348b7c4",
+            "messageTitle": "[#10351] Instructor session results page: allow entering editing mode directly (#10381)",
+            "messageBody": "* Add url param to allow entering edit mode directly\r\n\r\n* Fix lint error\r\n\r\n* Prevent isEditingMode from being undefined",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "ts": {
+                "insertions": 5,
+                "deletions": 3
               }
             }
           }
@@ -2175,6 +2290,24 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 23,
+        "deletions": 1,
+        "date": "2020-07-22",
+        "commitResults": [
+          {
+            "hash": "9ac03d880949f653c62f5754b139731f4cc41595",
+            "messageTitle": "[#9823] Fix feedback made on behalf of team showing as anonymous  (#10314)",
+            "messageBody": "* Fix isNameVisibleToUser()\r\n\r\n* Update test cases\r\n\r\n* Add legacy logic management and test case\r\n\r\n* Revert FeedbackSessionResultsTest.json and FeedbackSessionsLogicTest.java\r\n\r\n* Add comment\r\n\r\n* Add response logic test\r\n\r\n* Add test case description\r\n\r\nCo-authored-by: erjillsison \u003cerjillsison@gmail.com\u003e",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 23,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -2253,9 +2386,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 2711,
+    "ccyccyccy": 2852,
     "Parcly-Taxel": 0,
-    "niqiukun": 815,
+    "niqiukun": 934,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -2270,19 +2403,19 @@
     "alyip98": 0,
     "nbriannl": 0,
     "tiuweehan": 1718,
-    "madanalogy": 3076,
+    "madanalogy": 3098,
     "daekoon": 1641
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
       "java": 160,
       "js": 0,
-      "scss": 92,
+      "scss": 113,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 501,
-      "ts": 1958
+      "html": 614,
+      "ts": 1965
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -2297,12 +2430,12 @@
     "niqiukun": {
       "java": 191,
       "js": 0,
-      "scss": 34,
+      "scss": 36,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 86,
-      "ts": 504
+      "html": 143,
+      "ts": 564
     },
     "openorclose": {
       "java": 0,
@@ -2445,13 +2578,13 @@
       "ts": 1645
     },
     "madanalogy": {
-      "java": 2047,
+      "java": 2070,
       "js": 0,
       "scss": 7,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 101,
+      "html": 100,
       "ts": 921
     },
     "daekoon": {
@@ -2466,25 +2599,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 41964.098,
+    "ccyccyccy": 42547.555,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 3934.1118,
+    "niqiukun": 4302.0835,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1785.3319,
+    "dvrylc": 1777.841,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 4620.7783,
+    "hcwong": 4601.468,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 9901.94,
-    "madanalogy": 8011.77,
-    "daekoon": 5318.0186
+    "tiuweehan": 9860.808,
+    "madanalogy": 7977.8623,
+    "daekoon": 5295.727
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
