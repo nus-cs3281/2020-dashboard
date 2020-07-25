@@ -762,8 +762,8 @@
         ]
       },
       {
-        "insertions": 5,
-        "deletions": 5,
+        "insertions": 89,
+        "deletions": 59,
         "date": "2020-07-24",
         "commitResults": [
           {
@@ -774,6 +774,51 @@
               "ts": {
                 "insertions": 5,
                 "deletions": 5
+              }
+            }
+          },
+          {
+            "hash": "39013a40280b004a6c639efb4c4fa348719655e9",
+            "messageTitle": "[#10299] UAT round 3 fixes (#10316)",
+            "messageBody": "* Fix clicking on the menu items collapsing table\r\n\r\n* Empty recommended words box if 0\r\n\r\n* Set floating point calculation for statistics table to 2dp\r\n\r\n* Update snapshot\r\n\r\n* Show integers without dp, truncate fractions to 2dp\r\n\r\n* Change default value of recommendedLength for text questions to be undefined instead of 0",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 14,
+                "deletions": 13
+              },
+              "html": {
+                "insertions": 9,
+                "deletions": 9
+              },
+              "ts": {
+                "insertions": 6,
+                "deletions": 9
+              }
+            }
+          },
+          {
+            "hash": "1d25a3b87333e1b5834cb52b4be7e2d2dc908cbb",
+            "messageTitle": "[#10368] Instructor home page: Fix changing sort by results in duplicate tables (#10387)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "ts": {
+                "insertions": 3,
+                "deletions": 1
+              }
+            }
+          },
+          {
+            "hash": "33d28f8400bc3d904910975dc3d71f0c1198fd52",
+            "messageTitle": "[#10243] Change multi level panel color to match V6 (#10395)",
+            "messageBody": "* Change stacked panel color to match V6\r\n\r\n* Add background color for alert-warning\r\n\r\n* Add border colors for panels\r\n\r\n* Remove horizontal line below heading",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 32,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 20,
+                "deletions": 22
               }
             }
           }
@@ -2326,6 +2371,62 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 9,
+        "deletions": 3,
+        "date": "2020-07-24",
+        "commitResults": [
+          {
+            "hash": "bbcff7f61b5d1ba3541d9a35e310083f03c8a92e",
+            "messageTitle": "[#10343] Fix unnecessary bottom line for last response (#10392)",
+            "messageBody": "* Fix unnecessary bottom line for last response\r\n\r\n* Refactor for code quality\r\n\r\n* Fix typo in class name",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 4,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 4,
+                "deletions": 3
+              },
+              "ts": {
+                "insertions": 1,
+                "deletions": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 709,
+        "deletions": 455,
+        "date": "2020-07-25",
+        "commitResults": [
+          {
+            "hash": "08f14483c7c33a7798d5a0016df32b45db2e378d",
+            "messageTitle": "[#9764] Add instructors as respondents in remind modal (#10380)",
+            "messageBody": "* Refactor students to respondents in sessions-table module\r\n\r\n* Refactor students to respondents everywhere else\r\n\r\n* Add instructor table to sessions-table modals\r\n\r\n* Add logic to instructor-session-modal-page\r\n\r\n* Refactor for code quality and fix test description\r\n\r\n* Refactor FeedbackSessionStudentRemindRequest\r\n\r\n* Add an instructor to remind in tests",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 22,
+                "deletions": 14
+              },
+              "scss": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 202,
+                "deletions": 129
+              },
+              "ts": {
+                "insertions": 485,
+                "deletions": 312
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -2404,9 +2505,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 2835,
+    "ccyccyccy": 2899,
     "Parcly-Taxel": 0,
-    "niqiukun": 932,
+    "niqiukun": 927,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -2420,20 +2521,20 @@
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1718,
-    "madanalogy": 3085,
+    "tiuweehan": 1717,
+    "madanalogy": 3802,
     "daekoon": 1641
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 160,
+      "java": 174,
       "js": 0,
-      "scss": 113,
+      "scss": 145,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 597,
-      "ts": 1965
+      "html": 613,
+      "ts": 1967
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -2452,8 +2553,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 143,
-      "ts": 562
+      "html": 141,
+      "ts": 559
     },
     "openorclose": {
       "java": 0,
@@ -2593,17 +2694,17 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1645
+      "ts": 1644
     },
     "madanalogy": {
-      "java": 2070,
+      "java": 2092,
       "js": 0,
-      "scss": 7,
+      "scss": 11,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 98,
-      "ts": 910
+      "html": 304,
+      "ts": 1395
     },
     "daekoon": {
       "java": 1641,
@@ -2617,25 +2718,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 42370.566,
+    "ccyccyccy": 42248.996,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4284.2676,
+    "niqiukun": 4266.569,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1770.4253,
+    "dvrylc": 1763.0714,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 4582.269,
+    "hcwong": 4563.275,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 9820.1045,
-    "madanalogy": 7946.067,
-    "daekoon": 5273.6177
+    "tiuweehan": 9779.733,
+    "madanalogy": 13377.095,
+    "daekoon": 5251.747
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
