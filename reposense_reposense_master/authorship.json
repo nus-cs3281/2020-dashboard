@@ -8385,6 +8385,324 @@
     }
   },
   {
+    "path": "frontend/cypress/tests/chartView/chartView_toolBar_searchBox.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "describe(\u0027search bar\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  it(\u0027non-existent author shows no result\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    cy.get(\u0027#app #tab-resize .tab-close\u0027).click();"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    cy.get(\u0027#summary-wrapper input[type\u003dtext]\u0027)"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .type(\u0027abcdef\u0027)"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .type(\u0027{enter}\u0027);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Enter does not work. Related issue: https://github.com/cypress-io/cypress/issues/3405"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Let\u0027s manually submit form"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    cy.get(\u0027#summary-wrapper form.summary-picker\u0027)"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .submit();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    cy.get(\u0027#summary-wrapper #summary-charts\u0027).then(($ele) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const content \u003d $ele.html();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      expect(content).to.be.empty;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  it(\u0027unique author shows one result\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    cy.get(\u0027#app #tab-resize .tab-close\u0027).click();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    cy.get(\u0027#summary-wrapper input[type\u003dtext]\u0027)"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .type(\u0027Yong Hao TENG\u0027)"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .type(\u0027{enter}\u0027);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Enter does not work. Related issue: https://github.com/cypress-io/cypress/issues/3405"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // Let\u0027s manually submit form"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    cy.get(\u0027#summary-wrapper form.summary-picker\u0027)"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        .submit();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    cy.get(\u0027#summary-wrapper #summary-charts\u0027).then(($ele) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const children \u003d $ele.children().length;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      expect(children).to.equal(1);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 42,
+      "ang-zeyu": 2
+    }
+  },
+  {
     "path": "frontend/cypress/tests/chartView/chartView_zoomFeature.js",
     "fileType": "js",
     "lines": [
@@ -9497,324 +9815,6 @@
     "authorContributionMap": {
       "Tejas2805": 1,
       "-": 60
-    }
-  },
-  {
-    "path": "frontend/cypress/tests/codeView/codeView_toolBar_searchBox.js",
-    "fileType": "js",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "describe(\u0027search bar\u0027, () \u003d\u003e {"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  it(\u0027non-existent author shows no result\u0027, () \u003d\u003e {"
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "ang-zeyu"
-        },
-        "content": "    cy.get(\u0027#app #tab-resize .tab-close\u0027).click();"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    cy.get(\u0027#summary-wrapper input[type\u003dtext]\u0027)"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .type(\u0027abcdef\u0027)"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .type(\u0027{enter}\u0027);"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    Cypress.wait();"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    // Enter does not work. Related issue: https://github.com/cypress-io/cypress/issues/3405"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    // Let\u0027s manually submit form"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    cy.get(\u0027#summary-wrapper form.summary-picker\u0027)"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .submit();"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    Cypress.wait();"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    cy.get(\u0027#summary-wrapper #summary-charts\u0027).then(($ele) \u003d\u003e {"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      const content \u003d $ele.html();"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      expect(content).to.be.empty;"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    });"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  });"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  it(\u0027unique author shows one result\u0027, () \u003d\u003e {"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "ang-zeyu"
-        },
-        "content": "    cy.get(\u0027#app #tab-resize .tab-close\u0027).click();"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    cy.get(\u0027#summary-wrapper input[type\u003dtext]\u0027)"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .type(\u0027Yong Hao TENG\u0027)"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .type(\u0027{enter}\u0027);"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    Cypress.wait();"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    // Enter does not work. Related issue: https://github.com/cypress-io/cypress/issues/3405"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    // Let\u0027s manually submit form"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    cy.get(\u0027#summary-wrapper form.summary-picker\u0027)"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .submit();"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    Cypress.wait();"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    cy.get(\u0027#summary-wrapper #summary-charts\u0027).then(($ele) \u003d\u003e {"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      const children \u003d $ele.children().length;"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      expect(children).to.equal(1);"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    });"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  });"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "});"
-      }
-    ],
-    "authorContributionMap": {
-      "-": 42,
-      "ang-zeyu": 2
     }
   },
   {
