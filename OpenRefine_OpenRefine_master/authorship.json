@@ -20428,693 +20428,693 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    var star \u003d $(\u0027\u003ca href\u003d\"javascript:{}\"\u003e\u0026nbsp;\u003c/a\u003e\u0027)"
+        "content": "    var star \u003d document.createElement(\u0027a\u0027);"
       },
       {
         "lineNumber": 401,
         "author": {
           "gitId": "-"
         },
-        "content": "    .addClass(row.starred ? \"data-table-star-on\" : \"data-table-star-off\")"
+        "content": "    star.href \u003d \"javascript:{}\";"
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "-"
         },
-        "content": "    .appendTo(tdStar)"
+        "content": "    star.classList.add(row.starred ? \"data-table-star-on\" : \"data-table-star-off\");"
       },
       {
         "lineNumber": 403,
         "author": {
           "gitId": "-"
         },
-        "content": "    .click(function() {"
+        "content": "    tdStar.appendChild(star).appendChild(document.createTextNode(\u0027\\u00A0\u0027)); // NBSP"
       },
       {
         "lineNumber": 404,
         "author": {
           "gitId": "-"
         },
-        "content": "      var newStarred \u003d !row.starred;"
+        "content": "    star.addEventListener(\u0027click\u0027, function() {"
       },
       {
         "lineNumber": 405,
         "author": {
           "gitId": "-"
         },
-        "content": "      Refine.postCoreProcess("
+        "content": "    var newStarred \u003d !row.starred;"
       },
       {
         "lineNumber": 406,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"annotate-one-row\","
+        "content": "      Refine.postCoreProcess("
       },
       {
         "lineNumber": 407,
         "author": {
           "gitId": "-"
         },
-        "content": "        { row: row.i, starred: newStarred },"
+        "content": "        \"annotate-one-row\","
       },
       {
         "lineNumber": 408,
         "author": {
           "gitId": "-"
         },
-        "content": "        null,"
+        "content": "        { row: row.i, starred: newStarred },"
       },
       {
         "lineNumber": 409,
         "author": {
           "gitId": "-"
         },
-        "content": "        {},"
+        "content": "        null,"
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "        {},"
       },
       {
         "lineNumber": 411,
         "author": {
           "gitId": "-"
         },
-        "content": "          onDone: function(o) {"
+        "content": "        {"
       },
       {
         "lineNumber": 412,
         "author": {
           "gitId": "-"
         },
-        "content": "            row.starred \u003d newStarred;"
+        "content": "          onDone: function(o) {"
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "-"
         },
-        "content": "            renderRow(tr, r, row, even);"
+        "content": "            row.starred \u003d newStarred;"
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "            renderRow(tr, r, row, even);"
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "          }"
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"json\""
+        "content": "        },"
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "-"
         },
-        "content": "      );"
+        "content": "        \"json\""
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "      );"
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "-"
         },
-        "content": "    "
+        "content": "    });"
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "-"
         },
-        "content": "    var tdFlag \u003d tr.insertCell(tr.cells.length);"
+        "content": "    "
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "-"
         },
-        "content": "    var flag \u003d $(\u0027\u003ca href\u003d\"javascript:{}\"\u003e\u0026nbsp;\u003c/a\u003e\u0027)"
+        "content": "    var tdFlag \u003d tr.insertCell(tr.cells.length);"
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "-"
         },
-        "content": "    .addClass(row.flagged ? \"data-table-flag-on\" : \"data-table-flag-off\")"
+        "content": "    var flag \u003d document.createElement(\u0027a\u0027);"
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "-"
         },
-        "content": "    .appendTo(tdFlag)"
+        "content": "    flag.classList.add(row.flagged ? \"data-table-flag-on\" : \"data-table-flag-off\");"
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "-"
         },
-        "content": "    .click(function() {"
+        "content": "    flag.href \u003d \"javascript:{}\";"
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "-"
         },
-        "content": "      var newFlagged \u003d !row.flagged;"
+        "content": "    tdFlag.appendChild(flag).appendChild(document.createTextNode(\u0027\\u00A0\u0027));"
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "-"
         },
-        "content": "      Refine.postCoreProcess("
+        "content": "    flag.addEventListener(\u0027click\u0027, function() {"
       },
       {
         "lineNumber": 427,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"annotate-one-row\","
+        "content": "      var newFlagged \u003d !row.flagged;"
       },
       {
         "lineNumber": 428,
         "author": {
           "gitId": "-"
         },
-        "content": "        { row: row.i, flagged: newFlagged },"
+        "content": "      Refine.postCoreProcess("
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "-"
         },
-        "content": "        null,"
+        "content": "        \"annotate-one-row\","
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "-"
         },
-        "content": "        {},"
+        "content": "        { row: row.i, flagged: newFlagged },"
       },
       {
         "lineNumber": 431,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "        null,"
       },
       {
         "lineNumber": 432,
         "author": {
           "gitId": "-"
         },
-        "content": "          onDone: function(o) {"
+        "content": "        {},"
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "-"
         },
-        "content": "            row.flagged \u003d newFlagged;"
+        "content": "        {"
       },
       {
         "lineNumber": 434,
         "author": {
           "gitId": "-"
         },
-        "content": "            renderRow(tr, r, row, even);"
+        "content": "          onDone: function(o) {"
       },
       {
         "lineNumber": 435,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "            row.flagged \u003d newFlagged;"
       },
       {
         "lineNumber": 436,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "            renderRow(tr, r, row, even);"
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"json\""
+        "content": "          }"
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "-"
         },
-        "content": "      );"
+        "content": "        },"
       },
       {
         "lineNumber": 439,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "        \"json\""
       },
       {
         "lineNumber": 440,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      );"
       },
       {
         "lineNumber": 441,
         "author": {
           "gitId": "-"
         },
-        "content": "    var tdIndex \u003d tr.insertCell(tr.cells.length);"
+        "content": "    });"
       },
       {
         "lineNumber": 442,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (theProject.rowModel.mode \u003d\u003d \"record-based\") {"
+        "content": ""
       },
       {
         "lineNumber": 443,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (\"j\" in row) {"
+        "content": "    var tdIndex \u003d tr.insertCell(tr.cells.length);"
       },
       {
         "lineNumber": 444,
         "author": {
           "gitId": "-"
         },
-        "content": "        $(tr).addClass(\"record\");"
+        "content": "    if (theProject.rowModel.mode \u003d\u003d \"record-based\") {"
       },
       {
         "lineNumber": 445,
         "author": {
           "gitId": "-"
         },
-        "content": "        $(\u0027\u003cdiv\u003e\u003c/div\u003e\u0027).html((row.j + 1) + \".\").appendTo(tdIndex);"
+        "content": "      if (\"j\" in row) {"
       },
       {
         "lineNumber": 446,
         "author": {
           "gitId": "-"
         },
-        "content": "      } else {"
+        "content": "        $(tr).addClass(\"record\");"
       },
       {
         "lineNumber": 447,
         "author": {
           "gitId": "-"
         },
-        "content": "        $(\u0027\u003cdiv\u003e\u003c/div\u003e\u0027).html(\"\u0026nbsp;\").appendTo(tdIndex);"
+        "content": "        var div \u003d document.createElement(\u0027div\u0027);"
       },
       {
         "lineNumber": 448,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "        div.innerHTML \u003d (row.j + 1) + \u0027.\u0027;"
       },
       {
         "lineNumber": 449,
         "author": {
           "gitId": "-"
         },
-        "content": "    } else {"
+        "content": "        tdIndex.appendChild(div);"
       },
       {
         "lineNumber": 450,
         "author": {
           "gitId": "-"
         },
-        "content": "      $(\u0027\u003cdiv\u003e\u003c/div\u003e\u0027).html((row.i + 1) + \".\").appendTo(tdIndex);"
+        "content": "      } else {"
       },
       {
         "lineNumber": 451,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        var div \u003d document.createElement(\u0027div\u0027);"
       },
       {
         "lineNumber": 452,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        div.innerHTML \u003d \u0027\\u00A0\u0027;"
       },
       {
         "lineNumber": 453,
         "author": {
           "gitId": "-"
         },
-        "content": "    $(tr).addClass(even ? \"even\" : \"odd\");"
+        "content": "        tdIndex.appendChild(div);"
       },
       {
         "lineNumber": 454,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 455,
         "author": {
           "gitId": "-"
         },
-        "content": "    for (var i \u003d 0; i \u003c columns.length; i++) {"
+        "content": "    } else {"
       },
       {
         "lineNumber": 456,
         "author": {
           "gitId": "-"
         },
-        "content": "      var column \u003d columns[i];"
+        "content": "      var div \u003d document.createElement(\u0027div\u0027);"
       },
       {
         "lineNumber": 457,
         "author": {
           "gitId": "-"
         },
-        "content": "      var td \u003d tr.insertCell(tr.cells.length);"
+        "content": "      div.innerHTML \u003d (row.i + 1) + \u0027.\u0027;"
       },
       {
         "lineNumber": 458,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (self._collapsedColumnNames.hasOwnProperty(column.name)) {"
+        "content": "      tdIndex.appendChild(div);"
       },
       {
         "lineNumber": 459,
         "author": {
           "gitId": "-"
         },
-        "content": "        td.innerHTML \u003d \"\u0026nbsp;\";"
+        "content": "    }"
       },
       {
         "lineNumber": 460,
         "author": {
           "gitId": "-"
         },
-        "content": "      } else {"
+        "content": ""
       },
       {
         "lineNumber": 461,
         "author": {
           "gitId": "-"
         },
-        "content": "        var cell \u003d (column.cellIndex \u003c cells.length) ? cells[column.cellIndex] : null;"
+        "content": "    $(tr).addClass(even ? \"even\" : \"odd\");"
       },
       {
         "lineNumber": 462,
         "author": {
           "gitId": "-"
         },
-        "content": "        new DataTableCellUI(self, cell, row.i, column.cellIndex, td);"
+        "content": ""
       },
       {
         "lineNumber": 463,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    for (var i \u003d 0; i \u003c columns.length; i++) {"
       },
       {
         "lineNumber": 464,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      var column \u003d columns[i];"
       },
       {
         "lineNumber": 465,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "      var td \u003d tr.insertCell(tr.cells.length);"
       },
       {
         "lineNumber": 466,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      if (self._collapsedColumnNames.hasOwnProperty(column.name)) {"
       },
       {
         "lineNumber": 467,
         "author": {
           "gitId": "-"
         },
-        "content": "  var even \u003d true;"
+        "content": "        td.innerHTML \u003d \"\u0026nbsp;\";"
       },
       {
         "lineNumber": 468,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var r \u003d 0; r \u003c rows.length; r++) {"
+        "content": "      } else {"
       },
       {
         "lineNumber": 469,
         "author": {
           "gitId": "-"
         },
-        "content": "    var row \u003d rows[r];"
+        "content": "        var cell \u003d (column.cellIndex \u003c cells.length) ? cells[column.cellIndex] : null;"
       },
       {
         "lineNumber": 470,
         "author": {
           "gitId": "-"
         },
-        "content": "    var tr \u003d table.insertRow(table.rows.length);"
+        "content": "        new DataTableCellUI(self, cell, row.i, column.cellIndex, td);"
       },
       {
         "lineNumber": 471,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (theProject.rowModel.mode \u003d\u003d \"row-based\" || \"j\" in row) {"
+        "content": "      }"
       },
       {
         "lineNumber": 472,
         "author": {
           "gitId": "-"
         },
-        "content": "      even \u003d !even;"
+        "content": "    }"
       },
       {
         "lineNumber": 473,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  };"
       },
       {
         "lineNumber": 474,
         "author": {
           "gitId": "-"
         },
-        "content": "    renderRow(tr, r, row, even);"
+        "content": ""
       },
       {
         "lineNumber": 475,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  var even \u003d true;"
       },
       {
         "lineNumber": 476,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "  for (var r \u003d 0; r \u003c rows.length; r++) {"
       },
       {
         "lineNumber": 477,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    var row \u003d rows[r];"
       },
       {
         "lineNumber": 478,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._showRows \u003d function(start, onDone) {"
+        "content": "    var tr \u003d table.insertRow(table.rows.length);"
       },
       {
         "lineNumber": 479,
         "author": {
           "gitId": "-"
         },
-        "content": "  var self \u003d this;"
+        "content": "    if (theProject.rowModel.mode \u003d\u003d \"row-based\" || \"j\" in row) {"
       },
       {
         "lineNumber": 480,
         "author": {
           "gitId": "-"
         },
-        "content": "  Refine.fetchRows(start, this._pageSize, function() {"
+        "content": "      even \u003d !even;"
       },
       {
         "lineNumber": 481,
         "author": {
           "gitId": "-"
         },
-        "content": "    self.render();"
+        "content": "    }"
       },
       {
         "lineNumber": 482,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    renderRow(tr, r, row, even);"
       },
       {
         "lineNumber": 483,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (onDone) {"
+        "content": "  }"
       },
       {
         "lineNumber": 484,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDone();"
+        "content": "};"
       },
       {
         "lineNumber": 485,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 486,
         "author": {
           "gitId": "-"
         },
-        "content": "  }, this._sorting);"
+        "content": "DataTableView.prototype._showRows \u003d function(start, onDone) {"
       },
       {
         "lineNumber": 487,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "  var self \u003d this;"
       },
       {
         "lineNumber": 488,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  Refine.fetchRows(start, this._pageSize, function() {"
       },
       {
         "lineNumber": 489,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._onChangeGotoPage \u003d function(elmt, evt) {"
+        "content": "    self.render();"
       },
       {
         "lineNumber": 490,
         "author": {
           "gitId": "-"
         },
-        "content": "  var gotoPageNumber \u003d parseInt($(\u0027input#viewpanel-paging-current-input\u0027).val());"
+        "content": ""
       },
       {
         "lineNumber": 491,
         "author": {
           "gitId": "-"
         },
-        "content": "  "
+        "content": "    if (onDone) {"
       },
       {
         "lineNumber": 492,
         "author": {
           "gitId": "-"
         },
-        "content": "  if(typeof gotoPageNumber !\u003d \"number\" || isNaN(gotoPageNumber) || gotoPageNumber \u003d\u003d \"\") { "
+        "content": "      onDone();"
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": "    $(\u0027input#viewpanel-paging-current-input\u0027).val(this._currentPageNumber); "
+        "content": "    }"
       },
       {
         "lineNumber": 494,
         "author": {
           "gitId": "-"
         },
-        "content": "    return;"
+        "content": "  }, this._sorting);"
       },
       {
         "lineNumber": 495,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "};"
       },
       {
         "lineNumber": 496,
         "author": {
           "gitId": "-"
         },
-        "content": "  "
+        "content": ""
       },
       {
         "lineNumber": 497,
         "author": {
           "gitId": "-"
         },
-        "content": "  if(gotoPageNumber \u003e this._lastPageNumber) gotoPageNumber \u003d this._lastPageNumber;"
+        "content": "DataTableView.prototype._onChangeGotoPage \u003d function(elmt, evt) {"
       },
       {
         "lineNumber": 498,
         "author": {
           "gitId": "-"
         },
-        "content": "  if(gotoPageNumber \u003c 1) gotoPageNumber \u003d 1;"
+        "content": "  var gotoPageNumber \u003d parseInt($(\u0027input#viewpanel-paging-current-input\u0027).val());"
       },
       {
         "lineNumber": 499,
@@ -21128,2065 +21128,2065 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  this._currentPageNumber \u003d gotoPageNumber;"
+        "content": "  if(typeof gotoPageNumber !\u003d \"number\" || isNaN(gotoPageNumber) || gotoPageNumber \u003d\u003d \"\") { "
       },
       {
         "lineNumber": 501,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._showRows((gotoPageNumber - 1) * this._pageSize);"
+        "content": "    $(\u0027input#viewpanel-paging-current-input\u0027).val(this._currentPageNumber); "
       },
       {
         "lineNumber": 502,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    return;"
       },
       {
         "lineNumber": 503,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 504,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._onKeyDownGotoPage \u003d function(elmt, evt) {"
+        "content": "  "
       },
       {
         "lineNumber": 505,
         "author": {
           "gitId": "-"
         },
-        "content": "  var keyDownCode \u003d event.which;"
+        "content": "  if(gotoPageNumber \u003e this._lastPageNumber) gotoPageNumber \u003d this._lastPageNumber;"
       },
       {
         "lineNumber": 506,
         "author": {
           "gitId": "-"
         },
-        "content": "  "
+        "content": "  if(gotoPageNumber \u003c 1) gotoPageNumber \u003d 1;"
       },
       {
         "lineNumber": 507,
         "author": {
           "gitId": "-"
         },
-        "content": "  if([38, 40].indexOf(keyDownCode) \u003d\u003d -1) return;"
+        "content": "  "
       },
       {
         "lineNumber": 508,
         "author": {
           "gitId": "-"
         },
-        "content": "  if(self._refocusPageInput \u003d\u003d true) return; "
+        "content": "  this._currentPageNumber \u003d gotoPageNumber;"
       },
       {
         "lineNumber": 509,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  this._showRows((gotoPageNumber - 1) * this._pageSize);"
       },
       {
         "lineNumber": 510,
         "author": {
           "gitId": "-"
         },
-        "content": "  evt.preventDefault();"
+        "content": "};"
       },
       {
         "lineNumber": 511,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._refocusPageInput \u003d true;"
+        "content": ""
       },
       {
         "lineNumber": 512,
         "author": {
           "gitId": "-"
         },
-        "content": "  "
+        "content": "DataTableView.prototype._onKeyDownGotoPage \u003d function(elmt, evt) {"
       },
       {
         "lineNumber": 513,
         "author": {
           "gitId": "-"
         },
-        "content": "  var newPageValue \u003d $(\u0027input#viewpanel-paging-current-input\u0027)[0].value;"
+        "content": "  var keyDownCode \u003d event.which;"
       },
       {
         "lineNumber": 514,
         "author": {
           "gitId": "-"
         },
-        "content": "  if(keyDownCode \u003d\u003d 38) {  // Up arrow"
+        "content": "  "
       },
       {
         "lineNumber": 515,
         "author": {
           "gitId": "-"
         },
-        "content": "    if(newPageValue \u003c\u003d 1) return;"
+        "content": "  if([38, 40].indexOf(keyDownCode) \u003d\u003d -1) return;"
       },
       {
         "lineNumber": 516,
         "author": {
           "gitId": "-"
         },
-        "content": "    this._onClickPreviousPage(elmt, evt);"
+        "content": "  if(self._refocusPageInput \u003d\u003d true) return; "
       },
       {
         "lineNumber": 517,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 518,
         "author": {
           "gitId": "-"
         },
-        "content": "    "
+        "content": "  evt.preventDefault();"
       },
       {
         "lineNumber": 519,
         "author": {
           "gitId": "-"
         },
-        "content": "  if(keyDownCode \u003d\u003d 40) {  // Down arrow"
+        "content": "  this._refocusPageInput \u003d true;"
       },
       {
         "lineNumber": 520,
         "author": {
           "gitId": "-"
         },
-        "content": "    if(newPageValue \u003e\u003d this._lastPageNumber) return;"
+        "content": "  "
       },
       {
         "lineNumber": 521,
         "author": {
           "gitId": "-"
         },
-        "content": "    this._onClickNextPage(elmt, evt);"
+        "content": "  var newPageValue \u003d $(\u0027input#viewpanel-paging-current-input\u0027)[0].value;"
       },
       {
         "lineNumber": 522,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  if(keyDownCode \u003d\u003d 38) {  // Up arrow"
       },
       {
         "lineNumber": 523,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    if(newPageValue \u003c\u003d 1) return;"
       },
       {
         "lineNumber": 524,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    this._onClickPreviousPage(elmt, evt);"
       },
       {
         "lineNumber": 525,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._onClickPreviousPage \u003d function(elmt, evt) {"
+        "content": "  }"
       },
       {
         "lineNumber": 526,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._currentPageNumber--;"
+        "content": "    "
       },
       {
         "lineNumber": 527,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._showRows(theProject.rowModel.start - this._pageSize);"
+        "content": "  if(keyDownCode \u003d\u003d 40) {  // Down arrow"
       },
       {
         "lineNumber": 528,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    if(newPageValue \u003e\u003d this._lastPageNumber) return;"
       },
       {
         "lineNumber": 529,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    this._onClickNextPage(elmt, evt);"
       },
       {
         "lineNumber": 530,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._onClickNextPage \u003d function(elmt, evt) {"
+        "content": "  }"
       },
       {
         "lineNumber": 531,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._currentPageNumber++;"
+        "content": "};"
       },
       {
         "lineNumber": 532,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._showRows(theProject.rowModel.start + this._pageSize);"
+        "content": ""
       },
       {
         "lineNumber": 533,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "DataTableView.prototype._onClickPreviousPage \u003d function(elmt, evt) {"
       },
       {
         "lineNumber": 534,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  this._currentPageNumber--;"
       },
       {
         "lineNumber": 535,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._onClickFirstPage \u003d function(elmt, evt) {"
+        "content": "  this._showRows(theProject.rowModel.start - this._pageSize);"
       },
       {
         "lineNumber": 536,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._currentPageNumber \u003d 1;"
+        "content": "};"
       },
       {
         "lineNumber": 537,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._showRows(0);"
+        "content": ""
       },
       {
         "lineNumber": 538,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "DataTableView.prototype._onClickNextPage \u003d function(elmt, evt) {"
       },
       {
         "lineNumber": 539,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  this._currentPageNumber++;"
       },
       {
         "lineNumber": 540,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._onClickLastPage \u003d function(elmt, evt) {"
+        "content": "  this._showRows(theProject.rowModel.start + this._pageSize);"
       },
       {
         "lineNumber": 541,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._currentPageNumber \u003d this._lastPageNumber;"
+        "content": "};"
       },
       {
         "lineNumber": 542,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._showRows((this._lastPageNumber - 1) * this._pageSize);"
+        "content": ""
       },
       {
         "lineNumber": 543,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "DataTableView.prototype._onClickFirstPage \u003d function(elmt, evt) {"
       },
       {
         "lineNumber": 544,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  this._currentPageNumber \u003d 1;"
       },
       {
         "lineNumber": 545,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._getSortingCriteriaCount \u003d function() {"
+        "content": "  this._showRows(0);"
       },
       {
         "lineNumber": 546,
         "author": {
           "gitId": "-"
         },
-        "content": "  return this._sorting.criteria.length;"
+        "content": "};"
       },
       {
         "lineNumber": 547,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": ""
       },
       {
         "lineNumber": 548,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "DataTableView.prototype._onClickLastPage \u003d function(elmt, evt) {"
       },
       {
         "lineNumber": 549,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._sortedByColumn \u003d function(columnName) {"
+        "content": "  this._currentPageNumber \u003d this._lastPageNumber;"
       },
       {
         "lineNumber": 550,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
+        "content": "  this._showRows((this._lastPageNumber - 1) * this._pageSize);"
       },
       {
         "lineNumber": 551,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (this._sorting.criteria[i].column \u003d\u003d columnName) {"
+        "content": "};"
       },
       {
         "lineNumber": 552,
         "author": {
           "gitId": "-"
         },
-        "content": "      return true;"
+        "content": ""
       },
       {
         "lineNumber": 553,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "DataTableView.prototype._getSortingCriteriaCount \u003d function() {"
       },
       {
         "lineNumber": 554,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  return this._sorting.criteria.length;"
       },
       {
         "lineNumber": 555,
         "author": {
           "gitId": "-"
         },
-        "content": "  return false;"
+        "content": "};"
       },
       {
         "lineNumber": 556,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": ""
       },
       {
         "lineNumber": 557,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "DataTableView.prototype._sortedByColumn \u003d function(columnName) {"
       },
       {
         "lineNumber": 558,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._getSortingCriterionForColumn \u003d function(columnName) {"
+        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
       },
       {
         "lineNumber": 559,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
+        "content": "    if (this._sorting.criteria[i].column \u003d\u003d columnName) {"
       },
       {
         "lineNumber": 560,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (this._sorting.criteria[i].column \u003d\u003d columnName) {"
+        "content": "      return true;"
       },
       {
         "lineNumber": 561,
         "author": {
           "gitId": "-"
         },
-        "content": "      return this._sorting.criteria[i];"
+        "content": "    }"
       },
       {
         "lineNumber": 562,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  }"
       },
       {
         "lineNumber": 563,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  return false;"
       },
       {
         "lineNumber": 564,
         "author": {
           "gitId": "-"
         },
-        "content": "  return null;"
+        "content": "};"
       },
       {
         "lineNumber": 565,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": ""
       },
       {
         "lineNumber": 566,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "DataTableView.prototype._getSortingCriterionForColumn \u003d function(columnName) {"
       },
       {
         "lineNumber": 567,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._removeSortingCriterionOfColumn \u003d function(columnName) {"
+        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
       },
       {
         "lineNumber": 568,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
+        "content": "    if (this._sorting.criteria[i].column \u003d\u003d columnName) {"
       },
       {
         "lineNumber": 569,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (this._sorting.criteria[i].column \u003d\u003d columnName) {"
+        "content": "      return this._sorting.criteria[i];"
       },
       {
         "lineNumber": 570,
         "author": {
           "gitId": "-"
         },
-        "content": "      this._sorting.criteria.splice(i, 1);"
+        "content": "    }"
       },
       {
         "lineNumber": 571,
         "author": {
           "gitId": "-"
         },
-        "content": "      break;"
+        "content": "  }"
       },
       {
         "lineNumber": 572,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  return null;"
       },
       {
         "lineNumber": 573,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "};"
       },
       {
         "lineNumber": 574,
         "author": {
           "gitId": "-"
         },
-        "content": "  this.update();"
+        "content": ""
       },
       {
         "lineNumber": 575,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "DataTableView.prototype._removeSortingCriterionOfColumn \u003d function(columnName) {"
       },
       {
         "lineNumber": 576,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
       },
       {
         "lineNumber": 577,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._addSortingCriterion \u003d function(criterion, alone) {"
+        "content": "    if (this._sorting.criteria[i].column \u003d\u003d columnName) {"
       },
       {
         "lineNumber": 578,
         "author": {
           "gitId": "-"
         },
-        "content": "  if (alone) {"
+        "content": "      this._sorting.criteria.splice(i, 1);"
       },
       {
         "lineNumber": 579,
         "author": {
           "gitId": "-"
         },
-        "content": "    this._sorting.criteria \u003d [];"
+        "content": "      break;"
       },
       {
         "lineNumber": 580,
         "author": {
           "gitId": "-"
         },
-        "content": "  } else {"
+        "content": "    }"
       },
       {
         "lineNumber": 581,
         "author": {
           "gitId": "-"
         },
-        "content": "    for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
+        "content": "  }"
       },
       {
         "lineNumber": 582,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (this._sorting.criteria[i].column \u003d\u003d criterion.column) {"
+        "content": "  this.update();"
       },
       {
         "lineNumber": 583,
         "author": {
           "gitId": "-"
         },
-        "content": "        this._sorting.criteria[i] \u003d criterion;"
+        "content": "};"
       },
       {
         "lineNumber": 584,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.update();"
+        "content": ""
       },
       {
         "lineNumber": 585,
         "author": {
           "gitId": "-"
         },
-        "content": "        return;"
+        "content": "DataTableView.prototype._addSortingCriterion \u003d function(criterion, alone) {"
       },
       {
         "lineNumber": 586,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "  if (alone) {"
       },
       {
         "lineNumber": 587,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    this._sorting.criteria \u003d [];"
       },
       {
         "lineNumber": 588,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  } else {"
       },
       {
         "lineNumber": 589,
         "author": {
           "gitId": "-"
         },
-        "content": "  this._sorting.criteria.push(criterion);"
+        "content": "    for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
       },
       {
         "lineNumber": 590,
         "author": {
           "gitId": "-"
         },
-        "content": "  this.update();"
+        "content": "      if (this._sorting.criteria[i].column \u003d\u003d criterion.column) {"
       },
       {
         "lineNumber": 591,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "        this._sorting.criteria[i] \u003d criterion;"
       },
       {
         "lineNumber": 592,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        this.update();"
       },
       {
         "lineNumber": 593,
         "author": {
           "gitId": "-"
         },
-        "content": "/** below can be move to seperate file **/"
+        "content": "        return;"
       },
       {
         "lineNumber": 594,
         "author": {
           "gitId": "-"
         },
-        "content": "  var doTextTransformPrompt \u003d function() {"
+        "content": "      }"
       },
       {
         "lineNumber": 595,
         "author": {
           "gitId": "-"
         },
-        "content": "    var frame \u003d $("
+        "content": "    }"
       },
       {
         "lineNumber": 596,
         "author": {
           "gitId": "-"
         },
-        "content": "        DOM.loadHTML(\"core\", \"scripts/views/data-table/text-transform-dialog.html\")"
+        "content": "  }"
       },
       {
         "lineNumber": 597,
         "author": {
           "gitId": "-"
         },
-        "content": "        .replace(\"$EXPRESSION_PREVIEW_WIDGET$\", ExpressionPreviewDialog.generateWidgetHtml()));"
+        "content": "  this._sorting.criteria.push(criterion);"
       },
       {
         "lineNumber": 598,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  this.update();"
       },
       {
         "lineNumber": 599,
         "author": {
           "gitId": "-"
         },
-        "content": "    var elmts \u003d DOM.bind(frame);"
+        "content": "};"
       },
       {
         "lineNumber": 600,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.or_views_errorOn.text($.i18n(\u0027core-views/on-error\u0027));"
+        "content": ""
       },
       {
         "lineNumber": 601,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.or_views_keepOr.text($.i18n(\u0027core-views/keep-or\u0027));"
+        "content": "/** below can be move to seperate file **/"
       },
       {
         "lineNumber": 602,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.or_views_setBlank.text($.i18n(\u0027core-views/set-blank\u0027));"
+        "content": "  var doTextTransformPrompt \u003d function() {"
       },
       {
         "lineNumber": 603,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.or_views_storeErr.text($.i18n(\u0027core-views/store-err\u0027));"
+        "content": "    var frame \u003d $("
       },
       {
         "lineNumber": 604,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.or_views_reTrans.text($.i18n(\u0027core-views/re-trans\u0027));"
+        "content": "        DOM.loadHTML(\"core\", \"scripts/views/data-table/text-transform-dialog.html\")"
       },
       {
         "lineNumber": 605,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.or_views_timesChang.text($.i18n(\u0027core-views/times-chang\u0027));"
+        "content": "        .replace(\"$EXPRESSION_PREVIEW_WIDGET$\", ExpressionPreviewDialog.generateWidgetHtml()));"
       },
       {
         "lineNumber": 606,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.okButton.html($.i18n(\u0027core-buttons/ok\u0027));"
+        "content": ""
       },
       {
         "lineNumber": 607,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.cancelButton.text($.i18n(\u0027core-buttons/cancel\u0027));    "
+        "content": "    var elmts \u003d DOM.bind(frame);"
       },
       {
         "lineNumber": 608,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    elmts.or_views_errorOn.text($.i18n(\u0027core-views/on-error\u0027));"
       },
       {
         "lineNumber": 609,
         "author": {
           "gitId": "-"
         },
-        "content": "    var level \u003d DialogSystem.showDialog(frame);"
+        "content": "    elmts.or_views_keepOr.text($.i18n(\u0027core-views/keep-or\u0027));"
       },
       {
         "lineNumber": 610,
         "author": {
           "gitId": "-"
         },
-        "content": "    var dismiss \u003d function() { DialogSystem.dismissUntil(level - 1); };"
+        "content": "    elmts.or_views_setBlank.text($.i18n(\u0027core-views/set-blank\u0027));"
       },
       {
         "lineNumber": 611,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    elmts.or_views_storeErr.text($.i18n(\u0027core-views/store-err\u0027));"
       },
       {
         "lineNumber": 612,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.cancelButton.click(dismiss);"
+        "content": "    elmts.or_views_reTrans.text($.i18n(\u0027core-views/re-trans\u0027));"
       },
       {
         "lineNumber": 613,
         "author": {
           "gitId": "-"
         },
-        "content": "    elmts.okButton.click(function() {"
+        "content": "    elmts.or_views_timesChang.text($.i18n(\u0027core-views/times-chang\u0027));"
       },
       {
         "lineNumber": 614,
         "author": {
           "gitId": "-"
         },
-        "content": "        new ExpressionColumnDialog("
+        "content": "    elmts.okButton.html($.i18n(\u0027core-buttons/ok\u0027));"
       },
       {
         "lineNumber": 615,
         "author": {
           "gitId": "-"
         },
-        "content": "                previewWidget.getExpression(true),"
+        "content": "    elmts.cancelButton.text($.i18n(\u0027core-buttons/cancel\u0027));    "
       },
       {
         "lineNumber": 616,
         "author": {
           "gitId": "-"
         },
-        "content": "                $(\u0027input[name\u003d\"text-transform-dialog-onerror-choice\"]:checked\u0027)[0].value,"
+        "content": ""
       },
       {
         "lineNumber": 617,
         "author": {
           "gitId": "-"
         },
-        "content": "                elmts.repeatCheckbox[0].checked,"
+        "content": "    var level \u003d DialogSystem.showDialog(frame);"
       },
       {
         "lineNumber": 618,
         "author": {
           "gitId": "-"
         },
-        "content": "                elmts.repeatCountInput[0].value"
+        "content": "    var dismiss \u003d function() { DialogSystem.dismissUntil(level - 1); };"
       },
       {
         "lineNumber": 619,
         "author": {
           "gitId": "-"
         },
-        "content": "        );"
+        "content": ""
       },
       {
         "lineNumber": 620,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "    elmts.cancelButton.click(dismiss);"
       },
       {
         "lineNumber": 621,
         "author": {
           "gitId": "-"
         },
-        "content": "    "
+        "content": "    elmts.okButton.click(function() {"
       },
       {
         "lineNumber": 622,
         "author": {
           "gitId": "-"
         },
-        "content": "    var previewWidget \u003d new ExpressionPreviewDialog.Widget("
+        "content": "        new ExpressionColumnDialog("
       },
       {
         "lineNumber": 623,
         "author": {
           "gitId": "-"
         },
-        "content": "      elmts,"
+        "content": "                previewWidget.getExpression(true),"
       },
       {
         "lineNumber": 624,
         "author": {
           "gitId": "-"
         },
-        "content": "      -1,"
+        "content": "                $(\u0027input[name\u003d\"text-transform-dialog-onerror-choice\"]:checked\u0027)[0].value,"
       },
       {
         "lineNumber": 625,
         "author": {
           "gitId": "-"
         },
-        "content": "      [],"
+        "content": "                elmts.repeatCheckbox[0].checked,"
       },
       {
         "lineNumber": 626,
         "author": {
           "gitId": "-"
         },
-        "content": "      [],"
+        "content": "                elmts.repeatCountInput[0].value"
       },
       {
         "lineNumber": 627,
         "author": {
           "gitId": "-"
         },
-        "content": "      null"
+        "content": "        );"
       },
       {
         "lineNumber": 628,
         "author": {
           "gitId": "-"
         },
-        "content": "    );"
+        "content": "    });"
       },
       {
         "lineNumber": 629,
         "author": {
           "gitId": "-"
         },
-        "content": "    previewWidget._prepareUpdate \u003d function(params) {"
+        "content": "    "
       },
       {
         "lineNumber": 630,
         "author": {
           "gitId": "-"
         },
-        "content": "      params.repeat \u003d elmts.repeatCheckbox[0].checked;"
+        "content": "    var previewWidget \u003d new ExpressionPreviewDialog.Widget("
       },
       {
         "lineNumber": 631,
         "author": {
           "gitId": "-"
         },
-        "content": "      params.repeatCount \u003d elmts.repeatCountInput[0].value;"
+        "content": "      elmts,"
       },
       {
         "lineNumber": 632,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      -1,"
       },
       {
         "lineNumber": 633,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "      [],"
       },
       {
         "lineNumber": 634,
         "author": {
           "gitId": "-"
         },
-        "content": "  /** above can be move to seperate file **/"
+        "content": "      [],"
       },
       {
         "lineNumber": 635,
         "author": {
           "gitId": "-"
         },
-        "content": "  "
+        "content": "      null"
       },
       {
         "lineNumber": 636,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._createMenuForAllColumns \u003d function(elmt) {"
+        "content": "    );"
       },
       {
         "lineNumber": 637,
         "author": {
           "gitId": "-"
         },
-        "content": "  var self \u003d this;"
+        "content": "    previewWidget._prepareUpdate \u003d function(params) {"
       },
       {
         "lineNumber": 638,
         "author": {
           "gitId": "-"
         },
-        "content": "  var menu \u003d ["
+        "content": "      params.repeat \u003d elmts.repeatCheckbox[0].checked;"
       },
       {
         "lineNumber": 639,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "      params.repeatCount \u003d elmts.repeatCountInput[0].value;"
       },
       {
         "lineNumber": 640,
         "author": {
           "gitId": "-"
         },
-        "content": "            label: $.i18n(\u0027core-views/transform\u0027),"
+        "content": "    };"
       },
       {
         "lineNumber": 641,
         "author": {
           "gitId": "-"
         },
-        "content": "            id: \"core/facets\","
+        "content": "  };"
       },
       {
         "lineNumber": 642,
         "author": {
           "gitId": "-"
         },
-        "content": "            width: \"200px\","
+        "content": "  /** above can be move to seperate file **/"
       },
       {
         "lineNumber": 643,
         "author": {
           "gitId": "-"
         },
-        "content": "            click: function() {"
+        "content": "  "
       },
       {
         "lineNumber": 644,
         "author": {
           "gitId": "-"
         },
-        "content": "                   doTextTransformPrompt();"
+        "content": "DataTableView.prototype._createMenuForAllColumns \u003d function(elmt) {"
       },
       {
         "lineNumber": 645,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "  var self \u003d this;"
       },
       {
         "lineNumber": 646,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "  var menu \u003d ["
       },
       {
         "lineNumber": 647,
         "author": {
           "gitId": "-"
         },
-        "content": "    {},"
+        "content": "        {"
       },
       {
         "lineNumber": 648,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "            label: $.i18n(\u0027core-views/transform\u0027),"
       },
       {
         "lineNumber": 649,
         "author": {
           "gitId": "-"
         },
-        "content": "      label: $.i18n(\u0027core-views/facet\u0027),"
+        "content": "            id: \"core/facets\","
       },
       {
         "lineNumber": 650,
         "author": {
           "gitId": "-"
         },
-        "content": "      id: \"core/facets\","
+        "content": "            width: \"200px\","
       },
       {
         "lineNumber": 651,
         "author": {
           "gitId": "-"
         },
-        "content": "      width: \"200px\","
+        "content": "            click: function() {"
       },
       {
         "lineNumber": 652,
         "author": {
           "gitId": "-"
         },
-        "content": "      submenu: ["
+        "content": "                   doTextTransformPrompt();"
       },
       {
         "lineNumber": 653,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "            }"
       },
       {
         "lineNumber": 654,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/facet-star\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 655,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/facet-by-star\","
+        "content": "    {},"
       },
       {
         "lineNumber": 656,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "    {"
       },
       {
         "lineNumber": 657,
         "author": {
           "gitId": "-"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "      label: $.i18n(\u0027core-views/facet\u0027),"
       },
       {
         "lineNumber": 658,
         "author": {
           "gitId": "-"
         },
-        "content": "              \"list\", "
+        "content": "      id: \"core/facets\","
       },
       {
         "lineNumber": 659,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "      width: \"200px\","
       },
       {
         "lineNumber": 660,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"name\" : $.i18n(\u0027core-views/starred-rows\u0027),"
+        "content": "      submenu: ["
       },
       {
         "lineNumber": 661,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"columnName\" : \"\", "
+        "content": "        {"
       },
       {
         "lineNumber": 662,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"expression\" : \"row.starred\""
+        "content": "          label: $.i18n(\u0027core-views/facet-star\u0027),"
       },
       {
         "lineNumber": 663,
         "author": {
           "gitId": "-"
         },
-        "content": "              },"
+        "content": "          id: \"core/facet-by-star\","
       },
       {
         "lineNumber": 664,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 665,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 666,
         "author": {
           "gitId": "-"
         },
-        "content": "              }"
+        "content": "              \"list\", "
       },
       {
         "lineNumber": 667,
         "author": {
           "gitId": "-"
         },
-        "content": "            );"
+        "content": "              {"
       },
       {
         "lineNumber": 668,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "                \"name\" : $.i18n(\u0027core-views/starred-rows\u0027),"
       },
       {
         "lineNumber": 669,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "                \"columnName\" : \"\", "
       },
       {
         "lineNumber": 670,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "                \"expression\" : \"row.starred\""
       },
       {
         "lineNumber": 671,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/facet-flag\u0027),"
+        "content": "              },"
       },
       {
         "lineNumber": 672,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/facet-by-flag\","
+        "content": "              {"
       },
       {
         "lineNumber": 673,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "                \"scroll\" : false"
       },
       {
         "lineNumber": 674,
         "author": {
           "gitId": "-"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "              }"
       },
       {
         "lineNumber": 675,
         "author": {
           "gitId": "-"
         },
-        "content": "              \"list\", "
+        "content": "            );"
       },
       {
         "lineNumber": 676,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          }"
       },
       {
         "lineNumber": 677,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"name\" : $.i18n(\u0027core-views/flagged-rows\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 678,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"columnName\" : \"\", "
+        "content": "        {"
       },
       {
         "lineNumber": 679,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"expression\" : \"row.flagged\""
+        "content": "          label: $.i18n(\u0027core-views/facet-flag\u0027),"
       },
       {
         "lineNumber": 680,
         "author": {
           "gitId": "-"
         },
-        "content": "              },"
+        "content": "          id: \"core/facet-by-flag\","
       },
       {
         "lineNumber": 681,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 682,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 683,
         "author": {
           "gitId": "-"
         },
-        "content": "              }"
+        "content": "              \"list\", "
       },
       {
         "lineNumber": 684,
         "author": {
           "gitId": "-"
         },
-        "content": "            );"
+        "content": "              {"
       },
       {
         "lineNumber": 685,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "                \"name\" : $.i18n(\u0027core-views/flagged-rows\u0027),"
       },
       {
         "lineNumber": 686,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "                \"columnName\" : \"\", "
       },
       {
         "lineNumber": 687,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "                \"expression\" : \"row.flagged\""
       },
       {
         "lineNumber": 688,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/facet-blank\u0027),"
+        "content": "              },"
       },
       {
         "lineNumber": 689,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/facet-by-blank\","
+        "content": "              {"
       },
       {
         "lineNumber": 690,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "                \"scroll\" : false"
       },
       {
         "lineNumber": 691,
         "author": {
           "gitId": "-"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "              }"
       },
       {
         "lineNumber": 692,
         "author": {
           "gitId": "-"
         },
-        "content": "              \"list\", "
+        "content": "            );"
       },
       {
         "lineNumber": 693,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          }"
       },
       {
         "lineNumber": 694,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"name\" : $.i18n(\u0027core-views/blank-rows\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 695,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"columnName\" : \"\", "
+        "content": "        {"
       },
       {
         "lineNumber": 696,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"expression\" : \"(filter(row.columnNames,cn,isNonBlank(cells[cn].value)).length()\u003d\u003d0).toString()\""
+        "content": "          label: $.i18n(\u0027core-views/facet-blank\u0027),"
       },
       {
         "lineNumber": 697,
         "author": {
           "gitId": "-"
         },
-        "content": "              },"
+        "content": "          id: \"core/facet-by-blank\","
       },
       {
         "lineNumber": 698,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 699,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 700,
         "author": {
           "gitId": "-"
         },
-        "content": "              }"
+        "content": "              \"list\", "
       },
       {
         "lineNumber": 701,
         "author": {
           "gitId": "-"
         },
-        "content": "            );"
+        "content": "              {"
       },
       {
         "lineNumber": 702,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "                \"name\" : $.i18n(\u0027core-views/blank-rows\u0027),"
       },
       {
         "lineNumber": 703,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "                \"columnName\" : \"\", "
       },
       {
         "lineNumber": 704,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "        {"
+        "content": "                \"expression\" : \"(filter(row.columnNames,cn,isNonBlank(cells[cn].value)).length()\u003d\u003d0).toString()\""
       },
       {
         "lineNumber": 705,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/blank-values\u0027),"
+        "content": "              },"
       },
       {
         "lineNumber": 706,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "          id: \"core/blank-values\","
+        "content": "              {"
       },
       {
         "lineNumber": 707,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "                \"scroll\" : false"
       },
       {
         "lineNumber": 708,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "              }"
       },
       {
         "lineNumber": 709,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "                \"list\","
+        "content": "            );"
       },
       {
         "lineNumber": 710,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "                {"
+        "content": "          }"
       },
       {
         "lineNumber": 711,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "                  \"name\" : $.i18n(\u0027core-views/blank-values\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 712,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"columnName\" : \"\","
+        "content": "        {"
       },
       {
         "lineNumber": 713,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"expression\" : \"filter(row.columnNames,cn,isBlank(cells[cn].value))\""
+        "content": "          label: $.i18n(\u0027core-views/blank-values\u0027),"
       },
       {
         "lineNumber": 714,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                },"
+        "content": "          id: \"core/blank-values\","
       },
       {
         "lineNumber": 715,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 716,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 717,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                }"
+        "content": "                \"list\","
       },
       {
         "lineNumber": 718,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "            );"
+        "content": "                {"
       },
       {
         "lineNumber": 719,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          }"
+        "content": "                  \"name\" : $.i18n(\u0027core-views/blank-values\u0027),"
       },
       {
         "lineNumber": 720,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        },"
+        "content": "                  \"columnName\" : \"\","
       },
       {
         "lineNumber": 721,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        {"
+        "content": "                  \"expression\" : \"filter(row.columnNames,cn,isBlank(cells[cn].value))\""
       },
       {
         "lineNumber": 722,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          label: $.i18n(\u0027core-views/blank-records\u0027),"
+        "content": "                },"
       },
       {
         "lineNumber": 723,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          id: \"core/blank-records\","
+        "content": "                {"
       },
       {
         "lineNumber": 724,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          click: function() {"
+        "content": "                  \"scroll\" : false"
       },
       {
         "lineNumber": 725,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "                }"
       },
       {
         "lineNumber": 726,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                \"list\","
+        "content": "            );"
       },
       {
         "lineNumber": 727,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                {"
+        "content": "          }"
       },
       {
         "lineNumber": 728,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"name\" : $.i18n(\u0027core-views/blank-records\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 729,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"columnName\" : \"\","
+        "content": "        {"
       },
       {
         "lineNumber": 730,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"expression\" : \"filter(row.columnNames,cn,isBlank(if(row.record.fromRowIndex\u003d\u003drow.index,row.record.cells[cn].value.join(\\\"\\\"),true)))\""
+        "content": "          label: $.i18n(\u0027core-views/blank-records\u0027),"
       },
       {
         "lineNumber": 731,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                },"
+        "content": "          id: \"core/blank-records\","
       },
       {
         "lineNumber": 732,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 733,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                  \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 734,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "                }"
+        "content": "                \"list\","
       },
       {
         "lineNumber": 735,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "            );"
+        "content": "                {"
       },
       {
         "lineNumber": 736,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          }"
+        "content": "                  \"name\" : $.i18n(\u0027core-views/blank-records\u0027),"
       },
       {
         "lineNumber": 737,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        },"
+        "content": "                  \"columnName\" : \"\","
       },
       {
         "lineNumber": 738,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        {"
+        "content": "                  \"expression\" : \"filter(row.columnNames,cn,isBlank(if(row.record.fromRowIndex\u003d\u003drow.index,row.record.cells[cn].value.join(\\\"\\\"),true)))\""
       },
       {
         "lineNumber": 739,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          label: $.i18n(\u0027core-views/non-blank-values\u0027),"
+        "content": "                },"
       },
       {
         "lineNumber": 740,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          id: \"core/non-blank-values\","
+        "content": "                {"
       },
       {
         "lineNumber": 741,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          click: function() {"
+        "content": "                  \"scroll\" : false"
       },
       {
         "lineNumber": 742,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "                }"
       },
       {
         "lineNumber": 743,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "              \"list\", "
+        "content": "            );"
       },
       {
         "lineNumber": 744,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "              {"
+        "content": "          }"
       },
       {
         "lineNumber": 745,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "                \"name\" : $.i18n(\u0027core-views/non-blank-values\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 746,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"columnName\" : \"\", "
+        "content": "        {"
       },
       {
         "lineNumber": 747,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"expression\" : \"filter(row.columnNames,cn,isNonBlank(cells[cn].value))\""
+        "content": "          label: $.i18n(\u0027core-views/non-blank-values\u0027),"
       },
       {
         "lineNumber": 748,
         "author": {
           "gitId": "-"
         },
-        "content": "              },"
+        "content": "          id: \"core/non-blank-values\","
       },
       {
         "lineNumber": 749,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 750,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 751,
         "author": {
           "gitId": "-"
         },
-        "content": "              }"
+        "content": "              \"list\", "
       },
       {
         "lineNumber": 752,
         "author": {
           "gitId": "-"
         },
-        "content": "            );"
+        "content": "              {"
       },
       {
         "lineNumber": 753,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "                \"name\" : $.i18n(\u0027core-views/non-blank-values\u0027),"
       },
       {
         "lineNumber": 754,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "                \"columnName\" : \"\", "
       },
       {
         "lineNumber": 755,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "                \"expression\" : \"filter(row.columnNames,cn,isNonBlank(cells[cn].value))\""
       },
       {
         "lineNumber": 756,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/non-blank-records\u0027),"
+        "content": "              },"
       },
       {
         "lineNumber": 757,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/non-blank-records\","
+        "content": "              {"
       },
       {
         "lineNumber": 758,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "                \"scroll\" : false"
       },
       {
         "lineNumber": 759,
         "author": {
           "gitId": "-"
         },
-        "content": "            ui.browsingEngine.addFacet("
+        "content": "              }"
       },
       {
         "lineNumber": 760,
         "author": {
           "gitId": "-"
         },
-        "content": "              \"list\", "
+        "content": "            );"
       },
       {
         "lineNumber": 761,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          }"
       },
       {
         "lineNumber": 762,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"name\" : $.i18n(\u0027core-views/non-blank-records\u0027),"
+        "content": "        },"
       },
       {
         "lineNumber": 763,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"columnName\" : \"\", "
+        "content": "        {"
       },
       {
         "lineNumber": 764,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"expression\" : \"filter(row.columnNames,cn,isNonBlank(if(row.record.fromRowIndex\u003d\u003drow.index,row.record.cells[cn].value.join(\\\"\\\"),null)))\""
+        "content": "          label: $.i18n(\u0027core-views/non-blank-records\u0027),"
       },
       {
         "lineNumber": 765,
         "author": {
           "gitId": "-"
         },
-        "content": "              },"
+        "content": "          id: \"core/non-blank-records\","
       },
       {
         "lineNumber": 766,
         "author": {
           "gitId": "-"
         },
-        "content": "              {"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 767,
         "author": {
           "gitId": "-"
         },
-        "content": "                \"scroll\" : false"
+        "content": "            ui.browsingEngine.addFacet("
       },
       {
         "lineNumber": 768,
         "author": {
           "gitId": "-"
         },
-        "content": "              }"
+        "content": "              \"list\", "
       },
       {
         "lineNumber": 769,
         "author": {
           "gitId": "-"
         },
-        "content": "            );"
+        "content": "              {"
       },
       {
         "lineNumber": 770,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "                \"name\" : $.i18n(\u0027core-views/non-blank-records\u0027),"
       },
       {
         "lineNumber": 771,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "                \"columnName\" : \"\", "
       },
       {
         "lineNumber": 772,
         "author": {
           "gitId": "-"
         },
-        "content": "      ]"
+        "content": "                \"expression\" : \"filter(row.columnNames,cn,isNonBlank(if(row.record.fromRowIndex\u003d\u003drow.index,row.record.cells[cn].value.join(\\\"\\\"),null)))\""
       },
       {
         "lineNumber": 773,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "              },"
       },
       {
         "lineNumber": 774,
         "author": {
           "gitId": "-"
         },
-        "content": "    {},"
+        "content": "              {"
       },
       {
         "lineNumber": 775,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "                \"scroll\" : false"
       },
       {
         "lineNumber": 776,
         "author": {
           "gitId": "-"
         },
-        "content": "      label: $.i18n(\u0027core-views/edit-rows\u0027),"
+        "content": "              }"
       },
       {
         "lineNumber": 777,
         "author": {
           "gitId": "-"
         },
-        "content": "      id: \"core/edit-rows\","
+        "content": "            );"
       },
       {
         "lineNumber": 778,
         "author": {
           "gitId": "-"
         },
-        "content": "      width: \"200px\","
+        "content": "          }"
       },
       {
         "lineNumber": 779,
         "author": {
           "gitId": "-"
         },
-        "content": "      submenu: ["
+        "content": "        }"
       },
       {
         "lineNumber": 780,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "      ]"
       },
       {
         "lineNumber": 781,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/star-rows\u0027),"
+        "content": "    },"
       },
       {
         "lineNumber": 782,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/star-rows\","
+        "content": "    {},"
       },
       {
         "lineNumber": 783,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "    {"
       },
       {
         "lineNumber": 784,
         "author": {
           "gitId": "-"
         },
-        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"starred\" : \"true\" }, null, { rowMetadataChanged: true });"
+        "content": "      label: $.i18n(\u0027core-views/edit-rows\u0027),"
       },
       {
         "lineNumber": 785,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "      id: \"core/edit-rows\","
       },
       {
         "lineNumber": 786,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "      width: \"200px\","
       },
       {
         "lineNumber": 787,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "      submenu: ["
       },
       {
         "lineNumber": 788,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/unstar-rows\u0027),"
+        "content": "        {"
       },
       {
         "lineNumber": 789,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/unstar-rows\","
+        "content": "          label: $.i18n(\u0027core-views/star-rows\u0027),"
       },
       {
         "lineNumber": 790,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "          id: \"core/star-rows\","
       },
       {
         "lineNumber": 791,
         "author": {
           "gitId": "-"
         },
-        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"starred\" : \"false\" }, null, { rowMetadataChanged: true });"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 792,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"starred\" : \"true\" }, null, { rowMetadataChanged: true });"
       },
       {
         "lineNumber": 793,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "          }"
       },
       {
         "lineNumber": 794,
         "author": {
           "gitId": "-"
         },
-        "content": "        {},"
+        "content": "        },"
       },
       {
         "lineNumber": 795,
@@ -23200,14 +23200,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/flag-rows\u0027),"
+        "content": "          label: $.i18n(\u0027core-views/unstar-rows\u0027),"
       },
       {
         "lineNumber": 797,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/flag-rows\","
+        "content": "          id: \"core/unstar-rows\","
       },
       {
         "lineNumber": 798,
@@ -23221,7 +23221,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"flagged\" : \"true\" }, null, { rowMetadataChanged: true });"
+        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"starred\" : \"false\" }, null, { rowMetadataChanged: true });"
       },
       {
         "lineNumber": 800,
@@ -23242,56 +23242,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "        {},"
       },
       {
         "lineNumber": 803,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/unflag-rows\u0027),"
+        "content": "        {"
       },
       {
         "lineNumber": 804,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/unflag-rows\","
+        "content": "          label: $.i18n(\u0027core-views/flag-rows\u0027),"
       },
       {
         "lineNumber": 805,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "          id: \"core/flag-rows\","
       },
       {
         "lineNumber": 806,
         "author": {
           "gitId": "-"
         },
-        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"flagged\" : \"false\" }, null, { rowMetadataChanged: true });"
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 807,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"flagged\" : \"true\" }, null, { rowMetadataChanged: true });"
       },
       {
         "lineNumber": 808,
         "author": {
           "gitId": "-"
         },
-        "content": "        },"
+        "content": "          }"
       },
       {
         "lineNumber": 809,
         "author": {
           "gitId": "-"
         },
-        "content": "        {},"
+        "content": "        },"
       },
       {
         "lineNumber": 810,
@@ -23305,14 +23305,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/remove-matching\u0027),"
+        "content": "          label: $.i18n(\u0027core-views/unflag-rows\u0027),"
       },
       {
         "lineNumber": 812,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/remove-rows\","
+        "content": "          id: \"core/unflag-rows\","
       },
       {
         "lineNumber": 813,
@@ -23326,7 +23326,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            Refine.postCoreProcess(\"remove-rows\", {}, null, { rowMetadataChanged: true });"
+        "content": "            Refine.postCoreProcess(\"annotate-rows\", { \"flagged\" : \"false\" }, null, { rowMetadataChanged: true });"
       },
       {
         "lineNumber": 815,
@@ -23340,343 +23340,343 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        },"
       },
       {
         "lineNumber": 817,
         "author": {
           "gitId": "-"
         },
-        "content": "      ]"
+        "content": "        {},"
       },
       {
         "lineNumber": 818,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        {"
       },
       {
         "lineNumber": 819,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "          label: $.i18n(\u0027core-views/remove-matching\u0027),"
       },
       {
         "lineNumber": 820,
         "author": {
           "gitId": "-"
         },
-        "content": "      label: $.i18n(\u0027core-views/edit-col\u0027),"
+        "content": "          id: \"core/remove-rows\","
       },
       {
         "lineNumber": 821,
         "author": {
           "gitId": "-"
         },
-        "content": "      id: \"core/edit-columns\","
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 822,
         "author": {
           "gitId": "-"
         },
-        "content": "      width: \"200px\","
+        "content": "            Refine.postCoreProcess(\"remove-rows\", {}, null, { rowMetadataChanged: true });"
       },
       {
         "lineNumber": 823,
         "author": {
           "gitId": "-"
         },
-        "content": "      submenu: ["
+        "content": "          }"
       },
       {
         "lineNumber": 824,
         "author": {
           "gitId": "-"
         },
-        "content": "        {"
+        "content": "        }"
       },
       {
         "lineNumber": 825,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/reorder-remove\u0027)+\"...\","
+        "content": "      ]"
       },
       {
         "lineNumber": 826,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/reorder-columns\","
+        "content": "    },"
       },
       {
         "lineNumber": 827,
         "author": {
           "gitId": "-"
         },
-        "content": "          click: function() {"
+        "content": "    {"
       },
       {
         "lineNumber": 828,
         "author": {
           "gitId": "-"
         },
-        "content": "            new ColumnReorderingDialog();"
+        "content": "      label: $.i18n(\u0027core-views/edit-col\u0027),"
       },
       {
         "lineNumber": 829,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "      id: \"core/edit-columns\","
       },
       {
         "lineNumber": 830,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "        },"
-      },
-      {
-        "lineNumber": 831,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "        {},"
-      },
-      {
-        "lineNumber": 832,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "        {"
-      },
-      {
-        "lineNumber": 833,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "          label: $.i18n(\u0027core-views/fill-down\u0027),"
-      },
-      {
-        "lineNumber": 834,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "          id: \"core/fill-down\","
-      },
-      {
-        "lineNumber": 835,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "          click: doAllFillDown"
-      },
-      {
-        "lineNumber": 836,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "        },"
-      },
-      {
-        "lineNumber": 837,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "        {"
-      },
-      {
-        "lineNumber": 838,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "          label: $.i18n(\u0027core-views/blank-down\u0027),"
-      },
-      {
-        "lineNumber": 839,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "          id: \"core/blank-down\","
-      },
-      {
-        "lineNumber": 840,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "          click: doAllBlankDown"
-      },
-      {
-        "lineNumber": 841,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 842,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      ]"
-      },
-      {
-        "lineNumber": 843,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    },"
-      },
-      {
-        "lineNumber": 844,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    {},"
-      },
-      {
-        "lineNumber": 845,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    {"
-      },
-      {
-        "lineNumber": 846,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      label: $.i18n(\u0027core-views/view\u0027),"
-      },
-      {
-        "lineNumber": 847,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      id: \"core/view\","
-      },
-      {
-        "lineNumber": 848,
         "author": {
           "gitId": "-"
         },
         "content": "      width: \"200px\","
       },
       {
-        "lineNumber": 849,
+        "lineNumber": 831,
         "author": {
           "gitId": "-"
         },
         "content": "      submenu: ["
       },
       {
-        "lineNumber": 850,
+        "lineNumber": 832,
         "author": {
           "gitId": "-"
         },
         "content": "        {"
       },
       {
-        "lineNumber": 851,
+        "lineNumber": 833,
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/collapse-all\u0027),"
+        "content": "          label: $.i18n(\u0027core-views/reorder-remove\u0027)+\"...\","
       },
       {
-        "lineNumber": 852,
+        "lineNumber": 834,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/collapse-all-columns\","
+        "content": "          id: \"core/reorder-columns\","
       },
       {
-        "lineNumber": 853,
+        "lineNumber": 835,
         "author": {
           "gitId": "-"
         },
         "content": "          click: function() {"
       },
       {
-        "lineNumber": 854,
+        "lineNumber": 836,
         "author": {
           "gitId": "-"
         },
-        "content": "            for (var i \u003d 0; i \u003c theProject.columnModel.columns.length; i++) {"
+        "content": "            new ColumnReorderingDialog();"
       },
       {
-        "lineNumber": 855,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "              self._collapsedColumnNames[theProject.columnModel.columns[i].name] \u003d true;"
-      },
-      {
-        "lineNumber": 856,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 857,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            self.render();"
-      },
-      {
-        "lineNumber": 858,
+        "lineNumber": 837,
         "author": {
           "gitId": "-"
         },
         "content": "          }"
       },
       {
-        "lineNumber": 859,
+        "lineNumber": 838,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
         "content": "        },"
       },
       {
-        "lineNumber": 860,
+        "lineNumber": 839,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "        {},"
+      },
+      {
+        "lineNumber": 840,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 841,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "          label: $.i18n(\u0027core-views/fill-down\u0027),"
+      },
+      {
+        "lineNumber": 842,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "          id: \"core/fill-down\","
+      },
+      {
+        "lineNumber": 843,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "          click: doAllFillDown"
+      },
+      {
+        "lineNumber": 844,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "        },"
+      },
+      {
+        "lineNumber": 845,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "        {"
+      },
+      {
+        "lineNumber": 846,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "          label: $.i18n(\u0027core-views/blank-down\u0027),"
+      },
+      {
+        "lineNumber": 847,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "          id: \"core/blank-down\","
+      },
+      {
+        "lineNumber": 848,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "          click: doAllBlankDown"
+      },
+      {
+        "lineNumber": 849,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 850,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ]"
+      },
+      {
+        "lineNumber": 851,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 852,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    {},"
+      },
+      {
+        "lineNumber": 853,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 854,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      label: $.i18n(\u0027core-views/view\u0027),"
+      },
+      {
+        "lineNumber": 855,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      id: \"core/view\","
+      },
+      {
+        "lineNumber": 856,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      width: \"200px\","
+      },
+      {
+        "lineNumber": 857,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      submenu: ["
+      },
+      {
+        "lineNumber": 858,
         "author": {
           "gitId": "-"
         },
         "content": "        {"
       },
       {
+        "lineNumber": 859,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          label: $.i18n(\u0027core-views/collapse-all\u0027),"
+      },
+      {
+        "lineNumber": 860,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          id: \"core/collapse-all-columns\","
+      },
+      {
         "lineNumber": 861,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "          label: $.i18n(\u0027core-views/expand-all\u0027),"
-      },
-      {
-        "lineNumber": 862,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "          id: \"core/expand-all-columns\","
-      },
-      {
-        "lineNumber": 863,
         "author": {
           "gitId": "-"
         },
         "content": "          click: function() {"
       },
       {
+        "lineNumber": 862,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            for (var i \u003d 0; i \u003c theProject.columnModel.columns.length; i++) {"
+      },
+      {
+        "lineNumber": 863,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "              self._collapsedColumnNames[theProject.columnModel.columns[i].name] \u003d true;"
+      },
+      {
         "lineNumber": 864,
         "author": {
           "gitId": "-"
         },
-        "content": "            self._collapsedColumnNames \u003d [];"
+        "content": "            }"
       },
       {
         "lineNumber": 865,
@@ -23711,14 +23711,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "          label: $.i18n(\u0027core-views/display-null\u0027),"
+        "content": "          label: $.i18n(\u0027core-views/expand-all\u0027),"
       },
       {
         "lineNumber": 870,
         "author": {
           "gitId": "-"
         },
-        "content": "          id: \"core/display-null\","
+        "content": "          id: \"core/expand-all-columns\","
       },
       {
         "lineNumber": 871,
@@ -23732,14 +23732,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            $(\".data-table-null\").toggle();"
+        "content": "            self._collapsedColumnNames \u003d [];"
       },
       {
         "lineNumber": 873,
         "author": {
           "gitId": "-"
         },
-        "content": "            self._shownulls \u003d !(self._shownulls);"
+        "content": "            self.render();"
       },
       {
         "lineNumber": 874,
@@ -23753,945 +23753,945 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        },"
       },
       {
         "lineNumber": 876,
         "author": {
           "gitId": "-"
         },
-        "content": "      ]"
+        "content": "        {"
       },
       {
         "lineNumber": 877,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "          label: $.i18n(\u0027core-views/display-null\u0027),"
       },
       {
         "lineNumber": 878,
         "author": {
           "gitId": "-"
         },
-        "content": "  ];"
+        "content": "          id: \"core/display-null\","
       },
       {
         "lineNumber": 879,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "          click: function() {"
       },
       {
         "lineNumber": 880,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var i \u003d 0; i \u003c DataTableView._extenders.length; i++) {"
+        "content": "            $(\".data-table-null\").toggle();"
       },
       {
         "lineNumber": 881,
         "author": {
           "gitId": "-"
         },
-        "content": "    DataTableView._extenders[i].call(null, this, menu);"
+        "content": "            self._shownulls \u003d !(self._shownulls);"
       },
       {
         "lineNumber": 882,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "          }"
       },
       {
         "lineNumber": 883,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 884,
         "author": {
           "gitId": "-"
         },
-        "content": "  MenuSystem.createAndShowStandardMenu(menu, elmt, { width: \"120px\", horizontal: false });"
+        "content": "      ]"
       },
       {
         "lineNumber": 885,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    }"
       },
       {
         "lineNumber": 886,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  ];"
       },
       {
         "lineNumber": 887,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.prototype._createSortingMenu \u003d function(elmt) {"
+        "content": ""
       },
       {
         "lineNumber": 888,
         "author": {
           "gitId": "-"
         },
-        "content": "  var self \u003d this;"
+        "content": "  for (var i \u003d 0; i \u003c DataTableView._extenders.length; i++) {"
       },
       {
         "lineNumber": 889,
         "author": {
           "gitId": "-"
         },
-        "content": "  var items \u003d ["
+        "content": "    DataTableView._extenders[i].call(null, this, menu);"
       },
       {
         "lineNumber": 890,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "  }"
       },
       {
         "lineNumber": 891,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"label\" : $.i18n(\u0027core-views/remove-sort\u0027),"
+        "content": ""
       },
       {
         "lineNumber": 892,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"click\" : function() {"
+        "content": "  MenuSystem.createAndShowStandardMenu(menu, elmt, { width: \"120px\", horizontal: false });"
       },
       {
         "lineNumber": 893,
         "author": {
           "gitId": "-"
         },
-        "content": "        self._sorting.criteria \u003d [];"
+        "content": "};"
       },
       {
         "lineNumber": 894,
         "author": {
           "gitId": "-"
         },
-        "content": "        self.update();"
+        "content": ""
       },
       {
         "lineNumber": 895,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "DataTableView.prototype._createSortingMenu \u003d function(elmt) {"
       },
       {
         "lineNumber": 896,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "  var self \u003d this;"
       },
       {
         "lineNumber": 897,
         "author": {
           "gitId": "-"
         },
-        "content": "    {"
+        "content": "  var items \u003d ["
       },
       {
         "lineNumber": 898,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"label\" : $.i18n(\u0027core-views/reorder-perma\u0027),"
+        "content": "    {"
       },
       {
         "lineNumber": 899,
         "author": {
           "gitId": "-"
         },
-        "content": "      \"click\" : function() {"
+        "content": "      \"label\" : $.i18n(\u0027core-views/remove-sort\u0027),"
       },
       {
         "lineNumber": 900,
         "author": {
           "gitId": "-"
         },
-        "content": "        Refine.postCoreProcess("
+        "content": "      \"click\" : function() {"
       },
       {
         "lineNumber": 901,
         "author": {
           "gitId": "-"
         },
-        "content": "          \"reorder-rows\","
+        "content": "        self._sorting.criteria \u003d [];"
       },
       {
         "lineNumber": 902,
         "author": {
           "gitId": "-"
         },
-        "content": "          null,"
+        "content": "        self.update();"
       },
       {
         "lineNumber": 903,
         "author": {
           "gitId": "-"
         },
-        "content": "          {"
+        "content": "      }"
       },
       {
         "lineNumber": 904,
         "author": {
           "gitId": "-"
         },
-        "content": "            \"sorting\" : JSON.stringify(self._sorting),"
+        "content": "    },"
       },
       {
         "lineNumber": 905,
         "author": {
           "gitId": "-"
         },
-        "content": "            \"mode\" : ui.browsingEngine.getMode()"
+        "content": "    {"
       },
       {
         "lineNumber": 906,
         "author": {
           "gitId": "-"
         },
-        "content": "          },"
+        "content": "      \"label\" : $.i18n(\u0027core-views/reorder-perma\u0027),"
       },
       {
         "lineNumber": 907,
         "author": {
           "gitId": "-"
         },
-        "content": "          { rowMetadataChanged: true },"
+        "content": "      \"click\" : function() {"
       },
       {
         "lineNumber": 908,
         "author": {
           "gitId": "-"
         },
-        "content": "          {"
+        "content": "        Refine.postCoreProcess("
       },
       {
         "lineNumber": 909,
         "author": {
           "gitId": "-"
         },
-        "content": "            onDone: function() {"
+        "content": "          \"reorder-rows\","
       },
       {
         "lineNumber": 910,
         "author": {
           "gitId": "-"
         },
-        "content": "              self._sorting.criteria \u003d [];"
+        "content": "          null,"
       },
       {
         "lineNumber": 911,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "          {"
       },
       {
         "lineNumber": 912,
         "author": {
           "gitId": "-"
         },
-        "content": "          }"
+        "content": "            \"sorting\" : JSON.stringify(self._sorting),"
       },
       {
         "lineNumber": 913,
         "author": {
           "gitId": "-"
         },
-        "content": "        );"
+        "content": "            \"mode\" : ui.browsingEngine.getMode()"
       },
       {
         "lineNumber": 914,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "          },"
       },
       {
         "lineNumber": 915,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "          { rowMetadataChanged: true },"
       },
       {
         "lineNumber": 916,
         "author": {
           "gitId": "-"
         },
-        "content": "    {}"
+        "content": "          {"
       },
       {
         "lineNumber": 917,
         "author": {
           "gitId": "-"
         },
-        "content": "  ];"
+        "content": "            onDone: function() {"
       },
       {
         "lineNumber": 918,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "              self._sorting.criteria \u003d [];"
       },
       {
         "lineNumber": 919,
         "author": {
           "gitId": "-"
         },
-        "content": "  var getColumnHeaderUI \u003d function(columnName) {"
+        "content": "            }"
       },
       {
         "lineNumber": 920,
         "author": {
           "gitId": "-"
         },
-        "content": "    for (var i \u003d 0; i \u003c self._columnHeaderUIs.length; i++) {"
+        "content": "          }"
       },
       {
         "lineNumber": 921,
         "author": {
           "gitId": "-"
         },
-        "content": "      var columnHeaderUI \u003d self._columnHeaderUIs[i];"
+        "content": "        );"
       },
       {
         "lineNumber": 922,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (columnHeaderUI.getColumn().name \u003d\u003d columnName) {"
+        "content": "      }"
       },
       {
         "lineNumber": 923,
         "author": {
           "gitId": "-"
         },
-        "content": "        return columnHeaderUI;"
+        "content": "    },"
       },
       {
         "lineNumber": 924,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    {}"
       },
       {
         "lineNumber": 925,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  ];"
       },
       {
         "lineNumber": 926,
         "author": {
           "gitId": "-"
         },
-        "content": "    return null;"
+        "content": ""
       },
       {
         "lineNumber": 927,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "  var getColumnHeaderUI \u003d function(columnName) {"
       },
       {
         "lineNumber": 928,
         "author": {
           "gitId": "-"
         },
-        "content": "  var createSubmenu \u003d function(criterion) {"
+        "content": "    for (var i \u003d 0; i \u003c self._columnHeaderUIs.length; i++) {"
       },
       {
         "lineNumber": 929,
         "author": {
           "gitId": "-"
         },
-        "content": "    var columnHeaderUI \u003d getColumnHeaderUI(criterion.column);"
+        "content": "      var columnHeaderUI \u003d self._columnHeaderUIs[i];"
       },
       {
         "lineNumber": 930,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (columnHeaderUI !\u003d\u003d null) {"
+        "content": "      if (columnHeaderUI.getColumn().name \u003d\u003d columnName) {"
       },
       {
         "lineNumber": 931,
         "author": {
           "gitId": "-"
         },
-        "content": "      items.push({"
+        "content": "        return columnHeaderUI;"
       },
       {
         "lineNumber": 932,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"label\" : $.i18n(\u0027core-views/by\u0027)+\" \" + criterion.column,"
+        "content": "      }"
       },
       {
         "lineNumber": 933,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"submenu\" : columnHeaderUI.createSortingMenu()"
+        "content": "    }"
       },
       {
         "lineNumber": 934,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": "    return null;"
       },
       {
         "lineNumber": 935,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  };"
       },
       {
         "lineNumber": 936,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "  var createSubmenu \u003d function(criterion) {"
       },
       {
         "lineNumber": 937,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
+        "content": "    var columnHeaderUI \u003d getColumnHeaderUI(criterion.column);"
       },
       {
         "lineNumber": 938,
         "author": {
           "gitId": "-"
         },
-        "content": "    createSubmenu(this._sorting.criteria[i]);"
+        "content": "    if (columnHeaderUI !\u003d\u003d null) {"
       },
       {
         "lineNumber": 939,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      items.push({"
       },
       {
         "lineNumber": 940,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        \"label\" : $.i18n(\u0027core-views/by\u0027)+\" \" + criterion.column,"
       },
       {
         "lineNumber": 941,
         "author": {
           "gitId": "-"
         },
-        "content": "  MenuSystem.createAndShowStandardMenu(items, elmt, { horizontal: false });"
+        "content": "        \"submenu\" : columnHeaderUI.createSortingMenu()"
       },
       {
         "lineNumber": 942,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "      });"
       },
       {
         "lineNumber": 943,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 944,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "var doAllFillDown \u003d function() {"
+        "content": "  };"
       },
       {
         "lineNumber": 945,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "  doFillDown(theProject.columnModel.columns.length - 1);"
+        "content": "  for (var i \u003d 0; i \u003c this._sorting.criteria.length; i++) {"
       },
       {
         "lineNumber": 946,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "};"
+        "content": "    createSubmenu(this._sorting.criteria[i]);"
       },
       {
         "lineNumber": 947,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 948,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "var doFillDown \u003d function(colIndex) {"
+        "content": ""
       },
       {
         "lineNumber": 949,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "  if (colIndex \u003e\u003d 0) {"
+        "content": "  MenuSystem.createAndShowStandardMenu(items, elmt, { horizontal: false });"
       },
       {
         "lineNumber": 950,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    Refine.postCoreProcess("
+        "content": "};"
       },
       {
         "lineNumber": 951,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "        \"fill-down\","
+        "content": ""
       },
       {
         "lineNumber": 952,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        {"
+        "content": "var doAllFillDown \u003d function() {"
       },
       {
         "lineNumber": 953,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          columnName: theProject.columnModel.columns[colIndex].name"
+        "content": "  doFillDown(theProject.columnModel.columns.length - 1);"
       },
       {
         "lineNumber": 954,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        },"
+        "content": "};"
       },
       {
         "lineNumber": 955,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        null,"
+        "content": ""
       },
       {
         "lineNumber": 956,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        {modelsChanged: true},"
+        "content": "var doFillDown \u003d function(colIndex) {"
       },
       {
         "lineNumber": 957,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        {"
+        "content": "  if (colIndex \u003e\u003d 0) {"
       },
       {
         "lineNumber": 958,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          onDone: function() {"
+        "content": "    Refine.postCoreProcess("
       },
       {
         "lineNumber": 959,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "            doFillDown(--colIndex);"
+        "content": "        \"fill-down\","
       },
       {
         "lineNumber": 960,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          }"
+        "content": "        {"
       },
       {
         "lineNumber": 961,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        }"
+        "content": "          columnName: theProject.columnModel.columns[colIndex].name"
       },
       {
         "lineNumber": 962,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    );"
+        "content": "        },"
       },
       {
         "lineNumber": 963,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  }"
+        "content": "        null,"
       },
       {
         "lineNumber": 964,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "};"
+        "content": "        {modelsChanged: true},"
       },
       {
         "lineNumber": 965,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "        {"
       },
       {
         "lineNumber": 966,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "var doAllBlankDown \u003d function() {"
+        "content": "          onDone: function() {"
       },
       {
         "lineNumber": 967,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  doBlankDown(0);"
+        "content": "            doFillDown(--colIndex);"
       },
       {
         "lineNumber": 968,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "};"
+        "content": "          }"
       },
       {
         "lineNumber": 969,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 970,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "var doBlankDown \u003d function(colIndex) {"
+        "content": "    );"
       },
       {
         "lineNumber": 971,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  if (colIndex \u003c theProject.columnModel.columns.length) {"
+        "content": "  }"
       },
       {
         "lineNumber": 972,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    Refine.postCoreProcess("
+        "content": "};"
       },
       {
         "lineNumber": 973,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        \"blank-down\","
+        "content": ""
       },
       {
         "lineNumber": 974,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        {"
+        "content": "var doAllBlankDown \u003d function() {"
       },
       {
         "lineNumber": 975,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          columnName: theProject.columnModel.columns[colIndex].name"
+        "content": "  doBlankDown(0);"
       },
       {
         "lineNumber": 976,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        },"
+        "content": "};"
       },
       {
         "lineNumber": 977,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        null,"
+        "content": ""
       },
       {
         "lineNumber": 978,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        { modelsChanged: true },"
+        "content": "var doBlankDown \u003d function(colIndex) {"
       },
       {
         "lineNumber": 979,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        {"
+        "content": "  if (colIndex \u003c theProject.columnModel.columns.length) {"
       },
       {
         "lineNumber": 980,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          onDone: function() {"
+        "content": "    Refine.postCoreProcess("
       },
       {
         "lineNumber": 981,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "            doBlankDown(++colIndex);"
+        "content": "        \"blank-down\","
       },
       {
         "lineNumber": 982,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          }"
+        "content": "        {"
       },
       {
         "lineNumber": 983,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        }"
+        "content": "          columnName: theProject.columnModel.columns[colIndex].name"
       },
       {
         "lineNumber": 984,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    );"
+        "content": "        },"
       },
       {
         "lineNumber": 985,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  }"
+        "content": "        null,"
       },
       {
         "lineNumber": 986,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "};"
+        "content": "        { modelsChanged: true },"
       },
       {
         "lineNumber": 987,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "        {"
       },
       {
         "lineNumber": 988,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "          onDone: function() {"
       },
       {
         "lineNumber": 989,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "DataTableView.prototype._updateCell \u003d function(rowIndex, cellIndex, cell) {"
+        "content": "            doBlankDown(++colIndex);"
       },
       {
         "lineNumber": 990,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "  var rows \u003d theProject.rowModel.rows;"
+        "content": "          }"
       },
       {
         "lineNumber": 991,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "  for (var r \u003d 0; r \u003c rows.length; r++) {"
+        "content": "        }"
       },
       {
         "lineNumber": 992,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    var row \u003d rows[r];"
+        "content": "    );"
       },
       {
         "lineNumber": 993,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    if (row.i \u003d\u003d\u003d rowIndex) {"
+        "content": "  }"
       },
       {
         "lineNumber": 994,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "      while (cellIndex \u003e\u003d row.cells.length) {"
+        "content": "};"
       },
       {
         "lineNumber": 995,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        row.cells.push(null);"
+        "content": ""
       },
       {
         "lineNumber": 996,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": ""
       },
       {
         "lineNumber": 997,
         "author": {
           "gitId": "-"
         },
-        "content": "      row.cells[cellIndex] \u003d cell;"
+        "content": "DataTableView.prototype._updateCell \u003d function(rowIndex, cellIndex, cell) {"
       },
       {
         "lineNumber": 998,
         "author": {
           "gitId": "-"
         },
-        "content": "      break;"
+        "content": "  var rows \u003d theProject.rowModel.rows;"
       },
       {
         "lineNumber": 999,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  for (var r \u003d 0; r \u003c rows.length; r++) {"
       },
       {
         "lineNumber": 1000,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    var row \u003d rows[r];"
       },
       {
         "lineNumber": 1001,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    if (row.i \u003d\u003d\u003d rowIndex) {"
       },
       {
         "lineNumber": 1002,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      while (cellIndex \u003e\u003d row.cells.length) {"
       },
       {
         "lineNumber": 1003,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.sampleVisibleRows \u003d function(column) {"
+        "content": "        row.cells.push(null);"
       },
       {
         "lineNumber": 1004,
         "author": {
           "gitId": "-"
         },
-        "content": "  var rowIndices \u003d [];"
+        "content": "      }"
       },
       {
         "lineNumber": 1005,
         "author": {
           "gitId": "-"
         },
-        "content": "  var values \u003d [];"
+        "content": "      row.cells[cellIndex] \u003d cell;"
       },
       {
         "lineNumber": 1006,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      break;"
       },
       {
         "lineNumber": 1007,
         "author": {
           "gitId": "-"
         },
-        "content": "  var rows \u003d theProject.rowModel.rows;"
+        "content": "    }"
       },
       {
         "lineNumber": 1008,
         "author": {
           "gitId": "-"
         },
-        "content": "  for (var r \u003d 0; r \u003c rows.length; r++) {"
+        "content": "  }"
       },
       {
         "lineNumber": 1009,
         "author": {
           "gitId": "-"
         },
-        "content": "    var row \u003d rows[r];"
+        "content": "};"
       },
       {
         "lineNumber": 1010,
@@ -24705,213 +24705,269 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    rowIndices.push(row.i);"
+        "content": "DataTableView.sampleVisibleRows \u003d function(column) {"
       },
       {
         "lineNumber": 1012,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  var rowIndices \u003d [];"
       },
       {
         "lineNumber": 1013,
         "author": {
           "gitId": "-"
         },
-        "content": "    var v \u003d null;"
+        "content": "  var values \u003d [];"
       },
       {
         "lineNumber": 1014,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (column \u0026\u0026 column.cellIndex \u003c row.cells.length) {"
+        "content": ""
       },
       {
         "lineNumber": 1015,
         "author": {
           "gitId": "-"
         },
-        "content": "      var cell \u003d row.cells[column.cellIndex];"
+        "content": "  var rows \u003d theProject.rowModel.rows;"
       },
       {
         "lineNumber": 1016,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (cell !\u003d\u003d null) {"
+        "content": "  for (var r \u003d 0; r \u003c rows.length; r++) {"
       },
       {
         "lineNumber": 1017,
         "author": {
           "gitId": "-"
         },
-        "content": "        v \u003d cell.v;"
+        "content": "    var row \u003d rows[r];"
       },
       {
         "lineNumber": 1018,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": ""
       },
       {
         "lineNumber": 1019,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    rowIndices.push(row.i);"
       },
       {
         "lineNumber": 1020,
         "author": {
           "gitId": "-"
         },
-        "content": "    values.push(v);"
+        "content": ""
       },
       {
         "lineNumber": 1021,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    var v \u003d null;"
       },
       {
         "lineNumber": 1022,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    if (column \u0026\u0026 column.cellIndex \u003c row.cells.length) {"
       },
       {
         "lineNumber": 1023,
         "author": {
           "gitId": "-"
         },
-        "content": "  return {"
+        "content": "      var cell \u003d row.cells[column.cellIndex];"
       },
       {
         "lineNumber": 1024,
         "author": {
           "gitId": "-"
         },
-        "content": "    rowIndices: rowIndices,"
+        "content": "      if (cell !\u003d\u003d null) {"
       },
       {
         "lineNumber": 1025,
         "author": {
           "gitId": "-"
         },
-        "content": "    values: values"
+        "content": "        v \u003d cell.v;"
       },
       {
         "lineNumber": 1026,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "      }"
       },
       {
         "lineNumber": 1027,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "    }"
       },
       {
         "lineNumber": 1028,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    values.push(v);"
       },
       {
         "lineNumber": 1029,
         "author": {
           "gitId": "-"
         },
-        "content": "DataTableView.promptExpressionOnVisibleRows \u003d function(column, title, expression, onDone) {"
+        "content": "  }"
       },
       {
         "lineNumber": 1030,
         "author": {
           "gitId": "-"
         },
-        "content": "  var o \u003d DataTableView.sampleVisibleRows(column);"
+        "content": ""
       },
       {
         "lineNumber": 1031,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  return {"
       },
       {
         "lineNumber": 1032,
         "author": {
           "gitId": "-"
         },
-        "content": "  var self \u003d this;"
+        "content": "    rowIndices: rowIndices,"
       },
       {
         "lineNumber": 1033,
         "author": {
           "gitId": "-"
         },
-        "content": "  new ExpressionPreviewDialog("
+        "content": "    values: values"
       },
       {
         "lineNumber": 1034,
         "author": {
           "gitId": "-"
         },
-        "content": "    title,"
+        "content": "  };"
       },
       {
         "lineNumber": 1035,
         "author": {
           "gitId": "-"
         },
-        "content": "    column.cellIndex, "
+        "content": "};"
       },
       {
         "lineNumber": 1036,
         "author": {
           "gitId": "-"
         },
-        "content": "    o.rowIndices, "
+        "content": ""
       },
       {
         "lineNumber": 1037,
         "author": {
           "gitId": "-"
         },
-        "content": "    o.values,"
+        "content": "DataTableView.promptExpressionOnVisibleRows \u003d function(column, title, expression, onDone) {"
       },
       {
         "lineNumber": 1038,
         "author": {
           "gitId": "-"
         },
-        "content": "    expression,"
+        "content": "  var o \u003d DataTableView.sampleVisibleRows(column);"
       },
       {
         "lineNumber": 1039,
         "author": {
           "gitId": "-"
         },
-        "content": "    onDone"
+        "content": ""
       },
       {
         "lineNumber": 1040,
         "author": {
           "gitId": "-"
         },
-        "content": "  );"
+        "content": "  var self \u003d this;"
       },
       {
         "lineNumber": 1041,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  new ExpressionPreviewDialog("
+      },
+      {
+        "lineNumber": 1042,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    title,"
+      },
+      {
+        "lineNumber": 1043,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    column.cellIndex, "
+      },
+      {
+        "lineNumber": 1044,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    o.rowIndices, "
+      },
+      {
+        "lineNumber": 1045,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    o.values,"
+      },
+      {
+        "lineNumber": 1046,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    expression,"
+      },
+      {
+        "lineNumber": 1047,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    onDone"
+      },
+      {
+        "lineNumber": 1048,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  );"
+      },
+      {
+        "lineNumber": 1049,
         "author": {
           "gitId": "-"
         },
@@ -24920,7 +24976,7 @@
     ],
     "authorContributionMap": {
       "jamessspanggg": 90,
-      "-": 951
+      "-": 959
     }
   }
 ]
