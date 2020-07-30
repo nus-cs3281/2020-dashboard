@@ -858,8 +858,8 @@
         ]
       },
       {
-        "insertions": 25,
-        "deletions": 26,
+        "insertions": 267,
+        "deletions": 179,
         "date": "2020-07-29",
         "commitResults": [
           {
@@ -892,6 +892,88 @@
               "html": {
                 "insertions": 9,
                 "deletions": 9
+              }
+            }
+          },
+          {
+            "hash": "4a2855b14362f64e183387edda023676aa1b1fa4",
+            "messageTitle": "[#10429] Remove comment save button for question submission form (#10478)",
+            "messageBody": "* Remove save button for question submission form\r\n\r\n* Remove unused updateParticipantComment\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 1,
+                "deletions": 3
+              },
+              "ts": {
+                "insertions": 0,
+                "deletions": 38
+              }
+            }
+          },
+          {
+            "hash": "1dfc7df94f42675648f33764fa5392659c264404",
+            "messageTitle": "[#10467] Instructor courses page: Fix courses default sorting not working as intended (#10477)",
+            "messageBody": "* Fix courses default sorting not working as intended\r\n\r\n* Test fix\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 5,
+                "deletions": 4
+              },
+              "ts": {
+                "insertions": 45,
+                "deletions": 7
+              }
+            }
+          },
+          {
+            "hash": "0281ff8e25008b2a09100bafb12f87d41d6320dc",
+            "messageTitle": "[#10410] Increase duration of toast to 10 seconds (#10489)",
+            "messageBody": "* Increase duration of toast to 10 seconds\r\n\r\n* Add \u0027X\u0027 button to toast",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 6,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 3,
+                "deletions": 2
+              },
+              "ts": {
+                "insertions": 3,
+                "deletions": 3
+              }
+            }
+          },
+          {
+            "hash": "854c7cdb6e2a6d700201b1bfd70e8271bd52f6c9",
+            "messageTitle": "[#10332] Sorting arrow icon change (#10492)",
+            "messageBody": "* Initial mockup\r\n\r\n* Convert remaining tables to use new sorting icons\r\n\r\n* Lint and test fix\r\n\r\nCo-authored-by: Ahmed Bahajjaj \u003cAhmed_Bahajjaj@u.nus.edu\u003e",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 19,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 160,
+                "deletions": 96
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 24,
+        "deletions": 14,
+        "date": "2020-07-30",
+        "commitResults": [
+          {
+            "hash": "38e58c024d73ce12fcf99aacbab06823628a96b9",
+            "messageTitle": "[#10493] Fix tooltip placements (#10494)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "html": {
+                "insertions": 24,
+                "deletions": 14
               }
             }
           }
@@ -2529,6 +2611,32 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 84,
+        "deletions": 1,
+        "date": "2020-07-30",
+        "commitResults": [
+          {
+            "hash": "e92d8d7c70fd1fb2e2ebf92649da92d62d90dec1",
+            "messageTitle": "[#10455] Add a redirect banner for users to switch versions (#10471)",
+            "messageBody": "* Add redirect-banner.component.ts\r\n\r\n* Change info message and fix lint\r\n\r\n* Add support email and change banner message\r\n\r\n* Update snapshot with config points set to null\r\n\r\n* Change comment description and support email assignment\r\n\r\n* Change supportEmail to be string\r\n\r\n* Change redirectUrl to be string",
+            "fileTypesAndContributionMap": {
+              "scss": {
+                "insertions": 0,
+                "deletions": 0
+              },
+              "html": {
+                "insertions": 10,
+                "deletions": 0
+              },
+              "ts": {
+                "insertions": 74,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "daekoon": [
@@ -2607,9 +2715,9 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ccyccyccy": 2969,
+    "ccyccyccy": 3223,
     "Parcly-Taxel": 0,
-    "niqiukun": 925,
+    "niqiukun": 877,
     "openorclose": 0,
     "yash-chowdhary": 0,
     "Tejas2805": 0,
@@ -2623,20 +2731,20 @@
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
-    "tiuweehan": 1705,
-    "madanalogy": 3811,
+    "tiuweehan": 1704,
+    "madanalogy": 3889,
     "daekoon": 1641
   },
   "authorFileTypeContributionMap": {
     "ccyccyccy": {
-      "java": 174,
+      "java": 179,
       "js": 0,
-      "scss": 170,
+      "scss": 195,
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 648,
-      "ts": 1977
+      "html": 826,
+      "ts": 2023
     },
     "Parcly-Taxel": {
       "java": 0,
@@ -2655,8 +2763,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 140,
-      "ts": 558
+      "html": 98,
+      "ts": 552
     },
     "openorclose": {
       "java": 0,
@@ -2796,7 +2904,7 @@
       "py": 0,
       "tag": 0,
       "html": 0,
-      "ts": 1632
+      "ts": 1631
     },
     "madanalogy": {
       "java": 2103,
@@ -2805,8 +2913,8 @@
       "md": 0,
       "py": 0,
       "tag": 0,
-      "html": 303,
-      "ts": 1394
+      "html": 307,
+      "ts": 1468
     },
     "daekoon": {
       "java": 1641,
@@ -2820,25 +2928,25 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 41593.86,
+    "ccyccyccy": 42114.055,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 4197.2295,
+    "niqiukun": 4180.222,
     "openorclose": 0.0,
     "yash-chowdhary": 0.0,
     "Tejas2805": 0.0,
-    "dvrylc": 1734.2454,
+    "dvrylc": 1727.1849,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 4488.873,
+    "hcwong": 4470.632,
     "ang-zeyu": 0.0,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
-    "tiuweehan": 9621.523,
-    "madanalogy": 13211.8545,
-    "daekoon": 5165.856
+    "tiuweehan": 9582.712,
+    "madanalogy": 13172.0,
+    "daekoon": 5144.7974
   },
   "authorDisplayNameMap": {
     "ccyccyccy": "CHON..YUAN",
