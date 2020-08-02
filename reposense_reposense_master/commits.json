@@ -239,6 +239,28 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 170,
+        "deletions": 3,
+        "date": "2020-08-02",
+        "commitResults": [
+          {
+            "hash": "d02d73514e957569c88f16af1548c8909dc0151a",
+            "messageTitle": "[#1279] Provide a way to run analysis for a moving window (#1280)",
+            "messageBody": "Some users might want to monitor repositories for a moving window rather\r\nthan from a specific date.\r\n\r\nWe can give a CLI option that runs the analysis for a period of specific \r\nlength e.g., `--period 7d` runs the analysis for the last 7 days, and\r\n`--period 1w` runs the analysis for the last 1 week.\r\n\r\nPeriod can combine with either since date or until date, but not both.\r\nIf both not supplied, it will be the period before the current date.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 156,
+                "deletions": 3
+              },
+              "md": {
+                "insertions": 14,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "openorclose": [],
@@ -2334,19 +2356,19 @@
   "authorFinalContributionMap": {
     "ccyccyccy": 81,
     "Parcly-Taxel": 0,
-    "niqiukun": 179,
+    "niqiukun": 347,
     "openorclose": 0,
     "yash-chowdhary": 203,
     "anubh-v": 494,
     "Tejas2805": 773,
     "dvrylc": 0,
-    "jamessspanggg": 1272,
+    "jamessspanggg": 1269,
     "j-lum": 0,
     "iskandarzulkarnaien": 0,
     "xantho09": 0,
     "0blivious": 936,
     "hcwong": 0,
-    "ang-zeyu": 325,
+    "ang-zeyu": 324,
     "geshuming": 0,
     "alyip98": 0,
     "nbriannl": 0,
@@ -2379,11 +2401,11 @@
       "yml": 0
     },
     "niqiukun": {
-      "java": 0,
+      "java": 154,
       "js": 133,
       "scss": 12,
       "json": 0,
-      "md": 0,
+      "md": 14,
       "py": 0,
       "pug": 34,
       "gradle": 0,
@@ -2452,7 +2474,7 @@
     },
     "jamessspanggg": {
       "java": 418,
-      "js": 643,
+      "js": 640,
       "scss": 45,
       "json": 34,
       "md": 19,
@@ -2524,7 +2546,7 @@
     },
     "ang-zeyu": {
       "java": 22,
-      "js": 195,
+      "js": 194,
       "scss": 37,
       "json": 3,
       "md": 0,
@@ -2596,21 +2618,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 38.082718,
+    "ccyccyccy": 36.856853,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 308.36826,
+    "niqiukun": 417.33456,
     "openorclose": 0.0,
-    "yash-chowdhary": 476.69083,
-    "anubh-v": 292.34995,
-    "Tejas2805": 2387.664,
+    "yash-chowdhary": 461.28577,
+    "anubh-v": 283.24835,
+    "Tejas2805": 2312.4614,
     "dvrylc": 0.0,
-    "jamessspanggg": 2826.021,
+    "jamessspanggg": 2737.287,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 5828.497,
+    "0blivious": 5644.2363,
     "hcwong": 0.0,
-    "ang-zeyu": 417.60193,
+    "ang-zeyu": 404.20236,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

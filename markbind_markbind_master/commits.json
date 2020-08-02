@@ -1720,6 +1720,91 @@
             }
           }
         ]
+      },
+      {
+        "insertions": 94,
+        "deletions": 226,
+        "date": "2020-08-01",
+        "commitResults": [
+          {
+            "hash": "af007d15eb73f728882f29889aebf84462c94760",
+            "messageTitle": "Use es6 default export for vue-components (#1298)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 9,
+                "deletions": 41
+              }
+            }
+          },
+          {
+            "hash": "c3ba23935f675d1f7a2ed95ff96aa58a6261e421",
+            "messageTitle": "Enable linting for several vue-components files (#1299)",
+            "messageBody": "Several files in the vue-components package have undergone heavy\r\nmodifications since porting from yuche/vue-strap.\r\n\r\nLet\u0027s enable html and js linting for these files to standardise code\r\nstyle as such.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 54,
+                "deletions": 41
+              }
+            }
+          },
+          {
+            "hash": "9f80e4b36c5d32023f9ee3fcef142518e8ce8ba2",
+            "messageTitle": "Use tree-shaked BootstrapVue components (#1300)",
+            "messageBody": "Only three components - modals, popovers and tooltips, rely on the\r\nBootstrapVue library. The BootstrapVue dist is also rather large, at\r\n358kb.\r\n\r\nLet\u0027s tree shake the library and bundle it together with the\r\nvue-components package as such.\r\nThis also makes for better cohesion of vue components.\r\n\r\nIn addition, the script tag referencing the polyfill dependency of\r\nBootstrapVue and the components bundle was placed at the very bottom.\r\nThis increases FOUC, as the browser loads the bundles unnecessarily\r\nonly after the entire page has loaded.\r\n\r\nLet\u0027s move the script tags up to the \u003chead\u003e tag hence.",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 9,
+                "deletions": 1
+              },
+              "js": {
+                "insertions": 17,
+                "deletions": 113
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "njk": {
+                "insertions": 4,
+                "deletions": 5
+              }
+            }
+          },
+          {
+            "hash": "52f5519a3505d943f9e82e96b99d1deb4c5d0f1a",
+            "messageTitle": "Remove unused files in vue-components (#1302)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 0,
+                "deletions": 1
+              },
+              "js": {
+                "insertions": 0,
+                "deletions": 23
+              }
+            }
+          }
+        ]
+      },
+      {
+        "insertions": 3,
+        "deletions": 0,
+        "date": "2020-08-02",
+        "commitResults": [
+          {
+            "hash": "8a295427fa4a845517bef0e928373a58c92e9358",
+            "messageTitle": "Add \u0027vue\u0027 to vue-components externals (#1305)",
+            "messageBody": "BootstrapVue imports the vue library in its source code, causing vue\r\nto also be included in the vue-components bundle.\r\n\r\nLet\u0027s add it to the webpack externals config, resulting in further\r\nsavings of 70kb + 180kb over using the full BootstrapVue bundle.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 3,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2321,7 +2406,7 @@
     "ccyccyccy": 0,
     "Parcly-Taxel": 0,
     "niqiukun": 0,
-    "openorclose": 1306,
+    "openorclose": 1218,
     "yash-chowdhary": 1598,
     "Tejas2805": 109,
     "dvrylc": 74,
@@ -2330,11 +2415,11 @@
     "xantho09": 0,
     "0blivious": 0,
     "hcwong": 21,
-    "ang-zeyu": 4524,
+    "ang-zeyu": 4610,
     "geshuming": 0,
     "alyip98": 13,
     "nbriannl": 861,
-    "le0tan": 998,
+    "le0tan": 994,
     "madanalogy": 61,
     "daekoon": 0
   },
@@ -2377,7 +2462,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 700,
+      "js": 612,
       "css": 504,
       "json": 24,
       "md": 56,
@@ -2485,13 +2570,13 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2789,
+      "js": 2861,
       "css": 638,
-      "json": 438,
-      "md": 293,
+      "json": 439,
+      "md": 302,
       "mbd": 0,
       "mbdf": 354,
-      "njk": 12,
+      "njk": 16,
       "py": 0,
       "yml": 0
     },
@@ -2539,7 +2624,7 @@
       "md": 43,
       "mbd": 0,
       "mbdf": 44,
-      "njk": 46,
+      "njk": 42,
       "py": 0,
       "yml": 0
     },
@@ -2572,21 +2657,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 5354.2827,
-    "yash-chowdhary": 6947.3525,
-    "Tejas2805": 292.4316,
-    "dvrylc": 13.619877,
+    "openorclose": 5246.0874,
+    "yash-chowdhary": 6807.45,
+    "Tejas2805": 286.51315,
+    "dvrylc": 13.344548,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 13.549672,
-    "ang-zeyu": 54841.113,
+    "hcwong": 13.275718,
+    "ang-zeyu": 54079.07,
     "geshuming": 0.0,
-    "alyip98": 2.3950126,
-    "nbriannl": 10569.218,
-    "le0tan": 130901.52,
-    "madanalogy": 140.33167,
+    "alyip98": 2.346552,
+    "nbriannl": 10356.38,
+    "le0tan": 128253.52,
+    "madanalogy": 137.49236,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
