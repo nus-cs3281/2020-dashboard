@@ -576,6 +576,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-08-09",
+        "commitResults": [
+          {
+            "hash": "8d8c1091e455913f3e31a6cde9fc61a619432358",
+            "messageTitle": "[#1263] Tests: Simplify resource loading (#1264)",
+            "messageBody": "Tests: Simplify code used for loading resources\r\n\r\nIn many of our tests, we make repeated use of the ClassLoader \r\nto obtain the path to each resource used in the tests. \r\nThis has resulted in a lot of repetitive code.\r\n\r\nLet\u0027s create a helper method to reduce this repetition,\r\nand simplify the resource loading code.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 119,
+                "deletions": 123
+              }
+            }
+          }
+        ]
       }
     ],
     "Tejas2805": [
@@ -2251,7 +2267,7 @@
       "yml": 0
     },
     "anubh-v": {
-      "java": 406,
+      "java": 523,
       "js": 1,
       "scss": 30,
       "json": 0,
@@ -2432,21 +2448,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 36.856853,
+    "ccyccyccy": 35.84676,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 417.33456,
+    "niqiukun": 405.93164,
     "openorclose": 0.0,
-    "yash-chowdhary": 461.28577,
-    "anubh-v": 283.24835,
-    "Tejas2805": 2313.843,
+    "yash-chowdhary": 448.60052,
+    "anubh-v": 499.82202,
+    "Tejas2805": 2251.8474,
     "dvrylc": 0.0,
-    "jamessspanggg": 2737.287,
+    "jamessspanggg": 2664.0876,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 5676.7065,
+    "0blivious": 5524.1304,
     "hcwong": 0.0,
-    "ang-zeyu": 404.20236,
+    "ang-zeyu": 393.1633,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
