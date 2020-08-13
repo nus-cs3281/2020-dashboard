@@ -18091,9 +18091,9 @@
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "        font-weight: bold;"
+        "content": "        font-weight: normal;"
       },
       {
         "lineNumber": 113,
@@ -18793,7 +18793,8 @@
       "niqiukun": 1,
       "Tejas2805": 186,
       "jamessspanggg": 7,
-      "0blivious": 12,
+      "0blivious": 11,
+      "-": 1,
       "ang-zeyu": 5
     }
   },
@@ -42728,91 +42729,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     *"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static List\u003cRepoConfiguration\u003e getRepoConfigurations(LocationsCliArguments cliArguments) {"
+        "content": "     * @throws ParseException if all repo locations are invalid."
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e configs \u003d new ArrayList\u003c\u003e();"
+        "content": "     */"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (String locationString : cliArguments.getLocations()) {"
+        "content": "    public static List\u003cRepoConfiguration\u003e getRepoConfigurations(LocationsCliArguments cliArguments)"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "            try {"
+        "content": "            throws ParseException {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "                configs.add(new RepoConfiguration(new RepoLocation(locationString)));"
+        "content": "        List\u003cRepoConfiguration\u003e configs \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "            } catch (InvalidLocationException ile) {"
+        "content": "        for (String locationString : cliArguments.getLocations()) {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "                logger.log(Level.WARNING, ile.getMessage(), ile);"
+        "content": "            try {"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                configs.add(new RepoConfiguration(new RepoLocation(locationString)));"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            } catch (InvalidLocationException ile) {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                logger.log(Level.WARNING, ile.getMessage(), ile);"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        return configs;"
+        "content": "            }"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 142,
@@ -42826,42 +42827,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public static String getVersion() {"
+        "content": "        if (configs.isEmpty()) {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "        String version \u003d RepoSense.class.getPackage().getImplementationVersion();"
+        "content": "            throw new ParseException(\"All repository locations are invalid.\");"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (version \u003d\u003d null || version.equals(VERSION_UNSPECIFIED)) {"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "            version \u003d System.getProperty(\"version\");"
+        "content": "        return configs;"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 149,
@@ -42875,17 +42876,66 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        return version;"
+        "content": "    public static String getVersion() {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        String version \u003d RepoSense.class.getPackage().getImplementationVersion();"
       },
       {
         "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (version \u003d\u003d null || version.equals(VERSION_UNSPECIFIED)) {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            version \u003d System.getProperty(\"version\");"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return version;"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
@@ -42895,7 +42945,7 @@
     "authorContributionMap": {
       "anubh-v": 21,
       "jamessspanggg": 4,
-      "-": 127
+      "-": 134
     }
   },
   {
@@ -85124,49 +85174,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    @Test (expected \u003d ParseException.class)"
       },
       {
         "lineNumber": 488,
         "author": {
-          "gitId": "yash-chowdhary"
+          "gitId": "-"
         },
-        "content": "    public void parse_invalidRepoLocation_emptyRepoConfigurationList() throws Exception {"
+        "content": "    public void parse_noValidRepoLocation_throwsParseException()"
       },
       {
         "lineNumber": 489,
         "author": {
           "gitId": "-"
         },
-        "content": "        String input \u003d new InputBuilder().addRepos(\"https://githubaaaa.com/asdasdasdasd/RepoSense\").build();"
+        "content": "            throws ParseException, HelpScreenException {"
       },
       {
         "lineNumber": 490,
         "author": {
           "gitId": "-"
         },
-        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
+        "content": "        String input \u003d new InputBuilder().addRepos(\"https://githubaaaa.com/asdasdasdasd/RepoSense\").build();"
       },
       {
         "lineNumber": 491,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertTrue(cliArguments instanceof LocationsCliArguments);"
+        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
       },
       {
         "lineNumber": 492,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e repoConfigs \u003d RepoSense.getRepoConfigurations((LocationsCliArguments) cliArguments);"
+        "content": "        Assert.assertTrue(cliArguments instanceof LocationsCliArguments);"
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertTrue(repoConfigs.isEmpty());"
+        "content": "        RepoSense.getRepoConfigurations((LocationsCliArguments) cliArguments);"
       },
       {
         "lineNumber": 494,
@@ -86369,9 +86419,9 @@
     "authorContributionMap": {
       "niqiukun": 43,
       "anubh-v": 5,
-      "yash-chowdhary": 40,
+      "yash-chowdhary": 39,
       "Tejas2805": 4,
-      "-": 572
+      "-": 573
     }
   },
   {
