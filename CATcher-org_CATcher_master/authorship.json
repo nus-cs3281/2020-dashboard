@@ -19568,40 +19568,96 @@
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "le0tan"
+          "gitId": "-"
         },
-        "content": "  private compareValue(valueA: string | number, valueB: string | number): number {"
+        "content": "  private compareIntegerValue(valueA: number, valueB: number): number {"
       },
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "le0tan"
+          "gitId": "-"
         },
-        "content": "    const a \u003d String(valueA || \u0027\u0027).toUpperCase();"
+        "content": "    return (valueA \u003c valueB ? -1 : 1) * (this.sort.direction \u003d\u003d\u003d \u0027asc\u0027 ? 1 : -1);"
       },
       {
         "lineNumber": 166,
-        "author": {
-          "gitId": "le0tan"
-        },
-        "content": "    const b \u003d String(valueB || \u0027\u0027).toUpperCase();"
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    return (a \u003c b ? -1 : 1) * (this.sort.direction \u003d\u003d\u003d \u0027asc\u0027 ? 1 : -1);"
-      },
-      {
-        "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
       },
       {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "  private compareValue(valueA: string | number, valueB: string | number): number {"
+      },
+      {
         "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    if (typeof valueA \u003d\u003d\u003d \u0027number\u0027 \u0026\u0026 typeof valueB \u003d\u003d\u003d \u0027number\u0027) {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return this.compareIntegerValue(valueA, valueB);"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "    const a \u003d String(valueA || \u0027\u0027).toUpperCase();"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "le0tan"
+        },
+        "content": "    const b \u003d String(valueB || \u0027\u0027).toUpperCase();"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return (a \u003c b ? -1 : 1) * (this.sort.direction \u003d\u003d\u003d \u0027asc\u0027 ? 1 : -1);"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
@@ -19611,7 +19667,7 @@
     "authorContributionMap": {
       "geshuming": 2,
       "le0tan": 3,
-      "-": 164
+      "-": 172
     }
   },
   {
