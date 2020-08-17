@@ -1021,6 +1021,26 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-08-16",
+        "commitResults": [
+          {
+            "hash": "5ceec1862ddc6c38e94047806f57d96cf09c14f6",
+            "messageTitle": "[#1232] Fix footer link (#1305)",
+            "messageBody": "The link in the footer of the RepoSense report is outdated as we have moved\r\neverything to the website.\r\n\r\nLet\u0027s update the links in the footer to point to the website based on whether \r\na specific version or master is being used for deployment. \r\n\r\nIf the master branch is used for deployment, we point to the latest UG. If the \r\nlatest release is used, we point to the UG in the production site.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 7,
+                "deletions": 2
+              },
+              "js": {
+                "insertions": 18,
+                "deletions": 6
+              }
+            }
+          }
+        ]
       }
     ],
     "dvrylc": [],
@@ -2256,7 +2276,7 @@
     },
     "yash-chowdhary": {
       "java": 95,
-      "js": 9,
+      "js": 7,
       "scss": 0,
       "json": 0,
       "md": 98,
@@ -2280,12 +2300,12 @@
     },
     "Tejas2805": {
       "java": 31,
-      "js": 10,
+      "js": 22,
       "scss": 616,
       "json": 26,
       "md": 0,
       "py": 0,
-      "pug": 62,
+      "pug": 66,
       "gradle": 9,
       "sh": 0,
       "yml": 18
@@ -2448,21 +2468,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 35.84676,
+    "ccyccyccy": 34.89069,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 405.93164,
+    "niqiukun": 395.1354,
     "openorclose": 0.0,
-    "yash-chowdhary": 448.60052,
-    "anubh-v": 499.82202,
-    "Tejas2805": 2251.8474,
+    "yash-chowdhary": 436.59213,
+    "anubh-v": 486.86032,
+    "Tejas2805": 2195.1619,
     "dvrylc": 0.0,
-    "jamessspanggg": 2664.0876,
+    "jamessspanggg": 2594.7053,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 5524.1304,
+    "0blivious": 5379.5464,
     "hcwong": 0.0,
-    "ang-zeyu": 393.1633,
+    "ang-zeyu": 382.71088,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

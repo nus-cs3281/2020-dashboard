@@ -1790,6 +1790,34 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-08-16",
+        "commitResults": [
+          {
+            "hash": "9e15e9b94fa49dfe9ddb037d6113129f56ad7e75",
+            "messageTitle": "Add frontend live / hot reload workflow (#1327)",
+            "messageBody": "The frontend workflow requires launching webpack in watch mode. This is\r\nthen followed by manually copying the built bundles to the output\r\ndirectory of the site, or terminating and then relaunching the MarkBind\r\ncommand.\r\n\r\nWith a frontend entry point setup in the core-web package, and the\r\nMarkBind /vue-strap fork merged into the main monorepo, let\u0027s take\r\nadvantage of this and add a live / hot reload workflow.\r\nThis provides a near instant edit-feedback development cycle that makes\r\nfrontend development much quicker.\r\n\r\nThis is integrated into the markbind serve command using the --dev\r\nor -d option.",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 14,
+                "deletions": 2
+              },
+              "js": {
+                "insertions": 65,
+                "deletions": 20
+              },
+              "json": {
+                "insertions": 3,
+                "deletions": 0
+              },
+              "njk": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2388,8 +2416,8 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 382,
-      "css": 504,
+      "js": 145,
+      "css": 91,
       "json": 18,
       "md": 56,
       "mbd": 0,
@@ -2400,8 +2428,8 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 153,
-      "css": 336,
+      "js": 152,
+      "css": 42,
       "json": 4,
       "md": 1044,
       "mbd": 0,
@@ -2496,15 +2524,15 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2633,
-      "css": 638,
-      "json": 376,
-      "md": 315,
+      "js": 2584,
+      "css": 92,
+      "json": 379,
+      "md": 328,
       "mbd": 0,
       "mbdf": 354,
-      "njk": 18,
+      "njk": 16,
       "py": 0,
-      "yml": 2
+      "yml": 1
     },
     "geshuming": {
       "java": 0,
@@ -2533,7 +2561,7 @@
     "nbriannl": {
       "java": 0,
       "js": 40,
-      "css": 279,
+      "css": 34,
       "json": 4,
       "md": 145,
       "mbd": 0,
@@ -2544,13 +2572,13 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 727,
-      "css": 47,
+      "js": 661,
+      "css": 12,
       "json": 0,
       "md": 43,
       "mbd": 0,
       "mbdf": 44,
-      "njk": 42,
+      "njk": 39,
       "py": 0,
       "yml": 0
     },
@@ -2583,21 +2611,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 5062.0005,
-    "yash-chowdhary": 6569.3496,
-    "Tejas2805": 276.44437,
-    "dvrylc": 12.876102,
+    "openorclose": 4965.1577,
+    "yash-chowdhary": 6444.1484,
+    "Tejas2805": 271.14917,
+    "dvrylc": 12.62975,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 12.809507,
-    "ang-zeyu": 54837.535,
+    "hcwong": 12.564423,
+    "ang-zeyu": 53821.555,
     "geshuming": 0.0,
-    "alyip98": 2.2640998,
-    "nbriannl": 9994.167,
-    "le0tan": 123750.11,
-    "madanalogy": 132.6626,
+    "alyip98": 2.2207758,
+    "nbriannl": 9803.598,
+    "le0tan": 121381.9,
+    "madanalogy": 130.12215,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
