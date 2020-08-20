@@ -1818,6 +1818,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-08-19",
+        "commitResults": [
+          {
+            "hash": "b5bdc1f561b065cd6510e4de25a8650639e4b83b",
+            "messageTitle": "Force webpack build context to core-web directory (#1330)",
+            "messageBody": "Webpack uses the current working directory as the build context from\r\nwhich to resolve its loaders and modules,\r\nand babel uses it as the conceptual project root directory.\r\n\r\nWhen building frontend bundles, the working directory and thus build\r\ncontext correctly resides at the core-web package.\r\nWhen serving a site outside of the markbind/ project folder with the\r\n--dev option however, it is not, causing the core-web build process to\r\nfail.\r\n\r\nLet\u0027s explicitly set the build context for webpack and babel to the\r\ncore-web project folder hence.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 2,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2524,7 +2540,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2584,
+      "js": 2586,
       "css": 92,
       "json": 379,
       "md": 328,
@@ -2611,21 +2627,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4965.1577,
-    "yash-chowdhary": 6444.1484,
-    "Tejas2805": 271.14917,
-    "dvrylc": 12.62975,
+    "openorclose": 4908.8193,
+    "yash-chowdhary": 6371.3164,
+    "Tejas2805": 268.0699,
+    "dvrylc": 12.486461,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 12.564423,
-    "ang-zeyu": 53821.555,
+    "hcwong": 12.421769,
+    "ang-zeyu": 53221.77,
     "geshuming": 0.0,
-    "alyip98": 2.2207758,
-    "nbriannl": 9803.598,
-    "le0tan": 121381.9,
-    "madanalogy": 130.12215,
+    "alyip98": 2.1955445,
+    "nbriannl": 9692.705,
+    "le0tan": 120005.305,
+    "madanalogy": 128.64531,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
