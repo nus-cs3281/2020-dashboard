@@ -22651,6 +22651,289 @@
     }
   },
   {
+    "path": "src/app/shared/label-dropdown/label-dropdown.component.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Component, OnInit, Input } from \u0027@angular/core\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { LabelService } from \u0027../../core/services/label.service\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { FormGroup, AbstractControl } from \u0027@angular/forms\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import { Label } from \u0027../../core/models/label.model\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const WHITE_TEXT_CLASS \u003d \u0027white-text\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const BLACK_TEXT_CLASS \u003d \u0027black-text\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@Component({"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selector: \u0027app-label-dropdown\u0027,"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  templateUrl: \u0027./label-dropdown.component.html\u0027,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  styleUrls: [\u0027./label-dropdown.component.css\u0027]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "})"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export class LabelDropdownComponent implements OnInit {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  dropdownControl: AbstractControl;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @Input() attributeName: string;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @Input() initialValue: string;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  @Input() dropdownForm: FormGroup;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  selectedColor: string;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  labelList: Label[];"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  constructor(public labelService: LabelService) { }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  ngOnInit() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.selectedColor \u003d this.labelService.getColorOfLabel(this.initialValue);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.labelList \u003d this.labelService.getLabelList(this.attributeName);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.dropdownControl \u003d this.dropdownForm.get(this.attributeName);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  setSelectedLabelColor(labelValue: string) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.selectedColor \u003d this.labelService.getColorOfLabel(labelValue);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  get dropdownTextColor(): string {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    return this.labelService.isDarkColor(this.selectedColor) ? WHITE_TEXT_CLASS : BLACK_TEXT_CLASS;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 4,
+      "-": 35
+    }
+  },
+  {
     "path": "src/app/shared/view-issue/new-team-response/new-team-response.component.ts",
     "fileType": "ts",
     "lines": [
@@ -25240,6 +25523,316 @@
     }
   },
   {
+    "path": "tests/app/shared/label-dropdown/label-dropdown.component.spec.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { LabelDropdownComponent, BLACK_TEXT_CLASS, WHITE_TEXT_CLASS } from \u0027../../../../src/app/shared/label-dropdown/label-dropdown.component\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { LabelService } from \u0027../../../../src/app/core/services/label.service\u0027;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { FormGroup, FormBuilder, Validators } from \u0027@angular/forms\u0027;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { SEVERITY_LABELS, COLOR_WHITE, SEVERITY } from \u0027../../../constants/label.constants\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "describe(\u0027LabelDropdownComponent\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  let labelDropdownComponent: LabelDropdownComponent;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  let labelService: any;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  beforeEach(() \u003d\u003e {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelService \u003d jasmine.createSpyObj(LabelService, [\u0027getLabelList\u0027,"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      \u0027getColorOfLabel\u0027, \u0027isDarkColor\u0027]);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    const formGroup: FormGroup \u003d new FormBuilder().group(({"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      title: [\u0027\u0027, Validators.required],"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      description: [\u0027No details provided.\u0027],"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      severity: [\u0027\u0027, Validators.required],"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "      type: [\u0027\u0027, Validators.required],"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    }));"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelDropdownComponent \u003d new LabelDropdownComponent(labelService);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelDropdownComponent.dropdownForm \u003d formGroup;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  it(\u0027should be initialised with a list of labels, an initial colour and a dropdown control\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelDropdownComponent.attributeName \u003d SEVERITY;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelDropdownComponent.initialValue \u003d \u0027\u0027;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelService.getLabelList.and.returnValue(SEVERITY_LABELS);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelService.getColorOfLabel.and.returnValue(COLOR_WHITE);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelDropdownComponent.ngOnInit();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    expect(labelDropdownComponent.labelList).toEqual(SEVERITY_LABELS);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    expect(labelDropdownComponent.selectedColor).toEqual(COLOR_WHITE);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    expect(labelDropdownComponent.dropdownControl).toBeDefined();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  it(\u0027should set its dropdown text colour based on the darkness of the current colour\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelService.isDarkColor.and.returnValue(false);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    expect(labelDropdownComponent.dropdownTextColor).toBe(BLACK_TEXT_CLASS);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    labelService.isDarkColor.and.returnValue(true);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "    expect(labelDropdownComponent.dropdownTextColor).toBe(WHITE_TEXT_CLASS);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 43
+    }
+  },
+  {
     "path": "tests/auto-spy.ts",
     "fileType": "ts",
     "lines": [
@@ -27079,6 +27672,541 @@
     "authorContributionMap": {
       "geshuming": 5,
       "anubh-v": 24
+    }
+  },
+  {
+    "path": "tests/constants/label.constants.ts",
+    "fileType": "ts",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "import { Label } from \u0027../../src/app/core/models/label.model\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Label name constants"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const SEVERITY_LOW \u003d \u0027Low\u0027;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const SEVERITY_MEDIUM \u003d \u0027Medium\u0027;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const SEVERITY_HIGH \u003d \u0027High\u0027;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const TYPE_DOCUMENTATION_BUG \u003d \u0027DocumentationBug\u0027;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const TYPE_FUNCTIONALITY_BUG \u003d \u0027FunctionalityBug\u0027;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const RESPONSE_ACCEPTED \u003d \u0027Accepted\u0027;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const RESPONSE_REJECTED \u003d \u0027Rejected\u0027;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const RESPONSE_ISSUE_UNCLEAR \u003d \u0027IssueUnclear\u0027;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const RESPONSE_CANNOT_REPRODUCE \u003d \u0027CannotReproduce\u0027;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const STATUS_DONE \u003d \u0027Done\u0027;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const STATUS_INCOMPLETE \u003d \u0027Incomplete\u0027;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Label category constants"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const SEVERITY \u003d \u0027severity\u0027;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const TYPE \u003d \u0027type\u0027;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const RESPONSE \u003d \u0027response\u0027;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const STATUS \u003d \u0027status\u0027;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Label color constants"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_BLACK  \u003d \u0027000000\u0027;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_WHITE  \u003d \u0027FFFFFF\u0027;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_SEVERITY_LOW \u003d \u0027ffcccc\u0027;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_SEVERITY_MEDIUM \u003d \u0027ff9999\u0027;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_SEVERITY_HIGH \u003d \u0027ff6666\u0027;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_TYPE_DOCUMENTATION_BUG \u003d \u0027d966ff\u0027;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_TYPE_FUNCTIONALITY_BUG \u003d \u00279900cc\u0027;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_RESPONSE_ACCEPTED \u003d \u002700802b\u0027;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_RESPONSE_REJECTED \u003d \u0027ff9900\u0027;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_RESPONSE_ISSUE_UNCLEAR \u003d \u0027ffcc80\u0027;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_RESPONSE_CANNOT_REPRODUCE \u003d \u0027ffebcc\u0027;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_STATUS_DONE \u003d \u0027a6a6a6\u0027;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const COLOR_STATUS_INCOMPLETE \u003d \u0027000000\u0027;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// CSS style constants"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const DARK_BG_LIGHT_TEXT \u003d {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027background-color\u0027 : `#${COLOR_BLACK}`,"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027border-radius\u0027 : \u00273px\u0027,"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027cursor\u0027 : \u0027default\u0027,"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027padding\u0027 : \u00273px\u0027,"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027color\u0027 : `#${COLOR_WHITE}`,"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027font-weight\u0027 : \u0027410\u0027,"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const LIGHT_BG_DARK_TEXT \u003d {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027background-color\u0027 : `#${COLOR_WHITE}`,"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027border-radius\u0027 : \u00273px\u0027,"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027cursor\u0027 : \u0027default\u0027,"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027padding\u0027 : \u00273px\u0027,"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027color\u0027 : `#${COLOR_BLACK}`,"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u0027font-weight\u0027 : \u0027410\u0027,"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Constant array of labels to simulate Github response"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "export const LABEL_ARRAY \u003d ["
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        color: COLOR_RESPONSE_ACCEPTED,"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        name: RESPONSE + \u0027.\u0027 + RESPONSE_ACCEPTED"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        color: COLOR_SEVERITY_LOW,"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        name: SEVERITY + \u0027.\u0027 + SEVERITY_LOW"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        color: COLOR_TYPE_FUNCTIONALITY_BUG,"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        name: TYPE + \u0027.\u0027 + TYPE_FUNCTIONALITY_BUG"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "];"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "// List of labels"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "export const SEVERITY_LABELS \u003d [new Label(SEVERITY, SEVERITY_LOW, COLOR_SEVERITY_LOW),"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  new Label(SEVERITY, SEVERITY_MEDIUM, COLOR_SEVERITY_MEDIUM),"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  new Label(SEVERITY, SEVERITY_HIGH, COLOR_SEVERITY_HIGH)];"
+      }
+    ],
+    "authorContributionMap": {
+      "anubh-v": 7,
+      "-": 68
     }
   },
   {
