@@ -1834,6 +1834,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-08-22",
+        "commitResults": [
+          {
+            "hash": "943bf99f5f83f8308d318be48893b7cd9cefb789",
+            "messageTitle": "Change code fence html line break to newlines (#1333)",
+            "messageBody": "The codeBlockCopyButtons plugin relies on the textContent of the code\r\nfence html element.\r\nThe textContent does not convert html \u003cbr\u003e elements into newlines.\r\n\r\nLet\u0027s change the code fence markdown rendering function to use newlines\r\ninstead of \u003cbr\u003e elements hence.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 2,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2432,7 +2448,7 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 145,
+      "js": 143,
       "css": 91,
       "json": 18,
       "md": 56,
@@ -2540,7 +2556,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2586,
+      "js": 2587,
       "css": 92,
       "json": 379,
       "md": 328,
@@ -2627,21 +2643,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4908.8193,
-    "yash-chowdhary": 6371.3164,
-    "Tejas2805": 268.0699,
-    "dvrylc": 12.486461,
+    "openorclose": 4853.734,
+    "yash-chowdhary": 6300.087,
+    "Tejas2805": 265.05948,
+    "dvrylc": 12.346354,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 12.421769,
-    "ang-zeyu": 53221.77,
+    "hcwong": 12.282477,
+    "ang-zeyu": 52634.5,
     "geshuming": 0.0,
-    "alyip98": 2.1955445,
-    "nbriannl": 9692.705,
-    "le0tan": 120005.305,
-    "madanalogy": 128.64531,
+    "alyip98": 2.1709175,
+    "nbriannl": 9584.379,
+    "le0tan": 118657.79,
+    "madanalogy": 127.198425,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
