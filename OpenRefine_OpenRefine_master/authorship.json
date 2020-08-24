@@ -1374,9 +1374,9 @@
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "import static org.testng.AssertJUnit.assertTrue;"
+        "content": "import static org.testng.Assert.assertTrue;"
       },
       {
         "lineNumber": 7,
@@ -1768,28 +1768,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"a\", project.rows.get(0).cells.get(0).value);"
+        "content": "\t\tassertEquals(project.rows.get(0).cells.get(0).value, \"a\");"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"b\", project.rows.get(0).cells.get(1).value);"
+        "content": "\t\tassertEquals(project.rows.get(0).cells.get(1).value, \"b\");"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"e\", project.rows.get(1).cells.get(0).value);"
+        "content": "\t\tassertEquals(project.rows.get(1).cells.get(0).value, \"e\");"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"d\", project.rows.get(1).cells.get(1).value);"
+        "content": "\t\tassertEquals(project.rows.get(1).cells.get(1).value, \"d\");"
       },
       {
         "lineNumber": 66,
@@ -1885,16 +1885,16 @@
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"a\", project.rows.get(0).cells.get(0).value);"
+        "content": "\t\tassertEquals(project.rows.get(0).cells.get(0).value, \"a\");"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"b\", project.rows.get(0).cells.get(1).value);"
+        "content": "\t\tassertEquals(project.rows.get(0).cells.get(1).value, \"b\");"
       },
       {
         "lineNumber": 81,
@@ -1913,9 +1913,9 @@
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"d\", project.rows.get(1).cells.get(1).value);"
+        "content": "\t\tassertEquals(project.rows.get(1).cells.get(1).value, \"d\");"
       },
       {
         "lineNumber": 84,
@@ -2011,16 +2011,16 @@
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"a\", project.rows.get(0).cells.get(0).value);"
+        "content": "\t\tassertEquals(project.rows.get(0).cells.get(0).value, \"a\");"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"b\", project.rows.get(0).cells.get(1).value);"
+        "content": "\t\tassertEquals(project.rows.get(0).cells.get(1).value, \"b\");"
       },
       {
         "lineNumber": 99,
@@ -2032,28 +2032,28 @@
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(12345.123, project.rows.get(1).cells.get(0).value);"
+        "content": "\t\tassertEquals(project.rows.get(1).cells.get(0).value, 12345.123);"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"d\", project.rows.get(1).cells.get(1).value);"
+        "content": "\t\tassertEquals(project.rows.get(1).cells.get(1).value, \"d\");"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
         "content": "\t}"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
         "content": "\t"
       },
@@ -2132,7 +2132,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\t\tassertEquals(\"c\", project.rows.get(1).cells.get(0).value);"
+        "content": "\t\tassertEquals(project.rows.get(1).cells.get(0).value, \"c\");"
       },
       {
         "lineNumber": 115,
@@ -2157,8 +2157,8 @@
       }
     ],
     "authorContributionMap": {
-      "jamessspanggg": 39,
-      "-": 78
+      "jamessspanggg": 29,
+      "-": 88
     }
   },
   {
