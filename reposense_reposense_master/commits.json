@@ -592,6 +592,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-01",
+        "commitResults": [
+          {
+            "hash": "884c25aa5f4b9382c55667790ff3a8c9df6e4047",
+            "messageTitle": "[#1257] AuthorConfigCsvParser: Initialize author fully before adding to config (#1270)",
+            "messageBody": "The `AuthorConfigCsvParser` adds each `Author` object to the\r\n`AuthorConfiguration` before the author is fully initialized\r\nwith its details (emails, aliases, display name, ignore glob list).\r\n\r\nThis requires the `AuthorConfiguration` to be updated again after \r\nthe `Author` object is fully initialized. \r\n\r\nLet\u0027s initialize the `Author` object fully before adding it into the\r\n`AuthorConfiguration` object. With this change, we can also remove\r\nthe code that re-updates the author config after initializing the \r\n`Author` object.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 9,
+                "deletions": 47
+              }
+            }
+          }
+        ]
       }
     ],
     "Tejas2805": [
@@ -2287,7 +2303,7 @@
       "yml": 0
     },
     "anubh-v": {
-      "java": 523,
+      "java": 532,
       "js": 1,
       "scss": 30,
       "json": 0,
@@ -2468,21 +2484,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 34.89069,
+    "ccyccyccy": 32.885887,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 395.1354,
+    "niqiukun": 372.48914,
     "openorclose": 0.0,
-    "yash-chowdhary": 436.59213,
-    "anubh-v": 486.86032,
-    "Tejas2805": 2195.1619,
+    "yash-chowdhary": 411.42307,
+    "anubh-v": 469.3186,
+    "Tejas2805": 2071.6992,
     "dvrylc": 0.0,
-    "jamessspanggg": 2594.7053,
+    "jamessspanggg": 2448.9307,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 5379.5464,
+    "0blivious": 5075.8286,
     "hcwong": 0.0,
-    "ang-zeyu": 382.71088,
+    "ang-zeyu": 360.78928,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
