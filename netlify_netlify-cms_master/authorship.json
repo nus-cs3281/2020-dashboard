@@ -36752,7 +36752,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    this.props.onMode(\u0027visual\u0027);"
+        "content": "    this.props.onMode(\u0027rich_text\u0027);"
       },
       {
         "lineNumber": 94,
@@ -36806,9 +36806,9 @@
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    const { className, field, t } \u003d this.props;"
+        "content": "    const { className, field, isShowModeToggle, t } \u003d this.props;"
       },
       {
         "lineNumber": 102,
@@ -36869,236 +36869,250 @@
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "            t\u003d{t}"
+        "content": "            isShowModeToggle\u003d{isShowModeToggle}"
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "          /\u003e"
+        "content": "            t\u003d{t}"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003c/EditorControlBar\u003e"
+        "content": "          /\u003e"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cClassNames\u003e"
+        "content": "        \u003c/EditorControlBar\u003e"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "          {({ css, cx }) \u003d\u003e ("
+        "content": "        \u003cClassNames\u003e"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cSlate"
+        "content": "          {({ css, cx }) \u003d\u003e ("
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "              className\u003d{cx("
+        "content": "            \u003cSlate"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "                className,"
+        "content": "              className\u003d{cx("
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "                css`"
+        "content": "                className,"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "                  ${rawEditorStyles({ minimal: field.get(\u0027minimal\u0027) })}"
+        "content": "                css`"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "                `,"
+        "content": "                  ${rawEditorStyles({ minimal: field.get(\u0027minimal\u0027) })}"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "              )}"
+        "content": "                `,"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "              value\u003d{this.state.value}"
+        "content": "              )}"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "              onChange\u003d{this.handleChange}"
+        "content": "              value\u003d{this.state.value}"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "              onPaste\u003d{this.handlePaste}"
+        "content": "              onChange\u003d{this.handleChange}"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "              onCut\u003d{this.handleCut}"
+        "content": "              onPaste\u003d{this.handlePaste}"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "              onCopy\u003d{this.handleCopy}"
+        "content": "              onCut\u003d{this.handleCut}"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "              ref\u003d{this.processRef}"
+        "content": "              onCopy\u003d{this.handleCopy}"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              ref\u003d{this.processRef}"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003c/ClassNames\u003e"
+        "content": "          )}"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003c/RawEditorContainer\u003e"
+        "content": "        \u003c/ClassNames\u003e"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "    );"
+        "content": "      \u003c/RawEditorContainer\u003e"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    );"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  }"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "RawEditor.propTypes \u003d {"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "  onChange: PropTypes.func.isRequired,"
+        "content": "RawEditor.propTypes \u003d {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "  onMode: PropTypes.func.isRequired,"
+        "content": "  onChange: PropTypes.func.isRequired,"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "  className: PropTypes.string.isRequired,"
+        "content": "  onMode: PropTypes.func.isRequired,"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "  value: PropTypes.string,"
+        "content": "  className: PropTypes.string.isRequired,"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "  field: ImmutablePropTypes.map.isRequired,"
+        "content": "  value: PropTypes.string,"
       },
       {
         "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  field: ImmutablePropTypes.map.isRequired,"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  isShowModeToggle: PropTypes.bool.isRequired,"
+      },
+      {
+        "lineNumber": 144,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "  t: PropTypes.func.isRequired,"
       },
       {
-        "lineNumber": 143,
+        "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
@@ -37106,8 +37120,8 @@
       }
     ],
     "authorContributionMap": {
-      "tiuweehan": 3,
-      "-": 140
+      "tiuweehan": 2,
+      "-": 143
     }
   },
   {
@@ -37581,1403 +37595,1431 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    plugins: ImmutablePropTypes.map,"
+        "content": "    isShowModeToggle: PropTypes.bool.isRequired,"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    onSubmit: PropTypes.func,"
+        "content": "    plugins: ImmutablePropTypes.map,"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    onAddAsset: PropTypes.func,"
+        "content": "    onSubmit: PropTypes.func,"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    getAsset: PropTypes.func,"
+        "content": "    onAddAsset: PropTypes.func,"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    disabled: PropTypes.bool,"
+        "content": "    getAsset: PropTypes.func,"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    onMarkClick: PropTypes.func,"
+        "content": "    disabled: PropTypes.bool,"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "    onBlockClick: PropTypes.func,"
+        "content": "    onMarkClick: PropTypes.func,"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "    onLinkClick: PropTypes.func,"
+        "content": "    onBlockClick: PropTypes.func,"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    hasMark: PropTypes.func,"
+        "content": "    onLinkClick: PropTypes.func,"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    hasInline: PropTypes.func,"
+        "content": "    hasMark: PropTypes.func,"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    hasBlock: PropTypes.func,"
+        "content": "    hasInline: PropTypes.func,"
       },
       {
         "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    hasBlock: PropTypes.func,"
+      },
+      {
+        "lineNumber": 79,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "    t: PropTypes.func.isRequired,"
       },
       {
-        "lineNumber": 79,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  };"
-      },
-      {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "  isVisible \u003d button \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "    const { buttons } \u003d this.props;"
+        "content": "  isVisible \u003d button \u003d\u003e {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    return !List.isList(buttons) || buttons.includes(button);"
+        "content": "    const { buttons } \u003d this.props;"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    return !List.isList(buttons) || buttons.includes(button);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleBlockClick \u003d (event, type) \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (event) {"
+        "content": "  handleBlockClick \u003d (event, type) \u003d\u003e {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "      event.preventDefault();"
+        "content": "    if (event) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      event.preventDefault();"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.props.onBlockClick(type);"
+        "content": "    }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.props.onBlockClick(type);"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleMarkClick \u003d (event, type) \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    event.preventDefault();"
+        "content": "  handleMarkClick \u003d (event, type) \u003d\u003e {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.props.onMarkClick(type);"
+        "content": "    event.preventDefault();"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.props.onMarkClick(type);"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "  render() {"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    const {"
+        "content": "  render() {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "      onLinkClick,"
+        "content": "    const {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "      onToggleMode,"
+        "content": "      onLinkClick,"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "      rawMode,"
+        "content": "      onToggleMode,"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "      plugins,"
+        "content": "      rawMode,"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "      disabled,"
+        "content": "      isShowModeToggle,"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "      onSubmit,"
+        "content": "      plugins,"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "      hasMark \u003d () \u003d\u003e {},"
+        "content": "      disabled,"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "      hasInline \u003d () \u003d\u003e {},"
+        "content": "      onSubmit,"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "      hasBlock \u003d () \u003d\u003e {},"
+        "content": "      hasMark \u003d () \u003d\u003e {},"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "      editorComponents,"
+        "content": "      hasInline \u003d () \u003d\u003e {},"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      t,"
+        "content": "      hasBlock \u003d () \u003d\u003e {},"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    } \u003d this.props;"
+        "content": "      editorComponents,"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    const isVisible \u003d this.isVisible;"
+        "content": "      t,"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "    const showEditorComponents \u003d !editorComponents || editorComponents.size \u003e\u003d 1;"
+        "content": "    } \u003d this.props;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "    const showPlugin \u003d ({ id }) \u003d\u003e (editorComponents ? editorComponents.includes(id) : true);"
+        "content": "    const isVisible \u003d this.isVisible;"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    const pluginsList \u003d plugins ? plugins.toList().filter(showPlugin) : List();"
+        "content": "    const showEditorComponents \u003d !editorComponents || editorComponents.size \u003e\u003d 1;"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const showPlugin \u003d ({ id }) \u003d\u003e (editorComponents ? editorComponents.includes(id) : true);"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    const headingOptions \u003d {"
+        "content": "    const pluginsList \u003d plugins ? plugins.toList().filter(showPlugin) : List();"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u0027heading-one\u0027: t(\u0027editor.editorWidgets.headingOptions.headingOne\u0027),"
+        "content": ""
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u0027heading-two\u0027: t(\u0027editor.editorWidgets.headingOptions.headingTwo\u0027),"
+        "content": "    const headingOptions \u003d {"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u0027heading-three\u0027: t(\u0027editor.editorWidgets.headingOptions.headingThree\u0027),"
+        "content": "      \u0027heading-one\u0027: t(\u0027editor.editorWidgets.headingOptions.headingOne\u0027),"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u0027heading-four\u0027: t(\u0027editor.editorWidgets.headingOptions.headingFour\u0027),"
+        "content": "      \u0027heading-two\u0027: t(\u0027editor.editorWidgets.headingOptions.headingTwo\u0027),"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u0027heading-five\u0027: t(\u0027editor.editorWidgets.headingOptions.headingFive\u0027),"
+        "content": "      \u0027heading-three\u0027: t(\u0027editor.editorWidgets.headingOptions.headingThree\u0027),"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u0027heading-six\u0027: t(\u0027editor.editorWidgets.headingOptions.headingSix\u0027),"
+        "content": "      \u0027heading-four\u0027: t(\u0027editor.editorWidgets.headingOptions.headingFour\u0027),"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "      \u0027heading-five\u0027: t(\u0027editor.editorWidgets.headingOptions.headingFive\u0027),"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      \u0027heading-six\u0027: t(\u0027editor.editorWidgets.headingOptions.headingSix\u0027),"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    return ("
+        "content": "    };"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003cToolbarContainer\u003e"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cdiv\u003e"
+        "content": "    return ("
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027bold\u0027) \u0026\u0026 ("
+        "content": "      \u003cToolbarContainer\u003e"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "        \u003cdiv\u003e"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"bold\""
+        "content": "          {isVisible(\u0027bold\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Bold\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"bold\""
+        "content": "              type\u003d\"bold\""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{this.handleMarkClick}"
+        "content": "              label\u003d\"Bold\""
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasMark(\u0027bold\u0027)}"
+        "content": "              icon\u003d\"bold\""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{this.handleMarkClick}"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasMark(\u0027bold\u0027)}"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027italic\u0027) \u0026\u0026 ("
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "          )}"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"italic\""
+        "content": "          {isVisible(\u0027italic\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Italic\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"italic\""
+        "content": "              type\u003d\"italic\""
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{this.handleMarkClick}"
+        "content": "              label\u003d\"Italic\""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasMark(\u0027italic\u0027)}"
+        "content": "              icon\u003d\"italic\""
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{this.handleMarkClick}"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasMark(\u0027italic\u0027)}"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027code\u0027) \u0026\u0026 ("
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "          )}"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"code\""
+        "content": "          {isVisible(\u0027code\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Code\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"code\""
+        "content": "              type\u003d\"code\""
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{this.handleMarkClick}"
+        "content": "              label\u003d\"Code\""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasMark(\u0027code\u0027)}"
+        "content": "              icon\u003d\"code\""
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{this.handleMarkClick}"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasMark(\u0027code\u0027)}"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027link\u0027) \u0026\u0026 ("
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "          )}"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"link\""
+        "content": "          {isVisible(\u0027link\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Link\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"link\""
+        "content": "              type\u003d\"link\""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{onLinkClick}"
+        "content": "              label\u003d\"Link\""
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasInline(\u0027link\u0027)}"
+        "content": "              icon\u003d\"link\""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{onLinkClick}"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasInline(\u0027link\u0027)}"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "          {/* Show dropdown if at least one heading is not hidden */}"
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "          {Object.keys(headingOptions).some(isVisible) \u0026\u0026 ("
+        "content": "          )}"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarDropdownWrapper\u003e"
+        "content": "          {/* Show dropdown if at least one heading is not hidden */}"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003cDropdown"
+        "content": "          {Object.keys(headingOptions).some(isVisible) \u0026\u0026 ("
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "                dropdownWidth\u003d\"max-content\""
+        "content": "            \u003cToolbarDropdownWrapper\u003e"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "                dropdownTopOverlap\u003d\"36px\""
+        "content": "              \u003cDropdown"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "                renderButton\u003d{() \u003d\u003e ("
+        "content": "                dropdownWidth\u003d\"max-content\""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "                  \u003cDropdownButton\u003e"
+        "content": "                dropdownTopOverlap\u003d\"36px\""
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "                    \u003cToolbarButton"
+        "content": "                renderButton\u003d{() \u003d\u003e ("
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "                      type\u003d\"headings\""
+        "content": "                  \u003cDropdownButton\u003e"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "                      label\u003d\"Headings\""
+        "content": "                    \u003cToolbarButton"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "                      icon\u003d\"hOptions\""
+        "content": "                      type\u003d\"headings\""
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "                      disabled\u003d{disabled}"
+        "content": "                      label\u003d\"Headings\""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "                      isActive\u003d{!disabled \u0026\u0026 Object.keys(headingOptions).some(hasBlock)}"
+        "content": "                      icon\u003d\"hOptions\""
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "                    /\u003e"
+        "content": "                      disabled\u003d{disabled}"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "                  \u003c/DropdownButton\u003e"
+        "content": "                      isActive\u003d{!disabled \u0026\u0026 Object.keys(headingOptions).some(hasBlock)}"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "                )}"
+        "content": "                    /\u003e"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003e"
+        "content": "                  \u003c/DropdownButton\u003e"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "                {!disabled \u0026\u0026"
+        "content": "                )}"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "                  Object.keys(headingOptions).map("
+        "content": "              \u003e"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "                    (optionKey, idx) \u003d\u003e"
+        "content": "                {!disabled \u0026\u0026"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "                      isVisible(optionKey) \u0026\u0026 ("
+        "content": "                  Object.keys(headingOptions).map("
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "                        \u003cDropdownItem"
+        "content": "                    (optionKey, idx) \u003d\u003e"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "                          key\u003d{idx}"
+        "content": "                      isVisible(optionKey) \u0026\u0026 ("
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "                          label\u003d{headingOptions[optionKey]}"
+        "content": "                        \u003cDropdownItem"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "                          className\u003d{hasBlock(optionKey) ? \u0027active\u0027 : \u0027\u0027}"
+        "content": "                          key\u003d{idx}"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "                          onClick\u003d{() \u003d\u003e this.handleBlockClick(null, optionKey)}"
+        "content": "                          label\u003d{headingOptions[optionKey]}"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "                        /\u003e"
+        "content": "                          className\u003d{hasBlock(optionKey) ? \u0027active\u0027 : \u0027\u0027}"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "                      ),"
+        "content": "                          onClick\u003d{() \u003d\u003e this.handleBlockClick(null, optionKey)}"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "                  )}"
+        "content": "                        /\u003e"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003c/Dropdown\u003e"
+        "content": "                      ),"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003c/ToolbarDropdownWrapper\u003e"
+        "content": "                  )}"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              \u003c/Dropdown\u003e"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027quote\u0027) \u0026\u0026 ("
+        "content": "            \u003c/ToolbarDropdownWrapper\u003e"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "          )}"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"quote\""
+        "content": "          {isVisible(\u0027quote\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Quote\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"quote\""
+        "content": "              type\u003d\"quote\""
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{this.handleBlockClick}"
+        "content": "              label\u003d\"Quote\""
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasBlock(\u0027quote\u0027)}"
+        "content": "              icon\u003d\"quote\""
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{this.handleBlockClick}"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasBlock(\u0027quote\u0027)}"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027bulleted-list\u0027) \u0026\u0026 ("
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "          )}"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"bulleted-list\""
+        "content": "          {isVisible(\u0027bulleted-list\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Bulleted List\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"list-bulleted\""
+        "content": "              type\u003d\"bulleted-list\""
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{this.handleBlockClick}"
+        "content": "              label\u003d\"Bulleted List\""
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasBlock(\u0027bulleted-list\u0027)}"
+        "content": "              icon\u003d\"list-bulleted\""
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{this.handleBlockClick}"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasBlock(\u0027bulleted-list\u0027)}"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "          {isVisible(\u0027numbered-list\u0027) \u0026\u0026 ("
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarButton"
+        "content": "          )}"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "              type\u003d\"numbered-list\""
+        "content": "          {isVisible(\u0027numbered-list\u0027) \u0026\u0026 ("
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "              label\u003d\"Numbered List\""
+        "content": "            \u003cToolbarButton"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "              icon\u003d\"list-numbered\""
+        "content": "              type\u003d\"numbered-list\""
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "              onClick\u003d{this.handleBlockClick}"
+        "content": "              label\u003d\"Numbered List\""
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "              isActive\u003d{hasBlock(\u0027numbered-list\u0027)}"
+        "content": "              icon\u003d\"list-numbered\""
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "              disabled\u003d{disabled}"
+        "content": "              onClick\u003d{this.handleBlockClick}"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "            /\u003e"
+        "content": "              isActive\u003d{hasBlock(\u0027numbered-list\u0027)}"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              disabled\u003d{disabled}"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "          {showEditorComponents \u0026\u0026 ("
+        "content": "            /\u003e"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cToolbarDropdownWrapper\u003e"
+        "content": "          )}"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003cDropdown"
+        "content": "          {showEditorComponents \u0026\u0026 ("
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "                dropdownTopOverlap\u003d\"36px\""
+        "content": "            \u003cToolbarDropdownWrapper\u003e"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "                dropdownWidth\u003d\"110px\""
+        "content": "              \u003cDropdown"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "                renderButton\u003d{() \u003d\u003e ("
+        "content": "                dropdownTopOverlap\u003d\"36px\""
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "                  \u003cDropdownButton\u003e"
+        "content": "                dropdownWidth\u003d\"110px\""
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "                    \u003cToolbarButton"
+        "content": "                renderButton\u003d{() \u003d\u003e ("
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "                      label\u003d\"Add Component\""
+        "content": "                  \u003cDropdownButton\u003e"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "                      icon\u003d\"add-with\""
+        "content": "                    \u003cToolbarButton"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "                      onClick\u003d{this.handleComponentsMenuToggle}"
+        "content": "                      label\u003d\"Add Component\""
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "                      disabled\u003d{disabled}"
+        "content": "                      icon\u003d\"add-with\""
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "                    /\u003e"
+        "content": "                      onClick\u003d{this.handleComponentsMenuToggle}"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "                  \u003c/DropdownButton\u003e"
+        "content": "                      disabled\u003d{disabled}"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "                )}"
+        "content": "                    /\u003e"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003e"
+        "content": "                  \u003c/DropdownButton\u003e"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "                {pluginsList.map((plugin, idx) \u003d\u003e ("
+        "content": "                )}"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "                  \u003cDropdownItem key\u003d{idx} label\u003d{plugin.label} onClick\u003d{() \u003d\u003e onSubmit(plugin)} /\u003e"
+        "content": "              \u003e"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "                ))}"
+        "content": "                {pluginsList.map((plugin, idx) \u003d\u003e ("
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003c/Dropdown\u003e"
+        "content": "                  \u003cDropdownItem key\u003d{idx} label\u003d{plugin.label} onClick\u003d{() \u003d\u003e onSubmit(plugin)} /\u003e"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003c/ToolbarDropdownWrapper\u003e"
+        "content": "                ))}"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              \u003c/Dropdown\u003e"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003c/div\u003e"
+        "content": "            \u003c/ToolbarDropdownWrapper\u003e"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cToolbarToggle\u003e"
+        "content": "          )}"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "          \u003cToolbarToggleLabel isActive\u003d{!rawMode} offPosition\u003e"
+        "content": "        \u003c/div\u003e"
       },
       {
         "lineNumber": 257,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "            {t(\u0027editor.editorWidgets.markdown.richText\u0027)}"
+        "content": "        {isShowModeToggle \u0026\u0026 ("
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "          \u003c/ToolbarToggleLabel\u003e"
+        "content": "          \u003cToolbarToggle\u003e"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "          \u003cStyledToggle active\u003d{rawMode} onChange\u003d{onToggleMode} /\u003e"
+        "content": "            \u003cToolbarToggleLabel isActive\u003d{!rawMode} offPosition\u003e"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "tiuweehan"
         },
-        "content": "          \u003cToolbarToggleLabel isActive\u003d{rawMode}\u003e"
+        "content": "              {t(\u0027editor.editorWidgets.markdown.richText\u0027)}"
       },
       {
         "lineNumber": 261,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "            {t(\u0027editor.editorWidgets.markdown.markdown\u0027)}"
+        "content": "            \u003c/ToolbarToggleLabel\u003e"
       },
       {
         "lineNumber": 262,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "          \u003c/ToolbarToggleLabel\u003e"
+        "content": "            \u003cStyledToggle active\u003d{rawMode} onChange\u003d{onToggleMode} /\u003e"
       },
       {
         "lineNumber": 263,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "        \u003c/ToolbarToggle\u003e"
+        "content": "            \u003cToolbarToggleLabel isActive\u003d{rawMode}\u003e"
       },
       {
         "lineNumber": 264,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      \u003c/ToolbarContainer\u003e"
+        "content": "              {t(\u0027editor.editorWidgets.markdown.markdown\u0027)}"
       },
       {
         "lineNumber": 265,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "    );"
+        "content": "            \u003c/ToolbarToggleLabel\u003e"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "          \u003c/ToolbarToggle\u003e"
       },
       {
         "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        )}"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/ToolbarContainer\u003e"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    );"
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
@@ -38986,7 +39028,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 6,
-      "-": 261
+      "-": 265
     }
   },
   {
@@ -39822,824 +39864,838 @@
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    t: PropTypes.func.isRequired,"
+        "content": "    isShowModeToggle: PropTypes.bool.isRequired,"
       },
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "  };"
+        "content": "    t: PropTypes.func.isRequired,"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "  shouldComponentUpdate(nextProps, nextState) {"
+        "content": ""
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    return !this.state.value.equals(nextState.value);"
+        "content": "  shouldComponentUpdate(nextProps, nextState) {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    return !this.state.value.equals(nextState.value);"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "  componentDidMount() {"
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (this.props.pendingFocus) {"
+        "content": "  componentDidMount() {"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.editor.focus();"
+        "content": "    if (this.props.pendingFocus) {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.props.pendingFocus();"
+        "content": "      this.editor.focus();"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      this.props.pendingFocus();"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    }"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleMarkClick \u003d type \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.editor.toggleMark(type).focus();"
+        "content": "  handleMarkClick \u003d type \u003d\u003e {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.editor.toggleMark(type).focus();"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleBlockClick \u003d type \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.editor.toggleBlock(type).focus();"
+        "content": "  handleBlockClick \u003d type \u003d\u003e {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.editor.toggleBlock(type).focus();"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleLinkClick \u003d () \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.editor.toggleLink(() \u003d\u003e window.prompt(\u0027Enter the URL of the link\u0027));"
+        "content": "  handleLinkClick \u003d () \u003d\u003e {"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.editor.toggleLink(() \u003d\u003e window.prompt(\u0027Enter the URL of the link\u0027));"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "  hasMark \u003d type \u003d\u003e this.editor \u0026\u0026 this.editor.hasMark(type);"
+        "content": ""
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "  hasInline \u003d type \u003d\u003e this.editor \u0026\u0026 this.editor.hasInline(type);"
+        "content": "  hasMark \u003d type \u003d\u003e this.editor \u0026\u0026 this.editor.hasMark(type);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "  hasBlock \u003d type \u003d\u003e this.editor \u0026\u0026 this.editor.hasBlock(type);"
+        "content": "  hasInline \u003d type \u003d\u003e this.editor \u0026\u0026 this.editor.hasInline(type);"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  hasBlock \u003d type \u003d\u003e this.editor \u0026\u0026 this.editor.hasBlock(type);"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleToggleMode \u003d () \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.props.onMode(\u0027raw\u0027);"
+        "content": "  handleToggleMode \u003d () \u003d\u003e {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.props.onMode(\u0027raw\u0027);"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleInsertShortcode \u003d pluginConfig \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.editor.insertShortcode(pluginConfig);"
+        "content": "  handleInsertShortcode \u003d pluginConfig \u003d\u003e {"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.editor.insertShortcode(pluginConfig);"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleClickBelowDocument \u003d () \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.editor.moveToEndOfDocument();"
+        "content": "  handleClickBelowDocument \u003d () \u003d\u003e {"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.editor.moveToEndOfDocument();"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleDocumentChange \u003d debounce(editor \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "    const { onChange } \u003d this.props;"
+        "content": "  handleDocumentChange \u003d debounce(editor \u003d\u003e {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    const raw \u003d editor.value.document.toJS();"
+        "content": "    const { onChange } \u003d this.props;"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    const markdown \u003d slateToMarkdown(raw, { voidCodeBlock: this.codeBlockComponent });"
+        "content": "    const raw \u003d editor.value.document.toJS();"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "    onChange(markdown);"
+        "content": "    const markdown \u003d slateToMarkdown(raw, { voidCodeBlock: this.codeBlockComponent });"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "  }, 150);"
+        "content": "    onChange(markdown);"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }, 150);"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleChange \u003d editor \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "    if (!this.state.value.document.equals(editor.value.document)) {"
+        "content": "  handleChange \u003d editor \u003d\u003e {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.handleDocumentChange(editor);"
+        "content": "    if (!this.state.value.document.equals(editor.value.document)) {"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "      this.handleDocumentChange(editor);"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.setState({ value: editor.value });"
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.setState({ value: editor.value });"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "  processRef \u003d ref \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.editor \u003d ref;"
+        "content": "  processRef \u003d ref \u003d\u003e {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    this.editor \u003d ref;"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "  render() {"
+        "content": ""
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    const { onAddAsset, getAsset, className, field, t } \u003d this.props;"
+        "content": "  render() {"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "    return ("
+        "content": "    const { onAddAsset, getAsset, className, field, isShowModeToggle, t } \u003d this.props;"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003cdiv"
+        "content": "    return ("
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "        css\u003d{coreCss`"
+        "content": "      \u003cdiv"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "          position: relative;"
+        "content": "        css\u003d{coreCss`"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "        `}"
+        "content": "          position: relative;"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003e"
+        "content": "        `}"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cEditorControlBar\u003e"
+        "content": "      \u003e"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "          \u003cToolbar"
+        "content": "        \u003cEditorControlBar\u003e"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "            onMarkClick\u003d{this.handleMarkClick}"
+        "content": "          \u003cToolbar"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "            onBlockClick\u003d{this.handleBlockClick}"
+        "content": "            onMarkClick\u003d{this.handleMarkClick}"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "            onLinkClick\u003d{this.handleLinkClick}"
+        "content": "            onBlockClick\u003d{this.handleBlockClick}"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "            onToggleMode\u003d{this.handleToggleMode}"
+        "content": "            onLinkClick\u003d{this.handleLinkClick}"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "            plugins\u003d{this.editorComponents}"
+        "content": "            onToggleMode\u003d{this.handleToggleMode}"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "            onSubmit\u003d{this.handleInsertShortcode}"
+        "content": "            plugins\u003d{this.editorComponents}"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "            onAddAsset\u003d{onAddAsset}"
+        "content": "            onSubmit\u003d{this.handleInsertShortcode}"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "            getAsset\u003d{getAsset}"
+        "content": "            onAddAsset\u003d{onAddAsset}"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "            buttons\u003d{field.get(\u0027buttons\u0027)}"
+        "content": "            getAsset\u003d{getAsset}"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "            editorComponents\u003d{field.get(\u0027editor_components\u0027)}"
+        "content": "            buttons\u003d{field.get(\u0027buttons\u0027)}"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "            hasMark\u003d{this.hasMark}"
+        "content": "            editorComponents\u003d{field.get(\u0027editor_components\u0027)}"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "            hasInline\u003d{this.hasInline}"
+        "content": "            hasMark\u003d{this.hasMark}"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "            hasBlock\u003d{this.hasBlock}"
+        "content": "            hasInline\u003d{this.hasInline}"
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "            t\u003d{t}"
+        "content": "            hasBlock\u003d{this.hasBlock}"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "          /\u003e"
+        "content": "            isShowModeToggle\u003d{isShowModeToggle}"
       },
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "        \u003c/EditorControlBar\u003e"
+        "content": "            t\u003d{t}"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cClassNames\u003e"
+        "content": "          /\u003e"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "          {({ css, cx }) \u003d\u003e ("
+        "content": "        \u003c/EditorControlBar\u003e"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003cdiv"
+        "content": "        \u003cClassNames\u003e"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "              className\u003d{cx("
+        "content": "          {({ css, cx }) \u003d\u003e ("
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "                className,"
+        "content": "            \u003cdiv"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "                css`"
+        "content": "              className\u003d{cx("
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "                  ${visualEditorStyles({ minimal: field.get(\u0027minimal\u0027) })}"
+        "content": "                className,"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "                `,"
+        "content": "                css`"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "              )}"
+        "content": "                  ${visualEditorStyles({ minimal: field.get(\u0027minimal\u0027) })}"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003e"
+        "content": "                `,"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003cSlate"
+        "content": "              )}"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "                className\u003d{css`"
+        "content": "            \u003e"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "                  padding: 16px 20px 0;"
+        "content": "              \u003cSlate"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "                `}"
+        "content": "                className\u003d{css`"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "                value\u003d{this.state.value}"
+        "content": "                  padding: 16px 20px 0;"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "                renderBlock\u003d{this.renderBlock}"
+        "content": "                `}"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "                renderInline\u003d{this.renderInline}"
+        "content": "                value\u003d{this.state.value}"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "                renderMark\u003d{this.renderMark}"
+        "content": "                renderBlock\u003d{this.renderBlock}"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "                schema\u003d{this.schema}"
+        "content": "                renderInline\u003d{this.renderInline}"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "                plugins\u003d{this.plugins}"
+        "content": "                renderMark\u003d{this.renderMark}"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "                onChange\u003d{this.handleChange}"
+        "content": "                schema\u003d{this.schema}"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "                ref\u003d{this.processRef}"
+        "content": "                plugins\u003d{this.plugins}"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "                spellCheck"
+        "content": "                onChange\u003d{this.handleChange}"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "              /\u003e"
+        "content": "                ref\u003d{this.processRef}"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "              \u003cInsertionPoint onClick\u003d{this.handleClickBelowDocument} /\u003e"
+        "content": "                spellCheck"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "            \u003c/div\u003e"
+        "content": "              /\u003e"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "          )}"
+        "content": "              \u003cInsertionPoint onClick\u003d{this.handleClickBelowDocument} /\u003e"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003c/ClassNames\u003e"
+        "content": "            \u003c/div\u003e"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003c/div\u003e"
+        "content": "          )}"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "    );"
+        "content": "        \u003c/ClassNames\u003e"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      \u003c/div\u003e"
       },
       {
         "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    );"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
@@ -40647,8 +40703,8 @@
       }
     ],
     "authorContributionMap": {
-      "tiuweehan": 3,
-      "-": 233
+      "tiuweehan": 2,
+      "-": 236
     }
   },
   {
@@ -40695,329 +40751,329 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import { List } from \u0027immutable\u0027;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "const MODE_STORAGE_KEY \u003d \u0027cms.md-mode\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "const MODE_STORAGE_KEY \u003d \u0027cms.md-mode\u0027;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": "// TODO: passing the editorControl and components like this is horrible, should"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "// be handled through Redux and a separate registry store for instances"
+        "content": "// TODO: passing the editorControl and components like this is horrible, should"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "let editorControl;"
+        "content": "// be handled through Redux and a separate registry store for instances"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "let _getEditorComponents \u003d () \u003d\u003e [];"
+        "content": "let editorControl;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "let _getEditorComponents \u003d () \u003d\u003e [];"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "export const getEditorControl \u003d () \u003d\u003e editorControl;"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "export const getEditorComponents \u003d () \u003d\u003e _getEditorComponents();"
+        "content": "export const getEditorControl \u003d () \u003d\u003e editorControl;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "export const getEditorComponents \u003d () \u003d\u003e _getEditorComponents();"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "export default class MarkdownControl extends React.Component {"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "  static propTypes \u003d {"
+        "content": "export default class MarkdownControl extends React.Component {"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "    onChange: PropTypes.func.isRequired,"
+        "content": "  static propTypes \u003d {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "    onAddAsset: PropTypes.func.isRequired,"
+        "content": "    onChange: PropTypes.func.isRequired,"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "    getAsset: PropTypes.func.isRequired,"
+        "content": "    onAddAsset: PropTypes.func.isRequired,"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "    classNameWrapper: PropTypes.string.isRequired,"
+        "content": "    getAsset: PropTypes.func.isRequired,"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorControl: PropTypes.elementType.isRequired,"
+        "content": "    classNameWrapper: PropTypes.string.isRequired,"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "    value: PropTypes.string,"
+        "content": "    editorControl: PropTypes.elementType.isRequired,"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "    field: ImmutablePropTypes.map.isRequired,"
+        "content": "    value: PropTypes.string,"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "    getEditorComponents: PropTypes.func,"
+        "content": "    field: ImmutablePropTypes.map.isRequired,"
       },
       {
         "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    getEditorComponents: PropTypes.func,"
+      },
+      {
+        "lineNumber": 28,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "    t: PropTypes.func.isRequired,"
       },
       {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  };"
-      },
-      {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "  static defaultProps \u003d {"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    value: \u0027\u0027,"
+        "content": "  static defaultProps \u003d {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    value: \u0027\u0027,"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  };"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "  constructor(props) {"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    super(props);"
+        "content": "  constructor(props) {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorControl \u003d props.editorControl;"
+        "content": "    super(props);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    _getEditorComponents \u003d props.getEditorComponents;"
+        "content": "    editorControl \u003d props.editorControl;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.state \u003d {"
+        "content": "    const preferredMode \u003d localStorage.getItem(MODE_STORAGE_KEY) ?? \u0027rich_text\u0027;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "      mode: localStorage.getItem(MODE_STORAGE_KEY) || \u0027visual\u0027,"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "      pendingFocus: false,"
+        "content": "    _getEditorComponents \u003d props.getEditorComponents;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    };"
+        "content": "    this.state \u003d {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      mode:"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        this.getAllowedModes().indexOf(preferredMode) !\u003d\u003d -1"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "  handleMode \u003d mode \u003d\u003e {"
+        "content": "          ? preferredMode"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.setState({ mode, pendingFocus: true });"
+        "content": "          : this.getAllowedModes()[0],"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    localStorage.setItem(MODE_STORAGE_KEY, mode);"
+        "content": "      pendingFocus: false,"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "  };"
+        "content": "    };"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "  processRef \u003d ref \u003d\u003e (this.ref \u003d ref);"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  handleMode \u003d mode \u003d\u003e {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "  setFocusReceived \u003d () \u003d\u003e {"
+        "content": "    this.setState({ mode, pendingFocus: true });"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.setState({ pendingFocus: false });"
+        "content": "    localStorage.setItem(MODE_STORAGE_KEY, mode);"
       },
       {
         "lineNumber": 53,
@@ -41038,339 +41094,416 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  render() {"
+        "content": "  processRef \u003d ref \u003d\u003e (this.ref \u003d ref);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    const {"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "      onChange,"
+        "content": "  setFocusReceived \u003d () \u003d\u003e {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "      onAddAsset,"
+        "content": "    this.setState({ pendingFocus: false });"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "      getAsset,"
+        "content": "  };"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "      value,"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "      classNameWrapper,"
+        "content": "  getAllowedModes \u003d () \u003d\u003e this.props.field.get(\u0027modes\u0027, List([\u0027rich_text\u0027, \u0027raw\u0027])).toArray();"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "      field,"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "      getEditorComponents,"
+        "content": "  render() {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "      resolveWidget,"
+        "content": "    const {"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      t,"
+        "content": "      onChange,"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    } \u003d this.props;"
+        "content": "      onAddAsset,"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      getAsset,"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    const { mode, pendingFocus } \u003d this.state;"
+        "content": "      value,"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    const visualEditor \u003d ("
+        "content": "      classNameWrapper,"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "      \u003cdiv className\u003d\"cms-editor-visual\" ref\u003d{this.processRef}\u003e"
+        "content": "      field,"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u003cVisualEditor"
+        "content": "      getEditorComponents,"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "          onChange\u003d{onChange}"
+        "content": "      resolveWidget,"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "          onAddAsset\u003d{onAddAsset}"
+        "content": "      t,"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "          onMode\u003d{this.handleMode}"
+        "content": "    } \u003d this.props;"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "          getAsset\u003d{getAsset}"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "          className\u003d{classNameWrapper}"
+        "content": "    const { mode, pendingFocus } \u003d this.state;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "          value\u003d{value}"
+        "content": "    const isShowModeToggle \u003d this.getAllowedModes().length \u003e 1;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "          field\u003d{field}"
+        "content": "    const visualEditor \u003d ("
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "          getEditorComponents\u003d{getEditorComponents}"
+        "content": "      \u003cdiv className\u003d\"cms-editor-visual\" ref\u003d{this.processRef}\u003e"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "          resolveWidget\u003d{resolveWidget}"
+        "content": "        \u003cVisualEditor"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "          pendingFocus\u003d{pendingFocus \u0026\u0026 this.setFocusReceived}"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "tiuweehan"
-        },
-        "content": "          t\u003d{t}"
-      },
-      {
-        "lineNumber": 83,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        /\u003e"
-      },
-      {
-        "lineNumber": 84,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      \u003c/div\u003e"
-      },
-      {
-        "lineNumber": 85,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    );"
-      },
-      {
-        "lineNumber": 86,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    const rawEditor \u003d ("
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      \u003cdiv className\u003d\"cms-editor-raw\" ref\u003d{this.processRef}\u003e"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        \u003cRawEditor"
-      },
-      {
-        "lineNumber": 89,
-        "author": {
-          "gitId": "-"
-        },
         "content": "          onChange\u003d{onChange}"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": "          onAddAsset\u003d{onAddAsset}"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          isShowModeToggle\u003d{isShowModeToggle}"
+      },
+      {
+        "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
         "content": "          onMode\u003d{this.handleMode}"
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
         "content": "          getAsset\u003d{getAsset}"
       },
       {
-        "lineNumber": 93,
+        "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
         "content": "          className\u003d{classNameWrapper}"
       },
       {
-        "lineNumber": 94,
+        "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
         "content": "          value\u003d{value}"
       },
       {
-        "lineNumber": 95,
+        "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
         "content": "          field\u003d{field}"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          getEditorComponents\u003d{getEditorComponents}"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          resolveWidget\u003d{resolveWidget}"
+      },
+      {
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": "          pendingFocus\u003d{pendingFocus \u0026\u0026 this.setFocusReceived}"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 92,
         "author": {
           "gitId": "tiuweehan"
         },
         "content": "          t\u003d{t}"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
         "content": "        /\u003e"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
         "content": "      \u003c/div\u003e"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
         "content": "    );"
       },
       {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const rawEditor \u003d ("
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003cdiv className\u003d\"cms-editor-raw\" ref\u003d{this.processRef}\u003e"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cRawEditor"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          onChange\u003d{onChange}"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          onAddAsset\u003d{onAddAsset}"
+      },
+      {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    return mode \u003d\u003d\u003d \u0027visual\u0027 ? visualEditor : rawEditor;"
+        "content": "          isShowModeToggle\u003d{isShowModeToggle}"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "          onMode\u003d{this.handleMode}"
       },
       {
         "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          getAsset\u003d{getAsset}"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          className\u003d{classNameWrapper}"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          value\u003d{value}"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          field\u003d{field}"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "          pendingFocus\u003d{pendingFocus \u0026\u0026 this.setFocusReceived}"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "          t\u003d{t}"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        /\u003e"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      \u003c/div\u003e"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    );"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return mode \u003d\u003d\u003d \u0027rich_text\u0027 ? visualEditor : rawEditor;"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
@@ -41379,7 +41512,7 @@
     ],
     "authorContributionMap": {
       "tiuweehan": 4,
-      "-": 99
+      "-": 110
     }
   },
   {
