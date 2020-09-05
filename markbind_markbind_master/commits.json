@@ -1850,6 +1850,59 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-05",
+        "commitResults": [
+          {
+            "hash": "970dfcc8ba227eaf569e342600f717a8a270704d",
+            "messageTitle": "Remove redundant Site unit tests (#1334)",
+            "messageBody": "Several Site unit tests test assert the number of, and existence of\r\nnumerous assets and files.\r\nThese tests are rather unmaintainable, requiring frequent change\r\nwhenever any of these files are added, deleted, or moved.\r\n\r\nMany hardcoded assets and files are also used in the mocked filesystem\r\nfor these tests, which are duplicates / mocks of the actual assets.\r\nThese may also need to be updated when the underlying assets change.\r\n\r\nIn addition, the cli functional tests, which are easily updated through\r\nthe npm scripts, are already able to detect the presence or absence of\r\nsuch assets and files, the number of them, and any changes in the file\r\ncontent.\r\n\r\nLet\u0027s remove these unit tests as such.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 0,
+                "deletions": 353
+              }
+            }
+          },
+          {
+            "hash": "55df2dc67e3d82137396cb79b30b8e7df8998902",
+            "messageTitle": "Run lerna clean during npm setup script (#1340)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "json": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
+          },
+          {
+            "hash": "c5b0bcc391da38911a95363d8013aa85cf51a8b7",
+            "messageTitle": "Restore colors to test output (#1341)",
+            "messageBody": "Lerna run test executes the npm test script of each package in a\r\nsubprocess, causing certain libraries like chalk to disable color\r\noutput since stdout is not a TTY.\r\n\r\nLet\u0027s override this behavior, enabling color output for tests.",
+            "fileTypesAndContributionMap": {
+              "json": {
+                "insertions": 3,
+                "deletions": 3
+              },
+              "js": {
+                "insertions": 4,
+                "deletions": 0
+              }
+            }
+          },
+          {
+            "hash": "c41be1b5ebcc5411714872c8a16a4f817382995d",
+            "messageTitle": "Fix several devGuide issues (#1342)",
+            "messageBody": "- Broken user guide link\r\n- Order of packages listed in design.md\r\n- Mention of assets in @markbind/core package which\r\n  are moved to @markbind/core-web",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 9,
+                "deletions": 11
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2460,7 +2513,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 152,
+      "js": 151,
       "css": 42,
       "json": 4,
       "md": 1044,
@@ -2484,7 +2537,7 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 24,
+      "js": 23,
       "css": 41,
       "json": 0,
       "md": 0,
@@ -2556,10 +2609,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2587,
+      "js": 2532,
       "css": 92,
-      "json": 379,
-      "md": 328,
+      "json": 381,
+      "md": 331,
       "mbd": 0,
       "mbdf": 354,
       "njk": 16,
@@ -2643,21 +2696,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4853.734,
-    "yash-chowdhary": 6300.087,
-    "Tejas2805": 265.05948,
-    "dvrylc": 12.346354,
+    "openorclose": 4612.279,
+    "yash-chowdhary": 5987.676,
+    "Tejas2805": 251.85541,
+    "dvrylc": 11.732112,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 12.282477,
-    "ang-zeyu": 52634.5,
+    "hcwong": 11.671164,
+    "ang-zeyu": 50497.105,
     "geshuming": 0.0,
-    "alyip98": 2.1709175,
-    "nbriannl": 9584.379,
-    "le0tan": 118657.79,
-    "madanalogy": 127.198425,
+    "alyip98": 2.0627942,
+    "nbriannl": 9109.025,
+    "le0tan": 112752.125,
+    "madanalogy": 120.866516,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
