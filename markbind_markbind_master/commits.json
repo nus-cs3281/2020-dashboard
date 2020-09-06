@@ -1901,6 +1901,55 @@
                 "deletions": 11
               }
             }
+          },
+          {
+            "hash": "9c0e38ce30cf12346690f0788dafcc0682d98163",
+            "messageTitle": "Separate stateful and stateless Page properties (#1343)",
+            "messageBody": "Various properties passed from the Site model to the Page model are\r\nstateless, in that they do not change across page generation calls.\r\n\r\nSome other properties are stateful, and are reset at during each page\r\ngeneration cycle.\r\n\r\nLet\u0027s clearly separate these two types of properties.\r\n\r\nStateless properties are extracted into the PageConfig model, which is\r\nthe set of properties Site passes when creating the Page instance.\r\nStateful properties are extracted into the resetState method of the\r\nPage model, which is called before each page generation cycle.\r\n\r\nThis also resets many other properties not reset before, fixing\r\nnumerous instances where live reload does not work.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 321,
+                "deletions": 279
+              }
+            }
+          },
+          {
+            "hash": "ffa6dabe5744b0c30404050fbdbeb8dc4d7c00b3",
+            "messageTitle": "Fix enableSearch template variable (#1344)",
+            "messageBody": "The searchable Page variable, which blacklists a page from being\r\nindexed, is mistakenly used for in place of the enableSearch variable,\r\nwhich controls whether the site\u0027s search functionality is enabled.\r\n\r\nLet\u0027s correct this as such.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 6,
+                "deletions": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "date": "2020-09-06",
+        "commitResults": [
+          {
+            "hash": "597e79d41dc12e0fbed2b877cedcb3246a2d1fb9",
+            "messageTitle": "Refactor Page dependency checking (#1345)",
+            "messageBody": "Checking for dependencies of a Page instance is done repeatedly by\r\ninterfacing with the page instance\u0027s properties.\r\n\r\nDuring a file system event when serving a MarkBind site, the site\u0027s\r\nsource files are rebuilt if the file has a \"source file extension\".\r\nThis unnecessarily runs the source files rebuilding process even when\r\nsuch files are used as assets.\r\n\r\nLet\u0027s extract these page dependency checking into reusable methods as\r\nsuch,\r\nand use these methods in place of the extension check.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 64,
+                "deletions": 43
+              }
+            }
+          },
+          {
+            "hash": "b863f739389a38a625a155f9620c9e83e0a25e2e",
+            "messageTitle": "Add sample debugging configurations to devGuide (#1346)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 97,
+                "deletions": 0
+              }
+            }
           }
         ]
       }
@@ -2513,7 +2562,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 151,
+      "js": 144,
       "css": 42,
       "json": 4,
       "md": 1044,
@@ -2609,10 +2658,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2532,
+      "js": 2853,
       "css": 92,
       "json": 381,
-      "md": 331,
+      "md": 428,
       "mbd": 0,
       "mbdf": 354,
       "njk": 16,
@@ -2657,7 +2706,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 661,
+      "js": 555,
       "css": 12,
       "json": 0,
       "md": 43,
@@ -2696,21 +2745,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4612.279,
-    "yash-chowdhary": 5987.676,
-    "Tejas2805": 251.85541,
-    "dvrylc": 11.732112,
+    "openorclose": 4595.9673,
+    "yash-chowdhary": 5966.534,
+    "Tejas2805": 250.96211,
+    "dvrylc": 11.690504,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 11.671164,
-    "ang-zeyu": 50497.105,
+    "hcwong": 11.629732,
+    "ang-zeyu": 53236.715,
     "geshuming": 0.0,
-    "alyip98": 2.0627942,
-    "nbriannl": 9109.025,
-    "le0tan": 112752.125,
-    "madanalogy": 120.866516,
+    "alyip98": 2.0554838,
+    "nbriannl": 9076.882,
+    "le0tan": 112352.47,
+    "madanalogy": 120.43786,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
