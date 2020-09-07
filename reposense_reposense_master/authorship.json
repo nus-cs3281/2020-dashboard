@@ -91461,409 +91461,402 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        config.setFormats(FileTypeTest.DEFAULT_TEST_FORMATS);"
+        "content": "        GitClone.clone(config);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "        GitClone.clone(config);"
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @AfterClass"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    @AfterClass"
+        "content": "    public static void afterClass() throws IOException {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void afterClass() throws IOException {"
+        "content": "        deleteRepos();"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        deleteRepos();"
+        "content": "    }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @After"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "    @After"
+        "content": "    public void after() {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void after() {"
+        "content": "        GitCheckout.checkout(config.getRepoRoot(), \"master\");"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "        GitCheckout.checkout(config.getRepoRoot(), \"master\");"
+        "content": "    }"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static void deleteRepos() throws IOException {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static void deleteRepos() throws IOException {"
+        "content": "        FileUtil.deleteDirectory(FileUtil.REPOS_ADDRESS);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        FileUtil.deleteDirectory(FileUtil.REPOS_ADDRESS);"
+        "content": "    }"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Generates the information for test file."
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Generates the information for test file."
+        "content": "     */"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public FileInfo generateTestFileInfo(String relativePath) {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    public FileInfo generateTestFileInfo(String relativePath) {"
+        "content": "        FileInfo fileInfo \u003d FileInfoExtractor.generateFileInfo(config.getRepoRoot(), relativePath);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "        FileInfo fileInfo \u003d FileInfoExtractor.generateFileInfo(config.getRepoRoot(), relativePath);"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        config.getAuthorEmailsAndAliasesMap().put(MAIN_AUTHOR_NAME, new Author(MAIN_AUTHOR_NAME));"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        config.getAuthorEmailsAndAliasesMap().put(MAIN_AUTHOR_NAME, new Author(MAIN_AUTHOR_NAME));"
+        "content": "        config.getAuthorEmailsAndAliasesMap().put(FAKE_AUTHOR_NAME, new Author(FAKE_AUTHOR_NAME));"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "        config.getAuthorEmailsAndAliasesMap().put(FAKE_AUTHOR_NAME, new Author(FAKE_AUTHOR_NAME));"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return fileInfo;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "        return fileInfo;"
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public FileResult getFileResult(String relativePath) {"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    public FileResult getFileResult(String relativePath) {"
+        "content": "        FileInfo fileinfo \u003d generateTestFileInfo(relativePath);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        FileInfo fileinfo \u003d generateTestFileInfo(relativePath);"
+        "content": "        return FileInfoAnalyzer.analyzeFile(config, fileinfo);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        return FileInfoAnalyzer.analyzeFile(config, fileinfo);"
+        "content": "    }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts the correctness of file analysis with regards to the contribution"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts the correctness of file analysis with regards to the contribution"
+        "content": "     * made by author named in {@code FAKE_AUTHOR_NAME}."
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "     * made by author named in {@code FAKE_AUTHOR_NAME}."
+        "content": "     */"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public void assertFileAnalysisCorrectness(FileResult fileResult) {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void assertFileAnalysisCorrectness(FileResult fileResult) {"
+        "content": "        for (LineInfo line : fileResult.getLines()) {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (LineInfo line : fileResult.getLines()) {"
+        "content": "            if (line.getContent().startsWith(\"fake\")) {"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (line.getContent().startsWith(\"fake\")) {"
+        "content": "                Assert.assertEquals(line.getAuthor(), new Author(FAKE_AUTHOR_NAME));"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "                Assert.assertEquals(line.getAuthor(), new Author(FAKE_AUTHOR_NAME));"
+        "content": "            } else {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "            } else {"
+        "content": "                Assert.assertNotEquals(line.getAuthor(), new Author(FAKE_AUTHOR_NAME));"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "                Assert.assertNotEquals(line.getAuthor(), new Author(FAKE_AUTHOR_NAME));"
+        "content": "            }"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Returns a {@code Author} that has git id and aliases of all authors in testrepo-Alpha, so that no commits"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns a {@code Author} that has git id and aliases of all authors in testrepo-Alpha, so that no commits"
+        "content": "     * will be filtered out in the `git log` command."
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "     * will be filtered out in the `git log` command."
+        "content": "     */"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected Author getAlphaAllAliasAuthor() {"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Author getAlphaAllAliasAuthor() {"
+        "content": "        Author author \u003d new Author(MAIN_AUTHOR_NAME);"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "        Author author \u003d new Author(MAIN_AUTHOR_NAME);"
+        "content": "        author.setAuthorAliases(Arrays.asList(FAKE_AUTHOR_NAME, EUGENE_AUTHOR_NAME, YONG_AUTHOR_NAME));"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        author.setAuthorAliases(Arrays.asList(FAKE_AUTHOR_NAME, EUGENE_AUTHOR_NAME, YONG_AUTHOR_NAME));"
+        "content": "        return author;"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "        return author;"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
@@ -91874,7 +91867,7 @@
       "ccyccyccy": 1,
       "yash-chowdhary": 1,
       "jamessspanggg": 2,
-      "-": 127
+      "-": 126
     }
   },
   {
