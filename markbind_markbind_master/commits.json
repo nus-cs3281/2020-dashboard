@@ -1952,6 +1952,34 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-12",
+        "commitResults": [
+          {
+            "hash": "2d2224592d1e61cc5ad96b4865093e0b9d4ac123",
+            "messageTitle": "Fix triggers targeting load-on-demand components (#1348)",
+            "messageBody": "Triggers fail to find the targeted element if it is not loaded into\r\nthe dom when the trigger\u0027s popover and tooltip directives are being\r\nprocessed.\r\n\r\nThis causes triggers to fail when the targeted element is loaded\r\non-demand, such as when it is inside a collapsed panel that is later\r\nexpanded.\r\n\r\nLet\u0027s move triggers into a Vue component, allowing for the targeted\r\nelement retrieval to occur only when the trigger is activated.",
+            "fileTypesAndContributionMap": {
+              "css": {
+                "insertions": 7,
+                "deletions": 3
+              },
+              "mbdf": {
+                "insertions": 2,
+                "deletions": 1
+              },
+              "md": {
+                "insertions": 1,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 46,
+                "deletions": 82
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2550,8 +2578,8 @@
     },
     "openorclose": {
       "java": 0,
-      "js": 143,
-      "css": 91,
+      "js": 116,
+      "css": 88,
       "json": 18,
       "md": 56,
       "mbd": 0,
@@ -2658,12 +2686,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2853,
-      "css": 92,
+      "js": 2899,
+      "css": 99,
       "json": 381,
-      "md": 428,
+      "md": 429,
       "mbd": 0,
-      "mbdf": 354,
+      "mbdf": 355,
       "njk": 16,
       "py": 0,
       "yml": 1
@@ -2745,21 +2773,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4595.9673,
-    "yash-chowdhary": 5966.534,
-    "Tejas2805": 250.96211,
-    "dvrylc": 11.690504,
+    "openorclose": 4500.3354,
+    "yash-chowdhary": 5842.8164,
+    "Tejas2805": 245.73566,
+    "dvrylc": 11.447205,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 11.629732,
-    "ang-zeyu": 53236.715,
+    "hcwong": 11.38771,
+    "ang-zeyu": 52185.895,
     "geshuming": 0.0,
-    "alyip98": 2.0554838,
-    "nbriannl": 9076.882,
-    "le0tan": 112352.47,
-    "madanalogy": 120.43786,
+    "alyip98": 2.0126786,
+    "nbriannl": 8888.635,
+    "le0tan": 110013.6,
+    "madanalogy": 117.930664,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
