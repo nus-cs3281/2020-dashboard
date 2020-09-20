@@ -2016,6 +2016,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-20",
+        "commitResults": [
+          {
+            "hash": "c4664f24f400ecf0bb24dfeca392d5e56ca4f884",
+            "messageTitle": "Disable puml metadata output (#1359)",
+            "messageBody": "Puml metadata output causes frequent, unnecessary changes to generated\r\npuml images in the test sites.\r\n\r\nLet\u0027s disable this as such, reducing the frequency of such changes.\r\n\r\nHowever, changes due to differences in environments, such as a\r\ndifferent graphviz version, may still cause such changes.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 1,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2626,7 +2642,7 @@
     },
     "yash-chowdhary": {
       "java": 0,
-      "js": 144,
+      "js": 143,
       "css": 42,
       "json": 4,
       "md": 1044,
@@ -2650,7 +2666,7 @@
     },
     "dvrylc": {
       "java": 0,
-      "js": 23,
+      "js": 22,
       "css": 41,
       "json": 0,
       "md": 0,
@@ -2722,9 +2738,9 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2900,
+      "js": 2889,
       "css": 101,
-      "json": 381,
+      "json": 380,
       "md": 429,
       "mbd": 0,
       "mbdf": 355,
@@ -2746,7 +2762,7 @@
     },
     "alyip98": {
       "java": 0,
-      "js": 13,
+      "js": 12,
       "css": 0,
       "json": 0,
       "md": 0,
@@ -2770,7 +2786,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 554,
+      "js": 553,
       "css": 12,
       "json": 0,
       "md": 43,
@@ -2809,21 +2825,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4423.648,
-    "yash-chowdhary": 5743.55,
-    "Tejas2805": 241.54346,
-    "dvrylc": 11.252211,
+    "openorclose": 4378.9087,
+    "yash-chowdhary": 5685.6235,
+    "Tejas2805": 239.09732,
+    "dvrylc": 11.138197,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 11.193606,
-    "ang-zeyu": 51314.188,
+    "hcwong": 11.080294,
+    "ang-zeyu": 50805.48,
     "geshuming": 0.0,
-    "alyip98": 1.9783777,
-    "nbriannl": 8737.553,
-    "le0tan": 108138.664,
-    "madanalogy": 115.91956,
+    "alyip98": 1.9583219,
+    "nbriannl": 8649.442,
+    "le0tan": 107043.445,
+    "madanalogy": 114.74338,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
