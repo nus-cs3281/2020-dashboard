@@ -2048,6 +2048,44 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-24",
+        "commitResults": [
+          {
+            "hash": "4cbd25285cf963b55429c653f6c1a1c74b45347e",
+            "messageTitle": "Move heading and keyword collection into Page (#1364)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 6,
+                "deletions": 30
+              }
+            }
+          },
+          {
+            "hash": "54a177eb6063b86d47057303202e741766287668",
+            "messageTitle": "Fix external dependency generation resolving (#1365)",
+            "messageBody": "External dependencies are not regenerated if the same dependency is\r\nbeing (or has finished) generated.\r\nIn such cases, the generation promise short circuits and immediately\r\nresolves, without waiting for the same existing dependency to finish\r\ngenerating.\r\n\r\nThis causes heading and keyword collection in Page to fail, which\r\nrelies on all its dependencies to have generated.\r\nLet\u0027s return the same existing generation promise in such cases instead.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 13,
+                "deletions": 13
+              }
+            }
+          },
+          {
+            "hash": "78075a063aab86041b3d149c793d48f0cfccdb19",
+            "messageTitle": "Refactor site reject handler to error handler (#1366)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 109,
+                "deletions": 156
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2754,7 +2792,7 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2863,
+      "js": 2869,
       "css": 101,
       "json": 380,
       "md": 429,
@@ -2802,7 +2840,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 553,
+      "js": 544,
       "css": 12,
       "json": 0,
       "md": 43,
@@ -2841,21 +2879,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4349.5796,
-    "yash-chowdhary": 5647.622,
-    "Tejas2805": 237.49532,
-    "dvrylc": 11.063507,
+    "openorclose": 4320.568,
+    "yash-chowdhary": 5610.1143,
+    "Tejas2805": 235.91022,
+    "dvrylc": 10.989982,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 11.005935,
-    "ang-zeyu": 50470.375,
+    "hcwong": 10.932762,
+    "ang-zeyu": 50419.305,
     "geshuming": 0.0,
-    "alyip98": 1.9452182,
-    "nbriannl": 8591.585,
-    "le0tan": 106325.94,
-    "madanalogy": 113.97529,
+    "alyip98": 1.932243,
+    "nbriannl": 8534.617,
+    "le0tan": 105617.88,
+    "madanalogy": 113.21435,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
