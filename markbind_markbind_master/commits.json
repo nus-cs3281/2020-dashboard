@@ -2086,6 +2086,41 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-25",
+        "commitResults": [
+          {
+            "hash": "eb7f8c1835dd8b7435f77c442a3a55fb2938bd60",
+            "messageTitle": "Generate heading anchors without fixed headers (#1367)",
+            "messageBody": "Empty heading anchors are generated for headings when the header is\r\nfixed.\r\n\r\nSince the position for these anchors are set at runtime only if there\r\nis a fixed header, let\u0027s always generate these anchors instead,\r\nresulting in one less instance variable needed.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 11,
+                "deletions": 26
+              }
+            }
+          },
+          {
+            "hash": "70d29b823b6b9b750bd0d01046dd3824c8d1083e",
+            "messageTitle": "Add live preview support for nunjucks dependencies (#1361)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 6,
+                "deletions": 3
+              },
+              "json": {
+                "insertions": 1,
+                "deletions": 1
+              },
+              "js": {
+                "insertions": 234,
+                "deletions": 58
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2792,10 +2827,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 2869,
+      "js": 3100,
       "css": 101,
-      "json": 380,
-      "md": 429,
+      "json": 381,
+      "md": 435,
       "mbd": 0,
       "mbdf": 355,
       "njk": 16,
@@ -2840,7 +2875,7 @@
     },
     "le0tan": {
       "java": 0,
-      "js": 544,
+      "js": 526,
       "css": 12,
       "json": 0,
       "md": 43,
@@ -2879,21 +2914,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 4320.568,
-    "yash-chowdhary": 5610.1143,
-    "Tejas2805": 235.91022,
-    "dvrylc": 10.989982,
+    "openorclose": 4306.24,
+    "yash-chowdhary": 5591.5825,
+    "Tejas2805": 235.12541,
+    "dvrylc": 10.9534025,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 10.932762,
-    "ang-zeyu": 50419.305,
+    "hcwong": 10.896331,
+    "ang-zeyu": 50556.06,
     "geshuming": 0.0,
-    "alyip98": 1.932243,
-    "nbriannl": 8534.617,
-    "le0tan": 105617.88,
-    "madanalogy": 113.21435,
+    "alyip98": 1.9258195,
+    "nbriannl": 8506.346,
+    "le0tan": 105268.13,
+    "madanalogy": 112.837616,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {

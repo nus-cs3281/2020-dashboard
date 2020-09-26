@@ -2057,6 +2057,26 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-26",
+        "commitResults": [
+          {
+            "hash": "af7e3393a14d60de776ae722b80f0c68628c7eab",
+            "messageTitle": "[#155] Display date ranged commit in side bar (#1101)",
+            "messageBody": "When the granularity is set to daily or weekly, clicking on the ramp \r\nslice redirect the user to a new tab where they will see the \r\ninformation of the individual commits from GitHub itself.\r\n\r\nThis requires the user to switch between different tabs to view \r\nrelevant info. This can be distracting and troublesome for the user,\r\nespecially when trying to traverse through multiple weeks of \r\ncommits. We can improve this by opening the zoom tab for the \r\ncorresponding date ranged commits instead of open another Github \r\npage.\r\n\r\nLet\u0027s open the zoom tab when the user clicking the ramp with the\r\ngranularity set to daily or week, instead of opening new page. ",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 12,
+                "deletions": 20
+              },
+              "js": {
+                "insertions": 77,
+                "deletions": 50
+              }
+            }
+          }
+        ]
       }
     ],
     "hcwong": [],
@@ -2268,12 +2288,12 @@
     },
     "niqiukun": {
       "java": 154,
-      "js": 131,
+      "js": 130,
       "scss": 12,
       "json": 0,
       "md": 14,
       "py": 0,
-      "pug": 33,
+      "pug": 32,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2321,7 +2341,7 @@
       "json": 26,
       "md": 0,
       "py": 0,
-      "pug": 66,
+      "pug": 63,
       "gradle": 9,
       "sh": 0,
       "yml": 18
@@ -2340,12 +2360,12 @@
     },
     "jamessspanggg": {
       "java": 418,
-      "js": 628,
+      "js": 627,
       "scss": 45,
       "json": 34,
       "md": 19,
       "py": 0,
-      "pug": 37,
+      "pug": 36,
       "gradle": 0,
       "sh": 67,
       "yml": 9
@@ -2388,12 +2408,12 @@
     },
     "0blivious": {
       "java": 77,
-      "js": 575,
+      "js": 629,
       "scss": 46,
       "json": 0,
       "md": 0,
       "py": 0,
-      "pug": 244,
+      "pug": 253,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2417,7 +2437,7 @@
       "json": 3,
       "md": 0,
       "py": 0,
-      "pug": 68,
+      "pug": 67,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2484,21 +2504,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 32.885887,
+    "ccyccyccy": 30.176924,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 372.48914,
+    "niqiukun": 341.87488,
     "openorclose": 0.0,
-    "yash-chowdhary": 411.42307,
-    "anubh-v": 469.3186,
-    "Tejas2805": 2071.6992,
+    "yash-chowdhary": 377.42764,
+    "anubh-v": 431.6722,
+    "Tejas2805": 1904.2803,
     "dvrylc": 0.0,
-    "jamessspanggg": 2448.9307,
+    "jamessspanggg": 2251.241,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 5075.8286,
+    "0blivious": 4736.936,
     "hcwong": 0.0,
-    "ang-zeyu": 360.78928,
+    "ang-zeyu": 331.14987,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
