@@ -47906,7 +47906,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "{{ icon_example }} A _\u003ctooltip content\u003d\"it has all the main components in their minimal form, compiles, and runs but does not produce any useful output\"\u003ewalking skeleton\u003c/tooltip\u003e_ can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system."
+        "content": "{{ icon_example }} A _\u003ctooltip content\u003d\"it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet\"\u003ewalking skeleton\u003c/tooltip\u003e_ can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system."
       },
       {
         "lineNumber": 24,
@@ -71864,63 +71864,63 @@
         "author": {
           "gitId": "-"
         },
-        "content": "1. Jean creates a separate branch in her local repo and fixes the bug in that branch."
+        "content": "1. Jean creates a separate branch in her local repo and fixes the bug in that branch.\u003cbr\u003e"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "2. Jean pushes the branch to her fork."
+        "content": "   {{ icon_important_big_red }} Common mistake: Done the proposed changes in the `master` branch -- if Jean does that, she will not be able to have more than one open PR at any time because any changes to the `master` branch will be reflected in all open PRs."
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "3. Jean creates a pull request from that branch in her fork to the main repo."
+        "content": "2. Jean pushes the branch to her fork."
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "4. Other members review Jean’s pull request."
+        "content": "3. Jean creates a pull request from that branch in her fork to the main repo."
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "5. If reviewers suggested any changes, Jean updates the PR accordingly."
+        "content": "4. Other members review Jean’s pull request."
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "6. When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated \u0027maintainer\u0027 of the main repo) merges the PR, which brings Jean’s code to the main repo."
+        "content": "5. If reviewers suggested any changes, Jean updates the PR accordingly."
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "7. Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork."
+        "content": "6. When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated \u0027maintainer\u0027 of the main repo) merges the PR, which brings Jean’s code to the main repo."
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "7. Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.\u003cbr\u003e"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": "   {{ icon_important_big_red }} Possible mistake: Creating another \u0027reverse\u0027 PR from the team repo to team member fork to syn the member\u0027s fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction."
       },
       {
         "lineNumber": 25,
@@ -71934,17 +71934,31 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cdiv id\u003d\"extras\"\u003e"
+        "content": "\u003c/div\u003e"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "  \u003cinclude src\u003d\"resources.md\" /\u003e"
+        "content": ""
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv id\u003d\"extras\"\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cinclude src\u003d\"resources.md\" /\u003e"
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
@@ -71953,7 +71967,7 @@
     ],
     "authorContributionMap": {
       "Tejas2805": 1,
-      "-": 27
+      "-": 29
     }
   },
   {
