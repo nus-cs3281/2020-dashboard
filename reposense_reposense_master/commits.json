@@ -1638,6 +1638,26 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-09-30",
+        "commitResults": [
+          {
+            "hash": "08a546085e882b2d2dd261129c72b3f9b15ab9a6",
+            "messageTitle": "[#1322] Fix loading page rendering issue (#1334)",
+            "messageBody": "The contents within `v-resizer` show at the beginning of page load.\r\n\r\nThis is because we write our code directly to `index.pug` instead of\r\na separate file, e.g. app.pug. The generated HTML file from \r\n`index.pug` contains some body HTML code, which is recognized by the \r\nbrowser and displayed first before the JS code is loaded.\r\n\r\nLet\u0027s move the v-if conditional out of v-resizer to a Vue template,\r\nsince the Vue template tag is not recognizable by the browser.",
+            "fileTypesAndContributionMap": {
+              "pug": {
+                "insertions": 64,
+                "deletions": 65
+              },
+              "js": {
+                "insertions": 0,
+                "deletions": 6
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -2381,7 +2401,7 @@
       "json": 34,
       "md": 19,
       "py": 0,
-      "pug": 36,
+      "pug": 39,
       "gradle": 0,
       "sh": 67,
       "yml": 9
@@ -2424,7 +2444,7 @@
     },
     "0blivious": {
       "java": 77,
-      "js": 629,
+      "js": 628,
       "scss": 46,
       "json": 0,
       "md": 0,
@@ -2453,7 +2473,7 @@
       "json": 3,
       "md": 0,
       "py": 0,
-      "pug": 67,
+      "pug": 66,
       "gradle": 0,
       "sh": 0,
       "yml": 0
@@ -2520,21 +2540,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 30.077637,
+    "ccyccyccy": 29.784096,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 340.7546,
+    "niqiukun": 337.43698,
     "openorclose": 0.0,
-    "yash-chowdhary": 376.18262,
-    "anubh-v": 430.28906,
-    "Tejas2805": 1898.1602,
+    "yash-chowdhary": 372.5001,
+    "anubh-v": 426.202,
+    "Tejas2805": 1879.9907,
     "dvrylc": 0.0,
-    "jamessspanggg": 2243.9038,
+    "jamessspanggg": 2275.0627,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4721.621,
+    "0blivious": 4676.379,
     "hcwong": 0.0,
-    "ang-zeyu": 330.06543,
+    "ang-zeyu": 326.85355,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
