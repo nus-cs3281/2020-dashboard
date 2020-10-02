@@ -1053,565 +1053,572 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "jamessspanggg"
         },
-        "content": "      language: node"
+        "content": "      if: branch \u003d master"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      node_js:"
+        "content": "      language: node"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        - lts/*"
+        "content": "      node_js:"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      install:"
+        "content": "        - lts/*"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        - npm i -g markbind-cli"
+        "content": "      install:"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      script: cd docs \u0026\u0026 markbind build --baseUrl /RepoSense"
+        "content": "        - npm i -g markbind-cli"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      deploy:"
+        "content": "      script: cd docs \u0026\u0026 markbind build --baseUrl /RepoSense"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        provider: pages"
+        "content": "      deploy:"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        skip_cleanup: true"
+        "content": "        provider: pages"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        github_token: $GITHUB_TOKEN"
+        "content": "        skip_cleanup: true"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        keep_history: true"
+        "content": "        github_token: $GITHUB_TOKEN"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        local_dir: docs/_site"
+        "content": "        keep_history: true"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        on:"
+        "content": "        local_dir: docs/_site"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "          branch: master"
+        "content": "        on:"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "          branch: master"
       },
       {
         "lineNumber": 19,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "    - name: Ubuntu 14.04 JDK 8"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 21,
         "author": {
           "gitId": "Tejas2805"
         },
         "content": "      language: java"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      os: linux"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "      jdk: openjdk8"
+        "content": "      os: linux"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "      before_install:"
+        "content": "      jdk: openjdk8"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "        - sudo apt-get update"
+        "content": "      before_install:"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "        - sudo apt-get --only-upgrade install openjdk-8-jdk"
+        "content": "        - sudo apt-get update"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "        - echo -e \"Actual JDK in use -- \"; java -version"
+        "content": "        - sudo apt-get --only-upgrade install openjdk-8-jdk"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        - echo -e \"Actual JDK in use -- \"; java -version"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    - name: macOS 10.13.6 JDK 8"
+        "content": ""
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    - name: macOS 10.13.6 JDK 8"
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "Tejas2805"
         },
         "content": "      language: java"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "      os: osx"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "      osx_image: xcode10.1"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "      env:"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
         "content": "        - HOMEBREW_NO_AUTO_UPDATE\u003d1 # Prevent time-consuming brew update"
       },
       {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      before_install:"
-      },
-      {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        - *common_before_install"
+        "content": "      before_install:"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        - brew install cask"
+        "content": "        - *common_before_install"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        - brew cask install AdoptOpenJDK/openjdk/adoptopenjdk8"
+        "content": "        - brew install cask"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        - export JAVA_HOME\u003d`/usr/libexec/java_home -v 1.8`"
+        "content": "        - brew cask install AdoptOpenJDK/openjdk/adoptopenjdk8"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "        - echo -e \"Actual JDK in use -- \"; java -version"
+        "content": "        - export JAVA_HOME\u003d`/usr/libexec/java_home -v 1.8`"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        - echo -e \"Actual JDK in use -- \"; java -version"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    - name: \"Cypress frontend tests\""
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "      os: linux"
+        "content": "    - name: \"Cypress frontend tests\""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "      dist: xenial"
+        "content": "      os: linux"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "      addons:"
+        "content": "      dist: xenial"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        chrome: stable"
+        "content": "      addons:"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "      services:"
+        "content": "        chrome: stable"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        - xvfb"
+        "content": "      services:"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "      before_install:"
+        "content": "        - xvfb"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        - *common_before_install"
+        "content": "      before_install:"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "        - sudo apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2"
+        "content": "        - *common_before_install"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "      script:"
+        "content": "        - sudo apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        - ./gradlew frontendTest -Pci"
+        "content": "      script:"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        - ./gradlew frontendTest -Pci"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "script:"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "  - ./config/travis/run-checks.sh"
+        "content": "script:"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "  - npm run lint"
+        "content": "  - ./config/travis/run-checks.sh"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "  - time travis_retry ./gradlew clean checkstyleMain checkstyleTest test systemTest coverage"
+        "content": "  - npm run lint"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  - time travis_retry ./gradlew clean checkstyleMain checkstyleTest test systemTest coverage"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "before_install: \u0026common_before_install"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "  - npm install --only\u003ddev"
+        "content": "before_install: \u0026common_before_install"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  - npm install --only\u003ddev"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "before_cache:"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock"
+        "content": "before_cache:"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/"
+        "content": "  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "cache:"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "  npm: true,"
+        "content": "cache:"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "  directories:"
+        "content": "  npm: true,"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    - $HOME/.gradle/caches/"
+        "content": "  directories:"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    - $HOME/.gradle/wrapper/"
+        "content": "    - $HOME/.gradle/caches/"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    - $HOME/Library/Caches/Homebrew"
+        "content": "    - $HOME/.gradle/wrapper/"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    - $HOME/.cache"
+        "content": "    - $HOME/Library/Caches/Homebrew"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    - $HOME/.cache"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "after_success:"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "  - bash \u003c(curl -s https://codecov.io/bash)"
+        "content": "after_success:"
       },
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "  - |"
+        "content": "  - bash \u003c(curl -s https://codecov.io/bash)"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    if [ \"$TRAVIS_JOB_NAME\" \u003d \"Ubuntu 14.04 JDK 8\" ];"
+        "content": "  - |"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    then"
+        "content": "    if [ \"$TRAVIS_JOB_NAME\" \u003d \"Ubuntu 14.04 JDK 8\" ];"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      git fetch --all \u0026\u0026 git config --global user.email \"-\" \u0026\u0026 git config --global user.name \"-\" \u0026\u0026 ./gradlew run -Dargs\u003d\"--since d1\""
+        "content": "    then"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      npm install -g surge"
+        "content": "      git fetch --all \u0026\u0026 git config --global user.email \"-\" \u0026\u0026 git config --global user.name \"-\" \u0026\u0026 ./gradlew run -Dargs\u003d\"--since d1\""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      npm install -g markbind-cli"
+        "content": "      npm install -g surge"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      (cd docs \u0026\u0026 markbind build)"
+        "content": "      npm install -g markbind-cli"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      ./config/travis/deploy-surge.sh"
+        "content": "      (cd docs \u0026\u0026 markbind build)"
       },
       {
         "lineNumber": 84,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      ./config/travis/deploy-surge.sh"
+      },
+      {
+        "lineNumber": 85,
         "author": {
           "gitId": "jamessspanggg"
         },
@@ -1620,7 +1627,7 @@
     ],
     "authorContributionMap": {
       "Tejas2805": 18,
-      "jamessspanggg": 9,
+      "jamessspanggg": 10,
       "-": 57
     }
   },
