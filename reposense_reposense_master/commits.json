@@ -1057,6 +1057,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-10-03",
+        "commitResults": [
+          {
+            "hash": "abbabb3afef0ec50b8fd835c85a3bcde6365457c",
+            "messageTitle": "[#1333] Fix loading of local reports (#1335)",
+            "messageBody": "The loading page can load infinitely because it may try to call \r\n`startsWith` with `version` that is undefined.\r\n\r\nLet\u0027s fix it by adding a check to see if `version` is undefined or \r\nnot. ",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 12,
+                "deletions": 9
+              }
+            }
+          }
+        ]
       }
     ],
     "dvrylc": [],
@@ -2388,7 +2404,7 @@
     },
     "Tejas2805": {
       "java": 31,
-      "js": 22,
+      "js": 27,
       "scss": 616,
       "json": 26,
       "md": 0,
@@ -2556,21 +2572,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 29.687845,
+    "ccyccyccy": 29.496674,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 336.34518,
+    "niqiukun": 334.18256,
     "openorclose": 0.0,
-    "yash-chowdhary": 371.29126,
-    "anubh-v": 424.8557,
-    "Tejas2805": 1874.0166,
+    "yash-chowdhary": 368.8926,
+    "anubh-v": 422.1875,
+    "Tejas2805": 1862.6431,
     "dvrylc": 0.0,
-    "jamessspanggg": 2267.8108,
+    "jamessspanggg": 2253.5,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4661.5044,
+    "0blivious": 4632.0264,
     "hcwong": 0.0,
-    "ang-zeyu": 325.79654,
+    "ang-zeyu": 323.70297,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

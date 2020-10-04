@@ -24410,14 +24410,14 @@
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      if (version.startsWith(\u0027v\u0027)) {"
+        "content": "      if (!version) {"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        return `${window.HOME_PAGE_URL}`;"
+        "content": "        return `${window.HOME_PAGE_URL}/RepoSense/`;"
       },
       {
         "lineNumber": 187,
@@ -24431,7 +24431,7 @@
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      return `${window.HOME_PAGE_URL}/RepoSense/`;"
+        "content": "      return `${window.HOME_PAGE_URL}`;"
       },
       {
         "lineNumber": 189,
@@ -24464,16 +24464,16 @@
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "      if (version.startsWith(\u0027v\u0027)) {"
+        "content": "      if (!version) {"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        return `${window.BASE_URL}/reposense/RepoSense/releases/tag/${version}`;"
+        "content": "        return `${window.BASE_URL}/reposense/RepoSense`;"
       },
       {
         "lineNumber": 195,
@@ -24485,149 +24485,149 @@
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "      return `${window.BASE_URL}/reposense/RepoSense/commit/${version}`;"
+        "content": "      if (version.startsWith(\u0027v\u0027)) {"
       },
       {
         "lineNumber": 197,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    },"
+        "content": "        return `${window.BASE_URL}/reposense/RepoSense/releases/tag/${version}`;"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    getUserGuideLink() {"
+        "content": "      return `${window.BASE_URL}/reposense/RepoSense/commit/${version}`;"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "      const version \u003d window.app.repoSenseVersion;"
+        "content": "    },"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (version.startsWith(\u0027v\u0027)) {"
+        "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        return `${window.HOME_PAGE_URL}/ug/index.html`;"
+        "content": "    getUserGuideLink() {"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "      const version \u003d window.app.repoSenseVersion;"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      return `${window.HOME_PAGE_URL}/RepoSense/ug/index.html`;"
+        "content": "      if (!version) {"
       },
       {
         "lineNumber": 205,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    },"
+        "content": "        return `${window.HOME_PAGE_URL}/RepoSense/ug/index.html`;"
       },
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 207,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    getUsingReportsUserGuideLink() {"
+        "content": "      return `${window.HOME_PAGE_URL}/ug/index.html`;"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "      const version \u003d window.app.repoSenseVersion;"
+        "content": "    },"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (version.startsWith(\u0027v\u0027)) {"
+        "content": ""
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "        return `${window.HOME_PAGE_URL}/ug/usingReports.html`;"
+        "content": "    getUsingReportsUserGuideLink() {"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "      const version \u003d window.app.repoSenseVersion;"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "      return `${window.HOME_PAGE_URL}/RepoSense/ug/usingReports.html`;"
+        "content": "      if (!version) {"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        return `${window.HOME_PAGE_URL}/RepoSense/ug/usingReports.html`;"
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "    receiveDates(dates) {"
+        "content": "      return `${window.HOME_PAGE_URL}/ug/usingReports.html`;"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "      const [minDate, maxDate] \u003d dates;"
+        "content": "    },"
       },
       {
         "lineNumber": 217,
@@ -24641,98 +24641,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      if (this.tabType \u003d\u003d\u003d \u0027authorship\u0027) {"
+        "content": "    receiveDates(dates) {"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.renderAuthorShipTabHash(minDate, maxDate);"
+        "content": "      const [minDate, maxDate] \u003d dates;"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": ""
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      if (this.tabType \u003d\u003d\u003d \u0027authorship\u0027) {"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "        this.renderAuthorShipTabHash(minDate, maxDate);"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "  components: {"
+        "content": "      }"
       },
       {
         "lineNumber": 224,
         "author": {
-          "gitId": "ang-zeyu"
+          "gitId": "-"
         },
-        "content": "    vResizer: window.vResizer,"
+        "content": "    },"
       },
       {
         "lineNumber": 225,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "    vZoom: window.vZoom,"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "    vSummary: window.vSummary,"
-      },
-      {
-        "lineNumber": 227,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "    vAuthorship: window.vAuthorship,"
-      },
-      {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    CircleSpinner: window.VueLoadingSpinner.Circle,"
-      },
-      {
-        "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
         "content": "  },"
       },
       {
-        "lineNumber": 230,
+        "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "  created() {"
+        "content": "  components: {"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "ang-zeyu"
+        },
+        "content": "    vResizer: window.vResizer,"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "    vZoom: window.vZoom,"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "    vSummary: window.vSummary,"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "    vAuthorship: window.vAuthorship,"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.updateReportDir();"
+        "content": "    CircleSpinner: window.VueLoadingSpinner.Circle,"
       },
       {
         "lineNumber": 232,
@@ -24746,15 +24746,36 @@
         "author": {
           "gitId": "-"
         },
+        "content": "  created() {"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.updateReportDir();"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
         "content": "});"
       }
     ],
     "authorContributionMap": {
       "ccyccyccy": 2,
-      "Tejas2805": 12,
+      "Tejas2805": 17,
       "jamessspanggg": 18,
       "0blivious": 19,
-      "-": 179,
+      "-": 177,
       "ang-zeyu": 3
     }
   },
