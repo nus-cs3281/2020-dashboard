@@ -29296,7 +29296,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027無法連接認證系統！ ˇ當使用 git-gateway 作為後端資料庫時，請確認您已開啟認證服務及 Git Gateway。\u0027,"
+        "content": "        \u0027無法連接認證系統！當使用 git-gateway 作為後端資料庫時，請確認您已開啟認證服務及 Git Gateway。\u0027,"
       },
       {
         "lineNumber": 14,
@@ -29464,182 +29464,182 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      searchAll: \u0027尋找所有集合\u0027,"
+        "content": "      allCollections: \u0027所有集合\u0027,"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      searchAll: \u0027尋找所有集合\u0027,"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    collectionTop: {"
+        "content": "      searchIn: \u0027搜尋範圍\u0027,"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "      viewAs: \u0027瀏覽方式\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "      newButton: \u0027新增 %{collectionLabel}\u0027,"
+        "content": "    collectionTop: {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      sortBy: \u0027排序方式\u0027,"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "    entries: {"
+        "content": "      viewAs: \u0027瀏覽方式\u0027,"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingEntries: \u0027載入內容\u0027,"
+        "content": "      newButton: \u0027新增 %{collectionLabel}\u0027,"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "      cachingEntries: \u0027快取內容\u0027,"
+        "content": "      ascending: \u0027由小到大\u0027,"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "      longerLoading: \u0027這可能需要幾分鐘的時間\u0027,"
+        "content": "      descending: \u0027由大到小\u0027,"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      searchResults: \u0027搜尋 \"%{searchTerm}\" 的結果\u0027,"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      searchResultsInCollection: \u0027在 %{collection} 中搜尋 %{searchTerm}\" 的結果\u0027,"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "  editor: {"
+        "content": "      filterBy: \u0027篩選方式\u0027,"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    editorControl: {"
+        "content": "    },"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      field: {"
+        "content": "    entries: {"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        optional: \u0027可选的\u0027,"
+        "content": "      loadingEntries: \u0027載入內容\u0027,"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      },"
+        "content": "      cachingEntries: \u0027快取內容\u0027,"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "    },"
+        "content": "      longerLoading: \u0027這可能需要幾分鐘的時間\u0027,"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorControlPane: {"
+        "content": "      noEntries: \u0027沒有內容\u0027,"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "      widget: {"
+        "content": "    },"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        required: \u0027%{fieldLabel} 是必須的。\u0027,"
+        "content": "    defaultFields: {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        regexPattern: \u0027%{fieldLabel} 並不符合 %{pattern} 的型態\u0027,"
+        "content": "      author: {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        processing: \u0027%{fieldLabel} 正在處理\u0027,"
+        "content": "        label: \u0027作者\u0027,"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        range: \u0027%{fieldLabel} 必須介於 %{minValue} 和 %{maxValue} 之間\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        min: \u0027%{fieldLabel} 必須至少為 %{minValue}\u0027,"
+        "content": "      updatedOn: {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        max: \u0027%{fieldLabel} 必須小於或等於 %{maxValue}\u0027,"
+        "content": "        label: \u0027更新於\u0027,"
       },
       {
         "lineNumber": 63,
@@ -29660,749 +29660,749 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    editor: {"
+        "content": "  },"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "      onLeavePage: \u0027您確定要離開這頁嗎？\u0027,"
+        "content": "  editor: {"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      onUpdatingWithUnsavedChanges: \u0027您有未儲存的變更，在更新狀態前請先進行儲存。\u0027,"
+        "content": "    editorControl: {"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      onPublishingNotReady: \u0027在發布前，請先將狀態設定為：預備發布。\u0027,"
+        "content": "      field: {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingWithUnsavedChanges: \u0027您有未儲存的變更，在發布前請先進行儲存。\u0027,"
+        "content": "        optional: \u0027選填\u0027,"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      onPublishing: \u0027你確定要發表此內容嗎？\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "tiuweehan"
         },
-        "content": "      onUnpublishing: \u0027你確定要取消發表此內容嗎？\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteWithUnsavedChanges:"
+        "content": "    editorControlPane: {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027Are you sure you want to delete this published entry, as well as your unsaved changes from the current session?\u0027,"
+        "content": "      widget: {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeletePublishedEntry: \u0027Are you sure you want to delete this published entry?\u0027,"
+        "content": "        required: \u0027%{fieldLabel} 是必須的。\u0027,"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChangesWithUnsavedChanges:"
+        "content": "        regexPattern: \u0027%{fieldLabel} 並不符合 %{pattern} 的型態\u0027,"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027This will delete all unpublished changes to this entry, as well as your unsaved changes from the current session. Do you still want to delete?\u0027,"
+        "content": "        processing: \u0027%{fieldLabel} 正在處理\u0027,"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChanges:"
+        "content": "        range: \u0027%{fieldLabel} 必須介於 %{minValue} 和 %{maxValue} 之間\u0027,"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027All unpublished changes to this entry will be deleted. Do you still want to delete?\u0027,"
+        "content": "        min: \u0027%{fieldLabel} 必須至少為 %{minValue}\u0027,"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "      loadingEntry: \u0027載入內容中...\u0027,"
+        "content": "        max: \u0027%{fieldLabel} 必須小於或等於 %{maxValue}\u0027,"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "      confirmLoadBackup: \u0027A local backup was recovered for this entry, would you like to use it?\u0027,"
+        "content": "        rangeCount: \u0027%{fieldLabel} 必須有 %{minCount} 到 %{maxCount} 個項目。\u0027,"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "        rangeCountExact: \u0027%{fieldLabel} 必須正好有 %{count} 個項目。\u0027,"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorToolbar: {"
+        "content": "        minCount: \u0027%{fieldLabel} 必須至少有 %{minCount} 個項目。\u0027,"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishing: \u0027發布中...\u0027,"
+        "content": "        maxCount: \u0027%{fieldLabel} 最多只能有 %{maxCount} 個項目。\u0027,"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "      publish: \u0027發布\u0027,"
+        "content": "        invalidPath: `\u0027%{path}\u0027 不是有效的路徑`,"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "      published: \u0027已發布\u0027,"
+        "content": "        pathExists: `路徑 \u0027%{path}\u0027 已經存在`,"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "      unpublish: \u0027取消發布\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "      duplicate: \u0027建立新內容\u0027,"
+        "content": "      i18n: {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "      unpublishing: \u0027取消發布中...\u0027,"
+        "content": "        writingInLocale: \u0027以 %{locale} 書寫\u0027,"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishAndCreateNew: \u0027發布並建立內容\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishAndDuplicate: \u0027發布並複製內容\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteUnpublishedChanges: \u0027刪除未發布的變更\u0027,"
+        "content": "    editor: {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteUnpublishedEntry: \u0027刪除未發布的內容\u0027,"
+        "content": "      onLeavePage: \u0027您確定要離開這頁嗎？\u0027,"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "      deletePublishedEntry: \u0027刪除已發布的內容\u0027,"
+        "content": "      onUpdatingWithUnsavedChanges: \u0027您有未儲存的變更，在更新狀態前請先進行儲存。\u0027,"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteEntry: \u0027刪除內容\u0027,"
+        "content": "      onPublishingNotReady: \u0027在發布前，請先將狀態設定為：預備發布。\u0027,"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "      saving: \u0027儲存中...\u0027,"
+        "content": "      onPublishingWithUnsavedChanges: \u0027您有未儲存的變更，在發布前請先進行儲存。\u0027,"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "      save: \u0027儲存\u0027,"
+        "content": "      onPublishing: \u0027你確定要發表此內容嗎？\u0027,"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleting: \u0027刪除中...\u0027,"
+        "content": "      onUnpublishing: \u0027你確定要取消發表此內容嗎？\u0027,"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "      updating: \u0027更新中...\u0027,"
+        "content": "      onDeleteWithUnsavedChanges: \u0027你確定要刪除這篇已發布的內容以及你尚未儲存的變更？\u0027,"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "      setStatus: \u0027設定狀態\u0027,"
+        "content": "      onDeletePublishedEntry: \u0027你確定要刪除這篇已發布的內容？\u0027,"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "      backCollection: \u0027在集合 %{collectionLabel} 新增內容\u0027,"
+        "content": "      onDeleteUnpublishedChangesWithUnsavedChanges:"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "      unsavedChanges: \u0027未儲存變更\u0027,"
+        "content": "        \u0027這將會刪除此內容所有未發布的變更，以及未儲存的變更。你確定還是要刪除？\u0027,"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "      changesSaved: \u0027已儲存變更\u0027,"
+        "content": "      onDeleteUnpublishedChanges: \u0027此內容所有未發布的變更都將會被刪除。你確定還是要刪除？\u0027,"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "      draft: \u0027草稿\u0027,"
+        "content": "      loadingEntry: \u0027載入內容中...\u0027,"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReview: \u0027正在審核\u0027,"
+        "content": "      confirmLoadBackup: \u0027此內容的本地備份已經還原，你想要使用嗎？\u0027,"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "      ready: \u0027預備發布\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNow: \u0027立即發布\u0027,"
+        "content": "    editorToolbar: {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployPreviewPendingButtonLabel: \u0027點擊來進行預覽\u0027,"
+        "content": "      publishing: \u0027發布中...\u0027,"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployPreviewButtonLabel: \u0027進行預覽\u0027,"
+        "content": "      publish: \u0027發布\u0027,"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "      deployButtonLabel: \u0027觀看已發布的內容\u0027,"
+        "content": "      published: \u0027已發布\u0027,"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      unpublish: \u0027取消發布\u0027,"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    editorWidgets: {"
+        "content": "      duplicate: \u0027建立新內容\u0027,"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      image: {"
+        "content": "      unpublishing: \u0027取消發布中...\u0027,"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        choose: \u0027选择一张图片\u0027,"
+        "content": "      publishAndCreateNew: \u0027發布並建立內容\u0027,"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        chooseDifferent: \u0027选择其他图片\u0027,"
+        "content": "      publishAndDuplicate: \u0027發布並複製內容\u0027,"
       },
       {
         "lineNumber": 115,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        remove: \u0027移除图片\u0027,"
+        "content": "      deleteUnpublishedChanges: \u0027刪除未發布的變更\u0027,"
       },
       {
         "lineNumber": 116,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      },"
+        "content": "      deleteUnpublishedEntry: \u0027刪除未發布的內容\u0027,"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "      file: {"
+        "content": "      deletePublishedEntry: \u0027刪除已發布的內容\u0027,"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        choose: \u0027选择一个文件\u0027,"
+        "content": "      deleteEntry: \u0027刪除內容\u0027,"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        chooseDifferent: \u0027选择其他文件\u0027,"
+        "content": "      saving: \u0027儲存中...\u0027,"
       },
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "tiuweehan"
+          "gitId": "-"
         },
-        "content": "        remove: \u0027删除文件\u0027,"
+        "content": "      save: \u0027儲存\u0027,"
       },
       {
         "lineNumber": 121,
-        "author": {
-          "gitId": "tiuweehan"
-        },
-        "content": "      },"
-      },
-      {
-        "lineNumber": 122,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      unknownControl: {"
-      },
-      {
-        "lineNumber": 123,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        noControl: \"無法控制元件： \u0027%{widget}\u0027.\","
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      },"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      unknownPreview: {"
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        noPreview: \"無法預覽元件： \u0027%{widget}\u0027.\","
-      },
-      {
-        "lineNumber": 127,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      },"
-      },
-      {
-        "lineNumber": 128,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      headingOptions: {"
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        headingOne: \u0027Heading 1\u0027,"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        headingTwo: \u0027Heading 2\u0027,"
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        headingThree: \u0027Heading 3\u0027,"
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        headingFour: \u0027Heading 4\u0027,"
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        headingFive: \u0027Heading 5\u0027,"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        headingSix: \u0027Heading 6\u0027,"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      },"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    },"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  },"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  mediaLibrary: {"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    mediaLibraryCard: {"
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      draft: \u0027草稿\u0027,"
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    },"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    mediaLibrary: {"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      onDelete: \u0027你確定要刪除已選擇的媒體嗎？\u0027,"
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    },"
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    mediaLibraryModal: {"
-      },
-      {
-        "lineNumber": 146,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      loading: \u0027載入中...\u0027,"
-      },
-      {
-        "lineNumber": 147,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      noResults: \u0027沒有結果\u0027,"
-      },
-      {
-        "lineNumber": 148,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      noAssetsFound: \u0027沒有發現媒體資產。\u0027,"
-      },
-      {
-        "lineNumber": 149,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      noImagesFound: \u0027沒有發現影像。\u0027,"
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      private: \u0027私人\u0027,"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      images: \u0027影像\u0027,"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      mediaAssets: \u0027媒體資產\u0027,"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      search: \u0027搜尋中...\u0027,"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      uploading: \u0027上傳中...\u0027,"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      upload: \u0027上傳新內容\u0027,"
-      },
-      {
-        "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
         "content": "      deleting: \u0027刪除中...\u0027,"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteSelected: \u0027刪除已選擇的項目\u0027,"
+        "content": "      updating: \u0027更新中...\u0027,"
       },
       {
-        "lineNumber": 158,
+        "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "      chooseSelected: \u0027選擇已選擇的項目\u0027,"
+        "content": "      setStatus: \u0027設定狀態\u0027,"
       },
       {
-        "lineNumber": 159,
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      backCollection: \u0027在集合 %{collectionLabel} 新增內容\u0027,"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      unsavedChanges: \u0027未儲存變更\u0027,"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      changesSaved: \u0027已儲存變更\u0027,"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      draft: \u0027草稿\u0027,"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      inReview: \u0027正在審核\u0027,"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      ready: \u0027預備發布\u0027,"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishNow: \u0027立即發布\u0027,"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deployPreviewPendingButtonLabel: \u0027點擊來進行預覽\u0027,"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deployPreviewButtonLabel: \u0027進行預覽\u0027,"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deployButtonLabel: \u0027觀看已發布的內容\u0027,"
+      },
+      {
+        "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
         "content": "    },"
       },
       {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    editorWidgets: {"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      markdown: {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        richText: \u0027Rich Text\u0027,"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        markdown: \u0027Markdown\u0027,"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      image: {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        choose: \u0027選擇一張圖片\u0027,"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        chooseDifferent: \u0027選擇其他圖片\u0027,"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        remove: \u0027刪除圖片\u0027,"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      file: {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        choose: \u0027選擇一個檔案\u0027,"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        chooseDifferent: \u0027選擇其他檔案\u0027,"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        remove: \u0027刪除檔案\u0027,"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "tiuweehan"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      unknownControl: {"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        noControl: \"無法控制元件： \u0027%{widget}\u0027.\","
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      unknownPreview: {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        noPreview: \"無法預覽元件： \u0027%{widget}\u0027.\","
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      },"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      headingOptions: {"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        headingOne: \u0027標題 1\u0027,"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        headingTwo: \u0027標題 2\u0027,"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        headingThree: \u0027標題 3\u0027,"
+      },
+      {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "        headingFour: \u0027標題 4\u0027,"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "  ui: {"
+        "content": "        headingFive: \u0027標題 5\u0027,"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "    errorBoundary: {"
+        "content": "        headingSix: \u0027標題 6\u0027,"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "      title: \u0027錯誤\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "      details: \u0027發生錯誤！請 \u0027,"
+        "content": "      datetime: {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "      reportIt: \u0027回報錯誤\u0027,"
+        "content": "        now: \u0027現在\u0027,"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "      detailsHeading: \u0027細節\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "      recoveredEntry: {"
+        "content": "    },"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "        heading: \u0027已恢復的內容\u0027,"
+        "content": "  },"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "        warning: \u0027在你離開本頁前，請將此處的內容複製貼上到其他地方來進行備份！\u0027,"
+        "content": "  mediaLibrary: {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        copyButtonLabel: \u0027複製到剪貼簿\u0027,"
+        "content": "    mediaLibraryCard: {"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "      },"
+        "content": "      draft: \u0027草稿\u0027,"
       },
       {
         "lineNumber": 172,
@@ -30416,259 +30416,259 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    settingsDropdown: {"
+        "content": "    mediaLibrary: {"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "      logOut: \u0027登出\u0027,"
+        "content": "      onDelete: \u0027你確定要刪除已選擇的媒體嗎？\u0027,"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      fileTooLarge: \u0027檔案太大。\\n已設定不允許大於 %{size} kB 的檔案。\u0027,"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "    toast: {"
+        "content": "    },"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToLoadEntries: \u0027無法載入內容： %{details}\u0027,"
+        "content": "    mediaLibraryModal: {"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToLoadDeployPreview: \u0027無法預覽內容： %{details}\u0027,"
+        "content": "      loading: \u0027載入中...\u0027,"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToPersist: \u0027無法暫存內容： %{details}\u0027,"
+        "content": "      noResults: \u0027沒有結果\u0027,"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToDelete: \u0027無法刪除內容： %{details}\u0027,"
+        "content": "      noAssetsFound: \u0027沒有發現媒體資產。\u0027,"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToUpdateStatus: \u0027無法更新狀態： %{details}\u0027,"
+        "content": "      noImagesFound: \u0027沒有發現影像。\u0027,"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "      missingRequiredField: \u0027糟了！你漏填了一個必須填入的欄位，在儲存前請先填完所有內容\u0027,"
+        "content": "      private: \u0027私人\u0027,"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "      entrySaved: \u0027已儲存內容\u0027,"
+        "content": "      images: \u0027影像\u0027,"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryPublished: \u0027已發布內容\u0027,"
+        "content": "      mediaAssets: \u0027媒體資產\u0027,"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryUnpublished: \u0027已取消發布內容\u0027,"
+        "content": "      search: \u0027搜尋中...\u0027,"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToPublishEntry: \u0027無法發布： %{details}\u0027,"
+        "content": "      uploading: \u0027上傳中...\u0027,"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToUnpublishEntry: \u0027無法取消發布： %{details}\u0027,"
+        "content": "      upload: \u0027上傳新內容\u0027,"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "      entryUpdated: \u0027內容狀態已更新\u0027,"
+        "content": "      download: \u0027下載\u0027,"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteUnpublishedChanges: \u0027已刪除未發布的變更\u0027,"
+        "content": "      deleting: \u0027刪除中...\u0027,"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "      onFailToAuth: \u0027%{details}\u0027,"
+        "content": "      deleteSelected: \u0027刪除已選擇的項目\u0027,"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      chooseSelected: \u0027選擇已選擇的項目\u0027,"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    },"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "  workflow: {"
+        "content": "  },"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflow: {"
+        "content": "  ui: {"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "      loading: \u0027正在載入編輯流程的內容\u0027,"
+        "content": "    default: {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "      workflowHeading: \u0027編輯作業流程\u0027,"
+        "content": "      goBackToSite: \u0027回到網站\u0027,"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "      newPost: \u0027建立新的內容\u0027,"
+        "content": "    },"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "      description:"
+        "content": "    errorBoundary: {"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027%{smart_count} 篇內容正在等待審核， %{readyCount} 篇已經準備進行發布。 |||| %{smart_count} 篇內容正在等待審核， %{readyCount} 篇已經準備進行發布。\u0027,"
+        "content": "      title: \u0027錯誤\u0027,"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "      dateFormat: \u0027MMMM D\u0027,"
+        "content": "      details: \u0027發生錯誤！請 \u0027,"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      reportIt: \u0027回報錯誤\u0027,"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowCard: {"
+        "content": "      detailsHeading: \u0027細節\u0027,"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChange: \u0027%{date} by %{author}\u0027,"
+        "content": "      privacyWarning:"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+        "content": "        \u0027建立 issue，並加上錯誤訊息及除錯資訊。\\n請確認資訊正確，敏感資料也已經去除。\u0027,"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "      lastChangeNoDate: \u0027by %{author}\u0027,"
+        "content": "      recoveredEntry: {"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteChanges: \u0027刪除變更\u0027,"
+        "content": "        heading: \u0027已恢復的內容\u0027,"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "      deleteNewEntry: \u0027刪除新內容\u0027,"
+        "content": "        warning: \u0027在你離開本頁前，請將此處的內容複製貼上到其他地方來進行備份！\u0027,"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishChanges: \u0027發布變更\u0027,"
+        "content": "        copyButtonLabel: \u0027複製到剪貼簿\u0027,"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "      publishNewEntry: \u0027發布新內容\u0027,"
+        "content": "      },"
       },
       {
         "lineNumber": 210,
@@ -30682,94 +30682,374 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    workflowList: {"
+        "content": "    settingsDropdown: {"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "      onDeleteEntry: \u0027你確定要刪除這個項目嗎？\u0027,"
+        "content": "      logOut: \u0027登出\u0027,"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishingNotReadyEntry:"
+        "content": "    },"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "        \u0027只有狀態為 預備發布 的內容可以被發布，請將本內容的狀態設定為 預備發布 來進行發布前的準備\u0027,"
+        "content": "    toast: {"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "      onPublishEntry: \u0027你確定要發表這篇內容嗎？\u0027,"
+        "content": "      onFailToLoadEntries: \u0027無法載入內容： %{details}\u0027,"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "      draftHeader: \u0027草稿\u0027,"
+        "content": "      onFailToLoadDeployPreview: \u0027無法預覽內容： %{details}\u0027,"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "      inReviewHeader: \u0027正在預覽\u0027,"
+        "content": "      onFailToPersist: \u0027無法暫存內容： %{details}\u0027,"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "      readyHeader: \u0027準備完成\u0027,"
+        "content": "      onFailToDelete: \u0027無法刪除內容： %{details}\u0027,"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "      currentEntries: \u0027%{smart_count} 篇內容 |||| %{smart_count} 篇內容\u0027,"
+        "content": "      onFailToUpdateStatus: \u0027無法更新狀態： %{details}\u0027,"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      missingRequiredField: \u0027糟了！你漏填了一個必須填入的欄位，在儲存前請先填完所有內容\u0027,"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      entrySaved: \u0027已儲存內容\u0027,"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "};"
+        "content": "      entryPublished: \u0027已發布內容\u0027,"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      entryUnpublished: \u0027已取消發布內容\u0027,"
       },
       {
         "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToPublishEntry: \u0027無法發布： %{details}\u0027,"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToUnpublishEntry: \u0027無法取消發布： %{details}\u0027,"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      entryUpdated: \u0027內容狀態已更新\u0027,"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onDeleteUnpublishedChanges: \u0027已刪除未發布的變更\u0027,"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onFailToAuth: \u0027%{details}\u0027,"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onLoggedOut: \u0027你已經登出，請備份任何資料然後重新登入\u0027,"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onBackendDown: \u0027後端服務發生中斷。看 %{details} 取得更多資訊\u0027,"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  workflow: {"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflow: {"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      loading: \u0027正在載入編輯流程的內容\u0027,"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      workflowHeading: \u0027編輯作業流程\u0027,"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      newPost: \u0027建立新的內容\u0027,"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      description:"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027%{smart_count} 篇內容正在等待審核， %{readyCount} 篇已經準備進行發布。 |||| %{smart_count} 篇內容正在等待審核， %{readyCount} 篇已經準備進行發布。\u0027,"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      dateFormat: \u0027MMMM D\u0027,"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflowCard: {"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChange: \u0027%{date} by %{author}\u0027,"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChangeNoAuthor: \u0027%{date}\u0027,"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      lastChangeNoDate: \u0027by %{author}\u0027,"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deleteChanges: \u0027刪除變更\u0027,"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      deleteNewEntry: \u0027刪除新內容\u0027,"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishChanges: \u0027發布變更\u0027,"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      publishNewEntry: \u0027發布新內容\u0027,"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    workflowList: {"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onDeleteEntry: \u0027你確定要刪除這個項目嗎？\u0027,"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onPublishingNotReadyEntry:"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027只有狀態為 預備發布 的內容可以被發布，請將本內容的狀態設定為 預備發布 來進行發布前的準備\u0027,"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      onPublishEntry: \u0027你確定要發表這篇內容嗎？\u0027,"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      draftHeader: \u0027草稿\u0027,"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      inReviewHeader: \u0027正在預覽\u0027,"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      readyHeader: \u0027準備完成\u0027,"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      currentEntries: \u0027%{smart_count} 篇內容 |||| %{smart_count} 篇內容\u0027,"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "};"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
@@ -30777,8 +31057,8 @@
       }
     ],
     "authorContributionMap": {
-      "tiuweehan": 18,
-      "-": 206
+      "tiuweehan": 11,
+      "-": 253
     }
   },
   {
