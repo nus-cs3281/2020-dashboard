@@ -3859,7 +3859,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the \u0027default\u0027 branch to detect errors (i.e. if execution reached the `default` branch, throw an exception). This also applies to the final `else` of an `if-else` construct. That is, the final `else` should mean \u0027everything else\u0027, and not the final option. Do not use `else` when an `if` condition can be explicitly specified, unless there is absolutely no other possibility."
+        "content": "Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the \u0027default\u0027 branch to detect errors (i.e. if execution reached the `default` branch, raise a suitable error). This also applies to the final `else` of an `if-else` construct. That is, the final `else` should mean \u0027everything else\u0027, and not the final option. Do not use `else` when an `if` condition can be explicitly specified, unless there is absolutely no other possibility."
       },
       {
         "lineNumber": 12,
