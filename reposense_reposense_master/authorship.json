@@ -7770,6 +7770,121 @@
     }
   },
   {
+    "path": "frontend/cypress/.eslintrc.json",
+    "fileType": "json",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \"extends\": ["
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \"../../.eslintrc.json\""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ],"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \"globals\": {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        \"Cypress\": true,"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        \"cy\": true,"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        \"describe\": true,"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        \"it\": true,"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        \"beforeEach\": true"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \"rules\": {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \"no-unused-expressions\": \"off\""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 5,
+      "-": 10
+    }
+  },
+  {
     "path": "frontend/cypress/tests/chartView/chartView_contributionBar.js",
     "fileType": "js",
     "lines": [
@@ -10644,6 +10759,1186 @@
     }
   },
   {
+    "path": "frontend/cypress/tests/codeView/codeView_checkFileTypes.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "describe(\u0027check file types\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027check if all files types are visible by default\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the code panel"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"all\"]\u0027)"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.checked\u0027);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027uncheck all files types should show no files\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the code panel"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"all\"]\u0027)"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .uncheck()"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.checked\u0027);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027)"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.visible\u0027);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027uncheck file type should uncheck all option and not show legend\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the code panel"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"java\"]\u0027)"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .uncheck()"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.checked\u0027);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"all\"]\u0027)"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.checked\u0027);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.file \u003e .title \u003e .fileTypeLabel\u0027)"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.contain.text\u0027, \u0027java\u0027);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.file \u003e .title \u003e .fileTypeLabel\u0027)"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027contain.text\u0027, \u0027gradle\u0027);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 63
+    }
+  },
+  {
+    "path": "frontend/cypress/tests/codeView/codeView_hideFileDetails.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "describe(\u0027hide all file details\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027check hide all file details hides the content of all the files\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the code panel"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // the contents of all the files should be visible"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // hide the details of all the files"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027)"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // the contents of all the files should be hidden"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.visible\u0027);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027check details of one file are shown, rest are hidden\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // should show \u0027show all file details\u0027 only"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .toolbar--multiline a\u0027)"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.contain.text\u0027, \u0027hide all file details\u0027)"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027contain.text\u0027, \u0027show all file details\u0027);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open contents of the first file"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .title .path\u0027)"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // should show both \u0027show/hide all file details\u0027"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .toolbar--multiline a\u0027)"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027contain.text\u0027, \u0027hide all file details\u0027)"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027contain.text\u0027, \u0027show all file details\u0027);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // contents of the first file should be visible"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // contents of the last file should be hidden"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .last()"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.visible\u0027);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027check show all file details shows the content of all the files\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .files\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // hide the content of all the files"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.visible\u0027);"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // show the content of all the files"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship .file-content \u0027)"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 103
+    }
+  },
+  {
     "path": "frontend/cypress/tests/codeView/codeView_load_benchmark.js",
     "fileType": "js",
     "lines": [
@@ -11078,6 +12373,1013 @@
     "authorContributionMap": {
       "Tejas2805": 1,
       "-": 60
+    }
+  },
+  {
+    "path": "frontend/cypress/tests/codeView/codeView_reload.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "describe(\u0027reload page\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027reload page should restore all controls\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the code panel"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-code\u0027)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // sort by"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .sorting \u003e .sort-by \u003e select\u0027)"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .select(\u0027LoC\u0027);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // sort order"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .sorting \u003e .sort-order \u003e select\u0027)"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .select(\u0027Descending\u0027);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // select radio-button"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes \u003e .radio-button--checkbox\u0027)"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .check()"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.checked\u0027);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"all\"]\u0027)"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.checked\u0027);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"gradle\"]\u0027)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .uncheck()"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.checked\u0027);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"pug\"]\u0027)"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.checked\u0027);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.reload();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .sorting \u003e .sort-by \u003e select\u0027)"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027have.value\u0027, \u0027lineOfCode\u0027);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .sorting \u003e .sort-order \u003e select\u0027)"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027have.value\u0027, \u0027true\u0027);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes \u003e .radio-button--checkbox\u0027)"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.checked\u0027);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"all\"]\u0027)"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.checked\u0027);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"gradle\"]\u0027)"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.checked\u0027);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-authorship \u003e .title \u003e .contribution \u003e .fileTypes input[id\u003d\"pug\"]\u0027)"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.checked\u0027);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 55
+    }
+  },
+  {
+    "path": "frontend/cypress/tests/zoomView/zoomView_hideCommitMessages.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "describe(\u0027hide all commit messages \u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027check hide all commit messages hides the commit messages\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the commit panel"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-list-ul\u0027)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // the messages of all the commits should be visible"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message .body\u0027)"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // hides all the commit messages"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message\u0027)"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // the messages of all the commits should be hidden"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message .body\u0027)"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.visible\u0027);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027check show all commit messages show the commit messages\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the commit panel"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-list-ul\u0027)"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message\u0027, { timeout: 90000 })"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // hides all the commit messages"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // the messages of all the commits should be hidden"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message .body\u0027)"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027not.be.visible\u0027);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // show the messages of all the commits"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .toolbar--multiline\u0027)"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom .commit-message .body\u0027)"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 60
+    }
+  },
+  {
+    "path": "frontend/cypress/tests/zoomView/zoomView_reload.js",
+    "fileType": "js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "describe(\u0027reload page\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  it(\u0027reload page should restore all controls\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    Cypress.wait();"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    // open the commit panel"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027.icon-button.fa-list-ul\u0027)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027be.visible\u0027)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .first()"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .click();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom \u003e .sorting \u003e .sort-by \u003e select:visible\u0027)"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .select(\u0027Time\u0027);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom \u003e .sorting \u003e .sort-order \u003e select:visible\u0027)"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .select(\u0027Descending\u0027);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.reload();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom \u003e .sorting \u003e .sort-by \u003e select:visible\u0027)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027have.value\u0027, \u0027time\u0027);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    cy.get(\u0027#tab-zoom \u003e .sorting \u003e .sort-order \u003e select:visible\u0027)"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        .should(\u0027have.value\u0027, \u0027true\u0027);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "});"
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 25
     }
   },
   {
@@ -20592,815 +22894,829 @@
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ".zoom {"
+        "content": "#tab-zoom {"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026__title {"
+        "content": "  .zoom {"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    \u0026--granularity {"
+        "content": "    \u0026__title {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      @include mini-font;"
+        "content": "      \u0026--granularity {"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      margin-top: .5rem;"
+        "content": "        @include mini-font;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    }"
+        "content": "        margin-top: .5rem;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    \u0026--tags {"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      margin: .25rem 0 .25rem 0;"
+        "content": "      \u0026--tags {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "        margin: .25rem 0 .25rem 0;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      .tag {"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        cursor: pointer;"
+        "content": "        .tag {"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      }"
+        "content": "          cursor: pointer;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026__toggle-commit-message-body {"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    padding-top: 10px;"
+        "content": "    \u0026__toggle-commit-message-body {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      padding-top: 10px;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026__day,"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026__title {"
+        "content": "    \u0026__day,"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    /* Tags in commits */"
+        "content": "    \u0026__title {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    .tag {"
+        "content": "      /* Tags in commits */"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      @include mini-font;"
+        "content": "      .tag {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      background: mui-color(\u0027grey\u0027, \u0027600\u0027);"
+        "content": "        @include mini-font;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      border-radius: 5px;"
+        "content": "        background: mui-color(\u0027grey\u0027, \u0027600\u0027);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      color: mui-color(\u0027white\u0027);"
+        "content": "        border-radius: 5px;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      display: inline-block;"
+        "content": "        color: mui-color(\u0027white\u0027);"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      margin: .2rem .2rem .2rem 0;"
+        "content": "        display: inline-block;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      padding: 0 3px 0 3px;"
+        "content": "        margin: .2rem .2rem .2rem 0;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "        padding: 0 3px 0 3px;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      .fa-tags {"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "        width: .65rem;"
+        "content": "        .fa-tags {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      }"
+        "content": "          width: .65rem;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "}"
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "/* Commit Message Body in Zoom Tab */"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ".commit-message {"
+        "content": "  /* Commit Message Body in Zoom Tab */"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  padding: 5px;"
+        "content": "  .commit-message {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    padding: 5px;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026:focus,"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026:focus-within {"
+        "content": "    \u0026:focus,"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    border: 1px solid mui-color(\u0027blue\u0027, \u0027500\u0027);"
+        "content": "    \u0026:focus-within {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      border: 1px solid mui-color(\u0027blue\u0027, \u0027500\u0027);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026.active {"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    .body {"
+        "content": "    \u0026.active {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      background-color: mui-color(\u0027white\u0027);"
+        "content": "      .body {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      border: 1px solid mui-color(\u0027grey\u0027, \u0027700\u0027);"
+        "content": "        background-color: mui-color(\u0027white\u0027);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      display: grid;"
+        "content": "        border: 1px solid mui-color(\u0027grey\u0027, \u0027700\u0027);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      margin: .25rem 0 .25rem 0;"
+        "content": "        display: grid;"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      overflow-x: auto;"
+        "content": "        margin: .25rem 0 .25rem 0;"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      padding: .4rem;"
+        "content": "        overflow-x: auto;"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      resize: none;"
+        "content": "        padding: .4rem;"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "        resize: none;"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      pre {"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        position: relative;"
+        "content": "        pre {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "          position: relative;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        .dashed-border {"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          border-right: 1px dashed mui-color(\u0027grey\u0027, \u0027500\u0027); // 72nd character line"
+        "content": "          .dashed-border {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          height: 100%;"
+        "content": "            border-right: 1px dashed mui-color(\u0027grey\u0027, \u0027500\u0027); // 72nd character line"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          pointer-events: none;"
+        "content": "            height: 100%;"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          position: absolute;"
+        "content": "            pointer-events: none;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          top: 0;"
+        "content": "            position: absolute;"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "          width: 72ch;"
+        "content": "            top: 0;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "        }"
+        "content": "            width: 72ch;"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      }"
+        "content": "          }"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "jamessspanggg"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  .body {"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    display: none;"
+        "content": "    .body {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      display: none;"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  .tag {"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    cursor: pointer;"
+        "content": "    .tag {"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "      cursor: pointer;"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    \u0026:focus {"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      border: 1px solid mui-color(\u0027blue\u0027, \u0027500\u0027);"
+        "content": "      \u0026:focus {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      outline: none;"
+        "content": "        border: 1px solid mui-color(\u0027blue\u0027, \u0027500\u0027);"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    }"
+        "content": "        outline: none;"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  \u0026--button {"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "Tejas2805"
         },
-        "content": "    color: mui-color(\u0027grey\u0027);"
+        "content": "    \u0026--button {"
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "jamessspanggg"
         },
-        "content": "    padding-left: .5rem;"
+        "content": "      color: mui-color(\u0027grey\u0027);"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "      padding-left: .5rem;"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    \u0026:hover {"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "      cursor: pointer;"
+        "content": "      \u0026:hover {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    }"
+        "content": "        cursor: pointer;"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  pre {"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "    margin: 0;"
+        "content": "    pre {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": "  }"
+        "content": "      margin: 0;"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  span.loc {"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    color: mui-color(\u0027grey\u0027);"
+        "content": "    span.loc {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  }"
+        "content": "      color: mui-color(\u0027grey\u0027);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  .message-title {"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    display: inline;"
+        "content": "    .message-title {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    font-family: monospace;"
+        "content": "      display: inline;"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "      font-family: monospace;"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    .within-border {"
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      display: inline;"
+        "content": "      .within-border {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    }"
+        "content": "        display: inline;"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    .not-within-border {"
+        "content": ""
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      border-left: 1px dashed mui-color(\u0027grey\u0027, \u0027500\u0027); // 50th character line"
+        "content": "      .not-within-border {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      display: inline;"
+        "content": "        border-left: 1px dashed mui-color(\u0027grey\u0027, \u0027500\u0027); // 50th character line"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    }"
+        "content": "        display: inline;"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  }"
+        "content": "      }"
       },
       {
         "lineNumber": 119,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 121,
         "author": {
           "gitId": "Tejas2805"
         },
@@ -21408,7 +23724,7 @@
       }
     ],
     "authorContributionMap": {
-      "Tejas2805": 87,
+      "Tejas2805": 89,
       "jamessspanggg": 32
     }
   },
@@ -40502,9 +42818,9 @@
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        .mui-select"
+        "content": "        .mui-select.sort-by"
       },
       {
         "lineNumber": 22,
@@ -40789,9 +43105,9 @@
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "Tejas2805"
         },
-        "content": "            input.mui-checkbox--fileType(type\u003d\"checkbox\", v-model\u003d\"isSelectAllChecked\")"
+        "content": "            input.mui-checkbox--fileType#all(type\u003d\"checkbox\", v-model\u003d\"isSelectAllChecked\")"
       },
       {
         "lineNumber": 63,
@@ -41139,10 +43455,10 @@
     ],
     "authorContributionMap": {
       "ccyccyccy": 7,
-      "Tejas2805": 18,
+      "Tejas2805": 20,
       "jamessspanggg": 4,
-      "-": 35,
-      "0blivious": 19,
+      "-": 34,
+      "0blivious": 18,
       "ang-zeyu": 28
     }
   },
@@ -41619,9 +43935,9 @@
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "Tejas2805"
         },
-        "content": "    .mui-select"
+        "content": "    .mui-select.sort-by"
       },
       {
         "lineNumber": 57,
@@ -41654,9 +43970,9 @@
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "Tejas2805"
         },
-        "content": "    .mui-select"
+        "content": "    .mui-select.sort-order"
       },
       {
         "lineNumber": 62,
@@ -41900,10 +44216,10 @@
     "authorContributionMap": {
       "ccyccyccy": 3,
       "niqiukun": 9,
-      "Tejas2805": 24,
+      "Tejas2805": 26,
       "jamessspanggg": 21,
       "-": 18,
-      "0blivious": 20
+      "0blivious": 18
     }
   },
   {

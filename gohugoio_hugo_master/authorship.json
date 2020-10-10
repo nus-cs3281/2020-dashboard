@@ -274,7 +274,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\tdefaultLang :\u003d cfg.GetString(\"defaultContentLanguage\")"
+        "content": "\tdefaultLang :\u003d strings.ToLower(cfg.GetString(\"defaultContentLanguage\"))"
       },
       {
         "lineNumber": 40,
