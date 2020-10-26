@@ -6196,6 +6196,324 @@
     }
   },
   {
+    "path": "docs/showcase.md",
+    "fileType": "md",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cvariable name\u003d\"title\"\u003eShowcase\u003c/variable\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cfrontmatter\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  title: \"{{ title | safe }}\""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/frontmatter\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003ch1 class\u003d\"display-3\"\u003e\u003cmd\u003e{{ title }}\u003c/md\u003e\u003c/h1\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Case 1: Monitoring student programmers (**individual** projects)"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Scenario:** RepoSense is used to monitor a Software Engineering course in which students build a project over 8 weeks."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "* **Links:** [report](https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort\u003dgroupTitle\u0026groupSelect\u003dgroupByAuthors\u0026search\u003d\u0026sortWithin\u003dtitle\u0026since\u003d2020-08-14\u0026until\u003d2020-09-27\u0026timeframe\u003dcommit\u0026mergegroup\u003d\u0026breakdown\u003dfalse) | [repo containing the settings](https://github.com/nus-cs2103-AY2021S1/ip-dashboard)"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Example usages:**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  * To compare students based on the amount of code written, we can sort by contribution, as done in [this view](https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort\u003dtotalCommits%20dsc\u0026groupSelect\u003dgroupByAuthors\u0026search\u003d\u0026sortWithin\u003dtitle\u0026since\u003d2020-08-14\u0026until\u003d2020-09-27\u0026timeframe\u003dday\u0026mergegroup\u003d\u0026breakdown\u003dfalse)."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  * [This view](https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort\u003dgroupTitle\u0026groupSelect\u003dgroupByAuthors\u0026search\u003d\u0026sortWithin\u003dtitle\u0026since\u003d2020-08-14\u0026until\u003d2020-09-27\u0026timeframe\u003dcommit\u0026mergegroup\u003d\u0026breakdown\u003dfalse\u0026tabOpen\u003dtrue\u0026tabType\u003dauthorship\u0026tabAuthor\u003dsc-arecrow\u0026tabRepo\u003dsc-arecrow%2Fip%5Bmaster%5D\u0026authorshipIsMergeGroup\u003dfalse\u0026authorshipFileTypes\u003djava~md~fxml~sh~bat~gradle~txt) shows us code written by a specific student."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c!-- ------------------------------------------------------------------------------------------------------ --\u003e"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Case 2: Monitoring student programmers (**team** projects)"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Scenario:** Similar to case 1 above but this time students are doing team projects."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "* **Links:** [report](https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown\u003dtrue\u0026search\u003d\u0026sort\u003dgroupTitle\u0026sortWithin\u003dtitle\u0026since\u003d2020-08-14\u0026timeframe\u003dcommit\u0026mergegroup\u003d\u0026groupSelect\u003dgroupByRepos\u0026checkedFileTypes\u003ddocs~functional-code~test-code~other) | [settings](https://github.com/nus-cs2103-AY2021S1/tp-dashboard)"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Example usages:**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  * To find the breakdown of the work done, we can tick the `breakdown by file type` checkbox, as shown in [this view](https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown\u003dtrue\u0026search\u003d\u0026sort\u003dgroupTitle\u0026sortWithin\u003dtitle\u0026since\u003d2020-08-14\u0026timeframe\u003dcommit\u0026mergegroup\u003d\u0026groupSelect\u003dgroupByRepos\u0026checkedFileTypes\u003dtest-code~other~functional-code~docs). After that, we can filter out certain file types by un-ticking the file type."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "  * To find how teams compare in terms of total work done, we can tick the `merge group` check-box and sort groups by `Contribution`, as seen in [this view](https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown\u003dfalse\u0026search\u003d\u0026sort\u003dtotalCommits%20dsc\u0026sortWithin\u003dtitle\u0026since\u003d2020-08-14\u0026timeframe\u003dweek\u0026mergegroup\u003dAY2021S1-CS2103-F09-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F09-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F09-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F09-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F10-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F10-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F10-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103-F10-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T14-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T14-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T14-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T14-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T16-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T16-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T16-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103-T16-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103-W14-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103-W14-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103-W14-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103-W14-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F11-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F11-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F11-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F11-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F12-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F12-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F12-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F12-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F13-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F13-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F13-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-F13-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T09-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T09-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T09-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T09-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T10-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T10-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T10-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T10-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T11-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T11-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T11-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T11-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T12-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T12-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T12-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T12-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T13-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T13-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T13-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T13-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T15-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T15-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T15-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T15-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T17-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T17-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T17-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-T17-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W10-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W10-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W10-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W10-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W11-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W11-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W11-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W11-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W12-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W12-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W12-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W12-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W13-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W13-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W13-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W13-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W15-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W15-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W15-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W15-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W16-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W16-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W16-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W16-4%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W17-1%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W17-2%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W17-3%2Ftp%5Bmaster%5D~AY2021S1-CS2103T-W17-4%2Ftp%5Bmaster%5D\u0026groupSelect\u003dgroupByRepos). Also note how \u003ctooltip content\u003d\"i.e., each ramp represents the work done by the entire team in the whole week\"\u003ethe `granularity` of the ramps is set to `Week`\u003c/tooltip\u003e to reduce clutter."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  * [This view](https://nus-cs2113-ay1920s2.github.io/tp-dashboard/#search\u003d\u0026sort\u003dgroupTitle\u0026sortWithin\u003dtitle\u0026since\u003d2020-04-06\u0026timeframe\u003dcommit\u0026mergegroup\u003dfalse\u0026groupSelect\u003dgroupByRepos\u0026breakdown\u003dtrue) shows the activities near the submission deadline (note how some have overshot the deadline and some others show a frenzy of activities very near to the deadline)."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c!-- ------------------------------------------------------------------------------------------------------ --\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Case 3: Monitoring student programmers (**multiple** external projects)"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Scenario:** Similar to case 1 and 2 above but this time each student works on multiple projects. Furthermore, most projects are external OSS projects not within the control of the teacher."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Links:** [report](https://nus-cs3281.github.io/2020-dashboard/#search\u003d\u0026sort\u003dgroupTitle\u0026sortWithin\u003dtitle\u0026timeframe\u003dcommit\u0026mergegroup\u003dfalse\u0026groupSelect\u003dgroupByAuthors\u0026breakdown\u003dfalse\u0026since\u003d2019-12-01) | [settings](https://github.com/nus-cs2113-AY1920S2/tp-dashboard)"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **Example usages:**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  * [This view](https://nus-cs3281.github.io/2020-dashboard/#search\u003d\u0026sort\u003dgroupTitle\u0026sortWithin\u003dtitle\u0026since\u003d2019-12-01\u0026timeframe\u003dcommit\u0026mergegroup\u003d\u0026groupSelect\u003dgroupByRepos\u0026breakdown\u003dfalse\u0026tabOpen\u003dtrue\u0026tabType\u003dzoom\u0026zA\u003danubh-v\u0026zR\u003dCATcher-org%2FCATcher%5Bmaster%5D\u0026zACS\u003d118.09969788519638\u0026zS\u003d2019-12-01\u0026zFS\u003d\u0026zU\u003d2020-06-05\u0026zMG\u003dfalse\u0026zFTF\u003dcommit\u0026zFGS\u003dgroupByRepos) shows the commit messages written by a specific student."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  * Note how we can use the `group by` drop-down to organize activities around projects or individual authors."
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  * Similarly, we can use the `merge all groups` check-box to see the sum of activities in a specific project or by a specific student."
+      }
+    ],
+    "authorContributionMap": {
+      "Tejas2805": 6,
+      "-": 38
+    }
+  },
+  {
     "path": "docs/site.json",
     "fileType": "json",
     "lines": [
