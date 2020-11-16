@@ -33276,315 +33276,1008 @@
       {
         "lineNumber": 1,
         "author": {
+          "gitId": "-"
+        },
+        "content": "import { IssueDispute } from \u0027../../src/app/core/models/issue-dispute.model\u0027;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
           "gitId": "geshuming"
         },
         "content": "import { Issue } from \u0027../../src/app/core/models/issue.model\u0027;"
       },
       {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "anubh-v"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 3,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "import { ISSUE_WITH_EMPTY_DESCRIPTION, ISSUE_WITH_ASSIGNEES } from \u0027../constants/githubissue.constants\u0027;"
+        "content": "import { Team } from \u0027../../src/app/core/models/team.model\u0027;"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "import { TesterResponse } from \u0027../../src/app/core/models/tester-response.model\u0027;"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "describe(\u0027Issue model class\u0027, () \u003d\u003e {"
+        "content": "import { Phase } from \u0027../../src/app/core/services/phase.service\u0027;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    describe(\u0027.createPhaseBugReportIssue(githubIssue)\u0027, () \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "geshuming"
         },
-        "content": "        it(\u0027correctly creates a bug reporting issue that has an empty description\u0027, async () \u003d\u003e {"
+        "content": "import { ISSUE_WITH_EMPTY_DESCRIPTION, ISSUE_WITH_ASSIGNEES } from \u0027../constants/githubissue.constants\u0027;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const issue \u003d Issue.createPhaseBugReportingIssue(ISSUE_WITH_EMPTY_DESCRIPTION);"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.title).toBe(\u0027App starts to lag when given large amount of input\u0027);"
+        "content": "describe(\u0027Issue model class\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.description).toBe(\u0027No details provided by bug reporter.\u0027);"
+        "content": "    describe(\u0027.createPhaseBugReportIssue(githubIssue)\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.severity).toBe(\u0027Medium\u0027);"
+        "content": "        it(\u0027correctly creates a bug reporting issue that has an empty description\u0027, async () \u003d\u003e {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.type).toBe(\u0027FunctionalityBug\u0027);"
+        "content": "            const issue \u003d Issue.createPhaseBugReportingIssue(ISSUE_WITH_EMPTY_DESCRIPTION);"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "        });"
+        "content": "            expect(issue.title).toBe(\u0027App starts to lag when given large amount of input\u0027);"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    });"
+        "content": "            expect(issue.description).toBe(\u0027No details provided by bug reporter.\u0027);"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    describe(\u0027.createPhaseTeamResponseIssue(githubIssue, githubComment)\u0027, () \u003d\u003e {"
+        "content": "            expect(issue.severity).toBe(\u0027Medium\u0027);"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "        it(\u0027correctly creates a team response issue that has an empty team response\u0027, async() \u003d\u003e {"
+        "content": "            expect(issue.type).toBe(\u0027FunctionalityBug\u0027);"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const dummyTeam \u003d null;"
+        "content": "        });"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": "            const issue \u003d Issue.createPhaseTeamResponseIssue(ISSUE_WITH_ASSIGNEES, dummyTeam);"
+        "content": "    });"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.title).toBe(\u0027Screen freezes\u0027);"
+        "content": "    describe(\u0027.createPhaseTeamResponseIssue(githubIssue, githubComment)\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.teamResponse).toBe(\u0027No details provided by team.\u0027);"
+        "content": "        it(\u0027correctly creates a team response issue that has an empty team response\u0027, async() \u003d\u003e {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.severity).toBe(\u0027Medium\u0027);"
+        "content": "            const dummyTeam \u003d null;"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "            expect(issue.assignees).toContain(\u0027anubh-v\u0027);"
+        "content": "            const issue \u003d Issue.createPhaseTeamResponseIssue(ISSUE_WITH_ASSIGNEES, dummyTeam);"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(issue.assignees.length).toBe(1);"
+        "content": "            expect(issue.title).toBe(\u0027Screen freezes\u0027);"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "        });"
+        "content": "            expect(issue.teamResponse).toBe(\u0027No details provided by team.\u0027);"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    });"
+        "content": "            expect(issue.severity).toBe(\u0027Medium\u0027);"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "    describe(\u0027.updateDescription(description) and .updateTeamResponse(teamResponse)\u0027, () \u003d\u003e {"
+        "content": "            expect(issue.assignees).toContain(\u0027anubh-v\u0027);"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "        it(\u0027correctly clean strings obtained from users\u0027, () \u003d\u003e {"
+        "content": "            expect(issue.assignees.length).toBe(1);"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const noDetailsFromBugReporter \u003d \u0027No details provided by bug reporter.\u0027;"
+        "content": "        });"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            const noDetailsFromTeam \u003d \u0027No details provided by team.\u0027;"
+        "content": "    });"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateDescription(\u0027\u0027)).toBe(noDetailsFromBugReporter);"
+        "content": "    describe(\u0027.updateDescription(description) and .updateTeamResponse(teamResponse)\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateTeamResponse(\u0027\u0027)).toBe(noDetailsFromTeam);"
+        "content": "        it(\u0027correctly clean strings obtained from users\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateDescription(null)).toBe(noDetailsFromBugReporter);"
+        "content": "            const noDetailsFromBugReporter \u003d \u0027No details provided by bug reporter.\u0027;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "            expect(Issue.updateTeamResponse(undefined)).toBe(noDetailsFromTeam);"
+        "content": "            const noDetailsFromTeam \u003d \u0027No details provided by team.\u0027;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": ""
+        "content": "            expect(Issue.updateDescription(\u0027\u0027)).toBe(noDetailsFromBugReporter);"
       },
       {
         "lineNumber": 35,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(\u0027\u0027)).toBe(noDetailsFromTeam);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateDescription(null)).toBe(noDetailsFromBugReporter);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "            expect(Issue.updateTeamResponse(undefined)).toBe(noDetailsFromTeam);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
         "author": {
           "gitId": "geshuming"
         },
         "content": "            const typicalDescription \u003d \u0027The app crashes after parsing config files.\u0027;"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 40,
         "author": {
           "gitId": "geshuming"
         },
         "content": "            const typicalTeamResponse \u003d \u0027Cannot replicate the bug.\u0027;"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
         "content": "            expect(Issue.updateDescription(typicalDescription)).toBe(typicalDescription + \u0027\\n\\n\u0027);"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": "            expect(Issue.updateTeamResponse(typicalTeamResponse)).toBe(typicalTeamResponse + \u0027\\n\\n\u0027);"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 43,
         "author": {
           "gitId": "anubh-v"
         },
         "content": ""
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 44,
         "author": {
           "gitId": "anubh-v"
         },
         "content": "            const inputWithSpecialChars \u003d \u0027$%^!@\u0026-_test\u0027;"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
         "content": "            expect(Issue.updateDescription(inputWithSpecialChars)).toBe(inputWithSpecialChars + \u0027\\n\\n\u0027);"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
         "content": "            expect(Issue.updateTeamResponse(inputWithSpecialChars)).toBe(inputWithSpecialChars + \u0027\\n\\n\u0027);"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 47,
         "author": {
           "gitId": "anubh-v"
         },
         "content": "        });"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 48,
         "author": {
           "gitId": "anubh-v"
         },
         "content": "    });"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 49,
         "author": {
           "gitId": "anubh-v"
+        },
+        "content": "});"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "describe(\u0027Issue\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const dummyTeam \u003d new Team({"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        id: \u0027F09-2\u0027,"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        teamMembers: [],"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const dummyIssue \u003d Issue.createPhaseBugReportingIssue(ISSUE_WITH_EMPTY_DESCRIPTION);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const otherDummyIssue \u003d Issue.createPhaseBugReportingIssue(ISSUE_WITH_ASSIGNEES);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const dummyIssueWithTeam \u003d Issue.createPhaseTeamResponseIssue(ISSUE_WITH_EMPTY_DESCRIPTION, dummyTeam);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const noReportedDescriptionString \u003d \u0027No details provided by bug reporter.\\n\u0027;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const tutorResponseStringHeader \u003d \u0027# Tutor Moderation\\n\\n\u0027;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const newIssueDispute \u003d new IssueDispute(\u0027Cannot Work\u0027, \u0027Help Please\u0027);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const newTesterResponse \u003d new TesterResponse(\u0027Cannot Work\u0027, \u0027Help Please\u0027, \u0027- [ ] Not Done\u0027, \u0027Reason\u0027);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    it(\u0027.clone() should intialise the cloned issue with the correct phase and team\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseBugReportingIssue \u003d dummyIssue.clone(Phase.phaseBugReporting);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseBugReportingIssue).toEqual(dummyIssue);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseTeamResponseIssue \u003d dummyIssueWithTeam.clone(Phase.phaseTeamResponse);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTeamResponseIssue.githubComments).toEqual(dummyIssueWithTeam.githubComments);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTeamResponseIssue.teamAssigned).toEqual(dummyTeam);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseTesterResponseIssue \u003d dummyIssueWithTeam.clone(Phase.phaseTesterResponse);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTesterResponseIssue.githubComments).toEqual(dummyIssueWithTeam.githubComments);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseModerationIssue \u003d dummyIssueWithTeam.clone(Phase.phaseModeration);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue.githubComments).toEqual(dummyIssueWithTeam.githubComments);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue.teamAssigned).toEqual(dummyTeam);"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    it(\u0027.createGithubIssueDescription() forms the correct GitHub Issue description for the issue\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseBugReportingIssue \u003d dummyIssue.clone(Phase.phaseBugReporting);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseBugReportingIssue.createGithubIssueDescription()).toEqual(noReportedDescriptionString);"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseBugReportingIssueWithDescription \u003d otherDummyIssue.clone(Phase.phaseBugReporting);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseBugReportingIssueWithDescription.createGithubIssueDescription())"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            .toEqual(`${phaseBugReportingIssueWithDescription.description}\\n`);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    it(\u0027.createGithubTeamResponse() should be able to get the proper Team Response\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseTeamResponseIssue \u003d dummyIssue.clone(Phase.phaseTeamResponse);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTeamResponseIssue.teamResponse \u003d \u0027Sample Text\u0027;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTeamResponseIssue.createGithubTeamResponse())"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            .toEqual(`# Team\\\u0027s Response\\n${phaseTeamResponseIssue.teamResponse}\\n ## Duplicate status (if any):\\n--`);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseTeamResponseIssue2 \u003d dummyIssue.clone(Phase.phaseTeamResponse);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTeamResponseIssue2.teamResponse \u003d \u0027Sample Text\u0027;"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTeamResponseIssue2.duplicateOf \u003d 10;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTeamResponseIssue2.createGithubTeamResponse())"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            .toEqual(`# Team\\\u0027s Response\\n${phaseTeamResponseIssue2.teamResponse}\\n `"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + `## Duplicate status (if any):\\nDuplicate of #${phaseTeamResponseIssue2.duplicateOf}`);"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    it (\u0027.createGithubTutorResponse() should be able to get the proper Tutor Response\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseModerationIssue \u003d dummyIssueWithTeam.clone(Phase.phaseModeration);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue.createGithubTutorResponse()).toEqual(tutorResponseStringHeader);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseModerationIssue2 \u003d dummyIssueWithTeam.clone(Phase.phaseModeration);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseModerationIssue2.issueDisputes \u003d [newIssueDispute];"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue2.createGithubTutorResponse()).toEqual(tutorResponseStringHeader"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + newIssueDispute.toTutorResponseString());"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    it (\u0027.createGithubTesterResponse() should be able to get the proper Tester Response\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseTesterResponseIssue \u003d dummyIssueWithTeam.clone(Phase.phaseTesterResponse);"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTesterResponseIssue.teamResponse \u003d \u0027Sample Text\u0027;"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTesterResponseIssue.testerResponses \u003d [];"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTesterResponseIssue.createGithubTesterResponse()).toEqual("
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            `# Team\\\u0027s Response\\n${phaseTesterResponseIssue.teamResponse}\\n ` +"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        `# Items for the Tester to Verify\\n${\u0027\u0027}`);"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseTesterResponseIssue2 \u003d dummyIssueWithTeam.clone(Phase.phaseTesterResponse);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTesterResponseIssue2.teamResponse \u003d \u0027Sample Text\u0027;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseTesterResponseIssue2.testerResponses \u003d [newTesterResponse];"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseTesterResponseIssue2.createGithubTesterResponse()).toEqual("
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            `# Team\\\u0027s Response\\n${phaseTesterResponseIssue.teamResponse}\\n ` +"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        `# Items for the Tester to Verify\\n${newTesterResponse.toString()}`);"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    it (\u0027.numOfUnresolvedDisputes() returns the correct number of issue disputes\u0027, () \u003d\u003e {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseModerationIssue \u003d dummyIssueWithTeam.clone(Phase.phaseModeration);"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue.numOfUnresolvedDisputes()).toEqual(0);"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseModerationIssue2 \u003d dummyIssueWithTeam.clone(Phase.phaseModeration);"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseModerationIssue2.issueDisputes \u003d [newIssueDispute];"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue2.numOfUnresolvedDisputes()).toEqual(1);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        const phaseModerationIssue3 \u003d dummyIssueWithTeam.clone(Phase.phaseModeration);"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phaseModerationIssue3.issueDisputes \u003d [newIssueDispute];"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        newIssueDispute.setIsDone(true);"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expect(phaseModerationIssue3.numOfUnresolvedDisputes()).toEqual(0);"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
         },
         "content": "});"
       }
@@ -33592,7 +34285,7 @@
     "authorContributionMap": {
       "geshuming": 4,
       "anubh-v": 36,
-      "-": 5
+      "-": 104
     }
   },
   {

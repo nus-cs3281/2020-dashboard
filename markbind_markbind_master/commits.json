@@ -2157,6 +2157,26 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-11-15",
+        "commitResults": [
+          {
+            "hash": "e3e83448c63dbb20c2cee5635f5a913dedab2800",
+            "messageTitle": "Override nunjucks variables with include variables (#1369)",
+            "messageBody": "Variables set via nunjucks\u0027 {% set %} and {% import %} tags have\r\npriority over MarkBind variables in includes.\r\n\r\nLet\u0027s fix this, facilitating content reuse for pages with these tags.\r\nThe result is a fully nunjucks-compliant behaviour, that differs only\r\nwhen MarkBind\u0027s added variable features are used.",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 30,
+                "deletions": 3
+              },
+              "js": {
+                "insertions": 571,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2770,7 +2790,7 @@
       "js": 128,
       "css": 26,
       "json": 4,
-      "md": 1044,
+      "md": 1043,
       "mbd": 0,
       "mbdf": 28,
       "njk": 0,
@@ -2863,10 +2883,10 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 3113,
+      "js": 3683,
       "css": 101,
       "json": 381,
-      "md": 434,
+      "md": 464,
       "mbd": 0,
       "mbdf": 357,
       "njk": 16,
@@ -2950,21 +2970,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 3714.7346,
-    "yash-chowdhary": 4825.426,
-    "Tejas2805": 202.79863,
-    "dvrylc": 9.448598,
+    "openorclose": 3683.1174,
+    "yash-chowdhary": 4784.482,
+    "Tejas2805": 201.06761,
+    "dvrylc": 9.368075,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 9.399041,
-    "ang-zeyu": 43749.613,
+    "hcwong": 9.318885,
+    "ang-zeyu": 44312.477,
     "geshuming": 0.0,
-    "alyip98": 1.6610632,
-    "nbriannl": 7340.6924,
-    "le0tan": 90802.055,
-    "madanalogy": 97.32598,
+    "alyip98": 1.6469394,
+    "nbriannl": 7278.394,
+    "le0tan": 90028.58,
+    "madanalogy": 96.4981,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
