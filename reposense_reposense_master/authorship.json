@@ -13726,9 +13726,9 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        .select(\u0027Time\u0027);"
+        "content": "        .select(\u0027LoC\u0027);"
       },
       {
         "lineNumber": 13,
@@ -13747,9 +13747,9 @@
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        .select(\u0027Descending\u0027);"
+        "content": "        .select(\u0027Ascending\u0027);"
       },
       {
         "lineNumber": 16,
@@ -13838,9 +13838,9 @@
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        .should(\u0027have.value\u0027, \u0027time\u0027);"
+        "content": "        .should(\u0027have.value\u0027, \u0027lineOfCode\u0027);"
       },
       {
         "lineNumber": 29,
@@ -13859,9 +13859,9 @@
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        .should(\u0027have.value\u0027, \u0027true\u0027);"
+        "content": "        .should(\u0027have.value\u0027, \u0027false\u0027);"
       },
       {
         "lineNumber": 32,
@@ -13942,8 +13942,8 @@
       }
     ],
     "authorContributionMap": {
-      "Tejas2805": 25,
-      "-": 17
+      "Tejas2805": 21,
+      "-": 21
     }
   },
   {
@@ -41346,7 +41346,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        this.retrieveSelectedFileTypesHash();"
+        "content": "        this.retrieveHashes();"
       },
       {
         "lineNumber": 93,
@@ -41402,180 +41402,180 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    commitsSortType() {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      window.addHash(\u0027zCST\u0027, this.commitsSortType);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "  methods: {"
+        "content": "      window.encodeHash();"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    initiate() {"
+        "content": "    },"
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      if (!this.info.zUser) { // restoring zoom tab from reloaded page"
+        "content": "    toReverseSortedCommits() {"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "        this.restoreZoomTab();"
+        "content": "      window.addHash(\u0027zRSC\u0027, this.toReverseSortedCommits);"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      }"
+        "content": "      window.encodeHash();"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
         "content": "    },"
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "  },"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    openSummary() {"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "      const info \u003d { since: this.info.zSince, until: this.info.zUntil };"
+        "content": "  methods: {"
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "jamessspanggg"
         },
-        "content": "      this.$store.commit(\u0027updateSummaryDates\u0027, info);"
+        "content": "    initiate() {"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    },"
+        "content": "      if (!this.info.zUser) { // restoring zoom tab from reloaded page"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "        this.restoreZoomTab();"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    getSliceLink(slice) {"
+        "content": "      }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      if (this.info.zIsMerge) {"
+        "content": "    },"
       },
       {
         "lineNumber": 116,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "        return `${window.getBaseLink(slice.repoId)}/commit/${slice.hash}`;"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    openSummary() {"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "0blivious"
         },
-        "content": "      return `${window.getBaseLink(this.info.zUser.repoId)}/commit/${slice.hash}`;"
+        "content": "      const info \u003d { since: this.info.zSince, until: this.info.zUntil };"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "    },"
+        "content": "      this.$store.commit(\u0027updateSummaryDates\u0027, info);"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    },"
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "    scrollToCommit(tag, commit) {"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "      const el \u003d this.$el.getElementsByClassName(`${commit} ${tag}`)[0];"
+        "content": "    getSliceLink(slice) {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      if (el) {"
+        "content": "      if (this.info.zIsMerge) {"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "        el.focus();"
+        "content": "        return `${window.getBaseLink(slice.repoId)}/commit/${slice.hash}`;"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
         "content": "      }"
       },
@@ -41584,427 +41584,427 @@
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    },"
+        "content": "      return `${window.getBaseLink(this.info.zUser.repoId)}/commit/${slice.hash}`;"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    },"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    restoreZoomTab() {"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "      // restore selected user\u0027s commits and file type colors from v_summary"
+        "content": "    scrollToCommit(tag, commit) {"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "0blivious"
         },
-        "content": "      this.$root.$emit(\u0027restoreCommits\u0027, this.info);"
+        "content": "      const el \u003d this.$el.getElementsByClassName(`${commit} ${tag}`)[0];"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    },"
+        "content": "      if (el) {"
       },
       {
         "lineNumber": 132,
+        "author": {
+          "gitId": "0blivious"
+        },
+        "content": "        el.focus();"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 135,
         "author": {
           "gitId": "jamessspanggg"
         },
         "content": ""
       },
       {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    updateFileTypes() {"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      const commitsFileTypes \u003d new Set();"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      this.filteredUser.commits.forEach((commit) \u003d\u003e {"
-      },
-      {
         "lineNumber": 136,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        commit.commitResults.forEach((slice) \u003d\u003e {"
+        "content": "    restoreZoomTab() {"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "          Object.keys(slice.fileTypesAndContributionMap).forEach((fileType) \u003d\u003e {"
+        "content": "      // restore selected user\u0027s commits and file type colors from v_summary"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "            commitsFileTypes.add(fileType);"
+        "content": "      this.$root.$emit(\u0027restoreCommits\u0027, this.info);"
       },
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          });"
+        "content": "    },"
       },
       {
         "lineNumber": 140,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "        });"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": "    updateFileTypes() {"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.fileTypes \u003d Object.keys(this.filteredUser.fileTypeContribution).filter("
+        "content": "      const commitsFileTypes \u003d new Set();"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "          (fileType) \u003d\u003e commitsFileTypes.has(fileType),"
+        "content": "      this.filteredUser.commits.forEach((commit) \u003d\u003e {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "      );"
+        "content": "        commit.commitResults.forEach((slice) \u003d\u003e {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.isFileTypesLoaded \u003d true;"
+        "content": "          Object.keys(slice.fileTypesAndContributionMap).forEach((fileType) \u003d\u003e {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "            commitsFileTypes.add(fileType);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "          });"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "    retrieveSelectedFileTypesHash() {"
+        "content": "        });"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "      window.decodeHash();"
+        "content": "      });"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "      const hash \u003d window.hashParams;"
+        "content": "      this.fileTypes \u003d Object.keys(this.filteredUser.fileTypeContribution).filter("
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "          (fileType) \u003d\u003e commitsFileTypes.has(fileType),"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (hash.zFT) {"
+        "content": "      );"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.selectedFileTypes \u003d hash.zFT"
+        "content": "      this.isFileTypesLoaded \u003d true;"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "            .split(window.HASH_DELIMITER)"
+        "content": "    },"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "            .filter((fileType) \u003d\u003e this.fileTypes.includes(fileType));"
+        "content": ""
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    retrieveHashes() {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      this.retrieveSortHash();"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      this.retrieveSelectedFileTypesHash();"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    updateSelectedFileTypesHash() {"
+        "content": "    },"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "      const fileTypeHash \u003d this.selectedFileTypes.length \u003e 0"
+        "content": ""
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "          ? this.selectedFileTypes.reduce((a, b) \u003d\u003e `${a}~${b}`)"
+        "content": "    retrieveSortHash() {"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "          : \u0027\u0027;"
+        "content": "      window.decodeHash();"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      const hash \u003d window.hashParams;"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "      window.addHash(\u0027zFT\u0027, fileTypeHash);"
+        "content": "      if (hash.zCST) {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "      window.encodeHash();"
+        "content": "        this.commitsSortType \u003d hash.zCST;"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      }"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      if (hash.zRSC) {"
       },
       {
         "lineNumber": 168,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    setInfoHash() {"
+        "content": "        this.toReverseSortedCommits \u003d (hash.zRSC \u003d\u003d\u003d \u0027true\u0027);"
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      const { addHash, encodeHash } \u003d window;"
+        "content": "      }"
       },
       {
         "lineNumber": 170,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      const {"
+        "content": "    },"
       },
       {
         "lineNumber": 171,
         "author": {
-          "gitId": "0blivious"
-        },
-        "content": "        zAvgCommitSize, zSince, zUntil, zFilterGroup,"
-      },
-      {
-        "lineNumber": 172,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "        zTimeFrame, zIsMerge, zAuthor, zRepo, zFromRamp, zFilterSearch,"
-      },
-      {
-        "lineNumber": 173,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      } \u003d this.info;"
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    retrieveSelectedFileTypesHash() {"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      window.decodeHash();"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const hash \u003d window.hashParams;"
+      },
+      {
         "lineNumber": 175,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zA\u0027, zAuthor);"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zR\u0027, zRepo);"
+        "content": "      if (hash.zFT) {"
       },
       {
         "lineNumber": 177,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zACS\u0027, zAvgCommitSize);"
+        "content": "        this.selectedFileTypes \u003d hash.zFT"
       },
       {
         "lineNumber": 178,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zS\u0027, zSince);"
+        "content": "            .split(window.HASH_DELIMITER)"
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zFS\u0027, zFilterSearch);"
+        "content": "            .filter((fileType) \u003d\u003e this.fileTypes.includes(fileType));"
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zU\u0027, zUntil);"
+        "content": "      }"
       },
       {
         "lineNumber": 181,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zMG\u0027, zIsMerge);"
+        "content": "    },"
       },
       {
         "lineNumber": 182,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zFTF\u0027, zTimeFrame);"
+        "content": ""
       },
       {
         "lineNumber": 183,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zFGS\u0027, zFilterGroup);"
+        "content": "    updateSelectedFileTypesHash() {"
       },
       {
         "lineNumber": 184,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "      addHash(\u0027zFR\u0027, zFromRamp);"
+        "content": "      const fileTypeHash \u003d this.selectedFileTypes.length \u003e 0"
       },
       {
         "lineNumber": 185,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      encodeHash();"
+        "content": "          ? this.selectedFileTypes.reduce((a, b) \u003d\u003e `${a}~${b}`)"
       },
       {
         "lineNumber": 186,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    },"
+        "content": "          : \u0027\u0027;"
       },
       {
         "lineNumber": 187,
@@ -42018,339 +42018,521 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    toggleAllCommitMessagesBody(isActive) {"
+        "content": "      window.addHash(\u0027zFT\u0027, fileTypeHash);"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "      this.showAllCommitMessageBody \u003d isActive;"
+        "content": "      window.encodeHash();"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    },"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      const toRename \u003d this.showAllCommitMessageBody ? \u0027commit-message message-body active\u0027 : \u0027commit-message message-body\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "    setInfoHash() {"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      const commitMessageClasses \u003d document.getElementsByClassName(\u0027commit-message message-body\u0027);"
+        "content": "      const { addHash, encodeHash } \u003d window;"
       },
       {
         "lineNumber": 194,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "      Array.from(commitMessageClasses).forEach((commitMessageClass) \u003d\u003e {"
+        "content": "      const {"
       },
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "        commitMessageClass.className \u003d toRename;"
+        "content": "        zAvgCommitSize, zSince, zUntil, zFilterGroup,"
       },
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "      });"
+        "content": "        zTimeFrame, zIsMerge, zAuthor, zRepo, zFromRamp, zFilterSearch,"
       },
       {
         "lineNumber": 197,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "      } \u003d this.info;"
       },
       {
         "lineNumber": 198,
         "author": {
-          "gitId": "-"
-        },
-        "content": "      this.expandedCommitMessagesCount \u003d isActive ? this.totalCommitMessageBodyCount : 0;"
-      },
-      {
-        "lineNumber": 199,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    },"
-      },
-      {
-        "lineNumber": 200,
-        "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
         "content": ""
       },
       {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      addHash(\u0027zA\u0027, zAuthor);"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      addHash(\u0027zR\u0027, zRepo);"
+      },
+      {
         "lineNumber": 201,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    updateExpandedCommitMessagesCount() {"
+        "content": "      addHash(\u0027zACS\u0027, zAvgCommitSize);"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      this.expandedCommitMessagesCount \u003d document.getElementsByClassName(\u0027commit-message message-body active\u0027)"
+        "content": "      addHash(\u0027zS\u0027, zSince);"
       },
       {
         "lineNumber": 203,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          .length;"
+        "content": "      addHash(\u0027zFS\u0027, zFilterSearch);"
       },
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "    },"
+        "content": "      addHash(\u0027zU\u0027, zUntil);"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": ""
+        "content": "      addHash(\u0027zMG\u0027, zIsMerge);"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    removeZoomHashes() {"
+        "content": "      addHash(\u0027zFTF\u0027, zTimeFrame);"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      window.removeHash(\u0027zA\u0027);"
+        "content": "      addHash(\u0027zFGS\u0027, zFilterGroup);"
       },
       {
         "lineNumber": 208,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "0blivious"
         },
-        "content": "      window.removeHash(\u0027zR\u0027);"
+        "content": "      addHash(\u0027zFR\u0027, zFromRamp);"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      window.removeHash(\u0027zFS\u0027);"
+        "content": "      encodeHash();"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      window.removeHash(\u0027zACS\u0027);"
-      },
-      {
-        "lineNumber": 211,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      window.removeHash(\u0027zS\u0027);"
-      },
-      {
-        "lineNumber": 212,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      window.removeHash(\u0027zU\u0027);"
-      },
-      {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      window.removeHash(\u0027zFGS\u0027);"
-      },
-      {
-        "lineNumber": 214,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      window.removeHash(\u0027zFTF\u0027);"
-      },
-      {
-        "lineNumber": 215,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      window.removeHash(\u0027zMG\u0027);"
-      },
-      {
-        "lineNumber": 216,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      window.removeHash(\u0027zFT\u0027);"
-      },
-      {
-        "lineNumber": 217,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
-        "content": "      window.encodeHash();"
-      },
-      {
-        "lineNumber": 218,
-        "author": {
-          "gitId": "jamessspanggg"
-        },
         "content": "    },"
       },
       {
-        "lineNumber": 219,
+        "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    toggleAllCommitMessagesBody(isActive) {"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      this.showAllCommitMessageBody \u003d isActive;"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      const toRename \u003d this.showAllCommitMessageBody ? \u0027commit-message message-body active\u0027 : \u0027commit-message message-body\u0027;"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      const commitMessageClasses \u003d document.getElementsByClassName(\u0027commit-message message-body\u0027);"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      Array.from(commitMessageClasses).forEach((commitMessageClass) \u003d\u003e {"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        commitMessageClass.className \u003d toRename;"
+      },
+      {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    filterSelectedFileTypes(fileTypes) {"
+        "content": "      });"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "      return fileTypes.filter((fileType) \u003d\u003e this.selectedFileTypes.includes(fileType));"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      this.expandedCommitMessagesCount \u003d isActive ? this.totalCommitMessageBodyCount : 0;"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "    },"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "  created() {"
+        "content": ""
       },
       {
         "lineNumber": 225,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    this.initiate();"
+        "content": "    updateExpandedCommitMessagesCount() {"
       },
       {
         "lineNumber": 226,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "  },"
+        "content": "      this.expandedCommitMessagesCount \u003d document.getElementsByClassName(\u0027commit-message message-body active\u0027)"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "  mounted() {"
+        "content": "          .length;"
       },
       {
         "lineNumber": 228,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    this.setInfoHash();"
+        "content": "    },"
       },
       {
         "lineNumber": 229,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "  },"
+        "content": ""
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  beforeDestroy() {"
+        "content": "    removeZoomHashes() {"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    this.removeZoomHashes();"
+        "content": "      window.removeHash(\u0027zA\u0027);"
       },
       {
         "lineNumber": 232,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zR\u0027);"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zFS\u0027);"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zACS\u0027);"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zS\u0027);"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zU\u0027);"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zFGS\u0027);"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zFTF\u0027);"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.removeHash(\u0027zMG\u0027);"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      window.removeHash(\u0027zFT\u0027);"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      window.removeHash(\u0027zCST\u0027);"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      window.removeHash(\u0027zRSC\u0027);"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      window.encodeHash();"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    filterSelectedFileTypes(fileTypes) {"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return fileTypes.filter((fileType) \u003d\u003e this.selectedFileTypes.includes(fileType));"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    },"
+      },
+      {
+        "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
         "content": "  },"
       },
       {
-        "lineNumber": 233,
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  created() {"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    this.initiate();"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  mounted() {"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    this.setInfoHash();"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "  beforeDestroy() {"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    this.removeZoomHashes();"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
         "content": "  components: {"
       },
       {
-        "lineNumber": 234,
+        "lineNumber": 260,
         "author": {
           "gitId": "0blivious"
         },
         "content": "    vRamp: window.vRamp,"
       },
       {
-        "lineNumber": 235,
+        "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
         "content": "  },"
       },
       {
-        "lineNumber": 236,
+        "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
@@ -42359,7 +42541,7 @@
     ],
     "authorContributionMap": {
       "jamessspanggg": 56,
-      "-": 161,
+      "-": 187,
       "0blivious": 15,
       "ang-zeyu": 4
     }
