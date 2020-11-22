@@ -1734,6 +1734,26 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-11-21",
+        "commitResults": [
+          {
+            "hash": "81ee3e4bc37e13f7978141d2a6bdbd177273e283",
+            "messageTitle": "[#1345] Authorship: Add last modified date to each LoC if specified (#1348)",
+            "messageBody": "The last modified date of each line of code is not present in the\r\n`authorship.json`.\r\n\r\nIt would be beneficial for tutors to use the last modified date of\r\neach line of code to do further processing.\r\n\r\nLet\u0027s add the last modified date of each line of code within the\r\n`authorship.json`. This functionality will only be enabled when the\r\nuser specifies the flag \u0027--last-modified-date\u0027 or \u0027-l\u0027 in short.",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 152,
+                "deletions": 74
+              },
+              "md": {
+                "insertions": 13,
+                "deletions": 2
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -2423,7 +2443,7 @@
       "yml": 0
     },
     "yash-chowdhary": {
-      "java": 95,
+      "java": 94,
       "js": 7,
       "scss": 0,
       "json": 0,
@@ -2435,7 +2455,7 @@
       "yml": 0
     },
     "anubh-v": {
-      "java": 525,
+      "java": 522,
       "js": 1,
       "scss": 30,
       "json": 0,
@@ -2471,11 +2491,11 @@
       "yml": 0
     },
     "jamessspanggg": {
-      "java": 409,
+      "java": 561,
       "js": 625,
       "scss": 45,
       "json": 34,
-      "md": 19,
+      "md": 32,
       "py": 0,
       "pug": 40,
       "gradle": 0,
@@ -2616,21 +2636,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 27.46174,
+    "ccyccyccy": 25.475447,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 311.1824,
+    "niqiukun": 288.7178,
     "openorclose": 0.0,
-    "yash-chowdhary": 343.3759,
-    "anubh-v": 393.7624,
-    "Tejas2805": 2472.3376,
+    "yash-chowdhary": 318.4777,
+    "anubh-v": 365.90662,
+    "Tejas2805": 2296.756,
     "dvrylc": 0.0,
-    "jamessspanggg": 2101.3088,
+    "jamessspanggg": 2104.8818,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 4317.764,
+    "0blivious": 4010.112,
     "hcwong": 0.0,
-    "ang-zeyu": 301.43234,
+    "ang-zeyu": 279.67822,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,
