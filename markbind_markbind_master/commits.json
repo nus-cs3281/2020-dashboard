@@ -2204,6 +2204,34 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-11-25",
+        "commitResults": [
+          {
+            "hash": "39cd0da3948b2d11bddbdb26e7a1f3df295e36a0",
+            "messageTitle": "Add {% ext %} nunjucks extension (#1391)",
+            "messageBody": "MarkBind page variables requires processing html before nunjucks and\r\nmarkdown syntax.\r\nThis poses several architectural issues (#1353) of simplicity,\r\nperformance, and extensibility of markdown syntax.\r\n\r\nAs another step in removing this prerequisite, let\u0027s reimplement\r\nexternal json variables using a nunjucks extension.",
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 64,
+                "deletions": 2
+              },
+              "md": {
+                "insertions": 12,
+                "deletions": 0
+              },
+              "json": {
+                "insertions": 36,
+                "deletions": 2
+              },
+              "js": {
+                "insertions": 86,
+                "deletions": 4
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2910,12 +2938,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 3908,
+      "js": 3993,
       "css": 101,
-      "json": 381,
-      "md": 464,
+      "json": 417,
+      "md": 476,
       "mbd": 0,
-      "mbdf": 357,
+      "mbdf": 413,
       "njk": 16,
       "py": 0,
       "yml": 1
@@ -2997,21 +3025,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 3611.3538,
-    "yash-chowdhary": 4691.5156,
-    "Tejas2805": 197.1483,
-    "dvrylc": 9.185557,
+    "openorclose": 3581.4504,
+    "yash-chowdhary": 4652.779,
+    "Tejas2805": 195.51608,
+    "dvrylc": 9.109581,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 9.13742,
-    "ang-zeyu": 44967.133,
+    "hcwong": 9.061808,
+    "ang-zeyu": 44680.93,
     "geshuming": 0.0,
-    "alyip98": 1.6148174,
-    "nbriannl": 7136.868,
-    "le0tan": 88273.56,
-    "madanalogy": 94.617714,
+    "alyip98": 1.6014618,
+    "nbriannl": 7077.927,
+    "le0tan": 87543.61,
+    "madanalogy": 93.831665,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
