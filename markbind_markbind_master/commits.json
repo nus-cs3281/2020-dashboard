@@ -2279,6 +2279,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-12-06",
+        "commitResults": [
+          {
+            "hash": "089cb7c4d9ab5ae0614fde9ce3a1ed813aaa073b",
+            "messageTitle": "Ignore self-closing special tags for markdown-it (#1408)",
+            "messageBody": "The markdown-it patch for special tags does not blacklist self-closed\r\nspecial tags from the starting regex pattern. Thus, the starting regex\r\npattern incorrectly matches such a self-closing special tag, and the\r\nending regex pattern incorrectly seeks for a corresponding closing\r\nspecial tag until EOF.\r\n\r\nThis is not apparent in the functional tests which have such tags\r\n(\u003cpuml\u003e), because puml tags are processed before markdown.\r\n\r\nLet\u0027s add a negative lookahead to the starting pattern to blacklist\r\nsuch tags.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 14,
+                "deletions": 1
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -2879,7 +2895,7 @@
       "java": 0,
       "js": 101,
       "css": 88,
-      "json": 18,
+      "json": 16,
       "md": 56,
       "mbd": 0,
       "mbdf": 24,
@@ -2892,7 +2908,7 @@
       "js": 128,
       "css": 26,
       "json": 4,
-      "md": 1043,
+      "md": 1019,
       "mbd": 0,
       "mbdf": 28,
       "njk": 0,
@@ -2985,12 +3001,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 4005,
+      "js": 3986,
       "css": 101,
-      "json": 417,
+      "json": 410,
       "md": 493,
       "mbd": 0,
-      "mbdf": 413,
+      "mbdf": 297,
       "njk": 16,
       "py": 0,
       "yml": 1
@@ -3072,21 +3088,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 3542.3887,
-    "yash-chowdhary": 4602.125,
-    "Tejas2805": 193.37798,
-    "dvrylc": 9.010138,
+    "openorclose": 3475.992,
+    "yash-chowdhary": 4516.041,
+    "Tejas2805": 189.7483,
+    "dvrylc": 8.841242,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 8.96283,
-    "ang-zeyu": 44200.777,
+    "hcwong": 8.794725,
+    "ang-zeyu": 43390.39,
     "geshuming": 0.0,
-    "alyip98": 1.5839604,
-    "nbriannl": 7000.9746,
-    "le0tan": 86586.62,
-    "madanalogy": 92.80869,
+    "alyip98": 1.5542532,
+    "nbriannl": 6869.955,
+    "le0tan": 84964.02,
+    "madanalogy": 91.066986,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
