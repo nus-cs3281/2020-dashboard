@@ -59878,247 +59878,247 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "            aliases.forEach(alias -\u003e newAuthorEmailsAndAliasesMap.put(alias, author));"
+        "content": "            aliases.forEach(alias -\u003e {"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "            emails.forEach(email -\u003e newAuthorEmailsAndAliasesMap.put(email, author));"
+        "content": "                checkDuplicateAliases(newAuthorEmailsAndAliasesMap, alias, author.getGitId());"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        }"
+        "content": "                newAuthorEmailsAndAliasesMap.put(alias, author);"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "            });"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        setAuthorList(newAuthorList);"
+        "content": "            emails.forEach(email -\u003e newAuthorEmailsAndAliasesMap.put(email, author));"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        setAuthorEmailsAndAliasesMap(newAuthorEmailsAndAliasesMap);"
+        "content": "        }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        setAuthorDisplayNameMap(newAuthorDisplayNameMap);"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        setAuthorList(newAuthorList);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        setAuthorEmailsAndAliasesMap(newAuthorEmailsAndAliasesMap);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "        setAuthorDisplayNameMap(newAuthorDisplayNameMap);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "            return true;"
+        "content": "    /**"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        }"
+        "content": "     * Checks for duplicate aliases in {@code authorEmailsAndAliasesMap} and generates warnings"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "     * @param authorEmailsAndAliasesMap"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        if (!(other instanceof AuthorConfiguration)) {"
+        "content": "     * @param alias"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "            return false;"
+        "content": "     */"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        }"
+        "content": "    public void checkDuplicateAliases(Map\u003cString, Author\u003e authorEmailsAndAliasesMap, String alias, String gitId) {"
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "        if (authorEmailsAndAliasesMap.containsKey(alias)) {"
       },
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        AuthorConfiguration otherAuthorConfig \u003d (AuthorConfiguration) other;"
+        "content": "            logger.warning(String.format("
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "                    \"Duplicate alias %s found. The alias will belong to the last author - %s\", alias, gitId));"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        return location.equals(otherAuthorConfig.location)"
+        "content": "        }"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "                \u0026\u0026 branch.equals(otherAuthorConfig.branch)"
+        "content": "    }"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "                \u0026\u0026 authorList.equals(otherAuthorConfig.authorList)"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 authorEmailsAndAliasesMap.equals(otherAuthorConfig.authorEmailsAndAliasesMap)"
+        "content": "    @Override"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 authorDisplayNameMap.equals(otherAuthorConfig.authorDisplayNameMap);"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return true;"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Map\u003cAuthor, String\u003e getAuthorDisplayNameMap() {"
+        "content": "        }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "        return authorDisplayNameMap;"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        if (!(other instanceof AuthorConfiguration)) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return false;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setAuthorDisplayNameMap(Map\u003cAuthor, String\u003e authorDisplayNameMap) {"
+        "content": "        }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.authorDisplayNameMap \u003d authorDisplayNameMap;"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        AuthorConfiguration otherAuthorConfig \u003d (AuthorConfiguration) other;"
       },
       {
         "lineNumber": 92,
@@ -60132,154 +60132,154 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public String getBranch() {"
+        "content": "        return location.equals(otherAuthorConfig.location)"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        return branch;"
+        "content": "                \u0026\u0026 branch.equals(otherAuthorConfig.branch)"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                \u0026\u0026 authorList.equals(otherAuthorConfig.authorList)"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                \u0026\u0026 authorEmailsAndAliasesMap.equals(otherAuthorConfig.authorEmailsAndAliasesMap)"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setBranch(String branch) {"
+        "content": "                \u0026\u0026 authorDisplayNameMap.equals(otherAuthorConfig.authorDisplayNameMap);"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.branch \u003d branch;"
+        "content": "    }"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public Map\u003cAuthor, String\u003e getAuthorDisplayNameMap() {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    public List\u003cAuthor\u003e getAuthorList() {"
+        "content": "        return authorDisplayNameMap;"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "        return authorList;"
+        "content": "    }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void setAuthorDisplayNameMap(Map\u003cAuthor, String\u003e authorDisplayNameMap) {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        this.authorDisplayNameMap \u003d authorDisplayNameMap;"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Sets the details of {@code author} to {@code AuthorConfiguration} including the default alias, aliases"
+        "content": "    }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "     * and display name."
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public String getBranch() {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void setAuthorDetails(Author author) {"
+        "content": "        return branch;"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Set GitHub Id and its corresponding email as default"
+        "content": "    }"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "        addAuthorEmailsAndAliasesMapEntry(author, Arrays.asList(author.getGitId()));"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void setBranch(String branch) {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        addAuthorEmailsAndAliasesMapEntry(author, author.getAuthorAliases());"
+        "content": "        this.branch \u003d branch;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "        addAuthorEmailsAndAliasesMapEntry(author, author.getEmails());"
+        "content": "    }"
       },
       {
         "lineNumber": 115,
@@ -60293,112 +60293,112 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        setAuthorDisplayName(author, author.getDisplayName());"
+        "content": "    public List\u003cAuthor\u003e getAuthorList() {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return authorList;"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Propagates {@code ignoreGlobList} to {@code author}."
+        "content": "    /**"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Sets the details of {@code author} to {@code AuthorConfiguration} including the default alias, aliases"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void propagateIgnoreGlobList(Author author, List\u003cString\u003e ignoreGlobList) {"
+        "content": "     * and display name."
       },
       {
         "lineNumber": 123,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "        author.importIgnoreGlobList(ignoreGlobList);"
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 127,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Adds author to the {@code AuthorList}."
-      },
-      {
-        "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void setAuthorDetails(Author author) {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Set GitHub Id and its corresponding email as default"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        addAuthorEmailsAndAliasesMapEntry(author, Arrays.asList(author.getGitId()));"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        addAuthorEmailsAndAliasesMapEntry(author, author.getAuthorAliases());"
+      },
+      {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAuthor(Author author) {"
+        "content": "        addAuthorEmailsAndAliasesMapEntry(author, author.getEmails());"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        authorList.add(author);"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "        setAuthorDetails(author);"
+        "content": "        setAuthorDisplayName(author, author.getDisplayName());"
       },
       {
         "lineNumber": 132,
@@ -60426,7 +60426,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * Adds {@code author} to the {@code AuthorList}, and propagates {@code ignoreGlobList} to the {@code author}."
+        "content": "     * Propagates {@code ignoreGlobList} to {@code author}."
       },
       {
         "lineNumber": 136,
@@ -60440,497 +60440,497 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAuthor(Author author, List\u003cString\u003e ignoreGlobList) {"
+        "content": "    public static void propagateIgnoreGlobList(Author author, List\u003cString\u003e ignoreGlobList) {"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "        addAuthor(author);"
+        "content": "        author.importIgnoreGlobList(ignoreGlobList);"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        propagateIgnoreGlobList(author, ignoreGlobList);"
+        "content": "    }"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Adds author to the {@code AuthorList}."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Removes the authors provided in {@code ignoredAuthorsList} from the author list."
+        "content": "     */"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public void addAuthor(Author author) {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void removeIgnoredAuthors(List\u003cString\u003e ignoredAuthorsList) {"
+        "content": "        authorList.add(author);"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (String author : ignoredAuthorsList) {"
+        "content": "        setAuthorDetails(author);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (authorEmailsAndAliasesMap.containsKey(author)) {"
+        "content": "    }"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "                removeAuthorInformation(author);"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "    /**"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     * Adds {@code author} to the {@code AuthorList}, and propagates {@code ignoreGlobList} to the {@code author}."
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "     * Removes all information of the {@code author} from the configs"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "     * Precondition: {@code author} must be present in {@code authorEmailsAndAliasesMap}"
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "     * @param author Can be an author\u0027s git ID, email, or alias"
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void addAuthor(Author author, List\u003cString\u003e ignoreGlobList) {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        addAuthor(author);"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        propagateIgnoreGlobList(author, ignoreGlobList);"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
         "lineNumber": 158,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "    public void removeAuthorInformation(String author) {"
+        "content": "     * Removes the authors provided in {@code ignoredAuthorsList} from the author list."
       },
       {
         "lineNumber": 159,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        Author authorToRemove \u003d authorEmailsAndAliasesMap.get(author);"
+        "content": "     */"
       },
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        authorList.remove(authorToRemove);"
+        "content": "    public void removeIgnoredAuthors(List\u003cString\u003e ignoredAuthorsList) {"
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        authorDisplayNameMap.remove(authorToRemove);"
+        "content": "        for (String author : ignoredAuthorsList) {"
       },
       {
         "lineNumber": 162,
         "author": {
-          "gitId": "Tejas2805"
+          "gitId": "-"
         },
-        "content": "        authorEmailsAndAliasesMap.remove(authorToRemove.getGitId());"
+        "content": "            if (authorEmailsAndAliasesMap.containsKey(author)) {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "Tejas2805"
         },
-        "content": ""
+        "content": "                removeAuthorInformation(author);"
       },
       {
         "lineNumber": 164,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "        List\u003cString\u003e aliases \u003d authorToRemove.getAuthorAliases();"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "        aliases.forEach(alias -\u003e authorEmailsAndAliasesMap.remove(alias));"
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "        List\u003cString\u003e emails \u003d authorToRemove.getEmails();"
-      },
-      {
-        "lineNumber": 168,
-        "author": {
-          "gitId": "Tejas2805"
-        },
-        "content": "        emails.forEach(email -\u003e authorEmailsAndAliasesMap.remove(email));"
-      },
-      {
-        "lineNumber": 169,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 170,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 171,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 172,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Adds new authors from {@code authorList} and sets the default alias, aliases, emails and display name"
-      },
-      {
-        "lineNumber": 173,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * of the new authors. Skips authors that have already been added previously."
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public void addAuthors(List\u003cAuthor\u003e authorList, List\u003cString\u003e ignoreGlobList) {"
-      },
-      {
-        "lineNumber": 176,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        for (Author author : authorList) {"
-      },
-      {
-        "lineNumber": 177,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            if (containsAuthor(author)) {"
-      },
-      {
-        "lineNumber": 178,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                logger.warning(String.format("
-      },
-      {
-        "lineNumber": 179,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                        \"Skipping author as %s already in repository %s %s\", author.getGitId(), location, branch));"
-      },
-      {
-        "lineNumber": 180,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                continue;"
-      },
-      {
-        "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 182,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 183,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            addAuthor(author, ignoreGlobList);"
-      },
-      {
-        "lineNumber": 184,
+        "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 185,
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "     * Removes all information of the {@code author} from the configs"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "     * Precondition: {@code author} must be present in {@code authorEmailsAndAliasesMap}"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "     * @param author Can be an author\u0027s git ID, email, or alias"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "    public void removeAuthorInformation(String author) {"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        Author authorToRemove \u003d authorEmailsAndAliasesMap.get(author);"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        authorList.remove(authorToRemove);"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        authorDisplayNameMap.remove(authorToRemove);"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        authorEmailsAndAliasesMap.remove(authorToRemove.getGitId());"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        List\u003cString\u003e aliases \u003d authorToRemove.getAuthorAliases();"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        aliases.forEach(alias -\u003e authorEmailsAndAliasesMap.remove(alias));"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        List\u003cString\u003e emails \u003d authorToRemove.getEmails();"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Tejas2805"
+        },
+        "content": "        emails.forEach(email -\u003e authorEmailsAndAliasesMap.remove(email));"
+      },
+      {
+        "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean containsAuthor(Author author) {"
+        "content": "     * Adds new authors from {@code authorList} and sets the default alias, aliases, emails and display name"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        return authorList.contains(author);"
+        "content": "     * of the new authors. Skips authors that have already been added previously."
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void addAuthors(List\u003cAuthor\u003e authorList, List\u003cString\u003e ignoreGlobList) {"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setAuthorList(List\u003cAuthor\u003e authorList) {"
+        "content": "        for (Author author : authorList) {"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.authorList \u003d authorList;"
+        "content": "            if (containsAuthor(author)) {"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                logger.warning(String.format("
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                        \"Skipping author as %s already in repository %s %s\", author.getGitId(), location, branch));"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "                continue;"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Clears author mapping information."
+        "content": "            }"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void clear() {"
+        "content": "            addAuthor(author, ignoreGlobList);"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "        authorEmailsAndAliasesMap.clear();"
+        "content": "        }"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "        authorDisplayNameMap.clear();"
+        "content": "    }"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public boolean containsAuthor(Author author) {"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        return authorList.contains(author);"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Resets author mapping information with the details of current author list."
+        "content": "    }"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void buildFromAuthorList() {"
+        "content": "    public void setAuthorList(List\u003cAuthor\u003e authorList) {"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "        authorList.forEach(this::setAuthorDetails);"
+        "content": "        this.authorList \u003d authorList;"
       },
       {
         "lineNumber": 208,
@@ -60951,42 +60951,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public Map\u003cString, Author\u003e getAuthorEmailsAndAliasesMap() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        return authorEmailsAndAliasesMap;"
+        "content": "     * Clears author mapping information."
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void clear() {"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setAuthorEmailsAndAliasesMap(Map\u003cString, Author\u003e authorEmailsAndAliasesMap) {"
+        "content": "        authorEmailsAndAliasesMap.clear();"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.authorEmailsAndAliasesMap \u003d authorEmailsAndAliasesMap;"
+        "content": "        authorDisplayNameMap.clear();"
       },
       {
         "lineNumber": 216,
@@ -61007,248 +61007,409 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setAuthorDisplayName(Author author, String displayName) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "        authorDisplayNameMap.put(author, displayName);"
+        "content": "     * Resets author mapping information with the details of current author list."
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void buildFromAuthorList() {"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAuthorEmailsAndAliasesMapEntry(Author author, List\u003cString\u003e values) {"
+        "content": "        authorList.forEach(this::setAuthorDetails);"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "        values.forEach(value -\u003e authorEmailsAndAliasesMap.put(value, author));"
+        "content": "    }"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public Map\u003cString, Author\u003e getAuthorEmailsAndAliasesMap() {"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "    public RepoLocation getLocation() {"
+        "content": "        return authorEmailsAndAliasesMap;"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "        return location;"
+        "content": "    }"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void setAuthorEmailsAndAliasesMap(Map\u003cString, Author\u003e authorEmailsAndAliasesMap) {"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        this.authorEmailsAndAliasesMap \u003d authorEmailsAndAliasesMap;"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Attempts to find matching {@code Author} given a name and an email."
+        "content": "    }"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "     * If no matching {@code Author} is found, {@code Author#UNKNOWN_AUTHOR} is returned."
+        "content": ""
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public void setAuthorDisplayName(Author author, String displayName) {"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Author getAuthor(String name, String email) {"
+        "content": "        authorDisplayNameMap.put(author, displayName);"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (authorEmailsAndAliasesMap.containsKey(name)) {"
+        "content": "    }"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "            return authorEmailsAndAliasesMap.get(name);"
+        "content": ""
       },
       {
         "lineNumber": 237,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        }"
+        "content": "    /**"
       },
       {
         "lineNumber": 238,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        if (authorEmailsAndAliasesMap.containsKey(email)) {"
+        "content": "     * Adds {@code aliases} of {@code author} into the map"
       },
       {
         "lineNumber": 239,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "            return authorEmailsAndAliasesMap.get(email);"
+        "content": "     * @param author"
       },
       {
         "lineNumber": 240,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        }"
+        "content": "     * @param values"
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        Matcher matcher \u003d EMAIL_PLUS_OPERATOR_PATTERN.matcher(email);"
+        "content": "     */"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void addAuthorEmailsAndAliasesMapEntry(Author author, List\u003cString\u003e values) {"
       },
       {
         "lineNumber": 243,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        if (matcher.matches()) {"
+        "content": "        values.forEach(value -\u003e {"
       },
       {
         "lineNumber": 244,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "            return authorEmailsAndAliasesMap.getOrDefault(matcher.group(\"suffix\") + matcher.group(\"domain\"),"
+        "content": "            checkDuplicateAliases(authorEmailsAndAliasesMap, value, author.getGitId());"
       },
       {
         "lineNumber": 245,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "                    Author.UNKNOWN_AUTHOR);"
+        "content": "            authorEmailsAndAliasesMap.put(value, author);"
       },
       {
         "lineNumber": 246,
         "author": {
-          "gitId": "-"
+          "gitId": "Tejas2805"
         },
-        "content": "        }"
+        "content": "        });"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Author.UNKNOWN_AUTHOR;"
+        "content": "    }"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public RepoLocation getLocation() {"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean isDefaultBranch() {"
+        "content": "        return location;"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "        return this.branch.equals(DEFAULT_BRANCH);"
+        "content": "    }"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Attempts to find matching {@code Author} given a name and an email."
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * If no matching {@code Author} is found, {@code Author#UNKNOWN_AUTHOR} is returned."
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Author getAuthor(String name, String email) {"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (authorEmailsAndAliasesMap.containsKey(name)) {"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return authorEmailsAndAliasesMap.get(name);"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (authorEmailsAndAliasesMap.containsKey(email)) {"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return authorEmailsAndAliasesMap.get(email);"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Matcher matcher \u003d EMAIL_PLUS_OPERATOR_PATTERN.matcher(email);"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (matcher.matches()) {"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return authorEmailsAndAliasesMap.getOrDefault(matcher.group(\"suffix\") + matcher.group(\"domain\"),"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    Author.UNKNOWN_AUTHOR);"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Author.UNKNOWN_AUTHOR;"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 272,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean isDefaultBranch() {"
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return this.branch.equals(DEFAULT_BRANCH);"
+      },
+      {
+        "lineNumber": 275,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
@@ -61256,8 +61417,8 @@
       }
     ],
     "authorContributionMap": {
-      "Tejas2805": 19,
-      "-": 232,
+      "Tejas2805": 44,
+      "-": 230,
       "0blivious": 2
     }
   },
