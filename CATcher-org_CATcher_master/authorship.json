@@ -7884,7 +7884,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import { catchError, map } from \u0027rxjs/operators\u0027;"
+        "content": "import { map } from \u0027rxjs/operators\u0027;"
       },
       {
         "lineNumber": 4,
@@ -7912,1683 +7912,1781 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import { Observable, of } from \u0027rxjs\u0027;"
+        "content": "import { Observable } from \u0027rxjs\u0027;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "const parse \u003d require(\u0027csv-parse/lib/sync\u0027);"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "@Injectable({"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "@Injectable({"
+        "content": "  providedIn: \u0027root\u0027,"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "  providedIn: \u0027root\u0027,"
+        "content": "})"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "})"
+        "content": "export class DataService {"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "export class DataService {"
+        "content": "  public dataFile: DataFile;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "  public dataFile: DataFile;"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  constructor(private githubService: GithubService) {}"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "  constructor(private githubService: GithubService) {}"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "-"
+          "gitId": "geshuming"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "  /**"
+        "content": "   * Retrieves the csv file from the settings repo and constructs"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "   * Retrieves the csv file from the settings repo and constructs"
+        "content": "   * the required data file for the app."
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "geshuming"
         },
-        "content": "   * the required data file for the app."
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "geshuming"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
         "content": "  getDataFile(): Observable\u003c{}\u003e {"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
         "content": "    return this.githubService.fetchDataFile().pipe("
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": "      map((allCsvDataWrapper: {}) \u003d\u003e {"
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
         "content": "        return this.constructData(allCsvDataWrapper);"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
         "content": "      }),"
       },
       {
-        "lineNumber": 27,
+        "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
         "content": "      map((jsonData: {}) \u003d\u003e {"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
         "content": "        this.dataFile \u003d \u003cDataFile\u003e{"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
         "content": "          teamStructure: this.extractTeamStructure(jsonData)"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
         "content": "        };"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
         "content": "        return jsonData;"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "      })"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "    );"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Merges all parsed Csv Data into a single readable JSON"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Merges all parsed Csv Data into a single readable JSON"
+        "content": "   * format."
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "   * format."
+        "content": "   * @param allCsvDataWrapper - Object containing strings of csv data."
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param allCsvDataWrapper - Object containing strings of csv data."
+        "content": "   * @return jsonData - Object representing merged data file."
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return jsonData - Object representing merged data file."
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "-"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 41,
         "author": {
           "gitId": "geshuming"
         },
         "content": "  private constructData(allCsvDataWrapper: {}): {} {"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": "    const jsonData: {} \u003d {};"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "    const allCsvData: string \u003d allCsvDataWrapper[\u0027data\u0027];"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
         "content": "    jsonData[\u0027roles\u0027] \u003d this.parseRolesData(allCsvData);"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
         "content": "    jsonData[\u0027team-structure\u0027] \u003d this.parseTeamStructureData(allCsvData);"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
         "content": "    jsonData[\u0027students-allocation\u0027] \u003d this.parseStudentAllocation(allCsvData);"
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
         "content": "    jsonData[\u0027tutors-allocation\u0027] \u003d this.parseTutorAllocation(allCsvData);"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
         "content": "    jsonData[\u0027admins-allocation\u0027] \u003d this.parseAdminAllocation(allCsvData);"
       },
       {
-        "lineNumber": 51,
+        "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 52,
+        "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
         "content": "    return jsonData;"
       },
       {
-        "lineNumber": 53,
+        "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
         "content": "  }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Parses the input string containing admin allocation information"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Parses the input string containing admin allocation information"
+        "content": "   * into application readable Object."
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "   * into application readable Object."
+        "content": "   * @param csvInput - string containing csv data."
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param csvInput - string containing csv data."
+        "content": "   * @return admins - object that represents parsed csv data."
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return admins - object that represents parsed csv data."
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "-"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 60,
         "author": {
           "gitId": "geshuming"
         },
         "content": "  private parseAdminAllocation(csvInput: string): {} {"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
         "content": "    // CSV Headers"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const NAME \u003d \u0027name\u0027;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    const NAME \u003d \u0027name\u0027;"
+        "content": "    const ROLE \u003d \u0027role\u0027;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    const ROLE \u003d \u0027role\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const admins \u003d {};"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    const admins \u003d {};"
+        "content": "    let parsedCSV: {}[];"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    let parsedCSV: [{}];"
+        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    // Formats the parsed information for easier app reading"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Formats the parsed information for easier app reading"
+        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
+        "content": "      if (entry[ROLE] \u003d\u003d\u003d UserRole.Admin.toLowerCase()) {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (entry[ROLE] \u003d\u003d\u003d UserRole.Admin.toLowerCase()) {"
+        "content": "        admins[entry[NAME].toLowerCase()] \u003d {};"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        admins[entry[NAME].toLowerCase()] \u003d {};"
+        "content": "      }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "    });"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return admins;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    return admins;"
+        "content": "  }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Parses the input string containing tutor allocation information"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Parses the input string containing tutor allocation information"
+        "content": "   * into application readable Object."
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "   * into application readable Object."
+        "content": "   * @param csvInput - string containing csv data."
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param csvInput - string containing csv data."
+        "content": "   * @return admins - object that represents parsed csv data."
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return admins - object that represents parsed csv data."
-      },
-      {
-        "lineNumber": 85,
-        "author": {
-          "gitId": "-"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 85,
         "author": {
           "gitId": "geshuming"
         },
         "content": "  private parseTutorAllocation(csvInput: string): {} {"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
         "content": "    // CSV Headers"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const NAME \u003d \u0027name\u0027;"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    const NAME \u003d \u0027name\u0027;"
+        "content": "    const TEAM \u003d \u0027team\u0027;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    const TEAM \u003d \u0027team\u0027;"
+        "content": "    const ROLE \u003d \u0027role\u0027;"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    const ROLE \u003d \u0027role\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const tutors \u003d {};"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    const tutors \u003d {};"
+        "content": "    let parsedCSV: {}[];"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    let parsedCSV: [{}];"
+        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    // Formats the parsed information for easier app reading"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Formats the parsed information for easier app reading"
+        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
+        "content": "      if (!(entry[ROLE] \u003d\u003d\u003d UserRole.Tutor.toLowerCase())) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (!(entry[ROLE] \u003d\u003d\u003d UserRole.Tutor.toLowerCase())) {"
+        "content": "        return;"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "        return;"
-      },
-      {
-        "lineNumber": 100,
-        "author": {
-          "gitId": "-"
-        },
         "content": "      }"
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 100,
         "author": {
           "gitId": "geshuming"
         },
         "content": "      const tutor \u003d entry[NAME].toLowerCase() in tutors ? tutors[entry[NAME].toLowerCase()] : {};"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
         "content": "      tutor[entry[TEAM]] \u003d \u0027true\u0027;"
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
         "content": "      tutors[entry[NAME].toLowerCase()] \u003d tutor;"
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
         "content": "    });"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return tutors;"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    return tutors;"
+        "content": "  }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Parses the input string containing student allocation information"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Parses the input string containing student allocation information"
+        "content": "   * into application readable Object."
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "   * into application readable Object."
+        "content": "   * @param csvInput - string containing csv data."
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param csvInput - string containing csv data."
+        "content": "   * @return admins - object that represents parsed csv data."
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return admins - object that represents parsed csv data."
-      },
-      {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "-"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 114,
         "author": {
           "gitId": "geshuming"
         },
         "content": "  private parseStudentAllocation(csvInput: string): {} {"
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
         "content": "    // CSV Headers"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const TEAM \u003d \u0027team\u0027;"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    const TEAM \u003d \u0027team\u0027;"
+        "content": "    const NAME \u003d \u0027name\u0027;"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    const NAME \u003d \u0027name\u0027;"
+        "content": "    const ROLE \u003d \u0027role\u0027;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    const ROLE \u003d \u0027role\u0027;"
+        "content": "    // Team Notation"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Team Notation"
+        "content": "    const TEAM_ID \u003d \u0027teamId\u0027;"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    const TEAM_ID \u003d \u0027teamId\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const students \u003d {};"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    const students \u003d {};"
+        "content": "    let parsedCSV: {}[];"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "    let parsedCSV: [{}];"
+        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
+        "content": ""
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    // Formats the parsed information for easier app reading"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Formats the parsed information for easier app reading"
+        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
+        "content": "      if (!(entry[ROLE] \u003d\u003d\u003d UserRole.Student.toLowerCase())) {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (!(entry[ROLE] \u003d\u003d\u003d UserRole.Student.toLowerCase())) {"
+        "content": "        return;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        return;"
+        "content": "      }"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "      const newStudent \u003d {};"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "      const newStudent \u003d {};"
+        "content": "      newStudent[TEAM_ID] \u003d entry[TEAM];"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "      newStudent[TEAM_ID] \u003d entry[TEAM];"
+        "content": "      students[entry[NAME].toLowerCase()] \u003d newStudent;"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "      students[entry[NAME].toLowerCase()] \u003d newStudent;"
+        "content": "    });"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return students;"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "    return students;"
+        "content": "  }"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Parses the input string containing team structure information"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Parses the input string containing team structure information"
+        "content": "   * into application readable Object."
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "   * into application readable Object."
+        "content": "   * @param csvInput - string containing csv data."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param csvInput - string containing csv data."
+        "content": "   * @return admins - object that represents parsed csv data."
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return admins - object that represents parsed csv data."
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "-"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 145,
         "author": {
           "gitId": "geshuming"
         },
         "content": "  private parseTeamStructureData(csvInput: string): {} {"
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
         "content": "    // CSV Headers"
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
         "content": "    const TEAM \u003d \u0027team\u0027;"
       },
       {
-        "lineNumber": 149,
+        "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
         "content": "    const NAME \u003d \u0027name\u0027;"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const ROLE \u003d \u0027role\u0027;"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    const ROLE \u003d \u0027role\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    const teams \u003d {};"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "    const teams \u003d {};"
+        "content": "    let parsedCSV: {}[];"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    let parsedCSV: [{}];"
+        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV \u003d this.csvParser(csvInput);"
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    // Formats the parsed information for easier app reading"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Formats the parsed information for easier app reading"
+        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    parsedCSV.forEach(entry \u003d\u003e {"
+        "content": "      if (!(entry[ROLE] \u003d\u003d\u003d UserRole.Student.toLowerCase())) {"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (!(entry[ROLE] \u003d\u003d\u003d UserRole.Student.toLowerCase())) {"
+        "content": "        return;"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "        return;"
+        "content": "      }"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "      const team \u003d entry[TEAM] in teams ? teams[entry[TEAM]] : {};"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "      const team \u003d entry[TEAM] in teams ? teams[entry[TEAM]] : {};"
+        "content": "      team[entry[NAME].toLowerCase()] \u003d \u0027true\u0027;"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "      team[entry[NAME].toLowerCase()] \u003d \u0027true\u0027;"
+        "content": "      teams[entry[TEAM]] \u003d team;"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "      teams[entry[TEAM]] \u003d team;"
+        "content": "    });"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": ""
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return teams;"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    return teams;"
+        "content": "  }"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Parses the input string containing roles information"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Parses the input string containing roles information"
+        "content": "   * into application readable Object."
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "   * into application readable Object."
+        "content": "   * @param csvInput - string containing csv data."
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param csvInput - string containing csv data."
+        "content": "   * @return admins - object that represents parsed csv data."
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return admins - object that represents parsed csv data."
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "-"
-        },
         "content": "   */"
       },
       {
-        "lineNumber": 175,
+        "lineNumber": 174,
         "author": {
           "gitId": "geshuming"
         },
         "content": "  private parseRolesData(csvInput: string): {} {"
       },
       {
-        "lineNumber": 176,
+        "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
         "content": "    // CSV Headers"
       },
       {
-        "lineNumber": 177,
+        "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
         "content": "    const ROLE \u003d \u0027role\u0027;"
       },
       {
-        "lineNumber": 178,
+        "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
         "content": "    const NAME \u003d \u0027name\u0027;"
       },
       {
-        "lineNumber": 179,
+        "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
         "content": "    const roles \u003d {};"
       },
       {
-        "lineNumber": 181,
+        "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
         "content": "    const students \u003d {};"
       },
       {
-        "lineNumber": 182,
+        "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
         "content": "    const tutors \u003d {};"
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
         "content": "    const admins \u003d {};"
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    let parsedCSV: [{}];"
+        "content": "    let parsedCSV: {}[];"
       },
       {
-        "lineNumber": 185,
+        "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
         "content": "    parsedCSV \u003d this.csvParser(csvInput);"
       },
       {
-        "lineNumber": 186,
+        "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 187,
+        "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
         "content": "    // Formats the parsed information for easier app reading"
       },
       {
-        "lineNumber": 188,
+        "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
         "content": "    parsedCSV.forEach(entry \u003d\u003e {"
       },
       {
-        "lineNumber": 189,
+        "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
         "content": "      if (entry[ROLE] \u003d\u003d\u003d UserRole.Student.toLowerCase()) {"
       },
       {
-        "lineNumber": 190,
+        "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
         "content": "        students[entry[NAME].toLowerCase()] \u003d \u0027true\u0027;"
       },
       {
-        "lineNumber": 191,
+        "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
         "content": "      } else if (entry[ROLE] \u003d\u003d\u003d UserRole.Tutor.toLowerCase()) {"
       },
       {
-        "lineNumber": 192,
+        "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
         "content": "        tutors[entry[NAME].toLowerCase()] \u003d \u0027true\u0027;"
       },
       {
-        "lineNumber": 193,
+        "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
         "content": "      } else if (entry[ROLE] \u003d\u003d\u003d UserRole.Admin.toLowerCase()) {"
       },
       {
-        "lineNumber": 194,
+        "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
         "content": "        admins[entry[NAME].toLowerCase()] \u003d \u0027true\u0027;"
       },
       {
-        "lineNumber": 195,
+        "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
         "content": "      }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": ""
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    roles[\u0027students\u0027] \u003d students;"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    roles[\u0027students\u0027] \u003d students;"
+        "content": "    roles[\u0027tutors\u0027] \u003d tutors;"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "    roles[\u0027tutors\u0027] \u003d tutors;"
+        "content": "    roles[\u0027admins\u0027] \u003d admins;"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "    roles[\u0027admins\u0027] \u003d admins;"
+        "content": ""
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    return roles;"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    return roles;"
+        "content": "  }"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  /**"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "  /**"
+        "content": "   * Converts the input csv information to an array of"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "   * Converts the input csv information to an array of"
+        "content": "   * objects syncrhonously. Each object\u0027s values are"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "   * objects syncrhonously. Each object\u0027s values are"
+        "content": "   * marked by the respective csv table headers."
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "   * marked by the respective csv table headers."
+        "content": "   * @param csvText - csv information."
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @param csvText - csv information."
+        "content": "   * @return - Subjects that tracks the parsed data."
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "   * @return - Subjects that tracks the parsed data."
+        "content": "   */"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "   */"
+        "content": "  private csvParser(csvText: string): {}[] {"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "  private csvParser(csvText: string): [{}] {"
+        "content": "    const lines \u003d csvText.split(\u0027\\n\u0027).filter(v \u003d\u003e v.trim());"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "    return parse(csvText, {"
+        "content": "    const headers \u003d lines[0].split(\u0027,\u0027).map(h \u003d\u003e h.trim());"
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "      columns: true,"
+        "content": "    const result \u003d [];"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "      skip_empty_lines: true,"
+        "content": "    for (let i \u003d 1; i \u003c lines.length; i++) {"
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "      trim: true"
+        "content": "      const line \u003d lines[i].trim();"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "      if (!line) {"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "        continue;"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "  getTeam(teamId: string): Team {"
+        "content": "      const lineValues \u003d line.split(\u0027,\u0027).map(v \u003d\u003e v.trim());"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "    return this.dataFile.teamStructure.get(teamId);"
+        "content": "      const lineObj \u003d {};"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "      for (let j \u003d 0; j \u003c headers.length; j++) {"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        if (!lineValues[j]) {"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "  getTeams(): string[] {"
+        "content": "          lineObj[headers[j]] \u003d null;"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "    return Array.from(this.dataFile.teamStructure.keys());"
+        "content": "        } else {"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "          lineObj[headers[j]] \u003d lineValues[j];"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "  // returns a mapping from teamId to their respective team structure."
+        "content": "      }"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "  private extractTeamStructure(jsonData: {}): Map\u003cstring, Team\u003e {"
+        "content": "      result.push(lineObj);"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "    const teamStructure \u003d new Map\u003cstring, Team\u003e();"
+        "content": "    }"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "    const jsonTeamStructure \u003d jsonData[\u0027team-structure\u0027];"
+        "content": "    return result;"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "    const teamIds \u003d Object.keys(jsonTeamStructure);"
+        "content": "  }"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "    for (const teamId of teamIds) {"
+        "content": ""
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "      const teamMembers \u003d new Array\u003cUser\u003e();"
+        "content": "  getTeam(teamId: string): Team {"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "      const teamMemberIds \u003d Object.keys(jsonTeamStructure[teamId]);"
+        "content": "    return this.dataFile.teamStructure.get(teamId);"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "      for (const teamMemberId of teamMemberIds) {"
+        "content": "  }"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "        teamMembers.push(\u003cUser\u003e{loginId: teamMemberId, role: UserRole.Student});"
+        "content": ""
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": "  getTeams(): string[] {"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "      teamStructure.set(teamId, new Team({id: teamId, teamMembers: teamMembers}));"
+        "content": "    return Array.from(this.dataFile.teamStructure.keys());"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "  }"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "    return teamStructure;"
+        "content": ""
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "  // returns a mapping from teamId to their respective team structure."
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  private extractTeamStructure(jsonData: {}): Map\u003cstring, Team\u003e {"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "  reset() {"
+        "content": "    const teamStructure \u003d new Map\u003cstring, Team\u003e();"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "    this.dataFile \u003d undefined;"
+        "content": "    const jsonTeamStructure \u003d jsonData[\u0027team-structure\u0027];"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "  }"
+        "content": "    const teamIds \u003d Object.keys(jsonTeamStructure);"
       },
       {
         "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    for (const teamId of teamIds) {"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const teamMembers \u003d new Array\u003cUser\u003e();"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      const teamMemberIds \u003d Object.keys(jsonTeamStructure[teamId]);"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      for (const teamMemberId of teamMemberIds) {"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        teamMembers.push(\u003cUser\u003e{loginId: teamMemberId, role: UserRole.Student});"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      }"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      teamStructure.set(teamId, new Team({id: teamId, teamMembers: teamMembers}));"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    return teamStructure;"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  reset() {"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    this.dataFile \u003d undefined;"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
@@ -9596,8 +9694,8 @@
       }
     ],
     "authorContributionMap": {
-      "geshuming": 15,
-      "-": 232
+      "geshuming": 11,
+      "-": 250
     }
   },
   {
