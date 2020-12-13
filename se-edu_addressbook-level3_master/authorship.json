@@ -3711,290 +3711,325 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "        String commandText \u003d commandTextField.getText();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "            commandExecutor.execute(commandTextField.getText());"
+        "content": "        if (commandText.equals(\"\")) {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "            commandTextField.setText(\"\");"
+        "content": "            return;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (CommandException | ParseException e) {"
+        "content": "        }"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "            setStyleToIndicateCommandFailure();"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        try {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            commandExecutor.execute(commandText);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            commandTextField.setText(\"\");"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        } catch (CommandException | ParseException e) {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Sets the command box style to use the default style."
+        "content": "            setStyleToIndicateCommandFailure();"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        }"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void setStyleToDefault() {"
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        commandTextField.getStyleClass().remove(ERROR_STYLE_CLASS);"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * Sets the command box style to use the default style."
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Sets the command box style to indicate a failed command."
+        "content": "    private void setStyleToDefault() {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        commandTextField.getStyleClass().remove(ERROR_STYLE_CLASS);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void setStyleToIndicateCommandFailure() {"
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        ObservableList\u003cString\u003e styleClass \u003d commandTextField.getStyleClass();"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (styleClass.contains(ERROR_STYLE_CLASS)) {"
+        "content": "     * Sets the command box style to indicate a failed command."
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "            return;"
+        "content": "     */"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    private void setStyleToIndicateCommandFailure() {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        ObservableList\u003cString\u003e styleClass \u003d commandTextField.getStyleClass();"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        styleClass.add(ERROR_STYLE_CLASS);"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        if (styleClass.contains(ERROR_STYLE_CLASS)) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return;"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Represents a function that can execute commands."
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        styleClass.add(ERROR_STYLE_CLASS);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    @FunctionalInterface"
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    public interface CommandExecutor {"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        /**"
+        "content": "    /**"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "         * Executes the command and returns the result."
+        "content": "     * Represents a function that can execute commands."
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "         *"
+        "content": "     */"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "         * @see seedu.address.logic.Logic#execute(String)"
+        "content": "    @FunctionalInterface"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "         */"
+        "content": "    public interface CommandExecutor {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "        CommandResult execute(String commandText) throws CommandException, ParseException;"
+        "content": "        /**"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "         * Executes the command and returns the result."
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "         *"
       },
       {
         "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "         * @see seedu.address.logic.Logic#execute(String)"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "         */"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        CommandResult execute(String commandText) throws CommandException, ParseException;"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
@@ -4003,7 +4038,7 @@
     ],
     "authorContributionMap": {
       "j-lum": 3,
-      "-": 77
+      "-": 82
     }
   },
   {
