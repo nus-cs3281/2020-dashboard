@@ -7332,7 +7332,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Note: _The Productive Programmer_ (by Neal Ford) calls this the _SLAP principle_ i.e. Single Level of Abstraction Per method."
+        "content": "Note: The book _The Productive Programmer_ (by Neal Ford) calls this the **_Single Level of Abstraction Principle_ (SLAP)** %%while the book _Clean Code_ (by Robert C. Martin) calls this _One Level of Abstraction per Function_%%."
       },
       {
         "lineNumber": 11,
@@ -82982,7 +82982,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "**A _branch node_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_: a boolean condition that should be true for execution to take that path. Only one of the guard conditions can be true at any time."
+        "content": "**A _branch node_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_: a boolean condition that should be true for execution to take that path. **_Exactly one_ of the guard conditions should be true** an any."
       },
       {
         "lineNumber": 10,
@@ -83101,31 +83101,129 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": "Some acceptable simplifications (by convention):"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Omitting the merge node if it doesn\u0027t cause any ambiguities."
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cdiv id\u003d\"extras\"\u003e"
+        "content": "* Multiple arrows can starting from the same corner of a branch node."
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "  \u003cinclude src\u003d\"exercises.md\" /\u003e"
+        "content": "* Omitting the `[Else]` condition."
       },
       {
         "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cbox\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{{ icon_example }} The AD below illustrates the simplifications mentioned above:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cimg src\u003d\"{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/simplifications.png\" width\u003d\"400\" /\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cp/\u003e"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/box\u003e"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/div\u003e"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv id\u003d\"extras\"\u003e"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cinclude src\u003d\"exercises.md\" /\u003e"
+      },
+      {
+        "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
@@ -83134,7 +83232,7 @@
     ],
     "authorContributionMap": {
       "Tejas2805": 1,
-      "-": 29
+      "-": 43
     }
   },
   {
@@ -85989,7 +86087,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003c/div\u003e"
+        "content": "**No more than one alternative partitions be executed** in an `alt` frame. That is, it is acceptable for none of the alternative partitions to be executed but it is not acceptable for multiple partitions to be executed."
       },
       {
         "lineNumber": 26,
@@ -86003,10 +86101,24 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003cdiv id\u003d\"extras\"\u003e"
+        "content": "\u003c/div\u003e"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003cdiv id\u003d\"extras\"\u003e"
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
@@ -86015,7 +86127,7 @@
     ],
     "authorContributionMap": {
       "Tejas2805": 1,
-      "-": 27
+      "-": 29
     }
   },
   {
