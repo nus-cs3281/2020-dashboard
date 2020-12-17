@@ -24773,1155 +24773,1155 @@
         "author": {
           "gitId": "-"
         },
-        "content": "const REPORT_DIR \u003d \u0027.\u0027;"
+        "content": "const HASH_ANCHOR \u003d \u0027?\u0027;"
       },
       {
         "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "const REPORT_DIR \u003d \u0027.\u0027;"
+      },
+      {
+        "lineNumber": 14,
         "author": {
           "gitId": "0blivious"
         },
         "content": "const REPORT_ZIP \u003d null;"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "window.deactivateAllOverlays \u003d function deactivateAllOverlays() {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  document.querySelectorAll(\u0027.summary-chart__ramp .overlay\u0027)"
+        "content": "window.deactivateAllOverlays \u003d function deactivateAllOverlays() {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      .forEach((x) \u003d\u003e {"
+        "content": "  document.querySelectorAll(\u0027.summary-chart__ramp .overlay\u0027)"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        x.className \u003d \u0027overlay\u0027;"
+        "content": "      .forEach((x) \u003d\u003e {"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      });"
+        "content": "        x.className \u003d \u0027overlay\u0027;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "      });"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.getDateStr \u003d function getDateStr(date) {"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  return (new Date(date)).toISOString().split(\u0027T\u0027)[0];"
+        "content": "window.getDateStr \u003d function getDateStr(date) {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  return (new Date(date)).toISOString().split(\u0027T\u0027)[0];"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.getHexToRGB \u003d function getHexToRGB(color) {"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  // to convert color from hex code to rgb format"
+        "content": "window.getHexToRGB \u003d function getHexToRGB(color) {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const arr \u003d /^#?([a-f\\d]{2})([a-f\\d]{2})([a-f\\d]{2})$/i.exec(color);"
+        "content": "  // to convert color from hex code to rgb format"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  return arr.slice(1).map((val) \u003d\u003e parseInt(val, 16));"
+        "content": "  const arr \u003d /^#?([a-f\\d]{2})([a-f\\d]{2})([a-f\\d]{2})$/i.exec(color);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  return arr.slice(1).map((val) \u003d\u003e parseInt(val, 16));"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "window.getFontColor \u003d function getFontColor(color) {"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const result \u003d window.getHexToRGB(color);"
+        "content": "window.getFontColor \u003d function getFontColor(color) {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const red \u003d result[0];"
+        "content": "  const result \u003d window.getHexToRGB(color);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const green \u003d result[1];"
+        "content": "  const red \u003d result[0];"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const blue \u003d result[2];"
+        "content": "  const green \u003d result[1];"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "  const blue \u003d result[2];"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const luminosity \u003d 0.2126 * red + 0.7152 * green + 0.0722 * blue; // per ITU-R BT.709"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "  const luminosity \u003d 0.2126 * red + 0.7152 * green + 0.0722 * blue; // per ITU-R BT.709"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  return luminosity \u003c 120 ? \u0027#ffffff\u0027 : \u0027#000000\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  return luminosity \u003c 120 ? \u0027#ffffff\u0027 : \u0027#000000\u0027;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.addHash \u003d function addHash(newKey, newVal) {"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  window.hashParams[newKey] \u003d newVal;"
+        "content": "window.addHash \u003d function addHash(newKey, newVal) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  window.hashParams[newKey] \u003d newVal;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.removeHash \u003d function removeHash(key) {"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  delete window.hashParams[key];"
+        "content": "window.removeHash \u003d function removeHash(key) {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  delete window.hashParams[key];"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.encodeHash \u003d function encodeHash() {"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const { hashParams } \u003d window;"
+        "content": "window.encodeHash \u003d function encodeHash() {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "  const { hashParams } \u003d window;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  window.location.hash \u003d Object.keys(hashParams)"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "      .map((key) \u003d\u003e `${key}\u003d${encodeURIComponent(hashParams[key])}`)"
+        "content": "  const hash \u003d Object.keys(hashParams)"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      .join(\u0027\u0026\u0027);"
+        "content": "      .map((key) \u003d\u003e `${key}\u003d${encodeURIComponent(hashParams[key])}`)"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "      .join(\u0027\u0026\u0027);"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "window.decodeHash \u003d function decodeHash() {"
+        "content": "  const newUrl \u003d `${window.location.protocol}//${window.location.host}${window.location.pathname}${HASH_ANCHOR}${hash}`;"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "  const hashParams \u003d {};"
+        "content": "  window.history.replaceState(null, \u0027\u0027, newUrl);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  window.location.hash.slice(1).split(\u0027\u0026\u0027)"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      .forEach((param) \u003d\u003e {"
+        "content": "window.decodeHash \u003d function decodeHash() {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        const [key, val] \u003d param.split(\u0027\u003d\u0027);"
+        "content": "  const hashParams \u003d {};"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        if (key) {"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "          try {"
+        "content": "  const hashIndex \u003d window.location.href.indexOf(HASH_ANCHOR);"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "            hashParams[key] \u003d decodeURIComponent(val);"
+        "content": "  const parameterString \u003d hashIndex \u003d\u003d\u003d -1 ? \u0027\u0027 : window.location.href.slice(hashIndex + 1);"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "          } catch (error) {"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "            this.userUpdated \u003d false;"
+        "content": "  parameterString.split(\u0027\u0026\u0027)"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "            this.isLoading \u003d false;"
+        "content": "      .forEach((param) \u003d\u003e {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "          }"
+        "content": "        const [key, val] \u003d param.split(\u0027\u003d\u0027);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        }"
+        "content": "        if (key) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "      });"
+        "content": "          try {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  window.hashParams \u003d hashParams;"
+        "content": "            hashParams[key] \u003d decodeURIComponent(val);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "          } catch (error) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "            this.userUpdated \u003d false;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.comparator \u003d (fn, sortingOption \u003d \u0027\u0027) \u003d\u003e function compare(a, b) {"
+        "content": "            this.isLoading \u003d false;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  let a1;"
+        "content": "          }"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  let b1;"
+        "content": "        }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  if (sortingOption) {"
+        "content": "      });"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    a1 \u003d fn(a, sortingOption).toLowerCase"
+        "content": "  window.hashParams \u003d hashParams;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        ? fn(a, sortingOption).toLowerCase()"
+        "content": "};"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        : fn(a, sortingOption);"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    b1 \u003d fn(b, sortingOption).toLowerCase"
+        "content": "window.comparator \u003d (fn, sortingOption \u003d \u0027\u0027) \u003d\u003e function compare(a, b) {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        ? fn(b, sortingOption).toLowerCase()"
+        "content": "  let a1;"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "        : fn(b, sortingOption);"
+        "content": "  let b1;"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  } else {"
+        "content": "  if (sortingOption) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    a1 \u003d fn(a).toLowerCase ? fn(a).toLowerCase() : fn(a);"
+        "content": "    a1 \u003d fn(a, sortingOption).toLowerCase"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    b1 \u003d fn(b).toLowerCase ? fn(b).toLowerCase() : fn(b);"
+        "content": "        ? fn(a, sortingOption).toLowerCase()"
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "  }"
+        "content": "        : fn(a, sortingOption);"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  if (a1 \u003d\u003d\u003d b1) {"
+        "content": "    b1 \u003d fn(b, sortingOption).toLowerCase"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    return 0;"
+        "content": "        ? fn(b, sortingOption).toLowerCase()"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  } if (a1 \u003c b1) {"
+        "content": "        : fn(b, sortingOption);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    return -1;"
+        "content": "  } else {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  }"
+        "content": "    a1 \u003d fn(a).toLowerCase ? fn(a).toLowerCase() : fn(a);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  return 1;"
+        "content": "    b1 \u003d fn(b).toLowerCase ? fn(b).toLowerCase() : fn(b);"
       },
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "};"
+        "content": "  }"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "  if (a1 \u003d\u003d\u003d b1) {"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.toggleNext \u003d function toggleNext(ele) {"
+        "content": "    return 0;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  // function for toggling unopened code"
+        "content": "  } if (a1 \u003c b1) {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const targetClass \u003d \u0027active\u0027;"
+        "content": "    return -1;"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "  }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const parent \u003d ele.parentNode;"
+        "content": "  return 1;"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const classes \u003d parent.className.split(\u0027 \u0027);"
+        "content": "};"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  const idx \u003d classes.indexOf(targetClass);"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "window.toggleNext \u003d function toggleNext(ele) {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  if (idx \u003d\u003d\u003d -1) {"
+        "content": "  // function for toggling unopened code"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    classes.push(targetClass);"
+        "content": "  const targetClass \u003d \u0027active\u0027;"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  } else {"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    classes.splice(idx, 1);"
+        "content": "  const parent \u003d ele.parentNode;"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  }"
+        "content": "  const classes \u003d parent.className.split(\u0027 \u0027);"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "  const idx \u003d classes.indexOf(targetClass);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  parent.className \u003d classes.join(\u0027 \u0027);"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  if (idx \u003d\u003d\u003d -1) {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "    classes.push(targetClass);"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "window.getBaseLink \u003d function getBaseLink(repoId) {"
+        "content": "  } else {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "  return `${window.BASE_URL}/${"
+        "content": "    classes.splice(idx, 1);"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    window.REPOS[repoId].location.organization}/${"
+        "content": "  }"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "    window.REPOS[repoId].location.repoName}`;"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "0blivious"
         },
-        "content": "};"
+        "content": "  parent.className \u003d classes.join(\u0027 \u0027);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "0blivious"
         },
-        "content": ""
+        "content": "};"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "window.getGroupName \u003d function getGroupName(group, filterGroupSelection) {"
+        "content": ""
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "  switch (filterGroupSelection) {"
+        "content": "window.getBaseLink \u003d function getBaseLink(repoId) {"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "  case \u0027groupByRepos\u0027:"
+        "content": "  return `${window.BASE_URL}/${"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "    return group[0].repoName;"
+        "content": "    window.REPOS[repoId].location.organization}/${"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "  case \u0027groupByAuthors\u0027:"
+        "content": "    window.REPOS[repoId].location.repoName}`;"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "    return group[0].name;"
+        "content": "};"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "niqiukun"
+          "gitId": "0blivious"
         },
-        "content": "  default:"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "niqiukun"
         },
-        "content": "    return \u0027\u0027;"
+        "content": "window.getGroupName \u003d function getGroupName(group, filterGroupSelection) {"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "niqiukun"
         },
-        "content": "  }"
+        "content": "  switch (filterGroupSelection) {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "niqiukun"
         },
-        "content": "};"
+        "content": "  case \u0027groupByRepos\u0027:"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "-"
+          "gitId": "niqiukun"
         },
-        "content": ""
+        "content": "    return group[0].repoName;"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "-"
+          "gitId": "niqiukun"
         },
-        "content": "window.api \u003d {"
+        "content": "  case \u0027groupByAuthors\u0027:"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "niqiukun"
         },
-        "content": "  loadJSON(fname) {"
+        "content": "    return group[0].name;"
       },
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "niqiukun"
         },
-        "content": "    if (REPORT_ZIP) {"
+        "content": "  default:"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "niqiukun"
         },
-        "content": "      const zipObject \u003d REPORT_ZIP.file(fname.slice(2));"
+        "content": "    return \u0027\u0027;"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "-"
+          "gitId": "niqiukun"
         },
-        "content": "      if (zipObject) {"
+        "content": "  }"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "niqiukun"
         },
-        "content": "        return zipObject.async(\u0027text\u0027).then((txt) \u003d\u003e JSON.parse(txt));"
+        "content": "};"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "      return Promise.reject(new Error(\u0027Zip file is invalid.\u0027));"
+        "content": "window.api \u003d {"
       },
       {
         "lineNumber": 141,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "    }"
+        "content": "  loadJSON(fname) {"
       },
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "    return new Promise((resolve, reject) \u003d\u003e {"
+        "content": "    if (REPORT_ZIP) {"
       },
       {
         "lineNumber": 143,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "      const xhr \u003d new XMLHttpRequest();"
+        "content": "      const zipObject \u003d REPORT_ZIP.file(fname.slice(2));"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "      xhr.open(\u0027GET\u0027, fname);"
+        "content": "      if (zipObject) {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "      xhr.onload \u003d function xhrOnload() {"
+        "content": "        return zipObject.async(\u0027text\u0027).then((txt) \u003d\u003e JSON.parse(txt));"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (xhr.status \u003d\u003d\u003d 200) {"
+        "content": "      }"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "          resolve(JSON.parse(xhr.responseText));"
+        "content": "      return Promise.reject(new Error(\u0027Zip file is invalid.\u0027));"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "        } else {"
+        "content": "    }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "          reject(new Error(\u0027Unable to get file.\u0027));"
+        "content": "    return new Promise((resolve, reject) \u003d\u003e {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "      const xhr \u003d new XMLHttpRequest();"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "      };"
+        "content": "      xhr.open(\u0027GET\u0027, fname);"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "      xhr.send(null);"
+        "content": "      xhr.onload \u003d function xhrOnload() {"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "        if (xhr.status \u003d\u003d\u003d 200) {"
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "  },"
+        "content": "          resolve(JSON.parse(xhr.responseText));"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "  loadSummary() {"
+        "content": "        } else {"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    window.REPOS \u003d {};"
+        "content": "          reject(new Error(\u0027Unable to get file.\u0027));"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "    return this.loadJSON(`${REPORT_DIR}/summary.json`)"
+        "content": "      };"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "        .then((data) \u003d\u003e {"
+        "content": "      xhr.send(null);"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "          window.app.creationDate \u003d data.reportGeneratedTime;"
+        "content": "    });"
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "          window.app.sinceDate \u003d data.sinceDate;"
+        "content": "  },"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "          window.app.untilDate \u003d data.untilDate;"
+        "content": "  loadSummary() {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "          window.app.repoSenseVersion \u003d data.repoSenseVersion;"
+        "content": "    window.REPOS \u003d {};"
       },
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "          window.app.reportGenerationTime \u003d data.reportGenerationTime;"
+        "content": ""
       },
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "          window.app.isSinceDateProvided \u003d data.isSinceDateProvided;"
+        "content": "    return this.loadJSON(`${REPORT_DIR}/summary.json`)"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "          window.app.isUntilDateProvided \u003d data.isUntilDateProvided;"
+        "content": "        .then((data) \u003d\u003e {"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "          window.app.creationDate \u003d data.reportGeneratedTime;"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "          Object.entries(data.errorList).forEach(([repoName, message]) \u003d\u003e {"
+        "content": "          window.app.sinceDate \u003d data.sinceDate;"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "            window.app.errorMessages[repoName] \u003d message;"
+        "content": "          window.app.untilDate \u003d data.untilDate;"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "          });"
+        "content": "          window.app.repoSenseVersion \u003d data.repoSenseVersion;"
       },
       {
         "lineNumber": 171,
         "author": {
-          "gitId": "-"
+          "gitId": "anubh-v"
         },
-        "content": ""
+        "content": "          window.app.reportGenerationTime \u003d data.reportGenerationTime;"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "          const names \u003d [];"
+        "content": "          window.app.isSinceDateProvided \u003d data.isSinceDateProvided;"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "          data.repos.forEach((repo) \u003d\u003e {"
+        "content": "          window.app.isUntilDateProvided \u003d data.isUntilDateProvided;"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "            const repoName \u003d `${repo.displayName}`;"
+        "content": ""
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "            window.REPOS[repoName] \u003d repo;"
+        "content": "          Object.entries(data.errorList).forEach(([repoName, message]) \u003d\u003e {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "            names.push(repoName);"
+        "content": "            window.app.errorMessages[repoName] \u003d message;"
       },
       {
         "lineNumber": 177,
@@ -25935,189 +25935,189 @@
         "author": {
           "gitId": "-"
         },
-        "content": "          return names;"
+        "content": ""
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        });"
+        "content": "          const names \u003d [];"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "          data.repos.forEach((repo) \u003d\u003e {"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            const repoName \u003d `${repo.displayName}`;"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "  loadCommits(repoName) {"
+        "content": "            window.REPOS[repoName] \u003d repo;"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    const folderName \u003d window.REPOS[repoName].outputFolderName;"
+        "content": "            names.push(repoName);"
       },
       {
         "lineNumber": 184,
         "author": {
-          "gitId": "0blivious"
+          "gitId": "-"
         },
-        "content": "    return this.loadJSON(`${REPORT_DIR}/${folderName}/commits.json`).then((commits) \u003d\u003e {"
+        "content": "          });"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "      const res \u003d [];"
+        "content": "          return names;"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "      const repo \u003d window.REPOS[repoName];"
+        "content": "        });"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "  },"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "      Object.keys(commits.authorDisplayNameMap).forEach((author) \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (author) {"
+        "content": "  loadCommits(repoName) {"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "          const obj \u003d {"
+        "content": "    const folderName \u003d window.REPOS[repoName].outputFolderName;"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "-"
+          "gitId": "0blivious"
         },
-        "content": "            name: author,"
+        "content": "    return this.loadJSON(`${REPORT_DIR}/${folderName}/commits.json`).then((commits) \u003d\u003e {"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "            repoId: repoName,"
+        "content": "      const res \u003d [];"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "            variance: commits.authorContributionVariance[author],"
+        "content": "      const repo \u003d window.REPOS[repoName];"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "            displayName: commits.authorDisplayNameMap[author],"
+        "content": ""
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "            dailyCommits: commits.authorDailyContributionsMap[author],"
+        "content": "      Object.keys(commits.authorDisplayNameMap).forEach((author) \u003d\u003e {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "            fileTypeContribution: commits.authorFileTypeContributionMap[author],"
+        "content": "        if (author) {"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "          };"
+        "content": "          const obj \u003d {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            name: author,"
       },
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "          this.setContributionOfCommitResults(obj.dailyCommits);"
+        "content": "            repoId: repoName,"
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "            variance: commits.authorContributionVariance[author],"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "          const searchParams \u003d ["
+        "content": "            displayName: commits.authorDisplayNameMap[author],"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "              repo.displayName,"
+        "content": "            dailyCommits: commits.authorDailyContributionsMap[author],"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "              obj.displayName, author,"
+        "content": "            fileTypeContribution: commits.authorFileTypeContributionMap[author],"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "          ];"
+        "content": "          };"
       },
       {
         "lineNumber": 205,
@@ -26129,72 +26129,72 @@
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          obj.searchPath \u003d searchParams.join(\u0027_\u0027).toLowerCase();"
+        "content": "          this.setContributionOfCommitResults(obj.dailyCommits);"
       },
       {
         "lineNumber": 207,
         "author": {
-          "gitId": "-"
+          "gitId": "jamessspanggg"
         },
-        "content": "          obj.repoName \u003d `${repo.displayName}`;"
+        "content": ""
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "          obj.location \u003d `${repo.location.location}`;"
+        "content": "          const searchParams \u003d ["
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "              repo.displayName,"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "          res.push(obj);"
+        "content": "              obj.displayName, author,"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "          ];"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "      });"
+        "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "          obj.searchPath \u003d searchParams.join(\u0027_\u0027).toLowerCase();"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "      repo.commits \u003d commits;"
+        "content": "          obj.repoName \u003d `${repo.displayName}`;"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "      repo.users \u003d res;"
+        "content": "          obj.location \u003d `${repo.location.location}`;"
       },
       {
         "lineNumber": 216,
@@ -26208,21 +26208,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      return res;"
+        "content": "          res.push(obj);"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "    });"
+        "content": "        }"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "  },"
+        "content": "      });"
       },
       {
         "lineNumber": 220,
@@ -26236,143 +26236,192 @@
         "author": {
           "gitId": "-"
         },
-        "content": "  loadAuthorship(repoName) {"
+        "content": "      repo.commits \u003d commits;"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "    const folderName \u003d window.REPOS[repoName].outputFolderName;"
+        "content": "      repo.users \u003d res;"
       },
       {
         "lineNumber": 223,
-        "author": {
-          "gitId": "0blivious"
-        },
-        "content": "    return this.loadJSON(`${REPORT_DIR}/${folderName}/authorship.json`)"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        .then((files) \u003d\u003e {"
-      },
-      {
-        "lineNumber": 225,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "          window.REPOS[repoName].files \u003d files;"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "          return files;"
-      },
-      {
-        "lineNumber": 227,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        });"
-      },
-      {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "  },"
-      },
-      {
-        "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "      return res;"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  loadAuthorship(repoName) {"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const folderName \u003d window.REPOS[repoName].outputFolderName;"
+      },
+      {
         "lineNumber": 230,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "0blivious"
         },
-        "content": "  // calculate and set the contribution of each commitResult, since not provided in json file"
+        "content": "    return this.loadJSON(`${REPORT_DIR}/${folderName}/authorship.json`)"
       },
       {
         "lineNumber": 231,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "  setContributionOfCommitResults(dailyCommits) {"
+        "content": "        .then((files) \u003d\u003e {"
       },
       {
         "lineNumber": 232,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "    dailyCommits.forEach((commit) \u003d\u003e {"
+        "content": "          window.REPOS[repoName].files \u003d files;"
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "      commit.commitResults.forEach((result) \u003d\u003e {"
+        "content": "          return files;"
       },
       {
         "lineNumber": 234,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "        result.insertions \u003d Object.values(result.fileTypesAndContributionMap)"
+        "content": "        });"
       },
       {
         "lineNumber": 235,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "            .reduce((acc, fileType) \u003d\u003e acc + fileType.insertions, 0);"
+        "content": "  },"
       },
       {
         "lineNumber": 236,
         "author": {
-          "gitId": "jamessspanggg"
+          "gitId": "-"
         },
-        "content": "        result.deletions \u003d Object.values(result.fileTypesAndContributionMap)"
+        "content": ""
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "            .reduce((acc, fileType) \u003d\u003e acc + fileType.deletions, 0);"
+        "content": "  // calculate and set the contribution of each commitResult, since not provided in json file"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "      });"
+        "content": "  setContributionOfCommitResults(dailyCommits) {"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "    });"
+        "content": "    dailyCommits.forEach((commit) \u003d\u003e {"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "jamessspanggg"
         },
-        "content": "  },"
+        "content": "      commit.commitResults.forEach((result) \u003d\u003e {"
       },
       {
         "lineNumber": 241,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "        result.insertions \u003d Object.values(result.fileTypesAndContributionMap)"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "            .reduce((acc, fileType) \u003d\u003e acc + fileType.insertions, 0);"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "        result.deletions \u003d Object.values(result.fileTypesAndContributionMap)"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "            .reduce((acc, fileType) \u003d\u003e acc + fileType.deletions, 0);"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "jamessspanggg"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
@@ -26384,8 +26433,8 @@
       "anubh-v": 1,
       "Tejas2805": 1,
       "jamessspanggg": 13,
-      "-": 96,
-      "0blivious": 119
+      "-": 105,
+      "0blivious": 117
     }
   },
   {
