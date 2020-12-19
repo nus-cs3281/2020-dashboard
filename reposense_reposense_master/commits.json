@@ -1770,6 +1770,22 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-12-18",
+        "commitResults": [
+          {
+            "hash": "10c1959fb268466192c54e99af150b152f06f040",
+            "messageTitle": "[#1374] Travis: utilise latest node version for PR docs deployment (#1381)",
+            "messageBody": "The deployment of PR docs are used with an outdated node version, \r\nwhich causes the building of Markbind to fail.\r\n\r\nSetting the node version to the latest version will fix the issue, \r\nas Markbind requires node version \u003e\u003d v10.13.0 installed.\r\n\r\nLet\u0027s specify the node version for the deployment to be `lts/*`, \r\nwhich will ensure that the Markbind runs without errors.",
+            "fileTypesAndContributionMap": {
+              "yml": {
+                "insertions": 4,
+                "deletions": 0
+              }
+            }
+          }
+        ]
       }
     ],
     "j-lum": [],
@@ -2516,7 +2532,7 @@
       "pug": 40,
       "gradle": 0,
       "sh": 67,
-      "yml": 10
+      "yml": 14
     },
     "j-lum": {
       "java": 0,
@@ -2652,21 +2668,21 @@
     }
   },
   "authorContributionVariance": {
-    "ccyccyccy": 24.389784,
+    "ccyccyccy": 23.695686,
     "Parcly-Taxel": 0.0,
-    "niqiukun": 276.43796,
+    "niqiukun": 268.58258,
     "openorclose": 0.0,
-    "yash-chowdhary": 304.8709,
-    "anubh-v": 350.63818,
-    "Tejas2805": 2201.5063,
+    "yash-chowdhary": 296.17258,
+    "anubh-v": 340.86185,
+    "Tejas2805": 2139.9333,
     "dvrylc": 0.0,
-    "jamessspanggg": 2017.0677,
+    "jamessspanggg": 1960.6964,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
-    "0blivious": 3841.742,
+    "0blivious": 3733.9358,
     "hcwong": 0.0,
-    "ang-zeyu": 267.7881,
+    "ang-zeyu": 260.18198,
     "geshuming": 0.0,
     "alyip98": 0.0,
     "nbriannl": 0.0,

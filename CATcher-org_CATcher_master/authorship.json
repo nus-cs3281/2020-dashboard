@@ -34225,117 +34225,369 @@
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "import { GithubService } from \u0027../../src/app/core/services/github.service\u0027;"
       },
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "geshuming"
+          "gitId": "-"
         },
-        "content": "const applicationService \u003d new ApplicationService(null);"
+        "content": "import { of } from \u0027rxjs\u0027;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "const currentVersion \u003d \u00273.2.5\u0027;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": ""
+        "content": "const currentVersion \u003d \u00273.2.5\u0027;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "anubh-v"
         },
-        "content": "describe(\u0027Test the ApplicationService\u0027, () \u003d\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "    it(\u0027Test whether the ApplicationService can detect outdated versions\u0027, () \u003d\u003e {"
+        "content": "class ApplicationServiceStub extends ApplicationService {"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00272.2.5\u0027, currentVersion)).toBe(false);"
+        "content": "  readonly currentVersion: string;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00273.1\u0027, currentVersion)).toBe(false);"
+        "content": "  constructor(githubService: GithubService, currentVersion: string) {"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.4\u0027, currentVersion)).toBe(false);"
+        "content": "    super(githubService);"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.4.8.9\u0027, currentVersion)).toBe(false);"
+        "content": "    this.currentVersion \u003d currentVersion;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(currentVersion, currentVersion)).toBe(false);"
+        "content": "  }"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.5.0\u0027, currentVersion)).toBe(true);"
+        "content": "}"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.5.5\u0027, currentVersion)).toBe(true);"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u00273.2.6\u0027, currentVersion)).toBe(true);"
+        "content": "describe(\u0027ApplicationService#isApplicationOutdated\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "        expect(applicationService.isOutdatedVersion(\u002710\u0027, currentVersion)).toBe(true);"
+        "content": "  const githubService \u003d jasmine.createSpyObj(\u0027GithubService\u0027, [\u0027fetchLatestRelease\u0027]);"
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "anubh-v"
+          "gitId": "-"
         },
-        "content": "    });"
+        "content": "  it(\u0027should return the appropriate Observable if the ApplicationService is outdated\u0027, () \u003d\u003e {"
       },
       {
         "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v2.2.5\u0027}));"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const outdatedAppService1 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    outdatedAppService1.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(false));"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.1\u0027}));"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const outdatedAppService2 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    outdatedAppService2.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(false));"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.2.4\u0027}));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const outdatedAppService3 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    outdatedAppService3.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(false));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.2.4.8.9\u0027}));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const longVersionedAppService \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    longVersionedAppService.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(false));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.2.5\u0027}));"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const latestApplicationService \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    latestApplicationService.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(false));"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.2.5.0\u0027}));"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const upToDateAppService1 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    upToDateAppService1.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(true));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.2.5.5\u0027}));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const upToDateAppService2 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    upToDateAppService2.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(true));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v3.2.6\u0027}));"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const upToDateAppService3 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    upToDateAppService3.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(true));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    githubService.fetchLatestRelease.and.returnValue(of({tag_name: \u0027v10\u0027}));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    const upToDateAppService4 \u003d new ApplicationServiceStub(githubService, currentVersion);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    upToDateAppService4.isApplicationOutdated().subscribe((bool) \u003d\u003e expect(bool).toBe(true));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "anubh-v"
+        },
+        "content": "  });"
+      },
+      {
+        "lineNumber": 54,
         "author": {
           "gitId": "anubh-v"
         },
@@ -34343,8 +34595,8 @@
       }
     ],
     "authorContributionMap": {
-      "geshuming": 1,
-      "anubh-v": 17
+      "anubh-v": 6,
+      "-": 48
     }
   },
   {
