@@ -2311,6 +2311,63 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-12-30",
+        "commitResults": [
+          {
+            "hash": "090dc57ed5558189afca503e962d7f941845a244",
+            "messageTitle": "Render markdown before finding hash content (#1433)",
+            "messageBody": "\u003cinclude\u003e elements referencing a specific #hash of a source file search\r\nfor the hash before rendering the file\u0027s markdown.\r\n\r\nThis prevents including elements with ids defined using\r\nmarkdown-it-attributes, and necessitates markdown-html patches.\r\n\r\nLet\u0027s process the included source file\u0027s markdown first, then search\r\nfor the hash.",
+            "fileTypesAndContributionMap": {
+              "mbdf": {
+                "insertions": 15,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 7,
+                "deletions": 8
+              }
+            }
+          },
+          {
+            "hash": "a55bdca0e345ce241c454bf394ff655600fd35d6",
+            "messageTitle": "Whitelist \u003cmarkdown\u003e and \u003cmd\u003e as special tags (#1434)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 21,
+                "deletions": 0
+              },
+              "js": {
+                "insertions": 3,
+                "deletions": 1
+              }
+            }
+          },
+          {
+            "hash": "7f51a988842fa4e08be72a9c9f57ed9d562bb4fa",
+            "messageTitle": "Remove markdown - htmlparser2 patch (#1435)",
+            "messageBody": "With the processing order adjusted to follow nunjucks -\u003e markdown -\u003e\r\nhtml, a markdown - htmlparser patch for code blocks and inline code is\r\nno longer necessary.\r\n\r\nLet\u0027s remove the patch as such.\r\n\r\nThis also allows incorporating markdown plugins with conflicting html\r\nsyntax with ease, no longer needing additional html patches.",
+            "fileTypesAndContributionMap": {
+              "js": {
+                "insertions": 3,
+                "deletions": 42
+              }
+            }
+          },
+          {
+            "hash": "960431e913e4e9d7932d423f4c443c1993226694",
+            "messageTitle": "Fix wording in \u003cmd\u003e and \u003cmarkdown\u003e tests (#1436)",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "md": {
+                "insertions": 3,
+                "deletions": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "geshuming": [],
@@ -3017,12 +3074,12 @@
     },
     "ang-zeyu": {
       "java": 0,
-      "js": 3380,
+      "js": 3385,
       "css": 24,
       "json": 404,
-      "md": 486,
+      "md": 507,
       "mbd": 0,
-      "mbdf": 238,
+      "mbdf": 250,
       "njk": 11,
       "py": 0,
       "yml": 4
@@ -3058,7 +3115,7 @@
       "json": 4,
       "md": 143,
       "mbd": 0,
-      "mbdf": 297,
+      "mbdf": 298,
       "njk": 0,
       "py": 0,
       "yml": 0
@@ -3104,21 +3161,21 @@
     "ccyccyccy": 0.0,
     "Parcly-Taxel": 0.0,
     "niqiukun": 0.0,
-    "openorclose": 3394.1816,
-    "yash-chowdhary": 4410.0454,
-    "Tejas2805": 185.28014,
-    "dvrylc": 8.633183,
+    "openorclose": 3266.031,
+    "yash-chowdhary": 4243.966,
+    "Tejas2805": 178.28099,
+    "dvrylc": 8.307182,
     "j-lum": 0.0,
     "iskandarzulkarnaien": 0.0,
     "xantho09": 0.0,
     "0blivious": 0.0,
-    "hcwong": 8.587646,
-    "ang-zeyu": 42393.438,
+    "hcwong": 8.263385,
+    "ang-zeyu": 40841.074,
     "geshuming": 0.0,
-    "alyip98": 1.5176383,
-    "nbriannl": 6708.605,
-    "le0tan": 82963.516,
-    "madanalogy": 88.920204,
+    "alyip98": 1.460354,
+    "nbriannl": 6455.913,
+    "le0tan": 79830.17,
+    "madanalogy": 85.561966,
     "daekoon": 0.0
   },
   "authorDisplayNameMap": {
